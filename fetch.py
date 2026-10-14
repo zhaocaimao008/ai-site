@@ -139,11 +139,9 @@ SCHEMA = {
 
 def describe(client, cfg, repo, text):
     info = {k: repo[k] for k in ("full_name", "description", "homepage", "language", "license", "topics", "stars")}
-    resp = client.beta.messages.create(
+    resp = client.messages.create(
         model=cfg["model"],
         max_tokens=8000,
-        betas=["server-side-fallback-2026-07-01"],
-        fallbacks="default",
         system=SYSTEM,
         output_config={"effort": cfg["effort"], "format": {"type": "json_schema", "schema": SCHEMA}},
         messages=[{"role": "user", "content": f"项目信息:\n{json.dumps(info, ensure_ascii=False)}\n\nREADME(开头部分):\n{text}"}],
