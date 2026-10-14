@@ -2,7 +2,7 @@
  {
   "full_name": "affaan-m/ECC",
   "gain": 0,
-  "stars": 278948
+  "stars": 278953
  },
  {
   "full_name": "NousResearch/hermes-agent",
@@ -12,22 +12,22 @@
  {
   "full_name": "deepseek-ai/deepseek-harness",
   "gain": 0,
-  "stars": 249466
+  "stars": 249469
  },
  {
   "full_name": "morluto/rea",
   "gain": 0,
-  "stars": 227966
+  "stars": 228153
  },
  {
   "full_name": "n8n-io/n8n",
   "gain": 0,
-  "stars": 207347
+  "stars": 207350
  },
  {
   "full_name": "firecrawl/firecrawl",
   "gain": 0,
-  "stars": 191414
+  "stars": 191418
  },
  {
   "full_name": "Significant-Gravitas/AutoGPT",
@@ -42,12 +42,12 @@
  {
   "full_name": "f/prompts.chat",
   "gain": 0,
-  "stars": 172926
+  "stars": 172927
  },
  {
   "full_name": "huggingface/transformers",
   "gain": 0,
-  "stars": 167711
+  "stars": 167712
  },
  {
   "full_name": "AUTOMATIC1111/stable-diffusion-webui",
@@ -57,7 +57,7 @@
  {
   "full_name": "DietrichGebert/ponytail",
   "gain": 0,
-  "stars": 163216
+  "stars": 163225
  },
  {
   "full_name": "Snailclimb/JavaGuide",
@@ -67,17 +67,17 @@
  {
   "full_name": "langgenius/dify",
   "gain": 0,
-  "stars": 158445
+  "stars": 158446
  },
  {
   "full_name": "langflow-ai/langflow",
   "gain": 0,
-  "stars": 155653
+  "stars": 155654
  },
  {
   "full_name": "open-webui/open-webui",
   "gain": 0,
-  "stars": 155629
+  "stars": 155630
  },
  {
   "full_name": "langchain-ai/langchain",
@@ -87,12 +87,12 @@
  {
   "full_name": "farion1231/cc-switch",
   "gain": 0,
-  "stars": 144169
+  "stars": 144173
  },
  {
   "full_name": "Shubhamsaboo/awesome-llm-apps",
   "gain": 0,
-  "stars": 141675
+  "stars": 141674
  },
  {
   "full_name": "Comfy-Org/ComfyUI",
@@ -102,12 +102,12 @@
  {
   "full_name": "harry0703/MoneyPrinterTurbo",
   "gain": 0,
-  "stars": 130729
+  "stars": 130735
  },
  {
   "full_name": "Graphify-Labs/graphify",
   "gain": 0,
-  "stars": 126350
+  "stars": 126352
  },
  {
   "full_name": "microsoft/generative-ai-for-beginners",
@@ -117,17 +117,17 @@
  {
   "full_name": "browser-use/browser-use",
   "gain": 0,
-  "stars": 117942
+  "stars": 117945
  },
  {
   "full_name": "JuliusBrussee/caveman",
   "gain": 0,
-  "stars": 111687
+  "stars": 111689
  },
  {
   "full_name": "TauricResearch/TradingAgents",
   "gain": 0,
-  "stars": 111134
+  "stars": 111135
  },
  {
   "full_name": "google-gemini/gemini-cli",
@@ -142,11 +142,11 @@
  {
   "full_name": "paperclipai/paperclip",
   "gain": 0,
-  "stars": 101890
+  "stars": 101893
  },
  {
   "full_name": "thedotmack/claude-mem",
   "gain": 0,
-  "stars": 100625
+  "stars": 100627
  }
 ]
