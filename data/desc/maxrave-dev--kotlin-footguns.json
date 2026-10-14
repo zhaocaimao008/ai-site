@@ -1,0 +1,20 @@
+{
+ "ai_related": true,
+ "audience": "使用 Kotlin、Compose Multiplatform 或桌面 JVM 的开发者，以及希望为编码代理补充实战经验的 AI 代理用户。",
+ "date": "2026-10-14",
+ "features": [
+  "224 个从生产代码库提炼的 Kotlin/Compose 陷阱，按九个领域技能组织",
+  "每个陷阱文件包含失败模式、验证方法和修复建议",
+  "footgun-scan 扫描器可检查代码变更并关联到具体陷阱",
+  "兼容 Claude Code 等支持 agent-skills 格式的编码代理",
+  "提供 evals 评估用例，对比有无插件时的代理表现"
+ ],
+ "intro": "kotlin-footguns 是一个面向 AI 编码代理的技能集合，收录了 224 个在 Kotlin、Compose Multiplatform 和桌面 JVM 开发中真实遇到的陷阱。这些内容并非来自官方文档，而是从作者维护的跨平台音乐应用 SimpMusic 的生产代码库中提炼而来，每个陷阱都对应实际发生过的崩溃、发布失败或用户反馈。\n\n项目将陷阱按领域组织成九个技能，每个技能是一个索引，每个陷阱是独立的 Markdown 文件。代理在遇到相关工作时可以打开对应文件，人类开发者也能直接阅读。此外还提供一个扫描器 footgun-scan，用 32 个模式检查代码变更是否触及相关陷阱。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将仓库克隆到本地或作为 Claude Code 插件安装",
+  "在代理中按领域打开对应的技能文件，例如 skills/desktop-and-build-footguns/SKILL.md",
+  "运行扫描器检查代码变更：python3 .claude/skills/footgun-scan/scripts/scan.py --base origin/main --fail"
+ ],
+ "tagline": "从生产音乐应用提炼的 Kotlin 与 Compose 踩坑集"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在终端中运行长周期研究或文件处理任务的开发者，以及想搭建和评测多智能体工作流的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "原生终端 TUI，提供 ReAct 单智能体与 Agent Team 多智能体两种工作流",
+  "Agent Team 协调者通过任务板分派并行子任务并汇总结构化报告",
+  "任务级沙箱文件系统，区分只读输入、工作区与持久化交付物",
+  "运行中可异步输入新指令，在安全轮次边界注入而不中断当前任务",
+  "变更操作需批准，支持检查点、本地追踪、/revert 回滚与 --resume 续跑",
+  "内置评测运行器，支持研究类与文件类基准、并发与失败重跑"
+ ],
+ "intro": "FrontierAgent 是 ApodexAI 开源的一套智能体运行时、终端产品与评测套件，面向长周期研究和基于文件的工作。它提供原生命令行 TUI，内置两种工作流：ReAct 模式由单个有状态智能体在任务沙箱中研究、读写文件、执行命令并迭代；Agent Team 模式由协调者维护任务板，把独立工作分派给并行子智能体，收集报告后汇总结果。\n\n框架、工具、工作流和评测层彼此分离，可独立复用。文件操作在任务级沙箱中进行，/inputs 只读、/workspace 为工作状态、/outputs 存放交付物；变更操作会显示 diff 并要求批准，会话支持检查点、本地追踪、/revert 回滚和 --resume 续跑。仓库还包含用于评测 Apodex 模型的基准运行器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Git、Python 3.12、uv 以及一个 OpenAI 兼容的模型端点",
+  "git clone https://github.com/ApodexAI/FrontierAgent.git && cd FrontierAgent",
+  "uv sync --python 3.12 --extra dev",
+  "cp .env.example .env，并在 .env 中填入 OPENAI_API_KEY、OPENAI_BASE_URL、OPENAI_MODEL",
+  "运行 uv run frontier-agent --mode react --cwd /path/to/project 或 --mode agent_team 启动 TUI"
+ ],
+ "tagline": "开源智能体运行时，支持 ReAct 与 Agent Team 两种终端工作流"
+}

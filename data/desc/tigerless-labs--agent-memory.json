@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要为 AI agent 增加长期记忆、且希望数据本地可控、可迁移的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "Markdown 文件作为唯一真源，索引可重建，记忆可 grep、可 git 管理",
+  "本地排序检索：BM25 加可选向量插件，结果返回路径而非文本",
+  "分层读取：L0 列表、摘要、大纲、全文，按需逐级展开",
+  "对话边界自动写入，sleep-time 独立整合与遗忘，删除仅作为提案",
+  "支持 Claude Code、Codex CLI 等多宿主共享同一存储",
+  "无需 API key，库内不调用 LLM"
+ ],
+ "intro": "agent-memory 是一个面向 AI agent 的长期记忆运行时。它把 Markdown 文件作为唯一真源，旁边的 SQLite 索引只是可随时删除的缓存，Claude Code、Codex CLI 等能执行 shell 命令的 agent 共享同一份存储。检索在本地完成并排序，返回的是文件路径而非粘贴的文本，agent 可按任务需要决定读取深度。\n\n写入不依赖 agent 主动记忆，而是在对话边界自动触发；随后由独立的 sleep-time 阶段按价值进行整合与遗忘。整个系统不需要 API key，也不在库内调用 LLM，判断逻辑借用宿主 agent 自身的 CLI。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "mem recall \"why files instead of a database\"  # 返回 L0 列表，默认 8 条",
+  "mem read <name> --level outline  # 只读标题，也可用 abstract 或 full",
+  "mem context \"why files instead of a database\"  # 一次调用完成检索与展开",
+  "mem trace <name>  # 查看引用的原始消息"
+ ],
+ "tagline": "为 AI agent 提供长期记忆的本地运行时，Markdown 为真源"
+}

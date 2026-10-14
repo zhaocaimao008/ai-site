@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想把 QQ 接入 DeepSeek Harness agent 的开发者，以及希望让 AI 参与 QQ 群聊或私聊的进阶用户。需要自行准备并运行 SnowLuma 与 DSH Web 环境。",
+ "date": "2026-10-14",
+ "features": [
+  "QQ 消息与 DSH agent 双向桥接，回复、提问和工具审批均可转发到 QQ",
+  "每个 QQ 会话映射为独立 DSH 会话，统一归组到「QQ 聊天」工作区",
+  "四种运行模式：chat、closed-agent、reserved（一代仿真）、reserved2（二代仿真）",
+  "自带 Web 控制台，支持会话审批、人格角色管理、token 与花费看板、深浅主题",
+  "三个 MCP server：QQ 安全动作子集、只读探活、带 SSRF 防护的只读搜索",
+  "支持引用回复解析、斜杠命令、/reset 重置会话、ask_user_question 转发应答"
+ ],
+ "intro": "qq-bridge 是一个把 QQ 消息接入 DeepSeek Harness（DSH）agent 的桥接程序。QQ 好友或群发来的消息会变成 DSH 会话里的用户消息，agent 的回复、提问和工具审批请求会发回 QQ。QQ 侧通过 @snowluma/sdk 的 OneBot v11 WebSocket 客户端连接，DSH 侧使用其 Web API 协议进行鉴权与事件流通信。\n\n每个 QQ 会话（私聊或群）对应一个独立的 DSH 会话，映射持久化在 state/sessions.json。项目提供 chat、closed-agent、reserved、reserved2 四种运行模式，分别对应安全聊天、私聊 owner 完整工具、一代仿真群友和二代自主收发消息。桥接自带 Web 控制台，可查看会话与审批、管理人格与角色、查看 token 消耗与花费、切换运行模式等。\n\n项目还包含三个 MCP server：snowluma 提供 QQ 动作安全子集，snowluma-host 只做只读探活，web-search-safe 提供带 SSRF 防护的只读搜索与抓取。注意桥接不会启动或停止 SnowLuma，其安装、启动与扫码需自行完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认前置条件：运行中的 DeepSeek Harness Web（默认 http://127.0.0.1:3080）、运行中的 SnowLuma（配置好 OneBot WebSocket 与 HTTP API）、Node.js ≥ 22.13",
+  "执行 npm install 安装依赖（postinstall 会自动修补 @snowluma/sdk 的 ESM 打包 bug）",
+  "复制 config.example.json 为 config.json（Windows CMD 用 copy config.example.json config.json）并编辑配置",
+  "按需填写 dsh.baseUrl、dsh.model、snowluma.wsUrl、snowluma.httpUrl、snowluma.accessToken 等字段",
+  "启动桥接进程，打开本地控制台 http://127.0.0.1:3100 并使用 config.json 中的 consoleToken 访问"
+ ],
+ "tagline": "把 QQ 消息接入 DeepSeek Harness agent 的桥接程序"
+}

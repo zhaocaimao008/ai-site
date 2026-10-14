@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "适合 AI 工具站 SEO 人员、新闻通讯作者、目录站运营者，以及任何想第一时间了解 AI 新词的人。",
+ "date": "2026-10-14",
+ "features": [
+  "从 X、Hugging Face、GitHub 和 sitemap 等多源捕捉新词",
+  "生成每日关键词表，包含搜索量、趋势和页面竞争分析",
+  "通过 Google Trends 验证新词并计算命中率",
+  "支持命令行、Agent Skills 和 MCP 服务器等多种使用方式",
+  "提供 pains 命令，从 Reddit 挖掘用户需求"
+ ],
+ "intro": "new-term-radar 是一个每日报告工具，用于捕捉 AI 领域开始冒头的新名称，包括新模型、产品、工具和仓库。它从 X、Hugging Face、GitHub 和网站 sitemap 等源头读取信号，在关键词工具收录之前就发现这些新词。\n\n项目面向围绕新词制作页面、文章或产品的人，例如 AI 工具站 SEO、新闻通讯、目录站等。它通过多个信号源（如 X 账号首次提及、Hugging Face 趋势榜、GitHub 快速崛起的仓库、网站 sitemap 中的新词）来识别新词，并生成包含关键词、搜索量、趋势和页面竞争情况的关键词表。\n\n该工具需要 AIsa 等 API 密钥，按使用量计费。示例配置下每月成本约 15 美元。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "每日追踪 AI 新词，比关键词工具更早发现趋势"
+}

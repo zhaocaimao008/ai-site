@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要训练或微调大语言模型、多模态模型的研究人员和工程团队，尤其是希望在 Hugging Face 生态内完成预训练、SFT 与 RL 全流程的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "支持预训练、SFT、偏好优化、蒸馏和异步多轮 RL 等训练方法",
+  "直接训练 Hugging Face 模型，checkpoint 保持标准 SafeTensors 格式",
+  "支持 EP、CP、TP、ETP、FSDP2 等多种并行方式，可跨 GPU 与节点组合",
+  "异步 RL 使用 Ray actor 对接 vLLM 或 SGLang，训练侧为纯 Transformers",
+  "集成 FlashAttention 4、Liger、Grouped GEMM、DeepEP V2 等性能优化",
+  "提供 halo launch 与 halo run 命令行工具，以及面向编码 agent 的 skills"
+ ],
+ "intro": "Halo 是由 White Circle 开源的大语言模型与多模态模型训练框架，覆盖预训练、SFT、偏好优化、蒸馏以及全异步多轮 RL 等训练方法。同一套代码既能在单张 GPU 上运行，也能扩展到多节点，支持 EP、CP、TP、ETP、FSDP2、融合算子、BF16 训练和分布式 rollout。\n\nHalo 直接训练 Hugging Face 模型，checkpoint 仍是标准 SafeTensors，可以继续用 from_pretrained 加载，接入新的模型家族通常只需不到 140 行集成代码。并行能力以包装方式加到现有模型上，EP 包装 MoE 块、CP 包装 attention、TP/ETP 原地切分权重，底层基于 PyTorch 的 FSDP2、DTensor 和 DeviceMesh。\n\nRL 部分采用异步设计，多轮环境 rollout 以 Ray actor 形式跑在 vLLM 或 SGLang 服务上，训练侧保持纯 Transformers，不依赖 Megatron 或 veRL。项目提供 Blackwell 和 Hopper 的独立 Docker 镜像，内置 PyTorch、Flash Attention 和 DeepEP V2。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "拉取对应架构的 Docker 镜像：docker pull public.ecr.aws/whitecircle/halo:blackwell（B200/B300）或 docker pull public.ecr.aws/whitecircle/halo:hopper（H100/H200）",
+  "查看可用的训练方法：halo launch --list",
+  "启动单卡 SFT + LoRA 训练：halo launch sft examples/sft/qwen3/qwen3-4b-ultrachat-lora.yaml",
+  "启动 8 卡 MoE 专家并行训练：halo launch sft examples/sft/qwen3_5/qwen3.5-35b-a3b-ultrachat-ep.yaml -n 8",
+  "用 --dry-run 预览命令：halo launch sft config.yaml --dry-run"
+ ],
+ "tagline": "White Circle 开源的 LLM 与多模态模型训练框架"
+}

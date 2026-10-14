@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "拥有 AMD Strix Halo（如 Ryzen AI Max+ 395）硬件、希望在本地运行 Qwen3.8-Flash-Next 并接入 agent 工作流的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "针对 AMD Strix Halo（gfx1151）与 Qwen3.8-Flash-Next 定制的推理 kernel",
+  "OpenAI 兼容 API，可直接接入 Codex、Claude Code 等 agent 客户端",
+  "推测解码加速，温度 0 时输出与串行贪心解码逐字节一致",
+  "长上下文支持，131,072 token prefill 速率衰减很小",
+  "可直接加载 llama.cpp GGUF 模型文件，无需转换",
+  "提供 prompt 缓存、会话保持/分叉/合并等配置选项"
+ ],
+ "intro": "halogen-flash-server 是一个面向 AMD Strix Halo（gfx1151）平台的本地大模型推理服务器，专门为运行 Qwen3.8-Flash-Next 而设计。它的每个 kernel 都针对这一款 GPU 和这一模型家族编写，没有通用运行时或兼容回退路径，因此能在特定硬件上获得通用引擎难以达到的速度。\n\n项目面向 agent 场景优化：在长会话中，每一轮大约 1.6 秒开始输出。README 给出的默认配置（0.18.0 镜像）下，重复性输出解码可达 94 tok/s，写代码 73 tok/s，散文 54 tok/s；131,072 token 的 prefill 仍保持 32,768 时约 96% 的速率。温度设为 0 时输出与串行贪心解码逐字节一致，推测解码只是速度优化。\n\n服务通过 OpenAI 兼容 API 对外提供，支持 Codex、Claude Code 等客户端，也支持直接加载 llama.cpp GGUF 文件。项目以容器镜像方式分发，需要 AMD Ryzen AI Max+ 395 等 Strix Halo 硬件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将 BIOS 中的 UMA frame buffer（显存划分）设为最小值，而不是 Auto",
+  "创建模型目录：mkdir -p ~/halogen-models",
+  "用 podman 启动容器：podman run --rm -p 8731:8731 --device /dev/kfd --device /dev/dri --group-add keep-groups --ipc=host --ulimit memlock=-1:-1 -e HALOGEN_DOWNLOAD=peonist-ai/halogen-qwen3.8-flash-next -v ~/halogen-models:/models ghcr.io/peonist-ai/halogen-flash-server:0.18.3",
+  "通过 8731 端口上的 OpenAI 兼容 API 调用服务"
+ ],
+ "tagline": "专为 AMD Strix Halo 打造的 Qwen3.8-Flash-Next 推理服务器"
+}

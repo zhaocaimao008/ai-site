@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地进行语音合成、声音克隆或 AI 音乐创作的开发者和创作者，尤其是注重隐私、不想支付云端 API 费用的 macOS 与 Windows 用户。",
+ "date": "2026-10-14",
+ "features": [
+  "文字转语音与零样本声音克隆，支持情感控制和参考表演匹配",
+  "AI 音乐生成：根据风格提示和带段落标记的歌词生成完整歌曲或纯音乐",
+  "多轨乐谱编排：按小节和拍子编写声部，导入 MIDI，用 General MIDI 音色渲染并导出 MIDI 与分轨",
+  "本地模型管理：支持 IndexTTS 2.0/2.5、VoxCPM2、OmniVoice、Qwen3-TTS、Breeze TTS 2、Kokoro 等，可断点续传下载和导入 GGUF",
+  "硬件加速：Apple Silicon 使用 Metal，Windows 支持 CPU、NVIDIA CUDA 和实验性 Vulkan",
+  "可选 AI 服务与 MCP：连接 DeepSeek、Qwen、Kimi、OpenAI、Anthropic、Ollama 等编写编曲和歌词，密钥保存在本机"
+ ],
+ "intro": "yovoice 是一款面向 macOS 和 Windows 的开源本地音频与音乐创作工具。它可以把文字转成语音、克隆声音、生成带歌词的完整歌曲，还能编排多轨乐谱，全部在本地 GPU 或 CPU 上运行，不调用云端 API，也不按字符或时长收费。\n\n项目基于 audio.cpp v0.9.1 引擎，Windows 安装包内置 CUDA 12.4/13.3 运行时，macOS 使用 Metal 加速，无需配置 Python 或 PyTorch 环境。它支持 IndexTTS、VoxCPM2、Qwen3-TTS、Kokoro、ACE-Step 1.5 等多种模型，并提供多版本对比、波形剪辑、MIDI 与分轨导出等创作功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面或官网下载对应平台的安装包",
+  "macOS：打开 .dmg 并将 yovoice 拖入 Applications；Windows：运行 -setup.exe 安装后从开始菜单打开",
+  "Windows NVIDIA 用户可选择 -cuda12.4-setup.exe 或 -cuda13.3-setup.exe 以启用 GPU 加速",
+  "首次启动后在应用内下载所需模型，即可开始语音合成或音乐生成"
+ ],
+ "tagline": "本地离线的 AI 语音与音乐创作工作室"
+}

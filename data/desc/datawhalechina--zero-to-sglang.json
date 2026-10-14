@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合熟悉 Python 和 PyTorch、具备深度学习基础，希望深入理解 LLM 推理引擎并参与开源贡献的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "从概念到代码：讲解 KV Cache、prefill/decode、compute-bound 与 memory-bound 等推理基础",
+  "从零构建 mini-sglang：逐步实现 forward pass、生成、KV Cache、HTTP 服务、Continuous Batching、Paged KV Cache、RadixAttention",
+  "深入真实 SGLang 源码：解析 RadixAttention、Paged KV Cache、Continuous Batching 等优化实现",
+  "覆盖前沿主题：量化、分层缓存、DP Attention / EP / PP、Prefill-Decode 分离",
+  "开源实践指导：性能分析与 trace 分析，以及 SGLang PR 完整流程",
+  "中英双语，提供在线文档"
+ ],
+ "intro": "这是一个由 Datawhale 与 RadixArk（SGLang 团队创立的公司）联合推出的 LLM 推理课程。课程从推理的核心概念讲起，包括 KV Cache、prefill/decode、compute-bound 与 memory-bound 等，然后带你从零手写一个 mini-sglang，逐步实现 forward pass、生成、KV Cache、HTTP 服务、Continuous Batching、Paged KV Cache 和 RadixAttention，最后回到真实的 SGLang 源码，讲解其优化实现，并指导你提交第一个 PR。\n\n课程提供英文和中文版本，目前 Part 0、Part I、Part II 的第 1-2、5、8 章以及 Part III 的第 3 章已完成，其余章节仍在开发中。适合熟悉 Python 和 PyTorch、想深入理解 LLM 推理引擎的开发者学习。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读 Part 0 的《Deploy Your First SGLang Server》，完成环境搭建并在自己的 GPU 上运行 Qwen3-0.6B",
+  "学习 Part I 的基础概念章节，理解推理核心概念",
+  "按照 Part II 的章节顺序，从零开始构建 mini-sglang",
+  "参考 mini-sglang 参考实现（https://github.com/sgl-project/mini-sglang）进行对照学习",
+  "学习 Part III 的 SGLang 源码解析，并按照 PR 流程尝试贡献"
+ ],
+ "tagline": "从零构建 mini-sglang 并读懂 SGLang 源码的 LLM 推理课程"
+}

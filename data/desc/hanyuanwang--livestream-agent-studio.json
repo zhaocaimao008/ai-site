@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合直播电商的运营、投放、内容和复盘团队，以及希望在本机统一管理直播相关 AI 工作流的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "主播发现：读取用户账号可见的蝉妈妈榜单或主播页面，生成结构化达人拆解并管理候选主播",
+  "直播拆解：将完整直播视频转为带秒级时间戳的结构化逐字稿，输出 Excel 文件",
+  "直播复盘：对齐逐字稿与分钟级流量数据，分析话术阶段对应的流量与互动变化，输出 Excel 和 Word 报告",
+  "短视频编导：根据参考短视频链接提取逐字稿，生成原创口播脚本、分镜与拍摄建议",
+  "统一任务中心：集中查看任务进度、运行状态、失败原因和输出文件",
+  "本地设置中心：配置阿里云百炼 DashScope、OSS、平台登录状态及可选的录制助手路径"
+ ],
+ "intro": "LiveStream Agent Studio 是一个面向直播电商团队的 Windows 本地优先 AI Agent 工作台，将主播发现、直播拆解、直播复盘和短视频编导整合到统一入口。项目当前为 v0.2.0-beta 首个公开版本，适合体验、测试和内部研究使用。\n\n它通过四个 Agent 分别处理达人研究、直播逐字稿生成、话术与流量复盘以及短视频脚本创作，并配有统一任务中心和本地设置中心。数据默认保存在本机 workspace，API Key 与 OSS 凭据存放在被 Git 忽略的 .env 文件中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在仓库 Releases 页面下载 LiveAgent-Studio-Windows-x64.zip 和对应的 .sha256 文件，不要只下载源码或单独复制 EXE",
+  "在 ZIP 所在目录打开 PowerShell，运行 (Get-FileHash .\\LiveAgent-Studio-Windows-x64.zip -Algorithm SHA256).Hash 校验哈希，确认与 .sha256 文件一致",
+  "完整解压 ZIP 后双击 LiveAgentStudio.exe，程序就绪后会自动在默认浏览器打开 http://127.0.0.1:4173/",
+  "进入左侧“设置与连接”，配置阿里云百炼 DashScope API Key、私有 OSS Bucket 和仅覆盖指定 Bucket/对象前缀的 RAM AccessKey",
+  "保存后点击“实际验证 Qwen 与 OSS”，验证通过后再开始直播拆解或复盘任务"
+ ],
+ "tagline": "面向抖音直播电商的 Windows 本地 AI Agent 工作台"
+}

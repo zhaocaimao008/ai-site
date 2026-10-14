@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Codex、Claude Code 等 AI 编程代理的开发者，希望在本地直观了解代理正在改哪些文件、推进哪些任务。",
+ "date": "2026-10-14",
+ "features": [
+  "Agenttrail Map：展示项目结构、依赖关系、文件活动和会话轨迹",
+  "Agenttrail Kitchen：以 3D 厨房场景可视化任务、角色贡献和完成情况",
+  "自动读取本地 Codex 和 Claude Code 会话日志，无需 API key",
+  "支持通过可选 hooks 接入 Claude Code 和 Cursor 代理",
+  "提供 --example 脚本化示例，可在连接代理前预览效果",
+  "本地优先，观察过程不启动代理、不修改仓库"
+ ],
+ "intro": "Agenttrail 是一个面向 AI 编程代理的本地可观测性工具，它观察本地文件、计划以及受支持的代理事件，把代理的工作过程转化为实时视图。它本身不运行代理、不分配任务，也不判断任务是否完成，只是把证据可视化出来。\n\n项目包含两个独立视图：Agenttrail Map 关注项目结构、进度和哪些组件正在变化，主要读取 PLAN.md、文件变更和可选的 Claude Code hooks；Agenttrail Kitchen 关注当前任务、角色贡献和已完成的工作，用厨师、订单、烹饪和配送的 3D 场景来呈现，数据来自原生 todo、本地 Codex/Claude 活动以及可选的 Claude/Cursor hooks。两者各自在浏览器中运行，目前使用独立的本地服务和适配器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 20+，并准备一个本地项目文件夹",
+  "在要观察的仓库中运行：npx agenttrail-kitchen .",
+  "浏览器打开 localhost:4780（或下一个空闲端口），保持终端开启并继续使用编程代理",
+  "想先看效果可加 --example 参数，然后点击 Next example step",
+  "运行项目地图：cd your-repo && npx agenttrail"
+ ],
+ "tagline": "本地观测 AI 编程代理的可视化工具"
+}

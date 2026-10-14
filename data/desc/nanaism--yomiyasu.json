@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "需要撰写或润色日语技术文章、设计文档、PR 说明、内部报告的开发者与写作者，以及使用 AI 编码助手的日语用户。",
+ "date": "2026-10-14",
+ "features": [
+  "修正 AI 生成日语中的不自然比喻、暧昧主谓关系和冗余修饰",
+  "提供 tech、business、essay 三种领域风格，可按用途调整文体",
+  "支持通过 npx skills、GitHub CLI、openskills、Claude Code 插件等多种方式安装",
+  "附带基于 Python 标准库的静态检查脚本，可检测表达和 Markdown 粗体问题",
+  "可在写作前让 AI 先读取该 Skill，以减少添加原文没有的内容"
+ ],
+ "intro": "yomiyasu 是一个用于推敲 AI 生成日语的 Agent Skill，主要面向技术文章、设计文档、PR 说明和内部报告等实务文本。它针对 AI 生成文本中常见的生硬比喻、模糊的主谓关系、不必要的修饰和形式化排版，在保留原意的前提下进行改写。\n\n该 Skill 可加载到 Codex、Claude Code、Cursor 等 AI 编码环境中使用，提供 tech、business、essay 三种领域风格。项目还附带用 Python 标准库编写的检查脚本，用于检测表达和 Markdown 粗体显示问题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 npx skills add nanaism/yomiyasu 安装（推荐）",
+  "或使用 gh skill install nanaism/yomiyasu yomiyasu 安装",
+  "在 AI 聊天或编码代理中粘贴草稿并指示「この文章を読みやすくして。」",
+  "如需指定领域，可添加「技術記事向けに」或「ドメイン tech」等说明"
+ ],
+ "tagline": "将 AI 生成的不自然日语改写为易读自然日语的 Agent Skill"
+}

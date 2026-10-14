@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望将 AI 代理引入设计流程的产品团队、设计师和开发者，也适合需要自托管多人设计协作工具的组织。",
+ "date": "2026-10-14",
+ "features": [
+  "多人实时协作：实时光标、在线状态、逐 Frame 编辑指示、撤销/重做、元素评论和活动流，全部通过一个 WebSocket 房间同步。",
+  "内置 MCP 服务器：连接 Claude Code 或任何 MCP 客户端，代理即可在画布上实时设计、流式输出并自我审查。",
+  "内置 Doop Agent：可排队卡片或 @mention 角色，代理自动设计，无需连接客户端；免费额度用完后可使用用户自己的 ChatGPT 订阅或 OpenAI 密钥。",
+  "Canvas 内分页：在 Layers 面板中组织 Frame 到命名页面，支持添加、重命名、拖拽排序、删除空页面，代理也可通过 get_canvas 和 set_canvas_pages 管理页面。",
+  "设计记忆：固定示例 Frame、记录决策，并由 distiller 提炼出持久样式规则供所有代理遵循。",
+  "一条命令自托管：docker compose up 或 bun run dev 零配置运行，使用嵌入式 Postgres，可选集成（SMTP、图库、对象存储、分析）在未配置时优雅降级。"
+ ],
+ "intro": "Doop 是 Paper.design 的开源替代品，一个面向人类和 AI 代理的多人设计画布。每个设计都放在可分享的 Canvas（/c/<id>）上，Canvas 包含多个 Frame——在沙箱 iframe 中渲染真实 HTML 的画板。人类在浏览器中编辑，AI 代理通过内置的 MCP 服务器编辑，并实时流式呈现设计过程。所有参与者都能看到光标、在线状态、Frame 编辑、代理状态和活动流。\n\n项目内置 Doop Agent，可以自行领取任务：在卡片队列中排队、在元素评论中 @mention 角色，或留下反馈，它就会在没有人类介入的情况下运行。角色定义在 shared/agents.ts 中，包括构建、UX、文案、品牌和无障碍等。代理默认使用 Anthropic，也支持 Azure OpenAI。\n\nDoop 默认私密，可通过邮件邀请协作者或按 Canvas 开启链接分享，代理继承其对应人类的访问权限。支持一条命令自托管，使用嵌入式 Postgres（PGlite），无需外部服务即可运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入目录：git clone https://github.com/kgoedecke/doop && cd doop",
+  "安装依赖：bun install",
+  "启动开发服务器：bun run dev",
+  "打开 Web 应用 http://localhost:4300，API + WebSocket + MCP 服务器位于 http://localhost:4400",
+  "可选：在 .env 中设置 ANTHROPIC_API_KEY 以启用内置 Doop Agent；或使用 Docker 自托管生产版本：BETTER_AUTH_SECRET=$(openssl rand -hex 32) docker compose up -d"
+ ],
+ "tagline": "人类与 AI 代理实时协作的开源多人设计画布"
+}

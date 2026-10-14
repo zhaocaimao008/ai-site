@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让智能体从交互反馈中持续改进的开发者与研究者，尤其是需要模型权重训练或 harness 优化的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "连接推理、反馈、学习与版本化交付的持续学习闭环",
+  "支持模型权重训练，可配合 Slime 和 SGLang",
+  "支持 harness 优化，改进提示词、规则和技能",
+  "提供 OpenAI 与 Anthropic 兼容的推理接口",
+  "通过 report 接口上报分数与文本/结构化反馈",
+  "内置版本管理与更新期间保持在线服务的能力"
+ ],
+ "intro": "Reef 是一个开源基础设施，用于构建能够持续自我改进的 AI 智能体。它把智能体的推理、反馈、学习和版本化交付连接成一个闭环：先对外提供推理服务并记录交互，再把反馈与记录匹配，然后根据符合条件的记录产生更新，最后按选择策略发布被接受的更新。\n\nReef 支持两条学习路径：一是训练模型权重，可配合 Slime 和 SGLang 使用；二是改进智能体的 harness，包括提示词、规则和技能。它提供 OpenAI 与 Anthropic 兼容的推理接口，并带有版本管理能力，能在更新过程中保持服务在线。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 git-lfs 系统包，并推荐使用 uv 管理环境",
+  "从 PyPI 安装：uv venv && source .venv/bin/activate && uv pip install reef-infra",
+  "或从源码安装：git lfs install && git clone https://github.com/Human-Agent-Society/reef.git && cd reef && uv venv && source .venv/bin/activate && uv pip install -e .",
+  "启动纯推理服务：uv run reef serve --inference.model-path Qwen/Qwen2.5-1.5B-Instruct",
+  "向 /v1/chat/completions 发送请求，并用响应头 x-reef-agent-record-id 作为 receipt 向 /reef/report 上报反馈"
+ ],
+ "tagline": "面向持续自我改进智能体的开源基础设施"
+}

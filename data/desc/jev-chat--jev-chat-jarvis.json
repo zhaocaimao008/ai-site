@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合经常在 WhatsApp、QQ、飞书等聊天工具中需要辅助判断对方意图、斟酌回复措辞的用户，以及希望自行配置模型 API Key 的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "先判断后写作：在生成任何回复前，先分析对方意图、对话风险和最佳应对方式",
+  "草稿经过校验与排序：每条草稿都对照判断结果检查并排名，最合适的排在最前",
+  "多平台覆盖：Android 无障碍悬浮窗、Windows/macOS 桌面端、iOS 自定义键盘",
+  "支持 WhatsApp、QQ、飞书、X 等聊天应用",
+  "只填入输入框，绝不自动发送，发送权始终在用户手中",
+  "自带 API Key，请求只发往用户配置的模型服务商，项目方无服务器",
+  "MIT 开源许可，Android 双版本代码位于本仓库"
+ ],
+ "intro": "jev-chat 是一个聊天辅助决策工具，核心理念是「先看懂对方再回复」。它不会直接替你写回复，而是先通过 Jev 判断模型分析对话中对方的真实意图、当前对话的风险程度以及最佳应对方式，然后再生成多条回复草稿并排序，你点选一条填入输入框，是否发送始终由你决定。\n\n项目覆盖 Android、Windows、macOS 和 iOS 四个平台，其中 Android 版包含面向 WhatsApp 英文聊天的全球版和面向 QQ、飞书、X 及 WhatsApp 中文聊天的中文版。Android 通过无障碍服务读取屏幕上的对话，桌面端通过截图配合本地 OCR 或系统文本接口读取聊天窗口，iOS 则以自定义键盘形式工作。所有请求只发送到你自行配置的模型服务商，使用你自己的 API Key，项目方不运营服务器，也不接收你的聊天内容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Android 用户：从 Releases 下载对应 APK，全球版为 jev-whatsapp-v0.1.0-release.apk，中文版为 jev-assistant-v1.7-release.apk",
+  "安装后打开应用，按引导开启无障碍服务和悬浮窗权限",
+  "Windows 用户：从 jev-chat-windows 的 Releases 页面下载最新版本并按项目 README 配置",
+  "macOS 用户：从 jev-chat-jarvis-mac 的 Releases 页面下载（仅支持 Apple Silicon）并按项目 README 配置",
+  "iOS 用户：目前无 App Store 版本，需用 Xcode 从源码构建自定义键盘"
+ ],
+ "tagline": "先判断对方意图和风险，再生成回复草稿的聊天辅助工具"
+}

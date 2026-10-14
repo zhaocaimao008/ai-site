@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要开源参数化 CAD 工具的开发者、工程师和爱好者，尤其是对 Rust、WebAssembly 或 AI 辅助建模感兴趣的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "参数化特征时间线：修改尺寸后模型自动重建",
+  "草图绘制与约束：支持线、矩形、圆、圆弧、多边形、样条、文本等，以及构造几何、投影、修剪、圆角和倒角",
+  "多平台运行：桌面端（Windows/macOS/Linux）和浏览器 Web 应用",
+  "内置 MCP 服务器：允许 AI 代理通过 MCP 进行建模",
+  "支持 STEP 格式和 B-rep 建模",
+  "提供用户指南、开发者指南和命令参考文档"
+ ],
+ "intro": "SolidCraft 是一个用纯 Rust 实现的开源参数化 3D CAD 应用，支持桌面端、浏览器以及通过内置 MCP 服务器让 AI 代理参与建模。它提供草图、约束和基于参数化特征时间线的实体构建流程，修改尺寸后模型会自动重建。\n\n项目目前处于早期阶段，但已能用于简单零件设计。根据 README，76 个公开参考零件中有 75 个在体积、面积、质心和包围盒上与解析解或 FreeCAD 计算结果一致。用户可以从官网下载 Windows、macOS、Linux 安装包，或直接在浏览器中试用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows：下载并运行 installer（.msi），或使用 portable zip 免安装运行",
+  "macOS：打开 disk image（.dmg）并将 SolidCraft 拖入 Applications",
+  "Linux：下载 AppImage 并赋予可执行权限后打开，或安装 .deb/.rpm 包，也可使用 Snap：sudo snap install solidcraft",
+  "Web：直接在浏览器中打开 https://bherbruck.github.io/solidcraft/app/ 试用，无需安装"
+ ],
+ "tagline": "纯 Rust 编写的开源参数化 3D CAD 应用"
+}

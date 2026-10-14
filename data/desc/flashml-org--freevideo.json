@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想在本地消费级 GPU 上生成视频的创作者和开发者，尤其是已经使用或愿意尝试 ComfyUI 的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "硬件自适应执行：根据 GPU 选择 int8 或 FP8 权重格式，并自动探测可用的注意力内核",
+  "低内存推理：通过权重流式加载、异步预取和分块计算，最低 8 GB 显存和 16 GB 内存即可运行",
+  "多模态输入：支持文本提示、首尾帧，以及图像、视频和音频参考",
+  "ComfyUI 集成：内置创作工作区，支持两遍采样、批量生成和历史记录，也可切换到节点视图自定义工作流",
+  "一键部署：Windows、macOS 和 Linux 启动器自动安装 ComfyUI、运行环境和模型，支持复用已有模型和离线安装",
+  "社区 LoRA：可在工作流中直接使用 MiniMax H3 LoRA"
+ ],
+ "intro": "FreeVideo 是一个面向消费级 GPU 的 MiniMax H3 本地推理引擎，基于 OpenVDN 的 8 步 VDN-H3 模型和 Video DeltaNet 的混合注意力机制。它通过协调显存、系统内存和磁盘，动态调整权重放置、计算精度和注意力内核，让视频生成在低至 8 GB 显存和 16 GB 内存的机器上也能运行。\n\n项目以 ComfyUI 插件形式运行，并提供 Windows、macOS 和 Linux 的启动器。它支持文本提示、首尾帧以及图像、视频、音频参考等多模态输入，还可以在工作流中使用社区 LoRA。启动器能一键完成 ComfyUI、运行环境和模型的部署，并支持离线安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows：下载 FreeVideo.exe 并运行，选择已有或新建 ComfyUI 文件夹，点击 Install & launch",
+  "macOS：下载 FreeVideo-Mac-arm64.dmg，将 FreeVideo.app 拖入 Applications，打开后选择 ComfyUI 文件夹并点击 Install & launch",
+  "已有 ComfyUI：进入 ComfyUI/custom_nodes 目录，执行 git clone https://github.com/FlashML-org/FreeVideo.git，重启 ComfyUI 后在模板中选择 FreeVideo-All-in-One",
+  "Linux 桌面：下载 FreeVideo-Linux-x86_64.AppImage，赋予可执行权限并打开，按 Windows 步骤操作",
+  "Linux 终端或服务器：执行 git clone https://github.com/FlashML-org/FreeVideo.git && cd FreeVideo，然后运行 ./setup.sh"
+ ],
+ "tagline": "在消费级 GPU 上本地运行 MiniMax H3 视频生成"
+}

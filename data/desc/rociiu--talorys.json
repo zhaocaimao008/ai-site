@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望拥有私有、自托管个人 AI 助手的开发者或普通用户，尤其是已有 Cloudflare 账号并希望利用免费额度的人。",
+ "date": "2026-10-14",
+ "features": [
+  "流式对话，支持 Markdown 和工具活动指示",
+  "持久记忆，可查看、编辑和删除个人事实与偏好",
+  "任务、笔记和项目的完整增删改查，支持从聊天中操作",
+  "一次性与周期性提醒、每日任务摘要和 AI 例行任务",
+  "通过 Web Push 发送系统级推送通知",
+  "单用户设计，安装时设置所有者密码，无注册和团队功能"
+ ],
+ "intro": "Talorys 是一个开源的个人 AI 助手，完全运行在你自己的 Cloudflare 账号中。它支持流式对话、Markdown 渲染和工具调用提示，并能记住你的个人事实与偏好，管理任务、笔记和项目，还支持定时提醒与日常任务摘要。所有数据存放在你账号内的 SQLite Durable Object 中，开发者不运营任何服务器、数据库或账号，也没有遥测和追踪代码。\n\n项目采用单用户设计，安装时设置所有者密码，无需注册和团队功能。它使用 Cloudflare Pages、Workers、Durable Objects 和 Workers AI，默认模型为 @cf/zai-org/glm-4.7-flash，设计上适配 Cloudflare Workers 免费计划。即使 Workers AI 不可用或免费额度耗尽，任务、笔记、记忆和提醒等功能仍可正常使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx create-talorys@latest",
+  "按提示登录 Cloudflare 账号并选择账户和助手名称",
+  "设置所有者密码（本地 PBKDF2-SHA256 哈希后存为 Cloudflare secret）",
+  "等待安装程序部署 Worker 和 Pages 项目并验证部署",
+  "打开安装程序输出的 https://….pages.dev 网址，输入密码开始使用"
+ ],
+ "tagline": "部署在自己 Cloudflare 账号里的个人 AI 助手"
+}

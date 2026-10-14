@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在自己常用的 agent harness 中使用 Codex computer use 能力的开发者，尤其是使用 Claude Code、Codex CLI 或 Pi 的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "桌面应用操作：读取窗口、点击、输入、截图",
+  "启用后可通过官方扩展读取和控制 Chrome 标签页，站点需授权",
+  "提供 Pi、Codex CLI、Claude Code 适配器，另有实验性集成",
+  "在 Claude Code 中提供原生 Computer use 授权面板，可逐应用允许或拒绝",
+  "支持用 lcu apps 命令在 macOS 上通过 Touch ID 管理已批准应用",
+  "可选开启跨轮次 Computer Use，让会话内每一轮都保持可用"
+ ],
+ "intro": "LCU 把 Codex 原本的 computer-use 运行时从 Codex 应用里解耦出来，让它在不要求 Codex 认证的情况下，被任意 harness 调用。它本身不提供运行时，而是复用本地已安装的官方 ChatGPT 桌面应用中的运行时和指令，LCU 负责安装配置与 harness 集成。\n\n它支持读取窗口、点击、输入和截图等桌面操作，也可在启用后通过官方扩展控制 Chrome 标签页。适配器覆盖 Pi、Codex CLI 和 Claude Code，另有实验性的 Oh My Pi 与 Hermes 集成。在 Claude Code 中，LCU 还提供原生的应用授权面板，可逐应用批准或拒绝 agent 的访问。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装官方 ChatGPT 桌面应用和你的 harness",
+  "在 agent 中粘贴 README 提供的安装提示，按 INSTALLATION.md 完成配置",
+  "Claude Code 用户也可执行：claude plugin marketplace add amontlabs/lcu",
+  "再执行：claude plugin install lcu@lcu",
+  "如需 Chrome 控制，按安装指南启用官方扩展并重启 harness"
+ ],
+ "tagline": "把 Codex 的 computer use 运行时解耦出来，接入任意 agent harness"
+}

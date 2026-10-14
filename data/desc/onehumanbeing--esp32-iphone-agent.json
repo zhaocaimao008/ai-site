@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "想用 AI 自动化操作 iPhone、又不想依赖 Mac 或开发者账号的开发者与爱好者。需要一块 ESP32-S3 开发板、一台 macOS 或 Linux 电脑，以及一个支持图片输入的 OpenAI 兼容模型 API。",
+ "date": "2026-10-14",
+ "features": [
+  "通过 AirPlay 投屏获取 iPhone 实时画面，无需在手机上安装任何应用",
+  "ESP32-S3 作为 USB HID 鼠标键盘，实现点击、滑动、输入等真实触控操作",
+  "planner + actor 双角色 AI 规划与执行，支持任意 OpenAI 兼容的视觉模型",
+  "指针位置自动校准与动作后屏幕变化检测，失败可重试、可重新规划",
+  "Web UI 提供实时画面、手动控制、操作日志和每步截图回放"
+ ],
+ "intro": "这个项目让 AI 模型通过一块约 7 美元的 ESP32-S3 开发板操作真实的 iPhone。手机通过 AirPlay 投屏把画面传给电脑上的 UxPlay，ESP32-S3 插在手机 USB 口上模拟成鼠标和键盘，配合 iOS 的 AssistiveTouch 实现点击、滑动、输入等操作。整个方案不需要 Mac、不需要 Apple 开发者账号、不需要越狱，手机上也不用安装任何 App。\n\nAI 部分由一个 planner 和一个 actor 组成：planner 根据目标和当前屏幕写出简短计划，actor 看着每一步的截图决定下一个动作（点击、滑动、画路径、输入、按键、回主屏或结束）。两者可以是同一个模型，任何兼容 OpenAI 接口的视觉模型都能作为大脑，云端 API 或本地模型均可。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 arduino-cli 和 ESP32 core (3.x)，复制 hardware/hid_bridge/secrets.example.h 为 secrets.h 并填入 2.4 GHz Wi-Fi 名称、密码和电脑 IP，然后运行 hardware/flash.sh 烧录开发板",
+  "安装 UxPlay（macOS: brew install uxplay；Debian/Ubuntu: sudo apt install uxplay gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav）",
+  "进入 server 目录，创建虚拟环境并安装依赖：python3 -m venv .venv && .venv/bin/pip install -e .，然后复制 .env.example 为 .env 并设置 LLM_BASE_URL / LLM_MODEL / LLM_API_KEY",
+  "启动服务：set -a && . ./.env && set +a && .venv/bin/python -m hidagent，然后在浏览器打开 http://<computer-ip>:8890",
+  "在 iPhone 上开启 AssistiveTouch，插入开发板，通过控制中心投屏到 iPhone Agent，并在网页的 Manual controls → Calibrate 中完成校准，最后输入任务并点击 Start"
+ ],
+ "tagline": "用 7 美元的 ESP32 让 AI 模型操作真实 iPhone"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合从事授权渗透测试、漏洞赏金、红队评估的安全研究人员，以及希望将安全工具集成到 AI 编程工作流中的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "Hermes Agent 自主推理引擎，可自动映射攻击面并调度安全工具链",
+  "MCP 服务器支持，向 Cursor、Claude Desktop、Gemini 等 AI 客户端暴露安全工具和上下文",
+  "200+ 模块化攻击性安全 playbook 和离线知识库检索",
+  "smart_pipe 流式过滤，防止原始扫描输出淹没 LLM 上下文窗口",
+  "确定性 PoC 验证门，自动生成并执行非破坏性验证脚本",
+  "原生 Go 工具集与 Python 编排，支持 Docker 和 CI/CD 无头运行"
+ ],
+ "intro": "Cybermes 是一个面向授权漏洞赏金、侦察、漏洞研究和结构化报告的攻击性安全自动化框架。它由 Hermes Agent 引擎驱动，结合专用推理技能和多模型 LLM 编排，能够自主完成目标侦察、工具调用、假设验证和报告生成。\n\n项目提供两种使用方式：一是通过 Model Context Protocol (MCP) 将 10 多个原生 Go 安全工具和 200 多个安全 SOP 暴露给 AI 编程环境（如 Cursor、Claude Desktop、Gemini 等）；二是作为独立 CLI 或流水线运行，由 Hermes 自主调度 subfinder、httpx、katana、ffuf 等外部工具，并通过 smart_pipe 过滤输出以避免 LLM 上下文过载。\n\n框架内置确定性 PoC 验证环节，会编写并执行非破坏性脚本收集 HTTP 请求/响应证据，最终在 reports/ 目录生成执行报告。支持 Linux、macOS、Windows 和 Docker。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 MCP 安装：npx -y cybermes-mcp install",
+  "或克隆仓库并运行安装脚本：git clone https://github.com/Zyrexnn/Cybermes.git && cd Cybermes && ./setup.sh",
+  "配置环境变量和 API 密钥：nano .env",
+  "运行环境健康检查：python tools/doctor.py",
+  "执行评估：./cybermes \"Assess https://example.com\""
+ ],
+ "tagline": "AI 驱动的自动化攻防安全与漏洞赏金框架"
+}

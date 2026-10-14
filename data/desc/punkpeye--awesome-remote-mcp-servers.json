@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望为 AI 客户端快速接入远程 MCP 服务器的开发者，以及寻找可用 MCP 端点的普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "收录经过 MCP initialize 握手验证的远程服务器",
+  "按类别（如聚合器、数据库、开发者工具等）组织条目",
+  "标注认证方式：匿名、API 密钥或 OAuth",
+  "提供 Glama connector 徽章，展示工具定义质量评分",
+  "包含连接示例，支持 Claude Code、mcp.json 等客户端"
+ ],
+ "intro": "这是一个远程 Model Context Protocol (MCP) 服务器的精选列表。远程 MCP 服务器由他人托管，你只需将客户端指向一个 URL 并完成认证（通常是 OAuth），无需安装包或在本地启动进程。\n\n列表中的条目按类别组织，涵盖聚合器、浏览器自动化、云平台、数据库、开发者工具、搜索等数十个领域。每个条目都标注了认证方式（🔓 匿名、🔑 API 密钥、🔐 OAuth），部分条目还带有 Glama connector 徽章，表示其工具定义质量和端点健康度经过独立评分。\n\n项目本身不包含服务器代码，而是一个导航资源，帮助开发者快速找到可用的远程 MCP 端点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在列表中找到需要的远程 MCP 服务器，获取其 URL",
+  "对于 Claude Code，运行：claude mcp add --transport http <name> <url>",
+  "对于 Cursor、VS Code 等客户端，在 mcp.json 中添加：{\"mcpServers\": {\"<name>\": {\"url\": \"<url>\"}}}",
+  "对于 Claude.ai 或 ChatGPT，在 Settings → Connectors 中添加 URL",
+  "根据认证方式完成 OAuth 授权或提供 API 密钥"
+ ],
+ "tagline": "远程 MCP 服务器精选列表，无需本地安装即可连接"
+}

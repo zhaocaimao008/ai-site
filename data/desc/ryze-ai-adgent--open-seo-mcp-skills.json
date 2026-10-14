@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude 进行 SEO 工作的开发者、营销人员和网站运营者，尤其是希望基于真实 Search Console 和 GA4 数据而非估算数据做决策的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "seo-audit：基于 GSC 和 GA4 的完整网站审计，包括索引、CTR 异常、衰退页面和快速优化机会",
+  "keyword-research：从种子词到聚类关键词计划，含搜索量、CPC 和意图，数据来自 Google Ads 和 DataForSEO",
+  "rank-tracking：基于 GSC 的真实排名，对比任意两个时间段的排名变化",
+  "competitor-gap：找出竞争对手排名而你没有的关键词",
+  "backlink-check：分析外链概况和引用域，并与竞争对手对比",
+  "ai-visibility：追踪哪些 AI 引擎为你带来流量以及引用了哪些页面"
+ ],
+ "intro": "这是一个面向 Claude 的 SEO 与 GEO 技能集合，基于免费的 Ryze MCP 服务器。它通过连接你自己的 Google Search Console、GA4 和 Google Ads 账号，让 Claude 能够执行关键词研究、排名跟踪、网站审计、外链分析、竞品差距分析以及 AI 可见性追踪等任务。数据来源包括你的真实 GSC 排名、GA4 流量（含 ChatGPT、Perplexity 等 AI 引荐流量）以及 Google Ads 关键词数据，竞品关键词和外链则来自内置的 DataForSEO。\n\n技能本身采用 MIT 许可证，可以自由修改和分发。你可以在 Claude Code 中通过插件安装，也可以手动复制技能文件到本地。安装后只需用自然语言提问，例如“对我的网站运行 SEO 审计”或“竞争对手有哪些关键词排名而我没有”，Claude 就会调用相应技能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude 中连接 Ryze MCP：Settings → Connectors → Customize → 添加自定义连接器，名称填 Ryze AI，URL 填 https://connector.get-ryze.ai/mcp，登录并连接你的 Google Search Console / GA4 / Ads 账号",
+  "安装技能：在 Claude Code 中运行 claude plugin marketplace add Ryze-AI-Adgent/open-seo-mcp-skills 和 claude plugin install open-seo-mcp-skills@ryze",
+  "或者手动复制技能：git clone https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills && cp -r open-seo-mcp-skills/skills/* ~/.claude/skills/",
+  "安装完成后，直接向 Claude 提问，例如“run an SEO audit on mysite.com”"
+ ],
+ "tagline": "为 Claude 提供免费 SEO 与 GEO 技能的 MCP 服务器"
+}

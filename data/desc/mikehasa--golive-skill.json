@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Codex 或 Claude Code 等编码助手构建应用，并希望将其部署到自有服务商账号的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "检测应用所需的基础设施并生成变更计划，经你批准后执行",
+  "支持托管（Vercel、Netlify）、数据库（Supabase、Neon）、DNS（Porkbun、GoDaddy）、邮件（Resend）、测试模式支付（Stripe）和 Supabase 认证",
+  "执行后验证实际生效的步骤，并记录创建的资源",
+  "支持按需运行 golive status 检查资源漂移",
+  "支持 golive teardown 拆除可证明由自己创建的资源，并列出无法自动移除的遗留项",
+  "写入操作需要显式确认标志，如 --yes、--confirm-dns、--confirm-destroy、--confirm-live"
+ ],
+ "intro": "GoLive 是一个开源的 Agent Skill，用于把 AI 编码助手构建的应用部署到真实环境。它覆盖托管、数据库、认证、域名、邮件和支付等环节，全部使用你自己的服务商账号，不需要注册 GoLive 账号，也没有托管后端或产品遥测。\n\n工作流程是：检测应用需要什么、规划具体变更、请求你批准、用你的登录信息执行、最后验证实际生效的部分。它会记录创建的资源，支持按需检查漂移，也能拆除已创建的资源。目前处于早期 alpha 阶段（0.1.0-alpha.9），已覆盖 Vercel、Netlify、Supabase、Neon、Porkbun、GoDaddy、Resend、Stripe 等服务商的部分场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 20+、npm/npx、Git，以及能加载 skill 并运行命令的编码助手",
+  "全局安装 skill：npx skills add https://github.com/mikehasa/golive-skill --skill golive --global",
+  "在提示界面用方向键选择你的 agent，按 Space 选中，按 Enter 确认",
+  "也可以跳过选择器直接指定：npx skills add https://github.com/mikehasa/golive-skill --skill golive --global --agent codex --yes（Claude Code 用 --agent claude-code）",
+  "验证安装：node <installed-skill-dir>/scripts/golive.mjs version --json"
+ ],
+ "tagline": "让 AI 构建的应用上线：托管、数据库、域名、邮件、支付"
+}

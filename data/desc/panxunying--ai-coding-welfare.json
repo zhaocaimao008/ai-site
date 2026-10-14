@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "希望低成本或免费使用 Claude Code、Codex 等 AI 编程工具的开发者，以及寻找可用中转站和公益站的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "收录 11 个免费 AI Coding 中转与公益站，标注在线状态与首日可得额度",
+  "自动抓取站点公开接口，更新模型、价格和可用性数据",
+  "提供按次与按量折算横评、可用性历史和变动日志页面",
+  "支持 Claude Code 一键配置脚本（macOS / Linux / Windows）",
+  "通过 Issue 区接受站点投稿与推广"
+ ],
+ "intro": "这是一个 AI Coding 福利站导航项目，汇总了多个提供免费额度的 Claude Code / Codex 中转站与公益站。项目以表格形式列出各站点的首日可得额度、额度构成、每日签到额度、兼容协议、可用模型和注册入口，并附带邀请链接。\n\n站点数据（模型、价格、在线状态）由脚本抓取站点公开接口自动生成，页面还提供按次与按量折算横评、可用性历史、变动日志和 Atom 订阅。项目同时提供一键配置脚本，帮助用户快速为 Claude Code 写好环境变量。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从表格中的邀请链接注册目标站点，按站点支持的方式登录（GitHub / 邮箱 / Telegram）",
+  "在站点后台「令牌 / API Keys」新建一个 Key",
+  "克隆仓库：git clone --depth 1 https://github.com/panxunying/ai-coding-welfare.git && cd ai-coding-welfare",
+  "运行一键脚本：bash scripts/quickstart.sh（macOS / Linux，需要 Node.js）",
+  "Windows 用户运行：powershell -ExecutionPolicy Bypass -File scripts/quickstart.ps1"
+ ],
+ "tagline": "收录免费 AI Coding 中转与公益站的导航合集"
+}

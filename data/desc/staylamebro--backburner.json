@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "拥有 Apple Silicon Mac 和 iPhone/iPad，希望在本地运行大模型并提升长上下文处理速度的开发者与高级用户。",
+ "date": "2026-10-14",
+ "features": [
+  "通过 USB-C 将 iPhone 作为 Mac 的推理协处理器，加速预填充",
+  "利用 iPhone 内存扩展上下文窗口，最高支持 229k tokens（8-bit）",
+  "保持与单机运行完全相同的输出（贪心解码 token 一致）",
+  "包含针对 Apple Silicon 优化的 Mac 内核（SME2、Metal 融合、DFlash2 推测解码）",
+  "支持多设备协同，如两台 iPhone 或 iPad 参与计算"
+ ],
+ "intro": "Backburner 是一个让 iPhone 通过 USB-C 连接 Mac，协同运行本地大语言模型的项目。它基于 llama.cpp 分支，将 Qwen3.8-27B 模型按层拆分：Mac 负责前 40 层，iPhone 的 GPU 负责剩余层，流水线并行。这样在读取长文件或工具结果时，预填充速度可提升 29-44%，同时利用 iPhone 内存扩展上下文窗口，24GB Mac 可支持 196k-229k tokens 的 8-bit 上下文。\n\n项目在 MacBook Pro M4 Pro 和 iPhone 17 Pro Max 上测试，输出与单机运行完全一致。除了 iPhone，也支持 iPad 作为协处理器，并计划扩展到 Linux、Windows 和 Android 设备。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/StayLameBro/backburner.git",
+  "运行安装脚本：./install.sh（可通过 TAIL_L=<L> 设置 Mac 保留的层数）",
+  "使用 scripts/split-gguf.py -L <L> --no-head 生成手机端模型分片",
+  "通过 scripts/phone-tail.sh 将分片推送到 iPhone",
+  "启动服务后，在 Mac 上使用兼容的客户端连接本地端口进行推理"
+ ],
+ "tagline": "用 iPhone 帮 Mac 本地跑 27B 大模型，加速长上下文推理"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "需要在合盖状态下让 MacBook 继续运行 AI agent 会话、下载或长任务的 macOS 用户，尤其是使用 Claude Code、Codex 等工具的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "菜单栏设置保持唤醒的时长，支持天、小时、分钟",
+  "合盖时关闭屏幕和键盘背光、冻结指定应用、静音音频、开启低功耗模式",
+  "开盖时尝试恢复合盖前的状态",
+  "通过恢复日志和 launchd 恢复代理在应用异常退出后尝试撤销改动",
+  "支持电池电量低于 40% 开启低功耗模式、低于 10% 结束会话，以及过热保护规则",
+  "可自定义冻结应用列表，默认包含 Slack、WhatsApp、Discord"
+ ],
+ "intro": "Insomnia 是一个 macOS 菜单栏应用，用来在指定时间内让 MacBook 保持唤醒，即使合上盖子也不休眠。它没有 Dock 图标和主窗口，只以一只眼睛图标的形式驻留在菜单栏，适合需要让 AI agent 会话、下载或长任务在合盖状态下继续运行的场景。\n\n你可以设置保持唤醒的天数、小时和分钟，合盖时应用会执行一系列动作：关闭屏幕和键盘背光、冻结指定应用（默认 Slack、WhatsApp、Discord）、静音音频、开启低功耗模式等，开盖时再尝试恢复。所有改动会先写入磁盘上的恢复日志，若应用崩溃或退出，一个 launchd 恢复代理会在会话结束后尝试撤销这些改动。\n\n项目使用 Swift 编写，要求 macOS 26 或更高版本以及 Apple Silicon 芯片，目前处于实验阶段，README 明确提示恢复可能失败，运行中的计时器不构成安全保证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "要求 macOS 26 或更高版本，且为 Apple Silicon Mac",
+  "将安装指令粘贴给编码 agent：Install the latest stable Insomnia release by following https://github.com/krishhgg/Insomnia/blob/main/skills/install-insomnia/SKILL.md. If a step needs my password, give me the command to run in Terminal.",
+  "或从源码构建：git clone --branch v<version> --depth 1 https://github.com/krishhgg/Insomnia.git",
+  "cd Insomnia && ./scripts/install.sh",
+  "open \"$HOME/Applications/Insomnia.app\""
+ ],
+ "tagline": "macOS 菜单栏定时保持唤醒工具，合盖也不休眠"
+}

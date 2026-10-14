@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI 编程代理提供持久化项目记忆的开发者，以及希望减少提示词膨胀、提升代理长期上下文管理能力的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "双记忆代理架构（DMAA）：分离推送式工作记忆与拉取式领域记忆，消除提示词膨胀",
+  "基于内存的 BM25 检索，搜索延迟低于 300 微秒，零 API 成本",
+  "Git 原生存储：所有知识以纯文本 Markdown/YAML 格式版本控制，支持 git diff 和 git log 审计",
+  "内置 MCP 服务器，支持 Model Context Protocol，便于代理工具调用",
+  "渐进式披露：通过分层 index.md 和链接图，代理按需加载概念，减少 token 消耗",
+  "基于 Google OKF v0.2 标准，支持来源追踪、信任层级和生命周期元数据"
+ ],
+ "intro": "OKF Agent Memory 是一个基于 Google Open Knowledge Format (OKF) v0.2 的持久化项目记忆系统，专为 AI 编程代理设计。它采用双记忆代理架构（DMAA），将规范性的工作记忆（如 AGENTS.md 中的行为准则）与语义性的领域记忆（knowledge/ 目录下的知识包）分离，避免将所有知识塞入提示词导致上下文膨胀和注意力漂移。\n\n项目使用纯 Go 编写，零外部依赖，内置内存 BM25 检索和 MCP 服务器，支持渐进式披露。所有记忆以纯文本形式存储在 Git 仓库中，可通过 git diff 和 git log 审计，无需外部数据库。检索延迟低于 300 微秒，且无 API 调用成本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并编译：make build，生成 bin/okf 可执行文件",
+  "验证知识包一致性：./bin/okf validate knowledge --strict --drift",
+  "搜索概念：./bin/okf search \"architecture layers\" knowledge",
+  "查看概念详情：./bin/okf show architecture/layers knowledge --json",
+  "创建新概念：./bin/okf create decisions/auth-flow knowledge"
+ ],
+ "tagline": "为 AI 编程代理提供 Git 原生的持久化项目记忆"
+}

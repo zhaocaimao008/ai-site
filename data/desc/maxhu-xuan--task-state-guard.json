@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在重启后识别失联任务的 AI 智能体运行时开发者、需要区分任务终态与投递状态的 worker 服务维护者，以及希望增加工作流可观测性但不想把提示词或任务正文写入诊断账本的运维人员。",
+ "date": "2026-10-14",
+ "features": [
+  "按截止时间和活跃宽限期将遗留 running 任务收敛为 timed_out，仍新鲜的任务保持不变",
+  "任务终态与投递状态分离，投递状态只能在任务进入终态后关闭",
+  "reconcile --dry-run 返回同一时刻将发生的聚合计数，不修改任务、事件或数据库",
+  "doctor 检查 SQLite quick_check、外键、精确 schema、状态语义、时间戳和事件链",
+  "重复写入相同终态幂等，冲突终态被拒绝",
+  "运行时代码只使用 Python 标准库，不包含网络请求或遥测"
+ ],
+ "intro": "TaskStateGuard 是一个面向 AI 智能体、后台 worker 和本地工作流的嵌入式 SQLite 状态对账护栏。服务重启后，running 任务和 pending 投递容易继续留在界面里却无人确认是否还在工作，它按明确的截止时间和宽限期收敛这些遗留状态，并且不会在未观测到成功或投递回执时把未知结果猜成成功。\n\n它把任务终态与投递终态分开：任务终态回答工作是否结束、以什么结果结束；投递状态回答结果是否真实送达或根本不需要直接送达。收敛前可以先用 reconcile --dry-run 查看只含汇总数字的预览，再决定是否应用；doctor 健康检查同样只返回聚合计数，不列出任务明细。\n\n它不是队列、执行器或计算续跑工具，也不承诺恰好一次。收敛只在调用方执行 reconcile 时发生，没有后台 watcher，数据库必须位于本地文件系统。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在虚拟环境中安装：python3 -m venv .venv && . .venv/bin/activate && python -m pip install task-state-guard（Windows 使用 py -3 -m venv .venv 和 .\\.venv\\Scripts\\python.exe -m pip install task-state-guard）",
+  "从源码仓库根目录运行合成演示：PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 examples/restart_reconciliation_demo.py（Windows PowerShell 设置环境变量后运行 py -3 .\\examples\\restart_reconciliation_demo.py --allow-external-acl）",
+  "在代码中使用 Ledger：ledger = Ledger(\"./private-state/tasks.sqlite\")，创建任务后由外部 worker 确认成功再调用 ledger.close_task(task.id, \"succeeded\", code=\"worker_completed\")，传输层收到真实回执后再调用 ledger.set_delivery(task.id, \"delivered\", code=\"transport_acknowledged\")",
+  "先预览再执行重启收敛：task-state-guard --db ./private-state/tasks.sqlite reconcile --active-grace-seconds 600 --delivery-grace-seconds 600 --dry-run",
+  "确认预览后执行收敛并运行健康检查：task-state-guard --db ./private-state/tasks.sqlite reconcile --active-grace-seconds 600 --delivery-grace-seconds 600，然后 task-state-guard --db ./private-state/tasks.sqlite doctor"
+ ],
+ "tagline": "重启后对账 AI 智能体卡住任务的 SQLite 状态护栏"
+}

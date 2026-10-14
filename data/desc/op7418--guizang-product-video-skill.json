@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为软件更新或产品发布制作宣传片的开发者、产品团队和内容创作者，尤其是已经在使用 Claude Code 或 Codex 的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "从提交记录和版本说明中提炼卖点，整理成观众能理解的文案",
+  "优先接入产品原组件、原样式和演示状态，用代码驱动动画",
+  "提供 repo、default、hybrid 三种视觉风格，可沿用产品设计或使用内置样式",
+  "按分镜用代码合成配乐，为操作添加独立音效，并在关键音效出现时压低音乐",
+  "输出可发布的 MP4 和可继续修改、重新渲染的视频工程",
+  "支持生成 3:4、4:3、16:9 三种比例的封面"
+ ],
+ "intro": "归藏 product video skill 是一个面向 AI 编程工具的 Agent Skill，用于把软件更新或产品介绍制作成宣传片。它复用产品代码库中的真实组件和设计语言，通过代码渲染画面，并生成可继续修改的视频工程。\n\n整个流程覆盖分镜文案、动画编排、原创配乐和动作音效，最终导出 MP4。支持 Claude Code 和 Codex，安装后可在产品代码库中直接调用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在终端运行：npx skills add https://github.com/op7418/guizang-product-video-skill --skill guizang-product-video-skill",
+  "打开你的产品代码库，对支持 skill 的 AI 编程工具说明制作需求，例如：用 guizang-product-video-skill，把这个项目最近三周的主要更新做成一支宣传片。横版，45–60 秒，中文。",
+  "首次使用会检查 Node.js、Python、FFmpeg 和渲染依赖，按提示补齐缺失项。",
+  "AI 会先确认风格和范围，给出关键画面供确认，再继续制作动画和声音。",
+  "完成后导出 MP4 和可继续修改的视频工程。"
+ ],
+ "tagline": "用代码和真实组件为软件更新制作宣传片"
+}

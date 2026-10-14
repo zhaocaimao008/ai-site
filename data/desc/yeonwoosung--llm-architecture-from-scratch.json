@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "适合想深入理解 LLM 内部架构的开发者、研究人员和学生，需要具备 PyTorch 和 Transformer 基础知识。",
+ "date": "2026-10-14",
+ "features": [
+  "从零实现 GPT-2 XL、Llama3-8B、DeepSeek v3、Gemma 3 等多种 LLM 架构",
+  "覆盖不同归一化方式（LayerNorm、RMSNorm）和位置编码（Learned Absolute、RoPE）",
+  "实现多种注意力机制，包括 Multi-Head Self-Attention、Grouped-Query Attention、滑动窗口注意力",
+  "包含 Mixture of Experts 架构的实现（DeepSeek v3、Llama 4 Maverick）",
+  "支持文本和多模态模型（Gemma 3、Mistral 3.1 Small 支持文本+图像）"
+ ],
+ "intro": "这个项目用 PyTorch 从零实现多种现代大语言模型架构，目的是帮助开发者深入理解这些模型的内部结构。目前已经实现了 GPT-2 XL、Llama3-8B、Llama 3.2-3B、OlMo 2 7B、Phi-4、DeepSeek v3、Gemma 3、xLSTM、Mistral 3.1 Small 和 Llama 4 Maverick 等模型，覆盖从 1.5B 到 671B 的不同规模。\n\n每个模型都按照其原始架构实现，涉及 LayerNorm、RMSNorm、RoPE、GQA、滑动窗口注意力、MoE 等关键技术。项目还在进行 Qwen3 32B 和 Qwen3 235B-A22B 的实现。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "从零实现主流 LLM 架构的 PyTorch 代码库"
+}

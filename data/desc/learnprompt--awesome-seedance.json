@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想用 Seedance 生成 AI 视频、需要现成提示词参考的创作者；也适合在 Claude Code、Codex 等编码 agent 中工作、希望接入视频生成能力的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "按视频类型分类的提示词模板，复制后替换方括号内容即可使用",
+  "案例库中的提示词可追溯到原始发布帖，并附跨模型复测结果",
+  "提供可安装的 AI 视频 Skills，供编码 agent 调用",
+  "案例数据每日从 goodcase.ai 同步更新",
+  "提供英文、中文、日文三种语言版本"
+ ],
+ "intro": "这是一个面向 AI 视频生成的 Seedance 2.5 / 2.0 提示词资源库。项目收录的案例都会回溯到原始发布帖进行核对，并提供跨模型复测结果，方便判断某条提示词是否真的可复现。案例数据来自 goodcase.ai，每日同步更新。\n\n内容以分类模板、案例库和可安装的 AI 视频 Skills 三种形式组织。模板按视频类型划分，用户复制后替换其中的方括号内容即可使用；Skills 则面向已经在 Claude Code、Codex 等编码 agent 中工作的用户，通过一条安装命令接入。仓库提供英文、中文、日文三个版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Prompt Templates by Category 中按画面挑选一个模板",
+  "打开模板，复制 Copy this 下方的提示词块",
+  "把方括号中的内容替换成自己的产品、人物或场景",
+  "将提示词连同参考图发送给任意 AI 对话工具（ChatGPT、Claude、Gemini），得到完整提示词",
+  "把生成的提示词粘贴到 Seedance（Dreamina / 即梦）中生成视频，效果不理想时参考模板中的注意事项重试"
+ ],
+ "tagline": "经过核验的 Seedance 视频提示词库与模板合集"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想用 AI 制作 2D 动画、又希望保留自己创意控制权的开发者与创作者，需要本地有 Node.js、Python、FFmpeg、Chrome 以及 Claude Code 或 Codex 账号。",
+ "date": "2026-10-14",
+ "features": [
+  "拆解参考视频：镜头数、时长、BPM、转场、色彩、构图与运镜",
+  "先生成方案供确认：分镜、角色、素材和风格帧，可对话修改",
+  "最多 6 个 AI agent 并行制作，每个镜头由不同 agent 交叉审核",
+  "修复需提供前后对比截图，审核者据此检查",
+  "支持在视频任意时间点留言反馈，可批量发送",
+  "新增风格只需编写 Markdown 文件，无需写代码"
+ ],
+ "intro": "ReelMimic 是一个本地运行的 AI 视频生成工具。你给它一段喜欢的视频（文件、手机录像或 YouTube 链接），再说明想做什么，它会先分析参考片的剪辑节奏、镜头长度、转场、构图、色彩和运镜，然后给出分镜、角色、素材和风格帧的方案供你确认。\n\n确认后，多个 AI agent 会并行制作视频的不同部分，每个完成的镜头交给另一个 agent 审核，修复时需附上前后对比截图。整个过程通过你自己的 Claude Code 或 Codex 账号运行，日志和 agent 的思考过程都可见。它只学习参考片的制作方式，不会沿用原片素材或角色。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备环境：Node.js 22.18+、Python 3.10+、FFmpeg、Chrome，以及已登录的 Claude Code 或 Codex CLI",
+  "克隆仓库：git clone https://github.com/edenfunf/reelmimic.git && cd reelmimic",
+  "运行安装脚本：./install.sh（Windows 双击 install.bat）",
+  "启动服务：./start.sh（Windows 双击 start.bat）",
+  "打开 http://localhost:4318，上传参考视频或粘贴链接，说明需求并选择 Claude Code 或 Codex，等待方案后确认开始"
+ ],
+ "tagline": "给 AI 一段参考视频，生成同风格的全新动画"
+}

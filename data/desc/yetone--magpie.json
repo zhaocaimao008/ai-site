@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "同时使用多个 AI 编程 agent、多个模型供应商或多个账号的开发者；如果只用单一 agent 和其官方套餐，则不需要。",
+ "date": "2026-10-14",
+ "features": [
+  "在一个列表中为任意 agent 选择任意 provider/model，自动改写 agent 配置文件并保留原有注释与格式",
+  "本地网关支持 OpenAI Chat、OpenAI Responses、Anthropic Messages、Gemini 协议互转，含流式、工具调用与推理",
+  "统一使用 API key、本地模型或已登录的订阅账号（Claude、ChatGPT、Copilot、Gemini、Grok）",
+  "路由组在配额耗尽时自动切换到下一个账号或模型，agent 无感知",
+  "Profiles 可保存并一键切换所有 agent 的模型配置",
+  "支持菜单栏应用、窗口、TUI、Web UI、CLI，以及 Docker 和 Termux"
+ ],
+ "intro": "magpie 是一个本地网关应用，把多个 AI 编程 agent 的模型配置集中到一处管理。每个 agent 原本各自维护模型配置文件，格式、密钥和 base URL 互不相通；magpie 通过修改 agent 自身配置中真正生效的那个键，让你在一个列表里为任意 agent 选择任意模型，例如让 Claude Code 跑在 Kimi 上、Codex 跑在 DeepSeek 上。\n\n它同时提供本地网关（127.0.0.1:3425），支持 OpenAI Chat、OpenAI Responses、Anthropic Messages 和 Gemini 协议并可在它们之间转换，包含流式输出、工具调用和推理内容。你添加的 API key、本地模型或已登录的订阅（Claude、ChatGPT、Copilot、Gemini、Grok）都能被所有 agent 共用；当某个配额用尽时，路由组会自动切换到下一个账号或模型。\n\nmagpie 提供菜单栏应用、窗口、TUI、Web UI 和 CLI 多种形态，可运行在 macOS、Windows、Linux、Docker 和 Termux 上，采用 MIT 协议开源。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：从 usemagpie.ai 下载应用，或运行 curl -fsSL https://usemagpie.ai/install.sh | sh",
+  "添加 provider：打开 magpie，进入 Providers → Add provider，选择预设并粘贴 key，或登录订阅账号",
+  "在 Agents 页面为每个 agent 选择模型，新开会话即生效",
+  "或用命令行：magpie provider add deepseek sk-… 添加 provider，magpie claude deepseek/deepseek-v4-pro 为 Claude Code 指定模型",
+  "用 magpie quota 查看各套餐剩余额度，magpie tui 在终端中使用完整功能"
+ ],
+ "tagline": "一个本地网关，让任意 AI 编程 agent 自由切换模型"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或端侧设备部署小模型、构建智能体或编码助手的开发者，以及关注中文与多语言场景的普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "提供 Spark-X2.5-4B 与 Spark-X2.5-1.7B 两个紧凑型通用语言模型",
+  "混合注意力架构，原生支持最长 1M token 上下文和 200 多种语言",
+  "深度集成 Codex、Claude Code、OpenClaw、Hermes 等智能体框架",
+  "兼容 vLLM、SGLang、llama.cpp、MLX 等推理框架，支持 Ollama 和 LM Studio 部署",
+  "适配 NVIDIA、华为昇腾、海光等硬件平台，支持 LLaMA-Factory 微调",
+  "提供 FP8 和 INT8 量化版本，覆盖 Hugging Face、ModelScope 等多个下载渠道"
+ ],
+ "intro": "Spark-X2.5 是 XHToken 推出的开源模型系列，目前包含 Spark-X2.5-4B 和 Spark-X2.5-1.7B 两个紧凑型通用语言模型，目标是让能力较强的 AI 更实用、高效、易获取。模型覆盖对话、写作、翻译、推理、编码、工具调用和智能体工作流等日常任务，官方称在同等规模开源模型中表现领先。\n\n技术层面，模型采用混合注意力架构，每 1 层全注意力搭配 3 层滑动窗口注意力，原生支持最长 1M token 上下文，并支持 200 多种语言。模型在华为昇腾集群上训练，使用大规模强化学习和 MOPD 等后训练技术提升推理、编码、智能体与指令遵循能力。\n\n部署方面兼容 vLLM、SGLang、llama.cpp、MLX 等推理框架，可通过 Ollama、LM Studio 快速运行，也支持 LLaMA-Factory 微调，并适配 NVIDIA、华为、海光等多种硬件平台。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Hugging Face、ModelScope、Modelers、Ollama 等平台下载 Spark-X2.5-4B 或 Spark-X2.5-1.7B 模型",
+  "使用 Ollama 或 LM Studio 在本地快速加载并运行模型",
+  "在 vLLM、SGLang、llama.cpp 或 MLX 等推理框架中部署模型",
+  "如需定制，可使用 LLaMA-Factory 等微调框架对模型进行微调"
+ ],
+ "tagline": "面向端侧设备的开源小模型系列，主打智能体能力"
+}

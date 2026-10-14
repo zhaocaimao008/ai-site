@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想用 AI 编码代理批量制作讲解视频的开发者、内容创作者和教育工作者。需要熟悉命令行、Node.js 和 Python 环境。",
+ "date": "2026-10-14",
+ "features": [
+  "输入主题或文档，输出 1280×720 H.264 讲解视频，含配音、字幕、章节卡片和进度条",
+  "支持中文和英文，排版、字幕预算和 TTS 随语言切换",
+  "中文默认使用 edge-tts 云希，英文默认使用 kokoro-82m，也支持自带 TTS 或成品音频",
+  "多代理并行构建分镜，按长度自动决定章节数和构建代理数量",
+  "提供研究文档、旁白、分镜、逐镜头源码和质检报告等完整过程产物",
+  "内置质检脚本 frame_metrics.py，对渲染帧按书面标准进行量化检查"
+ ],
+ "intro": "anything2explainer 是一个 Claude Code / Codex 技能，能把任意主题或文章转成黑底动态图形讲解视频，支持中文和英文。视频包含 TTS 配音、逐词对齐字幕、章节卡片和进度条，所有画面都用 Remotion（React + TypeScript）以代码绘制，不使用素材库或生成式视频模型。\n\n它不是一个命令行工具，而是一整套让 AI 编码代理完成影片的方法：可编译的 Remotion 模板、图形与灯光库、配音/分镜/渲染/量化质检工具、风格与动效规范、多代理分工协议，以及一部完整的参考影片。代理会先调研主题并附来源，再写旁白、生成配音和时间轴、绘制分镜，然后并行调度多个构建代理逐镜头编写 Remotion 组件，最后由质检代理按标准检查渲染帧。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并链接到技能目录：git clone https://github.com/Vincentwei1021/anything2explainer.git && ln -s \"$PWD/anything2explainer\" ~/.claude/skills/anything2explainer",
+  "安装依赖：Node ≥18、ffmpeg，以及 Python 包 edge-tts==7.2.8、numpy、pillow、scipy",
+  "如需英文旁白，额外安装 kokoro、soundfile 和 espeak-ng",
+  "在 Claude Code 或 Codex 中直接描述需求，例如：Make me an explainer video about vector databases.",
+  "技能会自动触发，依次完成脚手架、调研、旁白、分镜、并行构建和质检等 9 个阶段"
+ ],
+ "tagline": "输入主题，自动生成带配音字幕的讲解视频"
+}

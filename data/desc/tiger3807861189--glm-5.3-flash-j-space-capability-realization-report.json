@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在长周期、多步骤任务中提升推理与工具使用稳定性的 AI 智能体开发者，以及希望以 Skill 形式集成推理控制系统的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "模型无关的推理时控制，不修改模型权重或训练",
+  "以 Skill 形式打包，支持跨平台按需加载",
+  "提供 fast、full、loop 三种运行模式，按任务复杂度自动选择",
+  "包含选择性工作区加载、广播中枢、密集轨道等核心机制",
+  "可选 Python 控制器将 loop 状态外化到 .jspace/ 目录",
+  "附带在多个基准上的对比测试结果"
+ ],
+ "intro": "J-Space Cognition Suite 是一个与模型无关的推理时控制系统，用于深度推理、长周期工作、工具调用、验证与恢复。它以 Skill 形式打包，支持跨平台使用、按需加载和低摩擦集成。\n\n该套件在推理时运行，不改变模型权重和训练过程。它通过单一入口、九个可选加载模块、四份支撑参考文档，以及一个可选的 Python 标准库控制器来管理任务状态。控制器只记录和报告状态，不替模型做决策。\n\n项目还提供了在 GLM-5.3-Flash 等模型上的基准测试结果，展示启用 J-Space V3.7 后在 HLE、Terminal Bench 2.1、DeepSWE 等基准上的表现变化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载或克隆本仓库",
+  "找到你的 AI 宿主使用的用户级 Skills 目录",
+  "将完整的 j-space/ 目录复制进去，使入口为 <skills-directory>/j-space/SKILL.md",
+  "使用可用的 Python 3 解释器运行完整性检查：<python-command> <skills-directory>/j-space/scripts/verify_suite.py",
+  "如果宿主在启动时发现 Skills，请重新加载宿主"
+ ],
+ "tagline": "面向深度推理与长任务的推理时控制套件"
+}

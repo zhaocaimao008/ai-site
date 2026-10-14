@@ -1,0 +1,20 @@
+{
+ "ai_related": true,
+ "audience": "适合对大模型异构推理、分布式部署感兴趣的开发者和研究者，尤其是拥有混合 GPU 硬件并希望优化推理性能的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "支持多种异构硬件组合：RTX 3080、RTX 6000D、DGX Spark、AI Max+ 395 等",
+  "实现 Prefill/Decode 分离与专家并行（EP）的协作推理",
+  "提供 Docker 镜像和部署指南，便于复现实验",
+  "包含多个真实硬件基准测试数据（如 Qwen3.8 Flash、DS4.1 Flash）",
+  "基于 llama.cpp、vLLM、SGLang 等开源推理框架"
+ ],
+ "intro": "这个项目研究如何用稠密算力卡（如 RTX 3080、RTX 6000D）对稀疏大显存主机（如 AI Max+ 395、DGX Spark、M3 512G）进行加速，主要面向大模型推理场景。仓库包含多个实验性的部署方案，涉及 Prefill/Decode 分离、专家并行（EP）、流水线并行（PP）等技术，并提供了 Docker 镜像和部署指南。\n\n项目基于 llama.cpp、vLLM、SGLang 等推理框架，通过 RDMA 在主机间协作计算热专家和冷专家，以提升 Prefill 和 Decode 吞吐。README 中给出了多个硬件组合的实测数据，例如 RTX 3080 + DGX Spark 联合 Decode 达到 242.37 tok/s，RTX 3080 + AI Max 395 的 Prefill 提升约 3 倍。所有数据均为未调优的原始结果，便于对比。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "拉取 DS4.1 Flash V8 镜像：docker pull ghcr.io/soulmate-halo/heterogeneous-gpu-pd-lab/ds41-flash-v8:latest",
+  "查看配置：docker run --rm ghcr.io/soulmate-halo/heterogeneous-gpu-pd-lab/ds41-flash-v8:latest show-config",
+  "参考对应目录下的 README（如 qwen38-flash-spark-3080/README.md）进行部署"
+ ],
+ "tagline": "用稠密算力卡加速大显存主机的异构 GPU 推理实验"
+}

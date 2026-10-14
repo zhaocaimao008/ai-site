@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在单张消费级显卡（如 RTX 3090）上本地部署 Qwen 大模型并追求高吞吐的开发者，以及需要 OpenAI 兼容 API 后端的个人或小团队。",
+ "date": "2026-10-14",
+ "features": [
+  "基于 vLLM 0.31.0 的补丁系列，针对消费级 GPU 优化推理",
+  "Docker Compose 一键部署，支持 single 与 batch 两种预设模式",
+  "OpenAI 兼容 API，支持密钥认证与端口绑定控制",
+  "推测解码与 DFlash2 草稿模型，提升引用提示词场景的吞吐",
+  "KVarN 长上下文后端，支持 150k 至 240k token 上下文",
+  "int8 Marlin GEMM 与 int8-QK prefill attention 等量化优化"
+ ],
+ "intro": "HyperQwen 是一个面向消费级 GPU 的 Qwen 大模型推理部署方案，基于 vLLM 0.31.0 打补丁并配合模型预处理流水线，让 Qwen3.8-27B 能在单张 24 GB 显卡上运行。项目提供 Docker Compose 一键启动，支持 OpenAI 兼容 API 与密钥认证，并针对不同使用场景预设了 single 与 batch 两种模式。\n\n在 RTX 3090（250 W）上，single 模式单流解码可达 127 tok/s，回答引用提示词时可达 381 tok/s；batch 模式在 64 并发下聚合解码约 1,035 tok/s。上下文窗口可按需配置为 64k、150k 甚至 240k。仓库核心是一组针对固定版本 vLLM 的补丁和模型准备流程，包括重新量化的 head、校准过的 draft 词表以及从提示词中起草的推测解码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/syv-ai/HyperQwen && cd HyperQwen",
+  "cp .env.example .env（PowerShell 使用 Copy-Item .env.example .env）",
+  "docker compose --profile single up -d（单人或少量用户聊天）",
+  "docker compose --profile batch up -d（API 后端，大量并发请求）",
+  "首次启动会拉取镜像（9.5 GB）并重新量化模型（约 20 GB，仅一次），随后在 :18020 端口提供服务"
+ ],
+ "tagline": "在消费级 GPU 上高速部署大型 Qwen 模型"
+}

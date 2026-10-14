@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Windows 上运行 bash 风格命令的 AI Agent 开发者，以及使用 Claude Code、Codex 等工具但不想安装 Git Bash 或 WSL 的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "将 bash 命令确定性翻译为 PowerShell 并原生执行，无需 VM 或 WSL",
+  "输出 GNU 风格：ls -l 列格式、bash 风格错误、coreutils 退出码",
+  "自动处理 UTF-8/GBK 编码与 CRLF 换行差异",
+  "提供 MCP server，支持 Claude Code、Codex、OpenCode、Kimi Code、Qwen Code 等",
+  "MCP 会话跨调用保持 cwd、环境变量、export/unset、cd -/OLDPWD 和位置参数",
+  "支持 bash_batch：将多步命令编译为一个计划，在一次 MCP 往返中原子执行"
+ ],
+ "intro": "fauxnix 是一个 bash→PowerShell 翻译层，让 AI Agent 在 Windows 上直接执行它们熟悉的 bash 命令，无需虚拟机或 WSL。它把 `ls -la | grep foo`、`find . -name '*.ts' | wc -l` 等命令确定性地翻译成 PowerShell 并原生执行，返回 GNU/Linux 风格的输出：`ls -l` 的列格式、bash 风格错误信息、coreutils 退出码，并自动处理 UTF-8/GBK 编码。\n\n项目提供 CLI 和 MCP server 两种形态，支持 Claude Code、Codex、OpenCode、Kimi Code、Qwen Code 等客户端一键接入。MCP 会话会跨工具调用保持 cwd、环境变量、`export`/`unset`、`cd -`/OLDPWD 以及位置参数，行为类似已登录的 shell。README 称其覆盖 109 条翻译命令、1044 个自动化测试，运行时零 LLM 调用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "免安装试用：npx fauxnix-cli@latest \"ls -la src | head -3\"",
+  "全局安装：npm install -g fauxnix-cli",
+  "接入 Agent：fauxnix install --claude（或 --codex / --opencode / --kimi / --qwen）",
+  "验证配置：fauxnix doctor",
+  "手动接入 Claude Code：claude mcp add fauxnix -- fauxnix mcp"
+ ],
+ "tagline": "在 Windows 上原生运行 Linux 风格命令，专为 AI Agent 设计"
+}

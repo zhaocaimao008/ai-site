@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要多语言翻译能力的开发者、研究人员，以及希望快速体验或集成翻译功能的普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "覆盖 150 种语言的文本翻译，支持术语、格式等指令跟随",
+  "原生多模态图像翻译，无需 OCR 依赖",
+  "Index-Echo 支持语音到字幕及跨语言语音克隆配音",
+  "Index-Homura 可按目标音节数控制翻译，用于配音对齐",
+  "Index-NativeLong 支持长文档翻译，保持术语和人名一致",
+  "提供免费 OpenAI 兼容 API，无需 GPU 即可调用 35B-A3B 模型"
+ ],
+ "intro": "Index-Translate 是 bilibili 开源的多语言、多模态翻译模型系列，基于 Qwen3.5 构建。文本模型覆盖 150 种语言，支持术语、格式、内容保留等翻译指令，并原生支持图像翻译（自带视觉编码器，不依赖 OCR）。\n\n该系列还包括多个专门模型：Index-Echo 处理语音到字幕（S2TT）和跨语言语音克隆配音（S2ST）；Index-Homura 支持按目标音节数控制翻译；Index-NativeLong 面向长文档翻译，保持术语和人名一致性。模型提供 2B、9B、35B-A3B（预览版）三种规模，并发布了 GGUF、FP8、NVFP4 量化版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 https://index-translate.bilibili.com/v1 获取免费 API（OpenAI 兼容）",
+  "使用 Python 脚本调用：python inference/llm/call_api.py \"Hello, world!\" --target zh",
+  "从 Hugging Face 或 ModelScope 下载模型权重（2B/9B/35B-A3B）",
+  "参考 inference/llm/README.md 进行本地推理或部署"
+ ],
+ "tagline": "B站开源的多语言多模态翻译模型系列"
+}

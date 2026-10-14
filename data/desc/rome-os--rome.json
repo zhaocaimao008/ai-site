@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "希望自托管持久化 AI 智能体、构建自定义智能体应用的开发者，以及需要定时任务和工作流自动化的个人用户。",
+ "date": "2026-10-14",
+ "features": [
+  "受约束的人机协作环境，智能体可构建自己的工具链与工作流",
+  "Rome App：将专用界面、智能体推理、可复用工作流和持久化数据打包为可安装产品",
+  "用自然语言描述需求，Rome 可生成规格、搭建应用并持续迭代，产物为 git 跟踪的源码",
+  "提供 @rome-os/app-runtime 和 @rome-os/app-web-sdk 两个公开 SDK",
+  "支持 Docker 自托管，状态保存在命名卷中，重跑脚本可升级而不丢数据"
+ ],
+ "intro": "Rome 是一个面向递归智能体的「可复合智能体操作系统」。它不追求把模型做大，而是扩展智能体所处的环境——工具、工作流、记忆和交互界面。在 Rome 提供的受约束环境中，人类与智能体协作，智能体可以在你的指导下构建自己的工具链、设计 SOP、编排工作流，被验证有效的能力会沉淀下来，让下一次协作的上限更高。\n\nRome 也可以作为 Grok Bot 和 Meta Muse 的开源替代方案，用于持久化智能体、定时任务和自定义应用。项目使用 TypeScript 编写，采用 MIT 许可证，支持通过 Docker 自托管，也提供 Rome Cloud 预览版。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Docker 一键启动：curl -fsSL https://raw.githubusercontent.com/rome-os/rome/main/scripts/quickstart-docker.sh | bash",
+  "或克隆仓库后运行：git clone https://github.com/rome-os/rome.git && cd rome && ./scripts/quickstart-docker.sh",
+  "打开 http://localhost:7663 进入仪表盘（默认仅绑定回环地址）",
+  "如需从源码开发：corepack enable && pnpm install && pnpm dev:all（需要 Node.js 24+、pnpm 11.6 和 Docker Compose）"
+ ],
+ "tagline": "面向递归智能体的可复合智能体操作系统"
+}

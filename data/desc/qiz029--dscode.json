@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在终端中工作的开发者，尤其是希望用 DeepSeek 模型进行编码、并需要多会话协作或 CI 集成的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "Agentic 编码循环：带版本校验的文件读取、精确编辑和原子写入，配合持久 shell 执行搜索、补丁和测试",
+  "会话桥接：在 TUI 中开始任务后，可从其他终端添加需求、读取输出或订阅进度",
+  "智能体间任务：通过 list_sessions、read_session、send_session 等工具在会话之间查找、读取和传递消息",
+  "独立审查：代码变更通过检查后，将 Git diff 发送给独立的只读模型审查并修复问题",
+  "非交互式运行：dscode exec 可在脚本和 CI 中执行完整回合，支持 --json 和 --resume",
+  "终端体验：六种界面语言、可展开 diff、子智能体概览，以及 TPS/上下文/成本等页脚指标"
+ ],
+ "intro": "DSCODE 是一个运行在终端里的编码智能体，面向 macOS 和 Linux，构建在 DeepSeek Harness 之上。它提供专用的文件读写工具，带文件版本校验，避免覆盖过期内容；同时维护一个持久 shell，用来执行搜索、构建和测试。TUI、CLI 和脚本共享同一个会话运行时，而不是各自启动独立进程。\n\n与多数单打独斗的编码智能体不同，DSCODE 假设本机上的多个会话可以互相看见：一个会话可以把任务交接给另一个，另一个可以审查 diff，独立的审查者根据你的指令而非规则表来决定是否批准操作。它还支持跨会话记忆、子智能体、非交互式运行和沙箱护栏。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 README 提供的 curl 安装脚本安装 DSCODE（macOS 14+ 或 64 位 glibc Linux）",
+  "在终端运行 dscode 启动 TUI 会话",
+  "使用 /btw 提问旁路问题，或使用 dscode send <session-id> --steer 向其他会话交接任务",
+  "使用 /permission auto-review 切换为独立审查者自动批准，或 /review-usage 查看审查用量",
+  "在脚本或 CI 中运行 dscode exec \"prompt\" 执行非交互式回合"
+ ],
+ "tagline": "基于 DeepSeek Harness 的终端编码智能体，支持多会话协作"
+}

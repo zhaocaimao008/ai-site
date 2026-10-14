@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 macOS 上以较低成本试验计算机使用自动化的开发者，以及想了解分类器驱动 agent 循环实现方式的读者。",
+ "date": "2026-10-14",
+ "features": [
+  "用 Vision OCR 加辅助功能树确定性地读取屏幕，识别 OCR 看不到的图标控件",
+  "由 TypeSafe 分类器在最多 255 个选项中选出动作类型、目标项和站点",
+  "仅在需要自由文本或读屏回答时调用写作模型，降低单步成本",
+  "支持 dry run 预览、步数限制、延迟和 handoffs 等运行参数",
+  "每次运行写入 runs/<timestamp>/ 目录，支持离线回放",
+  "提供 clicker-inspect 工具，捕获并标注屏幕与请求负载"
+ ],
+ "intro": "typesafe-computer-use（简称 jev）是一个面向 macOS 的计算机使用（computer use）循环工具。你输入一句英文目标，它会确定性地读取屏幕内容，再用 TypeSafe 的分类器判断下一步该做什么动作，最后执行点击或输入。项目强调「分类器做选择、代码决定事实、写作模型只负责自由文本」：日期解析、字段是否聚焦、URL 是否干净等推理都由代码计算后作为状态传入，而不是交给模型。\n\n它只在需要输入自由文本或分类器停下需要读屏时才调用写作模型，因此单步成本约 0.0002 美元，官方给出的对比中比直接使用大模型截图方案便宜上百倍、延迟也更低。项目处于 Beta 阶段，会驱动真实的鼠标和键盘，README 建议先用 dry run 试跑。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认 macOS 14+、Python 3.12+ 和 uv，然后执行 git clone https://github.com/awlevin/typesafe-computer-use && cd typesafe-computer-use",
+  "运行 uv sync 安装依赖，再执行 cp .env.example .env 并填入 TYPESAFE_API_KEY 等密钥",
+  "在系统设置 > 隐私与安全性中为终端授予「屏幕录制」和「辅助功能」权限",
+  "先试跑 uv run clicker \"open the Playground\" 查看它会做什么，再加 --act 实际驱动机器",
+  "需要调试时运行 uv run clicker-inspect \"any goal\" 捕获并查看标注后的屏幕"
+ ],
+ "tagline": "用 OCR 加分类器低成本驱动 macOS 自动操作"
+}

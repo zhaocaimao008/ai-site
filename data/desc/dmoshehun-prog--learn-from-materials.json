@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将书籍、论文、报告等复杂材料转化为可交互学习页面的开发者、研究人员和学习者，尤其适合使用支持 Agent Skills 的智能体环境的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "支持 PDF、EPUB、MOBI/AZW/AZW3、DOCX、PPTX/PPTM、HTML、Markdown、TXT、RTF 及多材料集合",
+  "提供“快速概览”和“系统学习”两种学习深度",
+  "生成可追溯的 .learnkb/ 知识库、自包含交互式 HTML 页面和 Markdown",
+  "对 PDF 页码、PPT 幻灯片和 EPUB 章节进行细粒度来源映射",
+  "区分材料事实、材料未覆盖区域、模型添加内容和外部验证项",
+  "默认离线运行，笔记、学习者档案和错题记录仅保存在本地浏览器"
+ ],
+ "intro": "learn-from-materials 是一个基于 Agent Skills 规范的学习技能，能把书籍、PDF、幻灯片、Word 文档、网页以及多文件材料集转化为可追溯的知识库、交互式学习页面和 Markdown 内容。它强调完整阅读与快速概览两种学习深度，并要求所有内容可验证来源，严格区分材料事实与模型添加内容，默认离线运行且遵循最小权限原则。\n\n该项目可在支持读取文件、运行本地命令并识别 SKILL.md 的智能体环境中使用，如 WorkBuddy、Codex、Claude Code 和 GitHub Copilot CLI。纯聊天环境无法进行材料提取、覆盖验证或 HTML 渲染。它支持 PDF、EPUB、MOBI/AZW/AZW3、DOCX、PPTX/PPTM、HTML、Markdown、TXT、RTF 等格式，并生成包含核心框架、引导内容、术语表、行动规则、动态自检和本地笔记的页面。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "将书籍、PDF 等材料转化为可追溯的交互式学习网页"
+}

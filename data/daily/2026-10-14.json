@@ -2,7 +2,7 @@
  {
   "full_name": "affaan-m/ECC",
   "gain": 0,
-  "stars": 278959
+  "stars": 278961
  },
  {
   "full_name": "NousResearch/hermes-agent",
@@ -12,17 +12,17 @@
  {
   "full_name": "deepseek-ai/deepseek-harness",
   "gain": 0,
-  "stars": 249474
+  "stars": 249476
  },
  {
   "full_name": "morluto/rea",
   "gain": 0,
-  "stars": 228415
+  "stars": 228547
  },
  {
   "full_name": "n8n-io/n8n",
   "gain": 0,
-  "stars": 207351
+  "stars": 207352
  },
  {
   "full_name": "firecrawl/firecrawl",
@@ -32,12 +32,12 @@
  {
   "full_name": "Significant-Gravitas/AutoGPT",
   "gain": 0,
-  "stars": 187568
+  "stars": 187569
  },
  {
   "full_name": "ollama/ollama",
   "gain": 0,
-  "stars": 183120
+  "stars": 183121
  },
  {
   "full_name": "f/prompts.chat",
@@ -47,7 +47,7 @@
  {
   "full_name": "huggingface/transformers",
   "gain": 0,
-  "stars": 167713
+  "stars": 167715
  },
  {
   "full_name": "AUTOMATIC1111/stable-diffusion-webui",
@@ -57,7 +57,7 @@
  {
   "full_name": "DietrichGebert/ponytail",
   "gain": 0,
-  "stars": 163230
+  "stars": 163233
  },
  {
   "full_name": "Snailclimb/JavaGuide",
@@ -77,7 +77,7 @@
  {
   "full_name": "open-webui/open-webui",
   "gain": 0,
-  "stars": 155630
+  "stars": 155631
  },
  {
   "full_name": "langchain-ai/langchain",
@@ -87,17 +87,17 @@
  {
   "full_name": "farion1231/cc-switch",
   "gain": 0,
-  "stars": 144175
+  "stars": 144177
  },
  {
   "full_name": "Shubhamsaboo/awesome-llm-apps",
   "gain": 0,
-  "stars": 141677
+  "stars": 141679
  },
  {
   "full_name": "Comfy-Org/ComfyUI",
   "gain": 0,
-  "stars": 137453
+  "stars": 137454
  },
  {
   "full_name": "harry0703/MoneyPrinterTurbo",
@@ -107,7 +107,7 @@
  {
   "full_name": "Graphify-Labs/graphify",
   "gain": 0,
-  "stars": 126354
+  "stars": 126357
  },
  {
   "full_name": "microsoft/generative-ai-for-beginners",
@@ -122,12 +122,12 @@
  {
   "full_name": "JuliusBrussee/caveman",
   "gain": 0,
-  "stars": 111694
+  "stars": 111697
  },
  {
   "full_name": "TauricResearch/TradingAgents",
   "gain": 0,
-  "stars": 111135
+  "stars": 111136
  },
  {
   "full_name": "google-gemini/gemini-cli",
@@ -142,11 +142,11 @@
  {
   "full_name": "paperclipai/paperclip",
   "gain": 0,
-  "stars": 101905
+  "stars": 101907
  },
  {
   "full_name": "thedotmack/claude-mem",
   "gain": 0,
-  "stars": 100632
+  "stars": 100633
  }
 ]

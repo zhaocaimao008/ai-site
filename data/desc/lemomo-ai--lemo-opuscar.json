@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用编程 agent 制作短片的开发者、创意工作者和影视爱好者，需要基本的命令行操作能力。",
+ "date": "2026-10-14",
+ "features": [
+  "43 种影片风格，每种配有风格提示词和纯代码样片",
+  "OPUSCAR 98：98 种风格重绘奥斯卡最佳影片，风格提示词全部公开",
+  "通过 Claude Code 插件安装，在任意文件夹中调用",
+  "agent 读取导演、技术、风格三份指南，自动完成渲染、配音、配乐和混音",
+  "支持用户提供自己的声音、音乐或素材，并可先看故事板",
+  "默认输出 1920×1080、24 fps，可指定其他尺寸"
+ ],
+ "intro": "Lemo-Opuscar 是一个 Claude Code 技能，让编程 agent 用纯代码制作短片。它提供 43 种影片风格，每种风格都包含一个可复用的风格提示词（STYLE.md）和一支完全由 Claude Opus 5.5 编写的代码样片。所有影片通过 canvas、WebGL 逐帧渲染，配合原创音乐和 TTS 旁白，不使用视频生成模型或素材库。\n\n项目还包含 OPUSCAR 98 特辑：一支 6 分 31 秒的短片，用 98 种风格重绘了 1927 至 2025 年的 98 部奥斯卡最佳影片。每种风格的标签、画面、提示词和镜头导演方式均已公开。\n\n使用时，agent 会读取 DIRECTOR.md（导演指南）、TECHNIQUE.md（技术指南）和对应风格的 STYLE.md，像小型工作室一样完成从故事到成片的制作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Claude Code 插件：claude plugin marketplace add lemomo-ai/lemo-opuscar",
+  "安装技能：claude plugin install lemo-opuscar@lemolab",
+  "在任意文件夹中向 agent 描述需求，例如：Make a 45-second film in the watercolor style about the coffee farm my family runs. Warm female narrator.",
+  "确保环境已安装 Node 20+、ffmpeg 和 Python 3.11+（或 uv），其余依赖由 agent 安装",
+  "等待约 30–60 分钟，agent 将生成完整短片"
+ ],
+ "tagline": "用代码做短片的 Claude Code 技能，含 43 种影片风格"
+}

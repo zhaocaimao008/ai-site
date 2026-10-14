@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频生成、世界模型与扩散模型的研究者和工程师，以及希望基于开源数据训练长时程交互式视频模型的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "统一代码库支持 Wan2.2-5B、Wan2.2-14B、LTX-2.5、MiniMax-H3 四个 5B–33B 模型",
+  "三阶段训练流程：Stage0.5 双向 flow matching、Stage1 TF-AnyFlow、Stage2 DMD via SGF",
+  "支持相机控制的少步自回归生成与滑动窗口长时程推理",
+  "开放 1.43M 片段、约 25 TB 数据集及完整数据处理管线",
+  "提供 train、infer、preencode 三类运行时接口",
+  "发布模型权重、预编码 latent 数据与独立测试集"
+ ],
+ "intro": "SolarWM 是一个端到端的开源框架，用于构建可交互的视频世界模型，覆盖数据准备、可扩展训练到长时程推理的完整流程。它用同一套代码库支持 Wan2.2、LTX-2.5 和 MiniMax-H3 上的四个 5B–33B 模型，共享数据、训练和推理接口，同时保留各骨干网络原生的表示与训练目标。\n\n训练采用三阶段配方：Stage0.5 学习全片段双向 flow matching，Stage1 结合 teacher forcing 与 AnyFlow loss，Stage2 通过 self-gradient forcing（SGF）做 DMD 蒸馏，把双向视频模型变成相机可控的少步自回归模型，并借助滑动窗口推理支持任意长时程的少步交互。\n\n项目同时完整开放数据：1.43M 片段、约 25 TB，统一了 14 个数据集，包含相机几何、caption、质量元数据和来源信息，源数据处理与训练混合设计解耦。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "根据所选骨干网络（Wan、LTX 或 MiniMax-H3）激活对应的独立运行环境，参考 environments/README.md",
+  "安装共享的 SolarWM 源码：python -m pip install -e .",
+  "运行环境探测：solarwm environment probe",
+  "从 Hugging Face 的 SolarWM model collection 下载所需模型权重",
+  "参考 Wan2.2 TI2V-5B 或 MiniMax-H3 指南，执行 Stage0.5、Stage1、Stage2 的训练与推理命令"
+ ],
+ "tagline": "开源长时程视频世界模型的训练框架与数据集"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Codex 客户端、并希望协调多个模型（如 Claude、DeepSeek）协同完成开发任务的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "在 Codex 中协调多个模型，支持规划、委派、工具交接与结果审查",
+  "三种核心技能：crack-plan（规划与选型）、crack-setup（配置 worker，支持预览与撤销）、crack（执行与审查）",
+  "支持 Codex 宿主 + 原生 worker、Codex 宿主 + Opus、以及三者组合的协作模式",
+  "可选面板按工作区展示阶段、agent、模型交接、工具活动与用量计数",
+  "支持在对话中留下反馈，并导出离线回放",
+  "模型选择由用户决定，不会静默替换模型或计费路径"
+ ],
+ "intro": "Codex on Crack（原名 Astra Flash Orchestrator）是一个运行在 Codex 客户端中的插件，用于协调多个模型协同完成开发任务。你只需描述工作内容，它会在你已配置的模型中寻找可行的执行路径，与你确认计划，然后推进实现与审查。\n\n它支持多种协作方式：Codex 作为主控负责对话、调度和调用宿主工具，可委派给原生 worker（如 DeepSeek V4.1 Flash）实现，也可通过 Claude Code 客户端让 Opus 5.5 完成实现、规划或审查。可选的面板以 MCP App 形式嵌入对话，按工作区展示阶段、模型交接、工具活动和用量信息，并支持在对话进行中留下反馈。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 24.15+、支持插件的 Codex 客户端，并配置好模型访问权限",
+  "在稳定目录下执行：codex plugin marketplace add \"$PWD\"",
+  "安装插件：codex plugin add codex-on-crack@codex-on-crack",
+  "如需面板：codex plugin add codex-on-crack-panel@codex-on-crack",
+  "开启新对话，让 Codex 检查可用模型、推荐分工并确认计划后再开始构建"
+ ],
+ "tagline": "在 Codex 中协调多个模型完成规划、委派与审查"
+}

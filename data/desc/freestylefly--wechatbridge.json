@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 macOS 上把微信聊天记录整理进 AI Agent 或 Obsidian 本地知识库的用户，以及关注本地隐私工作流的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "在微信「转发到其他应用」菜单中直接选择目标，无需打开主窗口",
+  "内置 Codex、Claude、豆包、千问办公、Obsidian 等十二个转发入口",
+  "沉淀到 Obsidian：生成 Markdown 笔记并保存原始 ZIP 附件",
+  "支持添加任意 macOS 应用作为自定义转发目标",
+  "场景提示词与兼容 Agent 的 SKILL.md 技能管理",
+  "本地记录批次状态，支持重新发送、复制、定位文件与清理历史"
+ ],
+ "intro": "WeChatBridge（微信流）是一款原生 macOS 工具，用来把微信聊天记录转发到 AI Agent 或本地知识库。macOS 微信 4.1.13 起支持多选聊天记录后「合并转发」，微信会生成一份包含 TXT、图片和视频的 ZIP；微信流通过 Share Extension 补齐系统转发入口，让你在微信的转发菜单里直接选择目标应用。\n\n它内置 Codex、Claude、豆包、千问办公、WorkBuddy、WeSight、DeepSeek Harness、Obsidian、剪贴板等十二个入口，转发时会激活目标 App 并自动粘贴聊天归档，或生成 Markdown 笔记与附件保存到 Obsidian。项目还支持自定义目标应用、场景提示词、技能管理、分批收集和本地记录查看。\n\n隐私方面，聊天内容只来自微信主动导出的文件，不读取微信数据库、不解密、不注入，归档与记录保存在本机，Share Extension 在沙盒中运行且无网络权限。项目使用 Swift 6 编写，要求 macOS 14 及以上，采用 MIT 许可证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "前往 GitHub Releases 下载最新 DMG，打开后将「微信流」拖入「应用程序」",
+  "打开「微信流 → 设置 → 入口」，启用需要的分享入口",
+  "在系统设置中按需授予辅助功能权限（自动粘贴）和屏幕录制权限（识别聊天名）",
+  "在微信中多选聊天记录，选择「合并转发」，在转发菜单里选择目标应用或 Obsidian",
+  "从源码构建：git clone 仓库后进入 macos 目录，运行 swift test 和 CONFIG=release Scripts/make-app.sh"
+ ],
+ "tagline": "把微信聊天记录一键转发给 AI Agent 或 Obsidian 的 macOS 工具"
+}

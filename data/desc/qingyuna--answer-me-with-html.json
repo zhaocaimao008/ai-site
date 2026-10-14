@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合经常用 AI Agent 讨论架构、流程、方案对比等复杂问题的开发者，以及希望回答更易读的普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "把复杂问题的回答生成为单页 HTML，含文字、表格、代码和图表",
+  "模型只写 Markdown 草稿，SVG、CSS 和 HTML 由自带 CLI 生成，显著减少输出 token",
+  "支持 Claude Code、Codex、Cursor、OpenCode、Pi、DeepSeek Harness 等多种 Agent",
+  "页面单文件、可离线查看，支持主题与明暗模式切换",
+  "可开启 always-on 模式，让 Agent 在每次结论后都附上一页",
+  "简单问题仍返回一行文字，由 Agent 自行判断是否值得生成页面"
+ ],
+ "intro": "Answer me with HTML 是一个 agent skill，用来把复杂问题的回答从终端里的大段文字变成一页可读的 HTML。安装后照常提问，Agent 会先写一份简短的 Markdown 草稿，再交给技能自带的 CLI 生成页面，包含文字、表格、代码和图表。\n\n它主要解决的是直接让模型手写 HTML 时浪费 token 的问题。README 的统计显示，手写页面中约 47% 的 token 花在 SVG 图表的坐标和路径上，CSS 与 HTML 标签又占去三成多，真正的内容只占 21%。使用该技能后模型只写 Markdown，平均输出约 612 token，是手写 HTML 的约八分之一，生成时间也从 31 秒降到 12 秒。\n\n生成的页面保存在 ~/.answer-me-with-html/pages/，单文件、可离线查看，右上角按钮可切换主题和明暗模式、收集回复，并复制生成该页面的 Markdown。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 20 或更高版本，无需 npm install",
+  "推荐让 Agent 自行安装：把「Install Answer me with HTML: read https://raw.githubusercontent.com/QingYunA/answer-me-with-html/main/INSTALL.md and follow it.」粘贴给 Claude Code、Codex、Cursor、OpenCode 等 Agent",
+  "或在 Claude Code 中执行 /plugin marketplace add QingYunA/answer-me-with-html 和 /plugin install answer-me-with-html@answer-me-with-html",
+  "或运行 npx skills add QingYunA/answer-me-with-html 并选择要安装的 Agent",
+  "安装后直接提问，例如「Explain the TCP three-way handshake」，页面会保存到 ~/.answer-me-with-html/pages/"
+ ],
+ "tagline": "让 AI Agent 用一页 HTML 回答复杂问题"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要阅读英文论文的研究生、科研人员和开发者，尤其是希望用中文精读并随时核对原文、边读边问 AI 的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "PDF 论文逐页翻译，公式、表格按原文重排，支持原文对照和原页定位",
+  "边读边问 AI，可引用多段文字提问，回答放在页边，支持多个对话和多种模型",
+  "四色荧光笔、下划线、笔记批注，笔记可汇总、筛选并导出 Markdown",
+  "文献库管理：分类分层、置顶、星标、阅读进度、复制 GB/T 7714 / APA / BibTeX 引用",
+  "支持从 Zotero 迁移整个文献库，或导入整个文件夹",
+  "本地运行，数据保存在电脑上，也可迁移到网盘同步文件夹"
+ ],
+ "intro": "EasyRead 是一款本地运行的论文阅读工具，把英文 PDF 论文逐页翻译成中文，并按中文排版重新呈现：宋体正文、KaTeX 公式、三线表，参考文献保留原文。译文和原文可以随时对照，右侧能打开原页并框出当前段落位置。\n\n它把翻译和 AI 解释分开：正文只放译文，AI 的回答和解释放在页边。阅读时可以划线、记笔记、引用多段文字向 AI 提问，支持 Claude、GPT（Codex）、DeepSeek、通义、本机 Ollama 等多种模型。文献库支持分类、星标、阅读进度、引用导出，也能从 Zotero 迁移整个库。\n\n所有数据默认保存在本机，也可以放进自己的网盘同步文件夹。支持 Windows、macOS 和 Linux。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载对应系统的安装包：Windows 为 EasyRead-Setup-x.x.x.exe，macOS 为 EasyRead-x.x.x-arm64.dmg，Linux 为 EasyRead-x.x.x.AppImage",
+  "或者从源码运行：需要 Python 3.10+，Windows 双击 start.cmd，macOS / Linux 运行 ./start.sh",
+  "也可以用 pip 安装：pip install git+https://github.com/Edwardxlai/easyread，然后运行 easyread",
+  "打开右上角“设置” → “模型”，添加要用的模型并设为翻译模型",
+  "把 PDF 拖进窗口，或粘贴 arXiv 编号、DOI、论文标题等开始翻译"
+ ],
+ "tagline": "本地运行的 PDF 论文翻译与 AI 阅读工具"
+}

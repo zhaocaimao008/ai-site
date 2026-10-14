@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合构建实时语音智能体、语音助手，并希望为其加入长期记忆能力的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "流式双脑架构：左脑管理事实信息，右脑管理情绪与人格",
+  "支持从真实音频中提取语音、说话人、声音事件、多人对话和音乐等多模态记忆",
+  "流式查询：在用户说话过程中提前检索记忆，降低响应延迟",
+  "查询时先路由再排序，只注入 Top-K 条记忆，控制 token 消耗",
+  "架构解耦，底层记忆引擎等组件均可更换",
+  "提供可插拔语音合成层，可接入自定义语音模型"
+ ],
+ "intro": "VoiceMem 是一个面向实时语音智能体的记忆系统，目标是为语音模型补上长期记忆能力。它采用「流式双脑」架构：左脑通过 Schema 和 Entity 组织事实记忆，右脑用独立节点和跨实体节点管理人格、情绪与关系信息，两者互相配合。\n\n整个流程都是流式的。用户还在说话时，VoiceMem 就会持续完成音频分段、语音转写、记忆提取，并把结构化信息写入记忆图；查询时先路由、再排序，最后只把 Top-K 条记忆注入模型上下文，以控制上下文长度。项目还开源了配套的 VoiceMem 模型系列、VoiceMem Utils 和 ChatMem-400K 数据集。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/xzf-thu/VoiceMem.git && cd VoiceMem",
+  "安装记忆系统：pip install voicemem（可选 pip install \"voicemem[slm]\" 使用微调的 Qwen 回复模型）",
+  "下载所需模型：hf download zhifeixie/VoiceMem_Default_Models_Env --local-dir ./models",
+  "在 Python 中初始化 VoiceMem 并调用 warmup() 预热本地模型，再用 ingest() 写入记忆、search() 检索记忆",
+  "运行交互式演示：python web/run.py，然后访问 http://localhost:8787"
+ ],
+ "tagline": "面向实时语音智能体的流式双脑记忆系统"
+}

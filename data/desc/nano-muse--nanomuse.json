@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望拥有可自行部署、跨设备个人 AI 智能体的开发者与普通用户，尤其是关注隐私和自主可控的人群。",
+ "date": "2026-10-14",
+ "features": [
+  "跨设备运行：覆盖 Android、iOS/iPadOS、Windows、macOS、Linux 和浏览器",
+  "执行而非仅回答：可操作手机屏幕和电脑完成实际任务",
+  "后台持续工作：应用关闭后仍能继续执行任务",
+  "记忆用户：记住用户偏好与上下文",
+  "操作前确认：对不可撤销的操作会先询问用户",
+  "可自托管：relay 和 Web 应用可部署在自己的服务器上，支持 Docker"
+ ],
+ "intro": "nanoMuse 是一个开源的个人 AI 智能体，目标是让每个人在自己的设备上拥有一个专属 agent。它不只回答问题，而是直接执行操作，在应用关闭后仍能继续工作，会记住用户，并在执行不可撤销的操作前先询问确认。项目采用 GPL-3.0-or-later 许可，手机应用、桌面应用、Web 控制台以及连接它们的 relay 都包含在同一仓库中，可自行部署。\n\nnanoMuse 支持 Android、iPhone/iPad、Windows、macOS、Linux 和浏览器，可以把手机屏幕和电脑当作它的“手”来操作。登录后可在社区 relay 上获得免费模型额度，额度用完后可使用自己的 API key；relay 也可以部署在自己的服务器上，让数据留在本地。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "浏览器体验：访问 demo.nanomuse.dev 登录后试用模拟手机上的 nanoMuse",
+  "Android 8.0+ arm64：下载并安装 nanoMuse-1.0.5-arm64.apk",
+  "iPhone / iPad：通过 TestFlight 链接安装 beta 版",
+  "桌面端：从最新 release 下载对应系统的安装包（macOS、Windows、Linux）",
+  "自托管 relay：运行 bash scripts/self-host.sh --local；在服务器上运行 Web 应用：docker compose up -d app"
+ ],
+ "tagline": "开源个人 AI 智能体，跨设备执行任务并记住你"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合进行逆向工程、恶意软件分析或安全研究的开发者，以及希望用 AI 助手自动化操作 x64dbg 的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "提供 84 个 MCP 工具，覆盖反汇编、单步、断点、内存分配、寄存器、模块、线程、调用栈、模式扫描、字符串提取、交叉引用、符号、书签、PE 分析、OEP 检测、模块转储、PEB/SEH 检查、跟踪等调试操作",
+  "支持 22 个调试器事件回调，包括初始化、停止、断点、异常、单步、附加/分离、DLL 加载/卸载、线程等",
+  "纯原生插件，零依赖，无需运行时或框架",
+  "同一套代码可构建 x32 与 x64 两个架构",
+  "同时支持 Streamable HTTP 和 SSE 传输，兼容新旧 MCP 客户端",
+  "强制 Bearer Token 鉴权，首次运行自动生成，可在配置对话框中修改 IP、端口和 Token"
+ ],
+ "intro": "x64dbg-MCP Server 是 x64dbg 的原生 MCP（Model Context Protocol）插件，通过 HTTP 把调试器的完整功能暴露出来。任何兼容 MCP 的 AI 助手都能以编程方式控制 x64dbg：设置断点、单步执行、读取内存、查看寄存器等。\n\n项目使用 Zig 编写，零依赖、单文件输出，可从任意主机交叉编译出 x32 和 x64 两个版本，不需要 .NET、Python 或额外运行时，把插件放进 x64dbg 的 plugins 目录即可使用。协议基于 MCP 2024-11-05，支持 Streamable HTTP 与 SSE 两种传输方式，并使用 Bearer Token 鉴权。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载最新 release，或从源码构建",
+  "将 dist/ 目录内容复制到 x64dbg 根目录（会同时部署 x32 和 x64 版本）",
+  "启动 x64dbg，MCP 服务器会自动运行，x64 默认端口为 0.0.0.0:9094，x32 为 0.0.0.0:9095",
+  "在 MCP 客户端配置（如 .mcp.json）中添加服务器，使用 Streamable HTTP 时 url 为 http://localhost:9094/，并在 headers 中填入 Authorization: Bearer YOUR_TOKEN_HERE",
+  "若从 WSL 或远程机器连接，使用主机 IP 地址，并在配置对话框中将绑定地址设为 0.0.0.0"
+ ],
+ "tagline": "让 AI 助手通过 MCP 协议控制 x64dbg 调试器"
+}

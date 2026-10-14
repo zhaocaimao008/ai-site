@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要让 AI 智能体完成真实网页操作（如查询票价、抓取页面）的开发者，以及使用 Claude Code、Codex、Gemini CLI 等工具并希望接入浏览器能力的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "基于隐身 Firefox 的浏览器自动化，规避反爬与 captcha",
+  "作为 MCP server 接入 Claude Code、Codex、Gemini CLI 等助手",
+  "独立 Web UI：左侧对话、右侧实时浏览器画面",
+  "支持代理（http/socks5）、固定 seed、持久化 profile 目录",
+  "可通过 .env 配置 OpenRouter key 与浏览器二进制路径",
+  "同系列提供 Python 库引擎 invisible_playwright 与指纹核心 invisible_core"
+ ],
+ "intro": "invisible_playwright_mcp 是一个基于 Playwright 的 MCP server，让 AI 智能体在反检测的隐身 Firefox 上浏览网页。项目定位是解决其他 AI 浏览器智能体常被 captcha 和反爬拦截的问题，README 称其「对反机器人系统不可见」。\n\n它提供两种使用方式：一是通过 MCP 接入 Claude Code、Codex、Gemini CLI 等助手；二是独立运行带 Web UI 的界面，左侧聊天、右侧实时显示浏览器画面，需要自备 OpenRouter key。智能体像人一样操作页面——移动指针、按键输入，适合需要真实浏览器而非 API、并且需要人来判断页面内容的自动化任务。\n\n项目还包含同系列的 invisible_playwright（Python 库形式的引擎）和 invisible_core（指纹、代理与地理位置）。代码以 MIT 协议开源，运行在本地，无自有服务器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv：Windows 用 `powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"`，Linux 用 `curl -LsSf https://astral.sh/uv/install.sh | sh`",
+  "在助手中安装插件，例如 Claude Code：`claude plugin marketplace add feder-cr/invisible_playwright_mcp` 然后 `claude plugin install invisible-playwright-mcp@feder-cr`",
+  "或独立运行 Web UI：`uvx invisible-playwright-mcp ui --openrouter-key sk-or-...`",
+  "打开 http://127.0.0.1:8765 开始对话",
+  "可选：在运行目录的 .env 中写入 OPENROUTER_API_KEY 和 STEALTHFOX_BINARY，避免在命令行暴露 key"
+ ],
+ "tagline": "让 AI 智能体用隐身 Firefox 自动浏览网页的 MCP 服务"
+}

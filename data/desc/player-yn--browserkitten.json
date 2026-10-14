@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在已登录浏览器中借助 AI 完成网页操作并导出可编辑办公文件的开发者与进阶用户。",
+ "date": "2026-10-14",
+ "features": [
+  "侧边栏 agent，可驱动当前标签页执行动作",
+  "在 run 中通过 sys 执行 guest JS",
+  "会话内保留 sheet、Univer 文档和网页 HTML 产物",
+  "BYOK，API key 仅存本地，无服务端",
+  "支持 sys.eval 和页面身份 fetch（Chrome 138+ 需开启 Allow User Scripts）",
+  "提供 Node 回归测试和 Playwright 浏览器冒烟测试"
+ ],
+ "intro": "爪爪 · PawWork 是一个 Chrome MV3 的 unpacked 扩展，把已经登录的浏览器当作一台可编程的电脑来用。它运行一个侧边栏 agent，可以操作当前标签页、在浏览器中执行 guest JS，并在会话中保留表格、Univer 文档和网页 HTML 等产物。\n\n项目采用 BYOK 模式，不依赖托管模型，API key 保存在 chrome.storage.local 中，也没有服务端。使用前需要手动加载扩展，并粘贴一个 OpenAI 兼容的 API key。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库或下载 Release zip",
+  "打开 Chrome 的 chrome://extensions，开启开发者模式，点击 Load unpacked 并选择包含 manifest.json 的文件夹",
+  "打开侧边栏，粘贴 OpenAI 兼容的 API key（保存在 chrome.storage.local）",
+  "在普通 http(s) 页面发送任务",
+  "如需 sys.eval 或页面身份 fetch，在 Chrome 138+ 的扩展详情页开启 Allow User Scripts"
+ ],
+ "tagline": "在已登录的 Chrome 里选中内容，让 AI 直接产出可编辑办公文件"
+}

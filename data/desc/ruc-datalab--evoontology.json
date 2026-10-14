@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex 等 AI 智能体进行数据分析的开发者，以及需要为异构数据源建立语义层的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "通用智能体插件，通过 MCP 与 Claude Code、Codex 等集成",
+  "从数据中自动构建定制化本体层",
+  "基于交互历史持续进化本体层",
+  "本体层分为 Content、Schema、Tool 三层",
+  "提供 browse_semantics、resolve_semantics 等 MCP 工具按需检索语义",
+  "候选版本需通过评估验证后才发布"
+ ],
+ "intro": "EvoOntology 是面向数据智能体（Data Agents）的自进化本体层，目标是弥合智能体与异构表格、文件、数据库之间的语义鸿沟。它通过 MCP 工具暴露带版本的本体层，并基于真实工作负载证据持续调整。\n\n项目以插件形式集成到 Claude Code、Codex 等 AI 智能体中，可自动从数据中构建本体层，并根据交互历史不断进化。本体层由 Content、Schema、Tool 三层组成，分别定义语义知识、表示规则和运行时访问方式。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "为数据智能体构建可自我进化的本体层"
+}

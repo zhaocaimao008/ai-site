@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合从事逆向工程、恶意软件分析、CTF 的安全研究人员，以及希望让 AI 代理在代码分析和重构中保持事实准确性的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "确定性核心：支持 PE/ELF/Mach-O 解析、x86/x64/ARM/ARM64 反汇编、AOB 模式扫描、CPU 模拟、Protobuf/TLV 解析、Frida hook 生成，纯 Python 开箱即用",
+  "可选成熟引擎：通过 `pip install \"reverify[full]\"` 可升级到 capstone、unicorn、lief 和 Z3；`pip install \"reverify[angr]\"` 增加 angr 支持函数边界、调用图和交叉引用",
+  "声明验证循环：模型提出声明，工具返回 VERIFIED/REFUTED/INCONCLUSIVE 及证据，支持批量声明和依赖关系",
+  "代码等价性检查：`reverify equiv` 可运行候选实现和参考实现，检查它们在共享输入上是否一致，适用于 Python 或 C 代码",
+  "Agent 原生：作为 MCP 服务器提供，Claude Code、Cursor 等代理可直接调用，也提供普通 CLI",
+  "上下文交接：`reverify rollover` 将会话交接给文件并开启新会话，避免长任务上下文漂移"
+ ],
+ "intro": "Reverify 是一个防止 AI 编造事实的工具。它让语言模型提出假设，然后由确定性的纯 Python 逆向工程工具包来验证，只有通过验证的声明才会被当作事实。模型不能自行断言任何事实，所有结构性或行为性声明都必须对照实际二进制文件进行检查。\n\n除了验证声明，Reverify 还能通过 `reverify rollover` 把会话交接给文件并开启新会话，避免长任务中上下文漂移或需要手动清除。它支持 Claude Code、Codex、Gemini CLI 和 OpenCode。\n\nReverify 以二进制逆向工程作为验证能力的试验场，因为那里幻觉最严重。在 71 个真实 Windows 系统文件上，AI 的教科书式答案有 97% 是错误的，而 reverify 全部捕获，从未接受错误声明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 PyPI 安装 CLI 和 MCP 服务器：`pip install reverify`（纯 Python 核心）或 `pip install \"reverify[full]\"`（包含 capstone+unicorn+lief）",
+  "运行自动分析：`reverify auto sample.bin --json`",
+  "或者直接从代码仓库运行：`python reverify/cli.py auto sample.bin --json`",
+  "验证声明：`reverify verify sample.bin --claim '{\"kind\": \"instructions\", \"offset\": 4096, \"mnemonics\": [\"push\", \"mov\", \"sub\"], \"note\": \"function prologue\"}'`",
+  "检查模拟结果：`reverify verify - --claim '{\"kind\": \"emulate_result\", \"code\": \"b805000000b90300000001c8c3\", \"arch\": \"x86\", \"expect_registers\": {\"eax\": 8}}'`"
+ ],
+ "tagline": "用确定性工具验证 AI 的每一条声明，防止幻觉"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要批量制作口播解说视频的开发者、内容创作者和动效设计人员，尤其是已经在使用 Claude Code 或 Codex 的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "字级配音同步：把口播稿对齐到音频，默认使用 FireRedASR2-CTC int8，备选 faster-whisper",
+  "108 张动效配方卡：每张含意图、参数、已知坑、自包含 Remotion tsx 源码和 HTML 预览",
+  "七层反 PPT 镜头系统：每场景一条极缓相机曲线加让位生命周期，避免静止帧",
+  "三重验收：画面健康双判定、纯音效轨逐 cue 能量验证、带动效锚点帧的独立评审",
+  "动效工作台：多轨时间线、素材库、属性面板、实时预览，支持导出透明通道视频",
+  "可选 Fish Audio 配音：没有录音时可生成配音和字级时间戳"
+ ],
+ "intro": "video-talkcraft 是一个面向口播解说视频的 AI agent skill，把 Claude Code 或 Codex 变成动效工作室。你提供口播稿和成品配音，它在本机对齐字级时间戳，把每个语义拍写进 SHOTBOOK 分镜，再用 Remotion 渲染出成片，包含动态字卡、证据截图、运镜、字幕和音效。\n\n项目内置 108 张动效配方卡，每张带意图、参数、已知坑和可直接复制的 Remotion tsx 源码，并提供在线画廊预览。它用七层反 PPT 镜头系统保证画面持续运动，配合排版纪律和三重验收（画面健康、音效轨能量、独立评审）来降低成片缺陷。\n\n此外还提供动效工作台 workbench，可把成片拆成多轨单元逐项微调，并支持导出透明通道素材给剪映、PR、AE 使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code / Codex 中直接说：帮我安装这个 skill：https://github.com/Vincentwei1021/video-talkcraft",
+  "或使用 CLI 安装：npx skills add Vincentwei1021/video-talkcraft",
+  "或手动克隆并软链：git clone https://github.com/Vincentwei1021/video-talkcraft.git && cd video-talkcraft && ln -s \"$(pwd)\" ~/.claude/skills/video-talkcraft",
+  "准备环境：Node 18+、Python 3.10+、ffmpeg，并按需安装 Python 依赖",
+  "向 agent 下需求：用 video-talkcraft 把这份口播稿 + voiceover.wav 做成视频"
+ ],
+ "tagline": "把 Claude Code / Codex 变成口播视频动效工作室的 agent skill"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合已调用过模型 API 或本地运行过模型、想弄清模型为什么慢和如何降低成本的开发者；也适合系统、网络、芯片方向的工程师与研究人员、学生阅读。需要一些 Python、线性代数和计算机系统基础。",
+ "date": "2026-10-14",
+ "features": [
+  "全书十二章正文，覆盖从模型架构到数据中心网络的 AI Infra 各层设计",
+  "配套计算工具 calculations/，可用 Python 标准库复算书中数字、估算资源需求",
+  "按章节组织的配套实验 experiments/chXX/XX-YY/，附运行方法与结果说明",
+  "提供 PDF、EPUB 与在线阅读网站，含英文、繁體中文、俄语社区译本",
+  "包含案例分析、引用资料库与专题调研等辅助内容"
+ ],
+ "intro": "《深入理解 AI Infra：量化分析与系统设计》是李博杰（@bojieli）著的开源书稿，也是《深入理解 AI Agent》的姊妹篇。全书从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统的设计，涵盖加速器架构、算子与运行时、超节点、数据中心网络、推理优化、分布式推理、训练系统、资源调度与端边云协同等主题。\n\n书稿采用「从约束推导设计」的方法：先明确任务与质量要求，列出计算、存储、通信和依赖关系，再对照硬件的容量、带宽和算力做数量级估算，并反复追问数据搬移的五个问题——搬什么、搬多少、搬几次、经过哪里、谁必须等它。\n\n仓库包含全书正文 Markdown、PDF/EPUB、配套计算工具与按章节组织的实验。目前书稿仍是初稿，正在持续修订，并提供简体中文、英文、繁體中文和俄语版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/bojieli/ai-infra-book.git && cd ai-infra-book",
+  "python3 calculations/calc.py models  # 查看模型支持情况",
+  "python3 calculations/calc.py forward --model qwen3-8b --tokens 8192 --format md  # 估算逐算子资源需求",
+  "如需复现实验：git lfs install && git lfs pull --include=\"experiments/ch05/05-01/**\" --exclude=\"\"",
+  "本地构建阅读网站：python3 -m venv .venv-site && source .venv-site/bin/activate && python -m pip install -r website/requirements.txt && python scripts/build_site.py --serve"
+ ],
+ "tagline": "从硬件约束出发量化推导 LLM 推理与训练系统设计的开源书稿"
+}

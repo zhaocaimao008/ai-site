@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 ChatGPT 直接操作本地项目、终端和桌面，并需要多智能体协作处理长任务的开发者。使用前需确认自己的 ChatGPT 账户或工作区支持自定义 MCP 应用。",
+ "date": "2026-10-14",
+ "features": [
+  "通过 MCP 让 ChatGPT 读写本地文件、运行终端命令并使用桌面",
+  "多 worker 并行处理独立任务，并保留各自上下文",
+  "Goal 跟踪未完成工作，Loop 在任务范围内持续执行",
+  "Compact & Resume 把会话与 worker 历史迁移到新对话",
+  "Chrome、Edge、Brave 浏览器扩展，自动配对并观察 ChatGPT 界面",
+  "支持 Windows、macOS 和 Linux，界面提供多种语言"
+ ],
+ "intro": "Chat On Steroids（CoS）是一个跨平台桌面应用，把 ChatGPT 变成类似 Codex 的本地编码助手。它通过 MCP 把本地文件、终端和桌面能力接入 ChatGPT 对话，让模型可以读取和编辑真实项目文件、运行测试、保持终端会话，并实时查看工具执行结果。\n\n除了单轮工具调用，CoS 还提供多智能体工作流：可以把独立任务分给多个 worker，各自保留上下文，再把结果汇总回主对话。Goal 会跟踪未完成的工作，Loop 在给定范围内持续执行，Compact & Resume 则把会话和 worker 历史带入新对话，方便处理长任务。\n\n项目使用 TypeScript 编写，采用 MIT 许可证，提供 Windows、macOS 和 Linux 安装包。它依赖浏览器扩展与 ChatGPT 的 MCP 插件机制，属于独立 beta 版本，需要用户自行评估并遵守 OpenAI 的使用条款。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CoS 并打开 Settings → Setup，按七步引导操作",
+  "在 Chrome、Edge 或 Brave 中加载浏览器扩展：开启 Developer mode，点击 Load unpacked，选择 Open extension folder 显示的文件夹",
+  "在设置中共享一个文件夹并选择 ChatGPT 可执行的操作权限",
+  "在 OpenAI 创建 tunnel 和受限 API key，点击 Connect，然后在 ChatGPT 的 Plugins → Add → Add custom MCP server 中添加应用",
+  "选择模型，输入任务并发送"
+ ],
+ "tagline": "让 ChatGPT 通过 MCP 在本地读写文件、运行终端并调度多智能体"
+}

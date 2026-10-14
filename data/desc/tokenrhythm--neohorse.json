@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 agent 工作流选型或部署开放权重模型的开发者，以及关注结构化决策、工具调用与后训练方法的研究人员。",
+ "date": "2026-10-14",
+ "features": [
+  "NeoHorse-1 提供 4B 与 9B 因果语言模型，面向工具调用、代码与指令跟随",
+  "routing harness 将任务分配到异构模型池并记录工具交互与结果",
+  "routing-guided curriculum SFT 与 on-policy distillation 的 agentic 后训练框架",
+  "NeoHorse-Jev-4B 以 prefill-only 推理输出 Choice、Noul、Score 三类结构化决策",
+  "提供 GGUF、8/5/4-bit 量化版本以及 Apple silicon 的 MLX 版本",
+  "模型以 Apache-2.0 许可发布，可在 Hugging Face 与 ModelScope 获取"
+ ],
+ "intro": "NeoHorse 是 TokenRhythm 推出的开放权重模型家族，面向 agent 工作流。NeoHorse-1 包含 4B 和 9B 两个规模，基于 Qwen3.5 后训练，用于工具调用、代码和指令跟随。它配套一个 routing harness，把任务分配给异构模型池，记录工具交互与结果，估计能力需求，并把能力级反馈送入下一轮训练混合，形成评估—选择—更新的原型循环。\n\nNeoHorse-Jev 建立在 NeoHorse-1-4B 之上，通过 prefill-only 推理做结构化决策：用 Choice 选择动作、用 Noul 检查条件、用 Score 打分。应用方定义问题和候选答案，再用结果做请求路由、工具选择或工作流控制。模型以 Apache-2.0 许可发布，提供 GGUF、量化版本和 Apple silicon 的 MLX 版本。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "TokenRhythm 开源的智能体模型家族，含 NeoHorse-1 与 NeoHorse-Jev"
+}

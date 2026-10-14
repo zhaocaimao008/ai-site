@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用编码代理完成自动化编码任务的开发者，尤其是希望降低代理任务失败率、愿意用更多时间和 token 换取更高成功率的人。",
+ "date": "2026-10-14",
+ "features": [
+  "在编码代理中注入复查、修复、再检查的工作流，减少任务失败",
+  "支持 Claude Code、Codex、OpenCode、VS Code 等 11 种编码代理",
+  "提供 Terminal-Bench 2.1 上的实测对比数据",
+  "通过 `autoprompt activate` 指定代理、项目路径和任务目标",
+  "提供 `autoprompt doctor --strict` 检查安装状态",
+  "支持交互式安装、更新、修复和卸载"
+ ],
+ "intro": "Autoprompt 是一个面向编码代理（coding agent）的工作流技能，通过让代理复查、修复并重新检查自己的工作，在 agentic coding 任务中减少失败。项目在 Terminal-Bench 2.1 上给出了实测对比：OpenCode 单独解决 89 个任务中的 60 个，加上 Autoprompt 后解决 73 个，得分从 67.42% 提升到 82.02%，失败数从 29 降到 16，减少约 45%。\n\n它通过 CLI 安装并注入到已有的编码代理中，支持 Claude Code、Codex、OpenCode、Kilo Code、VS Code、Prime Agent、Oh My Pi、DeepSeek Harness、Reasonix、Hermes Agent、Grok Build 等 11 种代理。使用时通过 `autoprompt activate` 指定代理、目标项目和任务目标来启动一次运行。README 也说明这种方式的代价大约是 3 倍时间和 2 倍 token，属于用更多计算换取更少失败的取舍。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：`npm install -g https://github.com/Spielewoy/autoprompt-skill/releases/download/v2.1.0/autoprompt-skill-2.1.0.tgz`",
+  "启动安装器：`autoprompt`",
+  "在安装器中选择你的编码代理，确认路径并安装",
+  "检查安装：`autoprompt doctor --strict`",
+  "启动一次运行：`autoprompt activate PROVIDER --target /absolute/project -- \"<goal>\"`"
+ ],
+ "tagline": "通过复查、修复、再检查降低编码代理失败率的技能"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "希望让 AI 购物助手在自己掌控下比价、且购买前必须经本人确认的开发者和用户。",
+ "date": "2026-10-14",
+ "features": [
+  "通过 MCP 与 AI 应用连接，本地运行搜索引擎并复核排名",
+  "最多给出三个候选商品，并解释排名理由与被排除项",
+  "购买前需针对具体报价和数量单独批准，批准一次性有效",
+  "卖家付费不影响排名，赞助报价标注并排在自然结果之后",
+  "推荐、批准和结账尝试写入本地审计日志",
+  "内置 Shopify、WooCommerce、eBay、Etsy 和只读 Amazon 适配器"
+ ],
+ "intro": "NorthCinder 是一个开源的 MCP server，用于在购买前比较商品并征求买家同意。它与你自己的 AI 应用配合运行，从你选择的来源比较商品，并展示事实出处；在真正下单前，它会请求你的批准。仓库所有者不运营任何 NorthCinder 服务，也没有账号或云端服务。\n\n它不会假装存在唯一「最佳」商品，通常最多给出三个有用选项：最匹配的、风险更低的，以及更便宜或明显不同的。每个结果都会解释排名原因，你也可以查看其他入围项、被拒绝的报价和无法核实的事实。卖家付费不会提升排名，赞助报价会标注并排在自然结果之后。\n\nNorthCinder 在本地运行搜索引擎，重新检查排名，并把推荐、批准和结账尝试写入本地审计日志。它拒绝原始卡号，支持不透明支付令牌或购物车链接。内置适配器覆盖 Shopify、WooCommerce、eBay、Etsy 和只读的 Amazon 比价。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 20 或更高版本，并准备一个支持 MCP 的 AI 应用",
+  "运行 npx northcinder init，配置会保存在本机并打印 MCP 条目",
+  "将打印出的 MCP 条目配置到你的 AI 应用中",
+  "连接后尝试购物需求，例如：Find black wool running shoes under $130. Compare price, delivery, fit, and merchant trust."
+ ],
+ "tagline": "本地运行的开源 MCP 购物比价服务器，购买前先问你"
+}

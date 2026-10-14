@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自动优化 Agent 技能、提示词、工作流配置或算法代码的开发者与算法工程师，也适合研究 AI 系统自动演化与自我改进方向的人员。",
+ "date": "2026-10-14",
+ "features": [
+  "将系统可调部分抽象为 tunable artifacts（真实文件目录），优化即文件编辑",
+  "由编码 Agent Proposer 读取失败轨迹并自动改写 artifacts",
+  "框架负责调度、预算、选择/淘汰与持久化等确定性流程",
+  "支持 AI Agent、工作流/流水线、单文件算法等多种可评估系统",
+  "所有候选、运行与分析持久化到 CandidateStore，可中断恢复",
+  "交付可 diff、可审查、可部署的最优 artifacts，并附带变更谱系"
+ ],
+ "intro": "AntOmniEvo 是一个自动演化（auto-evolution）框架，目标是把系统中可调的部分交给 AI Agent 持续优化。它把待优化的对象抽象为「tunable artifacts」——即一个真实存在的文件目录，例如 Agent 的 SKILL.md 与引用、脚本，工作流的 pipeline.json 与节点代码，或单文件算法及其说明。只要系统能用这样的目录表示，并且有可重复、成本合理的评估方式，就可以被它优化。\n\n框架采用明确的分工：你负责定义 System（如何运行）、Evaluator（如何打分，0–1）、评估数据、TunableArtifactSchema（文件树映射）以及初始 artifacts；框架负责调度、预算、选择与淘汰、持久化等确定性流程；真正动手修改的是编码 Agent Proposer，它读取失败轨迹，定位要改的文件，并像人类改代码一样提交结构化改动，生成新的候选。\n\n最终交付的是最优候选对应的 tunable artifacts，即一份可 diff、可审查、可部署的真实文件目录，并附带变更谱系，把每次修改关联到触发它的失败证据。所有候选、运行、分析与变更日志都会持久化到 CandidateStore，支持中断与恢复。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "自动演化框架，用 AI Agent 持续优化可调文件"
+}

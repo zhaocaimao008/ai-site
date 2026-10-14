@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合对照片地理定位、OSINT 或 GeoGuessr 感兴趣的开发者和普通用户，尤其是使用 Claude Code、Codex、Cursor 等 AI 代理工具的人。",
+ "date": "2026-10-14",
+ "features": [
+  "从单张照片推断拍摄位置，无需文字、车牌或地标",
+  "利用 OpenStreetMap 几何、海拔天际线、卫星影像和街景进行搜索",
+  "通过桥墩间距、阴影方向、山脊线等几何特征作为距离和方位线索",
+  "每个结论都关联具体命令和生成文件，保证可追溯",
+  "脚本负责搜索、评分和排序，模型只从 top 结果中挑选",
+  "输出包含坐标、误差半径、相机朝向和卫星证据图"
+ ],
+ "intro": "geo-sleuth 是一个 Agent Skill，能够根据一张照片推断拍摄位置，并展示推理依据。它不依赖文字、车牌或地标，而是利用 OpenStreetMap 几何数据、海拔天际线、卫星影像和街景来缩小范围。该技能以 SKILL.md 加 Python 脚本的形式提供，可在 Claude Code、Codex、Cursor、Gemini CLI、OpenCode 和 GitHub Copilot 等支持读取 SKILL.md 并执行 shell 命令的代理中运行。\n\n工作流程由多个单一用途的脚本完成搜索、评分和排序，模型只在排名靠前的结果中做判断。每个结论都必须指向具体运行过的命令和生成的文件，最终输出相机位置、朝向、误差半径以及一张卫星证据图。README 中展示了三个无 GPS 照片的定位案例，分别达到 ±2 米、100 米内和 3 米的精度。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx skills add Oldcircle/geo-sleuth 安装技能",
+  "在提示时选择你的代理",
+  "将照片交给代理并说：find where this photo was taken",
+  "首次使用时，让代理运行已安装技能 scripts/ 文件夹中的 doctor.py 并处理失败的检查项"
+ ],
+ "tagline": "通过照片几何特征定位拍摄地点的 AI 代理技能"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "需要在网页中加入高质量 GPU 视觉效果的前端开发者，以及使用 React、Vue、Svelte、Solid 或原生 JavaScript 的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "200+ 个 WebGPU 效果组件，支持嵌套、混合和遮罩",
+  "同一套 props 覆盖 React、Vue、Svelte、Solid 和 JavaScript",
+  "可视化设计编辑器，可导出各框架的组件树",
+  "CLI 支持连接项目、安装组件、搜索预设和同步更新",
+  "提供 Agent skill 和 MCP server，方便 AI 编码工具使用",
+  "支持通过 defineShader 和 WGSL 编写自定义组件"
+ ],
+ "intro": "Shaders 是一个把 WebGPU 效果封装成组件的开源库，提供 React、Vue、Svelte、Solid 和原生 JavaScript 的入口，各框架使用相同的 props。每个效果都是一个组件，`<Shader>` 负责渲染画布，子组件作为图层从上到下叠加并在 GPU 上混合，内置渐变、噪点、玻璃、金属、光照、扭曲、过渡、模糊、光标效果等 200 多个效果。\n\n项目使用 TypeScript 编写，支持响应式更新和 SSR，采用 MIT 许可证。除了代码方式，还可以在 shaders.com 的可视化设计编辑器中拖拽组件、调节参数并导出对应框架的组件树，再通过 CLI 把设计同步到代码库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：npm install shaders",
+  "在 React 中导入并使用：import { Shader, LinearGradient, CursorTrail } from 'shaders/react'",
+  "在 JSX 中放置组件：<Shader className=\"w-full h-64\"><LinearGradient colorA=\"#0f172a\" colorB=\"#7c3aed\" /><CursorTrail /></Shader>",
+  "其他框架使用对应入口：shaders/vue、shaders/svelte、shaders/solid 或 shaders/js",
+  "可选：运行 npx shaders 通过 CLI 连接项目并安装设计好的组件"
+ ],
+ "tagline": "面向 React、Vue 等框架的 WebGPU 着色器组件库"
+}

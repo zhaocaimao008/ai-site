@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex、Cursor 或 Gemini CLI 进行开发，但不想被工程术语淹没的非技术背景开发者或产品构建者。",
+ "date": "2026-10-14",
+ "features": [
+  "os-done-or-not：一屏报告，给出完成与否、是否需要你介入、是否安全关闭的明确结论",
+  "os-step-by-step：把需要你执行的操作拆成非技术人员能跟上的编号步骤",
+  "os-ask-simple：把代理的提问翻译成大白话，并附带一个明确推荐选项",
+  "os-what-could-go-wrong：对难以撤销的决定做「事前验尸」，假设已经失败并倒推原因",
+  "os-check-work：不信任其他会话的报告，逐条核对声明与实际是否一致",
+  "os-big-picture：维护一份 BIG-PICTURE.md，用大白话记录产品全貌和功能进度"
+ ],
+ "intro": "Open Steps 是一组面向 Claude Code、Codex、Cursor 和 Gemini CLI 的「代理技能」（agent skills），核心目的是让 AI 代理用普通人能听懂的语言汇报工作。作者不是工程师，在独立开发产品时发现代理总用 commit hash 和术语汇报，导致他无法判断任务是否完成，于是做了这个技能包。\n\n它包含 8 个技能，覆盖从选任务、引导操作、汇报结果到检查工作、整理全局的完整循环。例如 os-done-or-not 会生成一屏报告，明确告诉你「是否完成」「是否需要你做什么」「是否安全关闭」；os-step-by-step 把需要你操作的部分拆成编号步骤；os-say-simple 能把任何工程味文字改写成大白话。\n\n项目采用 MIT 协议，技能以 Shell 脚本和 Markdown 文件形式提供，可以安装到上述 CLI 工具中使用。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "为编码 AI 代理提供大白话技能包，让非技术用户也能看懂进度"
+}

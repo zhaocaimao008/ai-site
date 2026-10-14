@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已订阅 ChatGPT Plus/Pro、同时使用 Codex 做编码，希望把规划与审查交给网页版 ChatGPT 以节省 API 额度的开发者。也适合不熟悉 git、Node、终端，但愿意让编码 Agent 自动完成安装配置的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "ChatGPT 网页版负责规划与审查，Codex 保留完整执行权",
+  "通过 OAuth 保护的只读 MCP 连接按需读取工作区代码，不上传仓库",
+  "控制面用 [C2C] 状态消息交换，不粘贴 diff、日志或文件内容",
+  "提供 workspace_info、read_file、git_diff 等 10 个只读工具",
+  "支持一段话交给 Codex 自动安装配置，也支持手动安装 Skill",
+  "可选 Cloudflare 稳定域名，避免临时地址重启后失效"
+ ],
+ "intro": "这个项目把 ChatGPT 网页版变成 Codex 编码会话的规划与审查大脑，执行权完全保留在 Codex 手里。它解决的是 ChatGPT 付费订阅网页版额度闲置、而 Codex 却在消耗 API 额度做规划和 Review 的问题。\n\n项目不使用 API Key，也不做逆向代理，而是通过官方网页加一条只读的 MCP 桥接。ChatGPT 通过 OAuth 保护的只读 MCP 连接，按需读取当前工作区里真正需要的代码行，仓库不会被上传。控制面用极小的 [C2C] 状态消息交换 INIT、PLAN、EXECUTED、REVIEW、DONE，数据面则提供 10 个只读工具供 ChatGPT 主动拉取信息。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "把 README 中的一段话安装提示原样复制给 Codex，让它自动完成环境检查、克隆、构建和 Skill 安装",
+  "手动安装时，将 skill/ 复制到 <codex-home>/skills/codex-with-chatgpt/",
+  "对 Codex 说「Set up Codex with ChatGPT」或「使用 Codex with ChatGPT 完成首次配置」",
+  "按提示登录 ChatGPT，必要时登录 Cloudflare 获取稳定域名",
+  "正常使用 Codex，并说「Use Codex with ChatGPT to implement XXX」"
+ ],
+ "tagline": "让 ChatGPT 网页版负责规划，Codex 负责执行编码任务"
+}

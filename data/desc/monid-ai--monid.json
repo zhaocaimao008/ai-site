@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "想让 agent 调用多种外部工具的开发者，以及希望把自己的 API 接入 Monid 的 provider 方。",
+ "date": "2026-10-14",
+ "features": [
+  "一个 base URL 和一个 key 接入 2000+ 工具、72+ provider",
+  "discover 按任务对全目录排序，返回价格、健康状态与延迟",
+  "连接器声明式定义，包含请求、输入 schema 与用量模型",
+  "按调用计费，在原始响应上结算，失败按零计费",
+  "测试基于 fixture 回放，CI 无需 vendor key"
+ ],
+ "intro": "Monid 自称是「agent 工具的 OpenRouter」：一个 base URL、一个 key，就能让 agent 访问 72+ 个 provider 提供的 2000+ 工具，覆盖网页搜索与抓取、人物与公司信息补全、社交平台、评论与市场数据，以及视频、图像和语音生成。\n\n本仓库是连接层（connector layer），用一套通用框架描述每个端点的调用方式、输入、返回和用量计费。连接器是声明式的，因此 coding agent 也能按规范写出一个。用量按调用计费，计费模型在原始响应上结算，供应商报错或未匹配到结果时按零计费。discover 会在调用时对全目录排序，返回候选端点的价格、健康状态和 p50/p95 延迟。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Deno 2.x，然后 git clone https://github.com/monid-ai/monid.git 并 cd monid",
+  "运行 deno task check && deno task test 做类型检查和 188 个回放测试",
+  "设置 export TINYFISH_CREDENTIALS_API_KEY=... 后运行 deno task engine:run 'tinyfish#search' --query-params '{\"query\":\"solid-state battery suppliers\",\"domain_type\":\"news\"}'",
+  "用 deno task catalog providers / endpoints / inspect 浏览编译后的目录",
+  "参考 connectors/exa/ 与 DEVELOPMENT.md 编写连接器，用 deno task record 录制 fixture 后提 PR"
+ ],
+ "tagline": "面向 AI agent 的工具聚合与连接层"
+}

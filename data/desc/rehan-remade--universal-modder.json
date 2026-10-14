@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 代理辅助修改 PC 游戏的开发者、模组作者和技术爱好者，也适合想探索游戏逆向工程与 AI 结合的人。",
+ "date": "2026-10-14",
+ "features": [
+  "支持多种 AI 编码代理，包括 Claude Code、Codex、Cursor、Gemini CLI、GitHub Copilot 和 OpenCode",
+  "提供 `mod-any-game` 技能，包含针对 Unity、Unreal、Godot、Source、Bethesda、Minecraft 等引擎的修改手册",
+  "集成 fal MCP 服务器，可用 AI 生成图像、3D 和音频资源",
+  "内置知识库，记录具体游戏的修改路线、版本、验证方式和常见陷阱",
+  "提供 `um` CLI 工具，支持知识库搜索、新建笔记、检查与提交 PR",
+  "代理会执行完整循环：侦察、选路线、建安全实验室、读代码、构建、生成资源、游戏内验证、录制、打包、写笔记"
+ ],
+ "intro": "universal-modder 是一套面向 AI 编码代理的技能、工具和共享知识库，目标是让代理能够修改你拥有的几乎任何 PC 游戏。代理会先搜索知识库，然后进行侦察、确定引擎和修改路线，阅读真实代码，构建可运行的修改片段，用 fal 生成美术、3D 和声音资源，在运行中的游戏里测试，录制视频，最后把经验写成笔记供下一个代理使用。\n\n项目支持 Claude Code、Codex、Cursor、Gemini CLI、GitHub Copilot 和 OpenCode 等多种代理，安装方式因代理而异。核心是一个名为 `um` 的 CLI 工具，以及一个 fal MCP 服务器，用于生成图像等资源。知识库 `knowledge/` 中存放着由代理撰写的实地笔记，记录具体游戏是如何被修改、反编译和逆向工程的，每个完成修改的代理都可以提交笔记 PR。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装代理插件：Claude Code 运行 `/plugin marketplace add rehan-remade/universal-modder` 和 `/plugin install universal-modder@universal-modder`；Codex 运行 `codex plugin marketplace add rehan-remade/universal-modder` 和 `codex plugin add universal-modder@universal-modder`；Gemini CLI 运行 `gemini extensions install https://github.com/rehan-remade/universal-modder`",
+  "安装 `um` CLI：`uv tool install git+https://github.com/rehan-remade/universal-modder` 或 `pipx install git+...`",
+  "获取 fal API key 并设置环境变量：`export FAL_KEY=...`",
+  "确保系统已安装 Git、Python 3.10+ 和 ffmpeg，推荐安装 uv；3D 转精灵图需要 Blender",
+  "在代理中尝试示例指令，例如：`Mod Terraria: add a homing missile launcher and a tactical nuke that craters the world. Make the sprites with fal.`"
+ ],
+ "tagline": "让 AI 编码代理帮你修改几乎任何 PC 游戏"
+}

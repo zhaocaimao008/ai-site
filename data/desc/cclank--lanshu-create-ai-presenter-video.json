@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合想用 AI Agent 自动制作讲解视频的开发者、内容创作者和团队，尤其是需要数字人出镜或多种视觉风格演绎旁白的场景。",
+ "date": "2026-10-14",
+ "features": [
+  "两条制作路线：数字人 presenter 路线与十二种风格的 styled explainer 路线",
+  "provider-neutral：语音、数字人视频、唇形同步和语音识别按能力在运行时选择",
+  "以已批准的旁白为时间基准，锁定唇形同步、字幕、剪辑和最终时长",
+  "证据门控工作流：八个生产状态由磁盘产物计算，而非手动声明",
+  "成本护栏：先做低成本试点、首次付费前明确计费、重试上限和任务 ID 恢复",
+  "交付前对主文件和分享文件进行完整解码与响度检查"
+ ],
+ "intro": "这是一个 Agent Skill，把主题或脚本变成经过验证、可直接发布的讲解视频。它提供两条路线：presenter 路线由数字人出镜讲解，包含脚本、旁白、数字人生成、唇形同步、字幕、关键词动效、剪辑、渲染和质量检查；styled 路线没有数字人，用十二种风格（九种视觉、三种叙事）逐句演绎旁白。\n\n项目强调 provider-neutral 和 harness-neutral，可在 Claude Code、Codex、Gemini CLI、Cursor 等支持 Agent Skills 的客户端中加载。整个流程以磁盘上的产物为证据，分八个生产状态，从 intake 到 verified，只有通过解码和响度检查后才会交付。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "用脚本和授权肖像生成数字人讲解视频的 Agent Skill"
+}

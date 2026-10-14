@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要把 LLM 用于分类、路由、打分等决策场景，并希望获得可校准概率的开发者与研究人员。",
+ "date": "2026-10-14",
+ "features": [
+  "把任意开源 LLM 转成带类型的决策模型，输出真实概率分布，无需训练和标签",
+  "L0 级别通过选项顺序轮换缓解顺序翻转问题，并支持自适应轮换预算",
+  "Tacit 自蒸馏模型（1.7B–9B）单次前向完成决策，可选用 adaptive 推理升级",
+  "支持 transformers、进程内 vLLM、vllm serve 以及 HTTP /v1/decide 网关",
+  "提供 choice、yes_no、score 三种问题类型和批量决策接口"
+ ],
+ "intro": "AnyJev 是 Nokia 应用研究团队开源的项目，目标是把任意开源因果语言模型变成 Jev 风格的决策模型：输入一个状态和一个带类型的决策问题（多选、是/否或打分），输出选项及其概率分布，无需训练、无需标注数据。它通过读取模型 logits 并做选项顺序轮换（rotation）来消除顺序敏感问题，默认的 L0 级别即可直接使用。\n\n项目同时提供 Tacit 系列自蒸馏模型（1.7B 到 9B），每次决策只需一次前向；开启 adaptive 后，低置信度的决策会交给模型自身的推理流程，且升级比例有上限。Tacit 支持 transformers、进程内 vLLM 以及标准 vllm serve，也可通过 HTTP 网关供多客户端共享。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install \"anyjev[hf]\"",
+  "加载模型：from anyjev import Tacit; tacit = Tacit.from_pretrained(\"morriszjm/Tacit-9B\")",
+  "发起决策：tacit.decide(state=\"...\", question=\"...\", options=[...])，读取 answer、probs、route",
+  "可选启用自适应推理：Tacit.from_pretrained(\"morriszjm/Tacit-9B\", adaptive=True, tau=0.5, max_cot_share=0.2)",
+  "使用 vLLM 服务：vllm serve morriszjm/Tacit-9B，再以 engine=\"server\" 连接"
+ ],
+ "tagline": "把任意 LLM 变成免训练的概率化决策模型"
+}

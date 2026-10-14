@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合需要免费、无 watermark、注重隐私的视频创作者，以及希望用脚本或 AI 代理自动化剪辑视频的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "自动字幕：基于本地 Whisper，可选择模型大小并生成带样式的字幕",
+  "文本转语音与声音克隆：免费本地语音，或从几秒录音中克隆声音",
+  "背景移除：支持人物、物体，也可手动绘制遮罩",
+  "关键帧动画：位置、缩放、旋转、不透明度、音量、特效参数，内置曲线编辑器",
+  "170+ 特效、滤镜、转场和文字动画，GPU 实时渲染",
+  "多轨道、多时间线剪辑，支持混合模式、裁剪、翻转",
+  "导出 H.264、HEVC、AV1，最高 4K 60fps 10-bit 色彩",
+  "可编程接口：JSON-RPC、gRPC、MCP API 及 CLI"
+ ],
+ "intro": "Concat 是一款免费、开源的跨平台视频编辑器，定位为 CapCut 的替代品，支持 macOS、Windows、Linux 和 Android。它覆盖了用户常用的剪辑功能：自动字幕、文本转语音、背景移除、关键帧动画、特效与标题、多轨道剪辑以及 4K 导出，并且没有水印、无需账号、没有订阅、不上传素材。\n\n所有处理都在本地基于 Rust 原生引擎和 GPU 合成器完成。字幕、语音和抠像所需的 AI 模型只需在设置中下载一次，之后即可离线使用，素材不会离开你的磁盘。\n\n除了面向普通用户的图形界面，Concat 还提供 JSON-RPC、gRPC 和 MCP API 以及 CLI，方便脚本和 AI 代理调用它来剪辑视频。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从官网 https://concatenate.pages.dev/#download 或 GitHub Releases 下载对应平台的安装包",
+  "Windows 用户若遇到 SmartScreen 拦截，点击“更多信息”后选择“仍要运行”",
+  "macOS 用户若无法打开未签名版本，在终端执行：xattr -dr com.apple.quarantine /Applications/Concat.app",
+  "安装后打开应用，在设置中下载所需的 AI 模型（字幕、语音、抠像），之后可离线使用",
+  "导入素材，在时间线上进行剪辑、添加字幕和特效，最后导出视频"
+ ],
+ "tagline": "免费开源的跨平台视频编辑器，CapCut 替代品"
+}

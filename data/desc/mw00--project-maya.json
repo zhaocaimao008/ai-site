@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在自有硬件上私有运行大模型、且拥有至少一张 NVIDIA 显卡和 NVMe SSD 的开发者或高级用户；也适合需要本地 API 接入 agent 工具的人。",
+ "date": "2026-10-14",
+ "features": [
+  "针对 GLM-5.3-Flash 单模型优化的推理引擎，专家按热度分布在 GPU、RAM 和 NVMe SSD",
+  "自带 Maya-S/S24/M/M-Derisked/L 多种量化版本，保留原 FP8 模型 97.7%-99.2% 的 zero-shot 准确率",
+  "OpenAI 与 Anthropic 兼容 API，支持 tool calls，可接入编码 agent",
+  "浏览器内提供聊天界面和实时运行监控",
+  "支持多请求并发（--parallel），最多同时回答 8 个请求",
+  "支持 NVIDIA（compute capability 7.0+，最多 16 卡）与实验性 AMD ROCm、Windows"
+ ],
+ "intro": "Project Maya 是一个面向单机本地部署的推理引擎，专门用于运行 GLM-5.3-Flash（321B 参数 MoE，每 token 约 18B 激活，上下文最高 1M token）。它把对话中最常用的专家放在 GPU，次常用的放在内存，其余放在 NVMe SSD 上，并会根据你的 GPU、CPU、内存和 SSD 自动调优，整个过程数据不离开本机。\n\n项目自带量化工具、服务端、浏览器聊天与实时监控面板，并提供 OpenAI 和 Anthropic 兼容 API（支持 tool calls），可接入编码 agent。支持一次并发处理最多 8 个请求，官方称在四张 RTX 4090 上可达 118 tokens/s，单张 RTX 5090 上 30+ tokens/s。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/mw00/project-maya.git && cd project-maya",
+  "./setup.sh",
+  "按提示回答问题（回车使用推荐选项），等待下载与编译（约 20-40 分钟加下载时间）",
+  "启动后打开 http://127.0.0.1:8080",
+  "Ctrl+C 停止，再次运行 ./setup.sh 可重新启动"
+ ],
+ "tagline": "在自己 GPU 上私有运行 321B MoE 大模型 GLM-5.3-Flash"
+}

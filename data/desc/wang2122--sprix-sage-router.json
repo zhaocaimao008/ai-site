@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究或构建多智能体系统、A2A 网络、任务调度与智能体编排的开发者与研究人员。",
+ "date": "2026-10-14",
+ "features": [
+  "在 SELF、COLLABORATE、HANDOFF 三种路由模式间进行状态感知决策",
+  "联合搜索需求所有者与执行调度，支持 DAG 依赖和并发执行",
+  "按智能体与需求追踪可靠性，而非依赖单一声誉分数",
+  "通过 ExecutionOutcome 反馈更新信任、成功模型和报价保真度",
+  "提供权限优先过滤、预算与截止时间约束、可审计的备选方案",
+  "包含 A2A 集成模块，可将选定路由转换为传输中立的 ExecutionPlan"
+ ],
+ "intro": "Sprix SAGE Router 是 Sprix AI 在屿智同行发布的开源研究项目，实现了一个位于 A2A 发现与任务执行之间的决策层。它解决的核心问题是：当任务已经开始执行后，应该让当前智能体继续、招募协作者，还是把任务整体移交给其他智能体。SAGE 会综合已完成的 DAG 节点、可复用产物、观察到的部分质量、剩余工作、失败情况、预算和截止时间，在 SELF、COLLABORATE、HANDOFF 三种路由模式中做出可审计的选择。\n\n项目用统一的目标函数对可行方案排序，同时考虑成功概率、成本、延迟、风险、上下文转移损失和协调开销，并支持按需求追踪智能体可靠性、联合搜索任务分配与调度、从执行反馈中持续学习。参考实现基于 Python 3.10+，无运行时依赖，并提供 A2A 集成示例与多个基准测试脚本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/wang2122/sprix-sage-router.git",
+  "cd sprix-sage-router",
+  "python demo.py",
+  "python -m unittest -v",
+  "python benchmark.py"
+ ],
+ "tagline": "面向 A2A 智能体网络的状态感知路由决策层"
+}

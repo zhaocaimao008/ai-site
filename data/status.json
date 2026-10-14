@@ -1,8 +1,8 @@
 {
  "date": "2026-10-14",
  "errors": [],
- "generated": 0,
- "key_present": false,
+ "generated": 100,
+ "key_present": true,
  "model": "deepseek-chat",
  "repos": 1274,
  "skipped": [],

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Herdr 守护进程管理终端会话、Git worktree 和 AI agent 的开发者，尤其是希望在原生桌面界面中统一查看和操作这些内容的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "原生绘制 Herdr 守护进程的终端单元格，支持分屏窗格",
+  "侧边栏集中展示工作区、Git worktree 和 agent 状态",
+  "Review 标签页查看 agent 改动并逐行留注、发送回 agent",
+  "浏览器标签页支持元素/区域标注并发送给 agent",
+  "Teleport 可将 worktree 连同提交、未提交改动、标签、分屏和 agent 会话迁移到其他主机",
+  "支持 SSH 主机、内联图片、可点击链接、代码导航、文件拖放和系统通知"
+ ],
+ "intro": "Herdr UI 是一个用 Rust 和 GPUI 编写的原生桌面客户端，支持 macOS、Linux 和 Windows，用于连接你自己安装的 Herdr 守护进程。它直接绘制守护进程的终端单元格（包括分屏），不需要再运行一个终端模拟器，也不包装 TUI。\n\n它把终端会话、工作区、Git worktree 和 agent 活动集中在一个界面里：侧边栏显示主机 CPU/内存、仓库及其关联 worktree，以及每个 agent 的状态点（空闲、工作中或等待你操作）。你还可以在 Review 标签页查看 agent 的未提交改动、像 PR 评论一样逐行留注并发送回 agent，或通过浏览器标签页对本地页面做标注后发回 agent。\n\n项目明确声明与 Herdr 及 herdr.dev 无关联、未获其背书。使用前需要先自行安装 Herdr 守护进程，本应用只作为客户端，不会安装或升级守护进程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "先安装 Herdr 守护进程（本应用只是它的客户端）",
+  "macOS：brew install penso/tap/herdr-gpui",
+  "Linux：curl -fsSL https://herdrui.dev/install.sh | sh",
+  "Windows（实验性）：irm https://herdrui.dev/install.ps1 | iex",
+  "macOS 安装后运行 open -a Herdr 启动应用"
+ ],
+ "tagline": "Herdr 守护进程的原生 Rust/GPUI 桌面客户端"
+}

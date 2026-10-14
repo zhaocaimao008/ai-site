@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程助手（如 Claude Code、Cursor）的开发者，尤其是希望在不切换窗口的情况下监控和批准 agent 操作、并希望手机同步提醒的 Mac 用户。",
+ "date": "2026-10-14",
+ "features": [
+  "实时监控 Claude Code、Cursor、Codex、Gemini CLI 等 AI agent 会话，显示读取、编辑和运行步骤",
+  "在刘海中直接批准或拒绝权限请求，支持 Allow / Deny / Always 选项，也可回答 AskUserQuestion 提问",
+  "支持与 Claude、Gemini、OpenAI、DeepSeek、Qwen、Moonshot 或本地模型（Ollama / LM Studio）聊天",
+  "拖放文件到刘海，让 Mochi 吞下文件并基于它提问或发送邮件",
+  "集成 Stripe、GitHub、Vercel、Notion 等服务，显示状态并支持语音指令 « OK Coucou »",
+  "iPhone 和 Android 端同步会话、审批和服务，支持 Live Activities、小组件和 Siri"
+ ],
+ "intro": "Coucou 是一个开源的小工具，它住在 Mac 的刘海（或 Windows、Linux 屏幕顶部）里，帮你实时监控 AI 编程助手的工作状态。它支持 Claude Code、Cursor、Codex、Gemini CLI、Antigravity 等多种 agent，让你不用离开当前窗口就能查看会话进度、批准权限请求、查看文件改动。\n\nCoucou 还带有一个叫 Mochi 的小角色，会眨眼、跟随鼠标、对提醒做出反应。你可以在刘海里直接与 Claude、Gemini、OpenAI 等模型聊天，或拖入文件提问。离开 Mac 后，Mochi 会跟随到 iPhone 或 Android 手机上，通过锁屏、灵动岛、小组件和 Siri 继续提醒你。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载适用于 macOS 15+ 的安装包并安装",
+  "首次启动后，根据引导授予必要权限（如辅助功能、通知等）",
+  "在 Settings → Active pills 中选择你常用的 AI 工具（如 Claude Code、Cursor）",
+  "开始使用 AI agent 时，Coucou 会自动在刘海中显示会话状态，可直接批准权限或查看文件改动",
+  "如需手机同步，在 iPhone 或 Android 上安装 Coucou 应用，并与 Mac 端配对"
+ ],
+ "tagline": "Mac 刘海里的 AI 编程助手小精灵，手机也能同步"
+}

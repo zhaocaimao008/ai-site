@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 辅助写作、希望让生成文本更自然的小说作者与专业写作者，也适合在 Claude Code、Codex 等 agent 中集成写作能力的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "三层修订协议：叙事架构、话语流、表层风格",
+  "针对小说与专业文档分别提供规则",
+  "提供 write、review、refactor、recreate 四种操作",
+  "内置 hemingway 风格写作入口",
+  "通过 Skills CLI 支持 77+ 兼容 agent",
+  "为 Claude Code、Codex、Grok Build、Antigravity、QwenPaw 提供原生插件"
+ ],
+ "intro": "sepia 是一个可移植的 Agent Skill，用于去除文本中的 AI 写作痕迹。它的核心观点是：常见的 humanizer 只改词句，但真正暴露 AI 的是叙事结构。项目引用 StoryScope 研究（arXiv:2604.03136），该研究显示仅用叙事结构特征就能以 93.2% macro-F1 识别 AI 小说，而人工改写表层风格后识别率仅从 95.5% 降到 93.9%。\n\nsepia 因此采用三层修订协议：第一层修复叙事架构（如停止解释主题、放松因果链、混合情感表达方式），第二层处理话语流（去模板化、调整节奏），第三层才是传统的表层风格（陈词滥调、句法模板、词汇）。对专业文档（release notes、PR 回复、postmortem、ticket、技术文章等），它按文体提供匹配的规则。\n\n项目提供 write、review、refactor、recreate 四种操作，并内置 hemingway 风格入口。它基于统一的 SKILL.md，通过 Skills CLI 可安装到 77+ 兼容 agent，同时为 Claude Code、Codex、Grok Build、Antigravity、QwenPaw 提供原生插件。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "从叙事结构层面去除 AI 写作痕迹的 Agent Skill"
+}

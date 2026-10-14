@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地运行决策模型、进行文本分类或概率预测的开发者，以及希望将决策模型集成到现有 TypeSafe/Jev 工作流或 AI Agent 中的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "单一二进制文件，提供 serve、run、pull、list、ps、show、rm、cp、stop、create 等命令，用法类似 Ollama",
+  "兼容 TypeSafe 的 /v1/systemone 等接口，现有 Jev 客户端只需设置 TYPESAFE_BASE_URL 即可使用",
+  "原生 API 支持 /api/decide、/api/pull、/api/tags 等，提供路由信息和计时",
+  "模型权重从原作者仓库拉取并校验 sha256，Ollaya 仅发布小型 ONNX 图，不重新托管权重",
+  "支持 MCP 协议，可为 Claude Code、Claude Desktop、Cursor 等客户端提供决策模型服务",
+  "支持 Modelfile 自定义模型，可将问题集烘焙进模型，并支持 CPU、CUDA、Vulkan、Metal 等硬件后端"
+ ],
+ "intro": "Ollaya 是一个用 Rust 编写的本地决策模型运行工具。它像 Ollama 管理 LLM 那样，通过命令行拉取、运行和管理一系列开源决策模型。决策模型读取状态（消息、邮件、工单或任意 JSON）和类型化问题（choice、score、noul），在一次前向传播中返回校准后的概率，不生成文本。\n\nOllaya 提供与 TypeSafe 兼容的 API（/v1/systemone、/v1/decisions、/v1/models），现有 Jev 客户端只需修改环境变量 TYPESAFE_BASE_URL 即可接入。同时提供原生 API（/api/decide、/api/pull 等），支持流式进度和路由信息。模型权重来自原作者，Ollaya 仅发布约 3 MB 的 ONNX 图，从 Hugging Face 拉取原始权重并校验 sha256，不重新托管权重。\n\n项目支持 CPU 和 NVIDIA GPU（ONNX Runtime），GGUF 模型通过 llama.cpp 运行，支持 Vulkan、CUDA 和 Metal。还提供 MCP 服务，方便 Claude Code、Cursor 等客户端调用决策模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：curl -fsSL https://ollaya.dev/install.sh | sh",
+  "运行示例：ollaya run winnow:e4b --preset triage \"Third time this year you've double-charged me. Refund it today or I'm cancelling and moving to a competitor.\"",
+  "启动守护进程：ollaya serve（如果未运行，CLI 会自动启动）",
+  "拉取模型：ollaya pull laya",
+  "在 MCP 客户端中注册：claude mcp add ollaya -- ollaya mcp"
+ ],
+ "tagline": "本地运行决策模型，像 Ollama 一样拉取和服务"
+}

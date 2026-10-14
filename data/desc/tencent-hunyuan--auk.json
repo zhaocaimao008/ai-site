@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合语音合成、语音编辑方向的研究人员和开发者，以及希望快速体验语音生成与编辑能力的普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "零样本 TTS：用参考音频的音色朗读目标文本",
+  "指令 TTS：仅凭声音描述生成语音，无需参考音频",
+  "内容编辑：替换、插入或删除语音中的文本，支持歌词编辑",
+  "声学编辑：调整音高、语速和音量",
+  "副语言编辑：改变情感、音色、去除口音等",
+  "语音增强与音源分离"
+ ],
+ "intro": "AuK 是腾讯混元团队开源的一个 1.5B 参数语音基础模型，支持语音生成与编辑。模型在数百万小时音频数据上训练，通过统一的自然语言指令接口，可以完成零样本 TTS、指令 TTS、内容编辑、声学编辑、副语言编辑、语音增强和音源分离等多种任务。\n\nAuK 提供两个版本：AuK 基础模型用于高质量生成，AuK-Flash 是蒸馏模型，支持 4 步快速推理。项目代码和模型权重均已公开，并已获得 vLLM-Omni、SGLang-Omni、audio.cpp 等推理框架的支持，可在 Hugging Face 和 ModelScope 上体验 Demo。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 uv 或 Conda 安装依赖（详见 README 的 Installation 部分）",
+  "从 Hugging Face 或 ModelScope 下载 AuK 或 AuK-Flash 模型权重",
+  "使用命令行进行推理，或运行交互式 Gradio demo",
+  "也可通过 Python API 调用模型，或使用 ComfyUI 集成"
+ ],
+ "tagline": "腾讯混元开源的语音生成与编辑基础模型"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 DeepSeek Harness（dsh）并希望免费接入前沿模型的开发者；也适合需要本地 OpenAI 兼容转发端口的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "免登录、免 API Key、不限量使用免费前沿模型",
+  "模型清单跟随上游刷新，按本机网络出口实测可用性",
+  "OpenAI 兼容本地转发端口，供本机其它工具调用",
+  "用量看板：Token 热力图、总量曲线、速度与首字延迟，数据全部留在本机",
+  "聚合渠道：内置 76 家提供商，写入 Key 后以 provider/model 出现在选择器",
+  "路由降级链：将任意车道模型串成命名链，支持 fallback 与 round-robin"
+ ],
+ "intro": "dsh-our-free-model 是一个 DeepSeek Harness（dsh）插件，安装后无需登录、注册或填写 API Key，即可使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型。模型清单跟随上游刷新，可用性由本机网络出口实测得出。\n\n插件采用纯插件挂载方式，不改内核、无构建步骤、零依赖。除免费车道外，还提供 EAC 渠道、Kilo 免密免费池、聚合渠道（自带 Key 接入 76 家提供商）以及十三个账号渠道的一体接入，并附带 OpenAI 兼容的本地转发端口、用量看板、省 Token 压缩与路由降级链等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在命令行执行：dsh plugin --profile web add /绝对路径/dsh-our-free-model（--profile 填写实际使用的 profile 名称）",
+  "安装完成后重启应用一次",
+  "桌面端不要使用 link: 依赖安装或创建 junction，请使用应用内插件管理器或放置真实目录",
+  "打开 设置 → Our Free Model 查看模型清单与可用性"
+ ],
+ "tagline": "在 dsh 中免登录免 Key 使用免费前沿模型的插件"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 自动维护个人知识库的 Obsidian 用户和开发者，也适合想学习如何构建生产级 AI agent 的读者。",
+ "date": "2026-10-14",
+ "features": [
+  "AI 智能体自动将原始材料转化为互相链接的 wiki 页面",
+  "提供起步 vault 模板，包含 wiki 结构和项目管道",
+  "18 个 agent skills 和 72 个 slash 命令，覆盖采集、链接、检查等工作流",
+  "6 个子智能体，其中四个设计为只读",
+  "无依赖 Python 脚本用于链接检查、统计和图谱导出",
+  "完整的 77 页指南和七模块 agents 课程"
+ ],
+ "intro": "这是一个用 AI 智能体自动构建和维护个人知识库的方案。你保存的文章、视频、PDF 等原始材料会被智能体处理成互相链接的 wiki 页面，并持续更新已有页面，而不是简单堆积。知识库以纯 markdown 文件形式保存在 Obsidian 中，数据完全由你掌控。\n\n项目包含完整指南、起步 vault 模板、18 个 agent skills、72 个 slash 命令、6 个子智能体以及无依赖的 Python 脚本，覆盖从概念、安装、采集、结构化、图谱、自动化到维护的完整流程。此外还有一套从单次 prompt 到生产级 agent 的七模块课程，以及关于图谱、评估等主题的五本手册。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/undefined-ui/second-brain-os.git",
+  "复制起步 vault：cp -r second-brain-os/vault-template ~/brain",
+  "复制 skills、commands、agents 和 scripts 到 ~/brain 对应目录",
+  "删除文件夹中的 README.md（rm ~/brain/.claude/*/README.md ~/brain/scripts/README.md）",
+  "进入 ~/brain 并启动 Claude Code：cd ~/brain && claude"
+ ],
+ "tagline": "AI 智能体自动维护的 Obsidian 第二大脑知识库"
+}

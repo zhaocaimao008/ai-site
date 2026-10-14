@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望在自己电脑上管理个人资产、投资组合和财务规划的开发者或个人用户，尤其是关注 ETF 穿透分析和自托管数据的人。",
+ "date": "2026-10-14",
+ "features": [
+  "记录银行与券商账户的现金和持仓快照，计算净资产",
+  "按市场价格追踪每个持仓的成本、盈亏与分红",
+  "基金穿透分析，查看底层资产的国家、行业、公司和货币分布",
+  "管理定期投资、房产、债务、现金流与储蓄目标",
+  "Ask Aurelio 聊天顾问，基于本地记录回答并支持联网搜索",
+  "AI 提出的每项改动都以卡片形式呈现，需用户确认后生效"
+ ],
+ "intro": "Aurelio 是一款运行在自己电脑上的财富管理与财务规划应用，数据保存在本机，不依赖云端账户。它把银行、券商的现金与持仓，投资组合的成本、收益和分红，以及基金穿透后的国家、行业、公司和货币分布集中在一处展示。\n\n除资产追踪外，它还覆盖定期投资、房产与贷款、现金流与储蓄率、目标所需回报率等规划内容。AI 顾问部分是可选的，通过 OpenRouter 使用自己的 API Key，聊天回答基于你自己的记录，可以联网搜索，并把每次改动以卡片形式提出，由你确认或拒绝。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Git、Node.js 22 或更高版本以及 uv",
+  "克隆仓库：git clone https://github.com/LosaLosSantos/aurelio-finance.git",
+  "进入目录：cd aurelio-finance",
+  "用示例数据启动：./start.sh --demo（macOS/Linux）或 ./start.ps1 -Demo（Windows PowerShell）",
+  "浏览器打开 http://localhost:8000；使用自己的数据时去掉 --demo 参数",
+  "如需 AI 功能，在 OpenRouter 创建 API Key，将 backend/.env.example 复制为 backend/.env 并设置 OPENROUTER_API_KEY"
+ ],
+ "tagline": "自托管的个人财富管理应用，内置 AI 财务顾问"
+}

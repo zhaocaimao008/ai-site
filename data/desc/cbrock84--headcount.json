@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "希望在 Claude Code 或 ChatGPT 中按部门组织、按需安装专业技能的开发者与团队。",
+ "date": "2026-10-14",
+ "features": [
+  "16 个部门、172 项技能，按公司组织结构划分",
+  "每个部门可独立安装，按需加载而非全量引入",
+  "技能以 department:skill 命名，避免名称冲突",
+  "请求匹配领域时自动加载对应技能，也可按名称直接调用",
+  "同时支持 Claude Code 与 ChatGPT，技能内容一致",
+  "每个部门附带 agent charter，可作为子智能体被委派"
+ ],
+ "intro": "headcount 把 AI 智能体组织成一家公司的形态：一位首席执行官下辖 16 个部门、共 172 项技能。每个部门都是可独立安装的插件，项目只加载自己需要的功能，而不必一次性引入全部内容。技能以 `department:skill` 的形式寻址，例如 `security:threat-modeling`、`finance:unit-economics`，因此名称不会冲突。\n\n它同时运行在 Claude Code 和 ChatGPT 中，两边的技能内容一致，只是清单文件不同，且都由同一棵目录树生成，所以一处修复会同时到达两端。当请求匹配到某个部门的领域时，对应技能会自动加载；也可以按名称直接调用，例如 `/finance:financial-modeling`。每个部门还附带一份 agent charter，可作为一个拥有独立写入面的子智能体被委派任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中添加插件市场：/plugin marketplace add cbrock84/headcount",
+  "安装所需部门，例如：/plugin install security@headcount",
+  "在 ChatGPT 或 Codex 中，可将同一仓库添加为插件市场，或把想要的部门放入项目的 .agents/skills/ 目录",
+  "直接提问让技能自动加载，或按名称调用，例如 /finance:financial-modeling"
+ ],
+ "tagline": "把 AI 智能体组织成一家公司，按部门安装技能"
+}

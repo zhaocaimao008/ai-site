@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合有 Java、C++、Go、Python 或前端开发基础，希望进入大模型应用开发、Agent 工程或 AI 后端的程序员。也适合正在搭建 RAG、Agent 或准备大模型面试的工程师。",
+ "date": "2026-10-14",
+ "features": [
+  "完整学习路线：从入门到生产与面试，按知识依赖组织",
+  "工程视角：聚焦 API、数据、检索、工具、状态、评估、性能与成本",
+  "原理与代码：从 Q/K/V、Attention 到手写 Tiny Transformer",
+  "项目导向：每个阶段都有可交付项目和完成标准",
+  "面试闭环：覆盖 RAG、Agent、微调、Transformer 及真实大厂面经",
+  "持续更新：跟进 Agent Harness、Context Engineering、MCP 等实践"
+ ],
+ "intro": "LLM-Master 是一套面向程序员的大模型全栈学习路线，内容来自卡码笔记的大模型专栏。它按知识依赖组织，从基础认知、模型调用，到 RAG、Agent、微调与部署、Transformer 原理，再到项目实践与面试准备，逐级展开。\n\n仓库强调工程视角，关注 API、数据、检索、工具、状态、评估、性能、成本和可靠性，而不只是概念介绍。每个阶段都配有可交付项目和完成标准，帮助学习者把知识落到能写进简历的项目上。\n\n它不以纯算法研究和大规模预训练为主，更适合希望系统进入大模型应用开发的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "第一次学习：从完整学习路线 docs/roadmap/README.md 开始，不建议直接刷全量目录",
+  "正在做项目：进入对应专题索引 docs/topics/README.md，按问题查缺补漏",
+  "准备面试：先补专题知识，再用面试路线 docs/roadmap/interview.md 组织回答",
+  "寻找某篇文章：打开全部资料索引 docs/README.md，浏览 150+ 篇教程与面经"
+ ],
+ "tagline": "面向程序员的大模型全栈学习路线与中文教程"
+}

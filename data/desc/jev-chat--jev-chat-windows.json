@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Windows 上辅助聊天回复、又在意隐私和本地处理的普通用户与开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "窗口截图 + 本地离线 OCR 读取聊天消息，截图只在内存中，不落盘",
+  "Jev 判断意图、紧张度并排序，给出 3 条带胜出概率的候选回复",
+  "一键填入输入框，发送永远手动，程序不碰发送按钮",
+  "跟随当前会话切换，记录、上下文和候选按会话分开保存",
+  "群聊支持识别发言人名，可指定回复对象并带 @ 前缀填入",
+  "判断和起草两个模型来源均可更换，支持 OpenAI / Anthropic / Gemini 三种协议"
+ ],
+ "intro": "JevChat-Windows 是一个挂在聊天窗口旁边的回复辅助工具。它通过 Windows Graphics Capture 截取你自己的聊天窗口画面，用本地离线 OCR（RapidOCR 或 Windows 自带 OCR）识别对方发来的消息，再调用大模型判断意图和情绪，给出 3 条候选回复，一键填入输入框。发送始终由你手动完成，程序不会替你按发送。\n\n判断内核来自安卓版 jev-chat-JARVIS，本项目把采集方式换成了 Windows 端的窗口截图加离线 OCR。截图只在内存中处理，不写磁盘、不上传；API key 只写入 Windows 用户环境变量，全程只有 JEV_API_KEY 和 LLM_API_KEY 两个。目前支持微信和 KakaoTalk，新增聊天软件只需在 app/chatapps.py 中加一行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Releases 页下载 jev-chat-windows-vX.Y.Z.zip 并解压到固定目录",
+  "双击 jev-chat-windows.exe 启动，首次启动会弹出设置页",
+  "在「判断 · Jev」卡片填入 JEV_API_KEY（OpenRouter 或 TypeSafe 直连）",
+  "在「起草 · 语言模型」卡片填入 LLM_API_KEY（默认 DeepSeek 官网）",
+  "选择你们的关系并保存，保持聊天窗口开着即可使用"
+ ],
+ "tagline": "聊天窗口旁挂的回复辅助，本地 OCR 读屏 + 大模型给候选回复"
+}

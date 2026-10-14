@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要频繁在多个 AI 中转站与官方线路之间切换的开发者，尤其是使用 Claude Code、Codex 等 AI 编程助手的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "一键切换服务商：保存多家服务的 Base URL 与 API Key，点击即可应用到目标工具，支持随时切换与还原",
+  "配置无损与状态保护：修改前提供配置差异预览；切换 Codex 至第三方服务时会安全暂存官方 ChatGPT OAuth 凭据，切回时无损恢复",
+  "探针数据集成：在客户端内查看各站点的公开实时可用率与延迟",
+  "本地存储与隐私：API Key 和配置仅存储在本地设备，完全离线运行",
+  "本地用量估算：按会话统计 Token 消耗量，并根据公开参考单价估算调用成本",
+  "多工具适配：支持 Claude Code、Codex、Gemini CLI、Aider、OpenCode、Kimi CLI、DeepSeek Harness 等"
+ ],
+ "intro": "Folkbench 是一个围绕 AI API 中转站的项目，由两部分组成：folkbench.com 持续测试各家 AI 中转站，公开可用率、响应耗时和价格，并提供总榜、稳定性榜、性价比榜以及单模型排行榜；本仓库则是配套桌面客户端 Folkbench Switch 的代码。\n\nFolkbench Switch 基于 Tauri + Rust 构建，核心作用是在多个中转站和官方线路之间一键切换 Base URL 与 API Key，免去手动修改配置文件。它支持 Claude Code、Codex、Gemini CLI、Aider、OpenCode、Kimi CLI、DeepSeek Harness 等工具，切换时只覆盖连接参数，保留其余自定义设置。所有 API Key 与配置仅保存在本地，不上传云端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "前往 GitHub Releases 页面下载对应平台的安装包：macOS 为 .dmg（Apple Silicon / Intel），Windows 为 .exe（x64）",
+  "安装并打开 Folkbench Switch 客户端",
+  "在客户端中保存各中转站或官方线路的 Base URL 与 API Key",
+  "选择目标工具（如 Claude Code、Codex），点击应用配置完成切换"
+ ],
+ "tagline": "AI 中转站实测评测榜单与一键切换配置的桌面客户端"
+}
