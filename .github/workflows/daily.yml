@@ -1,0 +1,51 @@
+name: 每日抓取并发布
+
+on:
+  schedule:
+    - cron: "0 22 * * *"   # 每天 UTC 22:00(北京时间早上 6:00)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ["data/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install anthropic
+      - name: 抓取项目、记录 star、生成中文介绍
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 fetch.py
+      - name: 保存数据到仓库
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "每日数据更新 $(date -u +%F) [skip ci]"
+          git push
+      - name: 生成网站
+        run: python3 build.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deploy
+        uses: actions/deploy-pages@v4

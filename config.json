@@ -1,0 +1,23 @@
+{
+  "site_name": "AI开源雷达",
+  "base_url": "https://ai327.com",
+  "adsense_client": "",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "max_new_per_day": 30,
+  "min_stars": 300,
+  "new_repo_days": 60,
+  "new_repo_min_stars": 100,
+  "categories": {
+    "llm": {"name": "大模型", "topics": ["llm", "large-language-models"]},
+    "agent": {"name": "AI 智能体", "topics": ["ai-agent", "ai-agents", "llm-agent"]},
+    "mcp": {"name": "MCP 工具", "topics": ["mcp", "model-context-protocol"]},
+    "rag": {"name": "RAG 知识库", "topics": ["rag", "retrieval-augmented-generation"]},
+    "coding": {"name": "AI 编程", "topics": ["code-generation", "coding-assistant", "ai-coding"]},
+    "local": {"name": "本地部署", "topics": ["local-llm", "ollama", "llama-cpp"]},
+    "chat": {"name": "AI 聊天应用", "topics": ["chatgpt", "chatbot"]},
+    "image": {"name": "AI 绘画", "topics": ["stable-diffusion", "text-to-image", "diffusion-models"]},
+    "video": {"name": "AI 视频", "topics": ["text-to-video", "video-generation"]},
+    "audio": {"name": "AI 语音", "topics": ["text-to-speech", "speech-recognition", "tts"]}
+  }
+}
