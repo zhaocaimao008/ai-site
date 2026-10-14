@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要把网页操作自动化的开发者，以及希望用自然语言驱动浏览器完成研究、填表、比价、登录等任务的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "用自然语言描述任务，Scout 自动在真实浏览器中完成操作",
+  "支持自带模型，任意兼容 chat completions API 的服务均可使用",
+  "按 hands、brain、eyes、extract 四种角色分别配置模型",
+  "可传入 JSON Schema，让返回结果符合固定结构",
+  "云端运行提供住宅连接、验证码处理和逐步回放链接",
+  "本机运行基于 Playwright，可安装 Chromium 并选择是否显示浏览器窗口"
+ ],
+ "intro": "Scout 是 Outcrawl 开源的一个浏览器智能体（browser agent），用 TypeScript 编写。你只需要用自然语言描述任务，Scout 就会打开真实浏览器，读取页面、点击、输入、滚动，直到完成任务并返回结果；如果无法完成，它会说明缺少什么并返回已找到的内容。\n\nScout 本身不内置模型，也没有默认模型。你可以为不同任务分别指定模型，只要服务支持标准的 chat completions API 即可，包括托管服务、网关或本地运行的模型。它把模型分为 hands、brain、eyes、extract 四种角色，其中 hands 是必需的。\n\nScout 可以在 Outcrawl 云端运行，也可以在本机运行。云端提供住宅连接、验证码处理、运行录制回放等能力，无需在本地安装浏览器；本机运行则使用 Playwright 启动 Chromium。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Scout：npm i @outcrawl/scout（需要 Node 22 或更高版本）",
+  "设置环境变量：OUTCRAWL_API_KEY、SCOUT_BASE_URL、SCOUT_API_KEY、SCOUT_HANDS_MODEL",
+  "创建 task.ts，使用 new Scout({ browser: 'outcrawl', models: { hands: {...} } }) 并调用 scout.run('任务描述')",
+  "运行 npx tsx task.ts，查看返回的 result.data 和 result.replayUrl",
+  "如需在本机浏览器运行，安装 npm i playwright-core && npx playwright install chromium，并将 browser 改为 { launch: {} }"
+ ],
+ "tagline": "开源浏览器智能体，用自然语言描述任务，自动操作浏览器完成"
+}

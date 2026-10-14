@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合独立创业者、自由职业者以及希望用 AI 代理自动化日常重复工作的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "38 个可复用的 AI 代理技能，覆盖视频、电子书、博客、SNS、会议等场景",
+  "部分技能附带可直接运行的 Python/Shell/Node 脚本，共 19 个文件",
+  "22 个技能包含权限与操作影响提示，便于安装前评估",
+  "支持通过插件市场或 npx 按需安装单个技能",
+  "技能基于 SKILL.md 规范，兼容 Claude Code、Codex、OpenCode 等代理"
+ ],
+ "intro": "solo-skills 是一位独立创业者公开的自动化技能集合。作者在运营一人社区的过程中，把视频制作、电子书生成、博客写作、会议记录、客户回复等重复性工作逐步自动化，累计实现了 58 项自动化，其中 38 个技能以 SKILL.md 格式公开，可在 Claude Code、Codex、OpenCode 等支持该规范的代理中直接使用。\n\n每个技能是一份供代理阅读和执行的操作流程，部分技能还附带了实际运行的脚本（共 10 个技能、19 个文件），例如 Claude 与 Codex 的降级调用、Threads 发帖、PDF 生成、邮件发送等。22 个技能顶部附有“该技能对系统做什么”的提示，说明所需权限、实际发布或发送的内容以及是否可撤销。\n\n项目还提供了插件安装和按需安装两种方式，方便用户快速引入所需技能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过插件安装：/plugin marketplace add bam-bam-2/solo-skills",
+  "安装全部技能：/plugin install solo-skills@bam-bam-2",
+  "或按需安装单个技能：npx skills add bam-bam-2/solo-skills --skill naver-blog-post",
+  "或直接克隆并复制：git clone https://github.com/bam-bam-2/solo-skills.git && cp -R solo-skills/skills/* ~/.claude/skills/"
+ ],
+ "tagline": "一人创业者自动化工具包，38个AI代理技能"
+}

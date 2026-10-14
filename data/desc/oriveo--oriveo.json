@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用自己的 API key 直接调用多家模型、注重隐私和本地数据存储的开发者与普通用户，也适合需要自行托管 Web 客户端的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "支持 15 家模型提供商，并兼容任意 OpenAI、Anthropic 或 Gemini 兼容端点",
+  "流式输出、推理块、引用、附件（图片、视频、PDF、Office、EPUB 等）和重新生成",
+  "本地模型服务器发现：通过 mDNS 或端口探测连接 llama.cpp、Ollama、LM Studio、vLLM 等",
+  "订阅登录：使用已有的 ChatGPT 或 Grok 订阅，通过设备授权流程代替 API key",
+  "技能（可复用系统提示）、MCP 工具、笔记与文件夹、跨模型交叉检查、记忆功能",
+  "按消息和提供商统计花费，支持导出全部数据并用密码加密备份"
+ ],
+ "intro": "Oriveo Community Edition 是一个开源、自带密钥（BYOK）的多模型 AI 聊天客户端，覆盖 iOS、Android 和 Web，原生 macOS 客户端正在开发中。它面向希望直接向模型提供商付费、而不是为中间层订阅付费的用户。你提供自己的 API key，客户端直接与提供商通信，Web 端可以自行托管，无需注册 Oriveo 账号，也没有数据回传到官方服务器。\n\n它原生支持 15 家模型提供商，包括 OpenAI、Anthropic、Google Gemini、OpenRouter、DeepSeek、Grok、Mistral、Groq、Together AI、Fireworks AI、MiniMax、Z.ai、Qwen、Kimi（Moonshot）和 SiliconFlow，同时兼容任何 OpenAI、Anthropic 或 Gemini 兼容端点，例如本机运行的 llama.cpp、Ollama、LM Studio 或 vLLM。对话、笔记、文件夹、技能和附件默认保存在设备本地，可随时导出。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "开源 BYOK 多模型 AI 聊天客户端，支持 iOS、Android 和 Web"
+}

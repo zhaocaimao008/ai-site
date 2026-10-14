@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "准备 AI Coding 面试、限时笔试或 Take-home Assignment 的开发者，以及对 Agent 和 AI 辅助开发流程感兴趣的工程师。",
+ "date": "2026-10-14",
+ "features": [
+  "收录三道匿名化的真实 AI Coding 面试项目题",
+  "每道题附带作者的个人解法仓库链接",
+  "提供一套可复用的 AI Coding 通用解题方法",
+  "包含 ForceTrack 从 PRD 到 Repo Wiki 的 24 个真实对话轮次",
+  "总结三道题共同考察的能力维度与取舍原则"
+ ],
+ "intro": "这个仓库整理了三道来自真实招聘流程的 AI Coding 项目题，并给出了一套可复用于限时笔试、Take-home Assignment 和现场结对开发的通用方法。为保护隐私，题面经过匿名化和结构化改写，不出现公司、面试官或客户名称，只保留能说明工程能力的技术目标、约束和验收标准。\n\n三道题分别是 Computer Use Agent Dashboard、React Native 截图行动 Agent 和 Jira 风格任务管理系统，覆盖 Agent、移动端和 Web 三种形态。仓库还包含作者针对每道题的个人解法仓库链接，以及一份从 PRD 到 Repo Wiki 的真实对话历史记录。\n\n通用方法部分将解题过程拆成需求澄清、仓库审计、数据与运行时设计、垂直切片、人工 Review 与自动化验证、限时取舍与交付六个阶段，适合作为求职准备和工程学习的参考。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "三道真实 AI Coding 面试题与通用解题方法"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想在 Android 手机上体验 AI Agent、让 AI 直接操作手机完成自动化任务的开发者和进阶用户。需要一定动手能力配置 Shizuku 或 root 以启用完整功能。",
+ "date": "2026-10-14",
+ "features": [
+  "免 Root 系统特权：通过 Shizuku 或 root 让 AI 执行系统命令、装应用、点屏幕、改设置、截图、模拟输入",
+  "无障碍屏幕助手：开启无障碍服务后 AI 可读屏、点击、输入、滚动、截图理解，无需 root/Shizuku",
+  "虚拟屏 vscreen：创建独立虚拟屏运行 App，悬浮窗实时显示 H.264 画面，主屏照常用",
+  "AI 浏览器：结构化 DOM 快照 + 稳定 ref + 真差分，支持多页签，独立进程运行",
+  "内置 Python 3.14.6 + pip 与 npm/npx 11.20.0，AI 可写脚本、装 node 包并直接执行 CLI",
+  "控制台自定义：通过 console.json 修改外观、布局、文案与自定义按钮，主题包可导出导入"
+ ],
+ "intro": "这个项目把 DeepSeek Harness（DSH）打包成可直接安装的 Android APK，装上就能用，不需要 Termux 或命令行。它内置完整的 DSH 内核（@deepseek-ai/dsh 0.2.0-rc.2），保留插件生态与 RPC API，并针对移动端做了触摸优化、软键盘适配和首次启动权限引导。\n\n核心能力是让 AI 真正操作手机：通过 Shizuku 或 root 获得系统特权，可以安装应用、点击屏幕、修改系统设置、截图和模拟输入；不授予特权也能用文件读写、预览和编辑。此外还提供无障碍屏幕助手（读屏、点击、输入、滚动、截图理解，无需 root/Shizuku）、虚拟屏 vscreen（AI 在独立虚拟屏里跑 App，主屏不受影响）以及 AI 浏览器（结构化 DOM 快照 + 稳定 ref + 真差分，能打开网页、点击、读正文）。\n\n项目还包含会话管理、内核自检与自愈账本、本地服务统一鉴权、前台保活与 AI 通知、控制台自定义主题等工程化功能，数据外置到 /sdcard/DeepSeekHarness，卸载重装不丢。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从官方下载页 dshaa.xin 或本仓库 Releases 页下载 APK 并安装（包名 com.deepseek.harness）",
+  "打开 App，按首次启动权限引导页完成 9 项权限配置",
+  "如需系统特权操作，安装并授权 Shizuku（或设备已有 root），App 会自动选择 root 优先、Shizuku 备用",
+  "如需无障碍读屏操作，在系统设置 → 无障碍中开启「DeepSeek Harness 屏幕助手」",
+  "如需虚拟屏功能，确保 Shizuku 或 root 已就绪，打开一次 App 后让 AI 调用 android_vscreen_create 建屏"
+ ],
+ "tagline": "把 DeepSeek Harness 打包成 Android APK，让 AI 免 Root 操作手机"
+}

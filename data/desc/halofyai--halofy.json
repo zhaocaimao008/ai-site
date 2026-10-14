@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在组织内部署和管理多个 AI agent、并希望统一控制其身份、权限、上下文来源与审计的工程团队和平台运维人员。",
+ "date": "2026-10-14",
+ "features": [
+  "通过 MCP 和 HTTP 提供统一的治理访问接口，包括 mem_write、mem_read、mem_search、mem_assemble、mem_fault、mem_stats、mem_forget 等操作",
+  "服务端解析身份与访问控制：凭据决定 actor、role、namespace 和 source scope，请求体不能自行声明身份",
+  "受治理的上下文生命周期：来源追踪、实体解析、精确与语义去重、替代链和仅追加审计",
+  "双层级组织权威：Postgres/pgvector 用于运营上下文，加密且 Git 版本化的知识用于冷层，嵌入式 PGlite 为零配置本地默认",
+  "无框架控制台：管理访问、团队、来源、策略、冲突、检索质量、审计、告警、技能、已连接应用和导出",
+  "四个公开连接器：filesystem、Postgres、Obsidian 和手动 CSV 导入，均写入同一治理路径"
+ ],
+ "intro": "Halofy 是一个面向组织内 AI agent 的开放访问与治理层。它位于组织知识与使用这些知识的 agent 之间，负责解析身份、执行访问控制、管理变更、记录每次操作结果，并让数据擦除可被独立验证。所有 agent、应用和运维人员通过 MCP 或 HTTP 使用同一套服务端解析的身份、命名空间 ACL、角色与策略边界。\n\n底层由 Postgres/pgvector 作为权威存储，保存上下文、嵌入、策略、来源、墓碑和审计记录；本地开发与测试默认使用嵌入式 PGlite，无需额外配置。检索引擎通过只读、受 ACL 约束的驱动接口接入，可替换而不影响治理逻辑。项目支持离线运行、自托管，且不包含遥测或许可证检查。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/halofyai/halofy.git",
+  "cd halofy/kernel && npm ci",
+  "npm run demo  # 离线运行完整演示，无需 API key、数据库或网络",
+  "npm test && npx tsx src/cli.ts conformance baseline  # 验证内核与检索边界",
+  "npm run serve  # 启动 API 和控制台，访问 http://localhost:8787/console/login"
+ ],
+ "tagline": "为组织内 AI agent 提供统一身份、策略与审计的治理层"
+}

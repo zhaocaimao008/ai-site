@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex、Gemini CLI、Cursor 等编码智能体，并希望用 AI 辅助绘制像素画或游戏精灵的开发者与像素画爱好者。",
+ "date": "2026-10-14",
+ "features": [
+  "通过 MCP 连接已打开的 Aseprite 窗口，逐像素绘制并支持逐步撤销",
+  "网格循环：用文本网格描述画面，绘制后读回并精确修改",
+  "内置像素画知识库：62 条规则、约 400 个模板、2006 个调色板",
+  "studio 技能自动完成从连接到导出的完整流程，包括动画与精灵表导出",
+  "pixel-critic 独立评审：以盲测 A/B 方式判断修改是否真的更好",
+  "支持 headless 模式，可在 CI 或无窗口环境中批量生成素材"
+ ],
+ "intro": "Aseprite AI Artist 是一个 MCP 服务器加技能包，让 Claude Code、Codex、Gemini CLI、Cursor 等编码智能体直接在你已经打开的 Aseprite 窗口中绘制像素画。它不是在后台生成一张 PNG，而是操作屏幕上的文档，每一步都可以用 Ctrl+Z 撤销。\n\n智能体通过「网格循环」工作：把画面写成一行行字符（每个字符代表一个像素或一个调色板条目），一次性绘制到画布，再以同样格式读回画布，只修改错误的字符。项目还内置了像素画知识库，包含 62 条规则、约 400 个像素模板和 2006 个调色板，供智能体在绘制角色、动画、场景时查阅。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Aseprite 1.3+ 和 Node 22.6+，然后运行 npx @pebbly/aseprite-ai-artist install-extension 并重启 Aseprite",
+  "根据所用智能体安装插件，例如 Claude Code 中执行 /plugin marketplace add with-pebbly/aseprite-ai-artist 和 /plugin install aseprite@aseprite-ai-artist",
+  "重启智能体后运行 npx @pebbly/aseprite-ai-artist doctor 检查连接是否正常",
+  "在智能体中调用 /aseprite:studio 并描述想要绘制的内容"
+ ],
+ "tagline": "让编码智能体在你打开的 Aseprite 窗口里逐像素作画"
+}

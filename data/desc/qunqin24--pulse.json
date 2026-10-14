@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用多个 AI 编程工具、希望随时掌握配额余量的 macOS 开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "77 项 AI 编程服务各自一个状态环，颜色随用量从绿变红",
+  "悬停查看完整限额明细、重置倒计时和当前窗口状态",
+  "可选消耗速率预测，估算配额耗尽时间（ETA）",
+  "支持左、右、上、下边缘停靠，空闲时自动折叠成细条",
+  "可选通知：限额超过 75/80/90/95%、服务不可用、余额不足等",
+  "菜单栏显示用量，支持多显示器和跟随当前屏幕"
+ ],
+ "intro": "Pulse 是一款免费开源的 macOS 应用，常驻屏幕边缘，用一圈圈状态环显示 Claude Code、Codex、Cursor、GitHub Copilot、Antigravity、Kiro、Grok、DeepSeek、Kimi Code 等 77 项 AI 编程服务的剩余额度。它使用你已有的登录信息，不需要注册 Pulse 账号，也不会把数据发回服务器。\n\n所有用量百分比都来自服务本身报告的数字，少数估算值会被明确标注；服务没有提供数据时，Pulse 会直接说明而不是猜测。应用使用 Swift 和 SwiftUI 编写，支持 macOS 14 Sonoma 及以上版本，兼容 Apple Silicon 与 Intel。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载最新版 Pulse（macOS 14 Sonoma 或更新版本）",
+  "安装并打开应用，它会使用你已有的服务登录信息",
+  "将 Pulse 拖到屏幕任意边缘停靠，或放在菜单栏",
+  "悬停任意状态环查看该服务的限额明细与重置时间",
+  "在设置中按需开启消耗预测、通知和菜单栏显示"
+ ],
+ "tagline": "在 macOS 屏幕边缘实时查看 AI 编程工具的用量与限额"
+}

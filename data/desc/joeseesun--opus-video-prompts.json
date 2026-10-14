@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "想用 Claude Opus 5.5 或 Claude Code 生成视频的开发者、设计师和内容创作者，尤其是需要现成提示词直接上手的人。",
+ "date": "2026-10-14",
+ "features": [
+  "18 份可直接复制的完整提示词，覆盖一句话到长提示词",
+  "54 个公开案例，每条附作者原帖链接",
+  "9 种技术路线：HTML Canvas、p5.js、Three.js、Remotion、Manim、Blender 等",
+  "按类型分类：一句话出片、企业讲解片模板、Remotion 宣传片、3D 交互等",
+  "包含 TTS 旁白、双语字幕、参考图改编等进阶用法说明"
+ ],
+ "intro": "这个仓库整理了 Claude Opus 5.5 发布后第一周（2026-09-22 至 09-25）在 X、B 站、Linux.do、GitHub、YouMind 等平台公开的「用代码拍视频」案例，收录 18 份完整提示词和 54 个公开案例，只收作者本人公开的提示词原文，每条都附原帖链接。\n\nOpus 5.5 本身不输出视频文件，它的做法是写代码画出每一帧，常用 HTML Canvas、p5.js、Three.js、Remotion、Manim、Blender 脚本，再用无头浏览器逐帧截图、FFmpeg 合成 MP4，配乐用 Web Audio 或 Python 合成，旁白接 TTS。因此它擅长动态图形、线稿动画、科普讲解、产品发布片、歌词 MV，不擅长写实真人镜头。\n\n仓库按一句话提示词、带结构的讲解与营销片模板、专业模板等分类，并给出写法经验与资料来源，适合想直接复制提示词上手的人。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "装好 Claude Code，模型切到 Opus 5.5，effort 调到 high / xhigh",
+  "本机准备 Node.js、Chrome、FFmpeg（渲染 MP4 用）",
+  "新建空目录，从仓库挑一条提示词粘进去",
+  "等它写代码、渲染、自检，拿到 MP4",
+  "中文用户可先试：做一个动画，快速回顾中华五千年的历史。风格轻松有趣，动画格式为线稿，添加合适的音乐，请务必做到引人入胜"
+ ],
+ "tagline": "Claude Opus 5.5 用代码生成视频的提示词与案例合集"
+}

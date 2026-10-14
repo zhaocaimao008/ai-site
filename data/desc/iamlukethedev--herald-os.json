@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望体验以 AI 智能体为核心交互方式的开发者、Linux 用户和技术爱好者。",
+ "date": "2026-10-14",
+ "features": [
+  "通过语音或文字与 Hermes Agent 交互，由智能体跨系统执行任务",
+  "打开应用、查找和整理文件、监控运行状态",
+  "记住用户关注的事项，并按计划运行例程",
+  "在用户观察下构建软件",
+  "所有改变系统的操作都经过权限系统控制",
+  "提供 macOS、Linux、Arch、Omarchy 及虚拟机等多种安装方式"
+ ],
+ "intro": "Herald OS 是一个围绕 AI 智能体构建的操作系统，由 Luke The Dev 独立开发，并非 Nous Research 官方产品。它把 Hermes Agent 作为系统界面，用户通过语音或文字与 Hermes 交互，由它跨整个机器执行操作：打开应用、查找整理文件、监控运行状态、记住重要事项、按计划运行例程，以及在你眼前构建软件。所有会改变系统状态的操作都经过权限系统控制。\n\nHerald OS 基于 Fedora 构建，提供 macOS 应用、Linux 安装镜像、Arch 包以及虚拟机镜像等多种安装方式。当前版本为 alpha 0.1，README 提醒用户预期粗糙边缘，并建议对智能体接触的内容做好备份。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Hermes Agent 并选择模型：curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash && source ~/.zshrc && hermes setup",
+  "从 releases 页面下载对应平台的 Herald OS 安装包（如 macOS 的 .dmg 或 Linux 的 ISO）",
+  "macOS 用户首次打开前运行：xattr -dr com.apple.quarantine \"/Applications/Herald OS.app\"",
+  "Linux 用户将 ISO 写入 USB 启动盘并启动安装程序",
+  "首次启动时按提示设置 Hermes Agent、账户和 Wi-Fi"
+ ],
+ "tagline": "以 Hermes Agent 为界面的智能体原生操作系统"
+}

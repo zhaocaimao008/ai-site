@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想学习 Pi Coding Agent 的中文初学者，以及希望理解 Agent 会话、上下文与扩展机制的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "从安装、登录到第一个可验收任务的中文入门路线",
+  "按场景、概念、实操、验收四步展开的 14 课内容",
+  "覆盖 Session、Context、Skill、Extension、Subagent 与长期工作流",
+  "提供 macOS 与 Windows Git Bash 两套操作路径",
+  "包含 8 个可复现实操案例与主题参考手册",
+  "收录 Earendil 官方授权的中文译文专区"
+ ],
+ "intro": "这是一本面向中文初学者的非官方 Pi Coding Agent 学习手册，作者为小墨同学。Pi 是一个极简终端 Coding Harness，本书从安装、登录和第一个可验收任务开始，逐步讲解 Session、Context、Skill、Extension、Subagent 与长期 Agent 工作流。\n\n内容按“场景 → 概念 → 实操 → 验收”组织，强调读者独立核对结果，而不是把 Agent 自述的“完成了”当作完成。当前版本包含导论、序章、五个模块、14 课、1 篇原理串联和 8 个配套案例，并提供 macOS 与 Windows Git Bash 两条路径。网站使用 VitePress 构建，可在线阅读，也支持本地预览。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Git、Node.js 和 npm，仓库 .nvmrc 指定 Node.js 22",
+  "git clone https://github.com/xiaomoBoy/pi-bluebook.git",
+  "cd pi-bluebook",
+  "npm ci",
+  "npm run docs:dev"
+ ],
+ "tagline": "Pi Coding Agent 的中文学习蓝皮书与实操路线"
+}

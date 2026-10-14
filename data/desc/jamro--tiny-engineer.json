@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对硬件感兴趣的软件工程师，以及希望把 AI 编程助手工作状态可视化的开发者。需要一定的动手能力，项目难度为中等。",
+ "date": "2026-10-14",
+ "features": [
+  "根据 AI agent 状态做出对应动作：读文件时张望、写代码时打字、思考时抬头、完成时摇铃",
+  "通过 HTTP API 接收姿态指令，ESP32-C3 托管 REST API 并驱动舵机、OLED 表情和扬声器",
+  "提供 npx 一键集成命令，支持 Claude Code、Cursor、Antigravity",
+  "开源硬件设计，包含主控板 KiCad 文件和可 3D 打印的外壳模型",
+  "支持通过 POST /play 播放语音",
+  "提供 Web 刷写工具和分步组装文档"
+ ],
+ "intro": "Tiny Engineer 是一个桌面小机器人项目，用来把 AI 编程助手的工作状态实体化。当你的 AI agent 读取文件、写代码、思考等待或完成任务时，机器人会做出对应的动作：四处张望、打字、抬头看、摇铃。它通过 HTTP 接收姿态指令，由 ESP32-C3 负责联网、托管 REST API 并驱动舵机、表情和扬声器。\n\n项目同时包含软件和硬件：软件部分（固件、集成脚本、文档）采用 MIT 许可，硬件设计（3D 模型和 KiCad PCB）采用 CERN-OHL-S-2.0。默认使用开源主控板，需要自行 3D 打印外壳并组装电子元件。它支持 Claude Code、Cursor、Antigravity，也可通过 HTTP API 接入 Codex、Windsurf 等任何能发送 POST 请求的工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "查看购物清单，准备主控板、ESP32、舵机、OLED、扬声器和 5V/≥2A USB 电源",
+  "3D 打印外壳零件，或订购打印件",
+  "将 ESP32、舵机、OLED 和扬声器连接到主控板",
+  "使用 Web flash 工具或文档中的方法刷写固件，让机器人加入 Wi-Fi",
+  "运行 npx -y tiny-engineer setup 完成与 AI agent 的集成"
+ ],
+ "tagline": "给 AI 编程助手一个桌面机器人身体"
+}

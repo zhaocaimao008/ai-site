@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "希望以图形界面使用 DeepSeek Harness、管理插件与 Preset 的开发者，以及不想接触命令行的普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "桌面工作区与会话管理：原生目录选择、按 Workspace 分组搜索、重命名、归档、Fork 与历史接续",
+  "插件发现与 Agent 推荐：浏览精选、最近更新和生态热门插件，也可用自然语言让 Agent 从公开 dsh-plugin 目录筛选候选",
+  "插件可信安装与生命周期管理：安装前检查版本、权限、兼容性与风险，安装后统一启用、停用、更新和卸载",
+  "Preset 广场：浏览赋范官方与社区 Agent Preset，查看 Skills、工具和环境要求后一键安装并用于新会话",
+  "多模型与本地推理：配置 DeepSeek 及其他兼容提供方，或连接 Ollama、vLLM、SGLang 和自定义 OpenAI-compatible 服务",
+  "视觉增强与图片附件：使用 DeepSeek 图文模型直接处理图片，或调用已验证的云端／自托管视觉路线"
+ ],
+ "intro": "DeepSeek Harness Studio 是赋范空间出品的桌面应用，用 Electron 承载 DeepSeek Harness 的 Web 工作区，并由桌面主进程启动和管理本地 dsh web 服务。它把原本需要命令行的插件搜索、校验、安装、启停与卸载变成图形界面操作，同时提供插件发现、Preset 广场、应用中心、视觉增强和本地模型接入等能力。\n\n项目使用 TypeScript 编写，采用 MIT 协议，支持 macOS arm64 与 Windows x64。仓库提供完整源码开发环境，也通过 GitHub Releases 发布桌面预览安装包。Studio 版本号与 DeepSeek Harness 上游版本号分别管理，当前 Studio 0.1.0-rc.19 已整合 Harness 0.1.1-rc.2 的核心与 Web 能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的预览包：macOS arm64 预览 ZIP 或 Windows x64 预览安装程序",
+  "如需从源码开发，克隆仓库后在本地安装依赖",
+  "启动桌面应用，由主进程自动启动和管理本地 dsh web 服务",
+  "在插件发现或 Preset 广场中浏览、安装所需能力，并用于新会话"
+ ],
+ "tagline": "DeepSeek Harness 的零代码桌面增强客户端"
+}

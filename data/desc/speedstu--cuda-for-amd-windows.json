@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Windows + AMD 显卡上运行 CUDA 应用（如 PyTorch、llama.cpp）的开发者和研究者，尤其是使用 Radeon RX 9060 XT 等已列出的显卡型号的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "基于 ZLUDA + AMD ROCm/HIP 的 Windows CUDA 兼容栈",
+  "提供安装、运行、诊断和功能测试的 PowerShell 脚本",
+  "包含 CPU 与 GPU 的数值正确性对比验证",
+  "支持 PyTorch/LibTorch 和 llama.cpp 等真实工作负载的 GPU 执行",
+  "维护稳定路径与实验性 ZLUDA v7 补丁路径，并记录兼容性状态"
+ ],
+ "intro": "这个项目提供了一套可复现的 Windows CUDA 兼容层，基于 ZLUDA 和 AMD ROCm/HIP，让原本面向 CUDA 的 Windows 程序能在 AMD 显卡上运行。它不只是安装脚本，还包含验证工具，用来确认计算是否真正跑在 GPU 上，并区分正确结果与崩溃、超时、CPU 回退或数值错误。\n\n项目明确说明自己不是完整的 CUDA 实现，支持范围取决于具体能力和工作负载。当前经过验证的参考 GPU 是 Radeon RX 9060 XT（gfx1200），其他 AMD 显卡的支持状态在兼容性文档中列出。仓库同时维护稳定路径和实验性的 ZLUDA v7 补丁路径，后者包含 CUDA Graph、cuFFT、cuSPARSE、NVML 等方向的验证工作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装最新的 AMD GPU 驱动和 AMD HIP SDK for Windows（含 HIP Libraries）",
+  "克隆仓库：git clone https://github.com/Speedstu/CUDA-for-AMD-Windows.git",
+  "进入目录并运行安装脚本：powershell -ExecutionPolicy Bypass -File .\\scripts\\install.ps1",
+  "运行 CUDA 应用：.\\scripts\\run-zluda.ps1 -Program C:\\path\\to\\app.exe",
+  "验证运行时：.\\scripts\\doctor.ps1 和 .\\scripts\\test-runtime.ps1"
+ ],
+ "tagline": "在 AMD GPU 的 Windows 上运行 CUDA 应用"
+}

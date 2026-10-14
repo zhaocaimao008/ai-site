@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用编码智能体（如 Claude Code、Codex、Cursor）进行求职的开发者，以及希望通过终端和 LLM 辅助筛选全球白领职位的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "从全球招聘系统和 LinkedIn 等来源聚合数百万条职位，每小时刷新",
+  "支持关键词和过滤条件搜索，并统计匹配数量",
+  "保存简历和偏好文件，通过 LLM 调用判断职位是否适合你",
+  "支持语义搜索",
+  "Pro 版可在 Pinloop 服务器上设置定时或触发式自动扫描并保存职位",
+  "与 Claude Code、Codex、Cursor 等编码智能体集成，由智能体完成安装和引导"
+ ],
+ "intro": "Pinloop 是一个面向编码智能体（coding agent）的求职板工具，完全在终端中运行。它每月从全球公司招聘系统和 LinkedIn 等求职网站抓取数百万条职位信息，覆盖各类白领领域，并每小时刷新一次。\n\n除了搜索职位，Pinloop 还能保存你的简历和其他偏好文件，通过 LLM 调用对每条职位进行判断，看是否适合你。你可以直接在自己的编码智能体（如 Claude Code、Codex、Cursor）中调用它，由智能体完成安装和引导流程。\n\n项目使用 TypeScript 编写，基于 Node.js，通过 npm 全局安装。免费版每天可拉取 5 条职位、每月判断 150 条；Pro 版提供更高的拉取和判断额度，并支持在服务器端定时自动扫描和保存职位。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在编码智能体中粘贴：Run npm install -g pinloop, then run pinloop welcome and follow the instructions.",
+  "或手动安装：npm install -g pinloop（需要 Node 22 或更新版本）",
+  "运行 pinloop 查看面向编码智能体的使用说明",
+  "运行 pinloop welcome 让编码智能体引导完成结构化设置",
+  "运行 pinloop login 创建账户（通过浏览器登录，无需密码）"
+ ],
+ "tagline": "为编码智能体打造的终端求职板 CLI"
+}

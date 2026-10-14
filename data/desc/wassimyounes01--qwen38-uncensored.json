@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地运行无审查大语言模型的开发者和技术用户，尤其是拥有 Mac（M 系列芯片）或 Windows NVIDIA 显卡的玩家。",
+ "date": "2026-10-14",
+ "features": [
+  "权重级 abliterated 模型，移除拒绝方向而非仅靠提示词",
+  "跨平台自动检测：Mac 使用 Q3_K_M + Metal，Windows 使用 Q4_K_M + CUDA",
+  "支持 Ollama 和 MLX 两种后端，MLX 在 Apple Silicon 上提速 30-50%",
+  "提供多种量化版本（Q3_K_M 到 Q8_0）供不同显存选择",
+  "包含 SYSTEM pack 作为强化层，可配合 abliterated 权重使用",
+  "提供 JavaScript API 调用示例，兼容 Ollama 接口"
+ ],
+ "intro": "这是一个在本地运行 Qwen 3.8 27B 无审查（uncensored）量化模型的工具仓库。它默认使用 orcarouter 提供的 abliterated 权重，在权重层面移除了拒绝方向，而非仅靠系统提示词绕过审查。仓库提供跨平台安装脚本，自动检测 Mac 或 Windows 并选择合适的量化版本。\n\nMac 端默认拉取 Q3_K_M（13.5GB），Windows 端默认拉取 Q4_K_M（16.8GB），均通过 Ollama 运行。Mac 还可选装 MLX 后端，在 Apple Silicon 上获得 30-50% 的推理加速。README 中列出了不同硬件配置对应的量化建议和上下文长度。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/Wassimyounes01/qwen38-uncensored.git && cd qwen38-uncensored",
+  "node bin/install.cjs  # 自动检测平台并拉取对应量化模型",
+  "ollama run --think=false qwen3.8:27b-uncensored  # 启动对话",
+  "可选：Mac 用户运行 node bin/install.cjs --mlx 安装 MLX 后端，然后 mlx_lm.server --model models/mlx --port 11434"
+ ],
+ "tagline": "本地运行 Qwen 3.8 27B 无审查量化模型"
+}

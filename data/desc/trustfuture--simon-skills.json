@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想不露脸做视频账号的创作者，以及希望用 AI 智能体自动化视频生产流程的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "investigation-video：商业/消费调查长片，10 分钟以上横屏，含事实链、真实素材拼贴、Remotion 合成、闪避配乐和八平台文案",
+  "whiteboard-video：手绘白板风讲解视频，2 分钟上下横屏，含 Excalidraw 风格逐笔动画、codex 生图贴纸、官方 Logo、烧录字幕和横竖封面",
+  "video-common：两个 skill 共用的公共工序，包括事实核查与来源台账、封面验收、平台文案、成片验收和合规自查",
+  "每期同时输出 3:4 竖版封面，适配小红书、抖音等竖屏封面位",
+  "配音走火山引擎语音合成，凭证放在各 skill 目录的 .env 中"
+ ],
+ "intro": "simon-skills 是一套面向不露脸视频账号的 AI skill 合集，包含调查长片和白板讲解两种视频风格。给 AI 智能体一句选题，它会查资料、写稿、配音、做画面、出封面，并生成各平台发布文案，最终交回一条可直接发布的成片。\n\n每个 skill 都来自一个真实在更新的账号，规则对应实际踩过的坑。项目以 Claude Code skill 格式写成，Codex 这类能读写文件、跑命令的智能体也能使用。截至 2026 年 10 月，这两个 skill 在作者自己的账号上已经出了 80 多期。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/trustfuture/simon-skills.git && cd simon-skills",
+  "mkdir -p ~/.claude/skills && for s in investigation-video whiteboard-video video-common; do ln -sfn \"$PWD/skills/$s\" ~/.claude/skills/$s; done",
+  "用 Codex 的话，把 ~/.claude/skills 换成 ~/.codex/skills",
+  "按各 skill 的 README 配置环境：investigation-video 需要 Node、Remotion、FFmpeg、Python 和火山 TTS 凭证；whiteboard-video 需要 Node、FFmpeg、Playwright、codex CLI 和火山 TTS 凭证",
+  "在对话中说一句选题，例如「帮我做一条关于「外卖平台红灯停表」的调查视频」"
+ ],
+ "tagline": "不露脸做视频账号的 AI skill 合集，一句选题出成片"
+}

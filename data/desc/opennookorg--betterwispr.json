@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望在 macOS 上离线完成语音输入的开发者和普通用户，也适合需要会议转写与摘要的人。",
+ "date": "2026-10-14",
+ "features": [
+  "在任意应用中听写：按住说话或按键切换，快捷键可自定义",
+  "本地模型：Apple 设备端语音识别、Parakeet v3（25 种欧洲语言）、Parakeet v2（英语）、Whisper large-v3 turbo",
+  "词汇表：为专有名词和术语添加拼写提示与短语替换",
+  "从纠正中学习：修正一次听错的词，下次即可正确拼写",
+  "语音命令：支持 comma、new line、scratch that 等口述指令",
+  "会议记录：实时转写双方对话，并用 Apple Intelligence 或本地 Ollama 生成标题、摘要和待办事项"
+ ],
+ "intro": "BetterWispr 是一款面向 macOS 的免费开源语音听写应用，定位为 Wispr Flow 的开源替代品。按住 ⌥ Space 说话，松开后文字就会输入到当前正在编辑的任意应用中，支持按住说话或按键切换两种方式，快捷键可自行设置。\n\n语音识别在本地完成，可选 Apple 设备端语音识别、NVIDIA Parakeet v2/v3 以及 Whisper large-v3 turbo 等模型，音频默认不会离开你的电脑。它还提供词汇表、语音命令（如 comma、new line、scratch that）、历史记录和会议实时转写等功能，会议内容可用 Apple Intelligence 或本地 Ollama 模型生成标题、摘要和待办事项。\n\n如果用户自行配置 Sarvam AI、Smallest AI 或任意 OpenAI 兼容端点，音频才会发送到对应服务，应用不会自动回退到云端。项目使用 Swift 编写，采用 Apache-2.0 许可证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 DMG，将 BetterWispr 拖入 Applications",
+  "打开应用并按照欢迎向导完成初始设置",
+  "在 Models 中选择模型：Apple 设备端模型无需下载，Parakeet 和 Whisper 下载一次后可离线使用",
+  "授予麦克风权限，以及辅助功能权限以便应用自动粘贴文字",
+  "在任意应用的输入框中按住 ⌥ Space 说话，松开即可输入"
+ ],
+ "tagline": "macOS 本地离线语音听写工具，按住快捷键说话即输入"
+}

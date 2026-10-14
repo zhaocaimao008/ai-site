@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要让 AI agent 做快速、可分支判断的开发者，尤其是使用 Claude Code、Codex 等 MCP 客户端的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "把 Jev、d1、CLM、Laya 等模型接入 Claude Code、Claude Desktop、Codex、Hermes 和 pi",
+  "返回带概率的结构化答案，agent 可直接用于 if 判断",
+  "支持 noul、choice、score 三种问题类型",
+  "一次调用并行处理多个问题，或批量处理最多 500 条记录",
+  "evaluate setup mcp 一条命令自动注册到检测到的客户端",
+  "单一静态二进制，无 Node 或 Python 运行时依赖"
+ ],
+ "intro": "System One Connector 是一个用 Go 编写的 MCP 连接器，把 TypeSafe 的 Jev 等 System One 模型接入 Claude Code、Claude Desktop、Codex、Hermes 和 pi 等 AI agent。它解决的是 agent 需要快速判断时只能读一段 LLM 生成的文字、再猜测含义的问题：Jev 不生成文本，而是针对你指定的问题和候选答案返回每个答案的概率，agent 可以直接拿数值做阈值比较和分支。\n\n除了默认的 Jev，同一个连接器也能运行其他 System One 模型，包括自托管的 CLM、Laya，以及 Liquid AI 托管的 d1。支持三种问题类型：是/否（noul）、单选（choice）和打分（score），一次调用可并行问多个问题，也可传入最多 500 条记录批量处理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装（macOS 和 Linux）：curl -fsSL https://raw.githubusercontent.com/itsmostafa/system-one-connector/main/install.sh | sh",
+  "获取 API key 后连接客户端：TYPESAFE_API_KEY=your-key evaluate setup mcp",
+  "如需使用 OpenRouter，改用 OPENROUTER_API_KEY 环境变量",
+  "向 agent 提问，例如：Use evaluate to decide whether this ticket is urgent and which team should own it"
+ ],
+ "tagline": "让 AI agent 直接调用 Jev 等模型做快速判断"
+}

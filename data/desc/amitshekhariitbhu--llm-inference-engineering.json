@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "适合对 LLM 推理优化感兴趣的开发者、工程师和学生，需要具备一定的深度学习基础。",
+ "date": "2026-10-14",
+ "features": [
+  "从自回归模型、Prefill/Decode 等基础概念讲起",
+  "深入讲解 KV Cache、PagedAttention、Flash Attention 等内存与注意力优化技术",
+  "涵盖连续批处理、推测解码等吞吐与延迟优化方法",
+  "每篇博客提供详细的学习要点和外部链接",
+  "内容持续更新，覆盖 vLLM、SGLang 等推理框架"
+ ],
+ "intro": "这是一个关于 LLM 推理工程的学习资料库，由 Outcome School 创始人 Amit Shekhar 维护。内容以博客文章形式组织，从基础概念逐步深入到推理优化技术，涵盖自回归模型、Prefill 与 Decode 阶段、KV Cache、PagedAttention、Flash Attention、连续批处理、推测解码等主题。\n\n项目按部分划分，目前包含基础、内存与注意力优化、吞吐与延迟等章节，每篇博客都列出了详细的学习要点，并链接到 Outcome School 网站上的完整文章。README 说明该系列会持续更新，适合希望系统理解 LLM 推理底层原理和优化手段的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "系统学习 LLM 推理工程：从 KV Cache 到 vLLM 与 GPU"
+}

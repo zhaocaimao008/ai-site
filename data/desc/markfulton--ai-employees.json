@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 自动化日常业务角色的小型企业主、独立开发者和运营人员。",
+ "date": "2026-10-14",
+ "features": [
+  "八个业务角色，覆盖 GTM、SEO、Web 开发、社媒、广告、销售、客服和幕僚长",
+  "共 60 条定时例程，按计划自动运行",
+  "运行在本地机器和你已有的 AI agent 上（如 Claude Code 等）",
+  "像人一样操作浏览器和 PC，每次运行自我改进",
+  "每天早上向你汇报工作进展",
+  "所有文件归你所有，MIT 许可开源"
+ ],
+ "intro": "AI Employees 是一组开源项目，把八个业务角色做成可调度的 AI 员工：GTM Engineer、SEO/AEO Employee、Web Dev Employee、Social Media Employee、Ad Manager Employee、Sales Employee、Customer Satisfaction Employee 和 Chief of Staff。每个员工是一组定时例程（routine），共 60 条，运行在你自己的机器和你已在用的 AI agent 上，每天早上向你汇报。\n\n它们像你一样操作浏览器和 PC，每次运行都会让下一次更好。项目由 Mark Fulton（Reinventing.AI）创建，采用 MIT 许可，代码和全部例程都在仓库中公开。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "八个开源 AI 员工，各管一个业务角色，定时自动跑"
+}

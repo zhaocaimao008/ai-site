@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地普通硬件（尤其是内存有限但配有 NVMe SSD 的笔记本）上运行大语言模型的开发者与爱好者，也适合对纯 C 推理引擎实现感兴趣的人。",
+ "date": "2026-10-14",
+ "features": [
+  "在内存小于模型体积的机器上运行 MoE 大模型，权重存于磁盘，专家按需从 NVMe SSD 流式加载",
+  "纯 C 实现，除 C 标准库外无外部依赖",
+  "支持 CPU 推理，也可使用 GPU（如集成 Arc GPU）加速",
+  "支持投机解码（draft），在聊天场景中进一步提升生成速度",
+  "提供 janas-bench 基准测试工具，可测量本机上的提示读取与生成速度",
+  "提供 janas-chat 交互式聊天入口，可自动下载并校验已知模型"
+ ],
+ "intro": "Janas 是一组用 C 语言编写、除 C 标准库外无其他依赖的人工智能工具集，其首个组件 Janas-LLM 专注于在普通电脑上运行大型混合专家（MoE）语言模型。它的核心思路是让权重留在磁盘上，每个 token 所需的专家从 NVMe SSD 流式读取，反复用到的专家则保留在内存中，从而让 80B 参数模型在 32GB 内存的笔记本上也能运行并作答。\n\n项目由 Maurizio \"camauri\" Cammalleri 设计和编写，目前处于早期实验阶段，公开 API 和命令行会频繁变动。README 中给出的对比数据显示，在作者的一台 Intel Core Ultra 9 185H、32GB 内存、NVMe SSD 的 Debian 13 笔记本上，Janas-LLM 在所列 13 个模型的 Q4_K_M 量化下均快于 llama.cpp，并支持 CPU 或 GPU 推理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux x86-64（Ubuntu 22.04、Debian 12 及更新版本）：curl -LO https://github.com/prabanta-dev/janas/releases/latest/download/janas-linux-x86_64.tar.gz",
+  "解压并进入目录：tar xf janas-linux-x86_64.tar.gz && cd janas",
+  "运行 ./janas-chat，从已知模型列表中选择一个，程序会自动下载并校验",
+  "Windows 10（1903 或更新）及 11 x86-64：下载 janas-windows-x86_64.zip，解压后在 janas 文件夹中运行 .\\janas-chat"
+ ],
+ "tagline": "纯 C 编写的本地大模型推理引擎，让 80B MoE 模型在 32GB 笔记本上运行"
+}

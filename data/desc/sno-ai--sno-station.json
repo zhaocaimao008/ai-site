@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用多个 AI 编程助手、希望它们共享上下文并互相协作的开发者。也适合关注本地优先、数据隐私的 AI 工具用户。",
+ "date": "2026-10-14",
+ "features": [
+  "多个编程智能体共享一份加密记忆，任务上下文在智能体之间无缝传递",
+  "智能体之间可以互相审查工作，审查者始终是另一个不同的智能体",
+  "夜间 REM 循环：跨会话强化记忆，识别重复错误并生成技能改进建议",
+  "本地优先运行，记忆、消息和技能都保存在本机，密钥不离开电脑",
+  "支持 Codex、Claude Code、Hermes Agent、Cursor 和 OpenClaw",
+  "通过 sno 命令管理，安装后自动连接电脑上已有的智能体"
+ ],
+ "intro": "Sno Station 是一个本地运行的 AI 智能体协作工具，把 Codex、Claude Code、Cursor、Hermes Agent 和 OpenClaw 这些你已经在用的编程助手变成一支小队。它们共用一份加密记忆，可以互相传递任务、互相审查工作成果，并在你睡觉时进行“REM”夜间循环，强化记忆并总结重复出现的错误，提出技能改进建议。\n\n所有记忆、消息和技能都保存在你自己的电脑上，记忆使用不会离开本机的密钥加密。不需要账号、服务器或守护进程，云端功能是可选的。安装后你继续用原来的方式工作，当某个智能体达到速率限制时，另一个可以从同一份记忆和邮箱中接续任务，上下文不丢失。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在任意终端运行安装命令：sh -c 'sno_installer_body=$(curl -fsSL https://sno.ai/install) && printf \"%s\\n\" \"$sno_installer_body\" | sh' && ~/.local/bin/sno setup",
+  "如需只连接一个智能体，在 sno setup 后加 --harness codex、--harness claude、--harness hermes、--harness cursor 或 --harness openclaw",
+  "在任意 Codex、Claude Code、Hermes、Cursor 或 OpenClaw 对话中输入：Sno onboard",
+  "当某个智能体达到限制时，在另一个智能体中输入 sno reach call 接续任务",
+  "次日早上用 sno rem-reflect accept <id> 接受夜间生成的改进建议"
+ ],
+ "tagline": "把多个 AI 编程助手组成小队，共享记忆、互相审查、夜间进化"
+}

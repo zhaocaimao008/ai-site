@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "需要管理多个隔离浏览器身份的开发者、测试人员，以及关注本地隐私和多账号操作的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "创建并运行多个相互独立的浏览器配置文件",
+  "每个配置文件拥有独立的 cookies、缓存、书签和扩展数据",
+  "支持 HTTP、HTTPS 和 SOCKS5 代理，并防止 WebRTC 泄漏",
+  "可配置 User-Agent、语言、时区、屏幕、CPU、内存和 GPU 身份",
+  "保持 Canvas、WebGL、Audio、DOMRect、字体、Speech 和 WebGPU 表面一致",
+  "支持配置文件复制、分组、标签、收藏、批量操作和回收站"
+ ],
+ "intro": "Prism Browser Community 是一个基于定制 Chromium 的本地指纹浏览器配置文件管理器。每个配置文件拥有独立的 cookies、缓存、扩展数据、代理设置和指纹配置，适合管理多个相互隔离的浏览器身份。配置文件、cookies、代理凭据和浏览历史默认保留在用户设备上，社区版免费使用且不限制本地配置文件数量。\n\n项目使用 TypeScript 和 Electron 构建，桌面界面支持 13 种语言。需要注意的是，从 v0.3.17 起，产品功能、修复和后续源码变更不再例行同步到本仓库，仓库将继续公开供学习、审查和社区构建使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开项目的 Releases 页面，下载对应操作系统的最新安装包（macOS 为 DMG 或 ZIP，Windows 为安装程序或便携版）",
+  "打开 Prism Browser，选择 New Profile，输入配置文件名称并配置系统、语言、时区、屏幕和硬件身份",
+  "如无需代理则保持直连，否则输入协议、主机、端口和凭据并测试连接",
+  "保存配置文件并选择 Open 启动浏览器",
+  "开发者可运行 npm ci、npm run typecheck、npm run build 构建桌面应用，或使用 npm run dev 进入开发模式"
+ ],
+ "tagline": "基于 Chromium 的本地多配置文件指纹浏览器"
+}

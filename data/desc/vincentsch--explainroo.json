@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速制作讲解视频或产品演示的开发者、内容创作者和软件团队，尤其是已经在使用 Claude Code、Codex 等编码代理的人。",
+ "date": "2026-10-14",
+ "features": [
+  "由 AI 编码代理编写脚本和场景代码，自动生成讲解视频",
+  "本地运行 Kokoro 语音合成与 Whisper 词级时间对齐，无需 API key",
+  "Chrome 后台渲染画面，支持手绘风格线条、Lucide 图标、图表、公式和代码",
+  "内置 paper、clean、chalk、blueprint、midnight、editorial 六种视觉风格",
+  "支持 YouTube、TikTok、LinkedIn 等多种画幅，竖版视频带逐词高亮字幕",
+  "可生成产品演示视频，重建应用界面并模拟鼠标点击和输入"
+ ],
+ "intro": "explainroo 是一个免费开源工具，让 AI 编码代理把一段脚本变成带旁白的讲解视频。代理负责写两个文件：script.md 存放旁白文字，scenes.js 用 JavaScript 绘制画面，画面可以按脚本中的某个词出现。其余工作由 explainroo 完成：Kokoro 本地语音模型朗读脚本，Whisper 标注每个词的发音时间，后台 Chrome 逐帧绘制画面，最后用 ffmpeg 合成 MP4。\n\n语音、时间对齐和渲染都在本机运行，不需要账号或 API key，也不产生费用。支持英语、西班牙语、法语、意大利语、巴西葡萄牙语、印地语、日语和中文，内置 54 种声音，也可以使用 ElevenLabs 或自己录制旁白。除 MP4 外还会输出字幕文件、封面图和 YouTube 章节，并可导出 GIF 或透明背景的 MOV。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 20.11 或更新版本、ffmpeg，以及 Chrome 或 Chromium",
+  "git clone https://github.com/vincentsch/explainroo.git && cd explainroo",
+  "npm install",
+  "node bin/explainroo.js doctor --fetch",
+  "在 explainroo 目录中启动编码代理，让它按 AGENTS.md 生成视频，输出位于 videos/<name>/out/video.mp4"
+ ],
+ "tagline": "让 AI 编码代理为你生成带旁白的讲解视频"
+}

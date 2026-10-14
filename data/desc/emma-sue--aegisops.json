@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合企业内部运维团队、值班人员以及希望了解 AI Agent 在运维场景落地的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "运维巡检与告警：8 项巡检规则、定时任务、告警去重与关联，保留原始告警",
+  "Agent 故障排查：LangGraph 管理流程，Deep Agents 调查，按需加载 Skills，通过只读工具与 MCP 读取证据",
+  "证据与工单：固定资产和时间窗口，保存证据原文与哈希，工单支持指派、处理记录、附件与复核",
+  "规程与经验复用：文档按组织、系统、环境和版本筛选，关键词检索与可选 pgvector 向量检索",
+  "人工审批与恢复：审批绑定操作参数、版本及有效期，检查点、租约和幂等写入支持中断续跑",
+  "进度与资源管理：SSE 展示任务进度，限制取证轮数、模型请求和 Token，保存调用用量与失败记录"
+ ],
+ "intro": "AegisOps 是一个面向企业内部信息系统的智能运维工作台，把巡检、告警、Agent 诊断、工单、审批和结果复核放在同一个流程中。它通过定时巡检或规则告警发现异常，再由 Agent 查看同一时间窗口的指标、日志、调用链与变更记录，结合依赖关系分析候选原因，最终生成带证据的工单草稿供人工处理。\n\n项目采用 LangGraph 管理诊断流程，Deep Agents 承担调查，通过只读工具与 MCP 适配读取任务证据，并支持按需加载 Skills。业务后台负责权限、审批和业务写入，Agent 只在授权范围内取证和提出建议，不能直接调用宿主 shell 或任意修改系统。\n\nREADME 提供了无密钥演示、真实模型诊断和隔离故障演练三种模式，并附有公开故障案例的实测记录。当前验证环境为自建服务与公开微服务故障回放，接入实际企业前需要配置真实身份源、监控数据与操作权限。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/emma-sue/-Agent-.git && cd -- -Agent- && cp .env.example .env",
+  "macOS Apple Silicon 运行 make demo-local；其他平台运行 docker compose --env-file .env --profile live-lab up --build -d --wait",
+  "访问 http://127.0.0.1:5173，使用 ops-demo 登录，密码为 .env 中的 DEMO_PASSWORD",
+  "选择“文件处理平台 · 任务消费者”，使用内置的 2026-09-10 01:45–02:15 UTC 窗口发起诊断"
+ ],
+ "tagline": "企业信息系统智能运维 Agent，自动巡检、证据排查与工单审批"
+}

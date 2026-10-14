@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "想在浏览器里体验本地大模型、或希望把多台设备算力合起来跑大模型的开发者和普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "将大模型按层拆分到多台设备，各自用 WebGPU 运行 WGSL 内核",
+  "设备间通过 WebRTC 直连传递隐藏状态，无需中心服务器推理",
+  "支持 Qwen 3.8 27B、Qwen 3.6 35B MoE、Qwen3 1.7B 等模型",
+  "Code 模式：模型写文件、沙箱预览、读取错误并自动修复",
+  "可通过 CLI 将房间模型以 OpenAI 或 Anthropic API 形式提供给外部工具"
+ ],
+ "intro": "Pooled 是一个在浏览器中运行的分布式 LLM 推理项目。它把同一个开放模型的不同层分配到房间里的多台设备上，比如笔记本、台式机和手机各持有一部分层，各自用自己的 GPU 运行，通过 WebRTC 直连传递每步约几 KB 的隐藏状态，合起来跑动单台设备无法承载的大模型。\n\n使用方式很简单：朋友打开同一个链接即可加入，无需安装、无需账号，也没有服务器参与推理。每个设备只下载自己负责的层，可从 Hugging Face 或房间内已有该层的设备获取并缓存。目前房间支持的模型包括 Qwen 3.8 27B、Qwen 3.6 35B MoE 和 Qwen3 1.7B。除了聊天，还可以切到 Code 模式，让房间里的模型写文件、在沙箱预览中运行并读取控制台错误自行修复。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/Nehanth/pooled && cd pooled",
+  "npx -y serve -l 8080 .",
+  "打开 http://localhost:8080/room",
+  "如需把房间模型接入外部工具，运行 npx @pooled/cli serve \"<房间邀请链接或代码>\""
+ ],
+ "tagline": "浏览器里的点对点 LLM 推理，多设备合跑大模型"
+}

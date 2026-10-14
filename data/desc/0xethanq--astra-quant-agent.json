@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对量化交易、LLM 代理和加密货币市场感兴趣的开发者与交易者，尤其是希望了解多模型分析与确定性风控结合方案的人群。",
+ "date": "2026-10-14",
+ "features": [
+  "多 LLM 委员会分析：宏观、趋势、微观结构、逆向等专门席位独立评估市场并综合订单意图",
+  "确定性 Python 风控：仓位限制、风险回报比下限、同向持仓上限、日内回撤熔断等硬性规则",
+  "OKX 原生执行与云端 OCO：被动 BBO Maker 限价、分批止盈和 100% 云端止损",
+  "市场微观结构因子：CVD、订单簿失衡、资金费率、未平仓合约、隐含波动率偏斜、VWAP 等",
+  "提示缓存架构：超过 90% 的提示上下文为静态内容，通过共享前缀降低延迟和 API 成本",
+  "闭环自进化与提示工程工作室：提供界面进行提示管理和系统治理"
+ ],
+ "intro": "AstraQuant 是一个自主加密货币交易系统，将大语言模型（LLM）的市场分析与确定性的 Python 风控代码相结合，并通过 OKX 原生 API 执行交易。系统每 15 分钟运行一个交易周期，涵盖市场数据摄取与因子计算、多模型委员会分析、Python 物理风控门禁以及 OKX 执行与云端 OCO 订单四个阶段。\n\nLLM 负责分析市场结构并提出订单意图，但杠杆、仓位大小和止损设置等关键决策由 Python 代码强制执行，拥有绝对否决权。系统采用多模型委员会机制，由宏观、趋势、微观结构和逆向等专门席位独立评估市场，以降低单一模型的偏差。\n\n项目默认以模拟交易模式启动，在提供并验证交易所凭证之前，实盘执行会被物理阻止。系统仅支持 OKX 原生 API 进行自动交易，Binance 和 Gate.io 仅作为注册返佣的合作伙伴链接。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/0xethanq/astra-quant-agent.git && cd astra-quant-agent",
+  "运行交互式引导向导：./setup.sh",
+  "容器启动：./deploy/docker-start.sh；或裸机安装：./deploy/install.sh && ./start.sh",
+  "访问交易工作站：http://localhost:8080/trading，管理后台：http://localhost:8080/admin/login",
+  "默认以模拟交易模式运行，需在管理后台配置并验证 OKX API 凭证后才能启用实盘"
+ ],
+ "tagline": "多LLM分析结合Python风控的自主加密货币交易系统"
+}

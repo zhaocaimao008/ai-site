@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要从文本快速生成可编辑 CAD/参数化模型的开发者、机器人研究者，以及希望将 LLM 接入 3D 建模流程的工程师。",
+ "date": "2026-10-14",
+ "features": [
+  "从文本提示生成参数化程序，输出可编辑的源代码而非网格",
+  "命名零件通过带类型的配合关系（mates）连接成装配体",
+  "支持 --paint 为每个零件分配 PBR 材质",
+  "支持 --motion 规划关节运动并导出 OpenUSD/URDF",
+  "支持 --image 传入参考图提升还原度，或配置图像模型自行生成",
+  "提供批量脚本 scripts/batch.ts 和 scripts/paint.ts 处理数据集"
+ ],
+ "intro": "Procedura 是一个将文本提示转换为可编辑参数化装配体的工具。它不输出点云或三角面片堆，而是生成一份可打开、可修改、可重新编译的源代码，其中的命名零件通过带类型的配合关系连接。整个过程由冻结的 LLM 驱动，无需 3D 训练。\n\n生成结果可选地为每个零件分配 PBR 材质（--paint），并将关节运动导出为 OpenUSD/URDF（--motion）。项目使用 TypeScript 编写，通过 OpenSCAD 编译几何，用 Blender 渲染供评审模型查看的图像。它不内置密钥或托管后端，可对接任何兼容 OpenAI 接口的服务，包括本地 vLLM、Ollama 等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone git@github.com:SpatiaOS/Procedura.git && cd Procedura && bash scripts/install-deps.sh",
+  "在 .env 中配置 OPENAI_API_KEY 和 OPENAI_BASE_URL（或 GEMINI_API_KEY / GEMINI_BASE_URL）",
+  "运行默认生成：bun run scripts/procedura.ts -o outputs/daybed --prompt \"a brutalist brass daybed with tapered legs\"",
+  "如需最佳质量，加上 --image、--3d-feedback、--assembly、--paint、--motion 等开关并调高超时",
+  "批量处理：bun run scripts/batch.ts --prompts cases.jsonl --images --incremental --motion --validate --urdf --max-steps 3 --parallel 2 --out-root outputs/batch_v1"
+ ],
+ "tagline": "用文本提示生成可编辑的参数化 3D 程序"
+}

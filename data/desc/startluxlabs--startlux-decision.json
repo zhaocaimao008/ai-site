@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为智能体或自动化系统提供快速、可校准决策能力的开发者，以及研究决策模型的研究人员。",
+ "date": "2026-10-14",
+ "features": [
+  "为每个问题的每个选项返回校准概率，支持 choice、noul、score 三种问题类型",
+  "Instant 模型单次前向传播完成推理，AutoThink 模型在不确定时生成简短推理轨迹",
+  "提供 vLLM、llama.cpp 和 MLX 三种推理后端",
+  "包含 HTTP 服务器，API 兼容 System One /v1/systemone",
+  "模型权重以 GGUF 和 MLX（8-bit/4-bit）格式发布，覆盖 0.8B 到 27B 多个规模",
+  "附带计算机操作、国际象棋、游戏等场景的演示代码"
+ ],
+ "intro": "StartLux-Decision 是一系列开放权重的决策模型，参数规模从 0.8B 到 27B。给定状态（文本、JSON 或图像）和一组带类型的问题，模型会为每个问题的每个选项返回概率，支持选项选择（choice）、是/否判断（noul）和量表评分（score）。\n\n模型分为 Instant 和 AutoThink 两种变体。Instant 模型通过双向注意力在单次前向传播中给出答案；AutoThink 模型在最高概率达到阈值（默认 0.6）时同样一次通过，否则会生成简短的推理轨迹并重新读取答案。本仓库包含这两种变体的推理引擎和 HTTP 服务器，API 兼容 System One /v1/systemone。\n\n项目提供 vLLM、llama.cpp 和 MLX 后端支持，模型权重以 GGUF 和 MLX 格式发布在 Hugging Face。技术报告已发布在 arXiv（2610.17309），并提供了在计算机操作、国际象棋、超级马里奥兄弟等场景中的演示。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "开源决策模型：一次前向给出每个选项的校准概率"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究高分辨率视频-音频联合生成、稀疏注意力机制或扩散模型训练的开发者与研究人员。",
+ "date": "2026-10-14",
+ "features": [
+  "动态稀疏注意力框架，支持原生 2K 联合视频-音频生成模型训练",
+  "基于时空宏区域与音视频交叉注意力信号自适应分配块形状",
+  "混合块选择策略，按 query 动态确定稀疏度",
+  "相比全注意力实现 2.5 倍训练加速，生成质量更优",
+  "提供预览模型权重，支持 720p、1080p 和 2K 分辨率生成与训练",
+  "包含数据预处理、训练、全量微调和推理代码"
+ ],
+ "intro": "Prism 是腾讯混元与复旦大学等机构提出的动态稀疏注意力框架，用于原生训练 2K 分辨率的联合视频-音频生成模型。原生高分辨率训练能让模型学到更丰富的视觉细节和更锐利的运动动态，但全注意力计算量随分辨率呈二次增长，且注意力会分散到大量冗余 token 上，稀释有效学习信号并破坏预训练先验。\n\nPrism 将 token 序列组织为时空宏区域，通过视频特征沿通道的方差和音频到视频交叉注意力中的特征范数估计每个区域的信息结构，从而动态分配块形状，在视觉内容变化快、音视频耦合强的轴向上做更细的划分。同时采用混合块选择策略动态确定每个 query 的稀疏度。实验表明，Prism 相比全注意力实现 2.5 倍训练加速，同时生成质量更优。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 PyTorch（CUDA 12.4）：pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu124",
+  "安装核心依赖：pip install -r requirements.txt",
+  "安装 FlashAttention：pip install flash-attn --no-build-isolation",
+  "安装系统级 ffmpeg：sudo apt-get install ffmpeg",
+  "下载权重：huggingface-cli download FrancisRing/Prism --local-dir ./checkpoints"
+ ],
+ "tagline": "面向2K联合视频-音频生成的动态稀疏注意力框架"
+}

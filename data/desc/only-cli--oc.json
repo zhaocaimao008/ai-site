@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 代理进行网页浏览的开发者，以及希望降低 LLM 网页抓取 token 成本的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "将网页转换为带编号的紧凑视图，显著减少 token 消耗",
+  "模拟 Chrome 浏览器行为，绕过部分反爬机制",
+  "内置多个常用网站的快捷命令，如 `oc hn top`、`oc gh repo`",
+  "支持会话管理，可保存 cookies 和页面状态",
+  "提供 `--budget` 参数控制每次输出的 token 预算",
+  "可作为 Claude Code 等代理的技能或插件集成"
+ ],
+ "intro": "only-cli 是一个将网站转换为命令行界面的工具，专为 AI 代理设计。通过 `oc open <url>` 获取页面，返回带编号的紧凑视图，而不是原始 HTML 或截图，从而让 Claude Code、Codex 等代理在浏览网页时大幅减少 token 消耗。它还能模拟真实浏览器行为，绕过一些简单抓取器无法通过的封锁。\n\n典型页面需要数万 token 的标记，而 oc 的视图仅需几百 token。无需为每个网站编写适配器，也无需浏览器扩展或守护进程。项目内置了针对 Hacker News、Reddit、GitHub、GitLab、Stack Overflow、Wikipedia 等常见网站的快捷命令，并支持通过 `oc <site> <verb>` 直接调用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：`npm install -g @only-cli/oc`（需要 Node 20+）",
+  "打开网页：`oc open news.ycombinator.com`",
+  "跟随编号链接：`oc do 1`",
+  "查看帮助：`oc --help`",
+  "（可选）为 Claude Code 等代理安装技能：`npx skills add https://github.com/only-cli/oc --skill web-browsing-cli`"
+ ],
+ "tagline": "把任意网站变成 AI 代理专用的紧凑 CLI"
+}

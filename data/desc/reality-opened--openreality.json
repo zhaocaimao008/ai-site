@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 助手查询和操作 3D 场景的开发者、机器人研究者，以及需要从视频快速重建空间并测量、规划的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "手机视频上传后自动重建为持久化 3D 场景",
+  "通过 MCP 提供 41 个工具，支持 Claude、Codex、Cursor 等 AI 助手",
+  "支持距离和角度测量，标定后以米为单位",
+  "可在扫描的自由空间中规划路径",
+  "导出 LeRobot / GR00T 风格数据集或 Isaac Sim 场景",
+  "提供离线模拟器，无需账号和 GPU 即可开发"
+ ],
+ "intro": "Open Reality 是一个将手机视频转化为持久化 3D 场景的工具集，并让 AI 助手通过 MCP 协议直接查询和操作这些场景。它包含 MCP 服务器、自托管后端和基于 VGGT-SLAM 的 3D 重建库，支持测量、路径规划、机器人训练数据导出等功能。\n\n项目提供 41 个 MCP 工具，可接入 Claude、Codex、Cursor 等 AI 助手。用户上传视频后，服务器在 GPU 上重建场景，之后可以询问场景中的物体、尺寸，或进行标定和测量。还包含离线模拟器，无需账号和 GPU 即可开发和演示。\n\n整个工作流可自托管，运行在自己的 GPU 机器或 Modal 账户上。注意：自托管时下载的 VGGT-1B 模型仅限非商业用途，商业使用需使用托管服务或获取商业许可。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "claude mcp add openreality -- npx -y openreality-mcp serve",
+  "codex mcp add openreality -- npx -y openreality-mcp serve",
+  "npx -y openreality-mcp login",
+  "在 open-reality.io 用手机扫描房间，或让助手上传视频文件"
+ ],
+ "tagline": "手机视频转可被 AI 查询的 3D 场景，提供 MCP 工具"
+}

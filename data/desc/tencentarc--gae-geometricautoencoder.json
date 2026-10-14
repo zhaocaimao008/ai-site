@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 3D 一致世界生成、视频生成与几何重建方向的研究者和工程师，需要具备 PyTorch 与扩散/流模型的基础。",
+ "date": "2026-10-14",
+ "features": [
+  "将冻结的 DA3 几何特征压缩为 64 或 128 通道的逐视角 latent",
+  "同一 latent 联合解码出 RGB 图像与深度、射线、点云等几何信息",
+  "两阶段训练：先学 codec，再在其上训练条件 flow model",
+  "支持文生图、相机控制的视频生成和参考图条件下的新视角合成",
+  "提供推理、训练、评测和数据处理的命令行脚本与配置",
+  "发布 Hugging Face 权重 TencentARC/GAE-D64-1B"
+ ],
+ "intro": "GAE（Geometric AutoEncoder）是腾讯 ARC Lab 与香港科技大学等机构合作的研究项目，目标是学习一个「几何原生」的隐空间，用于生成 3D 一致的世界。它的核心思路是把 3D 归纳偏置放进生成状态本身：不再把每一帧当作图像编码、再从外部附加几何信息，而是将冻结的几何基础模型特征压缩成紧凑的逐视角 latent，解码时同时输出 RGB 和几何（深度、射线、点云）。\n\n方法分两个阶段。第一阶段是编解码器：冻结 Depth Anything 3（DA3）的编码器和 DPT 头，只学习中间的状态，并额外用 L_tok 和 L_struct 两个损失来组织瓶颈表示。第二阶段在冻结的 codec 上训练一个条件 flow model，用干净的参考 latent、度量 Plücker 射线图和文本作为控制条件。同一套骨干因此可以覆盖文生图、相机控制的视频生成以及参考图条件下的新视角合成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "python -m venv .venv && source .venv/bin/activate",
+  "pip install -e .",
+  "bash scripts/demo/run_demo.sh",
+  "python scripts/demo/generate.py --image examples/scenes/forest_lake_trail.jpg --prompt-file examples/scenes/forest_lake_trail.txt --hf-repo TencentARC/GAE-D64-1B --output results/forest --total-views 81"
+ ],
+ "tagline": "把 3D 几何先验写进生成状态的世界生成模型"
+}

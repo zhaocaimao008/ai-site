@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要桌面端管理 Pi Coding Agent 的开发者，以及希望观测、治理和多 Agent 编排能力的 AI 工程团队。",
+ "date": "2026-10-14",
+ "features": [
+  "桌面工作区：管理对话、项目、文件、Git、模型和 Skills，支持流式回复、思考过程和工具调用展示",
+  "运行可观测性：提供 Runs、Trace、Replay、时间线、工具活动、Run Compare 和运行树，查看 token、成本与耗时",
+  "治理与恢复：设置工具策略和单次运行预算，创建检查点，支持恢复、分叉、重试，以及 Evaluation、Diagnostics 和回归基线",
+  "多 Agent 编排：使用可复用团队和模板，按依赖和优先级分配任务，支持手动、顺序或并行调度，以及审查门和 Worktree 隔离",
+  "本地对话历史：浏览 Claude Code、Codex、Cursor、Gemini CLI、OpenCode 和 Pi 的历史记录，支持搜索、过滤和只读预览",
+  "项目架构分析：在 Workspace 中查看模块、依赖、入口和源码引用，支持过滤、聚焦、缩放、快照和导出"
+ ],
+ "intro": "Pi-Harness 是 Pi Coding Agent 的运维超集，把原生 Pi 的 Agent 能力放进一个跨 macOS、Windows、Linux 的桌面工作区。它完整继承 Pi 的会话、上下文、模型、工具、Skills、扩展和 MCP 等能力，并在此基础上增加可视化管理和运行控制。\n\n除了原生 Pi 已有的功能，Pi-Harness 还提供 Runs、Trace、Replay、Run Compare、Evaluation、Policy、Budget、Checkpoints、Recovery、Diagnostics 等运维能力，以及 Multi-Agent、Task DAG、Handoff、Review Gates 和 Worktree 隔离等编排功能。你可以在同一界面管理对话、项目、文件、Git、模型和 Skills，并查看运行记录、控制预算、恢复工作。\n\nPi 的会话、配置、工具、Skills 和扩展保持兼容，你仍然可以在桌面应用之外继续使用 Pi。项目使用 TypeScript 编写，基于 Electron 和 Vue 3，采用 AGPL-3.0 许可证。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "Pi Coding Agent 的桌面运维超集，支持多 Agent 编排"
+}

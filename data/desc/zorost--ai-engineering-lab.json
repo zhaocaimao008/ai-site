@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想转向 AI 工程的软件开发者、分析师、学生和转行者，以及技术创始人。需要能安装软件的电脑、每周约十小时和基本计算机操作能力，无需 Python 基础、GPU 或付费 API key。",
+ "date": "2026-10-14",
+ "features": [
+  "24 周自定进度课程，覆盖从 Python 到生产级 AI 系统的完整路径",
+  "43 个可运行的 Jupyter notebook，使用 Python、SQL 和 PySpark",
+  "围绕 ZoroLogistics 货运案例的连续项目，贯穿全部 24 周",
+  "涵盖 LLM、RAG、微调、Agent、MCP 及 Azure、Vertex、Bedrock、Databricks 等平台",
+  "每周包含学习、构建、交付和反思四个环节，第 3 周起要求指标和错误分析",
+  "提供在线课程页面、术语表和路线图，无需注册"
+ ],
+ "intro": "AI Engineering Lab 是由 Zorost Intelligence AI Lab 开发的免费、自定进度的 AI 工程培训课程，为期 24 周，目标是把有编程基础的初学者带到能构建生产级 AI 系统的水平。课程覆盖 Python、机器学习、深度学习、LLM 内部原理、提示与上下文工程、RAG 与向量检索、量化、LoRA 与 DPO 微调、评估、AI Agent 与 MCP，以及 Azure AI Foundry、Google Vertex AI、AWS Bedrock 和 Databricks 湖仓。\n\n课程包含 43 个可运行的 Jupyter notebook，使用 Python、SQL 和 PySpark，可在本地或免费云 notebook 中运行。整个课程围绕一个虚构货运公司 ZoroLogistics 的连续案例展开，从第 1 周生成的数据集会在后续周中反复使用，最终形成相互关联的作品集。从第 3 周起，每个产出都需要附带指标和错误分析说明。\n\n课程分为七个阶段：基础、LLM 核心、模型工程、工具与循环、Agent、云 AI 平台、Databricks 从零到精通。每周约需十小时，包含学习、构建、交付和反思四个环节。无需 GPU、付费 API key 或 Python 基础。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/zorost/AI-Engineering-Lab.git",
+  "cd AI-Engineering-Lab",
+  "python -m pip install -r requirements.txt",
+  "阅读 START-HERE.md 了解工具、顺序和排错方法",
+  "打开 curriculum/week-01 开始第一周，并参考 curriculum/tracking 跟踪进度"
+ ],
+ "tagline": "免费 24 周 AI 工程自学课程，含 43 个可运行 notebook"
+}

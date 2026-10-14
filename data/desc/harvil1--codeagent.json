@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在终端中用 AI 辅助编程的开发者，以及想学习 Agent 全链路实现、阅读中文注释源码的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "终端交互：流式回答、思考流、工具事件行、审批面板、命令补全与输入历史",
+  "多模型接入：OpenAI 兼容协议与 Anthropic 协议，主模型加辅助小模型分工",
+  "工具与 MCP：内置文件读写、终端执行、搜索、Web 抓取等，支持项目级 .mcp.json 接入外部工具",
+  "安全防线：危险命令审批、白名单、注入检测、秘钥扫描、SSRF 防护与可选沙箱",
+  "记忆与自学习：长期记忆 MEMORY.md 索引，技能系统与从对话轨迹沉淀技能的管线",
+  "协作与自动化：子代理派发、团队模式、工作流引擎、定时任务、hooks 与会话回溯"
+ ],
+ "intro": "CodeAgent 是一个跑在终端里的 AI 编程助手，用自然语言下指令，它就能读代码、改文件、跑命令、查资料，直到任务完成。项目用 Python 编写，交互体验对标 claude code，Windows 优先，代码注释全部为中文。\n\n它内置工具自注册体系、上下文分级压缩、权限审批、子代理团队、工作流引擎和记忆系统，还支持从对话轨迹中沉淀可复用技能的自学习机制。模型接入兼容 OpenAI 协议与 Anthropic 协议，默认使用 DeepSeek，也可通过 /model 或配置文件切换其他厂商。\n\n安全方面提供破坏性命令审批、跨会话白名单、注入面检测、秘钥扫描、SSRF 防护，Linux 下还可选 bwrap 沙箱执行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 3.11+ 和 uv（Windows 可用 powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"，macOS/Linux 用 curl -LsSf https://astral.sh/uv/install.sh | sh）",
+  "git clone https://github.com/Harvil1/codeAgent.git && cd codeAgent && uv sync",
+  "配置 API key：设置 DEEPSEEK_API_KEY / OPENAI_API_KEY / ANTHROPIC_API_KEY 等环境变量之一，或写入 ~/.codeAgent/settings.json",
+  "运行 uv run python main.py 进入交互模式，或 uv run python main.py -c 恢复最近会话",
+  "在会话中用 /model 切换模型，用 /help 查看全部命令"
+ ],
+ "tagline": "终端里的开源 AI 编程助手，中文注释完整"
+}

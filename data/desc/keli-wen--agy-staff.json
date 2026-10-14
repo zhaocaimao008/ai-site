@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "已经在使用 Claude Code、Codex、Pi 或 OpenCode，并希望引入第二个模型家族做快速调研、评审或并行实现的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "五种角色：staffer（通用）、researcher（调研）、reviewer（代码与方案评审）、implementer（实现）、ask（快速提问）",
+  "支持 Claude Code、OpenAI Codex、Pi、OpenCode 四种宿主环境",
+  "reviewer 可评审工作区改动、PR，也可挑战计划或决策",
+  "staffer 可调用 agy 原生工具，包括图像生成",
+  "提供任务管理 skill，支持等待、查看状态、取消和继续任务",
+  "可选 --restricted 与 setup 做权限收紧，用于处理不可信输入"
+ ],
+ "intro": "agy-staff 是一个插件，把 Google 的 Antigravity CLI（命令为 agy）接入 Claude Code、OpenAI Codex、Pi 和 OpenCode，让主 agent 可以把任务委派给运行 Gemini 3.8 Flash 的 agy 执行。它提供 staffer、researcher、reviewer、implementer、ask 等角色，以及面向模型的任务管理 skill。\n\n在 Claude Code 中用 /agy:<persona> 调用，在 Codex 中用 $agy:<persona>，Pi 用 /skill:agy-<persona>，OpenCode 用 /agy-<persona>。默认情况下 staffer、researcher、reviewer、implementer 不受限制，agy 可以查看仓库、运行命令和修改文件；ask 不调用工具，无需任何配置即可使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Antigravity CLI 并用 agy --version 验证：curl -fsSL https://antigravity.google/cli/install.sh | bash",
+  "Claude Code 安装插件：claude plugin marketplace add keli-wen/agy-staff && claude plugin install agy@agy-staff",
+  "Codex 安装插件：codex plugin marketplace add https://github.com/keli-wen/agy-staff && codex plugin add agy@agy-staff",
+  "重启 Claude Code 或 Codex",
+  "首次验证：Claude Code 输入 /agy:ask reply with OK，Codex 输入 $agy:ask reply with OK"
+ ],
+ "tagline": "把 Google Antigravity CLI 当作 Claude Code 与 Codex 的快速 Gemini 助手"
+}

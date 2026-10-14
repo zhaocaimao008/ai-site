@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "同时运行多个 coding agent 的开发者与团队，尤其是使用 Claude Code、Codex、Cursor 等工具并行改同一仓库的人。",
+ "date": "2026-10-14",
+ "features": [
+  "在编辑前发布意图与语义作用域，提前检测意图冲突",
+  "基于 SQLite 的共享状态，位于项目 .git 目录内，同一机器上的多个客户端可见",
+  "确定性冲突检测，不依赖模型判断，结果可复现",
+  "验证门控的验收流程，由 Foremerge 亲自运行检查而非采信 agent 的说法",
+  "通过 MCP 接入 Claude Code、Codex、Cursor 等客户端",
+  "提供 foremerge 与 fmg 两个等价命令名"
+ ],
+ "intro": "Foremerge 是一个构建在 Git 之上的开源协调协议，用于让多个 coding agent 并行工作时提前发现「意图冲突」。每个 agent 拥有独立的 worktree，但通过共享的意图、语义声明、依赖、临时 ChangeSet、决策、验证与来源信息保持同步。\n\nGit 只能比较文本，无法发现两个各自合理、落在不同文件里的改动其实互相抵消。Foremerge 让 agent 在动手前先声明「我要改什么」，例如声明同一个 symbol:PaymentService 作用域，一个说 replace、一个说 extend，系统就会在写代码前给出 HIGH 级别提示并建议协调方案。\n\n它不锁定文件、不阻塞 agent，警告仅为建议性质；也不让模型判断冲突，相同输入始终得到相同结果。当前 0.5.1 为 pre-1.0 的本地优先 MVP，CLI、JSON API、MCP server、SQLite 存储、确定性冲突检测与验证门控生命周期均已实现，跨机器协调不在项目范围内。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：curl -fsSL https://foremerge.com/install.sh | sh（或 npm install -g foremerge，或 cargo install --locked --git https://github.com/naw103/foremerge foremerge）",
+  "在目标仓库中初始化：foremerge init",
+  "接入客户端并注册检查：foremerge setup all 与 foremerge checks set test -- cargo test --all-targets",
+  "确认配置：foremerge doctor --client all"
+ ],
+ "tagline": "在代码冲突之前发现意图冲突的多智能体协调协议"
+}

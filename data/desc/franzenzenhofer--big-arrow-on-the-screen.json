@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合在 macOS 上使用 Claude Code 或 Codex 等 AI 代理的开发者，以及需要引导他人操作 Mac 界面的普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "在任意窗口上方绘制箭头、方框和文字，点击穿透，不影响键盘焦点",
+  "支持通过 --element 和 --app 定位界面元素，自动高亮目标控件",
+  "文字标签中的 {{value}} 会变成复制按钮，点击即可复制内容",
+  "提供 --say 选项朗读提示文字，提醒用户回到电脑前",
+  "支持多种样式、颜色、形状和尺寸，可自定义箭头外观",
+  "作为 Claude Code 和 Codex 的 skill 使用，让 AI 代理直接调用"
+ ],
+ "intro": "bigarrow 是一个 macOS 命令行工具，配合 Claude Code 和 Codex 的 skill 使用。它能在所有窗口之上绘制箭头、方框和文字，点击会穿透到下层，键盘焦点保持不变，箭头会自行消失。绘制不需要任何 macOS 权限，只有一个 Swift 二进制文件，没有守护进程、菜单栏图标、账号或遥测。\n\n它解决的是 AI 代理在 Mac 上执行任务时遇到的「只有人类才能做」的步骤：权限弹窗、OAuth 同意、2FA、验证码、支付等。代理可以指出按钮位置，由用户决定是否点击。文字标签支持 {{value}} 语法生成复制按钮，还可用 --say 朗读提示。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 bigarrow（具体安装方式见 README 的 Install 章节）",
+  "运行命令绘制箭头：bigarrow point --element \"Allow\" --app \"System Settings\" --text \"Franz, click Allow\"",
+  "使用 start 命令绘制持续显示的箭头：bigarrow start --element Terminal_Toggle --app \"System Settings\" --text \"Switch this on\" --from right --color green --close-button",
+  "在文字中加入 {{value}} 生成复制按钮：bigarrow start --element \"PIN code\" --app \"Google Chrome\" --text \"Copy {{482913}} here\""
+ ],
+ "tagline": "让 AI 代理在你的 Mac 屏幕上画大箭头、方框和文字"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合正在开发 AI 聊天或 agent 产品的 React / Next.js 开发者，以及希望快速搭建带 AI 能力的后台界面的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "69 个免费组件以源码形式提供，可用 CLI 或 MCP 安装到现有 Next.js 项目",
+  "内置可运行的 AI 聊天应用，支持 Anthropic、OpenAI、Google、OpenRouter、Groq、xAI 等模型 key",
+  "基于 React Aria Components 与 Tailwind CSS v4，无运行时 CSS，默认支持无障碍访问",
+  "支持阿拉伯语、希伯来语等 RTL 语言的布局与键盘导航",
+  "提供 MCP server、agent skill、AGENTS.md 与 llms.txt，便于编码智能体按规范搭建界面"
+ ],
+ "intro": "BoardUI 是一套面向 agentic 界面的 React 设计系统，把 AI 产品需要的组件（聊天、思考指示器、agent 日志、输入框、侧边栏）和常规后台需要的组件（表格、卡片、表单）统一在同一套视觉语言里，并以源码形式放进你的项目。\n\n仓库包含全部 69 个免费组件源码、设计 token 和字号体系，首页本身就是一个可用的 AI 聊天应用：聊天记录保存在浏览器中，不需要数据库；API 路由在服务端读取你的模型 key 并流式返回回复，key 不会进入浏览器。\n\n组件基于 React Aria Components 和 Tailwind CSS v4，支持明暗主题与 RTL 布局，并提供 MCP server、agent skill、AGENTS.md 规则和 llms.txt，方便编码智能体直接使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install",
+  "cp .env.example .env.local   # 然后在 AI_API_KEY 中填入你的模型 key",
+  "npm run dev",
+  "npx boardui@latest list      # 查看所有组件",
+  "npx boardui@latest add data-table   # 安装单个组件及其依赖"
+ ],
+ "tagline": "面向 AI 智能体界面的 React 设计系统"
+}

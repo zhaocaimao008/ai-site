@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望上手开源模型应用的开发者与学生、从事模型选型/资源规划/微调/评测的应用工程师，以及探索图像定制与生成的 AIGC 从业者。阅读代码练习需要基本的 Python 和命令行基础。",
+ "date": "2026-10-14",
+ "features": [
+  "覆盖模型选型、推理、数据准备、微调、评测到应用开发的完整流程",
+  "8 个部分、35 章，其中 34 章可在线阅读，章节标题为中文",
+  "提供四条学习路径：入门、适配模型、构建应用、生成式 AI 创作",
+  "结合 EvalScope、ms-swift、DiffSynth、Ollama 等工具与 RAG、Agent 工作流",
+  "包含企业知识问答、语音助手、客服质检、商品图生成等实战案例",
+  "在线网站支持全文搜索、引导阅读、代码复制、图片放大和公式渲染"
+ ],
+ "intro": "ModelScope Cookbook（魔搭紫皮书）是一份面向开发者的开源模型应用实战指南，把模型选型、推理、数据准备、微调、评测和应用开发整合成一套结构化的学习资源。全书共 8 个部分、35 章，其中 34 章可在线阅读。\n\n内容围绕实际决策展开：哪个模型适合当前任务、需要什么硬件、如何用自有数据适配、怎样判断结果好坏。书中结合 EvalScope、ms-swift、DiffSynth、Ollama 等工具，并覆盖 RAG 与 Agent 工作流，示例涉及企业知识问答、语音助手、客服质检、健身教练、商品图生成和产线检测等场景。\n\n项目提供在线网站和本地阅读两种方式，本地阅读只需 Python 3 和现代浏览器，无需项目依赖、构建步骤、API Key 或 GPU。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在线阅读：访问 https://modelscope.cn/studios/ms-cookbook-team/ms-cookbook，无需安装",
+  "本地阅读：git clone https://github.com/modelscope/ms-cookbook.git",
+  "cd ms-cookbook",
+  "python3 -m http.server 4173 --bind 127.0.0.1",
+  "浏览器打开 http://127.0.0.1:4173/#home；若端口被占用，将命令和 URL 中的端口都改为 4174；用 Ctrl+C 停止服务"
+ ],
+ "tagline": "魔搭紫皮书：开源模型应用实战指南"
+}

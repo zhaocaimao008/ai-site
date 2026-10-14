@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合正在构建自主智能体、关注低延迟离散决策与工具路由的开发者，以及希望系统了解 Jev 生态的研究者和技术选型人员。",
+ "date": "2026-10-14",
+ "features": [
+  "收录 862+ 个 Jev 相关项目，覆盖 17 个分类，如 SDK 与决策框架、模型路由、安全护栏、MCP 集成等",
+  "每个条目标注 Jev 在项目中的角色、审查依据和许可证信息",
+  "提供网页端搜索与筛选，支持标签和分类过滤",
+  "提供 Agent Skill，可通过 npx 安装后在终端或智能体中查询项目",
+  "区分描述性材料与实现证据，不声称对项目进行独立运行时或性能验证",
+  "仅通过 GitHub Issue 接受项目提交，不接受 Pull Request"
+ ],
+ "intro": "Awesome Jev 是一个围绕 TypeSafe Jev（System 1）决策架构整理的开源项目目录，收录了 862 个以上项目，分布在 17 个分类中，涵盖集成、基准测试、开发者工具、研究和学习资源。每个条目会标注它与 Jev 的关系、审查依据以及许可证信息，方便读者判断项目是否值得进一步了解。\n\n项目强调 System 1 与 System 2 的分工：把工具路由、动作分发、安全门控等离散决策交给低延迟、类型化的 Jev 模型，而不是全部交给重型推理模型。目录本身提供网页端搜索与筛选，并支持通过 Agent Skill 在终端或智能体中按领域查询项目、查看固定版本的源码证据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在终端运行 npx skills add logicrw/awesome-jev-projects 安装 Agent Skill",
+  "或运行 npx skills add https://logicrw.github.io/awesome-jev-projects/ 从网页地址安装",
+  "安装后可在终端或智能体中按领域查询项目并查看固定版本的源码证据",
+  "也可直接访问 https://logicrw.github.io/awesome-jev-projects/ 使用网页搜索与筛选"
+ ],
+ "tagline": "面向 System-1 智能体决策的开源项目雷达与目录"
+}

@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要从视频快速生成 Mixamo 动画的开发者、动画师，以及希望用 AI agent 自动化动捕流程的技术人员。",
+ "date": "2026-10-14",
+ "features": [
+  "从固定机位视频估计 SMPL-X 参数并重定向到任意 Mixamo 骨架",
+  "支持单人或双人视频，自动拆分左右两侧并分别处理",
+  "保留真实扭转、脚部接触、手指姿态和相机轨迹",
+  "提供数值化 QA 门禁，检测骨骼爆炸、脚滑和根骨漂移",
+  "逐帧对比源视频与重定向结果，报告差异窗口",
+  "所有阶段均为 CLI 或 socket 调用，可由 AI agent 操作"
+ ],
+ "intro": "Mixamo LLM Mocap 是一个把普通视频转换成 Mixamo 角色动画的 Python 管线。它使用 GVHMR 从固定机位视频中估计 SMPL-X 人体参数，再通过重定向和 FK 应用，在 Blender 里为任意 Mixamo 角色生成干净的 FK 动画。整个过程无需动捕服，也无需手动关键帧。\n\n项目默认路径直接传递 SMPL-X 的关节旋转，并可在无 Blender UI 的情况下运行。它支持单人或双人对打视频，能处理脚部接触、手指姿态和相机轨迹，还提供数值化的 QA 门禁和与源视频逐帧对比的闭环优化。所有阶段都是 CLI 或 socket 调用，便于 AI agent 端到端操作。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "将任意固定机位视频转为 Mixamo 角色 FK 动画的 AI 动捕管线"
+}

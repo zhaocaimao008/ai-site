@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在命令行中进行 AI 辅助编码或数据分析、同时关注敏感信息隐私的开发者，也适合希望使用本地模型或多语言交互的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "多后端支持：DeepSeek、OpenAI 兼容接口（GLM / Qwen / Kimi / OpenAI）与本地 Ollama，一键切换",
+  "双向可逆隐私保护：发送前脱敏、回复后还原，磁盘落盘同样脱敏，支持 Standard / Strict 两级模式",
+  "完整工具链：bash 执行、文件读写编辑、glob/grep 搜索、网页搜索与抓取、后台任务、任务与 todo 管理",
+  "Skills 技能系统与 Subagents 子代理：按需加载领域知识，将复杂任务委派给独立上下文的子代理",
+  "Hooks 与 MCP 协议：支持 Python/Shell 钩子拦截工具调用，并可通过 MCP 连接外部工具服务器",
+  "安全沙箱：命令白名单、路径逃逸检测、危险命令拦截、敏感文件保护与脚本注入拦截"
+ ],
+ "intro": "Baize（白泽）是一个开源的命令行 Coding Agent，灵感来自中国神话中的神兽白泽。它面向 Vibe Coding 和数据分析场景，支持 DeepSeek、任意 OpenAI 兼容接口（GLM / Qwen / Kimi / OpenAI）以及本地 Ollama 等多种后端，可一键切换。首次运行会自动生成配置文件，用户只需填入一次密钥即可使用。\n\n项目的一大特点是隐私保护：敏感信息在发送给 LLM 前会被替换为占位符，收到回复后再自动还原，整个过程对用户透明；会话文件、压缩记录和审计日志在写入磁盘前也会自动脱敏，默认开启。此外还支持中文、英文、日文、韩文、西班牙文、法文、德文、俄文、阿拉伯文九种语言交互。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认已安装 Python 3.10+ 与 pip（3.10 需额外安装 tomli）",
+  "方式一：执行 pip install https://github.com/Xu123-Bob/Baize.git 安装",
+  "方式二：下载 ZIP 解压后进入目录，执行 pip install -r requirements.txt 再运行 python -m Baize",
+  "安装完成后打开命令行，输入 baize 启动",
+  "如需驱动 SPSS 或 SQL 数据库，执行 pip install -r requirements-data.txt 安装额外依赖"
+ ],
+ "tagline": "带隐私保护的开源 Coding Agent CLI，支持多后端与多语言"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 助手快速生成可执行旅行攻略的普通用户，以及想了解或复用该工作流的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "联网实查关键信息并附带来源，出发前可按当日预报终判",
+  "产出单文件 HTML 路书，桌面、手机、打印均适配，断网可开",
+  "覆盖吃住行游拍避十大板块，含每日半小时级时段卡与实拍图",
+  "内置 tools/checklist.py 机械检查，交付前可一键验收",
+  "美食情报卡按城市持续追加，越用越厚",
+  "支持可选配图，默认使用 Wikimedia Commons 免费图源"
+ ],
+ "intro": "见好 · 旅行规划器是一套面向 AI 助手的「出行路书」工作流 Skill。你只需说出旅行需求，它便按固定流程采集偏好、联网实查信息，最终产出可核验、能执行的旅行攻略。输出形式为 Markdown 事实源加单文件 HTML 双版本：本地完整版断网可打开，另有瘦身在线版可一键部署。\n\n路书覆盖吃住行游拍避全维度，包含总览、路程、每日行程、门票预约、住宿、预算、应急、美食清单、特产等板块，并附美食情报卡作为按城市持续追加的数据资产。项目内置 tools/checklist.py 机械检查工具，交稿前可自动验收，也方便用户核对 AI 是否偷懒。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "解压得到 jianhao-travel-planner 文件夹（不要改名）",
+  "将整个文件夹放入 skills 目录：全局推荐 ~/.claude/skills/，或单项目 <项目>/.claude/skills/",
+  "确认路径为 …/skills/jianhao-travel-planner/SKILL.md",
+  "可选：在仓目录执行 git config core.hooksPath tools/githooks 启用 pre-push 白名单闸门",
+  "对 AI 说“周末想去 XX 玩”即可自动触发本 Skill"
+ ],
+ "tagline": "联网实查、可核验的 AI 出行路书工作流"
+}

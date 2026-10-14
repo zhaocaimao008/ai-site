@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 macOS 的开发者，尤其是同时使用多种 AI Agent、需要管理未提交改动、定位回归或处理 GitHub 协作流程的人。",
+ "date": "2026-10-14",
+ "features": [
+  "灾备中心：为本地仓库保存 Git bundle 和未提交文件，支持定时与重大改动备份、手动恢复点，并观察外部 Agent 造成的删除、引用回退等异常。",
+  "状态栏监控：不打开主窗口即可查看未提交改动、上游同步、恢复点、Actions、目标状态和每日活动，可开启退出后继续监控。",
+  "目标交付：把提交并推送、创建 PR、发布版本等流程保存为可继续的目标，逐项核对实际状态，中断后重新读取再继续。",
+  "变更中心：按文件或 Diff 分块分组，分别写提交说明或让 Agent 整理分组，执行前检查遗漏与重复，创建恢复点后按顺序提交。",
+  "回归取证：用 git bisect 在独立工作树中缩小首个故障提交范围，保存提交、判定、退出码、耗时和输出。",
+  "GitHub 与项目工具：管理账号仓库、Issue、PR、Actions，提供代码搜索、运行命令、忽略规则、提交身份等工具。"
+ ],
+ "intro": "GitGatto 是一款 macOS 原生 Git 与 GitHub 客户端，使用 Swift 6 和 SwiftUI 编写，支持 Apple Silicon 与 Intel，最低要求 macOS 14。它继续使用系统 Git 和本机 CLI，在常规仓库操作之外，提供未提交代码备份、外部 Agent 活动记录、目标交付、回归定位和开发环境安装等能力。\n\n项目关注写完代码之后的流程：整理混杂改动、定位回归、等待 CI、审 PR、发版本，以及使用 Agent 后需要弄清它改了什么、为什么改、失败留下什么。GitGatto 把这些过程做成可查看、可恢复、可继续的操作，而不是只给 Git 命令套一层按钮。\n\n应用支持 Codex CLI、Claude Code、Gemini CLI、OpenCode、DeepSeek Harness、Cursor Agent、GitHub Copilot CLI、Qwen Code 和自定义 CLI，也可配置 OpenAI 兼容 API 或 DeepSeek API。仓库列表、设置、目标、回归记录、对话、译文、下载记录和恢复点保存在本机。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 DMG，拖入“应用程序”。",
+  "确认系统为 macOS 14 或更高版本，并已安装 Git。",
+  "打开本地仓库，或手动扫描后选择添加。",
+  "如需 GitHub 账号、PR、Issue、Actions 功能，先安装并登录 GitHub CLI。",
+  "如需 Agent、翻译或 Agent 安装，在设置中配置 CLI 或 OpenAI 兼容 / DeepSeek API。"
+ ],
+ "tagline": "macOS 原生 Git 客户端，用 Agent 管理仓库、审阅与协作"
+}

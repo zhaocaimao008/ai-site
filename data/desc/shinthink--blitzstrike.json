@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 LLM 代理进行渗透测试、漏洞挖掘或安全审计的安全工程师与红队人员，也适合希望在 MCP 客户端中集成自动化安全验证流程的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "三层安全审计工具：BLITZ 侦察、EAGLE-EYE 静态追踪、STRIKE 实时验证",
+  "作为 MCP 服务器运行，兼容 Claude Code、Cursor、OpenCode、Codex、Hermes、Gemini 等客户端",
+  "一次 run_engagement 调用即可在服务端完成完整审计流程",
+  "内置 Web3 审计（Solidity + Foundry 证明）、逻辑漏洞探测与 CWE/CVE 监控",
+  "blitzstrike install 自动检测并合并各客户端的 MCP 配置，不覆盖已有服务器",
+  "blitzstrike doctor 检查运行时、工具目录与凭据状态，并给出修复提示"
+ ],
+ "intro": "Blitz Strike 是一个基于 Model Context Protocol（MCP）的安全审计服务器，用 TypeScript 和 Bun 编写。它把渗透测试方法论拆成三个可调用的工具层级：BLITZ 负责侦察与攻击面枚举，EAGLE-EYE 负责静态分析与 source-to-sink 可达性追踪，STRIKE 负责在报告前做实时验证。整个流程在服务端执行，一次 run_engagement 调用即可完成从范围约束到可提交发现的完整流程。\n\n项目强调「扫描命中只是假设，实时测试才是裁决」，目的是减少自动化安全评估中常见的两类问题：表面模式匹配带来的误报，以及未经实时确认就上报的发现。除三层工具外，还包含 Web3 审计（Solidity + Foundry 证明）、逻辑漏洞探测、CWE/CVE 监控与带外验证等能力。\n\nBlitz Strike 由 LLM 驱动，LLM 负责规划、路由与判断，工具本身提供确定性的执行、知识与护栏。它支持 Claude Code、Cursor、OpenCode、Codex、Hermes、Gemini 等 MCP 客户端，可通过 npx 零安装使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx -y blitzstrike doctor  # 验证运行环境",
+  "npx -y blitzstrike install  # 自动注册到检测到的代理 CLI",
+  "重启你的 MCP 客户端，然后调用 run_engagement",
+  "从源码运行：git clone https://github.com/shinthink/blitzstrike.git && cd blitzstrike && bun install && bun run src/index.ts serve --mcp"
+ ],
+ "tagline": "面向 LLM 代理的 MCP 安全审计工具带"
+}

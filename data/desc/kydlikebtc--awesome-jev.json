@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "想了解 Jev 决策模型用法、按决策模式查找公开示例的开发者与研究者。",
+ "date": "2026-10-14",
+ "features": [
+  "按决策模式索引 1200 余条 Jev 公开资源",
+  "每条记录标注来源、调用点引用与注意事项",
+  "带日期的链接检查与调用点文本检查",
+  "提供 JSON schema 与平台兼容性文档",
+  "支持英文与中文两种语言",
+  "README 由 catalog.json 通过脚本生成"
+ ],
+ "intro": "Jev 是 TypeSafe AI 的决策模型，它不生成文本，而是接收状态和带类型的问题，返回带校准置信度的类型化答案，速度与成本足以放进 agent 的内层循环。本仓库收录使用 Jev 的公开示例，按所做出的「决策」而非资源类型组织，方便读者按决策模式查找。\n\n仓库强调可核查性：每一行都标注来源，记录调用点引用、原始断言与注意事项，并带有链接检查日期。作者明确说明这不是产品、不是 SDK、与 TypeSafe AI 无关联，也不构成推荐；收录只是来源记录，不代表运行时或性能验证。\n\n内容以英文和中文提供，附带 JSON schema 与平台兼容性说明，README 由 catalog.json 生成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 python3 scripts/build_readme.py 可从 catalog.json 重新生成 README",
+  "访问在线目录 https://kydlikebtc.github.io/awesome-jev/ 浏览资源",
+  "参考 examples/01-three-primitives/main.py 查看一次请求中使用三种原语的示例"
+ ],
+ "tagline": "按决策模式索引的 Jev 公开资源目录"
+}

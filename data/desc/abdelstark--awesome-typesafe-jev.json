@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想了解或上手 TypeSafe Jev 的开发者，以及需要查找相关 SDK、示例和独立评测的技术选型人员。",
+ "date": "2026-10-14",
+ "features": [
+  "整理 TypeSafe Jev 的官方文档、SDK 与开发工具入口",
+  "收录社区项目，涵盖客户端库、Agent 工具、浏览器代理、游戏与机器人等方向",
+  "提供独立评测与研究链接，包括 JevBench 等跨模型结果",
+  "附带可下载的 JSON 目录，便于程序化使用",
+  "提供 SKILL.md，可配合编码代理使用",
+  "在线站点支持浏览实时构建示例与项目列表"
+ ],
+ "intro": "这是一个围绕 TypeSafe 的 Jev（System One 模型）整理的社区资源合集，由独立开发者维护，与 TypeSafe AI 官方无隶属关系。仓库以“字段指南”的形式，把官方文档、SDK、示例项目、社区应用和独立评测集中在一起，方便开发者快速了解 Jev 的定位与用法。\n\nJev 的核心思路是给软件提供“带类型的判断”：一次调用返回 Choice、Score、Noul 三种结构化结果，由应用代码决定后续路由或升级。README 中给出了官方文档里的支持工单示例，并强调这是已发布的示例而非实时模型调用。\n\n仓库本身是 HTML 站点加 Markdown 目录，提供在线目录、JSON 资源列表，以及可供编码代理使用的 SKILL.md。内容按官方资源、社区项目、评测研究等分类，并标注了社区条目与官方内容的区别。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问在线目录 https://abdelstark.github.io/awesome-typesafe-jev/ 浏览资源",
+  "阅读官方 Introduction 与 Quick start 文档了解 Choice、Score、Noul 三个原语",
+  "下载 resources.json 获取结构化资源列表",
+  "参考 skills/awesome-jev/SKILL.md 在编码代理中使用该目录"
+ ],
+ "tagline": "TypeSafe Jev 的社区资源导航与实战指南"
+}

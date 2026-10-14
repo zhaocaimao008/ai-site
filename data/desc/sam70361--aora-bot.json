@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想为聊天机器人、桌面宠物或悬浮助手添加情绪表达层的开发者，以及需要纯前端 SVG 动画方案的前端工程师。",
+ "date": "2026-10-14",
+ "features": [
+  "32 种状态表情，覆盖生命周期、情绪反应与代理工作状态三大分组，全部配置驱动",
+  "3 种身体形态（blob / wedge / gem），同一套眼睛与动画系统按轮廓自动适配",
+  "分段式 emotionId：00-09 生命周期、10-29 情绪、30-49 代理状态、50+ 自定义，已有编号永不重排",
+  "轮廓环眼睛系统：25 组 48 点轮廓眼环，逐点弹簧插值形变，表情池随机轮换",
+  "AI 对接协议健壮：handleAIMessage 接受对象或 JSON 字符串，未知 ID 或解析失败自动回退待机",
+  "零依赖，无构建步骤，可直接迁移到 Electron 悬浮窗"
+ ],
+ "intro": "Emotion Ball 是一套面向 AI 助手的表情引擎，32 种状态表情全部由纯 SVG 与原生 JavaScript 实时驱动，零框架、零图片资源。AI 侧只需输出一个 emotionId，小球即可切换到对应表情，可直接用作聊天机器人、桌面宠物、悬浮助手的情绪表达层。\n\n表情覆盖生命周期、情绪反应与代理工作状态三大分组，内置圆胖（blob）、三角（wedge）、菱形（gem）三种身体形态，支持主题色多实例与线稿模式。整套体系围绕纯数据配置设计，眼环池、动画原语、关键帧序列自由组合，可基于现有设计扩展新表情。\n\n仓库由总馆与两个子项目组成：根目录总馆让云宝、亮亮、球球三个角色同台切换展示；mood-mates/ 为原创角色子项目；emotion-ball/ 为球形角色项目。展示馆站点提供陈列墙与画册双浏览模式、中英双语界面与明暗双主题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "启动任意静态服务器，例如：python -m http.server 8765",
+  "访问总馆 http://localhost:8765/ 或 Emotion Ball 子站 http://localhost:8765/emotion-ball/",
+  "在页面中按顺序引入 rings.js、emotions.js、ball.js、engine.js 四个脚本",
+  "创建实例：var ball = EmotionBall.create(document.getElementById('bot'), { emotion: '02', idle: true });",
+  "AI 输出 JSON 交给 handleAIMessage：ball.handleAIMessage('{\"emotionId\":\"30\",\"tips\":\"正在思考用户问题\"}');"
+ ],
+ "tagline": "为 AI 助手打造的纯 SVG 表情引擎，输出 emotionId 即可切换表情"
+}

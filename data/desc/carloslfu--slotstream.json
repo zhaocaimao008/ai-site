@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 16GB 至 64GB 内存的 Apple Silicon Mac 上本地运行大模型的开发者，以及想用本地模型驱动 Claude Code、Codex 等编码工具的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "将 125B 参数的 Qwen3.8-Flash-Next MoE 模型从 SSD 流式加载，按需缓存热门专家到内存",
+  "原生 Swift 实现，基于 MLX 和 Metal，无需 Python，可离线运行",
+  "提供 Ollama、OpenAI、Anthropic 兼容 API 以及 Swift 库",
+  "可通过 slotstream launch claude 等命令在本地模型上运行 Claude Code、Codex 等工具",
+  "内置 slotstream doctor 等命令查看硬件与内存规划"
+ ],
+ "intro": "Slotstream 是一个用 Swift 编写的本地大模型推理引擎，目标是在内存装不下模型的 Mac 上运行大模型。它把 Qwen3.8-Flash-Next（125B 参数的混合专家模型，4-bit 量化）的大部分权重放在 SSD 上，只把当前最忙的专家缓存进内存，从而在 16GB 到 64GB 内存的 Apple Silicon Mac 上运行。\n\n整个引擎是一个基于 Apple MLX 和 Metal 的原生 Swift 程序，不依赖 Python，首次下载后可离线使用，无需云端账号。它提供 Ollama、OpenAI 和 Anthropic 兼容的 API，也提供 Swift 库，可以接入 Claude Code、Codex 等客户端。README 中给出的开发测试数据显示，48GB M5 Pro 在 33GB 内存预算下达到 20.91–23.69 tok/s。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认设备为 Apple Silicon Mac，内存至少 16GB，macOS 14 或更高，并预留约 110GB 可用 SSD 空间",
+  "从 GitHub Releases 获取最新版本并安装 slotstream",
+  "运行 slotstream doctor 查看当前硬件与自动内存规划",
+  "运行 slotstream launch claude 在本地模型上启动 Claude Code，或通过其 Ollama/OpenAI/Anthropic 兼容 API 接入自己的应用"
+ ],
+ "tagline": "在 16GB 内存 Mac 上运行 125B MoE 大模型的本地推理引擎"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 DeepSeek Harness 并需要与团队、CI 或 AI agent 共享插件配置的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "将本地 DSH 插件、顺序、运行时与 patch 打包为版本化 Preset 并发布",
+  "一条命令应用他人的 Preset，安装精确版本与顺序",
+  "profile diff 在升级前展示具体改动，profile rollback 回滚到上一版本",
+  "Release 内容寻址并校验哈希，npm 源带 integrity，GitHub 源固定 commit",
+  "只发布 ${ENV_VAR} 引用，拒绝包含疑似凭据的 patch",
+  "支持 --plan / --dry-run 审查流程，以及 CI 用的 publish token"
+ ],
+ "intro": "DSH Hub CLI 是 DSH Plugin Hub 的开源客户端，用于把本地 DeepSeek Harness（DSH）的插件组合、加载顺序、运行时版本和 cordis.patch.yml 配置打包成一个可版本化的 Preset，发布为不可变的 Release，其他人用一条命令即可复现。\n\n它解决的是「在我机器上能跑」的问题：Preset Release 会固定 DSH 运行时版本、按顺序记录每个插件的来源与完整性哈希、原样发布 patch，并只声明所需的环境变量名而不上传密钥值。应用前可以用 diff 查看改动，出错可以回滚到上一个完整版本。\n\nCLI 支持 plan/apply 流程，先产出可审查、会过期的计划，再由人确认执行，因此也适合交给 AI agent 使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：npm install --global @dsh-plugin-hub/cli（需 Node.js 22.13+ 和 pnpm）",
+  "查找 Preset：dsh-hub profile search workspace",
+  "查看改动：dsh-hub profile diff dsh-web-workspace --version 0.1.0 --profile web",
+  "应用：dsh-hub profile apply dsh-web-workspace --version 0.1.0 --profile web",
+  "检查健康状态：dsh-hub profile doctor --profile web"
+ ],
+ "tagline": "把 DeepSeek Harness 插件配置打包成可版本化的 Preset 分享"
+}

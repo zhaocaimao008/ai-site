@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合关心网站在 AI 搜索中可见性的开发者、SEO/GEO 从业者和内容运营人员，也适合想在 agent 中集成站点评估能力的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "按公开的 GEO rubric 对网站打 0–100 分，并列出每项检查的得分与差距",
+  "检查 robots.txt、sitemap、llms.txt、结构化数据、内容可引用性等维度",
+  "用你自己的 API key 向 OpenAI、Perplexity、Gemini、Anthropic、OpenRouter 提问，验证是否被引用",
+  "支持按周跟踪一组问题的引用变化",
+  "提供 CLI、GitHub Action 和本地 MCP server 三种使用方式",
+  "零依赖，仅需 Python 3.8+ 标准库"
+ ],
+ "intro": "geo-score 是一个用 Python 标准库写的命令行工具，用来评估网站对 AI 答案引擎（如 ChatGPT、Perplexity、Gemini、Copilot）的可引用程度。它按照一份公开、带版本号的 GEO 评分标准（rubric v1.1）对公开 URL 打分，输出 0–100 的分数和分项检查结果，而不是黑盒判断。\n\n工具分三个层级：免费打分不需要 API key；用你自己的 API key 向各 AI 引擎提问，看它们是否真的引用你的站点；再按周跟踪一组问题的引用情况。它同时提供 CLI、GitHub Action 和本地 MCP server，可接入 Claude Code、Cursor、VS Code 等环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "直接运行打分（无需安装）：curl -sL https://raw.githubusercontent.com/jianruntech/geo-score/v1.8.2/cli/geo_score.py | python3 - stripe.com --brief",
+  "查看完整检查项：在命令后加 --explain 可显示证据",
+  "通过 MCP 接入 Claude Code：claude mcp add --scope user geo-score -- uvx geo-score@1.8.2 mcp",
+  "如需只读模式（不消耗 API key）：在 mcp 后加 --read-only"
+ ],
+ "tagline": "给网站打 0–100 分，评估 AI 引擎能否引用你的内容"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex 等编码 Agent 进行日常开发，希望跨会话保留项目上下文与决策记录的开发者及团队。",
+ "date": "2026-10-14",
+ "features": [
+  "集文档、记忆、索引与技能于一体的上下文引擎",
+  "Agent 自动记录规格、决策、调研等内容",
+  "记忆以可读可改可删的 Markdown 文档保存",
+  "文档可用 Git 跟踪，便于团队共享知识",
+  "零基础设施：无需 embedding、向量数据库或模型配置",
+  "支持 Claude Code、Codex、OpenCode、Pi、DeepSeek、Kiro 等多种 harness"
+ ],
+ "intro": "Operator Memory 是一个面向编码 Agent 的自我改进上下文引擎。它给 Agent 一个用 Markdown 构成的「大脑」，在 Agent 工作时自动记录规格、决策、标准、调研和教训，让每次新会话都能继承上一次学到的内容。\n\n记忆存放在三个位置：`.operator/` 保存本机私有的项目知识，`.operator-shared/` 随仓库发布共享，`~/.operator/user/` 保存跨项目的个人规则。每个会话都遵循「查阅—构建—更新」的循环：先读取指令、代码索引和规格，再正常开发，最后把变更写回文档。项目不依赖后台 Agent、embedding 或向量数据库，也不需要模型配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Operator Helper：`npm install --global @aerovato/operator-helper`（或 `bun add --global --minimum-release-age 0 @aerovato/operator-helper@latest`）",
+  "为所用 harness 安装适配器，例如 Claude Code 执行 `operator-helper install claude-code`，Codex 执行 `operator-helper install codex`",
+  "首次使用时在新会话中运行 `/operator:user-init`，初始化全局用户分区",
+  "每个新项目中运行 `/operator:project-init`，生成 Operator 结构、迁移已有文档并索引仓库",
+  "开始新会话并正常开发，Agent 会自动查阅并更新知识文档"
+ ],
+ "tagline": "为编码 Agent 提供持久记忆与自动文档的上下文引擎"
+}

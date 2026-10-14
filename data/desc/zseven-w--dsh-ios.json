@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 DeepSeek Harness 的开发者，尤其是需要在对话中调试、构建和自动化测试 iOS 应用或真机操作的人。",
+ "date": "2026-10-14",
+ "features": [
+  "对话内实时 iOS 模拟器：MJPEG 流经签名路由代理到常驻侧边面板，可直接在画面上点击、拖拽、旋转、按 Home",
+  "支持 USB 连接的真实 iPhone：自动构建并启动 WebDriverAgent，通过 loopback 隧道复用同一套面板与工具",
+  "22 个 agent 工具：设备列表、启动/关机、截图、交互、构建运行、统一日志、进程、backtrace、leaks、app 信息等",
+  "语义化 UI 自动化：基于无障碍树的按元素点击、Vision OCR 文字查找与点击、列表行索引点击并用计数器验证结果",
+  "SwiftUI preview 热重载：在包外生成临时宿主 App，将预览编译为 dylib 热替换进运行中的模拟器，无需重启",
+  "仅 loopback 传输：serve-sim 绑定 127.0.0.1，路由校验来源与 Host，HMAC 能力 10 分钟内过期"
+ ],
+ "intro": "DSH iOS Simulator 是 DeepSeek Harness（DSH）的一个插件，把一台可交互的 iOS 模拟器搬进对话中，同时也能通过 USB 连接真实 iPhone。它注册了 22 个 agent 工具，覆盖设备发现、启动/关机、截图、构建运行、统一日志、进程与内存检查等操作，并在右侧常驻面板中以 MJPEG 流实时显示设备画面，可直接在视频上点击、拖拽、旋转和按 Home。\n\nUI 自动化不依赖猜测坐标：ios_sim_ui_tree 导出无障碍树，ios_sim_tap_element 按 label 或 identifier 点击；树为空时用 Vision OCR 查找并点击文字；ios_sim_ui_rows 与 ios_sim_tap_row 则把列表行转成带索引的行，并通过计数器变化验证点击是否生效。真机模式下插件会在手机上构建并启动 WebDriverAgent，通过 loopback 隧道转发控制与画面端口，复用同一套面板和工具。\n\n传输层只绑定 127.0.0.1，所有路由要求 loopback 对端与 Host，并做 Fetch-Metadata/Origin 校验，HMAC 凭证 10 分钟内过期；画面字节只通过签名 URL 送达 UI，不会以图片块形式进入对话。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "在 DeepSeek Harness 对话里实时操控 iOS 模拟器与真机"
+}

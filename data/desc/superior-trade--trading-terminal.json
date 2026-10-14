@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Hyperliquid 上交易、并愿意自行部署和管理策略的开发者或量化交易者。",
+ "date": "2026-10-14",
+ "features": [
+  "在图表上画线，AI agent 读取画线和截图并返回带入场、止损、目标的交易计划",
+  "扫描图表生成多个候选方案，并按置信度排序",
+  "自动生成 Freqtrade 策略代码，经过安全校验和自动修复循环",
+  "支持历史回测和实盘部署，含实时盈亏、仓位管理和杠杆上限",
+  "内置 Postgres，自托管无需登录，所有提示词可编辑",
+  "支持 TradingView Advanced Charts 或内置的 Lightweight Charts 预览"
+ ],
+ "intro": "Superior Trade 是一个面向 Hyperliquid 的自托管 AI 交易终端。你在 TradingView 图表上直接画出对行情的判断，AI agent 会读取你的画线、可见区间、指标以及图表截图，返回一份包含入场、止损、目标和失效条件的交易计划，并给出多个候选方案的排序。\n\n选定方案后，它会生成对应的 Freqtrade 策略代码，并在提交前经过确定性安全校验：检查是否读取未来 K 线、止损是否按杠杆缩放、是否在无成交量的 K 线上触发信号等。未通过的策略会被退回给模型自动重写，直到通过为止。之后可部署为实盘策略，支持实时盈亏、仓位管理、杠杆上限和定时自动停止。\n\n项目基于 TypeScript 和 Next.js，内置 Postgres，无需额外配置数据库，也无需登录。你可以自行部署，或使用官方托管版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/Superior-Trade/trading-terminal.git",
+  "cd trading-terminal && npm install",
+  "cp .env.example .env.local，填入 SUPERIOR_TRADE_API_KEY 和 OPENROUTER_API_KEY",
+  "npm run dev，访问 http://localhost:3200"
+ ],
+ "tagline": "自托管 AI 交易终端，画图生成可部署策略"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频生成、世界模型与 3D 场景一致性的研究人员和开发者，以及希望上手体验相机可控视频生成的用户。需要具备 NVIDIA GPU 环境。",
+ "date": "2026-10-14",
+ "features": [
+  "支持图生视频（i2v）与文生视频（t2v）两种模式",
+  "相机可控的场景探索，通过 camera.npy 指定相机轨迹",
+  "隐式 3D 感知记忆，保持跨视角与长时序的场景一致性",
+  "提供 Base 与蒸馏加速版 Fast 两个模型权重",
+  "可用 Qwen3-VL-4B-Instruct 从输入图像自动生成提示词",
+  "开源交互式 demo，支持键盘控制相机与多 GPU 推理"
+ ],
+ "intro": "WorldCrafter 是腾讯 ARC Lab 与北京大学合作提出的视频世界模型，论文发表于 arXiv（编号 2609.24984）。它能够从一张图像或一段文本提示出发，生成相机可控、跨视角一致的场景探索视频。其核心是「可查询相机的隐式 3D 感知记忆」，用于在多个视角和长时间跨度上保持场景信息的一致性。\n\n项目提供两个模型：WorldCrafter-Base 为基础模型，WorldCrafter-Fast 为蒸馏后的加速版本。官方同时开源了交互式 demo 的代码与推理服务，用户可以用键盘控制相机在场景中漫游。代码基于 Python 3.11，需要 NVIDIA GPU，支持 uv 或 conda + pip 两种环境配置方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/TencentARC/WorldCrafter.git && cd WorldCrafter",
+  "配置环境（推荐 uv）：uv sync --project uvenv --frozen --extra demo，然后 source uvenv/.venv/bin/activate",
+  "下载模型权重：hf download TencentARC/WorldCrafter-Fast --local-dir weights/WorldCrafter-Fast",
+  "运行图生视频：python inference.py --model-type fast --mode i2v --image-path test/I2V/03_waterfall/image.png --prompt test/I2V/03_waterfall/prompt.txt --camera-path test/I2V/03_waterfall/camera.npy",
+  "启动交互式 demo：python -m demo --model-path weights/WorldCrafter-Fast，然后浏览器打开 http://localhost:8080"
+ ],
+ "tagline": "腾讯 ARC 的视频世界模型，支持相机可控的场景探索"
+}

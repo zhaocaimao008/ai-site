@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管邮件订阅系统、控制订阅列表和发送成本的开发者，以及想让 AI Agent 操作邮件订阅流程的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "带实时邮件预览的编辑器，支持斜杠命令、图片上传、Markdown 和原始 HTML",
+  "发送前检查主题、预览文本、退订链接、体积、邮寄地址和域名验证",
+  "注册表单与注册 API，默认开启确认订阅（confirmed opt-in），支持 CSV 导入",
+  "退信与投诉处理、抑制列表，退信或投诉率过高时自动暂停发送",
+  "公开归档页面、订阅者增长与送达/打开/点击/退信/投诉统计",
+  "通过 REST API 和 MCP server 让 AI Agent 执行仪表盘上的所有操作"
+ ],
+ "intro": "MailCheap 是一个开源邮件订阅（newsletter）应用：撰写一期内容、发送给你的订阅列表，并发布到网页上。它把编辑器、联系人列表、注册表单、退订处理、退信与投诉处理、统计和公开归档整合在一个 Next.js 应用里。你可以用自己的 Amazon SES 或 PostShiba 账号免费自托管，也可以使用官方托管的 MailCheap Cloud。\n\n项目的一个特点是面向 AI Agent：仪表盘上的每个操作都能通过 /api/v1 的 REST API 和 /mcp 的 MCP server 完成，使用相同的 API key 和相同的校验。自托管时订阅列表保存在你自己的数据库中。仓库包含仪表盘、公开归档、REST API、MCP server 和文档，但营销站点不在开源范围内。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 MongoDB、Amazon SES 或 PostShiba、Upstash QStash 等依赖服务，可选 Resend、Upstash Redis、S3/CloudFront 或 Vercel Blob",
+  "点击 README 中的 Deploy with Vercel 按钮克隆仓库并部署，或部署到任意 Node.js 主机",
+  "配置环境变量：MONGODB_URI、BETTER_AUTH_SECRET、ADMIN_EMAILS、EMAIL_FROM，以及 RESEND_API_KEY 或 SES/PostShiba 相关配置",
+  "等待 DNS 和生产访问权限生效，完成自托管设置（README 提示约需一小时）"
+ ],
+ "tagline": "面向 AI Agent 时代的开源邮件订阅平台，可自托管"
+}

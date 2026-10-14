@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合安全研究人员、渗透测试人员、DevSecOps 工程师，以及希望在浏览器或编码代理中使用 AI 安全工作流的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "浏览器、CLI 和 MCP 共享同一套工作流运行器，结果可保留",
+  "内置 12 个模板，覆盖仓库、依赖、API、渗透测试、智能合约等场景",
+  "按业务影响对发现的问题排序，并给出优先级理由",
+  "提供验证证据和带回归测试的修复候选",
+  "Learning 保留本地运行记录、源码笔记和改进历史",
+  "通过插件和 MCP 连接 GitHub、Semgrep、Snyk、Jira 等工具"
+ ],
+ "intro": "0 是一个开源的 AI 攻击性安全操作系统，由 Y Combinator 支持，定位为「多人协作的 AI 安全操作系统」。它把安全评估、验证、修复和研究整合进同一套工作流引擎，可在浏览器、命令行和 MCP 中运行，并保留运行结果。\n\n工作流按业务影响对发现的问题排序，关注受影响客户与数据、欺诈、关键服务和中断风险，每条优先级都附带理由，缺少上下文时标记为 Not assessed，同时保留 CVSS 作为技术严重性参考。内置 12 个模板，覆盖仓库、依赖、API、Web 配置、渗透测试、包行为、智能合约和原生代码等场景，支持手动运行或通过浏览器触发器和计划任务执行。\n\n项目还提供 Learning 功能，保留本地运行记录、基于源码的笔记和经过评估的改进历史；已保存的工作流保留不可变修订并支持恢复。通过插件和 MCP 可连接 GitHub、Elastic、Semgrep、Snyk、Linear、Jira、Cloudflare、Slack 和 Teams 等工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Apple Silicon macOS 或 x64/ARM64 Linux 上安装：curl -fsSL https://raw.githubusercontent.com/0sec-labs/0/main/install.sh | bash",
+  "将安装目录加入 PATH：export PATH=\"$HOME/.0/bin:$PATH\"",
+  "启动浏览器控制台：0 web",
+  "运行 AI 工作流前，先配置模型提供商（见 docs.0.security/api-keys/）",
+  "列出模板并运行：0 workflow list --templates 和 0 workflow run --template security-research --target /absolute/path/to/repo --workspace /absolute/path/to/repo --format json > run.json"
+ ],
+ "tagline": "开源 AI 攻击性安全操作系统，发现、验证并修复漏洞"
+}

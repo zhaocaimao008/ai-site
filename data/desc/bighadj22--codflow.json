@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合在阿尔及利亚经营货到付款电商的商家、希望自托管电商栈的开发者，以及需要为电商场景接入 AI 代理的技术团队。",
+ "date": "2026-10-14",
+ "features": [
+  "COD 优先的店铺前台：单页结账、实时运费计算、数量阶梯优惠、三语（阿拉伯语 RTL、法语、英语）",
+  "商家仪表盘：订单全生命周期管理、商品与库存、促销引擎、落地页搭建与 A/B 对比、客户 CRM",
+  "配送引擎：对接 4 家阿尔及利亚承运商及 EcoTrack，支持自建司机、按省结算与部分退货回补库存",
+  "增长引擎：Meta Pixel 与 CAPI 双端配置、按实际妥投优化广告、事件去重与审计日志",
+  "AI 与代理集成：基于 MCP 的 OAuth 发现与动态客户端注册，提供 15 组 RBAC 工具集，兼容 Claude、Cursor、ChatGPT 等",
+  "后端基于 Cloudflare Workers，自动生成 OpenAPI 3.1 文档，支持边缘缓存与 KV 限流"
+ ],
+ "intro": "CodFlow 是一个面向阿尔及利亚市场的开源电商平台，以货到付款（COD）为核心设计。阿尔及利亚电商超过 95% 的订单采用货到付款，而 Shopify 等西方平台和本地工具通常按交易抽成、需要昂贵的 VPS 托管，并将数据锁定在自有数据库中。CodFlow 将整个电商栈部署在 Cloudflare 上，不收取交易手续费，商家只需承担 Cloudflare 的托管费用。\n\n项目采用 TypeScript 编写，基于 Astro 前端、Hono 4 on Cloudflare Workers 后端、Drizzle ORM 与 D1 数据库，并支持 R2 图片存储。它内置了面向阿尔及利亚本地配送公司的统一承运商 API、自建司机管理、Meta Pixel 与 Conversions API 集成，以及通过 MCP 协议连接 AI 代理的能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 AI 编程助手时，可让代理执行 \"Set up CodFlow\"，它会按照 codflow-setup 运行手册自动完成配置",
+  "本地运行 CodFlow 共 5 个步骤，具体命令请参考 README 的 Quick Setup 章节",
+  "生产环境部署请参考 docs/DEPLOYMENT.md",
+  "已安装并需要更新版本时，让代理执行 \"Update CodFlow\" 即可"
+ ],
+ "tagline": "面向阿尔及利亚的 COD 优先开源电商平台，支持 AI 代理"
+}

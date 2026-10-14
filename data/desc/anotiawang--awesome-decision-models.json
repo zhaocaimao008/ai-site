@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "适合对决策模型感兴趣的开发者、研究人员和 AI 应用构建者，用于查找相关 API、开源模型和工具。",
+ "date": "2026-10-14",
+ "features": [
+  "汇总决策模型相关的托管 API，如 Jev、meraGPT Decider 1、Solar Decide 等",
+  "收录开放权重模型，如 Clef、pplx-decider-v1.1-27b、Strands Decider 2B 等",
+  "整理推理技术、运行时与平台、SDK 与客户端等开发资源",
+  "提供应用、演示与游戏、Agent 工具等实际用例",
+  "包含基准评测、论文和文章等研究资料"
+ ],
+ "intro": "这是一个社区维护的决策模型（Decision Models，也称 System One 模型或类型化决策模型）资源列表。决策模型读取状态（文本、JSON，部分支持图像）以及你预先声明答案的问题，返回每个答案的概率，而不是生成文本。问题分为三种形式：Noul（陈述为真的概率）、Choice（从给定选项中选择）和 Score（有序评分等级）。\n\n列表收录了托管 API、开放权重模型、推理技术、运行时与平台、SDK 与客户端、应用、演示与游戏、Agent 工具、基准评测和论文等资源。该类别由 TypeSafe AI 在 2026 年 9 月随 Jev 及其 /v1/systemone API 提出，许多模型和运行时都接受相同的请求格式。项目与任何模型提供商无关，欢迎提交 PR。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "决策模型资源大全：API、开源模型、运行时与论文"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要跨平台采集或操作数据的开发者，以及希望把平台能力接入 AI Agent 工作流的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "统一命令语法调用 11 个平台的搜索、详情、评论、用户、推荐流、下载、发布、私信、直播弹幕等能力",
+  "所有平台输出同一种结构的 JSON，字段命名一致，便于脚本和 Agent 处理",
+  "自描述能力清单，可用 catbus platforms 查询每个平台支持的命令与登录要求",
+  "登录态按平台 × 端 × 账号隔离在 ~/.catbus/，支持扫码、短信、cookie 导入与多账号切换",
+  "为 AI Agent 设计：stdout 只有 JSON、退出码稳定、error.hint 给出下一步命令，并提供 Agent 技能",
+  "仅依赖 Node，原生依赖带预编译包，覆盖 8 个目标系统"
+ ],
+ "intro": "catbus（猫巴士）是一个用 TypeScript 编写的命令行工具，把小红书、抖音、TikTok、B 站、快手、微博、闲鱼、淘宝、京东、X、12306 这 11 个平台的 web 端能力装进同一套命令里。含义相同的能力在所有平台上使用同一个命令、同一组参数和同一种 JSON 输出，比如笔记、作品、稿件、推文统一叫 item，搜索统一叫 search，学一次就能跨平台使用。\n\n它只需要 Node 环境，原生依赖带预编译包，覆盖 Windows、macOS、Linux 的 x64 / arm64。登录态按平台、端、账号隔离在 ~/.catbus/ 目录下，支持扫码、短信和 cookie 导入，多账号可切换，不收集也不上传数据。项目从设计之初就面向程序调用：stdout 只有 JSON，退出码稳定，错误信息里会给出下一步该执行的命令，并自带 Agent 技能与 llms.txt。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm i -g catbus-cli",
+  "catbus doctor",
+  "catbus bilibili auth login",
+  "catbus bilibili item search 猫 --limit 20"
+ ],
+ "tagline": "一个命令统一调用 11 个平台的命令行工具"
+}

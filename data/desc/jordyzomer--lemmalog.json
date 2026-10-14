@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合构建 LLM 智能体、需要可验证长期记忆与符号推理能力的开发者，以及研究神经符号系统的工程师。",
+ "date": "2026-10-14",
+ "features": [
+  "运行时解析的分层 Datalog 解释器，支持否定即缺席与负环拒绝",
+  "半朴素不动点与逐纪元增量维护，支持作用域负增量重算",
+  "双时间事实（valid_from/valid_to/asserted_at）与 now() 时间投影",
+  "置信度（乘积 t-范数）× 溯源（集合并）的半环注解及合并策略",
+  "why() 证明树、聚合（count/min/max/sum）与实体解析（别名闭包与冲突升级）",
+  "MCP 服务器（12 个工具）与智能体技能，可接入 Claude Code / Kimi CLI"
+ ],
+ "intro": "Lemmalog 是一个用 Rust 实现的 Datalog 引擎，目标是把 LLM 智能体的记忆变成可演绎的数据库。它让智能体在摄入边界（由 LLM 抽取）断言基础事实，再通过规则机械地推导闭包、时间投影、矛盾候选和相关性扩散，而不是依赖向量存储“记得更好”。每条事实都携带来源溯源，每一轮对话只增量更新派生视图，避免在上下文中重复推理。\n\n项目包含引擎、MCP 服务器、REPL 和智能体技能，并附有设计文档与状态日志。已实现分层 Datalog、否定即缺席、半朴素不动点、双时间事实、置信度与溯源注解、why() 证明树、聚合、实体解析、混合检索、快照持久化以及 MCP 工具集成等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "构建带 MCP 功能的发布版：cargo build --release --features mcp",
+  "注册 MCP 服务器到 Claude Code：claude mcp add lemmalog -- $(pwd)/target/release/lemmalog-mcp",
+  "或注册到 Kimi CLI：kimi mcp add lemmalog -- $(pwd)/target/release/lemmalog-mcp",
+  "一键安装（构建、注册 MCP、安装技能）：./scripts/install.sh",
+  "运行 REPL 体验：cargo run --bin lemmalog"
+ ],
+ "tagline": "为 LLM 智能体提供 Datalog 演绎记忆引擎"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 DeepSeek Harness 并希望在对话中完成 AI 图像生成、编辑与管理的开发者与创作者。",
+ "date": "2026-10-14",
+ "features": [
+  "对话生图、图生图、多图参考与风格迁移，支持修改 Prompt 后原位重新生成并切换历史版本",
+  "AI 创作画布：在无限画布中绘制草稿、摆放参考图，通过对话生成成图并持续迭代",
+  "Studio 批量创作：多张参考图、批量生成候选图，自由控制 Provider、模型、比例和清晰度",
+  "多模型横向对比：同一组 Prompt 和参考图并发调用多个模型，在同一画布中比较结果",
+  "500+ Prompt 灵感案例，支持收藏、复制及一键带入 Studio，本地缓存不消耗额度",
+  "图库管理：搜索、筛选、收藏、下载、继续编辑、重新生成与批量管理，按工作区隔离",
+  "本地 ComfyUI 多工作流：导入并管理命名工作流，Agent 可按名称选择完成文生图和图生图"
+ ],
+ "intro": "dsh-image-gen 是 DeepSeek Harness（DSH）的一个插件，把完整的 AI 图像创作流程带进 DSH 对话环境。它不只是简单的对话生图，还提供 AI 创作画布、Studio 批量创作、多模型横向对比、500+ Prompt 灵感库、图库管理以及本地 ComfyUI 工作流等功能。\n\n插件支持 Gemini、OpenAI / Compatible、Seedream、DashScope、Grok Imagine、GLM-Image 等云端模型，也支持本地 ComfyUI 私有化绘图。既可以使用自带 API Key（BYOK），也支持通过 ChatGPT、Grok 或 Google 订阅账号直接登录使用，无需额外购买 Key。生成结果按工作区隔离存储。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "环境要求：DeepSeek Harness 稳定版本，Node.js ^22.19.0 或 >= 24.0.0",
+  "在 DSH 项目根目录运行：pnpm dsh plugin --profile web add dsh-image-gen@latest",
+  "重启 DSH 后，点击左侧边栏「插件」图标，在「已安装」分区点击 dsh-image-gen 进入详情页",
+  "在「图像生成」配置表单中选择 Provider，填写 API Key（或通过订阅账号登录），可点击「测试连接」验证",
+  "在聊天框中直接描述想要的图片，例如：画一张雨夜霓虹街头的赛博朋克猫咪，电影感光线，16:9。"
+ ],
+ "tagline": "DeepSeek Harness 的原生 AI 图像创作插件"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想用 Claude 制作解说或社交短视频、并希望在每个环节保留审核控制权的个人创作者和开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "分阶段审核流程：brief、脚本、风格帧、动态分镜、成片等每一步都需你批准",
+  "在帧或视频时间点钉注释，下一版逐条回应并展示改动",
+  "会话在审核关卡停止并写交接日志，等待你数小时或数天都不消耗资源",
+  "规则写在代码里：未报告全部错误检查或未回应注释的提交会被拒绝",
+  "支持 Claude Code、Anthropic API 和 demo 三种后端，demo 免费无需 Claude",
+  "提供终端、浏览器和 Claude Code 插件三种操作方式"
+ ],
+ "intro": "Mortiflix 是一个运行在你自己机器上的动态设计工作室。它不像多数「AI 视频」工具那样一次提示词就出结果，而是按真实工作室流程推进：brief、脚本、风格帧、转场板、动态分镜、成片，每个阶段都停下来等你审核，通过后才进入下一步。\n\n视频制作由 Claude 完成，使用你自己的 Claude Code 登录或 Anthropic API key。Mortiflix 本身是围绕它的框架：流水线、审核关卡、审阅界面，以及跨会话保留项目上下文的记忆。你可以在某一帧的具体位置或视频的某个时间点钉注释，下一版会逐条回应并展示改动。\n\n项目目前主要在 Linux 上测试，需要 Node 20+ 和 ffmpeg。流水线以文件夹形式定义，包含 pipeline.json、PIPELINE.md 和技能，任何人都可以编写。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/GTKottman/mortiflix-oss.git && cd mortiflix-oss",
+  "npm install",
+  "npm link",
+  "mortiflix init",
+  "mortiflix setup",
+  "mortiflix demo"
+ ],
+ "tagline": "本地运行的 AI 动态设计工作室，Claude 分步做视频，你逐阶段审核"
+}

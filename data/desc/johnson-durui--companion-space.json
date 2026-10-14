@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在自己电脑上搭建二次元陪伴学习环境、注重本地数据隐私的开发者与普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "独立学习空间：按课程、项目或兴趣组织资料、角色和对话记录",
+  "资料问答与引用：导入资料后进行检索增强对话，并保留答案引用",
+  "文字与实时语音：支持连续对话、语音播放和插话打断",
+  "虚拟角色演出：支持浏览器本地 VRM 3D 角色，以及 2D 备用形象、口型、情绪、目光和动作反馈",
+  "可替换的 AI 服务：内置 Mock，也可接入 OpenAI 兼容接口、Ollama 等 Provider",
+  "本地优先：资料和凭据保存在本地，长期记忆需用户确认后写入"
+ ],
+ "intro": "Companion Space 是一款本地优先的二次元陪伴学习应用。你可以为不同主题创建独立空间，导入自己的资料，与虚拟角色进行文字或实时语音交流，并在会话后整理复盘、记忆和复习内容。项目默认运行在你自己的电脑上，资料和凭据保存在本地；如果接入 OpenAI 兼容服务、Ollama 等外部 Provider，相关请求会按照你的配置发送给对应服务。\n\n核心能力包括独立学习空间、资料问答与引用、文字与实时语音、虚拟角色演出，以及可替换的 AI 服务。内置 Mock 便于直接体验，也可接入 OpenAI 兼容接口、Ollama 等 Provider；长期记忆需要用户确认后才会写入。当前最完整的使用路径是桌面浏览器配合本机 Docker 和 Mock 或自备 Provider。Android 与 iOS 客户端目前是连接同一服务的测试壳，需要受信任的 HTTPS 和设备配对，尚未作为商店成品发布。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker Desktop（或兼容的 Docker Engine）和 Docker Compose v2",
+  "克隆仓库：git clone https://github.com/Johnson-Durui/Companion-Space.git && cd Companion-Space",
+  "复制环境变量：cp .env.example .env",
+  "启动服务：docker compose up --build",
+  "打开 https://companion.localhost，按浏览器提示信任 Caddy 本地 CA，然后按 Vault → 空间 → 资料 → 角色 → 共学 的路径体验 Mock"
+ ],
+ "tagline": "本地优先的二次元陪伴学习应用，支持资料问答与虚拟角色语音交流"
+}

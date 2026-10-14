@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想让现有桌面 Agent 读取本机 QQ / 微信资料，或希望 Agent 以自定义人格参与 QQ 群聊的 Windows 用户和开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "通过 MCP 让外部桌面 Agent 访问本机 QQ / 微信的聊天、图片和文件",
+  "按关键词、人物、会话和日期检索消息，并展开上下文核对原文",
+  "让 Agent 带自定义人格参与 QQ 群聊，支持 @、引用、表情和看图",
+  "提供 MCP 轻量版与内置模型对话的完整版两种安装包",
+  "支持 SnowLuma 自动配置 OneBot 连接，多 QQ 可选",
+  "按平台、会话、日期和写操作分别授权，连接可单独撤销"
+ ],
+ "intro": "Tulpa 是一个 Windows 桌面工具，通过 MCP 把本机的 QQ / 微信聊天、图片和文件整理出来，交给 Codex、Claude Code、DeepSeek Harness、Antigravity、WorkBuddy 等外部 Agent 按授权范围检索和追溯。它本身不替代模型，只负责资料读取、检索和权限控制，因此使用 MCP 轻量版时无需在 Tulpa 里另配模型 API Key。\n\n除了查资料，Tulpa 还能让 Agent 带着自定义人格参与 QQ 群聊，支持按语境接话、原生 @ 与引用、看图、发送和收藏表情。随包提供小鲸鱼、小鲸鱼2号和龙娘等示例人格，也可以用 Markdown 自己写角色。持续群聊需要独立运行的 OneBot 服务（如 SnowLuma）和持续执行的外部 Agent。\n\n目前仅支持 Windows 10 / 11 x64，需要 .NET Framework 4.8。微信支持读取、回复草稿与复制，不能发送；QQ 的实时群聊依赖 OneBot 连接。资料保存在本机，但必要消息片段会进入你选择的模型服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并完整解压 Tulpa ZIP 到可写目录，打开 Tulpa/Tulpa.exe（需 .NET Framework 4.8）",
+  "自行下载并解压 SnowLuma v1.14.22 Windows x64 完整版，在 Tulpa 中输入文件夹路径，勾选授权后点击“载入并配置”",
+  "在“连接外部 Agent”中选择 QQ，点击“从 OneBot 选择群 · 无需导入”，只选测试群，截止日期留空",
+  "开放持续群聊和发送权限，按需加看图、表情发送或收藏，创建连接并检测工具",
+  "按 Agent 教程配置并重连客户端，在专用对话中让 Agent 参与群聊或查询历史"
+ ],
+ "tagline": "把 QQ / 微信资料接入桌面 Agent，也能让它在 QQ 群里当群友"
+}

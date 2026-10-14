@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在企业内部署可审计、可协同 AI 智能体的开发团队，以及想通过对话参与开源共建、不写代码也能贡献的产品与运营人员。",
+ "date": "2026-10-14",
+ "features": [
+  "多 LLM 统一接入，启动后在 Settings → AI Models 按用户配置 API Key",
+  "内置 10 个开箱即用的智能体，覆盖需求、实现、验证、办公与渗透测试等场景",
+  "项目知识全量加载与结构化沉淀，支持 [[slug]] 交叉引用与版本留档",
+  "plan_task 任务树拆解，按上下文选择工具，WebSocket 实时可见执行过程",
+  "个人身份与最小权限执行，密钥加密存储，明文不进入 LLM 上下文",
+  "Docker 一键自托管，支持 PostgreSQL / MySQL / SQLite 多数据库"
+ ],
+ "intro": "Agents Universe 是一个基于 Apache-2.0 协议开源的企业级 AI Agent 平台，使用 Python 与 Vue 3 构建。它的目标不是做一个更聪明的聊天框，而是让智能体真正成为能干活、有身份、有权限、可审计的“数字分身”。项目支持多 LLM 统一接入，内置 10 个开箱即用的智能体，并提供 Docker 一键自托管方案。\n\n平台的核心设计围绕“像人一样学习与工作”展开：智能体通过读取项目文档全量加载知识，而非依赖向量检索；执行任务时先规划再动手，以个人身份和最小权限运行，全程通过 WebSocket 可见可审计；工作中产生的经验会沉淀为技能、工作流和知识条目，成为可复制、可共享的组织资产。\n\n值得一提的是，该项目已部署在 agents-universe.com，并由平台上的 Product Owner 与 Tech Lead 智能体参与日常维护，贡献者无需写代码，通过对话即可协作提交 PR。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "复制环境变量与编排文件：cp .env.example .env && cp docker-compose.example.yml docker-compose.yml",
+  "生成 SECRET_KEY 并写入 .env：echo \"SECRET_KEY=$(openssl rand -hex 32)\" >> .env",
+  "启动全部服务：docker compose up --build",
+  "访问 http://localhost:8000，在 Settings → AI Models 配置 LLM API Key 后即可使用"
+ ],
+ "tagline": "开源企业级 AI Agent 平台，让智能体像人一样学习与工作"
+}

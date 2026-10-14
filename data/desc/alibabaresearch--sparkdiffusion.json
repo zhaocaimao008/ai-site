@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在有限 GPU 资源上部署或研究 Wan 系列视频生成模型的开发者与研究人员，尤其是关注扩散模型推理加速、稀疏注意力和蒸馏方向的人群。",
+ "date": "2026-10-14",
+ "features": [
+  "联合稀疏注意力、低秩分解与少步蒸馏，实现 200 倍以上推理加速",
+  "RoLa 稀疏低秩注意力，可同时用于训练（微调/蒸馏）与推理",
+  "CrossDistill 轨迹级混合蒸馏，兼顾生成质量与多样性",
+  "sparkdiffusion/ops/ 下自研高性能算子，推理时无外部依赖",
+  "支持 Wan 2.1 与 Wan 2.2 的 T2V 和 I2V 任务",
+  "可插拔稀疏注意力注册机制，便于接入自定义注意力变体"
+ ],
+ "intro": "SparkDiffusion 是阿里巴巴开源的 DiT（Diffusion Transformer）视频生成推理加速框架，通过稀疏低秩注意力（RoLa）、少步蒸馏（CrossDistill）以及自研高性能算子，在保持生成质量的前提下，相比稠密多步基线实现 200 倍以上的端到端推理加速。\n\n框架面向 Wan 2.1 与 Wan 2.2 视频扩散模型，提供稀疏注意力微调、少步蒸馏和优化后的单样本 T2V/I2V 推理完整流程，并可选支持权重-激活量化。项目自带推理算子，无需额外拉取外部稀疏注意力代码。仓库不包含权重、数据集和生成视频，模型权重发布在 Hugging Face 的 alibabagroup/sparkdiffusion 集合中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装与 CUDA 匹配的 PyTorch 和 flash-attn，然后执行 pip install -r requirements.txt 与 source scripts/env.sh",
+  "将原生 Wan 2.1 T2V 模型资源（VAE、T5 encoder、tokenizer、DiT 权重）放到 pretrain_weights/ 目录下",
+  "从 Hugging Face 下载 SparkDiffusion 检查点，并将 DIT_PATH 指向其文件或目录",
+  "运行 NUM_SAMPLES=3 SEED=0 DIT_PATH=/path/to/SparkWan2.1-T2V-14B-480P-0.90Sparsity bash scripts/inference/eval_student_2pt1_distilled.sh pretrain_weights/Wan2.1-T2V-14B outputs/inference/quickstart 4 fp8 14B_rola 0.1 \"\" \"A cat playing in the garden under the sun.\"",
+  "在 outputs/inference/quickstart 下查看生成的视频，首个样本为 warmup，后续样本用于稳态延迟对比"
+ ],
+ "tagline": "面向 DiT 视频生成的 265 倍推理加速框架"
+}

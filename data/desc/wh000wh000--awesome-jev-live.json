@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合想了解或使用 Jev System One 模型的开发者、AI 应用构建者，以及需要查找相关 SDK、MCP 工具和智能体项目的技术人员。",
+ "date": "2026-10-14",
+ "features": [
+  "按证据等级（official、observed、inferred）对条目进行分级标注",
+  "每两小时自动重建索引，条目数和更新时间来自数据源",
+  "覆盖 20 多种实现语言，收录 792 个条目",
+  "提供可搜索的在线站点，便于按关键词查找",
+  "按官方 SDK、社区客户端、Agent 工具、路由护栏、评测校准等类别组织内容",
+  "每个条目链接到完整卡片，包含星标数、语言和证据等级"
+ ],
+ "intro": "Awesome Jev Live 是一个围绕 TypeSafe AI 的 System One 模型 Jev 构建的索引仓库。它把与 Jev 相关的 SDK、MCP 工具、智能体、应用和开放模型收集起来，按证据等级（official、observed、inferred 等）分类，并每隔两小时自动重新抓取、过滤和校验一次，条目数量和更新时间都来自数据源而非手工快照。\n\n仓库本身用 Python 实现，当前收录 792 个条目，覆盖 20 多种语言，并提供了可搜索的在线站点。README 中按官方 SDK、社区客户端、Agent 工具、路由与护栏、评测与校准、开放复现、应用与演示等类别组织内容，方便开发者按需查找。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "每两小时自动重建的 Jev 生态索引，按证据等级收录 SDK、MCP 工具与智能体。"
+}

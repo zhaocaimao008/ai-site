@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地桌面环境中使用 AI Agent 处理对话、文件和终端任务的开发者，以及需要从手机等设备远程访问工作区的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "共享浏览器控制：在可见的浏览器标签页中观察 Agent 操作，随时接管，并把带标注的页面上下文发回对话",
+  "统一工作区：对话、文件和终端并排显示，支持分屏视图和底部面板，可就地编辑文件、预览文档和查看改动",
+  "跨设备访问：通过 Web / PWA 在手机或另一台电脑上使用工作区，也可通过微信、Telegram、Discord 启动任务",
+  "云端与本地模型：支持云端服务商或自定义端点，可发现 LM Studio 和 Ollama 模型，并可选启动本地服务",
+  "Agent 与插件：使用 DSH 的预设、skills、子 Agent 和定时任务，并通过原生插件管理扩展工作区"
+ ],
+ "intro": "Minke 是一个本地优先的桌面 Agent 工作台，由 DeepSeek Harness 驱动，支持 macOS、Windows 和 Linux。它把对话、文件、终端和共享浏览器整合在同一个界面里，会话和设置都保存在本机。\n\n除了桌面端，Minke 还提供响应式的 Web 客户端，可以通过手机或另一台电脑访问工作区，也能借助微信、Telegram 和 Discord 启动任务。模型方面既支持云端服务商和自定义端点，也能发现 LM Studio、Ollama 的本地模型。\n\n项目由社区独立维护，仍在积极开发中，打包发布的版本可能与当前源码存在差异。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从官方 GitHub Releases 页面下载对应平台的安装包（macOS 为 .dmg，Windows 为 .exe，Linux 为 .deb / .rpm / .AppImage）",
+  "macOS 用户打开 .dmg 后将 Minke.app 拖入 Applications 文件夹；当前预发布版本未经过公证，可先在系统设置的隐私与安全性中使用“仍要打开”",
+  "如果系统流程不可用且你明确接受风险，可仅对已安装的应用执行：xattr -dr com.apple.quarantine \"/Applications/Minke.app\"",
+  "打开 Minke，在设置中配置模型服务商或本地模型端点",
+  "如需远程访问，在 Connections → Device access → Remote access 中选择 HTTPS Serve 并启用，然后在手机上打开显示的 https://…ts.net 地址"
+ ],
+ "tagline": "基于 DeepSeek Harness 的本地优先桌面 Agent 工作台"
+}

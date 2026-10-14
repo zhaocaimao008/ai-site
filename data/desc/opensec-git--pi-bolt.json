@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用 Pi 编码代理、希望获得更快启动和更低资源占用的开发者，也适合需要在终端中使用 AI 编码助手的普通用户。",
+ "date": "2026-10-14",
+ "features": [
+  "将 Pi 编码代理提前编译为原生可执行文件，无需 Node.js 或 Bun",
+  "保留 Pi 的命令、会话、设置、提供商和扩展，配置目录 ~/.pi/agent 直接复用",
+  "提供默认无 JIT 构建和面向重型插件的 JIT 构建两种选择",
+  "支持 Linux x86-64、macOS Apple silicon 和 Windows x64",
+  "安装时可选择 OpenSec 提供的子代理、待办列表和模糊查找扩展",
+  "提供 pi-bolt update 命令更新到最新版本"
+ ],
+ "intro": "Pi-Bolt 是 Pi 编码代理的一个独立分支，通过提前编译（AOT）把 Pi 的代码编译成原生机器码，生成单个可执行文件，运行时不需要 Node.js 或 Bun，也没有 JIT。它保留了 Pi 原有的命令、会话、设置、提供商和扩展，安装后可直接在项目中使用。\n\n根据 README 中的基准测试，Pi-Bolt 在 Linux x86-64 上启动速度约为 Bun 版 Pi 的 2~3 倍，会话 CPU 占用约为其四分之一到三分之一，处理长回答和大文件的开销也显著更低。项目支持 Linux x86-64、macOS Apple silicon 和 Windows x64，提供安装脚本、npm 和手动下载等方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux/macOS 执行：curl -fsSL https://pi-bolt.opensec.in/install.sh | sh",
+  "Windows PowerShell 执行：irm https://pi-bolt.opensec.in/install.ps1 | iex",
+  "或使用 npm：npm install -g --allow-scripts=pi-bolt pi-bolt",
+  "在项目目录中运行 pi-bolt",
+  "首次使用可运行 /login 连接模型提供商"
+ ],
+ "tagline": "将 Pi 编码代理预编译为原生代码，启动更快、CPU 占用更低"
+}

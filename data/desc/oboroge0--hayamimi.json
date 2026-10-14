@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在无 GPU、无云 API 的本地环境中做实时字幕、会议记录或直播字幕的开发者与普通用户，尤其是需要日语等多语言识别的场景。",
+ "date": "2026-10-14",
+ "features": [
+  "5 路语言路由：ja/zh/ko/yue/en 及 24 种欧盟语言使用专用模型，其余语言回退到 Omnilingual ASR",
+  "实时部分字幕与快速最终行：说话中约每 0.5 秒更新草稿，停止后约 100ms 给出最终行",
+  "两遍精修：静音 2 秒后对近期语音批量重解码，提升准确率",
+  "说话人标签：--speakers 实时标注 S1/S2，精修阶段用 pyannote 重新聚类",
+  "实时翻译：--translate 支持日语行翻译到 en/zh/ko/es 等目标语言",
+  "浏览器仪表盘与 OBS 叠加层：--serve 启动本地 HTTP 服务，提供 dashboard、overlay 和 transcript 三个视图",
+  "多种音频输入：麦克风、WebSocket 网络音频、Windows 系统音频回环及混合输入"
+ ],
+ "intro": "hayamimi（早耳）是一个纯 CPU 运行的实时多语言语音转文字项目。它不依赖 GPU 或云端 API，所有模型都以 INT8 量化的 ONNX 形式通过 sherpa-onnx 运行，常驻内存控制在 2GB 以内。设计目标是边说边出字幕，说完约 100ms 后给出最终行。\n\n与只用 Whisper 的方案不同，hayamimi 按语言把每段语音路由到对应的专用模型：ja/zh/ko/yue/en 及 24 种欧盟语言各有独立模型，其余约 1600 种语言回退到 Meta 的 Omnilingual ASR。README 称在真实日语广播音频上 CER 为 3.8%，对比 whisper-large-v3-turbo 的 13.8%，并在 6 核桌面 CPU 上以 10-50 倍实时速度运行。\n\n项目提供浏览器仪表盘、OBS 叠加层、说话人标签、实时翻译、热词替换、CJK 数字规范化，以及 WebSocket 网络音频输入和 Windows 系统音频回环输入。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建虚拟环境并安装依赖（README 示例使用 .venv）",
+  "运行 python scripts/realtime_transcribe.py --serve 启动实时转写与本地仪表盘",
+  "浏览器打开 http://localhost:8833/dashboard 查看实时字幕与精修结果",
+  "如需网络音频输入，运行 python scripts/realtime_transcribe.py --input ws --serve，客户端连接 ws://<host>:8766/ingest 发送音频",
+  "如需翻译，添加 --translate en,zh,ko,es 等参数"
+ ],
+ "tagline": "纯 CPU 实时多语言语音转文字，带字幕、说话人标签与翻译"
+}

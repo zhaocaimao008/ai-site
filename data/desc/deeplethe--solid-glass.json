@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合正在开发 AI 应用或 Agent 界面的前端开发者，尤其是使用 React、Tailwind CSS 和 shadcn/ui 的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "基于 shadcn/ui 的玻璃质感主题，一份 CSS 文件即可应用",
+  "提供 status-glyph、composer、tool-steps、diff-view 等 AI 交互组件",
+  "支持亮色与暗色模式，暗色为默认设计",
+  "内置 Create 页面，可调节厚度、色调、圆角、模糊等参数并实时预览",
+  "包含完整的 Blocks 示例页面，可直接查看和复制",
+  "通过 shadcn CLI 安装，与现有 shadcn/ui 项目兼容"
+ ],
+ "intro": "Solid Glass 是一个面向 AI 应用的设计系统，基于 shadcn/ui 构建，提供一套玻璃质感、带有物理触感的界面风格。它介于扁平设计与液态玻璃之间：远看坚实，近看能透出微妙的材质感，但不会像液态玻璃那样让背景干扰文字阅读。\n\n整个系统以一份轻量 CSS 样式表实现，通过 data-slot 和现有 class 识别 shadcn/ui 组件，因此已有的组件无需修改即可套用。它同时支持亮色与暗色模式，并包含一组专为 AI 场景设计的组件，如状态指示、输入框、工具步骤、diff 视图、上下文环等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 shadcn/ui 项目中初始化：npx shadcn@latest init",
+  "添加 Solid Glass 样式表：npx shadcn@latest add deeplethe/solid-glass/solid-glass",
+  "在 Tailwind 和 shadcn 样式之后导入 solid-glass.css，并删除 shadcn init 生成的 :root 和 .dark 颜色变量",
+  "按需安装组件，例如：npx shadcn@latest add deeplethe/solid-glass/status-glyph",
+  "本地运行项目：npm install && npm run dev"
+ ],
+ "tagline": "为 AI 应用打造的玻璃质感设计系统"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究物理推理、世界模型、视觉语言模型与智能体代码生成的研究人员和开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "以代码作为可执行的物理世界表示，通过智能体迭代模拟与验证进行发现",
+  "发布 Code-as-World-VL-4B 与 Code-as-World-VL-9B 两个模型检查点",
+  "提供 QuantiPhy 定量物理推理评测流程与官方评测器对接",
+  "支持通过 vLLM 以 OpenAI 兼容接口部署模型",
+  "包含基于 MuJoCo 的视频驱动抽象示例（弹道足球仿真）"
+ ],
+ "intro": "Code-as-World 是 MirroS Lab 提出的一个研究项目，核心思路是把代码当作物理世界的可执行表示。项目认为像素只是物理世界的证据，而非本体，因此通过智能体迭代地进行模拟与验证，从原始观测中挖掘出显式的状态、动力学和机制，形成可复用的物理数据。\n\n项目发布了 Code-as-World-VL-4B 和 Code-as-World-VL-9B 两个视觉语言模型，并提供本地推理、QuantiPhy 定量物理推理评测以及视频驱动的抽象示例。仓库包含模型权重下载、评测脚本和基于 MuJoCo 的弹道足球仿真示例，方便研究者复现和进一步开发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 CUDA 主机上使用 Python 3.10 或 3.11，克隆仓库并创建虚拟环境：git clone https://github.com/MirroS-Lab/Code-as-World.git && cd Code-as-World && python -m venv .venv && source .venv/bin/activate",
+  "安装推理依赖并下载模型权重：pip install -r requirements/inference.txt，然后 hf download MirroS-Lab/Code-as-World-VL-4B --local-dir weights/4b（9B 同理）",
+  "克隆 QuantiPhy 并下载验证视频：git clone https://github.com/Paulineli/QuantiPhy.git /path/to/QuantiPhy，以及 hf download PaulineLi/QuantiPhy-validation --repo-type dataset --local-dir /path/to/QuantiPhy-validation",
+  "运行 QuantiPhy 评测：python -m code_as_world.evaluation 4b --input-csv /path/to/QuantiPhy/quantiphy_validation.csv --video-dir /path/to/QuantiPhy-validation/validation_videos",
+  "运行视频驱动抽象示例：pip install -r requirements/simulation.txt，然后 python -m code_as_world.simulation"
+ ],
+ "tagline": "用代码作为可执行世界表示，让智能体发现物理规律"
+}

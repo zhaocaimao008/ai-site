@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "希望在推送前自动做代码审查与安全扫描的开发者，尤其是使用 Claude Code、Codex CLI、Cursor 或 Cline 的编码 agent 用户。",
+ "date": "2026-10-14",
+ "features": [
+  "对未推送提交和未提交改动运行 gitleaks、semgrep 等扫描器，只保留改动行上的发现",
+  "启动独立的 Claude Code 或 Codex 进程作为 reviewer，逐条复核扫描器发现并给出理由",
+  "生成 report.html、report.md、report.json 和 report.sarif 报告，并打印包含结论的 receipt",
+  "提供 git pre-push hook 和 push gate，可按严重级别配置是否阻止推送",
+  "支持 review --all、review <branch>、review '#42' 等审查范围",
+  "通过 MCP server 提供 openqodex graph，回答谁调用了某个函数等代码问题"
+ ],
+ "intro": "OpenQodex 是一个在你 push 代码之前运行的代码审查工具。它审查的「改动」包括尚未推送的提交以及所有未提交的内容，运行在你自己的机器上，可以从编码 agent 或终端触发。\n\n流程分两步：先对改动涉及的文件运行合适的扫描器（如 gitleaks、semgrep 等不依赖模型的检查程序），只保留改动行上的问题，并过滤掉测试夹具和已关闭规则中的结果；随后启动一个独立的 Claude Code 或 Codex 进程作为 reviewer，使用你自己的登录，默认不让写代码的 agent 审查自己的代码。reviewer 必须对每条扫描器发现给出保留或丢弃的理由，脚本会校验它是否回答了全部发现、是否拿到了全部改动行，最后由你决定修复哪些。\n\n项目使用 TypeScript 编写，采用 Apache-2.0 许可，通过 npm 安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node 22 或更新版本以及 git，系统为 macOS 或 Linux",
+  "在终端运行 npx openqodex init 完成安装，它会检测本机的 Claude Code、Cursor、Codex CLI 和 Cline",
+  "对 agent 说 \"review my change with openqodex\"，或在终端运行 ~/.openqodex/bin/openqodex review",
+  "如需无交互安装，运行 npx -y openqodex@0.12.0 init --yes --agent <host>，<host> 为 claude-code、codex、cursor 或 cline"
+ ],
+ "tagline": "在推送前用扫描器加独立 AI 审查你的代码改动"
+}

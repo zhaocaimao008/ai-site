@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "需要多步任务自动化、工具调用与代码执行的开发者与研究人员，尤其是关注科研自动化、办公交付和安全验证场景的团队。",
+ "date": "2026-10-14",
+ "features": [
+  "基于 744B 参数 MoE 基础模型 GLM-5.2 构建的 agentic 模型",
+  "支持 256K 上下文长度",
+  "覆盖 Discovery、Creation、Delivery、Cybersecurity 四类智能体任务",
+  "提供 Preview 版本及 FP8 量化版本，已在 Hugging Face 与 ModelScope 发布",
+  "README 中给出多组搜索、编码、工具调用、生产力与安全基准的评测结果"
+ ],
+ "intro": "Atria Dawn 是上海人工智能实验室（Shanghai Artificial Intelligence Laboratory）开发的新一代 agentic 模型，基于 744B 参数的 MoE 基础模型 GLM-5.2 构建，面向需要持续环境理解、工具调用和多步任务完成的科研与工程场景。\n\n模型的目标是把开放性问题推进到可执行、可验证、可复现的结果，覆盖问题分析、方案设计、工具使用、代码实现、实验执行、结果分析和失败恢复的完整闭环。官方将其能力划分为 Discovery（检索与深度研究）、Creation（软件、应用、游戏、数据可视化与机器学习系统构建）、Delivery（文档、数据与设计需求转化为报告和演示文稿等交付物）、Cybersecurity（授权环境下的安全问题分析、漏洞验证与修复）四个方向。\n\n目前提供 Atria Dawn Preview 与 FP8 量化版本，上下文长度 256K，可在 Hugging Face 和 ModelScope 下载；完整版模型标注为 Coming soon。API 请求中模型名使用 `Atria-Dawn`。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "tagline": "上海AI实验室推出的744B MoE智能体模型"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Python 项目中调用多家视频生成 API 的开发者，以及希望通过本地 Web 界面快速试用这些模型的用户。",
+ "date": "2026-10-14",
+ "features": [
+  "统一封装 Seedance、Kling、MiniMax/Hailuo、Wan 四家服务商",
+  "覆盖多家多个版本模型，如 doubao-seedance-2.5、kling-v3、MiniMax-H3、wan3.0 等",
+  "提供 CLI 命令：providers、models、generate、status、serve",
+  "内置 FastAPI Web UI，无需前端构建",
+  "支持文生视频、图生视频、负向提示词、时长/比例/分辨率设置",
+  "任务状态轮询、视频预览与 MP4 下载"
+ ],
+ "intro": "Video Gen Client 是一个异步 Python 客户端，把 Seedance、Kling、MiniMax/Hailuo 和 Wan 四家视频生成服务商的 API 统一到同一套接口下。项目同时提供 CLI 和本地 Web UI，输出文件保存到 output 目录。\n\nWeb 界面直接打包在 Python 包内，不需要 npm、Node.js 或前端构建步骤，由 FastAPI 提供 HTML 页面和 JSON 接口，支持服务商发现、生成、任务轮询和 MP4 下载。README 也提醒：各服务商的 API 和模型 ID 会独立变化，适配层可能需要随之更新。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/letorig/video-generator-client && cd video-generator-client",
+  "python -m venv .venv && source .venv/bin/activate（Windows 用 .venv\\\\Scripts\\\\activate）",
+  "pip install -e \".[web]\"",
+  "复制 .env.example 为 .env，填入所用服务商的凭据",
+  "运行 video-gen generate wan --prompt \"A snowy forest at dawn\" --model 2.1 --duration 5，或 video-gen serve 启动 Web UI"
+ ],
+ "tagline": "统一调用 Seedance、Kling、MiniMax、Wan 的异步 Python 视频生成客户端"
+}

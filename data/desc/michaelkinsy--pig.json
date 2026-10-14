@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在终端中使用编码智能体、偏好 Go 生态或不想安装 Node.js 的开发者，以及需要以 Go 编写扩展的开发者。",
+ "date": "2026-10-14",
+ "features": [
+  "将 Pi 编码智能体移植为单一 Go 原生二进制，无需 Node.js",
+  "可直接运行 Pi 的 TypeScript 扩展，也支持用 Go、Rust、Python 编写扩展",
+  "支持将扩展、技能和提示词打包为 Piglet 具名智能体",
+  "以上游 Pi 1.0.3 为行为参照，通过配对对等场景验证核心路径",
+  "提供 agent、ai、coding、tui 等与 Pi 兼容的包结构",
+  "支持 macOS、Linux、Android（Termux）以及预览版 Windows"
+ ],
+ "intro": "PiG（Pi in Go）是终端编码智能体 Pi 的 Go 语言移植版本。Pi 原本是 TypeScript 项目，PiG 采用「对等翻译」而非重写的方式，以上游行为为契约，用 Go 重新实现。它启动快、不依赖 Node.js，并且可以直接运行 Pi 的 TypeScript 扩展。\n\nPiG 目前处于 0.x 预稳定阶段，核心路径已移植并针对 Pi 1.0.3 通过配对的对等场景验证，边缘情况仍在加固中。除 TypeScript 外，扩展还可以用 Go、Rust 或 Python 编写；扩展、技能和提示词可以打包成 Piglet，即一个可分享或构建为独立可执行文件的具名智能体。\n\nPiG 由 Michael Kinsy 在 Hewlett Packard Enterprise 工作期间创建，现作为独立开源项目维护，采用 MIT 许可证。它不是 Pi 的官方发行版，Pi 维护者未对其背书。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 macOS、Linux 或 Android（Termux）上安装：curl -fsSL https://pi-in-go.dev/install.sh | sh",
+  "在 Windows PowerShell 中安装：irm https://pi-in-go.dev/install.ps1 | iex",
+  "也可通过 npm 安装：npm install -g @pi-in-go/pig",
+  "或用 Go 安装：go install github.com/MichaelKinsy/PiG/cmd/pig@latest",
+  "进入项目目录运行 pig，执行 /login 连接订阅或设置 API key，然后开始提问"
+ ],
+ "tagline": "Pi 编码智能体的 Go 语言移植版，编译为单一原生二进制"
+}
