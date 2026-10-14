@@ -1,4 +1,4 @@
-# AI开源雷达(ai327.com)
+# AI开源雷达(ai427.com)
 
 每天自动更新的 AI 开源项目中文导航：
 - GitHub Actions 每天北京时间 6:00 抓取 10 个分类下的 AI 开源项目(`config.json` 的 `categories`)
@@ -8,7 +8,7 @@
 
 ## 一次性设置
 
-1. 仓库设为公开;Settings → Pages → Source 选 **GitHub Actions**,Custom domain 填 `ai327.com`
+1. 仓库设为公开;Settings → Pages → Source 选 **GitHub Actions**,Custom domain 填 `ai427.com`
 2. Settings → Secrets and variables → Actions → New repository secret:
    名称 `ANTHROPIC_API_KEY`,值为 Anthropic API 密钥(不设置也能运行,只是不生成中文介绍)
 3. 域名 DNS:4 条 A 记录 `@` → 185.199.108.153 / 109.153 / 110.153 / 111.153,CNAME `www` → `<用户名>.github.io`
