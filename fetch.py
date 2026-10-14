@@ -148,6 +148,8 @@ def describe(client, cfg, repo, text):
     )
     if resp.stop_reason != "end_turn":
         print(f"  跳过 {repo['full_name']}:stop_reason={resp.stop_reason}")
+        if resp.stop_reason == "refusal" and resp.stop_details:
+            print(f"    {resp.stop_details.category}: {resp.stop_details.explanation}")
         return None
     out = json.loads(next(b.text for b in resp.content if b.type == "text"))
     out.update({"model": resp.model, "date": TODAY})
@@ -197,28 +199,47 @@ def main():
     todo = [r for r in repos.values() if not (DESC / f"{rid(r['full_name'])}.json").exists()]
     todo.sort(key=lambda r: (r["created_at"] < (dt.date.today() - dt.timedelta(days=cfg["new_repo_days"])).isoformat(), -r["stars"]))
     todo = todo[:cfg["max_new_per_day"]]
+    # 运行结果写入 data/status.json,方便在仓库里直接查看(不含任何密钥)
+    status = {"date": TODAY, "repos": len(repos), "todo": len(todo), "key_present": bool(os.environ.get("ANTHROPIC_API_KEY")),
+              "model": cfg["model"], "generated": 0, "skipped": [], "errors": []}
     if sample:
         for r in todo:
             save(DESC / f"{rid(r['full_name'])}.json", sample_desc(r))
-    elif os.environ.get("ANTHROPIC_API_KEY"):
+            status["generated"] += 1
+    elif status["key_present"]:
         import anthropic
         client = anthropic.Anthropic()
+        fails = 0
         for r in todo:
             try:
                 d = describe(client, cfg, r, readme(r["full_name"]))
             except anthropic.APIStatusError as e:
-                print(f"  {r['full_name']} 生成失败:{e.status_code} {e.message}")
-                if e.status_code in (401, 403):
-                    break  # 密钥无效或余额不足,今天不再尝试
+                msg = f"{r['full_name']}: {e.status_code} {e.message}"
+                print("  生成失败 " + msg)
+                status["errors"].append(msg[:500])
+                fails += 1
+                if e.status_code in (401, 403) or fails >= 5:
+                    break  # 密钥无效、余额不足或连续失败,今天不再尝试
                 continue
-            except anthropic.APIConnectionError:
-                print(f"  {r['full_name']} 网络错误,跳过")
+            except (anthropic.APIConnectionError, json.JSONDecodeError, StopIteration) as e:
+                msg = f"{r['full_name']}: {type(e).__name__} {e}"
+                print("  生成失败 " + msg)
+                status["errors"].append(msg[:500])
+                fails += 1
+                if fails >= 5:
+                    break
                 continue
+            fails = 0
             if d:
                 save(DESC / f"{rid(r['full_name'])}.json", d)
+                status["generated"] += 1
                 print(f"  已生成 {r['full_name']}")
+            else:
+                status["skipped"].append(r["full_name"])
     else:
         print("未设置 ANTHROPIC_API_KEY,跳过中文介绍生成")
+    save(DATA / "status.json", status)
+    print(json.dumps(status, ensure_ascii=False))
 
     # 当天热榜存档:按近 1 天 star 增长排序(第一天没有历史,按 star 数)
     def gain(name, days):
