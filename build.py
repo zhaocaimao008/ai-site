@@ -16,6 +16,14 @@ OUT = ROOT / "dist"
 def esc(s):
     return html.escape(str(s))
 
+def network_html(cfg):
+    """页脚"更多实用工具":同系列网站互相链接(列表见 config.json 的 network)。"""
+    sites = [s for s in cfg.get("network", []) if s["url"].rstrip("/") != cfg["base_url"].rstrip("/")]
+    if not sites:
+        return ""
+    return "<br>更多实用工具:" + " · ".join(f'<a href="{esc(s["url"])}">{esc(s["name"])}</a>' for s in sites)
+
+
 
 def num(n):
     return f"{n / 10000:.1f}万" if n >= 10000 else f"{n:,}"
@@ -90,7 +98,7 @@ class Site:
 <link rel="canonical" href="{esc(cfg["base_url"].rstrip("/") + path)}">{ads}<style>{CSS}</style></head><body>
 <header><a class="logo" href="/">{esc(cfg["site_name"])}</a><nav><a href="/">今日热榜</a>{nav}<a href="/daily/">历史榜单</a></nav></header>
 <main>{body}</main>
-<footer>数据来自 GitHub 公开信息,每天自动更新;项目介绍由 AI 根据项目 README 整理,可能存在疏漏,请以项目官方说明为准。</footer>
+<footer>数据来自 GitHub 公开信息,每天自动更新;项目介绍由 AI 根据项目 README 整理,可能存在疏漏,请以项目官方说明为准。{network_html(cfg)}</footer>
 </body></html>""".replace('href="/', f'href="{prefix}/')
         f = OUT / path.strip("/") / "index.html"
         f.parent.mkdir(parents=True, exist_ok=True)
