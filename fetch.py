@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""每日数据更新:抓取 GitHub 上的 AI 开源项目,记录 star 历史,并用 Claude 为新项目写中文介绍。
+"""每日数据更新:抓取 GitHub 上的 AI 开源项目,记录 star 历史,并用 DeepSeek 为新项目写中文介绍。
 
 用法:
-    python3 fetch.py            # 正式运行(需要环境变量 GITHUB_TOKEN;有 ANTHROPIC_API_KEY 时生成中文介绍)
+    python3 fetch.py            # 正式运行(需要环境变量 GITHUB_TOKEN;有 DEEPSEEK_API_KEY 时生成中文介绍)
     python3 fetch.py --sample   # 用模拟数据离线测试
 
 数据保存在 data/ 目录,由 GitHub Actions 提交回仓库:
     data/repos.json          最新抓到的项目元数据
     data/history.json        每个项目每天的 star 数(保留 60 天)
-    data/desc/<id>.json      Claude 生成的中文介绍(每个项目只生成一次)
+    data/desc/<id>.json      DeepSeek 生成的中文介绍(每个项目只生成一次)
     data/daily/<日期>.json    当天热榜存档
 """
 import base64
@@ -28,7 +28,7 @@ DATA = ROOT / "data"
 DESC = DATA / "desc"
 DAILY = DATA / "daily"
 TODAY = dt.date.today().isoformat()
-README_CHARS = 8000  # 只把 README 开头这部分交给 Claude,控制费用
+README_CHARS = 8000  # 只把 README 开头这部分交给模型,控制费用
 
 
 def rid(full_name):
@@ -111,7 +111,7 @@ def readme(full_name):
         return ""
 
 
-# ---------- Claude ----------
+# ---------- DeepSeek ----------
 
 SYSTEM = """你是一个中文 AI 开源项目导航网站的编辑。根据给出的 GitHub 项目信息和 README,为中文读者写一份准确、实用的项目介绍。
 
@@ -137,28 +137,49 @@ SCHEMA = {
 }
 
 
-def describe(client, cfg, repo, text):
+class ApiError(Exception):
+    def __init__(self, status, message):
+        super().__init__(f"{status} {message}")
+        self.status = status
+
+
+def describe(cfg, repo, text):
+    """调用 DeepSeek(OpenAI 兼容接口,JSON 输出模式)生成中文介绍;不合格返回 None。"""
     info = {k: repo[k] for k in ("full_name", "description", "homepage", "language", "license", "topics", "stars")}
-    resp = client.messages.create(
-        model=cfg["model"],
-        max_tokens=8000,
-        system=SYSTEM,
-        output_config={"effort": cfg["effort"], "format": {"type": "json_schema", "schema": SCHEMA}},
-        messages=[{"role": "user", "content": f"项目信息:\n{json.dumps(info, ensure_ascii=False)}\n\nREADME(开头部分):\n{text}"}],
-    )
-    if resp.stop_reason != "end_turn":
-        print(f"  跳过 {repo['full_name']}:stop_reason={resp.stop_reason}")
-        if resp.stop_reason == "refusal" and resp.stop_details:
-            print(f"    {resp.stop_details.category}: {resp.stop_details.explanation}")
+    fields = "\n".join(f'- {k}: {v.get("description", v["type"])}' for k, v in SCHEMA["properties"].items())
+    body = json.dumps({
+        "model": cfg["model"],
+        "messages": [
+            {"role": "system", "content": SYSTEM + "\n\n只输出一个 JSON 对象,包含以下字段:\n" + fields},
+            {"role": "user", "content": f"项目信息:\n{json.dumps(info, ensure_ascii=False)}\n\nREADME(开头部分):\n{text}"},
+        ],
+        "response_format": {"type": "json_object"},
+        "max_tokens": 2000,
+        "temperature": 0.3,
+    }).encode()
+    req = urllib.request.Request(cfg["api_base"].rstrip("/") + "/chat/completions", data=body, headers={
+        "Content-Type": "application/json", "Authorization": f"Bearer {os.environ['DEEPSEEK_API_KEY']}"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            resp = json.load(r)
+    except urllib.error.HTTPError as e:
+        raise ApiError(e.code, e.read().decode("utf-8", "replace")[:300])
+    choice = resp["choices"][0]
+    if choice.get("finish_reason") != "stop":
+        print(f"  跳过 {repo['full_name']}:finish_reason={choice.get('finish_reason')}")
         return None
-    out = json.loads(next(b.text for b in resp.content if b.type == "text"))
-    out.update({"model": resp.model, "date": TODAY})
+    out = json.loads(choice["message"]["content"])
+    if not all(k in out for k in SCHEMA["required"]) or not isinstance(out["features"], list) or not isinstance(out["quickstart"], list):
+        print(f"  跳过 {repo['full_name']}:返回字段不完整")
+        return None
+    out = {k: out[k] for k in SCHEMA["required"]}
+    out.update({"model": resp.get("model", cfg["model"]), "date": TODAY})
     return out
 
 
 def sample_desc(repo):
     return {"ai_related": True, "tagline": f"{repo['full_name'].split('/')[1]} 的示例一句话介绍",
-            "intro": "这是离线测试用的示例介绍。\n正式运行时由 Claude 根据 README 自动生成。",
+            "intro": "这是离线测试用的示例介绍。\n正式运行时由 DeepSeek 根据 README 自动生成。",
             "features": ["示例功能一", "示例功能二", "示例功能三"], "audience": "示例适用人群。",
             "quickstart": ["git clone " + repo["url"], "按 README 安装依赖"], "model": "sample", "date": TODAY}
 
@@ -200,34 +221,24 @@ def main():
     todo.sort(key=lambda r: (r["created_at"] < (dt.date.today() - dt.timedelta(days=cfg["new_repo_days"])).isoformat(), -r["stars"]))
     todo = todo[:cfg["max_new_per_day"]]
     # 运行结果写入 data/status.json,方便在仓库里直接查看(不含任何密钥)
-    status = {"date": TODAY, "repos": len(repos), "todo": len(todo), "key_present": bool(os.environ.get("ANTHROPIC_API_KEY")),
+    status = {"date": TODAY, "repos": len(repos), "todo": len(todo), "key_present": bool(os.environ.get("DEEPSEEK_API_KEY")),
               "model": cfg["model"], "generated": 0, "skipped": [], "errors": []}
     if sample:
         for r in todo:
             save(DESC / f"{rid(r['full_name'])}.json", sample_desc(r))
             status["generated"] += 1
     elif status["key_present"]:
-        import anthropic
-        client = anthropic.Anthropic()
         fails = 0
         for r in todo:
             try:
-                d = describe(client, cfg, r, readme(r["full_name"]))
-            except anthropic.APIStatusError as e:
-                msg = f"{r['full_name']}: {e.status_code} {e.message}"
-                print("  生成失败 " + msg)
-                status["errors"].append(msg[:500])
-                fails += 1
-                if e.status_code in (401, 403) or fails >= 5:
-                    break  # 密钥无效、余额不足或连续失败,今天不再尝试
-                continue
-            except (anthropic.APIConnectionError, json.JSONDecodeError, StopIteration) as e:
+                d = describe(cfg, r, readme(r["full_name"]))
+            except (ApiError, urllib.error.URLError, TimeoutError, json.JSONDecodeError, KeyError) as e:
                 msg = f"{r['full_name']}: {type(e).__name__} {e}"
                 print("  生成失败 " + msg)
                 status["errors"].append(msg[:500])
                 fails += 1
-                if fails >= 5:
-                    break
+                if getattr(e, "status", 0) in (401, 402, 403) or fails >= 5:
+                    break  # 密钥无效、余额不足或连续失败,今天不再尝试
                 continue
             fails = 0
             if d:
@@ -237,7 +248,7 @@ def main():
             else:
                 status["skipped"].append(r["full_name"])
     else:
-        print("未设置 ANTHROPIC_API_KEY,跳过中文介绍生成")
+        print("未设置 DEEPSEEK_API_KEY,跳过中文介绍生成")
     save(DATA / "status.json", status)
     print(json.dumps(status, ensure_ascii=False))
 
