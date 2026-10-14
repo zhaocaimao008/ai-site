@@ -2,27 +2,27 @@
  {
   "full_name": "affaan-m/ECC",
   "gain": 0,
-  "stars": 278958
+  "stars": 278959
  },
  {
   "full_name": "NousResearch/hermes-agent",
   "gain": 0,
-  "stars": 253665
+  "stars": 253667
  },
  {
   "full_name": "deepseek-ai/deepseek-harness",
   "gain": 0,
-  "stars": 249471
+  "stars": 249474
  },
  {
   "full_name": "morluto/rea",
   "gain": 0,
-  "stars": 228288
+  "stars": 228415
  },
  {
   "full_name": "n8n-io/n8n",
   "gain": 0,
-  "stars": 207350
+  "stars": 207351
  },
  {
   "full_name": "firecrawl/firecrawl",
@@ -42,32 +42,32 @@
  {
   "full_name": "f/prompts.chat",
   "gain": 0,
-  "stars": 172927
+  "stars": 172928
  },
  {
   "full_name": "huggingface/transformers",
   "gain": 0,
-  "stars": 167712
+  "stars": 167713
  },
  {
   "full_name": "AUTOMATIC1111/stable-diffusion-webui",
   "gain": 0,
-  "stars": 165049
+  "stars": 165050
  },
  {
   "full_name": "DietrichGebert/ponytail",
   "gain": 0,
-  "stars": 163228
+  "stars": 163230
  },
  {
   "full_name": "Snailclimb/JavaGuide",
   "gain": 0,
-  "stars": 159016
+  "stars": 159017
  },
  {
   "full_name": "langgenius/dify",
   "gain": 0,
-  "stars": 158446
+  "stars": 158447
  },
  {
   "full_name": "langflow-ai/langflow",
@@ -87,12 +87,12 @@
  {
   "full_name": "farion1231/cc-switch",
   "gain": 0,
-  "stars": 144174
+  "stars": 144175
  },
  {
   "full_name": "Shubhamsaboo/awesome-llm-apps",
   "gain": 0,
-  "stars": 141674
+  "stars": 141677
  },
  {
   "full_name": "Comfy-Org/ComfyUI",
@@ -102,12 +102,12 @@
  {
   "full_name": "harry0703/MoneyPrinterTurbo",
   "gain": 0,
-  "stars": 130735
+  "stars": 130736
  },
  {
   "full_name": "Graphify-Labs/graphify",
   "gain": 0,
-  "stars": 126353
+  "stars": 126354
  },
  {
   "full_name": "microsoft/generative-ai-for-beginners",
@@ -122,7 +122,7 @@
  {
   "full_name": "JuliusBrussee/caveman",
   "gain": 0,
-  "stars": 111691
+  "stars": 111694
  },
  {
   "full_name": "TauricResearch/TradingAgents",
@@ -132,7 +132,7 @@
  {
   "full_name": "google-gemini/gemini-cli",
   "gain": 0,
-  "stars": 107347
+  "stars": 107348
  },
  {
   "full_name": "rasbt/LLMs-from-scratch",
@@ -142,11 +142,11 @@
  {
   "full_name": "paperclipai/paperclip",
   "gain": 0,
-  "stars": 101899
+  "stars": 101905
  },
  {
   "full_name": "thedotmack/claude-mem",
   "gain": 0,
-  "stars": 100628
+  "stars": 100632
  }
 ]

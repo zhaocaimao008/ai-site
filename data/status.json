@@ -1,15 +1,9 @@
 {
  "date": "2026-10-14",
- "errors": [
-  "Ebony-Vinyl/dsh-our-free-model: 400 Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'This API key is not scoped to a workspace, so this request must include the anthropic-workspace-id header with the ID of the workspace to use. Add the header, or use an API key that is scoped to a workspace.'}, 'request_id': 'req_011Cg2C7FiL6a5i9bPsRqiTU'}",
-  "yetone/magpie: 400 Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'This API key is not scoped to a workspace, so this request must include the anthropic-workspace-id header with the ID of the workspace to use. Add the header, or use an API key that is scoped to a workspace.'}, 'request_id': 'req_011Cg2C7JARBYvLYtmGWWiib'}",
-  "jev-chat/jev-chat-jarvis: 400 Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'This API key is not scoped to a workspace, so this request must include the anthropic-workspace-id header with the ID of the workspace to use. Add the header, or use an API key that is scoped to a workspace.'}, 'request_id': 'req_011Cg2C7LMdMpVNCyTTDSfh7'}",
-  "KKKKhazix/AIHOT: 400 Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'This API key is not scoped to a workspace, so this request must include the anthropic-workspace-id header with the ID of the workspace to use. Add the header, or use an API key that is scoped to a workspace.'}, 'request_id': 'req_011Cg2C7NcZ4EZRcLi1tYr18'}",
-  "Human-Agent-Society/reef: 400 Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'This API key is not scoped to a workspace, so this request must include the anthropic-workspace-id header with the ID of the workspace to use. Add the header, or use an API key that is scoped to a workspace.'}, 'request_id': 'req_011Cg2C7QuipDs9M2fzx2uii'}"
- ],
+ "errors": [],
  "generated": 0,
- "key_present": true,
- "model": "claude-haiku-5-5",
+ "key_present": false,
+ "model": "deepseek-chat",
  "repos": 1274,
  "skipped": [],
  "todo": 100
