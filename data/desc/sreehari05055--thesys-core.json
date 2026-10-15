@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要管理文献、快速阅读论文并做笔记的研究人员、学生和开发者。适合注重数据本地存储、希望自托管研究工具的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "搜索 OpenAlex 和 arXiv 的开放获取论文，并添加到个人文库",
+  "上传 PDF 并解析文本、图表，支持基于文档的问答与引用高亮",
+  "阅读模式：全宽打开论文，选中文本即可提问",
+  "自动生成文档摘要，涵盖问题、方法、发现、局限和指标",
+  "对比两篇论文对同一论断的支持、矛盾或中立关系",
+  "导出引用为 BibTeX、RIS、EndNote 或 CSV 格式"
+ ],
+ "intro": "Thesys 是一个开源的研究工作台，用于搜索开放获取论文、管理 PDF 文献、基于论文内容进行问答并导出引用。它从 OpenAlex 和 arXiv 聚合搜索，支持上传 PDF 并解析其中的图表和文字。\n\n所有论文、向量和聊天记录都保存在本地磁盘，引用可以跳转到 PDF 中的高亮位置。问答需要 OpenAI API key，论文对比功能依赖 TypeSafe Jev。文档解析和检索使用 Docling、Chroma 和 BGE 模型在本地运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "复制 backend/.env.example 为 backend/.env，设置 OPENAI_API_KEY、EMAIL 和 TYPESAFE_API_KEY（用于对比）",
+  "运行 docker compose up --build 启动服务",
+  "打开 http://127.0.0.1:5000 开始使用",
+  "如需本地开发：创建 Python 虚拟环境并安装 requirements.txt，然后运行 python main.py 启动后端",
+  "在 frontend 目录运行 npm install 和 npm run dev 启动前端"
+ ],
+ "summary": "Thesys 是一个本地优先的学术研究工具，帮助用户搜索开放获取论文、上传 PDF 并基于文档内容问答。它把论文、向量和聊天记录保存在本地，引用能直接跳转到 PDF 中的高亮段落，还支持对比两篇论文对同一论断的关系，并导出多种格式的引用。适合需要管理文献、快速阅读和做笔记的研究人员与学生。",
+ "tagline": "本地优先的学术研究助手，支持论文搜索、PDF问答与引用导出"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望在自己服务器上运行 AI 协作环境、并让团队成员与各自 AI 助手共同工作的个人或团队。",
+ "date": "2026-10-15",
+ "features": [
+  "把多人和各自的 AI 助手放进同一个 Room 协作",
+  "为 Genie 配置性格、记忆、形象与声音",
+  "内置 Writer、Sheets、Slides、Board、Design、Video 等创作应用",
+  "支持 Web、桌面（Electron）与移动端（React Native / Expo）客户端",
+  "自托管部署，自行选择模型与 API key，控制访问权限",
+  "提供 CLI 用于服务器部署与运维"
+ ],
+ "intro": "Nautilo 是一个可自托管的协作工作空间，核心概念是把人和各自的 AI 助手（项目里称为 Genie）放进同一个 Room 里一起工作。你可以为 Genie 设定性格、记忆、形象和声音，让它参与写作、研究和创作，也可以随时接管界面手动修改内容。\n\n项目强调数据与模型由自己掌控：模型和 API key 由你选择，服务器由你运行，访问权限也由你决定。客户端覆盖 Web、桌面（Electron）和移动端（React Native / Expo），并内置 Writer、Sheets、Slides、Board、Design、Video 等创作应用。\n\n代码以 TypeScript 编写的 monorepo 形式组织，包含 Agent、Runtime、Server、Database、Trust 等核心包，采用 MIT 协议开源，目前处于 alpha 阶段。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Docker Desktop 和一个模型 API key",
+  "克隆仓库：git clone https://github.com/agentsea/nautilo.git",
+  "进入目录并安装依赖：cd nautilo && bun install --frozen-lockfile",
+  "启动开发环境：bun run dev-stack --instance my-nautilo-dev",
+  "按官方源码开发指南认领实例、配置模型并连接客户端"
+ ],
+ "summary": "Nautilo 是一个可自托管的协作工作空间，把人和各自的 AI 助手（Genie）放进同一个 Room 一起写作、研究和创作。你可以为 Genie 设定性格、记忆、形象和声音，也能随时接管界面手动修改内容。模型和 API key 由自己选择，服务器自己运行，访问权限自己决定，客户端覆盖 Web、桌面和移动端，并内置多种创作应用。适合希望在自己服务器上搭建多人加多 AI 协作环境的个人或团队。",
+ "tagline": "自托管的多人与 AI 协作工作空间"
+}

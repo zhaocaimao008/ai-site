@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "拥有越狱 PS5（固件 7.00 至 13.60）并想在本机运行语言模型的开发者和爱好者。",
+ "date": "2026-10-15",
+ "features": [
+  "在越狱 PS5 上原生运行 llama.cpp，支持 GGUF 模型",
+  "通过 PS5 浏览器提供模型库，可下载、运行模型并聊天",
+  "支持 DualSense 手柄输入，也可从同网络设备访问",
+  "聊天端口兼容 OpenAI API",
+  "模型存放在 /data/PS5LM/models，支持 FTP 或 USB 传入",
+  "提供从源码构建和向主机发送 payload 的脚本"
+ ],
+ "intro": "PS5LM 把 llama.cpp 移植到越狱的 PlayStation 5 上，让主机本身就能加载并运行 GGUF 格式的语言模型。项目先利用 PS5 的 Zen 2 CPU 推理，后续计划转向 GPU。首个目标是 Qwen 3.8（27B，混合 Gated DeltaNet 注意力）。\n\n当前 v0.1 版本提供一个 payload `ps5lm.elf`，加载后会在 PS5 浏览器中打开模型库，可以在主机上下载模型、运行并聊天，用 DualSense 手柄输入。模型库也能通过同一网络下的手机或电脑访问，聊天端口兼容 OpenAI API。受 payload 内存限制，目前只支持约 1.6 GB 以内的小模型，如 Qwen3.5 0.8B 和 2B。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Payload Manager 中开启 Multiple Payload Sources，添加源 https://ps5lm.cobanov.dev/payloads.json，安装并加载 PS5LM",
+  "或从 latest release 下载 ps5lm.elf，通过 Payload Manager 上传或发送到 9021 端口的 ELF loader",
+  "加载后 PS5 浏览器会打开 PS5LM 库，点击 Download 下载模型，再点 Run 和 Open chat",
+  "从源码构建：git clone --recursive https://github.com/cobanov/PS5LM && cd PS5LM && scripts/setup-sdk.sh && source scripts/env.sh",
+  "构建 llama.cpp 工具：scripts/build-llama.sh"
+ ],
+ "summary": "PS5LM 把 llama.cpp 移植到越狱的 PS5 上，让主机直接运行 GGUF 语言模型，先走 Zen 2 CPU，后续再上 GPU。加载一个 payload 后，PS5 浏览器会打开模型库，可下载、运行模型并用 DualSense 聊天，也能从同网络设备访问。适合有越狱 PS5 并想在本机跑小模型的开发者与爱好者。",
+ "tagline": "在越狱 PS5 上原生运行 llama.cpp 与 GGUF 模型"
+}

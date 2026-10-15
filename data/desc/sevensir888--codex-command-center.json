@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Windows 上频繁使用 Codex CLI 进行工程开发、希望把项目、任务、会话和 Git 变更集中管理的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "项目组织：注册本地开发目录，查看分支、Git 状态、任务数量和最近活动。",
+  "任务跟踪：以 Planned、Active、Completed、Blocked 状态管理工程目标。",
+  "Codex 会话发现与关联：索引本地会话元数据，将会话关联到任务，并通过本地 Codex CLI 启动或恢复会话。",
+  "Git 审查：查看分支、暂存/未暂存文件、工作区状态和逐文件 diff，并执行暂存、取消暂存和提交。",
+  "Codex 环境可见性：显示检测到的 Codex CLI 路径与版本、脱敏后的本地配置预览、可发现的 Skills 和 MCP 服务器摘要。",
+  "本地优先存储：项目、任务、会话链接和设置保存在本地机器。"
+ ],
+ "intro": "Codex Command Center 是一个面向 Windows 的本地桌面工作区，用于把 Codex 相关的工程工作组织起来。它本身不做推理、编辑、执行命令或测试，这些仍由 Codex 完成；它负责把项目、任务、会话、Git 变更、Skills 和 MCP 配置串成一条可理解、可恢复的流程：Project -> Task -> Codex Session -> File Changes -> Result。\n\n应用把注册的本地仓库、任务状态、Codex 会话元数据、Git 变更和本地 Codex 环境信息集中展示，并支持从任务启动或恢复 Codex 会话、查看和提交 Git 变更。所有自有状态以本地 JSON 保存在用户本地应用数据目录，不包含遥测、账号或云同步。项目基于 Tauri 2、React、TypeScript 和 Rust 构建，由 CodMate 项目演化而来。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 Windows 安装包（NSIS 安装程序、MSI 或独立可执行文件），或按源码方式构建。",
+  "确保 Git 和 Codex CLI 在 PATH 中可用。",
+  "源码开发时安装依赖：npm ci",
+  "运行桌面应用：npm run tauri:dev",
+  "构建桌面应用：npm run tauri:build"
+ ],
+ "summary": "Codex Command Center 是一个 Windows 优先、本地优先的桌面工作区，用来把 Codex 参与的工程工作组织成项目、任务、会话、文件变更到结果的流程。它不替代 Codex 的推理与执行，而是集中展示本地仓库、任务状态、Codex 会话元数据、Git 变更以及 Skills 和 MCP 配置，并支持从任务启动或恢复 Codex 会话、审查和提交 Git 变更。适合在 Windows 上频繁使用 Codex CLI、希望工作流更清晰可恢复的开发者。",
+ "tagline": "本地优先的 Codex 工程工作台"
+}

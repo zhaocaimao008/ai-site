@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用自然语言快速制作视频的开发者、内容创作者，以及使用编码智能体进行自动化视频生成的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "通过一句话描述生成视频，由编码智能体自动导演和渲染",
+  "本地运行，无需 API 密钥或上传，保护隐私",
+  "支持动态图形、配音、音乐、音效、字幕和素材剪辑",
+  "与 Claude Code、Codex、Cursor、Devin、OpenCode 等智能体集成",
+  "每次请求生成独立输出文件夹，包含 final.mp4、海报和导出文件",
+  "提供 showtime qa 命令对渲染结果进行质量检查"
+ ],
+ "intro": "showtime 是一个本地视频工作室，专为编码智能体设计。你只需用一句话描述想要的视频，智能体负责导演，你的机器负责渲染。它支持 Claude Code、Codex、Cursor、Devin、OpenCode 等支持 Agent Skills 的智能体。\n\n整个流程完全在本地运行，不需要云 AI 服务、API 密钥，也不会上传任何内容。功能涵盖动态图形、配音、音乐、音效设计、字幕、素材剪辑和平台导出。每次请求都会生成独立的输出文件夹，包含 final.mp4、海报、分享文本和导出文件，不会覆盖已有内容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv 和 Node.js 24 或 22 LTS（20 以上也可），然后重启编码智能体",
+  "在 Claude Code 中添加插件市场：/plugin marketplace add FavioVazquez/showtime",
+  "安装插件：/plugin install showtime@showtime",
+  "向智能体提出视频需求，例如：Make a 20-second launch video for this repo, with a voice-over and upbeat music.",
+  "首次运行会提示下载依赖，确认后自动完成设置并开始渲染"
+ ],
+ "summary": "showtime 是一个本地视频工作室，让你用一句话描述视频，由编码智能体自动导演和渲染。它完全在本地运行，不需要 API 密钥或上传，支持动态图形、配音、音乐、字幕和素材剪辑。适合希望用自然语言快速制作视频的开发者，以及使用 Claude Code、Codex、Cursor 等智能体进行自动化视频生成的场景。",
+ "tagline": "为编码智能体打造的本地视频工作室"
+}

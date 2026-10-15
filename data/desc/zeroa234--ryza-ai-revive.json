@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自备大模型和语音 API、在本地运行带实时 2D 立绘的对话客户端的开发者或用户。",
+ "date": "2026-10-15",
+ "features": [
+  "实时 2D 立绘渲染，基于 Spine 4.2，支持姿态、镜头和点击命中测试",
+  "多种对话模式：chat、story、immersive、ASMR、text",
+  "本地 RPG 风格状态：体力、任务、背包、每日奖励，保存在 localStorage",
+  "两层会话记忆加日期化长期记忆层，独立于冒险日志",
+  "运行时接入 OpenAI 兼容的 LLM 和可选 TTS 后端，密钥保存在本地",
+  "支持 Windows（Electron）和 Android（WebView）宿主，共用 /_proxy 代理"
+ ],
+ "intro": "Ryza Chat 是一个本地优先的对话客户端，核心是静态 HTML/JavaScript 运行时，Windows（Electron）和 Android（WebView）只提供宿主外壳。它不内置推理与语音模型，语言模型和 TTS 都在运行时通过设置页配置的 HTTP API 接入，支持 OpenAI 兼容的 chat completions 以及可选的 TTS 后端。\n\n应用提供实时 2D 立绘渲染，使用 Spine 4.2 实现姿态、镜头和点击命中测试，并带有本地 RPG 风格状态（体力、任务、背包、每日奖励），数据保存在 localStorage。对话模式包括 chat、story、immersive、ASMR 和 text，支持两层会话记忆加长期记忆层，以及四种语言槽位和七种 UI 语言。\n\n三端共用 /_proxy 代理契约，开发时需使用 scripts/serve.py 启动服务。大型二进制资源（栅格图、音频、骨骼）不随仓库分发，需在完整运行或打包前用脚本恢复。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "复制 config/providers.example.json 为 config/providers.json 进行本地配置",
+  "运行 python scripts/serve.py 启动开发服务器（http://127.0.0.1:8765/）",
+  "在设置页填入 OpenAI 兼容的 base URL、模型标识和 API key，可选配置 TTS",
+  "如需完整资源，运行 python scripts/restore_media.py 恢复大型二进制文件",
+  "桌面端：cd desktop; npm install; npx electron .；Android 端：运行 scripts/build_apk.ps1"
+ ],
+ "summary": "Ryza Chat 是一个本地优先的对话客户端，核心为静态 HTML/JavaScript，Windows 和 Android 只做宿主。它不内置模型，语言模型和语音合成都在运行时通过设置页配置的 HTTP API 接入，支持 OpenAI 兼容接口和可选 TTS。应用提供实时 2D 立绘渲染、多种对话模式、本地 RPG 状态和分层记忆，适合想自备大模型与语音、在本地运行带立绘对话界面的开发者或用户。",
+ "tagline": "本地优先的实时 2D 立绘对话客户端，自填大模型与语音"
+}

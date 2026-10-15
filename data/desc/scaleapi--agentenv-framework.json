@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要构建和评估 LLM 智能体环境的研究人员、工程师和领域专家。",
+ "date": "2026-10-15",
+ "features": [
+  "将 agentic 环境构建为带版本号的容器镜像",
+  "通过网关部署环境并将智能体指向它们",
+  "对智能体在环境中的行为进行评分",
+  "提供 agent-env CLI，内置 hello、echo-mcp 等示例任务",
+  "支持本地 Docker 以及 Vercel、Tensorlake、Tenki 等沙箱后端",
+  "支持从外部训练循环运行任务中的部分智能体"
+ ],
+ "intro": "AgentEnv Framework 是一个 Python SDK 和 CLI，用于构建、部署和运行 agentic 环境，以及在这些环境中对智能体进行评分的任务。环境是容器化的服务器，遵循开放的 agentenv-framework-protocol 协议。框架负责将环境构建为带版本号的镜像、通过网关部署、将智能体指向这些环境，并对智能体的行为打分。\n\n项目提供 agent-env 命令行工具，内置 hello 和 echo-mcp 等示例任务，支持本地 Docker 运行，也支持 Vercel、Tensorlake、Tenki 等沙箱后端。安装方式包括 uv tool、uvx 和 pip，云存储后端以 extras 形式提供（aws、gcp）。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv 工具：uv tool install agentenv-framework",
+  "运行内置 hello 任务：agent-env run hello",
+  "运行需要 Docker 的 echo-mcp 任务：agent-env run echo-mcp",
+  "不安装直接试用：uvx --from agentenv-framework agent-env run hello",
+  "使用 pip 安装：pip install agentenv-framework"
+ ],
+ "summary": "AgentEnv Framework 面向需要构建和评估 LLM 智能体环境的研究者与工程师。它把环境做成遵循开放协议的容器化服务器，负责构建镜像、通过网关部署、把智能体接入其中并对其表现打分。项目提供 agent-env 命令行工具，内置无需配置的 hello 任务和需要 Docker 的 echo-mcp 任务，也支持本地 Docker 及 Vercel、Tensorlake、Tenki 等沙箱后端，适合搭建可复现的智能体训练与评测环境。",
+ "tagline": "构建、部署和运行智能体环境的 Python SDK 与 CLI"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在自有服务器或本地 Linux 机器上运行编码智能体、并需要保存对话历史的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "在自有 Linux 机器上运行 Codex、Claude Code、Pi 和 Cursor 等编码智能体",
+  "智能体使用用户自己的登录凭据调用模型，无需 Cloudroom 账号",
+  "每台机器运行一个 Rust 服务，支持通过 Tailscale 从其他设备访问",
+  "智能体以独立 Linux 用户运行，无管理员权限，无法读取 core 的敏感文件",
+  "API 请求需要密钥令牌，历史记录保存到 PostgreSQL",
+  "提供 HTTP API 文档、桌面应用连接方式以及构建测试说明"
+ ],
+ "intro": "Cloudroom core 是一个用 Rust 编写的开源运行时，可以在你自己的 Linux 机器上运行编码智能体，并保存它们的对话历史。它支持 Codex、Claude Code、Pi 和 Cursor，智能体使用你自己的登录凭据调用模型，每台机器只需运行一个 Rust 服务，无需 Cloudroom 账号。\n\n该项目是 Cloudroom 桌面应用的云端部分，桌面应用可在 Mac 上运行，也可连接到自建的 core。智能体以独立的 Linux 用户身份运行，没有管理员权限和 sudo，无法读取 core 的令牌、数据库密码或历史文件；API 请求需要密钥令牌，历史记录保存到 PostgreSQL。\n\n目前是预发布软件，采用 Apache 2.0 协议。README 提供了在 Ubuntu 24.04 上安装、通过 Tailscale 访问、升级以及构建测试的文档链接。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Ubuntu 24.04 上使用脚本安装，可部署在 VPS、家庭服务器或备用笔记本上",
+  "通过 Tailscale 从其他设备访问，并支持原地升级",
+  "构建需要 Rust 1.89+、Git 以及要运行的智能体 CLI：cargo build --locked --release",
+  "运行测试：cargo test --locked --all-targets",
+  "将 docs/database/ 中的两个 SQL 文件应用到专用的 PostgreSQL 数据库"
+ ],
+ "summary": "Cloudroom core 是一个 Rust 运行时，让你在自己的 Linux 机器上运行 Claude Code、Codex、Pi 和 Cursor 等编码智能体，并保存对话历史。它适合想自托管智能体、不希望依赖第三方账号的开发者，每台机器只需一个服务，智能体使用你自己的登录凭据调用模型。项目提供安装、API、安全等文档，目前为预发布软件。",
+ "tagline": "在自有 Linux 机器上运行编码智能体的 Rust 服务"
+}

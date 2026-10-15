@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI 代理接入伊朗电商数据、进行商品搜索比价或购物辅助的开发者与普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "19 个只读工具，覆盖搜索、商品详情、比价、优惠和畅销榜",
+  "无需 API 密钥，通过 Streamable HTTP 一个 URL 即可连接",
+  "价格以 Toman 显示，支持品牌、分类、评分等筛选",
+  "提供商品变体、卖家、价格历史、评论和问答等深度信息",
+  "内置 find_best_value 和 compare_products 辅助购买决策",
+  "对波斯语查询进行归一化处理，支持波斯语和英语品牌名"
+ ],
+ "intro": "Digikala MCP 是一个公开的 MCP 服务器，让 AI 代理能够获取伊朗最大电商平台 Digikala 的真实商品数据。它提供搜索、价格（以 Toman 计价）、折扣、评分、卖家、评论、优惠和畅销榜等信息，全程只读且无需 API 密钥。\n\n项目托管在 Cloudflare Workers 上，通过 Streamable HTTP 协议提供服务，任何支持该协议的 MCP 客户端只需一个 URL 即可连接。服务器内置 19 个工具，按“查找商品”“了解单品”“决策对比”“热门趋势”分组，覆盖从模糊搜索到比价、找最优解等常见购物场景。\n\n使用上，所有价格以 Toman 为单位，数据实时变动，建议始终附上商品链接供用户确认。服务器对上游请求做了礼貌限速，并设有响应缓存和失败日志，不存储用户查询或 IP。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在支持 Streamable HTTP 的 MCP 客户端（如 Cline、Cursor、Claude Desktop）的配置中添加：{\"mcpServers\": {\"digikala\": { \"url\": \"https://digikala-mcp.mmdju.workers.dev/mcp\" }}}",
+  "连接后直接用自然语言提问，例如“best Samsung phone under 100 million Toman”",
+  "也可用 curl 直接调用：curl -sS https://digikala-mcp.mmdju.workers.dev/mcp -H 'content-type: application/json' -H 'accept: application/json, text/event-stream' -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"search_digikala\",\"arguments\":{\"query\":\"هدفون بی سیم\",\"limit\":2}}}'"
+ ],
+ "summary": "Digikala MCP 是一个公开的只读 MCP 服务器，让 AI 代理能直接查询伊朗最大电商平台 Digikala 的商品信息，包括搜索、Toman 价格、折扣、评分、卖家、评论和畅销榜。它托管在 Cloudflare Workers 上，无需 API 密钥，任何支持 Streamable HTTP 的 MCP 客户端只需一个 URL 即可接入。适合需要让 AI 助手进行伊朗市场商品搜索、比价或购物决策的场景。",
+ "tagline": "为 AI 代理提供 Digikala 商品数据的只读 MCP 服务器"
+}

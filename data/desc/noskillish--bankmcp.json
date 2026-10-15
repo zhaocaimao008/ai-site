@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI 助手安全读取自己银行账户的欧洲用户，以及愿意自托管 MCP 服务的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "只读访问银行账户，不发起支付，不存储余额或交易",
+  "通过 Enable Banking 的 PSD2 API 连接欧洲 2700 多家银行",
+  "标准 MCP 服务器，支持 Claude、ChatGPT、Cursor 等客户端",
+  "自托管，可本机运行或部署到容器主机（Railway、Fly.io、Render、Docker）",
+  "支持自然语言查询账户余额、交易、订阅和设置余额提醒",
+  "提供本地 TLS 证书生成，也可使用 mkcert 避免浏览器警告"
+ ],
+ "intro": "BankMCP 是一个开源的 MCP 服务器，让你自己托管，把银行账户以只读方式接入 AI 助手。它通过 Enable Banking 的 PSD2 API 连接欧洲 2700 多家银行，不存储余额和交易，也不发送遥测数据。\n\n它支持 Claude、ChatGPT、Cursor 等标准 MCP 客户端，README 中说明已用 Claude 和 Ollama 测试。你可以直接向助手提问，比如某张发票是否已付款、某月杂货支出多少、有哪些订阅以及年费多少，或者设置余额低于阈值时提醒。\n\n运行方式有两种：在本机运行供桌面客户端使用，或部署到小型服务器以便在 claude.ai 或手机上使用。银行连接经由 Enable Banking 完成，这是 PSD2 流程的一部分，不在你的机器上。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node 24 或更新版本",
+  "在 Claude Code 中运行：claude mcp add bankmcp -- npx -y bankmcp",
+  "在 Claude Desktop 中下载 bankmcp.mcpb 并打开安装，或手动在 claude_desktop_config.json 中添加配置",
+  "打开助手给出的 localhost 地址，按设置页面注册 Enable Banking 应用并连接银行",
+  "在助手中说“connect my bank”并登录银行完成授权"
+ ],
+ "summary": "BankMCP 是一个自托管的只读 MCP 服务器，让 AI 助手通过开放银行读取你的银行账户。它借助 Enable Banking 的 PSD2 API 连接欧洲多家银行，不存储余额和交易，也不发送遥测数据。适合希望用自然语言查询账户余额、交易记录、订阅费用或设置余额提醒的用户，支持 Claude、ChatGPT、Cursor 等标准 MCP 客户端，可本机运行或部署到服务器。",
+ "tagline": "自托管只读 MCP 服务器，让 AI 助手通过开放银行读取你的银行账户"
+}

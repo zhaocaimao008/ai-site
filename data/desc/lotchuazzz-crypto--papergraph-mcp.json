@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要系统阅读数学论文、追踪证明依赖关系的研究人员，以及希望为 AI agent 提供可靠论文阅读能力的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "将 arXiv 论文、本地 LaTeX 项目和 PDF 转换为以定理为中心的本地工作空间",
+  "提取结果、证明证据和引用来源，保留原始文本片段",
+  "分析直接与递归的证明依赖关系，生成自顶向下和自底向上的阅读顺序",
+  "通过 DOI 发现公开全文候选，支持导入用户选定的论文",
+  "导出确定性的 Markdown 阅读报告和跨论文阅读计划",
+  "通过 MCP 协议与 AI agent 集成，提供 CLI 和 stdio 两种接口"
+ ],
+ "intro": "PaperGraph MCP 是一个面向数学论文的本地工作空间工具，通过 Model Context Protocol 与 AI agent 集成。它把 arXiv 论文、本地 LaTeX 项目和数字原生 PDF 转换成以定理为中心的结构化阅读地图，帮助研究者追踪每个结论的来源证据。\n\n项目支持从 DOI 发现公开全文候选、导入用户选定的论文、检查证明与引用的源证据、分析直接和递归依赖关系，并导出 Markdown 阅读报告或跨论文阅读计划。所有分析都保留原始来源片段，不依赖猜测。\n\n工具提供 CLI 和 MCP 两种使用方式，适合需要系统化阅读数学文献、梳理证明依赖关系的研究人员，以及希望为 AI agent 提供可靠论文阅读能力的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖并同步环境：uv sync --locked --dev",
+  "检查版本：uv run papergraph-mcp --version",
+  "运行诊断：uv run papergraph-mcp doctor",
+  "发现 DOI 论文：papergraph-mcp discover-doi DOI",
+  "导入选定的 DOI 候选：papergraph-mcp import-doi-candidate WORKSPACE DOI CANDIDATE_ID --confirm"
+ ],
+ "summary": "PaperGraph MCP 解决的是数学论文阅读中结论来源难以追溯的问题。它把 arXiv 论文、本地 LaTeX 项目和 PDF 转成以定理为中心的本地工作空间，提取结果与证明证据，分析直接和递归依赖，生成阅读顺序，并导出 Markdown 报告或跨论文阅读计划。适合需要系统梳理证明依赖的研究者，以及想为 AI agent 提供可靠论文阅读能力的开发者。",
+ "tagline": "为 AI agent 构建数学论文的证据化阅读地图"
+}

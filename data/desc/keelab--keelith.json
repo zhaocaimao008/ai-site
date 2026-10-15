@@ -1,0 +1,25 @@
+{
+ "ai_related": false,
+ "audience": "适合构建生产级分布式微服务的 Go 开发者，尤其是需要统一 HTTP/gRPC 契约、治理与可观测性的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "统一的应用生命周期：确定性启动、就绪、优雅关闭与有界清理",
+  "传输中立契约：HTTP、gRPC、Hertz、Kitex 共享操作、元数据、错误与校验",
+  "可组合治理：超时、重试、对冲、熔断、隔离、限流、降级、异常检测",
+  "可编程工作负载：持久化 continuation、投影、拓扑计划、saga、任务与幂等原语",
+  "默认可观测：结构化日志、指标、追踪、健康检查与诊断",
+  "显式扩展边界：可选适配器与 CloudWeGo profile 分置于 contrib 与 x 模块"
+ ],
+ "intro": "Keelith 是一个契约优先（contract-first）的 Go 运行时框架，面向生产环境的微服务。它为生成式服务提供统一的方式来组合 HTTP 与 gRPC 传输、中间件、配置、服务发现、治理、后台任务、可观测性以及优雅的生命周期管理。\n\n框架采用模块化设计：核心只提供契约与运行时，集成按需引入，基础设施相关的依赖被放在边缘。传输层契约中立，HTTP、gRPC、Hertz、Kitex 共享同一套操作、元数据、错误、校验与身份模型；治理能力涵盖超时、重试、熔断、限流、降级等；可观测性默认包含结构化日志、指标、追踪与健康检查。\n\n可选的适配器位于独立的 contrib 模块，CloudWeGo 相关 profile 位于 x 模块，Kubernetes 控制面位于 operator 模块。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：go install github.com/keelab/keelith/cmd/keelith@latest",
+  "创建服务：keelith new hello",
+  "进入目录并运行：cd hello && go run .",
+  "验证：curl http://127.0.0.1:8080/ping",
+  "安装核心模块：go get github.com/keelab/keelith",
+  "安装代码生成插件：go install github.com/keelab/keelith/cmd/protoc-gen-go-keelith@latest"
+ ],
+ "summary": "Keelith 是一个用 Go 编写的契约优先运行时框架，目标是把生产微服务中分散的传输、治理、配置、可观测性和生命周期管理收敛到一套统一契约里。它让生成式服务以一致方式组合 HTTP 与 gRPC，并按需引入集成，基础设施依赖留在边缘。适合需要统一服务契约、治理策略和可观测性的 Go 微服务团队。",
+ "tagline": "面向生产微服务的契约优先 Go 运行时框架"
+}

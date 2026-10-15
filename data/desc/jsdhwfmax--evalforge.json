@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要把 AI 评测接入 CI、建立发布质量门禁的工程团队，以及使用 Ragas、DeepEval、promptfoo 做 RAG 或助手评测的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "导入 promptfoo、Ragas、DeepEval 的评测结果，转换为统一的版本化 JSON 工件",
+  "与基线对比，支持数据集指纹、评测器版本和指标定义的可比性校验",
+  "按绝对阈值、基线增量和错误/警告策略执行质量门禁，回归时返回非零退出码",
+  "输出 JSON、JUnit XML、SARIF 2.1.0 和 Markdown 报告，便于接入现有 CI",
+  "内置离线 RAG 评测器，支持 BM25、向量、混合检索与 Recall@K 等指标",
+  "提供 FastAPI/OpenAPI、CLI 和 Streamlit 对比仪表盘等接口"
+ ],
+ "intro": "EvalForge 是一个面向 RAG 应用和 AI 助手的评测证据与策略门禁工具。它不替代 Ragas、DeepEval、promptfoo 等评测框架，而是提供一个中立的互操作层：把这些框架产出的结果导入为版本化的 JSON 工件，与基线对比，按显式策略判定是否通过，并输出 JSON、JUnit、SARIF 和 Markdown 报告。\n\n门禁可离线运行，只依赖两个直接依赖，不需要托管账号或模型密钥。内置的 RAG 评测器支持 BM25、确定性向量和混合检索，以及 Token-F1、引用支持、幻觉代理、延迟、token 与成本等指标，让完整流程可以复现。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 PyPI 安装：pip install evalforge-ci",
+  "或克隆仓库后安装：git clone https://github.com/jsdhwfmax/EvalForge.git && cd EvalForge && python3 -m venv .venv && source .venv/bin/activate && pip install -e .",
+  "运行门禁示例：evalforge gate examples/candidate_summary.json --policy examples/quality_policy.json --baseline examples/baseline_summary.json --json build/evalforge-report.json --junit build/evalforge-junit.xml --sarif build/evalforge.sarif --markdown build/evalforge-summary.md",
+  "导入 promptfoo 结果：evalforge import promptfoo build/promptfoo-results.json --output build/evalforge-artifact.json --source-revision \"$GITHUB_SHA\"",
+  "导入 Ragas 结果：evalforge import ragas tests/fixtures/ragas/evaluation-result-records.json --producer-version 0.2.12 --metric faithfulness --metric answer_relevancy --dataset-fingerprint synthetic-ragas-fixture-v1 --metric-version ragas-demo-rubric-v1 --output build/ragas.json"
+ ],
+ "summary": "EvalForge 解决的是 AI 评测结果难以在 CI 中统一审查的问题：不同评测框架输出格式各异，而 CI 平台只认 JUnit、SARIF 等既有格式。它把这些结果导入为版本化 JSON 工件，与基线对比并按显式策略判定通过与否，再输出多种报告，回归时以非零退出码阻断发布。适合需要为 RAG 应用或 AI 助手建立发布质量门禁的团队，可离线运行，无需托管账号或模型密钥。",
+ "tagline": "把 AI 评测结果变成可审查的发布证据与 CI 质量门禁"
+}

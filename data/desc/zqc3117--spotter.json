@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究机器人操作、具身智能和 VLM 智能体的开发者与研究人员，尤其是希望在不替换现有具身模型的前提下引入 VLM 监控与修复能力的场景。",
+ "date": "2026-10-15",
+ "features": [
+  "轻量级干预层：具身模型持续执行，VLM 仅在确认错误时介入",
+  "VLM 任务简化：只需发现失败、用短原语计划修复并验证",
+  "无需特权信息：使用本地部署的开源 Qwen 即可运行",
+  "低开销：成功 episode 中 judge 调用平均少于一次，仅增加 13–16 秒",
+  "支持 RoboTwin 2.0 一键评测（bash robotwin_eval.sh）",
+  "提供冻结的 77 条通用经验库和 RoboTwin 2.0 经验库"
+ ],
+ "intro": "Spotter 是一个面向机器人操作的运行时监控与干预框架。它把冻结的具身模型（System 1）和 VLM（System 2）组合起来，但不同于让 VLM 逐步规划的传统方案，Spotter 让具身模型持续主导执行，一个本地筛选器并行观察，只有当确认出现错误时，VLM 才介入给出简短的修复原语计划并验证修复结果。\n\n这样 VLM 的任务被大幅简化，无需访问任务成功信号等特权信息，使用本地部署的开源 Qwen 即可工作。在 RoboCasa 的 1200 个 episode 上，Spotter 相比单独策略仍有提升，而成功 episode 中平均调用 judge 不到一次，仅比纯策略多花 13–16 秒。项目目前推荐使用 RoboTwin 2.0 进行评测，RoboCasa 路径存在渲染 bug 正在修复。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入项目目录",
+  "按照 README 的 Environment Setup 配置环境",
+  "准备模型：下载 pi0.5 或 Cosmos Policy 等检查点",
+  "运行 bash robotwin_eval.sh 进行 RoboTwin 2.0 一键评测"
+ ],
+ "summary": "Spotter 在冻结的具身模型和 VLM 之间加入一层轻量干预机制：具身模型持续主导执行，本地筛选器并行监控，只有确认出错时 VLM 才介入修复并验证。这样 VLM 不必逐步规划，也无需任务成功信号，用本地 Qwen 即可运行。适合希望在现有机器人策略上引入 VLM 监控、又不想牺牲执行速度的研究与开发场景。",
+ "tagline": "让具身模型主导执行，VLM 仅在确认错误时介入修复的机器人操作框架"
+}

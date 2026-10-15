@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "希望自托管个人 AI Agent、并愿意自行配置模型提供方的开发者；也适合想基于其 SDK 和应用平台做扩展的开发团队。",
+ "date": "2026-10-15",
+ "features": [
+  "带流式回复、工具调用和可搜索记录的聊天会话，支持子代理接手任务",
+  "Loops 按计划跨多轮推进目标，任务、触发器和 workflows 把一次性请求变成可重复流程",
+  "分层记忆在对话间保留偏好和上下文，知识库让回答引用指定文档",
+  "收件箱汇总来自 Slack 等渠道和 Gideon 自身的待办，可选语音输入与语音回复",
+  "应用平台与 Python SDK（gideon.sdk）可扩展模型、渠道、搜索、工具和仪表盘",
+  "工具审批、按应用权限、凭据处理、命令筛查和审计记录"
+ ],
+ "intro": "Gideon 是一个个人 AI Agent 平台，本仓库是它的开源自托管版本，包含网关和 Web 控制台。它把聊天、长期目标循环、记忆、知识库、任务、日程、收件箱以及带权限控制的应用平台整合在一起，用户可以自己掌控状态目录和模型提供方，包括 API 服务、OpenAI 兼容端点、AWS Bedrock 和本地模型。\n\n运行环境要求 Python 3.12 以上，构建打包的 Hypermid 守护进程需要 Rust 和 Cargo，从源码构建控制台需要 Node.js 22.12 以上。支持 macOS 和 Linux，Windows 上需走 Docker Compose 路径。项目不需要外部数据库或消息中间件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "python3 -m venv .venv",
+  ".venv/bin/python -m pip install -e .",
+  "npm ci && npm run build",
+  "export GIDEON_HOME=\"$PWD/.dev-home\"",
+  ".venv/bin/gideon setup",
+  ".venv/bin/gideon gateway --no-open --port 10000"
+ ],
+ "summary": "Gideon 是一个个人 AI Agent 平台，本仓库是其开源自托管版本，提供网关和 Web 控制台。它把聊天、长期目标循环、记忆、知识库、任务、日程、收件箱和带权限控制的应用平台放在一起，用户自行掌控状态目录与模型提供方，可使用 API 服务、OpenAI 兼容端点、AWS Bedrock 或本地模型。适合想自己部署并扩展 AI Agent 的开发者。",
+ "tagline": "可自托管的个人 AI Agent 平台，带网关与控制台"
+}

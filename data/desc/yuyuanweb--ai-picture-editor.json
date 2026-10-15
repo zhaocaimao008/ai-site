@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "想学习 AI Agent 全栈开发的 Python 或前端开发者，以及希望通过完整项目提升简历和求职竞争力的学习者。",
+ "date": "2026-10-15",
+ "features": [
+  "自然语言驱动修图：Agent 自动规划步骤并调用工具执行",
+  "21 种编辑工具：抠图、11 参调色、画布变换、AI 换背景、扩图、超分辨率等",
+  "基于 react-konva 的画布编辑器，支持缩放平移、图层管理、撤销重做和前后对比",
+  "集成 SAM 智能区域选择，支持点选与笔刷涂抹，并做局部消除和局部替换",
+  "图层拆分：按语义拆出主体层、背景层和 OCR 文字层，图层数据用 JSONB 持久化",
+  "多步计划与人机协作：服务端做工具校验、依赖补全、环检测和拓扑排序",
+  "ARQ 异步队列 + Redis Pub/Sub + SSE 实时推送任务进度"
+ ],
+ "intro": "这是一个以 AI Agent 驱动图片编辑为核心的全栈项目，后端基于 Python 3.13 + FastAPI + LangChain + LangGraph，前端基于 React 19 + Konva。用户输入一句自然语言指令，Agent 会自动规划修图步骤并调用编辑工具完成操作。\n\n项目内置 21 种编辑工具，覆盖抠图、调色、画布变换、AI 换背景、扩图、超分辨率等场景，并集成 SAM 实现点选与笔刷选区，支持局部消除、局部替换、图层拆分与多步计划的人机协作。\n\n架构上采用前后端分离加异步 Worker：耗时任务通过 ARQ 队列提交到独立 Worker，结果经 Redis Pub/Sub + SSE 实时推送前端；数据分别存放在 PostgreSQL、Redis 和 MinIO 中。项目同时提供完整文字教程、简历写法和面试题解。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Docker >= 20（含 Compose）、Python >= 3.13、Node.js >= 18，可选申请阿里云百炼 API Key",
+  "克隆项目并启动中间件：git clone https://github.com/yuyuanweb/ai-retouch-agent.git && cd ai-retouch-agent && docker compose up -d",
+  "启动后端：cd backend，安装 uv 后执行 uv sync --all-extras，复制 .env.example 为 .env，执行 uv run alembic upgrade head",
+  "分别启动 API 和 Worker：uv run uvicorn app.main:app --reload --host 0.0.0.0 --port 7302 与 uv run arq app.worker.WorkerSettings",
+  "启动前端：cd frontend && npm install && npm run dev，浏览器打开 http://localhost:7301"
+ ],
+ "summary": "这个项目用一句话指令驱动 AI 完成修图：用户输入自然语言，Agent 规划步骤并调用 21 种编辑工具执行，涵盖文生图、抠图、调色、区域编辑和图层拆分。后端用 FastAPI + LangChain + LangGraph 搭建 Agent 与异步任务链路，前端用 React 19 + Konva 实现画布编辑器。适合想系统学习 AI Agent 全栈开发、需要完整项目练手的开发者。",
+ "tagline": "自然语言驱动的 AI 修图智能体全栈项目"
+}

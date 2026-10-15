@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合量化研究员、金融分析师和开发者，尤其是希望利用 AI 代理进行估值指标研究和回测的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "从财报中提取财务数据，并按可知日期标注每个数字",
+  "构建相对估值指标（如 PER、EV/EBITDA）和绝对估值指标",
+  "在行业内对指标进行排序和回测，计算扣除费用后的收益",
+  "通过 MCP 协议与 AI 代理交互，支持多种作用域（data、research、full）",
+  "使用 DuckDB 存储数据，支持 SQL 和 Python 步骤",
+  "提供回测和报告功能，支持逐日回放和指标分析"
+ ],
+ "intro": "Qanat 是一个 MCP 服务器，用于从财报和价格数据中提取财务指标，构建估值指标，并在公司所属行业内检验这些指标的有效性。它通过 MCP 协议连接 AI 代理，让代理能够查询和操作项目数据。\n\n项目采用声明式配置，所有设置集中在 qanat.yaml 文件中。数据按阶段流动：raw 保存原始数据，normalized 进行类型化和去重，features 存放测量指标，weights 存放每个步骤的权重表，pnl 记录收益。步骤可以用 SQL 或 Python 编写，并且只能读取声明过的表，避免依赖错误。\n\nQanat 支持回测，逐日回放历史数据，确保步骤只能看到当天已知的信息，并计算扣除费用和滑点后的收益。它不进行自己的网络调用，所有网络请求由数据源发起。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：uv tool install qanat-fdtl 或 pip install qanat-fdtl",
+  "初始化项目：qanat init my-research --demo && cd my-research",
+  "连接代理：claude mcp add qanat -- qanat mcp --scope research",
+  "运行回测：qanat backtest --from 2015-01-01 --to 2024-12-31 --step sort_on_momentum",
+  "生成报告：qanat report 14"
+ ],
+ "summary": "Qanat 是一个 MCP 服务器，帮助用户从财报和价格数据中提取财务指标，构建估值指标，并在公司所属行业内检验这些指标的有效性。它通过 MCP 协议连接 AI 代理，让代理能够查询和操作项目数据。项目采用声明式配置，数据按阶段流动，支持 SQL 和 Python 步骤，并提供回测功能，逐日回放历史数据，计算扣除费用和滑点后的收益。适合量化研究员和金融分析师使用。",
+ "tagline": "将财报和价格转化为估值指标并在行业内检验的 MCP 服务器"
+}

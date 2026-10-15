@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 ComfyUI 进行 AI 视频创作、需要本地生成短剧或长视频的创作者与开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "智能剧本分段（PromptSplit）：将长剧本或提示词自动拆分为逻辑段落并映射到视频时间轴",
+  "五种 H3 任务模式：Ref2VA 全能参考、T2VA 纯文本、I2VA 首帧参考、FL2VA 首尾帧参考、L2VA 尾帧参考",
+  "视频段落节点链：支持添加下一段、删除这一段，自动维护分段连接与最终合成",
+  "资源库引用：图片、音频、视频素材可通过 @引用 写入提示词，并支持跨段落继承与覆盖",
+  "渲染增强：集成高级采样、Latent 深度放大、SelfLift 策略，以及 DMAD 四步加速与外部采样器接口",
+  "强制唯一命名空间：所有核心节点使用 AICG3D_H3_ 前缀，避免与其它 MiniMax 插件节点冲突"
+ ],
+ "intro": "短剧工作台（ComfyUI-AICG3D-Integrated）是一个面向 ComfyUI 的整合插件包，围绕 MiniMax H3 模型提供本地短剧与长视频生成能力。它把智能剧本分段、视频段落节点、资源库引用、提示词优化和最终合成等环节集成在一个插件里，目标是让创作者在本地完成从创意到成片的流程。\n\n插件采用 AICG3D_H3_ 前缀的强制唯一命名空间，避免与环境中其他 MiniMax 相关节点发生同名冲突。它支持 Ref2VA、T2VA、I2VA、FL2VA、L2VA 五种 H3 任务模式，并内置 DMAD 四步加速、外部采样器与 Sigmas 接口、Latent 放大和 SelfLift 策略等渲染选项。13 号无限长视频工作流通过分段生成、尾帧续写和接缝处理来实现连续长视频输出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将 ComfyUI-AICG3D-Integrated 文件夹复制到 ComfyUI 的 custom_nodes/ 目录下",
+  "重启 ComfyUI",
+  "在右键菜单中找到 AICG3D 分类，即可开始使用节点",
+  "若使用 13 号无限长视频工作流的最终合成，需确保 FFmpeg 可用，可在 ComfyUI 的 Python 环境执行：python.exe -m pip install imageio-ffmpeg，然后重启 ComfyUI"
+ ],
+ "summary": "短剧工作台是一个 ComfyUI 插件，围绕 MiniMax H3 模型做本地短剧和长视频生成。它把剧本分段、视频段落节点、素材引用、提示词优化和最终合成整合在一起，并通过 AICG3D_H3_ 前缀避免与其它 MiniMax 节点冲突。适合想在 ComfyUI 里用本地模型连续生成视频、拼接成较长片段的创作者。",
+ "tagline": "ComfyUI 上的 MiniMax H3 无限长视频与短剧生成工作流插件"
+}

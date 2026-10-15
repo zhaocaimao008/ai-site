@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在本地或服务器上部署语音识别功能的开发者，以及希望使用开源模型进行音频转写的普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "支持多种硬件平台：Apple silicon（MLX）、CPU（Linux/Windows/macOS）和 NVIDIA GPU（CUDA）",
+  "提供多个语音识别模型：Phonon-2、Phonon-1、Phonon-1 Big、Phonon-1 Micro",
+  "命令行转写音频文件，支持 JSON 输出和词级时间戳",
+  "实时麦克风转写（Apple silicon）",
+  "提供 OpenAI 兼容的 HTTP 端点，支持文件转写和 WebSocket 流式转写",
+  "支持热词（hotwords）功能，可提升特定名称或术语的识别准确率"
+ ],
+ "intro": "Phonon 是 Fermion Research 推出的语音识别引擎，提供 Phonon-2、Phonon-1 等开源模型。它可以在 Apple silicon 上通过 MLX 运行，在 Linux（x86-64 和 Arm）、Windows、macOS（Apple silicon 和 Intel Mac）的 CPU 上运行，也可以通过 CUDA 镜像在 NVIDIA GPU 上运行。\n\nPhonon 支持从命令行转写音频文件、实时转写麦克风输入，并提供一个兼容 OpenAI 接口的 HTTP 服务。当前模型 Phonon-2 下载体积为 164 MB，另有 Phonon-1（415 MB）、Phonon-1 Big（581 MB）和 Phonon-1 Micro（285 MB）可用。\n\n安装方式包括 pip 安装 fermion-research 包，以及使用 CPU 或 CUDA 的 Docker 容器。命令行工具 phonon 和 fermion 可以指定模型进行转写、监听或启动服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 3.10 或更高版本，创建虚拟环境：python3.12 -m venv .venv && source .venv/bin/activate",
+  "安装 fermion-research 包：pip install fermion-research",
+  "Apple silicon 用户安装 MLX 支持：pip install \"fermion-research[mlx]\"",
+  "转写音频文件：phonon transcribe meeting.wav",
+  "启动 OpenAI 兼容服务：phonon serve"
+ ],
+ "summary": "Phonon 是 Fermion Research 开源的语音识别引擎，提供 Phonon-2 等模型，可在 Apple silicon、CPU 和 NVIDIA GPU 上运行。它支持命令行转写音频文件、实时麦克风转写，并提供一个兼容 OpenAI 接口的 HTTP 服务，方便集成到现有应用中。适合需要在本地或服务器部署语音识别功能的开发者，以及希望使用开源模型进行音频转写的用户。",
+ "tagline": "Fermion Research 开源语音识别引擎，支持多平台与多模型"
+}

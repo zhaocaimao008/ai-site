@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "拥有 RTX 3090/3090 Ti 或 12GB 显存 NVIDIA 显卡，希望在本地运行大语言模型并处理超长上下文的开发者和爱好者。",
+ "date": "2026-10-15",
+ "features": [
+  "SJ-KVaRN 压缩 KV 缓存，支持 4/4、3/3t 和 3/2t 配置，降低 KL 散度并节省显存",
+  "在 100K 深度下解码速度相比 v0.4 提升约 6-8%",
+  "默认启用提示缓存（RAM + 16GiB 磁盘层），恢复对话时跳过重新预填充",
+  "支持 12GB 显卡运行 204,800 token 上下文，显存占用约 11GB",
+  "集成 MTP 草稿头，默认对携带 MTP 头的 Qwen3.8 GGUF 启用",
+  "兼容 OpenAI API 的 llama-server，支持并行解码槽"
+ ],
+ "intro": "llamAmpere 是 llama.cpp 的一个分支，专门针对 Ampere 架构（SM86）的消费级显卡进行性能调优，尤其是 RTX 3090 和 3090 Ti。它通过新的压缩 KV 缓存方案 SJ-KVaRN、多 token 预测（MTP）草稿头以及提示缓存等机制，让单张 24GB 显卡能够运行 Qwen3.8-27B 模型并支持完整的 262,144 token 上下文。\n\n项目还提供了针对 12GB 显卡（如 RTX 3060 12GB）的低内存配置，可以在约 11GB 显存内实现 204,800 token 的上下文。它兼容 OpenAI 风格的 API，并默认启用 MTP 草稿和提示缓存，旨在提升长上下文场景下的解码速度。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/JakeATX/llamAmpere.git && cd llamAmpere",
+  "配置构建（针对 SM86）：cmake -S . -B build-sm86 -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=86 -DLLAMA_BUILD_BORINGSSL=ON",
+  "编译 llama-server：cmake --build build-sm86 -j8 --target llama-server",
+  "运行 24GB 显卡配置（最快解码）：./build-sm86/bin/llama-server --hf-repo jakeatx/ATX-Swift-1.5-Qwen3.8-27B-Uncensored-IQ4_XS-M-GGUF --hf-file ATX-Swift-1.5-Qwen3.8-27B-Uncensored-IQ4_XS-M.gguf -c 262144 -ngl 99 -fa on -ctk tq5_0 -ctv turbo4 -b 4096 -ub 1024 --parallel 1",
+  "运行 12GB 显卡配置（204,800 token 上下文）：LLAMA_MTP_DRAFT_COMPUTE_LEAN=1 ./build-sm86/bin/llama-server -hf jakeatx/ATX-Swift-1.5-Qwen3.8-27B-Uncensored-2.3bpw-MTP-GGUF -hff ATX-Swift-1.5-Qwen3.8-27B-Uncensored-2.3bpw-MTP.gguf -c 204800 --parallel 1 -ngl 99 -fa on -fit off -b 4096 -ub 512 --no-context-shift --jinja -ctk sjkvarn3 -ctv sjkvarn3 --sjkvarn-body-type sjkvarn4t --sjkvarn-sink 128 --sjkvarn-sink-type f16 --sjkvarn-staging-type tq6_0 --sjkvarn-tail 4096 --sjkvarn-tail-max 8192 --cache-type-s q8_0 --spec-type draft-mtp --spec-draft-n-max 4 --spec-draft-p-min 0 --spec-draft-vocab-map docs/mtp-vocab/atx_65536.txt --spec-draft-type-k q8_0 --spec-draft-type-v q8_0 --spec-draft-window 8192 --temp 1.0 --top-k 20 --top-p 0.95 --min-p 0"
+ ],
+ "summary": "llamAmpere 是 llama.cpp 的一个分支，专门为 RTX 3090/3090 Ti 等 Ampere 架构显卡优化，让单张 24GB 显卡能运行 Qwen3.8-27B 模型并支持完整的 262,144 token 上下文。它引入了 SJ-KVaRN 压缩 KV 缓存和 MTP 草稿头，在长上下文场景下提升解码速度，同时提供 12GB 显卡的低内存配置，可在约 11GB 显存内实现 204,800 token 上下文。适合需要在本地消费级硬件上处理超长文本的开发者。",
+ "tagline": "针对 RTX 3090/3090 Ti 优化的 llama.cpp 分支，支持超长上下文"
+}

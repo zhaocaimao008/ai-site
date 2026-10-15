@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "适合使用 Apple Silicon Mac 并希望随时了解系统资源占用的开发者和普通用户，尤其是运行本地模型、编译或长时间构建时。",
+ "date": "2026-10-15",
+ "features": [
+  "按核心类型分组显示每个核心的使用率和当前频率",
+  "显示内存使用、压缩、交换和系统压力等级",
+  "显示当前下载和上传速度",
+  "显示 GPU 使用率、频率、显存和功耗，悬停可看温度",
+  "显示整机功耗和温度读数",
+  "列出最繁忙的进程，合并辅助进程，点击可查看详情卡片"
+ ],
+ "intro": "ftop 是一个用 Swift 编写的 macOS 系统监视工具，专为 Apple Silicon 芯片设计。它用一个可拖拽缩放的浮动玻璃面板替代终端里的 htop/btop，实时显示 CPU 核心、内存、网络、GPU、功耗、温度和进程占用。面板会根据窗口尺寸自动调整布局，小窗口保留核心信息，大窗口展示更多内容而非放大字体。\n\n它只显示当前状态，没有历史曲线和磁盘面板。每个核心的柱状图会平滑过渡到新读数，进程列表在排名变化时也有缓动动画。隐藏或完全被遮挡时，ftop 几乎不消耗资源。设置可以通过右键面板或菜单栏数字打开，也可以直接编辑 ~/.config/ftop/config.json5 文件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 releases 页面下载 Ftop-<version>-arm64.zip，解压后将 Ftop.app 移动到 ~/Applications",
+  "创建命令链接：mkdir -p ~/.local/bin && ln -sfn ~/Applications/Ftop.app/Contents/MacOS/ftop ~/.local/bin/ftop",
+  "运行 ftop 打开面板，ftop toggle 隐藏或显示，ftop quit 关闭",
+  "如需查看系统进程，运行 sudo ftop grant 授予权限"
+ ],
+ "summary": "ftop 是一个面向 Apple Silicon Mac 的轻量系统监视器，用可自由缩放的浮动玻璃面板替代终端里的 htop/btop。它实时显示 CPU 核心、内存、网络、GPU、功耗、温度和进程占用，适合在运行本地模型、编译或长时间构建时快速查看机器状态。面板会根据窗口大小自动调整布局，隐藏时几乎不消耗资源。",
+ "tagline": "面向 Apple Silicon Mac 的轻量系统监视器，一个可自由缩放的浮动玻璃面板。"
+}

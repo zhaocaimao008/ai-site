@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 ComfyUI 进行 AI 图像生成、需要保持人物一致性并批量产出系列照片的创作者和开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "Person Builder：37 个字段描述人物，保存为命名人物，自动生成英文提示词",
+  "Wardrobe：以标签页管理多套服装，每套包含上衣、下装、鞋、首饰等，支持颜色按钮",
+  "Photoshoot：设置数量后自动排队生成系列照片，每张照片的取景、姿势、表情和宽高比不同",
+  "搜索与预览：长列表可搜索，服装、鞋、帽子等显示中性人台预览图",
+  "自定义条目：可通过 JSON 添加自己的服装、发型或灯光设置",
+  "支持角色 LoRA：将触发词放入 LoRA trigger，面部、发型和妆容由 LoRA 决定"
+ ],
+ "intro": "Photoshoot 是一组 ComfyUI 自定义节点，用于在保持人物一致的前提下批量生成系列照片。它把人物拆成 37 个字段（身体、面部、发型、妆容等），保存为命名人物；再通过 Wardrobe 节点管理多套服装，每套服装一个标签页。Photoshoot 节点则负责把人物变成一整组照片：每张照片的取景、姿势、位置、表情和宽高比都不同，但人物保持不变。设置数量后，节点会自动排队生成全部照片。\n\n这些节点本身只输出英文提示词字符串，最终画面由你使用的模型、checkpoint、LoRA、分辨率和采样器设置决定。README 中的示例使用 Krea 2 Turbo (fp8) 和 Qwen-VL 渲染。唯一接触像素的节点是 Photoshoot – Monochrome。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将 ComfyUI-Photoshoot 安装到 ComfyUI 的 custom_nodes 目录",
+  "重启 ComfyUI，在节点列表中找到 Photoshoot 相关节点",
+  "使用示例工作流 example_workflows/photoshoot-series.json 开始",
+  "在 Person Builder 中设置人物字段，在 Wardrobe 中配置服装",
+  "在 Photoshoot 节点中设置生成数量，点击按钮排队生成系列照片"
+ ],
+ "summary": "Photoshoot 是一组 ComfyUI 节点，解决在 AI 绘画中保持人物一致并批量生成不同照片的问题。它通过 Person Builder 用 37 个字段定义人物，Wardrobe 管理多套服装，Photoshoot 节点自动变化取景、姿势、表情和宽高比，一次生成整组系列照片。节点只输出英文提示词，最终效果取决于所用模型和采样设置。适合需要为同一角色产出多张不同照片的 ComfyUI 用户。",
+ "tagline": "在 ComfyUI 中构建固定人物并批量生成系列照片的节点集"
+}

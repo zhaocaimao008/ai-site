@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI 智能体构建受治理知识系统的企业和教育机构开发者，以及希望确保 AI 智能体基于权威知识运作的技术团队。",
+ "date": "2026-10-15",
+ "features": [
+  "提供受治理的权威知识记录，供人类和 AI 智能体共同使用",
+  "支持知识版本控制、审批流程和访问权限管理",
+  "通过 MCP 协议让 AI 智能体直接查询知识",
+  "提供从 Markdown 文件到可查询知识库的完整工作流",
+  "内置教程和示例项目，帮助快速上手",
+  "支持多种包管理器（npm、pnpm、bun）和 Next.js 开发环境"
+ ],
+ "intro": "KSoR（Knowledge System of Record）是一个开源 SDK，用于构建受治理、权威的知识系统，供人类和 AI 智能体共同使用。它解决的核心问题是：当组织内的知识分散、冲突或过时时，AI 智能体的行为难以预测。KSoR 通过提供一份受治理的权威知识记录，让智能体基于同一份机构或学术事实运作。\n\n该框架围绕三个承诺：一份权威记录、一个治理边界、多种开放投影，并遵循“一次治理知识，多种方式投影”的原则。它不试图让概率语言模型变得确定，而是让知识环境变得可治理、有边界、可追溯和可测试，包括明确哪些来源是权威的、哪个版本是当前的、谁批准了它、谁可以查看、哪些知识可以被检索，以及智能体何时必须弃权而非即兴发挥。\n\nKSoR 使用 TypeScript 编写，基于 Next.js，支持通过 npm、pnpm 或 bun 快速初始化项目。它提供教程引导用户从零开始构建知识库，并支持连接 Postgres 数据库和嵌入 API 密钥，使 AI 智能体能够直接查询知识。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node 24 或更高版本",
+  "使用 npm：npx @panaversity/ksor@latest init my-knowledge-sor，然后 cd my-knowledge-sor && npm install && npm run dev",
+  "或使用 pnpm：pnpm dlx @panaversity/ksor@latest init my-knowledge-sor，然后 cd my-knowledge-sor && pnpm install && pnpm dev",
+  "或使用 bun：bunx @panaversity/ksor@latest init my-knowledge-sor，然后 cd my-knowledge-sor && bun install && bun run dev",
+  "打开 http://localhost:3000 查看运行中的知识库网站"
+ ],
+ "summary": "KSoR 是一个开源 SDK，用于构建受治理的权威知识系统，让人类和 AI 智能体基于同一份机构或学术事实运作。它解决知识分散、冲突或过时导致 AI 行为不可预测的问题，通过一份权威记录、一个治理边界和多种开放投影，使知识环境可治理、可追溯。适合需要为 AI 智能体提供可靠知识基础的企业和教育机构。",
+ "tagline": "为 AI 智能体构建受治理的权威知识系统"
+}

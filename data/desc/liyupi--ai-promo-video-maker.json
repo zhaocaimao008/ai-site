@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 App、网站、SaaS、开源项目、课程或 AI 模型制作宣传片，但不想学剪辑软件或外包的开发者与产品作者。",
+ "date": "2026-10-15",
+ "features": [
+  "AI 先调研产品并画出 3 到 4 张风格样帧，由你挑选后再开始制作",
+  "自动截取 3840×2160 的 4K 真实页面，需要登录时会弹出浏览器窗口提示",
+  "按音乐节拍卡点剪辑，配乐和音效可由 ElevenLabs 按分镜生成",
+  "旁白生成后逐句转写回文字与稿子比对，混音后再次转写确认未被音乐盖住",
+  "渲染前后自动校验文件、分辨率、字体、响度和渲染日志，并按场景截图审查",
+  "可安装为 Agent Skill，在任意项目里用一句话调用，成片保存在当前项目目录"
+ ],
+ "intro": "这个项目把产品宣传片的制作流程写成一份 AI 能读懂并执行的工作规范（AGENTS.md），配合 Remotion 视频工程模板和十几个辅助脚本，让 Cursor、Claude Code、Codex 等 AI 编程工具按规范完成调研、截图、配乐、配音、剪辑和校验。\n\n你只需用一句话说明要宣传什么，AI 会先调研产品，再分两轮向你提问画幅、时长、风格方向等，并针对你的产品画出 3 到 4 张风格样帧供挑选。确认需求后，AI 自主完成 4K 真实页面截图、按音乐节拍卡点剪辑、生成旁白并逐句转写校验、自动审图，最终交付一支 4K 宣传视频和可在线播放的网页版。\n\n项目支持克隆仓库直接使用，也能通过 npx skills 一键安装为 Agent Skill，在任意项目中调用。App、网站、SaaS、开源项目、课程、AI 模型等都可以制作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认电脑已安装 Node.js 18 以上版本、Python 3.9 以上版本和 ffmpeg",
+  "克隆仓库并安装依赖：git clone https://github.com/liyupi/ai-promo-video-maker.git && cd ai-promo-video-maker && pip install -r template/requirements.txt && playwright install chromium",
+  "运行体检脚本检查环境：python3 template/scripts/doctor.py",
+  "用 AI 编程工具打开目录，说一句话开始，例如：帮我给 https://example.com 做一支宣传片",
+  "可选：复制 .env.example 为 .env 并填入 ELEVENLABS_API_KEY 以启用 AI 旁白和配乐"
+ ],
+ "summary": "做产品宣传片通常要写脚本、找素材、剪辑卡点、配音混音，外包费用高，自学又需要整套专业软件。这个项目把制作流程写成 AI 能执行的工作规范，配合 Remotion 工程模板和辅助脚本，让 Cursor、Claude Code、Codex 等工具按规范完成调研、4K 截图、配乐、配音、剪辑和校验。你只需一句话说明要宣传什么，AI 会先调研并画出多种风格样帧供挑选，确认需求后自主推进，最终交付 4K 成片和网页播放版。适合 App、网站、SaaS、开源项目、课程和 AI 模型等需要宣传片的场景。",
+ "tagline": "一句话让 AI 帮你完成 4K 产品宣传片的全流程制作"
+}

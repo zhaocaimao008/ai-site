@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合经常使用 Claude Code、Codex、DeepSeek Harness、Antigravity 等 AI 工具的开发者，以及喜欢桌面宠物、想给编程或 AI 使用过程增添趣味和状态反馈的普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "根据当前使用的 AI 自动切换角色形象，支持 Claude、GPT、DeepSeek、Gemini、GLM 等",
+  "跟随 AI 工作状态做出对应动作，如思考、读文件、写代码、跑命令、画图、派子任务等",
+  "支持同时处理多个 AI 对话，每个对话显示独立小卡片",
+  "在名牌下显示各 AI 的额度或余额，如 Claude 5 小时/每周额度、GPT Codex 额度、DeepSeek 余额、Gemini Antigravity 额度",
+  "丰富的互动：单击摸摸头、右键戳一下、拖动换位置、贴边、甩动红温、按时段打招呼、节日换装",
+  "支持自定义角色：一个文件夹放几张图加 character.json 即可添加新角色，也可用 AI 生成新立绘"
+ ],
+ "intro": "CrossPet 是一只浮在桌面角落的小桌宠，支持 macOS 13+ 和 Windows 10+。它会根据你当前使用的 AI 切换角色形象：用 Claude 时是 Claude 娘，用 GPT 时是 GPT 娘，DeepSeek、Gemini、GLM 也各有对应角色。当 AI 开始干活时，她会跟着做出思考、读文件、写代码、跑命令、查资料、画图、派子任务、出错、完成等动作，每个状态都配有立绘和小动画。\n\n除了跟随单个 AI，她还支持同时处理多个对话：同一 AI 开两个以上对话时，她会左右转着忙，每个对话显示一张小卡片；三个以上则会崩溃。名牌下方可以显示 Claude 的 5 小时/每周额度、GPT 的 Codex 额度、DeepSeek 的账户余额、Gemini 的 Antigravity 额度，快用完时会露出累了的样子。\n\n她还有自己的小性格：闲着会哼歌、伸懒腰、打哈欠，十分钟没动静就睡着；单击摸摸头，右键戳一下；拖到屏幕边缘会贴边缩起来；按住快速左右甩会红温赌气。不同角色还有专属台词和社区梗，比如 Claude 出错被纠正时会说「You're absolutely right!」，DeepSeek 闲着会扒白饭、游泳。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS：打开终端，运行 curl -fsSL https://raw.githubusercontent.com/lokicorvus/crosspet/main/get.sh | bash，按提示选择要接入的 AI",
+  "Windows：从 Releases 下载 CrossPet-Windows.zip，解压后双击 install.cmd 安装并打开",
+  "右键桌宠 →「设置…」→「接入 AI」，把你用的 AI 逐个接入",
+  "macOS 从源码安装：git clone https://github.com/lokicorvus/crosspet.git && cd crosspet && ./install.sh",
+  "接入单个 AI 可运行：python3 tools/integrate.py install codex（可选 claude-hooks、claude-mod、codex、deepseek、antigravity、gemini、workbuddy、zcode、hermes）"
+ ],
+ "summary": "CrossPet 是一个跨 AI 桌面宠物，支持 macOS 和 Windows。它会根据你当前使用的 AI 自动切换角色形象，并跟随 AI 的工作状态做出思考、读文件、写代码、跑命令等动作，还能在名牌下显示额度或余额。适合经常使用 Claude Code、Codex、DeepSeek Harness 等工具的开发者，给日常 AI 使用增添趣味和状态反馈。",
+ "tagline": "跟着你用的 AI 换形象、跟着 AI 工作状态做动作的桌面宠物"
+}

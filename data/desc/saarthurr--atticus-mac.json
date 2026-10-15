@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 macOS 并希望用语音快速操作电脑、减少重复点击的开发者与普通用户，尤其是已有 Claude Pro 或 Max 套餐的人。",
+ "date": "2026-10-15",
+ "features": [
+  "按住 ⌃⌥Space 说话，松开即执行，可切换为按两次发送",
+  "简单操作跳过 AI 直接运行，并学习为快捷方式",
+  "通过 Claude Code 使用已有 Claude Pro/Max 套餐，无需 API key",
+  "记住用户信息与纠正规则，后续请求自动应用",
+  "后台 agent 处理大任务，可语音调整运行中的 agent",
+  "Meeting Copilot 保存会议转写、说话人标签和笔记",
+  "安全模式沙箱运行 AI 命令，危险操作前询问，rm/sudo 始终阻止"
+ ],
+ "intro": "Atticus 是一款面向 macOS 的语音助手。按住 ⌃⌥Space 说出需求，松开后它就会执行，例如移动窗口、查找文件、读取屏幕内容、打开应用或播放音乐。它通过 Claude Code 运行在你已有的 Claude Pro 或 Max 套餐上，不需要额外申请 API key。\n\n对于打开应用、移动窗口、网页搜索和播放音乐这类简单操作，Atticus 会跳过 AI 直接执行，并把你重复要求的动作记成快捷方式，下次无需 AI 即可完成。它还能记住你告诉它的事实和纠正过的错误，在后续请求中自动应用。语音转文字使用 Apple 的本地识别，音频不会离开你的 Mac。\n\n遇到较大的任务时，Atticus 会交给后台 agent 处理，并在角落显示进度。它还提供 Meeting Copilot，可在会议中保存转写文本、说话人标签和笔记。安全方面，AI 命令默认在沙箱中运行，删除、发送、购买或修改文件前会先询问你，rm、sudo 等命令始终被阻止。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从项目主页或 Releases 下载并安装 Atticus for macOS",
+  "首次启动时按引导授予辅助功能、屏幕录制等所需权限",
+  "在 Settings → AI client 中选择 Claude Code 或 Devin CLI 作为 AI 客户端",
+  "按住 ⌃⌥Space 说出需求，松开后等待执行结果"
+ ],
+ "summary": "Atticus 是一款 macOS 语音助手，按住 ⌃⌥Space 说出需求即可让电脑执行操作，例如移动窗口、查找文件、读取屏幕、打开应用或播放音乐。它通过 Claude Code 运行在已有的 Claude Pro 或 Max 套餐上，无需额外 API key。简单操作会跳过 AI 直接完成并学习为快捷方式，大任务可交给后台 agent 处理。语音识别在本地完成，音频不离开 Mac，危险操作前会先询问。",
+ "tagline": "Mac 上的语音助手，按住快捷键说话即可操作电脑"
+}

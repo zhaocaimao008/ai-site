@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在一个项目里调用多种模态模型、希望统一 key 和账单的开发者，也适合想了解聚合 API 请求形态和路由模式的团队参考。",
+ "date": "2026-10-15",
+ "features": [
+  "机器可读的模型目录 data/models.json，包含模型 id、别名、模态、计费单位和价格",
+  "CATALOG.md 以表格形式展示同一份目录，由 CI 重新生成",
+  "tools/catalog.py 可从公开定价数据构建目录，无需 API key",
+  "examples/router.py 演示按任务选择模型、计算成本并安全重试",
+  "examples/openai_sdk_client.py 展示 OpenAI SDK 指向聚合 base URL 的用法",
+  "examples/curl.sh 提供 chat、图像生成和异步任务轮询的 curl 示例"
+ ],
+ "intro": "这个仓库是 APIMart 聚合 API 的配套资料库，核心思路是用同一个 API key 和同一个 base URL（https://api.apimart.ai/v1）访问 300 多个图像、视频和语言模型，切换模型只需改 model 字段，不用换客户端。\n\n仓库里提供了机器可读的模型目录 data/models.json 和可读表格 CATALOG.md，包含模型 id、别名、模态、计费单位和价格；还有 tools/catalog.py 从公开定价数据生成目录，以及 router.py、openai_sdk_client.py、curl.sh 等示例，演示图像生成、异步任务轮询和 OpenAI SDK 接入方式。README 还整理了按模态路由、幂等重试、退避轮询、按任务记录成本等实践建议。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 README 提供的链接获取 API key，并设置环境变量 APIMART_API_KEY",
+  "使用 OpenAI SDK 时，将 base_url 设为 https://api.apimart.ai/v1，api_key 传入环境变量",
+  "图像生成可向 https://api.apimart.ai/v1/images/generations 提交请求，并带上 Idempotency-Key",
+  "提交后通过 GET /v1/tasks/{id} 轮询任务状态、进度、cost 和结果 URL",
+  "运行 python examples/router.py image --model gpt-image-2.5-ext --count 250 可预估花费"
+ ],
+ "summary": "这个仓库是 APIMart 聚合 API 的配套资料，解决的是多模型调用时 key、base URL 和账单分散的问题：用同一个 key 和 https://api.apimart.ai/v1 就能访问 300 多个图像、视频和语言模型，切换模型只需改 model 字段。仓库提供机器可读的模型目录、可读表格，以及 OpenAI SDK、curl 和路由重试的示例代码，适合需要统一接入多种模态模型并控制成本的开发者参考。",
+ "tagline": "一个 key 调用 300+ 模型的 AI API 聚合目录与示例"
+}

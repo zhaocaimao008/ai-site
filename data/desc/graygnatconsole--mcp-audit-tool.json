@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 MCP 配置 AI 代理的开发者与安全工程师，以及希望在 CI 中检查 MCP 配置风险、防止凭据泄露或命令注入的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "12 条内置检测规则，覆盖 OWASP MCP Top 10 相关类别",
+  "自动发现 macOS、Linux、Windows 上的 Claude Desktop、Cursor、Windsurf、Cline、Zed、VS Code 等 MCP 配置",
+  "输出安全评分与等级（A+ 到 F），并给出修复建议",
+  "支持 Rich 终端报告、JSON 和 SARIF 2.1.0 格式",
+  "可接入 GitHub Actions，按严重级别阈值让构建失败并上传到 GitHub Code Scanning",
+  "纯 Python 3.9+，仅依赖 typer、rich、pyyaml，规则引擎可扩展"
+ ],
+ "intro": "mcp-audit-tool 是一个针对 Model Context Protocol（MCP）服务器配置的安全审计命令行工具。MCP 让 Claude Desktop、Cursor、VS Code Copilot、Windsurf、Cline、Zed 等 AI 助手调用外部工具、读取文件并执行命令，而配置文件里的一行内容就可能把凭据、磁盘访问权限或任意命令执行能力交给模型。该工具用纯 Python 编写，对 MCP 客户端配置做静态分析，无需 Node.js、Docker 或 LLM API key。\n\n它内置 12 条检测规则，覆盖硬编码密钥、未固定版本的 npx/uvx/pipx 包（rug pull 风险）、curl 管道到 shell、危险启动命令、根目录文件系统访问、明文 HTTP 远程服务器、工具描述中的隐藏指令（tool poisoning）等。扫描结果会给出安全评分与等级（A+ 到 F），并提供终端报告、JSON 和 SARIF 2.1.0 输出，可接入 CI 在严重级别超阈值时让构建失败。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pipx install git+https://github.com/graygnatconsole/mcp-audit-tool.git",
+  "mcp-audit scan",
+  "mcp-audit scan ~/.cursor/mcp.json",
+  "mcp-audit scan --format sarif --output results.sarif",
+  "mcp-audit scan --fail-on high"
+ ],
+ "summary": "MCP 让 AI 助手能调用外部工具、读文件和执行命令，但配置文件里的一行内容就可能暴露密钥、开放整个磁盘或引入任意命令执行。这个工具用纯 Python 对 MCP 客户端配置做静态扫描，自动发现 Claude Desktop、Cursor、VS Code 等客户端的配置，检查硬编码密钥、未固定版本的包、管道安装脚本、工具描述中的隐藏指令等风险，并给出评分和修复建议。适合在本地排查或在 CI 中把关 MCP 配置安全。",
+ "tagline": "扫描 MCP 配置的 AI 代理安全审计 CLI"
+}

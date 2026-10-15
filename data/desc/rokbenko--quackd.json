@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有或计划搭建开源机器人（如 SO-101、LeRobot、Microduck 等）并希望用自然语言目标驱动它们的开发者与机器人爱好者。",
+ "date": "2026-10-15",
+ "features": [
+  "用一个 CLI 注册并连接多台不同型号的机器人",
+  "由 LLM 根据 manifest 声明的技能逐步选择动作，结合摄像头反馈循环执行",
+  "支持云端 API 与本地开源模型（Ollama、vLLM、llama.cpp、LM Studio）",
+  "支持从终端、聊天或 .duck 任务文件下发目标",
+  "对模型施加不可绕过的执行契约：允许的技能、步数上限、人工确认与中止条件",
+  "多机器人 flock 模式下每台机器人独立决策并互相通报计划以分工"
+ ],
+ "intro": "quackd 是一个面向自有机器人的命令行工具。每台机器人通过适配器接入，适配器以 manifest 声明机身类型和可用技能，你只需按名称注册一次并说明如何连接。之后可以从终端、聊天或 .duck 任务文件给出目标，由大语言模型从 manifest 声明的技能中逐步选择并执行，结合摄像头反馈反复决策，直到完成或确认无法完成。\n\n模型方面支持 Claude、OpenAI、Gemini、Grok、Mistral、DeepSeek、Cohere、Qwen、Kimi、GLM 和 Meta 的 API，也可通过 OpenRouter 统一调用，或经 Ollama、vLLM、llama.cpp、LM Studio 在本地运行开源模型。项目还提供 --decision-llm 选项，用不生成文本的决策模型在已有技能调用之间做选择。\n\n目前支持 Microduck、Open Duck Mini、LeRobot、XLeRobot、AlohaMini、ToddlerBot 以及任意 ROS 2 底盘，共七种机身，其中一种已在真实硬件上运行。给一群机器人同一目标时，每台机器人拥有自己的模型，并通过互相告知计划来分工。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 quackd：pip install quackd",
+  "按名称注册机器人，并配置其适配器与连接方式",
+  "从终端下发目标，例如：quackd run --goal \"Wave to the camera with an extended arm\""
+ ],
+ "summary": "quackd 是一个命令行工具，把不同型号的机器人统一接入，并为每台机器人配一个大语言模型作为大脑。你只需注册一次机器人，之后用自然语言给出目标，模型就会从该机器人声明的技能中逐步选择动作，结合摄像头反馈反复决策。它支持云端模型和本地开源模型，也支持给一群机器人同一目标并让它们互相分工。适合拥有 SO-101、LeRobot 等开源机器人、想用自然语言指挥它们的开发者。",
+ "tagline": "用一个 CLI 连接并指挥多台机器人，每台由 LLM 驱动"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex、Cursor 或 OpenCode 等 AI 编程助手，并希望在开发过程中持续获得结构化代码质量反馈的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "以本地 MCP 服务器形式运行，通过 stdio 与编程助手通信",
+  "支持 Claude Code、Codex、Cursor、OpenCode 等客户端",
+  "提供单一 MCP 工具 jev_review，接收 task、diff、files、repositoryContext 等上下文",
+  "按正确性、认知复杂度、可读性、模块化、测试、安全等独立维度给出 1–10 分和 0–1 置信度",
+  "支持传入 previousEvaluation，返回各维度变化、改进、退步和未解决的弱点",
+  "无托管后端，API key 保留在本地，仅直接请求 Jev API"
+ ],
+ "intro": "Jev Review 是一个本地运行的 MCP 插件，为 Claude Code、Codex、Cursor、OpenCode 等 AI 编程助手提供结构化的软件质量评分。它本身不修改代码，而是由主编程助手负责诊断问题并改动代码，Jev 则给出正确性、复杂度、可读性、模块化、测试、安全等多个独立维度的快速标量信号。\n\n它通过 MCP stdio 在本地以 Node.js 进程运行，没有托管后端、数据库或遥测服务，API key 保留在用户机器上，唯一的远程请求是直接发往配置好的 Jev API。Jev 返回的是类型化的 Score、Choice 和 Noul 决策，而不是自由文本评审，因此不会生成“为什么分数低”的散文式解释，也不会给出合成的总分。\n\n典型用法是在完成一段连贯的实现、根据评分做了一轮改进之后，以及最终交付之前进行频繁而聚焦的检查。首次调用建立基线，之后助手自行检查实现、假设薄弱维度、改进代码并重新评分，通过对比前后维度变化来判断进展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Node.js 20 或更新版本，并从 TypeSafe 控制台获取 Jev API key",
+  "设置环境变量：export JEV_API_KEY=\"your-key\"",
+  "从 GitHub 安装插件：npx plugins add NiazMorshed2007/jev-review",
+  "按提示选择编程客户端并重启它",
+  "在实现一个非平凡改动时，让助手调用 jev-review"
+ ],
+ "summary": "Jev Review 是一个本地运行的 MCP 插件，为 Claude Code、Codex、Cursor、OpenCode 等 AI 编程助手提供持续的软件质量评分。它不直接改代码，而是由助手负责诊断和修改，Jev 在正确性、复杂度、可读性、模块化、测试、安全等维度给出独立分数和置信度，并支持与上一次评估对比。适合希望在实现过程中频繁获得结构化质量反馈、又不想把代码和密钥交给托管后端的开发者。",
+ "tagline": "为 AI 编程助手提供本地化持续代码质量评分"
+}

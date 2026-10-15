@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Windows 上为不同应用配置代理分流、又不想手写复杂规则的开发者和进阶用户。",
+ "date": "2026-10-15",
+ "features": [
+  "用自然语言描述网络意图，由 OpenAI 或本地 Ollama 生成结构化分流规则草稿",
+  "对 AI 输出做本地确定性校验，生成的规则默认禁用，需用户手动启用",
+  "生成并监管 sing-box v1.13+ TUN 配置，默认直连，按规则分流",
+  "AI Policy Intelligence：本地分析规则顺序、重复、冲突、遮蔽、宽泛范围等问题，可选 AI 解释",
+  "AI Route Decision Simulator：对指定进程、目标、端口、协议做静态路由推演",
+  "OpenAI 密钥从环境变量 OPENAI_API_KEY 读取，不写入应用配置、日志或导出"
+ ],
+ "intro": "IntentRoute AI 是一个开源的 Windows 控制面板，目标是把用户用自然语言描述的网络意图，转换成经过本地校验的分流规则草稿。它支持 OpenAI Responses API 或本地已运行的 Ollama 模型，生成的规则会交给与手动编辑器相同的 sing-box TUN 配置流程处理。\n\n项目本身不抓包，而是生成 sing-box v1.13+ 的 TUN 配置，启动并监管外部 sing-box 进程，默认保持直连，除非规则另有指定。AI 输出被视为不可信输入，会经过字段、进程名、域名、CIDR、端口、协议、动作、重复项和代理可用性等校验，生成的规则默认处于禁用状态，必须由用户显式启用。\n\n除 AI 草稿外，还提供本地 Policy Intelligence 工作流，用于检查规则顺序、重复、冲突、遮蔽、宽泛范围和禁用草稿等问题；以及本地 Route Decision Simulator，对某个具体的进程、目标、端口和协议做静态推演。两者都不会观察真实流量，AI 解释仅作为只读文本，不能修改本地结果或配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载并运行 IntentRoute AI（当前为 v0.31.0 预览版）",
+  "在应用中选择 OpenAI 或 Ollama (local) 作为 AI 提供方",
+  "若使用 OpenAI，先在 PowerShell 中设置环境变量：[Environment]::SetEnvironmentVariable('OPENAI_API_KEY', 'your-api-key', 'User')",
+  "输入自然语言意图，例如“Route Chrome and Cursor traffic for GitHub and OpenAI through the proxy; keep everything else direct.”",
+  "审阅生成的规则草稿，确认后以禁用状态接受，再手动启用规则"
+ ],
+ "summary": "IntentRoute AI 面向 Windows 用户，解决许多应用不提供代理控制、手写进程/域名/IP 分流规则又容易出错的问题。它把自然语言意图交给 OpenAI 或本地 Ollama 生成规则草稿，再经本地校验后交给 sing-box TUN 配置流程，规则默认禁用、需手动启用。项目还提供本地规则检查和静态路由推演工具，适合想用 AI 辅助配置 Windows 分流的开发者和进阶用户。",
+ "tagline": "用自然语言生成 Windows 分流规则的 AI 助手"
+}

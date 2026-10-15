@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在同一台电脑上并行使用多个 Google Antigravity / Gemini Pro 账号的开发者，尤其是 macOS 和 Windows 用户。",
+ "date": "2026-10-15",
+ "features": [
+  "在独立窗口中并行运行多个 Google Gemini Pro 账号，无需切换会话",
+  "基于官方 --user-data-dir 的沙箱隔离，不修改二进制或数据库",
+  "自动生成 macOS .app 或 Windows 快捷方式，支持 Spotlight / 系统搜索启动",
+  "支持从宿主机继承配置或从已有 profile 克隆配置，同时严格隔离 OAuth 凭据与聊天记录",
+  "提供 pgrav doctor 健康检查与自动修复，应对 Antigravity 更新导致的兼容问题",
+  "内置本地 Web 控制台与悬浮小组件，可批量管理实例"
+ ],
+ "intro": "ParaGravity（命令名 pgrav）是一个用 Python 编写的命令行工具，用于在 macOS 和 Windows 上并行运行多个 Google Antigravity（Gemini Pro）账号。它基于 Chromium/Electron 官方的 --user-data-dir 机制创建独立沙箱，不修改二进制文件或内部数据库，每个实例拥有独立的扩展、本地存储、indexedDB 和聊天记录。\n\n工具会自动生成 macOS 的 .app 或 Windows 的快捷方式，可直接通过 Spotlight 或系统搜索启动。它提供创建、列出、启动、停止、查看日志、健康检查与修复、删除等子命令，还附带本地 Web 控制台和悬浮小组件。项目无外部 pip/npm 依赖，空闲时不常驻后台进程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS 一行安装：curl -fsSL https://raw.githubusercontent.com/edison-land/paragravity/main/install.sh | bash",
+  "Windows：克隆仓库到 $HOME\\.paragravity，并将 bin 目录加入用户 PATH，然后使用 pgrav 命令",
+  "创建隔离实例：pgrav create work",
+  "启动实例：pgrav launch work，或通过 Spotlight / 系统搜索启动生成的快捷方式",
+  "查看所有实例：pgrav list"
+ ],
+ "summary": "ParaGravity 解决的是在同一台电脑上并行使用多个 Google Antigravity（Gemini Pro）账号的问题。它利用 Chromium/Electron 官方的 --user-data-dir 机制为每个账号创建独立沙箱，不修改程序文件，各实例的扩展、存储和聊天记录互不干扰。工具提供创建、启动、停止、日志查看和健康修复等命令，并自动生成系统快捷方式，适合需要同时管理多个账号的开发者。",
+ "tagline": "为 Google Antigravity 提供多账号并行与沙箱隔离的管理工具"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "同时使用多个编码 agent 的开发者，以及希望把 agent 工作流整合进统一工作区、并愿意通过插件扩展环境的人。",
+ "date": "2026-10-15",
+ "features": [
+  "同一工作区中运行多种编码 agent，agent 可替换而上下文与 diff 保留",
+  "画布式界面：agent 会话、终端、文件编辑器、diff 评论、看板平铺排列",
+  "内置 33 个编码 agent 目录，支持自定义 agent 定义与注意力队列",
+  "Agent Control：agent 可读取无障碍树并操作 ACRYL，每次变更需用户批准并记录审计日志",
+  "基于 Cordis 的插件体系，支持热重载，插件可贡献标签页类型、工具和服务",
+  "Blend 可将整套插件组合作为单元分享；桌面、本地 Web、终端三个界面共享同一运行时"
+ ],
+ "intro": "ACRYL 是一个面向编码 agent 的 Agentic Development Environment 与运行时。它把关系反过来：不是项目活在某个 agent 的对话里，而是 agent 进入你的项目。工作区、上下文、任务和交接都由 ACRYL 持有，Claude Code、Codex、OpenCode、Pi、Gemini CLI、DeepSeek Harness 以及兼容 ACP 的 agent 都作为可替换的 worker 进出同一个开发场景，切换 agent 时决策、diff 和会话仍然保留。\n\n界面不是聊天窗口，而是画布：左侧是项目和 git worktree，中间是可平铺的标签页，包含 agent 会话、原生终端、文件编辑器、可逐行评论并回传给 agent 的 diff，以及可拖拽的看板。内置 33 个编码 agent 的目录，并支持自定义 agent 定义。\n\nACRYL 基于 Cordis 构建，强调一切皆插件，可热重载；桌面（Electron）、本地 Web（acryl web）和终端 UI 三个界面共享同一运行时。项目处于早期开发阶段，接口和工作流可能变化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "CLI 安装：curl -fsSL https://acryl.dev/install | bash，然后运行 acryl",
+  "或用 npm 安装：npm install -g acryl --allow-scripts=@deepseek-ai/dsh-subprocess-local,@google/genai,koffi,node-pty,protobufjs，然后运行 acryl",
+  "启动本地 Web 界面：acryl web",
+  "桌面版可从 GitHub Releases 下载对应平台的 DMG、EXE 或 DEB 安装包",
+  "Nix 用户可运行 nix run github:acryldev/acryl 或 nix run github:acryldev/acryl#acryl-desktop"
+ ],
+ "summary": "ACRYL 是一个面向编码 agent 的开发环境，解决在多个 agent 之间切换时上下文、配置和工作线索丢失的问题。它把工作区、上下文和任务交给 ACRYL 持有，Claude Code、Codex、Gemini CLI 等 agent 作为可替换的 worker 进出同一项目。界面以可平铺的画布呈现 agent 会话、终端、编辑器、diff 评论和看板，并基于 Cordis 提供插件与热重载，桌面、本地 Web 和终端共享同一运行时。",
+ "tagline": "让各种编码 agent 共用一个持久工作区的开发环境"
+}

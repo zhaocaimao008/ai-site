@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已经会调用 LLM API、想进一步学习企业级 Agent 系统设计的开发者，以及需要了解 Agent 生产落地各层工程考量的工程师。",
+ "date": "2026-10-15",
+ "features": [
+  "32 节中英双语课程，覆盖工具、上下文、架构、编排、可靠性、安全、可观测、评估、并发、成本与发布",
+  "不依赖 Agent 框架，从零手写核心运行时 agentkit，核心约 3800 行、多进程模块约 2000 行",
+  "每课配有带自动化测试的练习，离线、确定性、零成本",
+  "从第 02 课起为 async，从第 12 课起为真实多进程，验证崩溃接手、僵尸 worker 与优雅停机",
+  "提供 agentkit/distributed 多进程执行与 agentkit/contrib 成熟组件适配器（Postgres、Redis、Temporal、OpenTelemetry、LiteLLM、Cedar）",
+  "支持任何 OpenAI 兼容接口，不绑定特定模型厂商"
+ ],
+ "intro": "这是一个面向生产环境的 AI Agent 系统设计课程，目标是把「会调 LLM API」的人带到「能设计生产级 Agent 系统」。项目不依赖任何 Agent 框架，从零手写 Agent 的每一层：主循环、工具、上下文、编排、可靠性、安全、可观测、评估、并发、成本与发布，并配有带自动化测试的练习，测试离线、确定性、零成本。\n\n课程共 32 节，中英双语，每份讲义都有等价的英文版。从第 02 课起使用 async，一个进程可同时服务成百上千个会话；从第 12 课起使用真实多进程，用真进程和真信号验证崩溃接手、僵尸 worker 与优雅停机。最后把同一套接口换成 Postgres、Redis、Temporal、OpenTelemetry、LiteLLM、Cedar 等成熟组件，落到生产。\n\n项目支持任何 OpenAI 兼容接口，包括 OpenAI、DeepSeek、Qwen、vLLM 及各类模型网关。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读 README 中的「快速开始」与「学习路线」章节，按课程顺序学习",
+  "使用 agentkit 组装 Agent：from agentkit import *，配置 llm、tools、hooks、context_strategy、checkpointer、tracer 等参数",
+  "运行示例：python -m agentkit.chat",
+  "多进程场景下，用 python -m agentkit.distributed.worker --queue sqlite:///runs/jobs.db --app app.py:make_handler --concurrency 16 启动 worker",
+  "多台机器时把 --queue 换成 postgresql://...，其余不变"
+ ],
+ "summary": "这个项目是一套企业级 AI Agent 系统设计课程，面向已经会调用 LLM API、但想把 Agent 真正放进生产环境的开发者。它不依赖现成 Agent 框架，而是从零手写主循环、工具、上下文、编排、可靠性、安全、可观测、评估、并发、成本与发布等每一层，并配有离线、确定性、零成本的测试练习。课程中英双语，从 async 并发到真实多进程崩溃接手都有覆盖，最后把同一套接口换成 Postgres、Redis、Temporal 等成熟组件落地。",
+ "tagline": "从零手写企业级 Agent 系统的 32 课双语训练营"
+}

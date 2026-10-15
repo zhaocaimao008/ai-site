@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在长 PDF（如年报、手册）中定位答案页的开发者，以及想了解 Jev Choice 与 PageIndex 配合方式的人。",
+ "date": "2026-10-15",
+ "features": [
+  "把「哪一页能回答问题」建模为 Jev 的多选题 Choice，返回每页概率",
+  "用 PageIndex 将长文档转为带标题、摘要和页码范围的分层树",
+  "逐层搜索：每层一次 Choice，从章节选到页面，菜单始终很短",
+  "支持更深的树、top-K 搜索和用 Noul 校验等增强方式",
+  "提供 page_search.py 脚本，可直接对短 PDF 做扁平页搜索"
+ ],
+ "intro": "这个项目演示如何用 Jev 的 Choice 原语和 PageIndex 做长文档检索，不依赖向量数据库或 embedding。核心思路是把「哪一页能回答这个问题」当成一道多选题：每一页是一个选项，Jev 为每个选项返回概率，概率最高的一页就是答案。\n\n但扁平页搜索会遇到两个限制：一是 state 加 Choice 必须放进 32k token，几十页之后就不够用；二是 Choice 最多 255 个选项，超过 255 页的文档无法一页一个选项。PageIndex 把文档转成层级树（文档—章节—页面），Jev 每层只做一次小范围选择，从而绕开这两个限制。\n\nREADME 给出了 page_search.py 的用法，以及构建树、逐层搜索的完整 Python 示例代码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖并配置 API key（见 README 的 Setup 一节）",
+  "对短 PDF 运行扁平页搜索：python page_search.py handbook.pdf \"How many vacation days do new employees get?\"",
+  "用 PageIndexClient 提交文档并获取树结构：doc_id = pageindex.submit_document(\"NVIDIA_10K.pdf\", wait=True)[\"doc_id\"]",
+  "用 TypeSafeClient(model=\"jev-1.13.0\") 对顶层章节发起 Choice，选出最可能包含答案的章节",
+  "再对该章节的页码范围发起一次 Choice，得到最可能的页面"
+ ],
+ "summary": "长文档问答的一个常见做法是向量检索，但这个项目走的是另一条路：把「哪一页能回答问题」直接当成多选题交给 Jev 的 Choice，由模型为每个选项给出概率，不需要向量数据库和 embedding。问题在于文档一长，页数会超出模型一次能读的 token 上限和选项数量上限，于是项目引入 PageIndex 把文档组织成文档、章节、页面的层级树，让模型每层只在一小撮选项里做选择，逐层缩小范围直到定位到具体页面。README 提供了可直接运行的示例脚本和代码片段。",
+ "tagline": "用 Jev 与 PageIndex 在长文档中定位答案页"
+}

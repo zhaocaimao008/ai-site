@@ -1,0 +1,26 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为短视频、Reel、广告等快速挑选可商用背景音乐的剪辑师、内容创作者，以及希望把 BGM 匹配能力接入 AI Agent 的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "分析视频画面，输出情绪、能量曲线、语音占比、场景切点和 BPM",
+  "返回 3–7 首带许可证和署名信息的 BGM 候选，附推荐理由",
+  "生成 12–20 秒 hook 窗口和 ffmpeg ducking 混音命令",
+  "支持 stdio 与 streamable HTTP 两种 MCP 接入方式",
+  "内置 20 首种子曲库，无 API key 也可离线使用",
+  "suggest_cuts 将场景切点对齐到 BPM 网格并返回 EDL",
+  "save_brand_kit 保存 BPM / 情绪 / 无人声偏好供后续推荐复用",
+  "analyze_batch 一次分析最多 20 个片段并聚类情绪"
+ ],
+ "intro": "Sonicmatch 是一个基于 Model Context Protocol 的服务器，面向 Claude Desktop、Cursor 等 MCP 客户端。它分析视频画面本身（而非脚本），输出可安全使用的 BGM 候选列表、12–20 秒的 hook 窗口，以及 ffmpeg ducking 混音参数。\n\n项目通过 ingest_video、analyze_video_music、recommend_bgm、preview_mix、export_mix_spec 等工具串联工作流，支持本地文件或 HTTPS URL 输入，返回 asset_id 而不传输原始视频字节。每条推荐都会附带许可证与署名信息，非商用曲目不会被自动推荐。\n\n在没有 API key 的情况下，它依靠内置的 20 首种子曲库和本地 ffmpeg 启发式分析运行；配置 GEMINI_API_KEY 后可启用 Gemini 视频理解，也可选接入 Jamendo、Freesound 或用户自有的 Artlist / Epidemic JSON 库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保系统已安装 Python 3.10+ 以及 ffmpeg / ffprobe",
+  "pip install git+https://github.com/js713-lab/sonic-match-mcp.git",
+  "运行 sonicmatch-mcp 启动 stdio 服务，或 sonicmatch-mcp --http --port 8765 启动 HTTP 服务",
+  "在 Claude Desktop 或 Cursor 的 MCP 配置中填入 sonicmatch-mcp 命令路径",
+  "向客户端发送提示，例如：分析 ./clip.mp4 并推荐 5 首纯音乐 BGM，再给出混音用的 ffmpeg 命令"
+ ],
+ "summary": "Sonicmatch 是一个 MCP 服务器，用来给视频自动挑选可安全使用的背景音乐。它分析的是画面本身，而不是脚本文案，会返回一小份带许可证信息的 BGM 候选、一段 12–20 秒的 hook 窗口，以及可直接使用的 ffmpeg 混音参数。适合剪辑 Reel、短视频或广告时需要快速配乐、又不想在版权上踩坑的创作者，也适合把配乐能力接入 Claude Desktop、Cursor 等 Agent 客户端的开发者。没有 API key 时可用内置种子曲库离线运行。",
+ "tagline": "为视频自动匹配可商用 BGM 的 MCP 服务器"
+}

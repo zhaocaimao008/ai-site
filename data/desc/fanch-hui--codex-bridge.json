@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望用 ChatGPT 网页版或 Qwen Studio 直接操作本地项目，并统一调度本机编码 Agent 的个人开发者与自托管用户。",
+ "date": "2026-10-15",
+ "features": [
+  "通过 Secure MCP Tunnel 或 localhost MCP 将 ChatGPT 网页版、Qwen Studio 接入本地项目",
+  "Direct Workspace 提供受控的文件读写、Patch、命令执行与 Git 操作",
+  "统一管理 Codex、OpenCode、DeepSeek Harness、Antigravity、Pi、Qoder 的任务、审批与会话",
+  "工作台按 Agent 分组展示项目会话、历史分页、工具卡片、审批与失败任务重试",
+  "支持本机技能发现、只读查看与显式 Action 调用",
+  "跨平台桌面 App，macOS、Windows、Linux 共用 Swift 核心与界面"
+ ],
+ "intro": "Codex Bridge 是一个面向个人自托管场景的桌面 App 与后台服务，通过 MCP 把 ChatGPT 网页版、OpenAI Dot、Qwen Studio 与本机工作台连接起来，让聊天客户端能够读写已授权的本地项目目录、运行命令，并调用本机的编码 Agent 执行任务。\n\n它统一管理 Codex、OpenCode、DeepSeek Harness、Antigravity、Pi 与 Qoder 的任务、审批和会话，项目目录授权、任务记录与配置都保存在本机。macOS、Windows 与 Linux 共用 Swift 核心和桌面界面，支持从 GitHub Releases 下载安装包或从源码构建。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的安装包并安装（macOS 拖入 Applications，Windows 运行安装器，Linux 使用 APT 安装 .deb）",
+  "打开 App，确认后台服务已连接",
+  "添加项目：登记本地目录即授权完整访问",
+  "连接聊天客户端：ChatGPT / Dot 按 Tunnel 配置指南完成 Tunnel 配置，在 ChatGPT 插件中添加 Codex Bridge 并启用；Qwen Studio 使用本机回环 HTTP MCP",
+  "在已启用插件的对话中要求读取、修改项目文件或运行命令，需要批准时在 Bridge 中处理"
+ ],
+ "summary": "Codex Bridge 解决的是让 ChatGPT 网页版等聊天客户端安全地操作本地项目的问题。它通过 MCP 把聊天客户端与本机目录、命令执行能力连接起来，并统一调度 Codex、OpenCode、DeepSeek Harness 等编码 Agent，所有授权、任务记录和配置都保留在本机。适合希望用对话方式读写本地代码、运行命令，同时需要审批与权限控制的个人开发者。",
+ "tagline": "把 ChatGPT 网页版接入本机项目与编码 Agent 的 MCP 桥接工具"
+}

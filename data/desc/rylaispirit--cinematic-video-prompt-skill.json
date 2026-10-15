@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 视频或图像生成工具、希望提升提示词精确度的创作者与开发者，也适合想系统学习电影摄影词汇的人。",
+ "date": "2026-10-15",
+ "features": [
+  "700+ 电影摄影术语参考，含机位、镜头运动、灯光、构图、调色等分类",
+  "提供提示词公式与按视频类型（故事、产品、美食、夜景等）预设的组合",
+  "作为 Claude Skill 使用，可在 Claude Code、Claude.ai 等环境自动加载",
+  "附带 character-sheet-lite 与 oriental-scene-lite 两个 Lite 版附加 Skill",
+  "术语与模型无关，适用于 Veo 3、Kling、Sora、Runway、Midjourney 等"
+ ],
+ "intro": "这是一个面向 AI 视频/图像生成的提示词工具包，同时也是一个 Claude Skill。它把专业的电影摄影词汇整理成可查、可用的参考，让原本模糊的提示词（如「一个好看的电影感场景」）变成精确描述（如「中近景、低角度、缓慢推轨、轮廓光、青橙调色」）。\n\n内容包含 700+ 条术语，覆盖机位与镜头运动、灯光、构图、镜头与胶片、风格色彩情绪、材质天气姿态等类别，并附带越南语解释。SKILL.md 提供提示词公式、按视频类型预设的组合、情绪到组合的对照表以及发布前检查清单。词汇与模型无关，适用于 Veo 3、Kling、Sora、Runway、Midjourney 等读取英文提示词的模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code：git clone https://github.com/Rylaispirit/cinematic-video-prompt-skill.git ~/.claude/skills/cinematic-video-prompt",
+  "Claude.ai / Cowork：将文件夹打包为 zip（SKILL.md 需位于 zip 根目录），在 Settings → Capabilities → Skills 中上传",
+  "附加 Skill：cp -r bonus-skills/character-sheet-lite ~/.claude/skills/",
+  "其他 AI 工具：将 SKILL.md 作为 system prompt 或自定义指令粘贴使用"
+ ],
+ "summary": "这个项目把电影摄影的专业词汇整理成一套可查的提示词参考，并做成 Claude Skill，帮助用户把模糊的 AI 视频/图像提示词改写成精确的镜头语言描述。它覆盖机位、镜头运动、灯光、构图、调色等 700 多条术语，还给出提示词公式和按视频类型预设的组合。适合用 Veo 3、Kling、Sora、Runway、Midjourney 等工具创作、希望提升提示词控制力的用户。",
+ "tagline": "面向 AI 视频与图像生成的电影级提示词词典与 Claude Skill"
+}

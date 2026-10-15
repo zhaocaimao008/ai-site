@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合同时持有多个 Claude 或 ChatGPT/Codex 账号、经常在 Claude Code 中触发用量上限的开发者，以及希望把自有网关或 API key 纳入统一供给的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "在请求之间无缝轮换账号，会话不中断、不提示、不重启",
+  "混合账号池：Claude 订阅、ChatGPT/Codex 订阅与 API key 可并存并各自设置优先级和阈值",
+  "把 Codex 账号翻译为 Anthropic API 格式，支持 token 级流式输出",
+  "本地 dashboard 展示实时用量、成本、模型分布、项目归属与活动日志",
+  "凭据使用系统原生存储（Keychain / Secret Service / DPAPI），支持加密导出导入",
+  "macOS HUD 悬浮窗与用量通知，在额度耗尽前提醒"
+ ],
+ "intro": "Claude Unlimited 是一个本地运行的账号池代理，把 Claude Pro/Max 订阅、ChatGPT/Codex 订阅以及 Anthropic API key 汇总成一份连续供给，供 Claude Code 使用。当某个账号接近用量上限时，下一个账号会在下一次请求时接管，会话、上下文和终端都不变，用户不会被登出或要求重启。\n\n它同时支持把 Codex 账号翻译成 Anthropic API 格式，让 Claude Code 由 GPT 模型驱动，并允许为每个 Claude 模型指定对应的 GPT 模型与推理强度。项目提供本地 dashboard，可查看用量条、成本、模型分布、按项目归属和活动日志，凭据存放在系统原生密钥库中，所有数据留在本机。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装后运行 claude-unlimited code 即可让 Claude Code 走账号池",
+  "用一条命令添加 Claude 订阅账号",
+  "用一条命令添加 ChatGPT / Codex 订阅账号",
+  "API key 通过 dashboard 添加",
+  "打开本地 dashboard 查看用量、成本与活动日志"
+ ],
+ "summary": "Claude Unlimited 解决的是 Claude Code 使用中账号额度耗尽导致会话中断的问题。它把 Claude Pro/Max、ChatGPT/Codex 订阅和 Anthropic API key 汇成一个本地账号池，当某个账号接近上限时，下一个账号在下次请求时自动接管，会话与上下文保持不变。项目还支持用 Codex 账号驱动 Claude Code，并提供本地 dashboard 查看用量、成本与活动日志，凭据保存在系统原生密钥库中，数据不出本机。",
+ "tagline": "把多个 Claude、ChatGPT 与 API 账号池化，为 Claude Code 提供不间断会话"
+}

@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Codex 或 Claude Desktop 中进行长时间、多图片对话的开发者，尤其是需要反复迭代图像、又不希望因请求过大而中断任务的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "集中列出任务或会话中的全部图片，含缩略图、ID 和大小，可点击预览",
+  "按来源筛选：用户上传、Codex 中批注的 PDF 页、网页截图、模型查看或生成的图片",
+  "取消勾选后图片从下一条消息起变为占位符，可单张或整轮切换",
+  "模型可通过 need IMG-xxx 请求图片，面板列出请求并一键定位",
+  "Auto-select 模式：默认省略早前轮次的图片，由模型按 ID 临时取回，勾选的图片固定发送",
+  "显示下一次请求的体积估算与相比全量发送节省的空间"
+ ],
+ "intro": "Context Attachment Manager 是一个 Codex 和 Claude Desktop（Claude Code）插件，用来控制对话历史中的图片是否随下一次请求一起发给模型。它针对的问题是：Codex 和 Claude Code 每次请求都会重发任务或会话里的全部图片，图片一多请求体积就会迅速膨胀。\n\n插件在本地运行一个代理，位于 Codex 与 OpenAI、Claude Code 与 Anthropic 之间。发送前，未勾选的图片会被替换成简短的占位符，并附上说明告诉模型这些图片是被用户主动省略的；勾选的图片照常发送。模型需要某张图时可以回复 need IMG-xxx，面板会列出请求并支持一键跳转。\n\n面板以 MCP 应用形式出现在 Codex 侧边栏，在 Claude Desktop 中通过 /cam 在内置浏览器打开，支持按来源筛选、预览缩略图、查看请求体积与节省量，界面提供英文和简体中文。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个插件解决的是 Codex 和 Claude Code 每次请求都重发全部历史图片、导致请求体积过大的问题。它在本地代理请求，让你逐轮勾选哪些图片继续发给模型，未勾选的变成占位符，对话本身不受影响；模型需要时可按 ID 请求取回。面板集成在 Codex 侧边栏或 Claude Desktop 内置浏览器中，适合长时间处理多张图片的对话场景。",
+ "tagline": "在 Codex 和 Claude Desktop 中按需选择历史图片是否随消息发送"
+}

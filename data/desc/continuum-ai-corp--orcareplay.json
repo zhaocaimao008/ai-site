@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要调试、复现或对比 AI agent 行为的开发者，尤其是使用 Claude Code、Codex 等 coding agent 并希望定位具体某一步问题的人。",
+ "date": "2026-10-15",
+ "features": [
+  "录制任意 coding agent 的完整运行过程，无需修改 agent 代码",
+  "离线逐字节重放已录制的运行，不调用模型、不消耗 token",
+  "从任意步骤分叉到不同模型，对比各模型表现",
+  "捕获 agent 自身组装的 system prompt 并按模型归档",
+  "在进程与 socket 边界捕获，可记录无法重定向 API 端点的 agent",
+  "通过退出码、耗时、输出流、文件写入等补充协议之外的信息"
+ ],
+ "intro": "OrcaReplay 是一个面向 AI agent 的调试工具，由 OrcaRouter 团队开发。它的核心思路是：模型 API 是无状态的，agent 每一轮都会把完整对话重新发送，因此只要在模型前面架一个本地代理，就能看到整个循环——每次请求、每个流式响应、模型发出的每个工具调用以及 harness 产生的每个工具结果。基于这一点，它不需要修改你的 agent，只设置两个环境变量即可。\n\n录制下来的运行可以离线逐字节重放，不调用任何模型、不消耗 token；也可以从任意步骤分叉到另一个模型，让模型成为唯一变量。除了代理层，它还通过退出码、耗时、输出流、文件写入等额外层次捕获协议看不到的信息，并支持无法重定向 API 端点的 agent。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm i -g orcareplay",
+  "orca record claude",
+  "orca replay last",
+  "orca replay last --from 4 --model claude-haiku-4-5 --ui",
+  "orca quickstart（没有 agent、密钥或网络时使用）"
+ ],
+ "summary": "OrcaReplay 解决的是 AI agent 调试难复现的问题：agent 出错后重新运行往往得到不同结果，现有可观测性工具只告诉你花了多少钱、用了多少 token，却回答不了“为什么它删了我的迁移文件”。它通过在模型前架设本地代理捕获整个 agent 循环，把运行录制成文件，之后可以离线逐字节重放，不调用模型也不消耗 token，还能从任意步骤分叉到另一个模型做对比。适合需要定位 agent 具体某一步行为的开发者。",
+ "tagline": "录制、离线重放并分叉调试 AI agent 运行"
+}

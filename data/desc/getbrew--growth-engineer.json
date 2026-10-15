@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI Agent 自动执行 GTM 流程的开发者、增长工程师和营销人员，也适合想贡献或维护 GTM 工具目录的贡献者。",
+ "date": "2026-10-15",
+ "features": [
+  "以 markdown 文件形式收录 GTM 公司、工具和工作流，便于 Agent 直接执行",
+  "提供只读 MCP server，支持 search、get 和 submit_feedback 工具",
+  "每个工作流同时作为 MCP prompt，接收工作流输入作为参数",
+  "公开文件 URL，支持通过 curl 或内容协商获取 markdown",
+  "提供 llms.txt 和 llms-full.txt，方便大模型索引整个目录",
+  "构建时校验内容 schema，CI 运行 pnpm content:check 检查"
+ ],
+ "intro": "growth.engineer 是一个开源目录，把 go-to-market（GTM）相关的公司、工具和工作流写成 markdown 文件，让 AI Agent 可以直接读取和执行。每个条目都来自厂商官方文档，并链接到对应的文档页面。\n\n目录包含三类条目：Company 记录公司如何被 Agent 访问（MCP server、CLI 或 API 及所需凭证）；Tool 记录一个可调用的函数，如具体的 MCP 工具、CLI 命令或 API endpoint；Workflow 则把多个工具串联成最多十步的流程，说明适用场景、预期结果、需要用户提供的输入以及每一步的设置方式。\n\n项目还提供一个只读的 MCP server，地址为 https://www.growth.engineer/mcp，无需登录。它的 search 工具用于查找工作流、工具和公司，get 工具返回文件内容，submit_feedback 用于向维护者提交反馈。所有文件也可通过公开 URL 直接获取，例如 /workflows/<name>.md、/llms.txt 和 /llms-full.txt。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude 中：Settings → Connectors → Add → Add custom connector，名称填 growth.engineer，粘贴 https://www.growth.engineer/mcp 并点击 Add",
+  "在 Claude Code 中运行：claude mcp add --transport http growth-engineer --scope user https://www.growth.engineer/mcp",
+  "在 Codex 中运行：codex mcp add growth-engineer --url https://www.growth.engineer/mcp",
+  "在 Cursor 的 ~/.cursor/mcp.json 中，于 mcpServers 下添加 \"growth-engineer\": { \"url\": \"https://www.growth.engineer/mcp\" }",
+  "直接获取文件：curl https://www.growth.engineer/workflows/funding-signal-outbound.md"
+ ],
+ "summary": "growth.engineer 把 GTM 工具和工作流写成 markdown 文件，让 AI Agent 能直接读取并执行。它收录公司、工具和工作流三类条目，每个条目都来自厂商官方文档并附有链接。项目提供只读 MCP server，支持搜索和获取文件，也支持通过公开 URL 直接下载 markdown。适合需要让 Agent 自动完成增长流程的开发者，以及想贡献 GTM 工具目录的贡献者。",
+ "tagline": "面向 AI Agent 的 GTM 工具与工作流开源目录"
+}

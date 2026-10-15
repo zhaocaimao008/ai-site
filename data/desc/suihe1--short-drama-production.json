@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Codex 进行 AI 短剧或视频生产、需要管理多镜头依赖与审批流程的创作者和开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "制片级状态管理：制品登记、依赖哈希、过期传播与重新审批，上游变化后可准确定位受影响的下游。",
+  "导演与技术分镜分层：保留戏剧意图、场面调度、景别、机位、运镜和节奏，支持导演桥接包和标准 novel-storyboard export 两条独立路线。",
+  "MiniMax H3 多模态执行：支持 MiniMax 官方接口的图片、视频、音频参考、预检、提交、轮询与下载，并内置 CompShare 参考图任务适配器。",
+  "声音资产管理：支持 Fish Audio 公共音色筛选、试听、授权克隆和声音母版登记，记录来源、授权范围和 evaluation-only 限制。",
+  "粗剪、QC 与成本边界：生成 FFmpeg 顺序粗剪计划并可显式执行，付费提交、批量任务、重试和覆盖成片都需要用户当次确认。",
+  "可视化故事板：离线审阅镜头卡片、构图规划、参考素材与生成视频，支持筛选、时间带定位、多版本切换和返工笔记导出。"
+ ],
+ "intro": "Short Drama Production 是一个面向 Codex 的 AI 短剧生产总控 skill，目标不是再写一条万能 Prompt，而是把大纲、角色、美术、剧本、导演、技术分镜、H3 任务、声音、粗剪与 QC 串成一条有状态、有依赖、有审批边界的生产链。核心状态保存在 production.json，记录制品哈希、依赖关系、审批和任务状态，上游变化后可自动传播 stale 状态并要求重新审批。\n\n项目内置 MiniMax 官方与 CompShare H3 执行路径，支持多模态参考、预检、确认提交、轮询与下载；同时提供 Fish Audio 声音资产管理和 FFmpeg 顺序粗剪计划。默认 16:9，付费提交、批量任务、重试和覆盖成片都需要用户当次确认，密钥只从环境变量或本地 secrets 文件读取。\n\n仓库包含总控和七个配套 skill，安装后为同级目录，保留跨 skill 引用。ComfyUI 属于可扩展接入方向，并非开箱即用的内置节点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：node scripts/install-bundle.mjs --dest <项目目录>/.agents/skills，预览后加 --apply 写入。",
+  "首次运行免费离线演练：node scripts/doctor.mjs 和 node scripts/offline-demo.mjs。",
+  "在 Codex 中调用：$short-drama-production 为这个项目建立 16:9 短剧生产状态，先检查现有制品和依赖，不提交任何付费任务。",
+  "初始化生产状态：node scripts/production-kit.mjs init <project-dir> --title <剧名> --source <源文件> --aspect 16:9。",
+  "检查状态：node scripts/production-kit.mjs status <project>/production.json。"
+ ],
+ "summary": "这个项目把 AI 短剧从单条 Prompt 生成升级为有状态的生产管线，用 production.json 记录制品哈希、依赖、审批和任务状态，上游改动后能自动标记下游过期并要求重新审批。它内置 MiniMax 官方与 CompShare H3 执行路径，覆盖导演分镜、声音资产、粗剪和 QC，默认 16:9，付费任务需用户当次确认。适合用 Codex 制作短剧、需要管理多镜头依赖与返工流程的创作者和开发者。",
+ "tagline": "面向 Codex 的 AI 短剧生产总控 skill，把生成流程变成可追踪、可审批、可返工的生产管线。"
+}

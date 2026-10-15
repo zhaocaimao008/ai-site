@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 LLM agent 构建长期记忆能力的开发者，尤其是使用 opencode 等 CLI 工具、希望记忆有界且可审计的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "将项目交互日志蒸馏为有界、可自更新的记忆库，避免上下文线性膨胀和向量库冗余",
+  "三池动力学：候选池、常用池、冷归档池之间按价值与置信流动，支持滞回防抖与容量背压",
+  "Hauler、Selector、Reviewer 三 agent 协作，候选必须引用证据，冲突进入人工审核",
+  "一切变更走持久任务机，效果事务保证内存引擎、任务状态与回执在同一 SQLite 事务中提交",
+  "记忆携带溯源信息与版本谱系，可回查 L0 证据库，支持因果界过滤与 token 预算注入",
+  "提供 TIDE 评测平台与 passive 检索探针，评测与引擎通过 HTTP 协议分离"
+ ],
+ "intro": "Dynamics-memory 是一个面向 LLM agent 的长期记忆层，目标是把连续、嘈杂、前后矛盾的项目交互日志蒸馏成有界、可自更新的记忆库。它不把原始日志直接塞进上下文，也不把原文丢进向量库堆成冗余副本，而是将日志视为证据保留在冷层，只在需要时按计量回展。\n\n记忆被建模为有版本的信念，在候选池、常用池和冷归档池之间流动，通过价值与置信分离、滞回、压制检测和矛盾裁决等机制维持有界与自更新。系统采用 Hauler、Selector、Reviewer 三个 agent 角色协作，所有变更走持久任务机，冲突进入人工审核队列，保证崩溃恢复与可溯源。\n\n项目以 TypeScript 为主，提供 Python 测试与 sidecar 服务，可通过 opencode 插件接入现有 CLI 工作流。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install numpy pytest",
+  "cp .env.example .env 并配置 ZAI_API_KEY",
+  "python -m pytest tests/ 运行本地测试",
+  "python -m hybrid_memory.server --project <dir> 启动 sidecar 服务",
+  "npm i -g opencode-ai 后在本仓库运行 opencode，插件自动加载并拉起 sidecar"
+ ],
+ "summary": "Dynamics-memory 解决 LLM agent 长期记忆容易膨胀、矛盾堆积的问题。它把项目交互日志当作证据留在冷层，只将蒸馏后的记忆放入有界池中，通过价值与置信分离、三池流动和人工审核来处理冲突与更新。适合使用 opencode 等 CLI 工具、希望 agent 在新会话中快速接续项目进度并保持记忆可审计的开发者。",
+ "tagline": "为 LLM agent 提供有界、可自纠错的长期记忆层"
+}

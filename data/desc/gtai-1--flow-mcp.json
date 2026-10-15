@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 Google Flow 积分通过 AI 助手生成视频的开发者或普通用户，需要本地运行 Node.js 和 Chrome。",
+ "date": "2026-10-15",
+ "features": [
+  "通过 MCP 协议让 Claude、Codex 等 AI 助手用自然语言驱动 Google Flow 生成视频",
+  "使用 Flow 自带积分（每天 50 免费积分），而非按次付费的视频 API",
+  "提供本地控制面板，包含角色、关键帧、镜头、配音、重绘、剪辑和素材库七个标签页",
+  "支持创建可复用角色、生成免费静帧、制作付费视频片段并链式衔接",
+  "支持使用 Google 语音或电脑本地语音进行免费旁白录制",
+  "支持将多个视频片段合并成完整影片，并添加旁白和音乐"
+ ],
+ "intro": "flow-mcp 是一个运行在本地的小程序，它打开独立的 Chrome 窗口登录 Google Flow，并通过 Chrome DevTools Protocol 模拟点击 Flow 的真实按钮，从而驱动视频生成。它使用 Flow 自带的积分（每个 Google 账号每天 50 积分），而不是按次付费的视频 API。\n\n它通过 MCP（Model Context Protocol）协议与 Claude、Codex 等 AI 助手连接，让你用自然语言创建角色、生成关键帧、制作视频片段、配音和剪辑。同时它也提供一个本地控制面板，包含 Cast、Frames、Shots、Voice、Restyle、Cut、Library 七个标签页，方便手动操作。\n\n项目使用 TypeScript 编写，需要 Node.js 22+ 和 Google Chrome，支持 macOS 和 Windows（Windows 尚未在真实 PC 上测试）。可选依赖 FFmpeg 用于合并片段、混音或录制旁白。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone https://github.com/GTAI-1/flow-mcp.git && cd flow-mcp && npm install && npm run build",
+  "运行 npm run login 打开专用 Chrome 窗口，手动登录 Google 并打开或创建 Flow 项目",
+  "将 flow-mcp 添加到 MCP 客户端，例如 Claude Code：claude mcp add --scope user flow -- node /absolute/path/to/flow-mcp/dist/index.js",
+  "重启 AI 助手应用，然后询问“check my Flow session”确认登录和积分",
+  "可选：运行 npm run studio 启动本地控制面板，访问 http://127.0.0.1:8787"
+ ],
+ "summary": "flow-mcp 是一个本地运行的工具，它通过模拟点击 Google Flow 的网页界面，让你能用 Claude、Codex 等 AI 助手或本地控制面板来生成视频。它使用 Flow 自带的每日免费积分，而不是按次付费的视频 API，适合想低成本尝试 AI 视频生成、又不想写复杂代码的用户。项目需要 Node.js 和 Chrome，支持 macOS 和 Windows。",
+ "tagline": "用 Google Flow 积分驱动视频生成，通过 MCP 接入 Claude 等助手"
+}

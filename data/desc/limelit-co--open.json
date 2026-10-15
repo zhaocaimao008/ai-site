@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在自己的基础设施上追踪品牌在 AI 助手中可见性的开发者、营销人员或品牌监测团队。",
+ "date": "2026-10-15",
+ "features": [
+  "追踪七个 AI 引擎（ChatGPT、Claude、Perplexity、Gemini、Google AI Overview、Google AI Mode、Bing Copilot）的品牌提及和引用",
+  "单个 Go 二进制文件，使用 SQLite，无需外部依赖，首次启动自动创建数据库",
+  "提供仪表板展示可见性、声量份额、平均位置、引用份额等指标，并附样本量",
+  "内置 MCP 服务器，支持 stdio 或 HTTP，提供 14 个只读工具供 AI 助手调用",
+  "支持每日或每小时调度，可设置每日运行次数上限以控制成本",
+  "支持导出整个实例为 JSON 或 CSV，并可升级到 Limelit Cloud"
+ ],
+ "intro": "Limelit Open 是一个自托管的 AI 可见性追踪工具，用于监测 ChatGPT、Claude、Perplexity、Gemini、Google AI Overview 和 Google AI Mode 等 AI 助手在回答中如何提及和引用你的品牌，并与竞争对手进行对比。它也被称为 AEO、GEO、AIO 或 LLMO，核心是回答：当用户向 AI 助手询问你的品类时，你的品牌是否出现，以及答案信任哪些来源。\n\n项目采用 Go 编写，编译为单个二进制文件，使用 SQLite 存储数据，无需 Docker、Node 或 Postgres。它通过供应商 API 或爬虫获取七个引擎的答案，存储并分析品牌提及、排名和引用来源，提供仪表板展示可见性、声量份额、平均位置等指标。内置 MCP 服务器，支持通过 stdio 或 HTTP 连接 AI 助手进行查询。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的二进制文件，或使用 go install 安装",
+  "运行 ./limelit serve 启动服务，首次启动会自动创建 SQLite 数据库",
+  "在浏览器中打开 http://localhost:1515 访问仪表板",
+  "在 Settings 中配置至少一个 AI 提供商的 API 密钥",
+  "运行 limelit run 执行一次测量，或等待调度自动运行"
+ ],
+ "summary": "Limelit Open 是一个自托管的 AI 可见性追踪工具，用于监测品牌在 ChatGPT、Claude、Perplexity、Gemini 等 AI 助手回答中的提及和引用情况，并与竞争对手对比。它适合希望在自己的服务器上分析 AI 搜索表现、了解品牌被引用来源的团队。项目以单个 Go 二进制文件运行，使用 SQLite 存储，无需复杂依赖，并内置 MCP 服务器供 AI 助手查询数据。",
+ "tagline": "自托管 AI 可见性追踪，一个二进制文件，自带密钥"
+}

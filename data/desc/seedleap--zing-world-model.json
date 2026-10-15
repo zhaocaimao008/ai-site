@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究世界模型、视频生成与实时交互式内容的开发者，以及希望把 prompt 和键盘控制接入可玩世界推演的应用开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "文本提示可初始化世界，也可在 rollout 中途改变世界语义与演化方向",
+  "支持 W/A/S/D/I/J/K/L 八方向连续键盘动作控制",
+  "使用因果 KV cache 与四步 DMD 采样，支持长时程实时推演",
+  "以 JSONL 描述带时间戳的 prompt 与键盘控制时间线",
+  "提供 examples/ 下可直接运行的 T2V、TI2V、prompt 切换等示例",
+  "配套 Zing-SGLang 提供基于 SGLang 的实时 WebSocket 推理服务"
+ ],
+ "intro": "Zing-0.5 是 Seedleap.ai（涌跃智能）推出的因果世界模型，面向实时交互场景。它从当前状态持续推演视觉世界，同时允许文本提示和键盘操作在推演过程中改变世界的语义、运动与未来状态。\n\n文本提示可以初始化世界，也可以在 rollout 过程中修改世界；连续的 W/A/S/D/I/J/K/L 键盘动作用于控制移动和交互。项目借助因果 KV cache 和四步 DMD 采样，在单 GPU 流水线上实现响应式的长时程世界推演。\n\n本次发布的是推理版本，把一次交互会话表示为带时间戳的 prompt 与键盘控制，记录在 JSONL 文件中；模型按因果顺序消费这些控制，并将生成的世界推演保存为视频。交互应用可以把自身的 prompt 和键盘事件映射到同一套控制格式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Linux 环境、支持 CUDA 的 NVIDIA GPU、Python 3.11，并安装 requirements.txt 中的依赖",
+  "按目录结构准备模型文件：generator/model.pt 以及 pretrained/ 下的 text_encoder、tokenizer、vae",
+  "在仓库根目录运行：CUDA_VISIBLE_DEVICES=0 ZING_PYTHON=/path/to/python bash run.sh --pretrained-dir /path/to/Zing-0.5/pretrained --checkpoint /path/to/Zing-0.5/generator/model.pt --messages examples/case3_action_t2v.jsonl --output-dir outputs/case3 --seed 0",
+  "如需实时 WebSocket 服务，使用 Zing-SGLang 完成一次性配置后运行 examples/zing_0_5/launch_server.sh",
+  "用 client.py 发送 prompt 与动作，例如：python examples/zing_0_5/client.py --prompt \"A first-person walk through a misty pine forest at sunrise\" --action w --chunks 4 --output outputs/forest"
+ ],
+ "summary": "Zing-0.5 是一个面向实时交互的因果世界模型，能在推演过程中同时接受文本提示和键盘动作，让使用者边操作边改变世界的语义与走向。它用因果 KV cache 和四步 DMD 采样在单 GPU 上完成长时程推演，并把一次交互会话记录成带时间戳的 JSONL 控制文件，输出为视频。适合研究世界模型、视频生成，或想搭建可玩交互式世界应用的开发者参考和上手。",
+ "tagline": "支持实时键盘与文本控制的因果世界模型"
+}

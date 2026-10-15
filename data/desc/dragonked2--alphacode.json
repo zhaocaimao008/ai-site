@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在终端中让 AI 直接参与编码、调试和测试的开发者，也适合需要浏览器或桌面自动化、以及想用本地或免费模型控制成本的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "终端优先的 AI 编程代理，可读取仓库、编辑文件、运行命令与测试",
+  "内置免费模型通道，无需 API key 即可开始；也可接入 Claude、GPT、Gemini、DeepSeek、Ollama 等 50 多个提供方",
+  "Firefox 浏览器自动化，可打开页面、检查元素并截图",
+  "桌面自动化，可控制桌面应用程序",
+  "swarm 模式，支持多代理协作与可复用技能",
+  "40 多个内置工具，并支持 MCP 连接外部工具"
+ ],
+ "intro": "AlphaCode 是一个用 Rust 编写的开源 AI 编程代理，以终端为主要界面。它不只停留在对话里给建议，而是直接在你的开发环境中工作：理解代码库、规划任务、修改文件、执行命令与测试，并汇报自己验证过的结果。工作流程大致是理解、规划、执行、观察、验证，最后说明改了什么、检查了什么、还剩什么。\n\n它内置了免费模型通道，不配置 API key 也能开始使用；同时支持接入 Claude、GPT、Gemini、DeepSeek、Ollama 等 50 多个模型与提供方。除代码工作外，它还提供 Firefox 浏览器自动化和桌面应用控制能力，并支持 swarm 模式、会话与记忆、内置工具与 MCP。项目采用 MIT 协议，支持 Windows、macOS 和 Linux。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS / Linux 安装：curl -fsSL https://raw.githubusercontent.com/dragonked2/alphacode/main/scripts/install.sh | bash",
+  "Windows 在 PowerShell 中安装：irm https://raw.githubusercontent.com/dragonked2/alphacode/main/scripts/install.ps1 | iex",
+  "运行 alphacode doctor 检查环境，再运行 alphacode 启动",
+  "首次启动会进入简短引导流程，可用 Esc 跳过任意步骤",
+  "直接输入自然语言任务，例如让它解释当前项目或修复一个 bug"
+ ],
+ "summary": "AlphaCode 是一个用 Rust 写的开源终端 AI 编程代理，目标是把 AI 从“只给建议”变成真正动手干活：读取代码库、规划任务、改文件、跑命令和测试，最后说明验证结果。它内置免费模型通道，不配 API key 也能开始，同时可接入 Claude、GPT、Gemini、DeepSeek、Ollama 等提供方。除编码外还支持 Firefox 浏览器自动化与桌面应用控制，适合想在终端里完成开发、调试和自动化流程的开发者。",
+ "tagline": "Rust 编写的开源终端 AI 编程代理，无需 API key 即可上手"
+}

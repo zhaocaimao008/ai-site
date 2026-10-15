@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速产出竖版宣传片、口播视频或讲解课初稿的开发者、内容创作者和小团队，尤其是希望用便宜模型控制成本的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "宣传片：一份产品简报生成 9:16 竖版视频，支持 cards、quiz、journey 三种配方",
+  "口播配画面：一段 talk.mp4 自动配动效卡片或 AI 画面，本机 SenseVoice 转写",
+  "讲课视频：一份讲稿生成 16:9 讲解课，20 种版式、4 套主题，可另出竖版切片",
+  "合规与质检：广告法、行业规则、数字出处、版式动效校验，有 ✗ 不出片",
+  "配音与配乐：可选 MiniMax、阿里云、火山引擎配音，配乐现场合成并卡镜头切点",
+  "AI 助手集成：提供 Claude Code、Codex 技能和 DeepSeek Harness 插件"
+ ],
+ "intro": "精酿 · BrewReel 是一个开源视频生成工具，目标是用 DeepSeek 这类便宜模型也能产出合格的竖版宣传片。它不让模型写代码，而是让模型填写 storyboard.json、broll.json 或 lesson.json 这类结构化文件，挑版式、填文字，再由引擎负责渲染。\n\n项目支持三种模式：宣传片（一份产品简报生成 9:16 竖版视频）、口播配画面（一段 talk.mp4 配上动效卡片或 AI 画面）、讲课视频（一份讲稿生成 16:9 讲解课）。宣传片提供 cards、quiz、journey 三种配方，覆盖软件、餐饮、电商实物等六个行业，并内置广告法和行业规则校验，校验不通过就不出片。\n\n配音可选 MiniMax、阿里云、火山引擎，口播转写使用本机 SenseVoice。代码以 Apache-2.0 协议开源，渲染出的视频不要求署名。README 也说明目前仍是预览版，不建议不经人工修改直接对外发布。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone https://github.com/Finderchangchang/brewreel.git && cd brewreel/template && npm install && npx remotion browser ensure && cd .. && pip install numpy scipy imageio-ffmpeg",
+  "校验宣传片简报：node scripts/validate.mjs examples/ledger.json",
+  "生成宣传片：node scripts/make.mjs examples/ledger.json --out ../brewreel-out/ledger",
+  "口播配画面：在项目目录放好 talk.mp4，运行 node scripts/talk.mjs path/to/project --out ../brewreel-out/talk",
+  "生成讲课视频（mock 配音）：node scripts/lesson/make-lesson.mjs examples/lesson/mascot-demo.json --out ../brewreel-out/first-lesson --voice-provider mock --no-bgm"
+ ],
+ "summary": "精酿 · BrewReel 是一个开源视频生成工具，让 DeepSeek 这类便宜模型也能做出合格的竖版宣传片。它不让模型写代码，而是让模型填写结构化 JSON 文件，挑版式、填文字，再由引擎渲染。支持宣传片、口播配画面和讲课视频三种模式，内置广告法和行业规则校验，校验不通过就不出片。适合需要快速产出视频初稿、又想控制模型成本的开发者和内容创作者。",
+ "tagline": "用便宜模型一条命令生成竖版宣传片、口播配画面和讲课视频"
+}

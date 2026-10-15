@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或内网环境中对候选大模型进行可复现评测的开发者、评测工程师和团队。",
+ "date": "2026-10-15",
+ "features": [
+  "Docker 隔离执行：CLI/脚本类题目在容器中真实运行，检查输出、文件和 Git 状态",
+  "版本化题库与冻结运行：发布题库 1.60.0 含 803 道来源题、920 个执行实例，运行结果可审计",
+  "规则评分与可选 AI Judge：确定条件由规则评分器验证，语义判断可按题型使用 Judge",
+  "多维度评测：覆盖编程、推理数学、数据抽取、结构化输出、工具工作流、安全权限等 11 个维度",
+  "本地模拟世界：工具与智能体题使用可重置的本地合成状态，不触达真实外部系统",
+  "部署验收与健康检查：提供 deploy:check、bank:check、runtime:check 等命令核验部署状态"
+ ],
+ "intro": "ZxBench 是一个本地部署的大模型评测平台，用 Docker 隔离执行题目，结合规则评分和可选的 AI Judge，对候选模型进行可复现的评测。它提供版本化题库、冻结运行、实时监控、报告和排行榜，当前应用版本为 v0.2.12，发布题库 1.60.0 包含 803 道来源题和 920 个执行实例。\n\n评测覆盖编程、幻觉抵抗、数学推理、数据抽取、结构化输出、工具与 CLI 工作流、安全权限、智能体工作流、指令遵循等维度，每题按难度加权计分。CLI 和脚本类题目会在隔离容器中真正运行候选脚本，检查标准输出、产出文件和 Git 工作区状态；工具与智能体题使用可重置的本地模拟世界，依据工具调用轨迹、状态变化和禁止副作用判分。\n\n部署过程不需要模型 API Key，也不会调用候选模型或 Judge。服务默认监听 127.0.0.1:3001，使用 SQLite 存储，前端由后端一并提供。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "检查环境：Node.js ≥22.13、pnpm 11.21.0、可用的 Docker Linux 引擎",
+  "克隆仓库并安装依赖：git clone https://github.com/suncityldp/zx-bench.git && cd zx-bench && pnpm install --frozen-lockfile",
+  "初始化配置与数据库：pnpm setup:env && pnpm --filter server prisma:generate && pnpm db:push && pnpm build",
+  "启动服务：pnpm --filter server start，等待 GET http://127.0.0.1:3001/api/health 返回 status: ok",
+  "同步并核验题库：pnpm bank:sync && pnpm bank:check，再按需准备镜像 pnpm runtime:prepare，最后运行 pnpm deploy:check 完成验收"
+ ],
+ "summary": "ZxBench 是一个本地部署的大模型评测平台，用 Docker 隔离执行题目，结合规则评分和可选 AI Judge，对候选模型进行可复现的评测。它提供版本化题库、冻结运行、实时监控、报告和排行榜，覆盖编程、推理数学、数据抽取、工具工作流、安全权限等多个维度。适合需要在本地或内网环境中对模型进行可审计评测的开发者与团队。",
+ "tagline": "本地部署的大模型评测平台，支持 Docker 执行与可复现评分"
+}

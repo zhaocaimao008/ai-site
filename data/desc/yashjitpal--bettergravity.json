@@ -1,0 +1,26 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Google Antigravity 2.0 桌面应用的开发者和高级用户，尤其是希望自定义界面、扩展功能或绕过配额限制的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "主题系统：通过 CSS 文件或链接即时更换界面样式，无需构建或重载",
+  "插件系统：用纯 JavaScript 编写插件，支持持久化存储、声明式设置和 DOM 辅助工具",
+  "重新设计的 Gemini 工作区：Willow 设计系统、侧边栏导航和专注对话布局",
+  "桌面宠物：17+ 个动画伙伴，可用 Gemini 生成自定义像素宠物",
+  "内置浏览器与自主计算机使用：测试 Web 应用、检查 DOM，让代理自主浏览或操作鼠标键盘",
+  "自带 Gemini API 密钥（BYOK）：绕过配额限制，连接自定义基础 URL，流式传输模型推理令牌",
+  "Discord Rich Presence：在 Discord 上动态显示代理任务和耗时，不泄露项目或代码数据",
+  "社区目录：在应用内浏览、安装和更新主题与插件，文件经 SHA-256 哈希校验"
+ ],
+ "intro": "BetterGravity 是面向 Google Antigravity 2.0 桌面应用的社区修改平台，通过主题和插件扩展其功能。它提供重新设计的 Gemini 工作区界面、桌面宠物、内置浏览器与自主计算机使用、自带 Gemini API 密钥（BYOK）以及 Discord Rich Presence 等能力。\n\n平台支持用 CSS 文件即时更换界面主题，或用纯 JavaScript 编写插件，无需构建步骤。所有修改都完全可逆，安装前自动备份，卸载后恢复原始文件，且不会触碰本地仓库、工作区代码或凭据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 releases 页面下载安装程序，运行并点击 Install",
+  "打开 Antigravity，点击左下角齿轮图标进入 Settings",
+  "在设置侧边栏滚动到 BetterGravity 部分",
+  "点击 Plugins 开启所需功能（如 Gemini App、Pets、In-App Browser 等）",
+  "点击 Themes 切换样式或拖放自定义 .css 样式表"
+ ],
+ "summary": "BetterGravity 是一个针对 Google Antigravity 2.0 桌面应用的社区修改平台，让用户通过 CSS 主题和 JavaScript 插件来定制界面与功能。它内置了重新设计的 Gemini 工作区、桌面宠物、应用内浏览器与自主计算机使用、自带 Gemini API 密钥以及 Discord Rich Presence 等能力。适合希望扩展 Antigravity 功能、自定义外观或绕过配额限制的开发者与高级用户。",
+ "tagline": "为 Google Antigravity 提供主题、插件与 AI 增强的扩展平台"
+}

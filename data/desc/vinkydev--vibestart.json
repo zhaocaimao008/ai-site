@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "希望快速搭建全栈 TypeScript 项目、并配合 AI 编码智能体开发的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "自由组合全栈 TypeScript 技术栈",
+  "内置类型安全、lint 与测试",
+  "为 AI 编码智能体打造的项目结构",
+  "提供 CLI 使用方式",
+  "集成 React、shadcn-ui、Tailwind CSS、TanStack、Vite 等技术"
+ ],
+ "intro": "VinkyDev/vibestart 是一个全栈 TypeScript 脚手架工具，让你自由组合技术栈，生成一个经过验证的项目。项目内置类型安全、lint 与测试，并针对 AI 编码智能体做了适配。\n\n从 topics 可以看出它涉及 React、shadcn-ui、Tailwind CSS、TanStack、Vite 等前端技术，并提供 CLI 使用方式。项目采用 MIT 协议，官网为 vibestart.net。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一个全栈 TypeScript 脚手架，允许开发者自由组合技术栈，生成一个内置类型安全、lint 与测试的项目，并针对 AI 编码智能体做了适配。它适合想快速起步全栈 TypeScript 项目、又希望项目结构对 AI 编码工具友好的开发者。项目提供 CLI，集成了 React、shadcn-ui、Tailwind CSS、TanStack、Vite 等常见前端技术。",
+ "tagline": "自由组合全栈 TypeScript 技术栈的脚手架"
+}

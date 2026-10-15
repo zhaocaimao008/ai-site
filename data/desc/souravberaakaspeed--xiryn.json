@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在自己电脑上运行个人 AI 代理、注重数据隐私、愿意自行配置 API 密钥的开发者与高级用户。",
+ "date": "2026-10-15",
+ "features": [
+  "每个代理拥有独立的 Docker Linux 桌面，包含 shell、持久化 home 目录和 Chromium",
+  "支持多家模型提供商，可为每个代理单独选择模型，也可通过 Ollama 运行本地模型",
+  "长期记忆功能，代理可保存关于用户和工作的重要信息，所有线程共享",
+  "通过 Firecrawl 进行网页搜索和页面阅读，并附带引用来源",
+  "可通过 Telegram 远程控制代理，无需公网 URL 或端口转发",
+  "支持实时观看代理操作，并可随时接管桌面"
+ ],
+ "intro": "Xiryn 是一个开源的个人 AI 代理项目，目标是把类似 Muse、Grok Bot、Dots 的云端个人代理能力搬到用户自己的电脑上运行。每个代理拥有独立的 Docker Linux 桌面环境，包含 shell、持久化 home 目录和 Chromium，与用户本机系统隔离，不会操作用户的鼠标、屏幕或文件。\n\n项目支持 OpenAI、Anthropic、Google、xAI、Groq、Mistral、DeepSeek、OpenRouter、Ollama、LM Studio 等多家模型提供商，可为每个代理单独指定模型。数据保存在本地 SQLite 文件中，敏感信息可存入加密 vault，并可通过 Telegram 远程控制代理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS / Linux：运行 curl -fsSL https://raw.githubusercontent.com/SouravBeraAkaSpeed/xiryn/main/setup.sh | bash",
+  "Windows (PowerShell)：运行 irm https://raw.githubusercontent.com/SouravBeraAkaSpeed/xiryn/main/setup.ps1 | iex",
+  "如果使用编码代理，可将 README 中的提示粘贴到 Claude Code、Codex 或 Cursor 中自动安装",
+  "安装完成后添加自己的 API 密钥并启动 Xiryn"
+ ],
+ "summary": "Xiryn 是一个可自行部署的开源个人 AI 代理，解决云端代理服务封闭、数据不在自己手中的问题。它让每个代理在独立的 Docker Linux 桌面中运行，与用户本机隔离，支持多家模型提供商和本地模型，数据保存在本地，并可通过 Telegram 远程控制。适合注重隐私、希望在自己电脑上运行个人代理的开发者与高级用户。",
+ "tagline": "在你自己电脑上运行的开源个人 AI 代理"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在 macOS 或 Windows 上使用 ChatGPT 桌面 App 与 Codex、希望借助 ChatGPT Web 做复杂推理但仍要本地验证改动的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "将复杂仓库推理委托给 ChatGPT Web，编辑与测试仍在 Codex 本地完成",
+  "Context Packet 限制并清理发送内容，过滤可能的凭据",
+  "要求 ChatGPT 返回结构化 Reasoning Result，并绑定 packet_id",
+  "本地采纳门：Codex 独立验证每条建议，不直接执行网页给出的命令或补丁",
+  "用 SHA-256 回执记录 Packet、Result、浏览器证据和运行状态",
+  "首次任务前需显式接受版本化风险说明，之后进入自动交接流程"
+ ],
+ "intro": "Codex Bridge to ChatGPT 是一个 Codex Skill 与 Plugin 包，用于把仓库中较难的推理任务交给 ChatGPT Web 处理，同时把证据收集、文件修改、测试和最终判断保留在 Codex 本地环境中。它的思路是分工：Codex 负责读取项目规则、代码、测试和工作区状态，压缩并清理证据；ChatGPT Web 负责推理；Codex 再独立验证每条建议，自行重建补丁和命令并运行本地测试。\n\n项目通过 Context Packet 控制发送内容，只包含目标、验收标准、相关仓库状态、关键证据、约束和明确问题，并会过滤可能的凭据。ChatGPT 返回结构化的 Reasoning Result，每条建议被标记为 accepted、rejected 或 deferred。整个流程用 SHA-256 回执绑定 Packet、Result 和浏览器证据。\n\nREADME 明确标注这是非官方实验性项目，自动控制 ChatGPT 网页存在账号风险，需要用户显式同意后才会启用完整自动化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Codex 中打开一个仓库",
+  "发送任务：$codex-bridge-chatgpt Find the root cause of this intermittent failure, implement the smallest safe fix, and run the relevant tests.",
+  "首次任务时阅读并显式接受浏览器风险说明",
+  "等待 Codex 完成预检、证据收集、ChatGPT Web 推理和本地验证"
+ ],
+ "summary": "这个项目把仓库中的复杂推理交给 ChatGPT Web，而把证据收集、文件修改和测试留在 Codex 本地。它适合需要更强推理来诊断疑难 bug 或评估架构方案，但又不想让网页输出直接改动代码的开发者。使用时 Codex 会先压缩并清理上下文，再让 ChatGPT 返回结构化建议，最后由 Codex 逐条验证并自行执行。",
+ "tagline": "把复杂推理交给 ChatGPT Web，编辑与验证仍留在 Codex"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在自有服务器上部署实时数字人、并希望完全掌控数据与引擎选型的开发者和团队。也适合想从视频训练数字人形象、通过控制台管理频道和知识库的运营人员。",
+ "date": "2026-10-15",
+ "features": [
+  "实时语音对话：云端大脑在用户说完后约 0.2 秒内响应，口型同步视频在一秒内开始，支持打断",
+  "可插拔引擎：数字人、TTS、ASR、LLM 和轮次检测均通过 gRPC 或 OpenAI 兼容接口接入",
+  "管理控制台：数字人、声音、知识库（pgvector RAG）、频道发布与访问控制、引擎池 VRAM 预算、会话监控",
+  "从视频训练数字人：上传说话视频，流水线自动选取最佳说话基础帧，生成可选的数字人形象",
+  "内置预设：Luna 和 Nova 半身数字人预设，支持待机呼吸和手势片段",
+  "商业友好默认：FlashHead（Apache-2.0）和 MuseTalk 1.5（MIT）数字人引擎，自训练 wav2lipLS 轻量配置"
+ ],
+ "intro": "Mynah 是一个可自托管的实时数字人系统，用 Go 编写的实时核心 cored 通过 WebRTC 将 Python 数字人工作进程生成的同步音视频流推送到浏览器。它接收 WebRTC offer，与数字人引擎建立双向 gRPC 会话，把 TTS 音频（来自文本或 LLM 对话轮次）送入引擎，再将编码后的 VP8/H.264 与 Opus 帧按节奏回传。可选的语音输入（ASR）和语义轮次检测让整个链路形成完整的语音到语音闭环。\n\n系统设计上与引擎解耦，数字人、TTS、ASR、LLM 和轮次检测都通过小型契约（gRPC 流式契约或 OpenAI 兼容 HTTP 接口）可插拔。默认引擎选择以商业可用为优先，包括 FlashHead（Apache-2.0）和 MuseTalk 1.5（MIT）。可选控制平面提供管理 API、配置热应用、知识库（RAG）和可发布的访客频道。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行设置向导：python3 deploy/setup/helper.py，然后浏览器打开 http://127.0.0.1:9500",
+  "在向导中点击每个组件的“一键安装 / Install”（或指向已有端点），然后点击“启动 / Launch”",
+  "或使用 Docker Compose：cd deploy/compose && cp .env.example .env && $EDITOR .env",
+  "运行 bash setup-flashhead.sh 获取 FlashHead 引擎和权重",
+  "运行 docker compose up -d --build 启动 cored + flashhead，打开 https://<host>:8455/"
+ ],
+ "summary": "Mynah 是一个可自托管的实时数字人系统，解决在自有服务器上部署语音对话数字人的问题。它通过 WebRTC 将语音输入转为口型同步的视频输出，支持打断和语义轮次检测，数字人、TTS、ASR、LLM 等组件均可替换。适合需要完全掌控数据与引擎选型、希望从视频训练数字人形象并通过控制台管理频道和知识库的开发者与团队。",
+ "tagline": "自托管实时数字人系统，支持语音对话与口型同步视频"
+}

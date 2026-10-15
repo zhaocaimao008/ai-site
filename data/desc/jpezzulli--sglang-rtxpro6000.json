@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合在本地 NVIDIA RTX PRO 6000 Blackwell 上部署长上下文、工具调用或编码智能体工作流的开发者和高级用户。",
+ "date": "2026-10-15",
+ "features": [
+  "针对 NVIDIA RTX PRO 6000 Blackwell（SM120）单卡或双卡调优的 SGLang 运行时",
+  "HiCache 将可复用会话状态保留在系统内存，NIXL 将缓存状态持久化到 NVMe 磁盘",
+  "支持 524,288 token 上下文，并处理 Qwen 混合模型的循环状态、PLE 和 QSA 状态",
+  "Qwen3.8 Flash-Next 配置：NVFP4 专家层、自动 FP8 稠密层、原生 NEXTN MTP 配合 FR-Spec 和自适应 draft 宽度",
+  "Qwen3.8-27B 配置：FP8 权重配合 DFlash2 和独立 draft 模型",
+  "NIXL 磁盘缓存默认开启，可单独关闭而保留 GPU 与 RAM 缓存"
+ ],
+ "intro": "Penny Royal 是一个基于 SGLang 改造的推理运行时，专门针对 NVIDIA RTX PRO 6000 Blackwell（SM120）单卡或双卡环境调优，用于在本地硬件上运行长对话、编码智能体和工具调用密集的工作流。\n\n项目的核心是持久化会话缓存：通过 HiCache 将可复用状态放在系统内存，通过 NIXL 将缓存状态放到 NVMe 磁盘，从而在 GPU 显存之外保留长会话历史，并在服务器以相同配置重启后仍能恢复。README 提到曾从缓存恢复 490K token 的对话，只处理 5 个新 token。\n\n它提供两个模型配置：Qwen3.8 Flash-Next（NVFP4 专家层、SM120 上自动 FP8 稠密层、原生 NEXTN MTP 配合 FR-Spec）和 Qwen3.8-27B（FP8、DFlash2 加独立 draft 模型），两者都支持 524,288 token 上下文、工具调用、推理、图像和 HiCache RAM 前缀缓存。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Penny Royal 是一个基于 SGLang 改造的本地推理运行时，面向 NVIDIA RTX PRO 6000 Blackwell 单卡或双卡环境，用来跑长对话、编码智能体和工具调用密集的任务。它通过 HiCache 把可复用会话状态放在系统内存，用 NIXL 把缓存落到 NVMe 磁盘，从而在 GPU 显存之外保留长历史，服务器以相同配置重启后也能恢复。项目提供 Qwen3.8 Flash-Next 和 Qwen3.8-27B 两个模型配置，均支持 524K 上下文、工具调用和图像输入。",
+ "tagline": "面向 RTX PRO 6000 的 SGLang 长上下文推理运行时"
+}

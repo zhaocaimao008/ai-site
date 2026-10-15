@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Genspark Claw、OpenClaw、Hermes 等个人 AI 智能体，并希望快速获得深度研究、报告、幻灯片、浏览器自动化或 AI 电话准备能力的开发者和普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "内置 5 个生产就绪的 SKILL.md 技能：super-research、spark-report、spark-slides、claw-browser-anchor、call-prep",
+  "零运行时依赖的 Node.js CLI，支持 list、install、validate、doctor 等命令",
+  "可将技能安装到 OpenClaw、Hermes、Claude Code、Cursor 或自定义目录",
+  "内置零依赖 MCP stdio 服务器，向 MCP 客户端暴露 list_skills、get_skill、validate_skill 工具",
+  "安装前校验 SKILL.md 文件，标记 curl | bash、base64 payload 等风险内容"
+ ],
+ "intro": "genspark-claw 是一个面向个人 AI 智能体的社区技能包和命令行工具，主要服务于 Genspark Claw、OpenClaw 和 Hermes 等运行时。它把深度研究、报告生成、幻灯片大纲、浏览器自动化和 AI 电话准备这五类常见工作流，整理成符合 SKILL.md 规范的技能文件，让用户不必从零编写指令。\n\n项目提供零运行时依赖的 Node.js 安装器，可通过一条 npm 命令安装，并支持将技能安装到 openclaw、hermes、claude、cursor 等不同目标目录。内置的 MCP 服务器还能把技能包以工具形式暴露给 Claude Desktop、Cursor 或 Windsurf 等 MCP 客户端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js ≥ 18（macOS 可先运行 xcode-select --install）",
+  "运行 npm install github:breakstageaxe61/genspark-claw 安装 genspark-claw",
+  "运行 npx genspark-claw doctor 检查环境",
+  "运行 npx genspark-claw list 查看内置技能",
+  "运行 npx genspark-claw install all --target openclaw 将技能安装到 OpenClaw"
+ ],
+ "summary": "genspark-claw 是一个社区技能包和 CLI，面向 Genspark Claw、OpenClaw、Hermes 等个人 AI 智能体。它把深度研究、报告生成、幻灯片大纲、浏览器自动化和 AI 电话准备这五类工作流做成符合 SKILL.md 规范的技能文件，用户可以通过一条 npm 命令安装，并把技能部署到不同智能体运行时或自定义目录。项目还内置 MCP 服务器，方便在 Claude Desktop、Cursor 等客户端中调用这些技能。",
+ "tagline": "为 Genspark Claw、OpenClaw 和 Hermes 智能体提供技能包与 CLI"
+}

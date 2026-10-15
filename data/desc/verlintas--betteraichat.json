@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在自己的 Android 手机上使用自有 API Key、并让 AI 直接操作设备的开发者和进阶用户。",
+ "date": "2026-10-15",
+ "features": [
+  "支持 OpenAI 兼容接口、Anthropic Claude、Google Gemini 等多种模型服务，API Key 本地加密存储",
+  "通过 function calling 调用设备工具：打开应用、截图、剪贴板、系统设置、联网搜索、OCR 等",
+  "opencode 风格模式：Chat 纯对话、Plan 只读分析、Build 每次确认、Max 自主多步调用",
+  "Shizuku 支持下的 shell 执行与应用管理（强制停止、禁用、清除数据、卸载）",
+  "无障碍 UI 自动化：按文字查找并点击控件、输入、滑动、按键",
+  "长期记忆与上下文压缩，自动提炼用户信息并在会话间保留"
+ ],
+ "intro": "BetterAIChat 是一个原生 Android AI 助手应用，采用本地优先设计：API Key 通过 Android Keystore 加密保存在设备上，不经过云端。用户可以填入自己的 OpenAI、Anthropic Claude、Google Gemini 或任意 OpenAI 兼容服务的 Key，与主流大模型对话。\n\n与普通聊天应用不同，它通过 function calling 让 AI 真正操作设备：打开应用、截图、读写剪贴板、调整系统设置、联网搜索、读取屏幕文字，并可在 Shizuku 支持下执行 shell 命令、管理应用。项目还提供 opencode 风格的 Chat / Plan / Build / Max 四种模式，以及可复用的 Skills、语音助手和屏幕分析能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载并安装 APK",
+  "打开应用，在引导流程中粘贴自己的 API Key，应用会根据前缀自动识别服务商",
+  "自动拉取模型列表后选择模型，调整 temperature / max tokens 与系统提示词",
+  "按需在系统设置中开启无障碍与 Usage access 权限，以启用 UI 自动化功能"
+ ],
+ "summary": "BetterAIChat 是一个运行在 Android 上的本地优先 AI 助手，用户填入自己的 OpenAI、Claude 或 Gemini API Key 即可对话，密钥加密保存在设备本地。它通过 function calling 让模型真正操作手机，例如打开应用、截图、联网搜索、读取屏幕文字，并可在 Shizuku 支持下执行 shell 命令和管理应用。适合想用自有密钥、并让 AI 直接完成设备操作的用户。",
+ "tagline": "本地优先的 Android AI 助手，用自带 API Key 让 AI 操作手机"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Blender 中借助 AI 快速生成或调整 3D 场景的开发者与创作者，尤其是愿意配置 API 密钥并使用 bpy 脚本的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "在 Blender 的 N 侧边栏中与智能体聊天，保留消息历史和会话",
+  "支持文字描述或附加图片（含视口截图）来生成 3D 模型和修改场景",
+  "自动执行生成的 bpy 代码，出错时自动把日志交给智能体修复",
+  "首次运行自动下载便携版 OpenCode 运行时，无需系统级安装",
+  "支持 OpenAI、OpenRouter、Anthropic、Groq、DeepSeek 和本地 Ollama",
+  "默认配置禁止 shell 命令，文件修改限制在工作目录内"
+ ],
+ "intro": "这是一个 Blender 插件，把 3D 视口变成与 OpenCode 智能体的对话界面。你可以用文字描述，或直接附上一张图片，说明想创建或修改什么，智能体会生成对应的 Python（bpy）代码，插件随即在场景中执行。\n\n它的特点是自带便携版 OpenCode：首次运行时插件会从 GitHub Releases 下载约 80MB 的运行时并解压到插件目录，不需要在系统中单独安装 OpenCode。生成的代码会自动运行，出错时日志会回传给智能体自动修复。支持 OpenAI、OpenRouter、Anthropic、Groq、DeepSeek 以及本地 Ollama 等模型提供方，处理图片需要 vision 模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载 zip 文件",
+  "在 Blender 中打开 Edit > Preferences > Add-ons > Install，选择该 zip 安装",
+  "按 N 打开侧边栏，进入 AI Copilot 标签页",
+  "点击 Install OpenCode，等待插件下载并解压运行时（约 80MB）",
+  "在 AI Settings 中选择提供方、填入 API 密钥和模型，点击 Start Server，然后输入请求并点击 Send"
+ ],
+ "summary": "这个 Blender 插件把 3D 视口变成与 AI 智能体的对话窗口，你可以用文字或图片描述想要创建或修改的内容，智能体会生成 bpy 代码并由插件直接在场景中执行。它自带便携版 OpenCode 运行时，首次使用自动下载，无需在系统中单独安装。适合想在 Blender 中借助大模型快速搭建或调整 3D 场景、并愿意配置模型 API 密钥的开发者与创作者。",
+ "tagline": "在 Blender 里用聊天或图片生成并执行 bpy 代码的 AI 插件"
+}

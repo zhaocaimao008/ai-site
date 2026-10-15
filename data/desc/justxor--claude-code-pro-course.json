@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "已经尝试过 Claude Code 并希望深入掌握其高级功能的开发者，以及需要为团队制定统一配置规范的团队负责人。",
+ "date": "2026-10-15",
+ "features": [
+  "12 个模块的俄语理论课程，从安装到多智能体工作流",
+  "8 个带完成标准的实验任务，用于巩固实践",
+  "Starter-kit 包含 8 个 skills、5 个 subagents、4 个 hooks 等，可一键安装到项目",
+  "13 类任务的提示词库与插件打包示例",
+  "GitHub Actions 集成，支持在 issues/PR 中 @claude 和自动审查",
+  "速查表与 FAQ，汇总关键配置和常见问题解决方案"
+ ],
+ "intro": "这是一个关于 Claude Code 的俄语实践课程与指南仓库，内容覆盖从初次安装到团队级专业配置的完整路径。课程包含 12 个模块，涉及 CLAUDE.md、settings、skills、subagents、hooks、MCP、插件、headless 模式与 CI 等主题，并配有 8 个实验任务和可一键安装的 starter-kit。\n\n仓库还提供提示词库、插件示例、GitHub Actions 工作流以及速查表和 FAQ，帮助开发者将 Claude Code 集成到日常开发与团队协作中。所有材料均为俄语，适合希望系统学习 Claude Code 高级用法的俄语使用者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Claude Code：curl -fsSL https://claude.ai/install.sh | bash 或 npm install -g @anthropic-ai/claude-code",
+  "克隆课程仓库：git clone https://github.com/justxor/claude-code-pro-course.git",
+  "将 starter-kit 安装到你的项目：bash claude-code-pro-course/install.sh ~/path/to/my-project",
+  "进入项目并启动：cd ~/path/to/my-project && claude",
+  "在 Claude Code 中运行 /context 查看上下文，或 /onboard 使用 starter-kit 的 skill 概览项目"
+ ],
+ "summary": "这个仓库是一套俄语的 Claude Code 实战课程与配置指南，旨在帮助开发者从初次使用进阶到专业配置。内容涵盖 CLAUDE.md、settings、skills、subagents、hooks、MCP、插件、headless 模式与 CI 等主题，并配有实验任务、提示词库和可一键安装的 starter-kit。适合已经接触过 Claude Code、希望系统提升或为团队制定统一规范的俄语开发者。",
+ "tagline": "Claude Code 俄语实战课程与配置指南"
+}

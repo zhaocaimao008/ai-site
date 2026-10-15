@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究扩散模型蒸馏、少步生成的研究者，以及希望在消费级 GPU 上运行 MiniMax-H3 音视频生成的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "提供 MiniMax-H3 的 4 步学生 LoRA（rank 128，1.4 GB），支持文生音视频联合生成",
+  "inference.py 支持少步采样，可用 --low-vram 在 8 GB 消费级 GPU 上运行",
+  "run_diffusers_pipeline.py 将学生模型接入官方 Diffusers MiniMaxH3ModularPipeline",
+  "comfyui/ 提供 ComfyUI 使用方式与 4 步、8 步即用工作流",
+  "train/ 包含 ImageNet-64、SDXL、Wan2.1 和 MiniMax-H3 的 DMAD 训练代码"
+ ],
+ "intro": "DMAD（Distribution Matching as Adversarial Distillation）是一种把分布匹配重新表述为分类问题的蒸馏方法。传统 DMD 需要额外维护一个辅助扩散模型来拟合学生模型不断变化的分布，带来额外的显存和计算开销；DMAD 改为在共享骨干网络上设置两个判别器头，分别区分真实数据、教师样本与学生样本，并通过对 logits 的线性损失直接训练学生模型，从而省去辅助分数拟合。论文证明在判别器最优时，这些损失可以恢复 DMD 的分布匹配梯度，并进一步提出基于 gap 的重加权策略。\n\n仓库提供了 MiniMax-H3（33B 文生音视频模型）的 4 步学生 LoRA 及推理代码：rank 128 的 LoRA 将 50 步教师模型转为 4 步生成器，输出 1344x768 视频并带原生立体声。此外还包含 Diffusers 管线脚本、ComfyUI 工作流，以及 ImageNet-64、SDXL、Wan2.1 和 MiniMax-H3 的训练代码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建环境：conda create -n dmad_h3 python=3.12 -y && conda activate dmad_h3",
+  "安装 PyTorch（CUDA 12.6）：pip install torch==2.11.0 torchvision==0.26.0 torchaudio==2.11.0 --index-url https://download.pytorch.org/whl/cu126",
+  "安装依赖：pip install -r requirements.txt",
+  "下载基座模型：hf download MiniMaxAI/MiniMax-H3 --local-dir models/MiniMax-H3 --exclude \"FL2VA/*\" --exclude \"Ref2VA/*\" --exclude \"transformer_ref/*\"",
+  "下载 DMAD 权重：hf download ZhengmingYu/DMAD --include \"minimax_h3/*_critic.safetensors\" --local-dir ckpt"
+ ],
+ "summary": "DMAD 是一种扩散模型蒸馏方法，它把分布匹配转化为分类任务，用共享骨干上的两个判别器头直接学习对数密度比，从而避免 DMD 中维护辅助扩散模型的额外开销。该仓库提供 MiniMax-H3 的 4 步学生 LoRA 与推理代码，可将 50 步教师压缩为 4 步音视频生成器，并支持低显存运行、Diffusers 管线和 ComfyUI 工作流，同时开源了多个数据集的训练代码。",
+ "tagline": "把分布匹配做成对抗蒸馏，将扩散模型压缩为少步生成器"
+}

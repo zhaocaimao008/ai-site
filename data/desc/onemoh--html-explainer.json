@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 编程智能体批量生成讲解视频的开发者，以及想用 HTML 写画面、在本地完成配音字幕渲染的内容创作者。",
+ "date": "2026-10-15",
+ "features": [
+  "节拍锚定解说词：画面按匹配字幕文本定位动画，改解说词后全片自动重排时间，画面代码无需改动。",
+  "词边界字幕：时序来自 TTS 的字级时间戳，edge-tts 取 WordBoundary，火山引擎取 sentence.words[]。",
+  "两个配音引擎：edge-tts 免费免密钥，火山引擎语音合成 2.0 音质更好但需 API Key，两者产出的 manifest 结构一致。",
+  "23 种画面风格与 40+ 动作词汇的动效库，动效是时间的纯函数，可组合、可逐帧 seek。",
+  "主题驱动模板编排：style_director.py 读解说词推断每场角色，挑主风格、搭次风格并决定开场与转场。",
+  "多画幅封面、画质与帧率档位、快门运动模糊、多进程并行与断点续渲等渲染选项。"
+ ],
+ "intro": "html-explainer 是一个面向 AI 编程智能体的 Agent Skill，目标是把任意主题做成一条带配音、硬字幕和封面的讲解视频。画面用 HTML/CSS/GSAP 编写，通过确定性逐帧渲染输出真正的 MP4，核心链路完全在本地运行，不需要 API key，也没有按次计费。\n\n它遵循 Agent Skills 约定，Claude Code、OpenAI Codex、WorkBuddy、Cursor、Gemini CLI 等工具都能直接加载，内部则是普通的 Python 与 Node 脚本，手工执行也可以。技能会带着智能体走完调研、解说词、配音、字幕与节拍、风格编排与写画面、渲染、体检到封面的完整流程。\n\n渲染方式不是录屏，而是把 GSAP 时间轴定位到指定时刻后截图，因此同一帧在不同次渲染中逐像素一致，单个场景可以独立重渲，也避免了录屏常见的时序问题。代价是每个动画都必须可 seek，墙钟动画会被 lint 拒绝。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "把安装指令发给智能体：给当前本地环境安装该 Skill：https://github.com/OneMoh/html-explainer.git，安装到你的技能目录，并检测安装必要的运行环境（Python 3.9+ / Node 18+ / Chrome 或 Edge / ffmpeg）。",
+  "手动安装可执行：git clone https://github.com/OneMoh/html-explainer.git ~/.workbuddy/skills/html-explainer",
+  "运行环境安装脚本：bash ~/.workbuddy/skills/html-explainer/setup_env.sh --install",
+  "装完新开一个会话，让智能体重新扫描技能目录。",
+  "对智能体说一句需求，例如：把「为什么天空是蓝色的」做成一条 1 分钟的讲解视频。"
+ ],
+ "summary": "html-explainer 是一个 Agent Skill，用来把任意主题做成带配音、硬字幕和封面的讲解视频。画面用 HTML/CSS/GSAP 编写，通过确定性逐帧渲染输出 MP4，全程本地运行，核心链路不需要 API key。它适合希望借助 Claude Code、Codex 等智能体批量生成讲解视频的开发者，也适合想用网页技术控制画面、又不想处理录屏时序问题的创作者。",
+ "tagline": "用 HTML 写画面、本地渲染带配音字幕讲解视频的 Agent Skill"
+}

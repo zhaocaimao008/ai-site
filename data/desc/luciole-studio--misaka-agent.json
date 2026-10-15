@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合人文与社会科学领域的研究者、计算社会科学与数字人文方向的开发者，以及需要多智能体协作完成文献综述和定性研究的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "以 Last Order 为协调者、Sisters 为领域专家的多智能体协作研究流程",
+  "基于有向无环图（DAG）展开研究分支，每个节点拥有自己的团队与红队",
+  "症候阅读式红队审查，区分可修复疏漏与受前提遮蔽的方向",
+  "引用可追溯至页码和字符偏移，上下文可回溯至原始对话",
+  "计划、任务卡、结论版本、批评与来源列表以 Markdown 保存在 git 仓库中",
+  "支持 Claude、GPT、Gemini 或本地模型，Claude Code 和 Codex 可作为成员加入"
+ ],
+ "intro": "MISAKA 是一个面向人文与社会科学领域的多智能体研究系统。它把研究问题拆解成有向无环图（DAG）上的节点，每个节点由协调者 Last Order 规划，由专家 Sisters 执行检索、阅读与写作，再经红队审查结论中未被言明却依赖的预设，将可修复的疏漏在节点内补足，将源于不同前提的替代方向展开为新节点。\n\n系统强调可追溯与可审计：引用可定位到页码和字符偏移，计划、任务卡、结论版本、批评与来源列表都以 Markdown 保存在项目文件夹中，项目本身是一个 git 仓库，仅在用户审阅后按需提交。研究过程由用户主导，每个分支有独立面板，可随时进入、暂停或恢复。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv、git、ripgrep、fd 和 poppler，并准备模型提供方的 API key 或订阅",
+  "运行 uv tool install \"misaka[providers] @ git+https://github.com/Luciole-Studio/Misaka-Agent.git\"",
+  "创建并进入工作目录，例如 mkdir ~/Documents/my-research && cd ~/Documents/my-research",
+  "运行 misaka setup 登录、选择模型并创建首批 Sisters",
+  "运行 misaka 启动系统，输入 /research 开始研究"
+ ],
+ "summary": "MISAKA 是一个面向人文与社会科学的多智能体研究系统。它把研究问题拆成有向无环图上的节点，由协调者 Last Order 规划，专家 Sisters 检索阅读，红队审查结论中未言明却依赖的预设，将可修复疏漏在节点内补足，将不同前提的替代方向展开为新节点。引用可追溯至页码和字符偏移，计划、结论版本与来源列表以 Markdown 保存在 git 仓库中，研究过程由用户主导，适合需要多智能体协作完成文献综述与定性研究的场景。",
+ "tagline": "面向人文社科的多智能体研究系统，用 DAG 和症候阅读挖掘多元叙事"
+}

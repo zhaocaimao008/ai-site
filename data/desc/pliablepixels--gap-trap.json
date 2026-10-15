@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合让 AI agent 大量编写代码、又不想逐行审查 diff 的开发者与团队，尤其是使用 Claude Code、Codex 等编码 agent 的仓库维护者。",
+ "date": "2026-10-15",
+ "features": [
+  "读取仓库代码，生成贴合该代码库的 Contracts 规则与对应门禁",
+  "Proven red：在 CI 中让新测试跑旧代码，测试若通过则失败，验证测试有效性",
+  "Ratchets：对 lint 积压、超长文件等已知问题计数，只允许下降",
+  "Playbooks：把项目经验教训写下来，避免后续会话重复踩坑",
+  "安装 slop-mop，让 agent 生成的文档、提交信息和 PR 描述更自然",
+  "支持任意语言，Node/Python 集成测试套件，其他语言使用 shell 门禁"
+ ],
+ "intro": "gap-trap 是一个面向 AI 编码场景的工具。当 agent 承担大部分代码编写后，开发者往往不再逐行审查 diff，代码质量会逐渐漂移：重复造轮子、越层调用、写只验证「跑过」而非「做对」的测试、忘记指令文件里的规则。gap-trap 在仓库中运行一次，读取代码并生成贴合该代码库的规则，同时为每条规则加上门禁（gate）——规则被破坏时提交或 CI 会失败，agent 无法跳过。\n\n它建立四类内容：Contracts（对 HTTP、日志、配置、鉴权等有唯一正确做法的部分给出约定与检查）、Proven red（让新测试在旧代码上运行，若通过则失败，确保测试真的能失败）、Ratchets（已知问题计数只降不升）、Playbooks（记录项目踩过的坑）。它还会安装 slop-mop 以改善文档、提交信息和 PR 描述。支持任意语言，Node 和 Python 仓库的门禁集成在测试套件中，其他语言使用 shell 版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 skills CLI 安装：npx skills add pliablepixels/gap-trap",
+  "或手动克隆并复制到 ~/.claude/skills（Codex 为 ~/.agents/skills）",
+  "在目标仓库中运行 /gap-trap setup（Codex 使用 $gap-trap setup）",
+  "确认生成的规则与 contracts，并让 skill 写入文件、验证门禁并提交",
+  "之后可定期运行 /gap-trap refine 检查规则与门禁的失效情况"
+ ],
+ "summary": "gap-trap 针对 AI agent 大量写代码后质量逐渐漂移的问题：重复实现已有功能、越层调用、测试只验证跑过而非做对、指令规则被遗忘。它在仓库中运行一次，读取代码生成贴合该库的规则，并为每条规则加上提交或 CI 门禁，agent 无法跳过。它还引入 Proven red 验证测试有效性、Ratchets 控制已知问题只降不升、Playbooks 记录经验教训。适合让 agent 写大部分代码、又不逐行审查 diff 的开发者与团队。",
+ "tagline": "为 AI 写代码的仓库建立规则与质量门禁"
+}

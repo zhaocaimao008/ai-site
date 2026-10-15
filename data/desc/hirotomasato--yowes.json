@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要通过 MCP 客户端或 agent 运行时批量生成教师证件与文书的开发者，以及需要为多国场景准备示例文档的人员。",
+ "date": "2026-10-15",
+ "features": [
+  "无界面 MCP 服务器，通过 stdio 暴露文档生成工具",
+  "支持 13 个国家，各自拥有不同的文书类型与本地格式",
+  "内置真实学校数据库，包含地址、学区与联系方式",
+  "按 person_id 哈希从性别感知照片池中选取一致头像",
+  "打包 DejaVu Sans 字体，不依赖系统字体",
+  "以自包含 wheel 分发，一条命令即可安装"
+ ],
+ "intro": "Yowes 是一个无界面的 MCP 服务器，用 Python 编写，通过 stdio 与支持 Model Context Protocol 的 agent 运行时（如 Claude Desktop 等 MCP 客户端）通信。它把教师相关文书的生成能力封装成可被 agent 调用的工具，输出为高分辨率 PNG 图片。\n\n项目覆盖 13 个国家，每个国家有各自的文书类型和本地惯例，例如美国的 employment_letter、teacher_id、teaching_license，法国的 installation_statement、iprof_screenshot，印尼的 payslip、nuptk_card 等。内置真实学校数据库（含街道地址、学区、联系方式），并按姓名哈希从自带照片池中选取一致的头像，字体使用打包的 DejaVu Sans，不依赖系统字体。\n\n它提供 list_countries_tool、list_schools、generate_documents 三个工具，可指定国家、姓名、学校、职位、出生日期、性别和文书类型，结果返回生成的 PNG 文件路径。项目以自包含 wheel 形式分发，可跨平台安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 wheel 安装：pip install dist/yowes_doc_generator-0.1.0-py3-none-any.whl，或从源码安装：pip install -e .",
+  "验证安装：python -c \"from countries.utils import load_font, get_profile_photo; print(load_font(30).getname()); print(get_profile_photo((280,340), person_id='x', gender='Male') is not None)\"",
+  "启动服务器：yowes-mcp，或从源码运行 python mcp_server.py",
+  "在 MCP 客户端中注册 yowes-mcp 命令，然后调用 list_countries_tool、list_schools、generate_documents"
+ ],
+ "summary": "Yowes 是一个无界面的 MCP 服务器，把教师证件和文书的生成做成 agent 可调用的工具，输出高分辨率 PNG。它覆盖 13 个国家，每个国家有各自的文书类型，并内置真实学校数据库和按人选取的一致头像。适合在支持 MCP 的客户端或 agent 运行时中，按国家、姓名、学校、职位等参数批量生成教师 ID、雇佣信、工资单等文档。",
+ "tagline": "通过 MCP 生成 13 国教师证件与文书 PNG"
+}

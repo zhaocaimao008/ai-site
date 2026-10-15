@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把个人文档整理成可读、可修改知识库的开发者与普通用户，尤其是注重本地运行和答案可溯源的人。",
+ "date": "2026-10-15",
+ "features": [
+  "拖入 .txt、.md、.pdf 文件自动归档并合并到已有笔记",
+  "提问后给出带引用的答案，可点击跳转到对应笔记",
+  "以纯 Markdown 保存在本地 ~/llm-wiki，可用编辑器或 git 管理",
+  "支持 OpenRouter、OpenAI、Gemini、Ollama 及 OpenAI 兼容服务",
+  "CROW 分类器模式，由小型分类器负责归档与检索决策",
+  "提供 brain 视图，展示文件夹、笔记与链接关系"
+ ],
+ "intro": "LLM Wiki v2 是一个把个人文档整理成 Markdown 笔记 wiki 的工具。你丢入 .txt、.md 或 .pdf 文件，它会自动归档到合适的文件夹，并与已有笔记合并；提问时答案会引用所用到的笔记，点击即可查看原文。所有笔记以纯 Markdown 保存在 ~/llm-wiki，可以用任意编辑器打开或放进 git 管理。\n\n它支持 OpenRouter、OpenAI、Gemini、Ollama 以及任何 OpenAI 兼容服务，Ollama 可完全本地免费运行。默认使用 CROW 模式：由一个小型分类器决定文档归档和检索路径，而不是让 LLM 自行判断，从而在 wiki 增长时保持速度和成本。项目也提供 demo 模式，无需 API key 即可浏览示例 wiki。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install llmwiki2（需要 Python 3.11 或更高版本）",
+  "运行 llmwiki2 启动，浏览器会自动打开",
+  "选择 provider，填入 key，点击 Test connection 后 Save and start",
+  "没有 key 时可选择 Ollama，本地免费运行",
+  "想先看看效果可运行 llmwiki2 demo 打开示例 wiki"
+ ],
+ "summary": "LLM Wiki v2 把个人文档转成一份可读的 Markdown 笔记 wiki，而不是藏在向量索引里的嵌入。丢入 txt、md 或 pdf 后，它会归档到合适文件夹并与已有笔记合并；提问时答案会引用所用笔记，方便核对原文。笔记以纯 Markdown 存在本地，可用编辑器打开或纳入 git。它支持多种 LLM 服务，也能用 Ollama 本地运行，适合想长期积累、随时翻阅和修正个人知识的人。",
+ "tagline": "把文档整理成可阅读、可溯源的 Markdown 知识库"
+}

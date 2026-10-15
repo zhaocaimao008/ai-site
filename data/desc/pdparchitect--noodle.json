@@ -1,0 +1,26 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 macOS 上使用个人 AI 智能体、并愿意自行配置 harness 和账号的开发者与进阶用户。",
+ "date": "2026-10-15",
+ "features": [
+  "持久化智能体，各自拥有工作区、背景设定和历史记录",
+  "支持多个 bot 组成群组，围绕共同目标协作",
+  "默认受限访问，可按 bot 共享文件夹",
+  "可为智能体创建计算机、浏览器和 applet",
+  "通过 Noodle Hub 共享 harness，让 bot 借用他人的登录环境运行",
+  "支持数十种 MCP 服务、设备端 OCR、背景移除等工具",
+  "支持 Apple Intelligence、Qwen3、Llama、Gemma 4 等设备端模型",
+  "原生聊天体验，支持语音、屏幕截图、标注和 Quick Look"
+ ],
+ "intro": "Noodle 是一套面向 macOS 的原生个人 AI 智能体应用，用 Swift 和 SwiftUI 编写。你可以给单个智能体分配任务，也可以把多个智能体拉进一个群组，让它们围绕共同目标协作。每个智能体拥有独立的工作区、背景设定和历史记录。\n\n智能体运行在你选择的 harness 上，并使用你已有的账号，支持的 harness 包括 Codex、Claude Code、FX、Grok Build、Muse Code、OpenCode v2、Antigravity 以及设备端的 Apple Intelligence。默认情况下智能体处于受限访问状态，可以按 bot 共享文件夹；也可以为它们创建计算机、浏览器和 applet。\n\n除主应用外，项目还提供 Noodle Computer、Noodle Applet、Noodle Browser、Noodle Hub 和 Noodle Mobile 等可选配套应用，其中 Noodle Hub 可以让家人朋友共享你的 harness，Noodle Mobile 则通过 TestFlight 在 iPhone 和 iPad 上与智能体对话。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开 Noodle，按照 Settings → Harness 的指引安装并登录",
+  "创建一个 bot，选择它的 harness，并在 backstory 中描述其角色",
+  "给 bot 分配任务，并提供所需的文件或上下文；如需协作，可创建群组并添加智能体",
+  "如需给 bot 配计算机，在 Noodle Computer 中创建 Shell 或 Desktop，然后在 bot 的 Computers 标签页中添加",
+  "如需给 bot 配浏览器，在 Noodle Browser 中创建并登录所需网站，然后在 bot 的 Browsers 标签页中添加"
+ ],
+ "summary": "Noodle 是一套 macOS 原生应用，用来运行和管理个人 AI 智能体。你可以给单个智能体派任务，也可以把多个智能体组成群组协作，每个智能体有自己的工作区和背景设定。它不绑定单一模型，而是让你接入已有的 harness 账号，如 Codex、Claude Code、Grok Build 等，也支持设备端模型。默认访问受限，可按需为智能体配置计算机、浏览器和 applet，适合想在本地桌面环境里搭建个人智能体工作流的用户。",
+ "tagline": "macOS 上的个人 AI 智能体套件"
+}

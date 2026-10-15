@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要统一视频生成、控制与编辑能力的研究者和开发者，以及希望通过 ComfyUI 工作流上手多模态视频生成的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "文生视频、图生视频与首帧条件生成",
+  "人体与手部姿态引导、结构控制与全参考生成",
+  "风格迁移、指令图像编辑与视频外观编辑",
+  "退化视频修复与逐帧视频修复",
+  "流式长视频生成",
+  "Standard 四步与 Flash 三步快速生成，支持 ComfyUI 工作流"
+ ],
+ "intro": "LynnReal-Omni 是一个把多种视频生成与编辑任务整合到同一框架的多模态项目。它基于 32B 共享多模态扩散 transformer（沿用 MiniMax H3 架构），支持文生视频、图生视频、人体与手部姿态引导生成、结构控制、全参考生成、风格迁移、视频编辑、退化视频修复以及流式长视频生成，并统一采用四步快速生成。\n\n项目还提供 27B 的 LynnReal-Omni-Flash 版本，采用三步生成，通过模型与解码加速以及轻量 VAE 解码器降低推理成本。README 给出了 Standard 与 Flash 的权重下载位置、ComfyUI 工作流以及针对显存有限场景的 Lite 配置建议，同时说明仓库目前处于早期 beta 阶段，可能存在 bug、兼容性问题和生成质量不稳定的情况。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Conda base 环境执行 pip install . 安装，并激活 lynnreal 环境",
+  "将下载的权重按 weight/standard、weight/flash、weight/vae、weight/light-vae 目录放置",
+  "运行 Standard 文生视频：bash script/sample/standard/bf16/t2v.sh --frame 5s --resolution 768p",
+  "运行 Flash 文生视频：bash script/sample/flash/int8/t2v.sh",
+  "尝试首帧条件生成：bash script/sample/standard/bf16/ti2v.sh --image test/assets/times_square.png"
+ ],
+ "summary": "LynnReal-Omni 把文生视频、图生视频、姿态引导、结构控制、全参考生成、风格迁移、视频编辑、退化视频修复和流式长视频生成整合进一个多模态框架，统一采用四步快速生成，并提供三步的 Flash 版本以降低推理成本。它适合需要在同一模型内组合多种视觉条件、完成视频生成与编辑任务的开发者和研究者，也提供 ComfyUI 工作流和针对显存有限场景的 Lite 配置。",
+ "tagline": "统一多种视频生成与编辑任务的多模态框架"
+}

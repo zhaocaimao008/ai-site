@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编码代理开发 iOS 或 Android 应用的开发者，尤其是使用 React Native、Expo 或原生移动项目的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "检测 iOS 与 Android 项目，在应用内嵌入模拟器或仿真器实时画面",
+  "支持 React Native、Expo、Xcode 工程和 Gradle 项目，自动构建、安装并启动",
+  "代理可通过 device_run 工具自行构建并启动应用，读取构建错误与日志",
+  "提供 Xcode 风格的运行控制，显示构建状态并支持一键停止",
+  "通过 HTTP API 控制设备预览的启动、停止与运行",
+  "保留 opencode 的终端 UI、桌面应用、Web UI、模型提供商、MCP、插件和技能"
+ ],
+ "intro": "MobileCode 是 opencode 的一个分支，在原有 AI 编码代理的基础上增加了对移动项目的识别与构建能力。当它检测到 iOS 或 Android 项目时，可以启动模拟器或仿真器的预览服务，并在应用内会话旁边实时渲染设备画面。\n\n它支持 React Native、Expo、原生 Xcode 工程以及 Gradle 项目，能自动完成构建、安装和启动流程。代理还可以通过 device_run 工具自行构建并启动应用，读取构建错误和日志，从而在无需手动粘贴日志的情况下修复构建失败。\n\n除移动端特性外，MobileCode 保留了 opencode 的全部功能，包括终端界面、桌面应用、Web UI、任意模型提供商、MCP、插件和技能，并沿用 opencode 的配置格式与位置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用安装脚本：curl -fsSL https://raw.githubusercontent.com/hsandhu/mobilecode/main/install | bash",
+  "或从源码构建：git clone https://github.com/hsandhu/mobilecode.git && cd mobilecode && bun install",
+  "运行：bun run --cwd packages/opencode src/index.ts",
+  "开发模式：bun run --cwd packages/opencode src/index.ts serve --port 4096 启动后端，bun --cwd packages/app dev -- --port 4444 启动 Web UI"
+ ],
+ "summary": "MobileCode 是一个面向移动应用的 AI 编码代理，基于 opencode 分支开发。它能识别 iOS 和 Android 项目，在应用内嵌入模拟器或仿真器画面，并自动完成构建、安装和启动。代理还可以自行运行应用、读取构建错误和日志，帮助修复构建失败。适合使用 React Native、Expo 或原生移动项目的开发者，在编写代码的同时直接预览设备效果。",
+ "tagline": "面向移动应用的 AI 编码代理，可构建并预览 iOS 与 Android 项目"
+}

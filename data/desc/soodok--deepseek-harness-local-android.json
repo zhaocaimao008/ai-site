@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想在 Android 手机上本地运行 DeepSeek Agent 的开发者与进阶用户，尤其是希望免 Root、免 Termux 直接安装 APK 使用的人群。",
+ "date": "2026-10-15",
+ "features": [
+  "官方 dsh 引擎原样运行在 Android 应用沙箱内，无需 Root 或 Termux",
+  "扩展中心提供 19 项环境扩展一键下载安装，支持卸载与一键重装",
+  "三级权限模式：普通沙箱、Shizuku adb 级、Root 全盘读写",
+  "Agent 可通过无障碍服务读屏、点击、输入、滑动、截屏操作手机",
+  "支持 SSH 远程终端与 scp/sftp 文件传输（需安装 OpenSSH 扩展）",
+  "语音输入、悬浮窗状态球、前台服务保活与任务完成通知"
+ ],
+ "intro": "DSH Mobile 是 DeepSeek Harness（DeepSeek 开源的 Agent 框架）的 Android 完整移植。官方 dsh 引擎（锁定 0.2.0-rc.2）运行在应用沙箱内，监听 127.0.0.1 回环，会话、凭证和工作区全部留在手机上，装完即用，无需 Root、Termux 或电脑。\n\n项目本身不是自研 Agent 框架，也不包含端侧大模型——模型走用户配置的 API。它负责的是运行层：bionic 版 Node.js 运行时、前台服务保活、三级权限（普通 / Shizuku / Root）以及扩展中心。插件体系、WebUI、工具调用链均来自上游，桌面上 dsh 能做的事这里都能做。\n\n内置扩展中心提供 Python、Go、Rust、Git、FFmpeg 等 19 项环境一键安装，Agent 也能在会话中自主安装环境。支持 SSH 远程终端、语音输入、悬浮窗保活，以及通过无障碍服务让 Agent 读屏、点击、输入来操作手机屏幕。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载 arm64-v8a 的 APK 并安装（允许未知来源）",
+  "首启选择显示方向与权限模式，不确定就选「普通」",
+  "等待运行时解压与引擎启动完成",
+  "进入对话派任务，点击 Agent 给出的 127.0.0.1 链接预览成果",
+  "如需 Agent 操作屏幕，在系统设置中开启 DSH Screen Tap 无障碍服务"
+ ],
+ "summary": "DSH Mobile 把 DeepSeek 官方的 dsh Agent 引擎完整移植到 Android，运行时直接打进 APK，装完即用，不需要 Root、Termux 或电脑。它解决的是在手机上跑 Agent 时环境配置繁琐、原生模块编译困难的问题，适合想在移动设备上派发文件读写、命令执行、网页预览等任务的开发者。模型仍走用户自己配置的 API，数据默认留在本机。",
+ "tagline": "在 Android 手机上免 Root 运行 DeepSeek Harness Agent"
+}

@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合想构建人格化机器人、AI 主播或陪伴类应用的开发者，也适合需要为智能体接入多种外部环境的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "以事件流为核心的原生 Agent 框架",
+  "模块化 LLM provider 组件，支持多种上游 API 与本地模型",
+  "四层架构：Core、Persona、Memory、World 严格分离",
+  "Cortico World 扩展系统，支持跨环境事件与工具调用",
+  "内置多语言 Web 控制台，可配置端点、凭证与运行参数",
+  "配套 Cortina 扩展创建工具，支持非开发者用 AI 构建扩展"
+ ],
+ "intro": "Cortico 是一个以事件流为核心的 AI Agent 框架，面向需要持续运行、处理混合实时输入的自主智能体。它适合人格化机器人、AI 主播、角色扮演、陪伴等场景，目标是让 AI 能同时观察和作用于聊天平台、游戏乃至物理环境等多个外部环境。\n\n框架在架构上严格分为 Core、Persona、Memory、World 四层：Core 负责会话生命周期、事件流与模型调用，Persona 定义机器人类别的语义与认知循环，Memory 是内部状态的持久化存储，World 则是与外部环境隔离的边界。项目内置模块化的 LLM provider 组件，基于 Responses 协议，可对接多种上游 LLM API 或本地部署模型，并提供操作直观的 Web 控制台。\n\nCortico 还提供扩展系统 Cortico World，以事件投递和工具调用作为输入输出，具备较强的兼容性和扩展空间。配套的 Cortina 工具让非开发者也能通过对话式 AI 构建扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认环境要求：Node 22+",
+  "执行 `corepack pnpm install` 安装依赖",
+  "执行 `pnpm start` 启动，首次运行会自动初始化默认部署 mybot",
+  "打开 `http://127.0.0.1:7788/` 进入 Web 控制台，配置模型端点",
+  "配置完成后点击 Say hello 让机器人发起对话",
+  "如需新增部署，执行 `pnpm start --new`；按名称启动指定部署用 `pnpm start second`"
+ ],
+ "summary": "Cortico 是一个围绕事件流设计的 AI Agent 框架，用来构建能持续运行、处理实时混合输入的人格化机器人。它把系统拆成 Core、Persona、Memory、World 四层，让机器人可以同时接入聊天平台、游戏等不同环境，并通过扩展系统对接外部能力。项目基于 TypeScript，内置模块化 LLM provider 和 Web 控制台，适合做 AI 主播、角色扮演或陪伴类应用。",
+ "tagline": "围绕事件流构建的 AI Agent 框架，用于打造人格化机器人"
+}

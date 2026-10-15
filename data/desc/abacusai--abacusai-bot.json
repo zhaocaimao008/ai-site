@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把重复性工作、跨应用任务或个人助理交给常驻 AI 代理的开发者和普通用户，也适合需要本地或自带模型密钥的进阶使用者。",
+ "date": "2026-10-15",
+ "features": [
+  "创建具有独立使命、人格、模型、聊天与记忆的常驻 bot，可从空白或模板开始",
+  "通过 WhatsApp、Telegram、Discord 等消息应用与 bot 交互，并控制哪些发件人可触发响应",
+  "内置 100+ 连接器与工具，覆盖 Gmail、Google Drive、Google Calendar、Slack、Outlook、OneDrive、Jira、Confluence、Dropbox、X 等服务",
+  "支持 MCP 服务器、技能、本地工具、浏览器、文件与设备",
+  "例程可按小时、每天、工作日、每周、一次性、按需或 webhook 运行，每次运行有独立记录与输出",
+  "支持免费模型路由（RouteLLM - Open）以及自带付费密钥、订阅或本地 OpenAI 兼容模型"
+ ],
+ "intro": "AbacusAI Bot 是一个免费、开源的桌面端个人智能体应用，使用 TypeScript 编写，采用 MIT 协议。它把「机器人」作为常驻的个人代理：每个 bot 拥有独立的名称、指令、模型、聊天记录、记忆和受管文件夹，可以按需启用工具，并通过桌面端、WhatsApp、Telegram 或 Discord 与它对话。\n\n除了即时对话，bot 还能在 Gmail、Google Drive、Slack、GitHub、Notion 等已连接的服务中执行任务，并支持按小时、每天、工作日、每周、一次性、按需或 webhook 触发例程。项目内置 100 多个连接器与工具，也支持 MCP 服务器、技能、本地工具、浏览器、文件和设备。\n\n应用提供免费 Abacus.AI 账号（含 2,000 credits 和部分免费模型），也可接入 OpenRouter、Google AI Studio、Mistral、NVIDIA、Cerebras、Groq 等密钥，或使用本地 OpenAI 兼容模型。官方提供 macOS、Windows、Linux 的签名安装包。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从官网或 GitHub Releases 下载对应平台（macOS Apple silicon/Intel、Windows、Linux）的安装包并安装",
+  "注册免费 Abacus.AI 账号，获得 2,000 credits 和内置免费模型",
+  "在桌面应用中创建一个 bot，设置名称、指令和模型",
+  "按需连接 Gmail、Google Drive、Slack 等服务，或配置 OpenRouter、Google AI Studio 等模型密钥",
+  "通过桌面端、WhatsApp、Telegram 或 Discord 向 bot 发送消息，或为它设置例程"
+ ],
+ "summary": "AbacusAI Bot 是一个免费开源的桌面端个人智能体应用，把常驻 bot 作为可长期使用的个人代理。每个 bot 有独立的指令、模型、聊天和记忆，能通过 WhatsApp、Telegram、Discord 或桌面端接收消息，并在 Gmail、Google Drive、Slack、GitHub、Notion 等已连接服务中执行任务。它支持定时或 webhook 触发的例程，内置 100 多个连接器与工具，也可接入免费模型、自带密钥或本地 OpenAI 兼容模型。适合想把重复工作、跨应用任务或日常助理交给 AI 代理的用户。",
+ "tagline": "免费开源的跨平台个人 AI 智能体，可接入消息应用与常用服务"
+}

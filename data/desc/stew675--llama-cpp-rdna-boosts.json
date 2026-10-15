@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AMD RDNA 系列 GPU 运行 llama.cpp 并希望提升推理性能的开发者，尤其是拥有 RDNA4 显卡的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "针对 AMD RDNA3 / RDNA3.5 / RDNA4 GPU 的 llama.cpp 性能补丁集，共 12 个独立补丁",
+  "包含 MTP 解码、分块 gated-delta-net 预填充、BF16 KV 缓存与 WMMA flash-attention 等优化",
+  "融合 MoE 与 k-quant 解码路径，以及混合 all-reduce 和注意力内存优化",
+  "所有新增功能默认开启，无需设置环境变量，并提供 ENVIRONMENT.md 说明",
+  "架构选择在运行时进行，支持多架构构建（如 gfx1100;gfx1151;gfx1201）",
+  "提供脚本 apply-all.sh 自动应用全部补丁，也支持按需选择单个补丁"
+ ],
+ "intro": "这是一个针对 llama.cpp 的补丁集合，专门为 AMD RDNA 系列 GPU（RDNA3 / RDNA3.5 / RDNA4）带来性能优化，目标是在保证数值正确性的前提下提升推理速度。项目以 12 个独立的 git am 补丁形式发布，基于上游 llama.cpp 的特定提交（097cf33d9），可以整体应用，也可以按需选择。\n\n补丁内容涵盖 MTP 解码、分块 gated-delta-net 预填充、BF16 KV 缓存与 WMMA flash-attention、融合 MoE 与 k-quant 解码路径、混合 all-reduce 以及注意力内存优化等。所有新增功能默认开启，无需设置环境变量；同时提供了 ENVIRONMENT.md 说明每个环境变量的默认值和用途。\n\n项目主要面向 RDNA3/3.5/4 架构，其中 RDNA4 受益最明显，部分优化也回移植到了 RDNA3 和 RDNA3.5。架构选择在运行时进行，多架构构建可以生成一个二进制文件自动适配。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/ggml-org/llama.cpp && cd llama.cpp",
+  "git checkout 097cf33d9",
+  "bash <path-to-this-repo>/scripts/apply-all.sh .   # 创建分支 rdna-boosts（12 个提交）",
+  "按照 llama.cpp 的正常流程编译并运行"
+ ],
+ "summary": "这个项目为 llama.cpp 提供了一组针对 AMD RDNA 显卡的优化补丁，目的是在保证数值正确性的同时提高推理速度。它适合在 RDNA3、RDNA3.5 或 RDNA4 显卡上运行 llama.cpp 的用户，尤其是 RDNA4 用户。补丁以 12 个独立提交的形式发布，可以整体应用或按需选择，所有新增功能默认开启，无需额外配置环境变量。",
+ "tagline": "为 llama.cpp 提供 AMD RDNA 显卡的高性能推理补丁集"
+}

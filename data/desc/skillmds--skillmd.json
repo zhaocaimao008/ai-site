@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合为 Claude Code、Cursor、Codex 等 agent 编写或管理 Agent Skill 的开发者，以及希望在 CI 中校验技能格式与安全性的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "skillmd CLI：lint、scan、rules、init、search、add、list、remove、update、publish 等命令",
+  "skillmds MCP server：让 MCP 兼容的 agent 在对话中搜索、查看、校验和安装技能",
+  "@skillmds/core 引擎：SKILL.md 解析器、lint 规则、安全扫描、质量评分与 SARIF/JSON/GitHub 格式化",
+  "GitHub Action：在仓库中 lint 所有技能，结果输出到 GitHub Code Scanning",
+  "安装时自动检测 68 种 agent 的配置目录，写入各自技能目录，且不执行脚本",
+  "支持从 registry slug、GitHub 仓库或本地路径安装，并可用 --deny 拒绝会执行代码的技能"
+ ],
+ "intro": "SkillMD 是围绕 Agent Skill（SKILL.md）格式构建的开源工具链。Agent Skill 是一个包含 SKILL.md 的文件夹，由 YAML frontmatter（name、description）和 Markdown 指令组成，Claude Code、Cursor、Codex、Gemini CLI、GitHub Copilot、Windsurf 等 60 多个 agent 都读取同一格式。本项目提供 CLI、MCP server、GitHub Action 以及它们共用的 SKILL.md 引擎。\n\nCLI 可以搜索并安装技能到本机检测到的各个 agent 目录，也能在分享前对技能做 lint 校验、安全扫描和发布。MCP server 让支持 MCP 的 agent 在对话中直接搜索、查看、校验和安装技能。@skillmds/core 则暴露解析、lint 规则、安全扫描、质量评分和 SARIF/JSON 格式化能力，供本地与 CI 复用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "搜索并安装技能：npx skillmds search \"pdf\"",
+  "安装指定技能：npx skillmds add anthropic/pdf",
+  "校验自己的技能：npx skillmds lint ./my-skill",
+  "全局安装 CLI：npm i -g skillmds",
+  "为 Claude Code 添加 MCP server：claude mcp add skillmd -- npx -y skillmds"
+ ],
+ "summary": "Agent Skill 用统一的 SKILL.md 格式被 Claude Code、Cursor、Codex 等众多 agent 读取，但编写、校验和分发缺少趁手工具。SkillMD 提供 CLI、MCP server、GitHub Action 和共用引擎，用来搜索、安装、lint、安全扫描和发布技能，安装时会写入各 agent 自己的技能目录且不执行脚本。适合需要管理或校验 Agent Skill 的开发者与团队。",
+ "tagline": "Agent Skills 的搜索、安装、校验与发布工具链"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究或使用世界模型、视频生成模型的开发者与评测人员，以及需要可解释评估结论的基准维护者。",
+ "date": "2026-10-15",
+ "features": [
+  "基于案例上下文进行技能路由，并记录跳过某技能的理由",
+  "子智能体针对可测量子问题分别推理，父智能体校验并汇总得分",
+  "完整评估轨迹保存为可审计的 case card",
+  "提供 CLI 命令 harnesseval eval 与 harnesseval verify 执行和校验评估",
+  "输出 summary.json、leaderboard 等汇总结果文件",
+  "支持提交新案例与新技能以扩展基准"
+ ],
+ "intro": "HarnessEval-W 是一个面向世界模型（world model）视频生成结果的评估基准与工具链。它认为评估不应只给出一个分数，而应给出支撑这个分数的推理过程。为此，它把 LLM 生态中的 harness 范式引入世界模型评测：不是套用固定评分表，而是先理解每个评测案例的上下文，把评估问题拆解成可测量的子问题，再派出配备专用上下文与诊断工具的子智能体分别作答，最后由父智能体校验证据并汇总成最终结论。\n\n每次评估都会形成一棵可审计的证据树，包含每个问题、答案、分数和支撑画面。路由只依赖案例上下文，不依赖被评模型，因此不同模型面对的是同一批案例和同一批问题。项目提供评估代码、指标后端、示例运行目录以及公开数据集与排行榜。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone --branch main --single-branch https://github.com/mirros-lab/harnesseval-w.git",
+  "创建三个 conda 环境：conda env create -f docs/installation/main.environment.yml（以及 metrics、pavrm 两个文件）",
+  "激活主环境并配置凭据：conda activate harnesseval-main；cp config/example.env harnesseval.env；set -a; . ./harnesseval.env; set +a",
+  "运行评估：harnesseval eval --results runs/example/results_example/generation --model-id seedance-2.0-standard --run-root runs/example/results_example/run --manifest runs/example/results_example/manifest.json --plan-root benchmark/plans",
+  "校验结果：harnesseval verify run --eval-root runs/example/results_example/run/harnesseval/models/seedance-2.0-standard/evaluation --manifest runs/example/results_example/manifest.json --model seedance-2.0-standard"
+ ],
+ "summary": "世界模型生成的视频是否物理合理、因果连贯，往往需要人来看才能判断，而传统基准只给出一个分数，无法说明理由。HarnessEval-W 把评估过程智能体化：先按案例上下文路由到合适的评估技能，再拆成可测量的子问题交给子智能体推理，最后由父智能体校验证据并汇总，形成可审计的证据树。它适合需要评估视频生成或世界模型输出、并希望看到评分依据的研究者与开发者。",
+ "tagline": "用智能体流水线评估世界模型生成视频的基准工具"
+}

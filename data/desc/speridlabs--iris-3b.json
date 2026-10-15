@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究像素空间生成模型、扩散模型以及通用视觉骨干的开发者与研究人员，也适合需要深度估计或图像修复能力的工程人员。",
+ "date": "2026-10-15",
+ "features": [
+  "像素空间扩散生成：无 VAE、无潜空间，直接生成每个像素",
+  "单目深度估计：照片输入，一次前向传播输出相对深度",
+  "图像修复与 4 倍放大：退化输入恢复为清晰图像",
+  "同一骨干微调支持三类任务，无需架构改动",
+  "提供训练、微调代码与推理脚本",
+  "Iris-3B Turbo 蒸馏版，4 步生成 1024×1024 图像"
+ ],
+ "intro": "Iris-3B 是一个 30 亿参数的扩散 Transformer，直接在像素空间生成图像，不使用 VAE 或潜空间，每个像素都由模型输出。它同时被设计为通用视觉学习器：同一个像素空间先验经过微调，无需改动架构即可完成单目深度估计和 4 倍图像修复与放大，实现一个骨干支持三类任务。\n\n项目包含模型权重、训练与微调代码以及推理脚本。文本编码器使用冻结的 Qwen3-VL-4B-Instruct，主干为 24 层、宽度 2560 的 Transformer，采用 rectified flow 目标。另提供 Iris-3B Turbo 蒸馏版本，4 步即可生成 1024×1024 图像。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install -e .（需要 Python >= 3.11，PyTorch >= 2.7.1）",
+  "下载权重：hf download speridlabs/iris-3b --local-dir iris-3b --exclude \"depth/*\" \"upscaler/*\" \"turbo/*\"",
+  "文生图：python scripts/sample.py --checkpoint iris-3b --prompt \"a red fox sleeping in fresh snow, golden hour\"",
+  "深度估计：python scripts/depth.py photo.jpg --out depth_out",
+  "图像放大：python scripts/upscale.py"
+ ],
+ "summary": "Iris-3B 是一个 30 亿参数的扩散 Transformer，直接在像素空间生成图像，不依赖 VAE 或潜空间。它的特点是用同一个像素空间先验，经过微调后还能完成单目深度估计和 4 倍图像修复与放大，一个骨干覆盖三类任务。项目开源了模型权重、训练与微调代码以及推理脚本，适合研究像素空间生成模型或需要深度估计、图像修复能力的开发者。",
+ "tagline": "3B 像素空间扩散 Transformer，生成与视觉理解统一骨干"
+}

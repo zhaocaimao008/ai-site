@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已订阅 ChatGPT 并希望在本地编码代理中快速生成或编辑图像的开发者和普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "通过 ChatGPT 订阅在本地编码代理中生成和编辑图像，无需 Images API",
+  "支持直接提示词和委托式多概念提示，为每个概念生成独立的图像提示",
+  "接受本地 PNG、JPEG、WebP 参考文件，并将其传入实际生成过程",
+  "支持透明背景 PNG 输出，并检查 alpha/透明度支持",
+  "生成结果保存在项目内的 generated-images 目录，支持有界并行批量生成",
+  "提供安装引导和就绪检查，适配 Codex、Claude Code 和 Google Antigravity"
+ ],
+ "intro": "GPT Image Skill 是一个让 Codex、Claude Code、Google Antigravity 等本地编码代理通过用户的 ChatGPT 订阅生成和编辑 GPT 图像的工具。它不调用 OpenAI Images API，也不产生单独的 Images API 计费请求，而是利用内置的图像生成能力。\n\n安装后，用户可以在代理中通过 $gpt-image、/gpt-image 或提及 gpt-image 来发起图像生成或编辑请求。该技能支持直接提示词和委托式多概念提示，能处理本地参考文件，并支持透明背景 PNG 输出。生成结果保存在项目的 generated-images 目录下，并支持有界并行批量生成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将 README 中的安装提示词粘贴到 Codex、Claude Code 或 Google Antigravity 中，授权安装并验证 GPT Image Skill",
+  "安装完成后，在 Codex 中使用 $gpt-image，在 Claude Code 中使用 /gpt-image，或在 Antigravity 请求中提及 gpt-image",
+  "尝试示例：$gpt-image Create a cozy reading room at sunset, 16:9, high quality.",
+  "使用参考图：/gpt-image Use @references/character.png as the character reference and place it in a rainy city, 9:16, high quality.",
+  "生成透明背景图像：Use the gpt-image skill to create a flat blue robot app icon with a transparent background, 1:1, high quality."
+ ],
+ "summary": "GPT Image Skill 让 Codex、Claude Code 等本地编码代理通过 ChatGPT 订阅生成和编辑图像，无需调用 Images API。它支持直接提示词和委托式多概念提示，能处理本地参考文件，并输出透明背景 PNG。适合已订阅 ChatGPT 并希望在编码代理中快速生成或编辑图像的开发者和普通用户。",
+ "tagline": "通过 ChatGPT 订阅在本地编码代理中生成和编辑 GPT 图像"
+}

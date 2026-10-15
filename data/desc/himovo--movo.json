@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在企业内部自托管 Agent 平台、需要知识问答、研究、内容生成和受控系统集成的团队与管理员。",
+ "date": "2026-10-15",
+ "features": [
+  "DSH 原生 Agent 运行时，支持规划、工具调用、Skills、子 Agent 和受治理的执行",
+  "企业知识与研究：检索内部文档和公开来源，进行多轮研究并保留引用与证据",
+  "文档与多模态解析：支持 PDF、DOCX、XLSX、PPTX、CSV、Markdown 及图像图表内容",
+  "内容与文件生成：生成报告、文章、PPTX、表格、PDF 和 Markdown 交付物",
+  "Skills、Tools 与 MCP：复用工作流，连接 HTTP 或 MCP 服务到业务系统",
+  "自动化与治理：定时任务、敏感工具操作审批、执行追踪和产物留存",
+  "企业管理：组织、用户、角色、模型、知识、Skills、Tools、审计记录和运行时健康管理"
+ ],
+ "intro": "MOVO Community Edition 是一个自托管的企业级 Agent 平台，构建在 DeepSeek Harness（DSH）之上。它把 DSH 的 Runtime、Skills、Tools 和 MCP 生态与可部署的用户工作区、企业知识库、身份与访问控制、管理后台、治理和文件交付结合起来，目标是让 DSH Agent 从开发实验走向企业生产环境。\n\n平台提供 DSH 原生 Agent 运行时、企业知识与多轮研究、文档与多模态解析、内容与文件生成（报告、PPTX、表格、PDF 等）、Skills/Tools/MCP 集成，以及任务调度、敏感操作审批、执行追踪等治理能力。管理端可管理组织、用户、角色、模型、知识、审计记录和运行时健康状态。\n\n仓库包含 Web 用户工作区、管理控制台、对话与 Agent API、DSH Runtime Host、文档解析与检索服务，以及 Docker 部署配置。默认 Docker Compose 部署会启动 12 个服务。自托管创建的租户标记为 community，无成员数量限制，计费与商业套餐限制关闭，支持自行接入模型。Browser Agent 和 Code Agent 需要安装单独的 MOVO Desktop 客户端并连接自托管服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Git 和 Docker Desktop（或带 Docker Compose v2 的 Docker Engine），确保至少 8 GB 内存和 20 GB 磁盘空间",
+  "克隆仓库：git clone https://github.com/himovo/movo.git",
+  "进入目录并赋予启动脚本执行权限：cd movo && chmod +x movo",
+  "启动服务：./movo up",
+  "打开 http://localhost:3000/admin/setup 完成初始化设置"
+ ],
+ "summary": "MOVO 是一个自托管的企业级 Agent 平台，基于 DeepSeek Harness 构建，把 Agent 运行时与企业所需的知识库、权限管理、治理和文件交付整合在一起。它适合需要在内部部署 Agent、做企业知识问答、多来源研究、报告与演示文稿生成，并希望自行掌控模型接入与数据的团队。平台提供 Web 工作区和后台管理，Browser Agent 与 Code Agent 需配合单独的桌面客户端使用。",
+ "tagline": "基于 DeepSeek Harness 的自托管企业级 Agent 平台"
+}

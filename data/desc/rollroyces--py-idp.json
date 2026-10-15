@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要从 PDF、扫描件等文档中结构化提取信息的 Python 开发者，以及希望自托管或灵活切换 LLM 后端的企业团队。",
+ "date": "2026-10-15",
+ "features": [
+  "六阶段文档处理流水线：解析、分类、提取、评估、验证、人工审核",
+  "支持 12 种以上 LLM 后端，包括 OpenAI、Anthropic、Ollama 及多家中国厂商模型",
+  "基于 Pydantic schema 的字段提取与验证，支持自动 schema 发现",
+  "内置自托管 OCR（Nanonets-OCR2-3B）和多种 PDF 解析器（Docling、pdfplumber）",
+  "自动分块处理超大文档，内置重试、缓存和检查点机制",
+  "提供评估工具（字段 F1、schema 合规率）和从人工修正中学习的 RL 更新"
+ ],
+ "intro": "py-idp 是一个面向 Python 的智能文档处理（IDP）框架，采用六阶段流水线：解析、分类、提取、评估、验证和人工审核（HITL）。它通过 Pydantic schema 定义提取字段，支持 12 种以上 LLM 后端，包括 OpenAI、Anthropic、Ollama 以及多家中国厂商的模型，并内置自托管 OCR 模型 Nanonets-OCR2-3B。\n\n该框架提供自动分块处理超大文档、基于 AI 的 schema 发现、业务规则校验、评估工具以及重试、缓存和检查点等可靠性机制。还包含一个生产可用的 FastAPI 服务器和 Streamlit 人工审核界面，并支持从人工修正中学习。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装核心包：pip install py-idp",
+  "使用零配置快速提取：from idp.easy import extract_one; fields = extract_one(\"invoice.pdf\")",
+  "运行示例脚本：python examples/00_zero_to_extraction.py",
+  "按需安装可选依赖，如 pip install py-idp[docling] 或 pip install py-idp[api]"
+ ],
+ "summary": "py-idp 是一个 Python 智能文档处理框架，用六阶段流水线把 PDF 等文档转成结构化数据。它通过 Pydantic schema 定义字段，支持 12 种以上 LLM 后端和自托管 OCR，内置自动分块、评估工具和人工审核界面。适合需要从发票、扫描件中提取信息并希望灵活切换模型或自托管的开发者。",
+ "tagline": "面向 Python 的 AI 智能文档处理框架，支持多 LLM 后端与 OCR"
+}

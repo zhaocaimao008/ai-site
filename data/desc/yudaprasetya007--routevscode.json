@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 VSCode GitHub Copilot Chat、并希望通过 9Router 网关灵活切换多种 AI 模型的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "零重载切换模型：在 Dashboard 或状态栏点击即可更换 Copilot Chat 使用的 AI 模型，无需重启 VSCode",
+  "本地动态代理：运行在 20129 端口，自动注入当前模型、处理 SSE 流式响应和认证头",
+  "Web Dashboard：提供暗色主题的模型选择界面，支持按提供商筛选",
+  "VSCode 状态栏集成：可直接从右下角状态栏切换模型",
+  "模型对比与基准测试：并排测试不同模型的响应和延迟",
+  "多提供商支持：可连接 OpenAI、Anthropic、Google Gemini、DeepSeek、Groq、OpenRouter 等"
+ ],
+ "intro": "9Router Model Connector 是一个把 Visual Studio Code 的 GitHub Copilot Chat 与 9Router AI 网关连接起来的工具。它通过本地代理（端口 20129）动态改写请求中的模型字段，让 Copilot Chat 始终使用当前选中的模型，而不必手动修改 JSON 配置或重启 VSCode。\n\n项目由 VSCode 扩展、本地代理和 Web Dashboard 三部分组成。9Router 核心运行在 20128 端口，Dashboard 运行在 5500 端口。用户在 Dashboard 或 VSCode 状态栏点击即可切换模型，支持 Claude、GPT、Gemini、DeepSeek、Llama 等，并声称可连接 40 多个 AI 提供商。\n\nREADME 还提供了模型响应对比与延迟测试功能，以及 Windows、Linux、macOS 的安装脚本和手动安装步骤。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 9Router 核心：npm install -g 9router",
+  "克隆仓库：git clone https://github.com/yudaprasetya007/routeVSCODE.git 并进入目录",
+  "安装 VSCode 扩展：code --install-extension releases/routevscode.model-connector-2.5.0.vsix --force",
+  "启动 Web Dashboard：npm start，然后打开 http://localhost:5500",
+  "在 VSCode 中按 Ctrl+Shift+P 执行 “9Router: Set API Key & Base URL”，填入 Base URL 和 API Key，再在 Copilot Chat 的模型选择器中选择 “9Router via Proxy”"
+ ],
+ "summary": "这个项目解决的是在 VSCode Copilot Chat 中切换 AI 模型需要改配置、重载窗口的麻烦。它通过本地代理把 Copilot 的请求转发到 9Router 网关，并在转发时动态替换成当前选中的模型，因此用户在网页面板或状态栏点一下就能换模型，聊天会话不中断。适合已经使用 9Router、又想在 Copilot Chat 里方便调用 Claude、GPT、Gemini、DeepSeek 等多种模型的开发者。",
+ "tagline": "让 VSCode Copilot Chat 一键切换 AI 模型，无需重载"
+}

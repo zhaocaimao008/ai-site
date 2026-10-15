@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在本地运行 LLM 推理服务的开发者和研究者，尤其是使用 llama.cpp 等工具并希望实时观察性能指标和 GPU 状态的人。",
+ "date": "2026-10-15",
+ "features": [
+  "自动检测本机已运行的推理服务（llama.cpp、ollama、vLLM、SGLang 等）",
+  "实时显示 tok/s、TTFT、上下文填充和投机解码接受率",
+  "读取 NVIDIA、AMD、Intel GPU 的负载、显存、功耗和温度",
+  "展示各层在哪个 GPU 上执行，以及 MoE 模型的真实专家路由（需服务端补丁）",
+  "支持同时监控多个模型，并可通过按键切换不同视图",
+  "提供 demo 模式，无需本地服务即可预览界面"
+ ],
+ "intro": "llm-visuals 是一个用 Rust 编写的终端仪表盘，用于实时展示本机正在运行的 LLM 推理状态。它会自动发现已启动的推理服务（如 llama.cpp 的 llama-server、ollama、vLLM、SGLang 等），读取服务端计数器和 NVIDIA、AMD、Intel GPU 的遥测数据，并以真彩色界面呈现模型当前的工作情况。\n\n展示内容包括每秒 token 数、首 token 延迟（TTFT）、GPU 负载与显存、上下文填充、投机解码接受率、各层在哪个 GPU 上忙碌，以及在给服务端打补丁后，MoE 模型对最后一个 token 的真实专家路由。屏幕上每个数字都来自服务端、驱动或基于它们的计算；唯一可能为视觉替代的专家身份会在界面上标注。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Rust 工具链（1.75+），NVIDIA 用户需有 nvidia-smi，Intel 用户需有 xpu-smi，AMD 用户需有 Linux amdgpu 驱动，Apple silicon 用户需有 macmon",
+  "git clone https://github.com/DingoOz/llm-visuals",
+  "cd llm-visuals",
+  "cargo run --release -- --demo  # 使用合成服务器和两个合成 GPU 预览",
+  "cargo run --release  # 连接到正在运行的 LLM 服务器"
+ ],
+ "summary": "llm-visuals 是一个面向本地 LLM 推理的终端仪表盘，用 Rust 编写。它能自动发现本机已启动的推理服务，读取服务端计数器和 GPU 遥测数据，实时展示每秒 token 数、首 token 延迟、GPU 负载与显存、上下文填充、投机解码接受率以及 MoE 模型的专家路由等信息。适合在本地运行 llama.cpp、ollama、vLLM 等服务的开发者，用来观察模型推理时的性能表现和硬件状态。",
+ "tagline": "本地 LLM 推理的实时终端仪表盘"
+}

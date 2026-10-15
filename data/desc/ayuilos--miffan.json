@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Android 手机上使用多种 AI 服务、需要远程操作电脑或本地工作区的开发者与普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "接入 OpenAI 兼容、Gemini、Claude 等 API，或通过 Codex 登录使用 ChatGPT 订阅",
+  "简易聊天模式：每个伙伴一个持续对话，支持并行提问和自然语言调整偏好",
+  "专业模式：为每个助手配置提示词、模型参数、记忆、MCP 服务器、Skills 和网络搜索",
+  "通过 SSH 远程连接 macOS 或 Linux 桌面，从手机查看并控制电脑，操作前需批准",
+  "在手机上运行本地 Linux 工作区，或通过 SSH 使用远程服务器的文件和终端",
+  "跨应用划词悬浮翻译、语音输入输出、文档与 HTML 预览、动态角色表情"
+ ],
+ "intro": "Miffan 是一个 Android AI 客户端，最初从开源项目 RikkaHub 分叉而来，现已独立发展。它本身不内置模型，而是让你接入已有的 AI 服务：OpenAI 兼容接口、Gemini、Claude 的 API key，或通过 Codex 登录使用 ChatGPT 订阅。聊天记录和设置保存在手机本地。\n\n应用提供两种界面。简易聊天把每个 AI 伙伴当作一个持续对话，无需选模型或调参数，支持并行提问、用自然语言调整伙伴偏好、查看和删除记忆。专业模式则允许为每个助手单独配置提示词、模型参数、记忆、MCP 服务器、Skills 和网络搜索，还能在手机上运行本地 Linux 工作区，或通过 SSH 连接远程服务器操作文件和终端。\n\n4.0 版本新增远程控制功能：通过 SSH（包括 Tailscale）连接 macOS 或 Linux 桌面后，可以从手机查看并操作电脑，默认每次操作前需要你批准。此外还支持跨应用划词翻译、文档与 HTML 预览，以及会随对话变化表情的动态角色。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载最新 APK，官方构建面向 Android 8.0 及以上的 arm64-v8a 设备",
+  "首次启动时，使用 API key 或受支持的账号登录来连接 AI 服务",
+  "开始聊天",
+  "如需自行构建：git clone https://github.com/Ayuilos/Miffan.git && cd Miffan && ./gradlew assembleDebug"
+ ],
+ "summary": "Miffan 是一个 Android AI 客户端，不内置模型，而是让你接入已有的 OpenAI 兼容、Gemini、Claude 服务或 ChatGPT 订阅。它把每个 AI 伙伴当作一个持续对话，支持并行提问、自然语言调整偏好和查看记忆；专业模式可单独配置提示词、模型参数、MCP 和网络搜索。4.0 版本还能通过 SSH 连接 macOS 或 Linux 桌面，从手机查看并控制电脑，操作前需批准。适合想在手机上使用多种 AI 服务并远程操作电脑的用户。",
+ "tagline": "Android AI 客户端，可聊天、翻译并远程控制电脑"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 LLM 推理与 test-time compute 的研究者，以及希望在不微调骨干的前提下复现或审计推理控制器的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "从冻结骨干中提取 4D 动力学-几何推理状态",
+  "证据门控与停止头共 582 个可训练参数，骨干保持冻结",
+  "支持文本（Llama-3.1-8B、Qwen2.5-14B、Mixtral-8×7B）与视觉语言（Qwen2.5-VL-7B/32B）配置",
+  "提供检查点验证、数据校验、评估与控制器重训练命令",
+  "运行记录可复现、可恢复，保留配置、检查点标识与哈希"
+ ],
+ "intro": "State-of-Thought（SoT）是一个面向大语言模型与视觉语言模型的推理控制方法。它不修改骨干模型权重，而是从模型内部信息传递中提取四个动力学-几何坐标——Dispersion、Velocity、Directional consistency 和 Instability，构成一个可检查的推理状态。\n\n该状态驱动一个 16→32→1 的证据门控（577 个参数）和一个四权重加一偏置的停止头（5 个参数），共 582 个可训练参数，用于决定何时检索证据、何时停止推理并给出答案。项目提供文本与多模态的运行时、训练代码、五个冻结控制器检查点，以及对齐论文的三 LLM 与两 VLM 配置和 19 个推理数据集上的评估记录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/GongZhiren/State-of-Thought.git && cd State-of-Thought",
+  "python -m venv .venv && source .venv/bin/activate && python -m pip install -e .",
+  "sot checkpoint verify checkpoints/llama-3.1-8b/controller.pt",
+  "sot data validate --config experiments/paper/llama-3.1-8b.yaml",
+  "sot evaluate --config experiments/paper/llama-3.1-8b.yaml"
+ ],
+ "summary": "State-of-Thought 把推理控制从外部采样和搜索转到模型内部：它读取冻结骨干中逐步形成的信息传递轨迹，用四个动力学-几何坐标描述当前推理状态，再由极小的证据门控和停止头决定何时取用证据、何时提交答案。整个控制器只有 582 个可训练参数，骨干权重完全不动。项目覆盖文本与视觉语言两类模型，并给出对齐论文的配置、检查点和评估记录，适合想研究或复现内生推理控制的开发者。",
+ "tagline": "用轻量状态控制冻结大模型的内生推理"
+}

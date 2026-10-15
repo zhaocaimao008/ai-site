@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要管理多个自主 AI Agent、编排分布式任务或构建数据采集管道的开发者和团队。",
+ "date": "2026-10-15",
+ "features": [
+  "Agent 生命周期与心跳租约：分布式状态机，支持能力匹配、租约自动过期和失效 Agent 驱逐",
+  "DAG 工作流引擎：定义多阶段 Agent 图，支持节点依赖、并行执行和条件分支",
+  "原生 MCP 服务器：通过 JSON-RPC stdio 工具连接 Claude Desktop、Cursor 等 LLM 应用",
+  "实时可观测性仪表板：用于监控 Agent、任务状态、爬取运行和指标",
+  "生产级爬取与数据接入管道：内置去重、HTML 清洗和结构化归一化",
+  "多数据库支持：零配置 SQLite 用于本地原型，MySQL 和 PostgreSQL 用于生产部署"
+ ],
+ "intro": "Agent Control 是一个基于 FastAPI、Uvicorn 和 SQLAlchemy 2.0 构建的异步 AI Agent 控制面与编排引擎，用于管理自主 Agent、分布式任务分发、心跳租约、DAG 工作流执行以及数据采集管道。\n\n项目提供 Agent 生命周期与心跳租约机制、DAG 工作流引擎、原生 MCP 服务器、实时可观测性仪表板，并内置爬虫与数据清洗管道。存储层支持 SQLite、MySQL 和 PostgreSQL，可通过 Docker Compose 或本地脚本快速启动。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/loulanyue/agent-control.git && cd agent-control",
+  "一键启动：./start.sh",
+  "或使用 Docker Compose：docker-compose up -d",
+  "或手动安装：python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && cp .env.example .env && uvicorn main:app --host 0.0.0.0 --port 8000 --reload",
+  "访问仪表板 http://localhost:8000/dashboard 或 API 文档 http://localhost:8000/docs"
+ ],
+ "summary": "Agent Control 是一个用 Python 编写的 AI Agent 控制面与任务编排平台，主要解决多 Agent 场景下的注册、心跳租约、任务分发和 DAG 工作流执行问题。它内置 MCP 服务器，可让 Claude Desktop、Cursor 等工具直接调度任务和查询数据库，同时提供爬虫管道和实时监控面板。适合需要管理分布式 Agent 集群、编排多阶段任务或搭建数据采集流程的开发者。",
+ "tagline": "面向自主 AI Agent 的控制面与任务编排平台"
+}

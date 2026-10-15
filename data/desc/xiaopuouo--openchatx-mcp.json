@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "希望把 ChatGPT 变成本地智能体、在电脑上执行文件和命令操作的开发者与进阶用户，尤其适合使用 macOS 或 Windows 桌面环境的人群。",
+ "date": "2026-10-15",
+ "features": [
+  "通过官方 Secure MCP Tunnel 将 ChatGPT 连接到本地 MCP server，无需公网入站端口",
+  "提供编码级文件与 shell 工具，以及电脑控制能力",
+  "聚合本地或远程 MCP servers，统一在一个连接下使用",
+  "支持 Skills、Rules、AGENTS.md 模板、Projects 和跨会话 Summaries",
+  "支持 Subagents，将任务委派给显式配置的模型配置",
+  "Toolboxes 可添加和管理自定义 TypeScript 工具"
+ ],
+ "intro": "OpenChatX 是一个本地智能体平台，通过 OpenAI 官方的 MCP 集成路径，把 ChatGPT 连接到你的电脑上。它在本机运行一个 MCP server，借助 OpenAI 的 tunnel-client 建立出站 HTTPS 连接，ChatGPT 以自定义 MCP 应用的方式接入，无需公网入站端口，也不依赖逆向工程或抓取凭据。\n\n连接建立后，ChatGPT 仍然是模型和规划者，OpenChatX 负责本地工具与运行时层。它提供文件与 shell 工具、电脑控制、MCP 聚合、Skills、Rules、Projects、Tasks、Subagents 和跨会话 Summaries 等能力，并可通过 Toolboxes 自定义 TypeScript 工具。\n\n项目提供 macOS 和 Windows 桌面应用，macOS 版本经过签名和公证，Windows 版本目前未做 Authenticode 签名。OpenChatX 以本地用户权限运行，受信任的 ChatGPT 调用方可以执行命令、编辑文件和控制受支持的应用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的桌面应用：macOS 选择 arm64 或 x64 的 DMG，Windows 选择 x64 或 arm64 的 Setup exe",
+  "在 ChatGPT 的 Plugins 中创建 MCP app，连接类型选择 Tunnel 并创建 tunnel",
+  "在 OpenAI Platform 的 Tunnels 页面创建 tunnel，复制生成的 tunnel_... ID",
+  "在 OpenAI Platform 的 API Keys 页面创建 Runtime API key",
+  "打开 OpenChatX Desktop，进入 More → Connect Tunnel…，填入 Tunnel ID 和 Control-plane API key",
+  "回到 ChatGPT 选择新建的 tunnel，认证设为 No authentication，接受风险确认并创建应用"
+ ],
+ "summary": "OpenChatX 解决的是让 ChatGPT 直接操作本地电脑的问题。它在本机运行 MCP server，通过 OpenAI 官方 Secure MCP Tunnel 与 ChatGPT 建立连接，不需要公网端口，也不逆向 ChatGPT。连接后 ChatGPT 负责规划，OpenChatX 提供文件、shell、电脑控制、MCP 聚合、Skills、Rules、Projects、Subagents 等本地能力，并支持自定义 TypeScript 工具。适合想把 ChatGPT 变成本地智能体、在 macOS 或 Windows 上执行实际任务的开发者。",
+ "tagline": "把 ChatGPT 接入本地，变成能操作电脑的智能体运行时"
+}
