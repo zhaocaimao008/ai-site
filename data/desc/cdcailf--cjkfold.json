@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要处理 PDF 提取文本、构建检索或 RAG 系统的开发者，以及任何遇到中文文本匹配失败问题的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "将康熙部首和 CJK 部首补充块中的形近字折叠为统一汉字",
+  "提供 fold、has_lookalikes、iter_lookalikes 等纯函数 API",
+  "scan 命令行工具报告形近字、兼容字符、不可见字符和损坏字符",
+  "normalize 函数执行 NFKC 规范化但默认保留全角标点",
+  "strip_invisible 函数安全移除零宽空格等不可见字符，保留有意义的连接符",
+  "零运行时依赖，支持 Python 3.9+"
+ ],
+ "intro": "从 PDF 中提取的中文文本，有时会混入一些看起来和普通汉字一模一样、但实际编码不同的字符，比如康熙部首和 CJK 部首补充块中的字符。这些字符不会引发报错，显示也正常，但会导致字符串比较、关键词搜索、向量检索和去重等下游任务悄悄失败。\n\ncjkfold 是一个纯 Python 库，专门把这些形近字折叠回对应的统一汉字。它不依赖任何运行时库，提供 fold、has_lookalikes、iter_lookalikes 等函数，以及 scan 命令行工具来报告文本中的形近字、兼容字符和不可见字符。\n\n与 NFKC 不同，cjkfold 能处理 CJK 部首补充块中 NFKC 故意不映射的 113 个字符，同时刻意不修改全角标点和连字，避免影响文本的存储和显示。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install cjkfold",
+  "在 Python 中导入并使用：from cjkfold import fold; fold(\"标准颜⾊值与⻆色按钮\")",
+  "使用命令行扫描文件：cjkfold scan document.txt",
+  "如需同时进行 NFKC 规范化：import unicodedata; clean = fold(unicodedata.normalize(\"NFKC\", text))"
+ ],
+ "summary": "从 PDF 提取的中文文本常混入康熙部首等形近字，它们显示正常却导致搜索、检索和去重失败。cjkfold 用纯 Python 把这些字符折叠回统一汉字，并额外提供扫描工具报告不可见字符和兼容字符。适合处理 PDF 文本、构建检索或 RAG 管线的开发者。",
+ "tagline": "修复 PDF 提取文本中的 CJK 形近字，让检索和匹配恢复正常。"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code 并希望用代码方式制作节拍同步动态视频的开发者、设计师和内容创作者。",
+ "date": "2026-10-15",
+ "features": [
+  "Showreel 级创意指导：粗体排版、快速转场、景深、视差、粒子和镜头运动，禁止平淡的淡入链",
+  "节拍锁定时间：每个剪辑和冲击点以 b(n) 写在 120 BPM / 60 FPS 网格上（1 拍 = 0.5 秒 = 30 帧）",
+  "双层动画架构：一个暂停的 GSAP 时间线负责编排，纯 render(t) 函数负责生成式 Canvas/SVG 图层",
+  "代码生成音效：用 Node.js 内置模块写出 kick、hi-hat、impact、rise 和 sub bass 的 WAV，与画面共用节拍表",
+  "变形转场：形状在场景间延续（文字→线条→图表→3D 网格→隧道→logo），而非交叉淡化",
+  "完整验证循环：lint → check（0 问题）→ snapshot 审查 → render → ffprobe / ffmpeg 抽帧检查"
+ ],
+ "intro": "hyperframes-motion-reel 是一个 Claude Code skill，让 Claude 扮演资深动态设计师和创意程序员。用户给出一句主题（可选图片或语音），它会扩展出世界观、文案、设计系统、逐拍时间线和生成的配乐，然后用 HyperFrames 实现、检查、快照并渲染成 MP4。\n\n它是 remotion-motion-reel 的 HyperFrames 移植版，创意标准相同，但只使用 Apache-2.0 和免费工具链，因此任何规模的公司做商业项目都不需要 Remotion Company License。默认 120 BPM / 60 FPS，所有剪辑和冲击点都写在节拍网格上。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆 skill 到 Claude Code 技能目录：git clone https://github.com/Sunwood-ai-labs/hyperframes-motion-reel-skill ~/.claude/skills/hyperframes-motion-reel",
+  "确保环境满足要求：Node.js（当前 LTS）和 npx、Google Chrome、PATH 中有 ffmpeg / ffprobe",
+  "安装配套的 HyperFrames 领域技能（/hyperframes-core、/hyperframes-animation 等）",
+  "在 Claude Code 中运行：/hyperframes-motion-reel Neon Tokyo night drive, 20 seconds, BPM 128",
+  "如需竖屏或带素材：/hyperframes-motion-reel Product launch teaser for an AI camera, vertical 9:16 或 /hyperframes-motion-reel ./assets/character.png ./assets/voice.wav character intro reel"
+ ],
+ "summary": "这个项目是一个 Claude Code skill，把一句主题（可附图片或语音）扩展成完整的动态视频方案，包括文案、设计系统、逐拍时间线和配乐，再用 HyperFrames 渲染成 MP4。它默认 120 BPM / 60 FPS，所有剪辑都对齐节拍网格，适合需要快速产出节拍同步、showreel 风格动态图形的开发者与设计师。工具链只用 Apache-2.0 和免费库，商业使用无需额外付费许可。",
+ "tagline": "让 Claude Code 把一句话主题变成节拍同步的 HyperFrames 动态视频"
+}

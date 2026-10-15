@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Ubuntu、Debian、树莓派 5 或 ARM 服务器上使用 DeepSeek 桌面客户端的 Linux 用户，以及关注 Linux 打包流程的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "为 DeepSeek Harness 桌面端提供 Linux 社区打包，覆盖 x64 与 arm64",
+  "同时产出 AppImage、.deb、.tar.gz 三种安装包",
+  "AppImage 通过 electron-updater 走 HTTPS 通道自动更新，下载校验 SHA256",
+  "agent 内核、插件体系、联网与前端功能跟随上游，Linux 下体验一致",
+  "支持本地运行 dsh web 或安装桌面端，数据留在本机",
+  "提供原生 CI 工作流，在 ubuntu-24.04 与 ubuntu-24.04-arm 上按需构建"
+ ],
+ "intro": "官方 DeepSeek Harness 桌面端只发布 macOS 与 Windows 版本，Linux 用户此前只能使用 Web 版或自行从源码编译。本项目是上游的下游 fork，专注补上 Linux 桌面端打包这一环，让 dsh 桌面端在 Linux 上能下载、能安装、能更新。\n\n它不修改 agent 内核，agent 能力、插件体系、通信协议均跟随上游，新增内容仅限于 Linux 打包层：CI 工作流、electron-builder 配置、POSIX launcher 兼容与冒烟测试脚本。每次构建为 x64 与 arm64 两种架构各产出 AppImage、.deb、.tar.gz 三种安装包，AppImage 支持通过 electron-updater 自动更新。\n\n项目基于上游 MIT 许可证分发，属于社区构建，不带代码签名，Office 文档转换功能在 Linux 下暂不可用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "到 Releases 页面下载对应架构的 .AppImage 文件",
+  "安装 FUSE 2 运行时依赖：sudo apt install libfuse2（Fedora / RHEL 系用 sudo dnf install fuse2）",
+  "赋予执行权限并运行：chmod +x deepseek-harness-*-linux-x64.AppImage && ./deepseek-harness-*-linux-x64.AppImage",
+  "或使用 .deb 安装：sudo dpkg -i deepseek-harness-*-linux-x64.deb，然后运行 deepseek-harness",
+  "从源码构建需 Node.js 24+ 与 pnpm：pnpm install 后执行 pnpm --dir apps/desktop run package:linux:x64"
+ ],
+ "summary": "官方 DeepSeek Harness 桌面端只提供 macOS 和 Windows 版本，Linux 用户此前只能用 Web 版或自行编译源码。这个下游 fork 专门补齐 Linux 打包环节，为 x64 和 arm64 架构产出 AppImage、.deb、.tar.gz 三种安装包，AppImage 还支持自动更新。它不改动 agent 内核，插件、联网等能力与上游保持一致，适合在 Ubuntu、Debian、树莓派或 ARM 服务器上使用 DeepSeek 桌面客户端的用户。",
+ "tagline": "为 DeepSeek Harness 桌面端提供 Linux 打包"
+}

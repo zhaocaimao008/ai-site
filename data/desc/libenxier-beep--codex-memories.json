@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "希望 Codex 跨会话记住项目决策和偏好、同时要求记忆数据留在本地的开发者。也适合关注本地优先 AI 智能体记忆架构的工程人员。",
+ "date": "2026-10-15",
+ "features": [
+  "通过 Codex 的 SessionStart、UserPromptSubmit、工具和停止钩子实现原生生命周期集成",
+  "渐进式披露：简单查询一轮本地检索即止，困难查询最多扩展三轮",
+  "由当前 Codex 模型充当规划器，不启动嵌套智能体或第二个远程 LLM",
+  "权威优先于相似度：索引提出候选，但内容必须从 Git 权威源重新打开才能进入上下文",
+  "本地优先隐私：记忆、索引、会话和授权状态均保留在用户机器上",
+  "故障关闭生命周期：注入前检查作用域、隐私、删除、墓碑、来源、修订和内容哈希",
+  "一键回滚：可从渐进式候选切换回旧版召回，而不删除记忆数据"
+ ],
+ "intro": "Codex Memories 是一个面向 OpenAI Codex 的本地优先 AI 智能体记忆运行时。它让 Codex 在跨会话中记住项目决策、偏好和教训，同时把私有记忆语料保留在用户自己的机器上，不依赖托管的向量数据库或独立的记忆服务账号。\n\n项目结合了 Git 支撑的权威存储、本地 SQLite sidecar、有界混合检索，以及由当前 Codex 模型驱动的三轮渐进式披露循环。记忆内容在注入上下文前会从 Git 权威源重新打开并校验，检索到的文本始终被视为不可信数据。\n\n安装器会创建运行时、权威存储和 sidecar 三个分离的表面，并生成待审查的 hooks 合并计划，不会直接修改 hooks.json。项目当前处于高级预览阶段，公开测试套件通过，但独立的大规模评估尚未完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/libenxier-beep/codex-memories.git && cd codex-memories",
+  "python3 scripts/codex_memories.py demo",
+  "./install.sh",
+  "~/.local/share/codex-memories/bin/codex-memories doctor",
+  "~/.local/share/codex-memories/bin/codex-memories index && ~/.local/share/codex-memories/bin/codex-memories recall \"governed local memory\""
+ ],
+ "summary": "Codex Memories 解决的是 Codex 跨会话记不住项目决策和偏好的问题。它把持久记忆放在本地 Git 仓库中，用本地 SQLite 做索引，检索时从权威源重新打开内容再注入上下文，不依赖托管向量数据库。适合希望 Codex 记住长期事实、又要求私有记忆语料不出本机的开发者。",
+ "tagline": "为 OpenAI Codex 提供本地持久记忆，无需托管向量数据库"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要跨目录检索个人笔记、项目文档和聊天记录的开发者，以及希望为 AI 代理提供本地记忆层的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "混合检索：向量 + BM25 经 RRF 融合，支持跨语言查询",
+  "章节级引用：回答中的引用指向具体章节而非整个文件",
+  "MCP 服务器：提供 8 个工具、资源和提示，供 AI 代理调用",
+  "多格式支持：PDF 表格、Word、HTML、org-mode、ChatGPT/Claude 聊天导出",
+  "本地索引：索引保存在本机，嵌入和对话可走 OpenAI 兼容 API 或 Ollama 离线",
+  "重排序：支持 LLM 打分或本地 cross-encoder 重排"
+ ],
+ "intro": "loci 是一个本地优先的「第二大脑」工具，用来检索散落在多个目录中的项目文档、笔记和聊天记录。它把本地文件经过标题感知分块、嵌入后，用向量与 BM25 混合检索，再由 LLM 生成带章节级引用的回答。索引完全保存在本机，只有嵌入和对话调用会发送到任何 OpenAI 兼容的 API（如智谱、DeepSeek、Kimi、OpenAI），也可以通过 Ollama 完全离线运行。\n\n项目同时提供一个 MCP 服务器，让 Claude Desktop、Cursor、Cline 等 AI 宿主可以直接把 loci 当作记忆层使用。它不打算做另一个聊天应用，而是作为跨库搜索引擎，可以指向 Obsidian 仓库、项目文档、聊天导出等任意目录，从终端、脚本或 AI 代理中统一查询。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -e .（或按 README 安装对应 extras）",
+  "配置 sources 指向笔记或文档目录",
+  "运行 python main.py search \"查询内容\" -k 3 进行检索",
+  "运行 python main.py ask \"问题\" 获取带引用的回答",
+  "启动 MCP 服务器：loci-mcp（供 AI 宿主连接）"
+ ],
+ "summary": "loci 是一个本地优先的检索工具，用来统一查询散落在多个目录中的笔记、项目文档和聊天记录。它把文件分块嵌入后，用向量与 BM25 混合检索，再由 LLM 生成带章节引用的回答，索引保存在本机。同时提供 MCP 服务器，让 Claude Desktop、Cursor 等 AI 宿主可以把 loci 当作记忆层使用。适合需要跨库检索个人知识或为 AI 代理提供本地记忆的开发者。",
+ "tagline": "本地优先的混合检索第二大脑，支持 MCP 供 AI 代理调用"
+}

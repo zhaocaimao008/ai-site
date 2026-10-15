@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在 macOS 上同时运行多个 Claude Code 或 Codex 会话、希望离开屏幕也能用语音或 Telegram 继续推进任务的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "监听 Claude Code 与 Codex 会话，停止时主动呼叫或推送 Telegram 通知",
+  "通过 GPT-Live 语音模型进行实时语音对话，语音指令回传到对应会话",
+  "支持在 Telegram 中回复停止通知，文字指令同样送达原会话",
+  "一次语音通话覆盖 Mac 上所有 Claude Code 和 Codex 会话",
+  "菜单栏 Duty Lamp 显示等待你处理的会话数量",
+  "引擎可脱离菜单栏独立运行，并提供 bridgectl 控制平面命令行"
+ ],
+ "intro": "GPT-VoiceCoding 是一个 macOS 菜单栏应用，用来在 Claude Code 或 Codex 会话停止时主动通知你，并让你用语音或 Telegram 回复继续推进任务。它不会启动或包装你的会话，只是监听你自己已经开启的会话，当某个会话停下来时，通过 GPT-Live 语音模型给你打电话，你听完停止原因后直接说出下一步指令，内容会回到对应的会话里。\n\n语音通话走的是 codex app-server 的 realtime 通道，使用你登录 Codex 的 ChatGPT 账号，因此不需要 OpenAI API key。离开电脑时，每个停止事件也会同步到 Telegram，你回复的文字同样会送达原会话。项目由 Swift 菜单栏外壳和 Python asyncio 引擎组成，引擎可独立运行，也提供 bridgectl 命令行控制接口。目前仅支持 Apple Silicon Mac。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保使用 Apple Silicon Mac，并安装 Command Line Tools：xcode-select --install",
+  "确保 PATH 中有 Python 3.12 或更新版本",
+  "确保已安装 Claude Code 或 Codex，并用 ChatGPT 账号登录 Codex：codex login",
+  "运行安装脚本：curl -fsSL https://raw.githubusercontent.com/Simon-AI-coding/GPT-VoiceCoding/main/scripts/install.sh | sh",
+  "如需 Telegram 通知，首次启动时按引导配置；如需语音通话，安装可选依赖：pip install 'gpt-voicecoding[voice]'"
+ ],
+ "summary": "GPT-VoiceCoding 解决的是开发者离开屏幕时无法及时响应 Claude Code 或 Codex 会话停止的问题。它在 macOS 菜单栏运行，监听你已开启的会话，一旦某个会话停下来就通过 GPT-Live 语音模型呼叫你，你听完原因后直接说出下一步指令，内容会回到原会话；不在电脑前时，停止事件也会发到 Telegram，回复文字同样能送达。语音通话使用你登录 Codex 的 ChatGPT 账号，无需 OpenAI API key。适合同时跑多个编码代理、想用语音或 Telegram 保持任务推进的 Apple Silicon Mac 用户。",
+ "tagline": "macOS 菜单栏应用，用语音或 Telegram 接管 Claude Code 与 Codex 会话"
+}

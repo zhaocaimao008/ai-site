@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "想快速搭建和上线 LLM 应用的开发者与团队，包括需要可视化编排、RAG 或 Agent 能力的场景。",
+ "date": "2026-10-15",
+ "features": [
+  "可视化画布上构建和测试 AI 工作流",
+  "接入数百个专有与开源 LLM，兼容 OpenAI API 的模型",
+  "Prompt IDE，用于编写提示词并对比模型表现",
+  "RAG 管线，覆盖文档摄入到检索，支持 PDF、PPT 等格式",
+  "Agent 能力与模型管理、可观测性功能",
+  "支持云端、VPC 或自托管部署"
+ ],
+ "intro": "Dify 是一个开源的 LLM 应用开发平台，把 AI 工作流、RAG 管线、Agent 能力、模型管理和可观测性功能整合在一个直观的界面里，帮助开发者从原型快速走向生产。\n\n它支持可视化画布上搭建和测试 AI 工作流，并接入来自多家推理服务商和自托管方案的数百个专有或开源 LLM，包括 GPT、Mistral、Llama3 以及任何兼容 OpenAI API 的模型。平台还提供 Prompt IDE、覆盖文档摄入到检索的 RAG 能力，以及对 PDF、PPT 等常见格式的文本抽取支持。\n\n部署方式灵活，可选择云端、VPC 或自托管，适合团队在同一协作空间内完成从搭建到上线的全过程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认机器满足最低要求：CPU >= 2 Core，RAM >= 4 GiB",
+  "安装 Docker 和 Docker Compose v2.24.0 或更高版本",
+  "cd dify && cd docker",
+  "cp .env.example .env",
+  "docker compose up -d",
+  "浏览器访问 http://localhost/install 开始初始化"
+ ],
+ "summary": "Dify 是一个开源 LLM 应用开发平台，把 AI 工作流、RAG 管线、Agent 能力、模型管理和可观测性整合到同一个界面中，让团队不必反复重建技术栈就能从原型走到生产。它支持可视化画布编排工作流，接入数百个专有或开源模型，并提供 Prompt IDE 和文档检索能力。适合需要快速搭建和上线 LLM 应用的开发者与团队，可部署在云端、VPC 或自托管环境。",
+ "tagline": "开源 LLM 应用开发平台，可视化编排工作流与 RAG"
+}

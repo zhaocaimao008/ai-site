@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在本地或在线环境通过网页界面使用 Stable Diffusion 进行图像生成的开发者与普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "txt2img 与 img2img 两种基础生成模式",
+  "Outpainting、Inpainting、Color Sketch 等图像编辑功能",
+  "Textual Inversion、Hypernetworks、Loras 等训练与嵌入支持",
+  "GFPGAN、CodeFormer、RealESRGAN、ESRGAN、SwinIR、LDSR 等修复与放大工具",
+  "Prompt Matrix、X/Y/Z plot、Composable-Diffusion、注意力权重等提示词控制",
+  "API、自定义脚本与社区扩展机制"
+ ],
+ "intro": "Stable Diffusion web UI 是用 Gradio 库实现的 Stable Diffusion 网页界面，让用户通过浏览器操作图像生成模型，而不必直接写代码。它提供 txt2img 和 img2img 两种基础模式，并附带一键安装运行脚本（仍需自行安装 Python 和 git）。\n\n项目功能覆盖较广，包括 Outpainting、Inpainting、Color Sketch、Prompt Matrix、Upscale、Loopback、X/Y/Z plot、Textual Inversion、注意力权重语法、Negative prompt、Styles、Variations、CLIP interrogator、Prompt Editing、Batch Processing、Highres Fix、Checkpoint Merger、Composable-Diffusion、DeepDanbooru 集成、xformers 加速、Training tab、Loras、API 等，并支持 Stable Diffusion 2.0、Alt-Diffusion、Segmind Stable Diffusion 等模型。\n\n安装方式按硬件平台区分，官方推荐 NVidia GPU，也提供 AMD GPU、Intel CPU/GPU、Ascend NPU 的说明，以及 Google Colab 等在线服务列表。Windows 用户可下载 release 包后运行 update.bat 和 run.bat，或手动安装 Python 3.10.6 与 git。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 10/11 + NVidia GPU：从 v1.0.0-pre 下载 sd.webui.zip 并解压",
+  "运行 update.bat",
+  "运行 run.bat",
+  "或手动安装 Python 3.10.6 与 git 后按官方 wiki 指引安装依赖并启动"
+ ],
+ "summary": "这个项目为 Stable Diffusion 提供基于 Gradio 的网页操作界面，让用户不必写代码就能在浏览器里完成文生图、图生图、局部重绘、放大修复等操作。它把提示词控制、模型切换、训练与扩展脚本集中到一个界面中，适合想在本地或在线环境使用扩散模型生成图像、又希望有可视化操作方式的开发者和普通用户。",
+ "tagline": "基于 Gradio 的 Stable Diffusion 网页界面"
+}

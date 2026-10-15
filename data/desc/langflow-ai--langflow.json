@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想要快速搭建 AI 智能体与工作流的开发者，以及希望通过可视化方式组合 LLM、向量数据库和 AI 工具的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "可视化构建界面，快速上手并迭代工作流",
+  "可访问源码，用 Python 自定义任意组件",
+  "交互式 playground，支持逐步测试和调试流程",
+  "多智能体编排，含对话管理与检索",
+  "可部署为 API 或导出 JSON 供 Python 应用使用",
+  "可部署为 MCP 服务器，把流程变成 MCP 客户端的工具"
+ ],
+ "intro": "Langflow 是一个用于构建和部署 AI 智能体（agents）与工作流的平台。它同时提供可视化编辑界面和内置的 API、MCP 服务器，可以把每个工作流变成一个工具，集成到任意框架或技术栈的应用中。项目支持主流 LLM、向量数据库以及不断扩充的 AI 工具库。\n\n在可视化画布上搭建流程后，可以直接在交互式 playground 中逐步测试和调整；需要定制时，可以用 Python 修改任意组件的源码。工作流可以部署为 API、导出为 JSON 供 Python 应用使用，也可以部署为 MCP 服务器供 MCP 客户端调用。此外还支持 LangSmith、LangFuse 等可观测性集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv 包管理器，并确保 Python 版本在 3.10–3.14 之间",
+  "在空目录中执行：uv pip install langflow -U",
+  "设置 LANGFLOW_SUPERUSER_PASSWORD 环境变量",
+  "运行：uv run langflow run",
+  "打开 http://127.0.0.1:7860，使用用户名 langflow 和设置的密码登录"
+ ],
+ "summary": "Langflow 面向需要构建 AI 智能体和工作流的开发者，提供可视化编辑界面，把 LLM、向量数据库和各类 AI 工具组合成流程。搭建好的流程可以在 playground 中逐步测试，也能用 Python 修改组件源码；完成后可部署为 API、导出 JSON，或作为 MCP 服务器供其他客户端调用，方便集成进不同技术栈的应用。",
+ "tagline": "可视化搭建与部署 AI 智能体和工作流的开源平台"
+}

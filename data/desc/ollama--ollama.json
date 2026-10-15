@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望在本地或私有环境运行开源大模型的开发者，以及需要把模型接入自有应用或编码工具的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "在 macOS、Windows、Linux 和 Docker 上安装并本地运行开源模型",
+  "通过 ollama run 等命令直接与模型对话",
+  "提供 REST API，可用 curl 调用 /api/chat 等接口",
+  "官方 Python 库（pip install ollama）和 JavaScript 库（npm i ollama）",
+  "支持与 Claude Code、Codex、Copilot CLI、OpenCode 等编码工具集成",
+  "支持通过 OpenClaw 接入 WhatsApp、Telegram、Slack、Discord 等平台"
+ ],
+ "intro": "Ollama 是一个用 Go 编写的工具，用于在本地或云端启动和运行开源大模型，支持 Kimi、GLM、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等模型。它提供 macOS、Windows、Linux 的安装脚本以及官方 Docker 镜像，安装后即可通过命令行拉取并运行模型。\n\n除了命令行交互，Ollama 还暴露 REST API，并提供 Python 和 JavaScript 官方库，方便把模型接入自己的应用。它也能与 Claude Code、Codex、Copilot CLI、OpenCode 等编码工具以及 OpenClaw 等助手集成，社区还维护了大量 Web、桌面和移动端客户端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS/Linux 安装：curl -fsSL https://ollama.com/install.sh | sh",
+  "Windows 安装：irm https://ollama.com/install.ps1 | iex",
+  "运行模型对话：ollama run gemma4",
+  "启动编码集成：ollama launch claude",
+  "调用 REST API：curl http://localhost:11434/api/chat -d '{\"model\":\"gemma4\",\"messages\":[{\"role\":\"user\",\"content\":\"Why is the sky blue?\"}],\"stream\":false}'"
+ ],
+ "summary": "Ollama 让开发者能在自己的电脑或服务器上直接运行开源大模型，支持 Kimi、GLM、DeepSeek、Qwen、Gemma 等常见模型，覆盖 macOS、Windows、Linux 和 Docker。它既提供命令行对话，也提供 REST API 与 Python、JavaScript 库，还能接入 Claude Code、Codex 等编码工具和多种社区客户端。适合想本地部署模型、注重数据隐私，或需要把模型集成进自己应用的开发者。",
+ "tagline": "本地运行和管理开源大模型的工具"
+}

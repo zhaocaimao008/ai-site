@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想系统入门生成式 AI 应用开发的开发者，以及具备基础 Python 或 TypeScript 知识、希望边学边动手的学习者。",
+ "date": "2026-10-15",
+ "features": [
+  "21 节独立课程，涵盖生成式 AI 概念与应用构建",
+  "区分 Learn 与 Build 两类课程，Build 课附代码示例",
+  "代码示例尽量同时提供 Python 和 TypeScript 版本",
+  "支持 Azure OpenAI Service、Microsoft Foundry Models、OpenAI API 与 Foundry Local 等多种运行方式",
+  "提供 50 多种语言的翻译版本",
+  "包含课程环境搭建章节与 Keep Learning 延伸学习资料"
+ ],
+ "intro": "这是微软 Cloud Advocates 推出的生成式 AI 入门课程，共 21 节课，目标是讲清构建生成式 AI 应用所需的基础知识。课程分为两类：讲解概念的 Learn 课程，以及结合概念与代码示例的 Build 课程，代码在条件允许时同时提供 Python 和 TypeScript 版本。\n\n每节课各自独立，可以从任意一节开始，末尾还附有 Keep Learning 板块，给出进一步学习的工具与资料。运行课程代码可使用 Azure OpenAI Service、Microsoft Foundry Models、OpenAI API，或用 Foundry Local 在本地离线运行模型。仓库提供 50 多种语言的翻译版本，并配有课程环境搭建的专门章节。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Fork 整个仓库到自己的 GitHub 账号，或使用 sparse checkout 克隆以跳过翻译文件：git clone --filter=blob:none --sparse https://github.com/microsoft/generative-ai-for-beginners.git",
+  "进入目录后设置稀疏检出：git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'",
+  "阅读 00-course-setup 课程，完成开发环境配置",
+  "根据所选课程准备 Azure OpenAI Service、Microsoft Foundry Models、OpenAI API 或 Foundry Local 中的一种访问方式",
+  "从 21 节课中任选一节开始学习"
+ ],
+ "summary": "这是微软 Cloud Advocates 制作的生成式 AI 入门课程，用 21 节独立课程讲清构建生成式 AI 应用所需的基础知识。课程分为讲解概念的 Learn 课和带代码示例的 Build 课，示例尽量同时给出 Python 与 TypeScript 版本，并支持 Azure OpenAI Service、Microsoft Foundry Models、OpenAI API 或本地 Foundry Local 运行。适合想系统入门、边学边动手的开发者按需选课学习。",
+ "tagline": "微软出品的 21 节生成式 AI 入门课程"
+}

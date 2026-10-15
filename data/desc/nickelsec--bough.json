@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex CLI 或 Pi 进行日常开发的程序员，以及想了解自己在这些编码 agent 上花了多少钱、做了哪些工作的人。",
+ "date": "2026-10-15",
+ "features": [
+  "读取 Claude Code、Codex CLI 和 Pi 的会话历史，按项目汇总",
+  "把工作拆成 sitting 和 task，用图形展示每条 prompt 与任务结构",
+  "按 token 和美元统计每块工作的成本，并给出明细表",
+  "读取本地 git 历史，标记以 commit 结束的任务并显示 hash 与 message",
+  "支持 --text、--json、--list 等终端输出方式，便于脚本处理",
+  "全部本地运行，页面仅监听 127.0.0.1，不发送任何数据"
+ ],
+ "intro": "bough 是一个用 Go 编写的本地命令行工具，用来读取 Claude Code、OpenAI Codex CLI 和 Pi 的会话历史，把你在这些编码 agent 里实际做过的活画出来，并给出对应的花费。它不统计连续使用天数，而是回答另一个问题：你造出了什么，每一块工作花了多少钱。\n\n它会把会话切分成一次次的「sitting」和其中的 task，每个圆圈代表你输入的一条 prompt，点击可以查看完整记录。任务背后的圆圈按花费大小绘制，悬停可看到 token 和美元明细。bough 还会读取项目本地的 git 历史，把以 commit 结束的任务标出来并给出 hash 和 message。\n\n所有数据都在本机处理，页面只从 127.0.0.1 提供服务，不联网、不调用模型，内置费率表，断网也能用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS 使用 Homebrew 安装：brew install nickelsec/tap/bough",
+  "Linux 或没有 Homebrew 的 macOS：curl -fsSL https://www.bough.run/install.sh | sh",
+  "Windows：irm https://www.bough.run/install.ps1 | iex",
+  "直接运行 bough，它会在浏览器中打开项目列表",
+  "在终端查看：bough bough --text"
+ ],
+ "summary": "bough 读取 Claude Code、Codex CLI 和 Pi 的会话历史，把你在这些编码 agent 里做过的活按项目画出来，并算出每块工作消耗的 token 和费用。它把会话拆成一次次 sitting 和其中的 task，点击可查看原始 prompt，还会结合本地 git 历史标出以 commit 结束的任务。工具完全在本机运行，页面只监听 127.0.0.1，不联网也不调用模型，适合想弄清自己用 AI 编码到底做了什么、花了多少的开发者。",
+ "tagline": "读取 Claude Code、Codex、Pi 会话历史，画出你做了什么并算出成本"
+}

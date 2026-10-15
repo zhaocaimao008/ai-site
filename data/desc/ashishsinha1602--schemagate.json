@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在 text-to-SQL 或 SQL agent 中做权限隔离的开发者，以及关心 prompt 成本与数据访问安全的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "按调用者 grants 过滤 schema，受限表不进入 prompt",
+  "支持 Postgres、Oracle、MySQL、SQL Server、SQLite",
+  "兼容 LangChain、MCP 及任意 SQL agent",
+  "选择器离线运行，不调用模型，基于 BM25 与哈希嵌入",
+  "提供 CLI 与本地 studio 页面，可切换角色查看 prompt 内容",
+  "内置演示 schema，无需数据库即可试用"
+ ],
+ "intro": "schemagate 解决的是 text-to-SQL 流程中一个容易被忽略的环节：在把数据库 schema 交给模型之前，先按调用者的权限做过滤。传统做法是先把所有表塞进 prompt，再靠行级安全（RLS）在查询执行时拦截，结果是模型可能针对一张调用者根本无权读取的表生成合法 SQL，RLS 把行全部过滤掉，用户只看到「没有记录」，无法区分是数据不存在还是无权访问。schemagate 把权限检查提前到 schema 选择阶段，无权访问的表不会出现在 prompt 里，而不是排在后面。\n\n它支持 Postgres、Oracle、MySQL、SQL Server 和 SQLite，可配合 LangChain、MCP 或任意 SQL agent 使用。选择器本身不调用模型，基于 BM25 加哈希嵌入，离线运行，毫秒级完成。README 给出的基准显示，在 260 个对象的 schema 上，平均 prompt token 从 16,095 降到 444。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install schemagate",
+  "schemagate demo \"salary by employee\"",
+  "schemagate demo \"salary by employee\" --principal okta:hr --role payroll",
+  "schemagate select \"revenue by month\" --url postgresql://localhost/app --principal okta:jdoe --role finance",
+  "schemagate studio --url postgresql://localhost/app"
+ ],
+ "summary": "schemagate 针对 text-to-SQL 中「先选表、后鉴权」的问题：模型可能对调用者无权读取的表生成 SQL，RLS 过滤后用户只看到空结果。它把权限检查提前到 schema 选择阶段，无权访问的表直接不出现在 prompt 中，并支持多种数据库与 LangChain、MCP 等 agent 框架。选择器离线运行、不调用模型，适合需要控制 prompt 成本并做数据访问隔离的 SQL agent 场景。",
+ "tagline": "在选表阶段就按权限过滤 schema 的 text-to-SQL 访问控制"
+}

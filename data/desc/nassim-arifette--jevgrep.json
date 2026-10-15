@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合使用编码代理进行开发的工程师，以及需要在大型仓库中按行为而非符号查找代码的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "用自然语言描述行为来搜索代码，返回原始源码摘录、路径和行号",
+  "支持 CLI 命令行使用，也提供 stdio MCP 服务器供编码代理调用",
+  "支持 TypeSafe AI、Vercel AI Gateway 和 OpenRouter 三种模型提供方",
+  "提供 doctor 和 inspect 命令，在发送代码前检查配置、授权范围和扫描规模",
+  "支持通过 .jevgrepignore 和 .gitignore 排除文件，并可设置扫描上限",
+  "搜索所有有效的 UTF-8 文本文件，不限制仓库语言或扩展名"
+ ],
+ "intro": "JevGrep 是一个面向编码代理的语义代码搜索工具。当代理不知道确切的文件名或符号名时，可以用自然语言提问，例如“会话过期在哪里处理？”，JevGrep 会扫描已授权的仓库，调用 Jev 模型对符合条件的代码片段打分，然后返回原始源码摘录及其路径和行号。\n\n它支持通过 CLI 直接使用，也提供本地 MCP 服务器，让编码代理以工具调用的方式接入。JevGrep 会搜索所有有效的 UTF-8 文本文件，不限制仓库语言或扩展名。它适合用来定位跨实现、配置和测试的行为，减少代理在探索仓库时占用主上下文的篇幅。如果已经知道确切的符号或字面量，普通的文本搜索工具如 rg 通常更快。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：npm install -g @nassim-arifette/jevgrep",
+  "全局配置提供方：jevgrep init --global（或加 --provider vercel / --provider openrouter）",
+  "在仓库根目录授权：cd path/to/my-project && jevgrep init",
+  "检查配置与范围：jevgrep doctor && jevgrep inspect",
+  "按行为搜索：jevgrep search --query \"Where is session expiry handled?\"",
+  "通过 MCP 使用：jevgrep mcp"
+ ],
+ "summary": "JevGrep 解决的是编码代理在不知道文件名或符号名时难以定位代码的问题。它让代理用自然语言描述行为，由 Jev 模型对仓库中符合条件的代码片段打分，返回带路径和行号的原始源码摘录。项目提供 CLI 和本地 MCP 服务器两种使用方式，支持 TypeSafe AI、Vercel AI Gateway 和 OpenRouter 等提供方，适合需要跨实现、配置和测试查找行为的开发场景。",
+ "tagline": "为编码代理提供基于 Jev 的语义代码搜索"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究仓库级代码生成、检索增强生成（RAG）与代码图谱的科研人员和工程师，以及需要评估依赖版本兼容性的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "构建覆盖仓库与外部库实体的统一知识图谱，将外部库纳入检索上下文",
+  "通过规划与语义检索定位重要节点，并选择性扩展邻居节点获取多跳证据",
+  "提供 VersionExec 执行式基准，评估不同依赖版本下的代码生成兼容性",
+  "支持 RepoExec、DevEval、VersionExec 等多个基准的数据处理与评估流程",
+  "包含图构建、检索、提示构建、代码生成与评估的完整流水线脚本"
+ ],
+ "intro": "CrossCoder 是一个面向仓库级代码生成的跨仓库检索框架，论文被 EMNLP 2026 Findings 收录。它针对现有检索方法只从本地仓库取上下文、外部 API 依赖模型预训练知识、且多聚焦单跳证据的问题，构建了覆盖仓库与库实体的统一知识图谱。\n\n框架先通过规划与语义检索定位重要节点，再有选择地扩展邻居节点，获取多跳上下文证据用于生成。项目同时提出 VersionExec，一个基于 BigCodeBench 的执行式基准，用于评估不同依赖版本下的生成兼容性。\n\n在 RepoExec、DevEval 和 VersionExec 上的实验显示，CrossCoder 提升了功能正确性（pass@1 最高提升 6.3%）以及对依赖版本变化的鲁棒性。代码使用 Python 3.13，依赖 Fireworks API 调用模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建环境：conda create -n crosscoder python=3.13.7 && conda activate crosscoder && pip install -r requirements.txt",
+  "解压数据：unzip data.zip -d .",
+  "设置 Fireworks 凭据：export FIREWORK_API_KEY=<your_fireworks_key> 和 export FIREWORK_BASE_URL=https://api.fireworks.ai/inference/v1",
+  "构建图：bash src/graph_builder/parser/run.sh --dataset <RepoExec|DevEval|versionexec_old|versionexec_new>",
+  "加载样本并生成：python src/load_benchmark.py --benchmark <benchmark> --extend True --model <model>，随后运行检索与生成脚本"
+ ],
+ "summary": "CrossCoder 关注仓库级代码生成中外部依赖 API 难以被正确使用的问题。它把目标仓库和外部库放进同一张知识图谱，通过规划与语义检索找到关键节点，再扩展邻居节点获取多跳上下文，让生成结果同时兼容仓库和依赖环境。项目还提供 VersionExec 基准，用于检验代码在不同依赖版本下的表现。适合研究代码生成、检索增强和图谱方法的开发者参考与复现。",
+ "tagline": "跨仓库图检索的代码生成框架"
+}

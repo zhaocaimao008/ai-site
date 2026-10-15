@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要通过 API 生成视频的开发者，以及希望按秒计费、按需调用视频生成能力的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "支持文本生成视频，以及图片、视频、音频作为参考素材的工作流",
+  "单次任务最长 30 秒，输出分辨率可选 480p、720p、1080p",
+  "按秒计价，任务完成后返回 cost 和 credits_cost 实际费用",
+  "OpenAI 兼容端点，提交任务后通过 GET /v1/tasks/{id} 轮询结果",
+  "提供 cURL、Python、JavaScript 示例代码和示例输出与实测成本",
+  "包含首次调用常见错误（401、余额不足、429）的排查说明"
+ ],
+ "intro": "这个仓库是 Seedance 2.5（模型 id 为 seedance-2.5）视频生成 API 的接入说明与示例集合，通过 APIMart 提供的 OpenAI 兼容端点 https://api.apimart.ai/v1 调用。它面向需要生成视频的开发者，给出请求参数、计费方式、异步任务轮询流程以及 cURL、Python、JavaScript 示例。\n\nSeedance 2.5 支持最长 30 秒的视频生成，可用最多 30 张图片、10 个视频和 10 个音频作为参考素材，输出分辨率可选 480p、720p、1080p，格式支持 mp4 或精度更高的 mov。计费按秒计价，不同分辨率价格不同，任务完成后会在响应中返回实际费用。\n\n仓库还包含示例输出、实测成本以及首次调用常见错误的排查表，方便开发者快速验证和估算成本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 APIMart 控制台获取 API key，并设置环境变量 APIMART_API_KEY",
+  "使用 cURL 或 Python 向 https://api.apimart.ai/v1/images/generations 提交任务，model 填 seedance-2.5",
+  "从响应中取出 data.id 作为 task_id",
+  "轮询 GET /v1/tasks/{task_id}，直到状态为 completed 或 failed",
+  "读取任务返回的 cost 和结果链接（结果链接有效期为 24 小时）"
+ ],
+ "summary": "这个项目是 Seedance 2.5 视频生成 API 的接入文档与示例，通过 APIMart 的 OpenAI 兼容端点调用，模型 id 为 seedance-2.5。它适合需要按秒计费、按需生成视频的开发者：支持最长 30 秒输出，可用图片、视频、音频作为参考素材，分辨率覆盖 480p 到 1080p。仓库提供请求参数说明、cURL 与 Python 示例、异步任务轮询流程，以及示例输出和实测成本，方便快速验证和估算费用。",
+ "tagline": "通过 APIMart 调用 Seedance 2.5 视频生成 API"
+}

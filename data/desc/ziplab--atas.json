@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究或开发智能体视频生成、多镜头一致性与空间一致性的研究人员和工程师，也适合希望用剧本驱动方式生成连贯影片的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "World-State Compiler：将剧本转换为带有场景、相机、时间和事件的镜头请求",
+  "Scene Memory：以共享坐标系保存各场景静态几何，支持任意视角重访渲染",
+  "Event Memory：按场景、事件和时间索引动态观察，支持从新角度重拍过去时刻",
+  "Validated Updates：只有影片审查、配准和状态检查全部通过才更新世界状态",
+  "客户端与几何服务分离，客户端无需 GPU，几何服务需约 20 GB 显存",
+  "命令行 atas run 支持 --memory none、--plan-only、--max-shots、--output 等选项，并可断点续跑"
+ ],
+ "intro": "ATAS 是一个以世界状态（world state）为中心的智能体视频生成框架，目标是在生成整部影片的过程中维持一个持久、一致的世界。它把剧本编译成带有场景、相机、时间和事件信息的镜头请求，每个镜头通过将世界状态投影到所需视角来生成，生成结果再经过重建、配准和校验后回写更新世界。\n\n框架包含场景记忆与事件记忆：场景记忆保存各场景的静态几何，支持从任意视角重新渲染；事件记忆按场景、事件和时间索引动态观察，使过去的时刻可以从新角度重拍。世界状态只在影片审查、配准和状态检查全部通过后才会更新。\n\n项目由几何服务（需要 NVIDIA GPU）和客户端（无需 GPU）两部分组成，提供命令行工具 atas，支持传入纯文本剧本和可选的角色文件，并支持断点续跑。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 GPU 机器上安装几何服务：pip install -r geometry/environment.snapshot.txt && pip install -e geometry",
+  "复制并配置几何服务环境变量：cp geometry/.env.example geometry/.env，设置 GEOMETRY_PYTHON、GEOMETRY_MODEL_ROOT、GEOMETRY_GPU_IDS",
+  "启动几何服务：cd geometry && ./run_geometry_service.sh，并用 curl http://127.0.0.1:18300/readyz 检查",
+  "在任意机器上安装客户端：pip install -e client，并复制配置 cp client/.env.example client/.env，设置 DASHSCOPE_API_KEY、ATAS_LLM_*、GEOMETRY_SERVICE_URL",
+  "运行生成：atas run --screenplay examples/bookstore/screenplay.txt --characters examples/bookstore/characters.json --story-id bookstore"
+ ],
+ "summary": "ATAS 是一个以世界状态为中心的智能体视频生成框架，用来解决多镜头影片生成中场景与事件难以保持一致的问题。它先把剧本编译成带场景、相机、时间和事件的镜头请求，再通过场景记忆和事件记忆渲染出对应视角的画面，生成结果经过重建、配准和校验后才更新世界状态。适合需要从不同视角重访同一场景、或从新角度重拍过去事件的视频生成场景。",
+ "tagline": "以世界状态为中心的智能体视频生成框架"
+}

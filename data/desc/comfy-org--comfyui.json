@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要精细控制生成流程的视觉创作者、AI 应用开发者，以及希望在本地硬件上运行扩散模型的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "可视化节点图，无需代码即可搭建和复用图像、视频、音频、3D、文本工作流",
+  "支持子图、工作流模板、App Mode 和本地 API，便于集成到应用",
+  "本地执行优化：异步队列、部分图重执行、显存与内存管理、模型卸载、量化模型支持",
+  "原生支持 Stable Diffusion、Flux、Qwen Image、Wan、HunyuanVideo、ACE-Step 等大量开源模型",
+  "内置 inpainting、outpainting、遮罩合成、模型合并、放大、插帧、分割、深度估计等工具",
+  "工作流可保存为 JSON，并可从生成的媒体中恢复工作流和种子"
+ ],
+ "intro": "ComfyUI 是一个面向视觉创作者的 AI 创作引擎，核心是模块化的节点图界面。用户通过连接节点来搭建图像、视频、音频、3D 和文本的生成工作流，无需写代码，也能把复杂流程封装成简单 UI 或通过 API 接入生产管线。\n\n它原生支持大量开源模型，覆盖图像生成与编辑、视频生成、音频生成、3D 与视觉、文本生成等方向，并可加载 checkpoint、diffusion model、VAE、text encoder、LoRA、ControlNet 等组件。引擎针对本地消费级硬件做了优化，支持异步队列、部分图重执行、显存与内存管理、模型卸载和量化模型。\n\nComfyUI 可在 Windows、Linux、macOS 上本地运行，提供桌面应用、手动安装和云版本，也支持完全离线使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载桌面应用：访问 https://www.comfy.org/download（支持 Windows 与 macOS）",
+  "或手动安装：参考 README 中的 Manual Install 章节，支持 NVIDIA、AMD、Intel、Apple Silicon、Ascend 等 GPU 类型",
+  "或使用云端版本：访问 https://www.comfy.org/cloud",
+  "查看示例工作流：https://comfy.org/workflows 或 https://comfyanonymous.github.io/ComfyUI_examples/"
+ ],
+ "summary": "ComfyUI 是一个基于节点图的扩散模型创作引擎，用户通过连接节点搭建图像、视频、音频、3D 和文本生成工作流，无需写代码。它原生支持大量开源模型，并针对本地消费级硬件做了显存与内存优化，可在 Windows、Linux、macOS 上运行，也提供桌面应用和云版本。适合需要精细控制生成流程的视觉创作者和希望把工作流接入应用的开发者。",
+ "tagline": "基于节点图的模块化扩散模型创作引擎"
+}

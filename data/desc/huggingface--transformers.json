@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在文本、视觉、音频或多模态任务中使用预训练模型进行推理或训练的开发者与研究者。",
+ "date": "2026-10-15",
+ "features": [
+  "统一文本、视觉、音频、视频和多模态模型的模型定义",
+  "同时支持推理与训练",
+  "与主流训练框架和推理引擎兼容",
+  "提供 Pipeline 高层推理 API，支持多种任务",
+  "可从 Hugging Face Hub 直接下载并缓存模型",
+  "支持命令行聊天与服务（transformers chat / transformers serve）"
+ ],
+ "intro": "Transformers 是 Hugging Face 推出的模型定义框架，为文本、计算机视觉、音频、视频和多模态模型提供统一的定义，同时支持推理与训练。它把模型定义集中管理，使同一份定义能在生态中被广泛复用。\n\n只要某个模型定义被 Transformers 支持，它就能兼容多数训练框架（如 Axolotl、Unsloth、DeepSpeed、FSDP、PyTorch-Lightning）、推理引擎（如 vLLM、SGLang、TGI）以及相邻的建模库（如 llama.cpp、mlx）。Hugging Face Hub 上有超过 100 万个 Transformers 模型 checkpoint 可供使用。\n\n项目要求 Python 3.10+ 与 PyTorch 2.6+，可通过 pip 或 uv 安装，也支持从源码安装以获取最新改动。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建并激活虚拟环境：python -m venv .my-env && source .my-env/bin/activate",
+  "安装 Transformers：pip install \"transformers[torch]\"",
+  "使用 Pipeline 进行文本生成：from transformers import pipeline; pipeline = pipeline(task=\"text-generation\", model=\"Qwen/Qwen2.5-1.5B\"); pipeline(\"the secret to baking a really good cake is \")",
+  "进行对话时构造 chat 历史并传入 pipeline，例如使用 meta-llama/Meta-Llama-3-8B-Instruct",
+  "也可在命令行聊天：transformers chat Qwen/Qwen2.5-0.5B-Instruct"
+ ],
+ "summary": "Transformers 是 Hugging Face 维护的模型定义框架，为文本、视觉、音频、视频和多模态模型提供统一、可复用的定义，覆盖推理与训练两种用途。它让同一份模型定义能被多种训练框架、推理引擎和建模库直接使用，从而减少重复适配。适合需要在各类任务中调用或微调预训练模型的开发者，也适合希望快速上手主流模型的用户。",
+ "tagline": "统一文本、视觉、音频与多模态模型的定义框架"
+}

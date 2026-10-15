@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想快速、按需学习某个主题的开发者与自学者，也适合希望用 Claude Code 构建个性化课程的人。",
+ "date": "2026-10-15",
+ "features": [
+  "根据任意主题自动规划并生成约 12 节 2 分钟音频课",
+  "联网检索 20-40 个页面，比较来源共识与分歧，并附真实引用",
+  "每节课提供一张卡片：核心观点、来源统计、小练习和延伸链接",
+  "生成 playbook 和课程计划，展示专家分歧点",
+  "支持指定某位作者的文章或博客作为课程来源",
+  "支持 ElevenLabs 双人语音，也可回退到 macOS 内置语音"
+ ],
+ "intro": "Claudemy 是一个 Claude Code 技能，把任意主题变成一套短音频课程。你只需输入想学的内容，Claude 会联网检索 20 到 40 个页面，比较不同来源的观点，然后生成约 12 节、每节 2 分钟的音频课。每节课配一张卡片，包含三行核心观点、来源共识与分歧、一个小练习和延伸链接，所有课程内容都附有真实引用。\n\n课程以双人对话形式呈现，可导出 MP3 随时收听。它还会生成一份 playbook 和一份课程计划，展示专家意见分歧之处。除了通用主题，也可以指定从某位作者的文章或博客构建课程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Claude Code 插件：/plugin marketplace add assafkip/claudemy",
+  "安装技能：/plugin install claudemy@claudemy",
+  "安装依赖：pip install beautifulsoup4，并确保系统有 ffmpeg",
+  "设置 ElevenLabs API key 环境变量 ELEVENLABS_API_KEY（可选，不设置则使用 macOS 内置语音）",
+  "在 Claude Code 中输入：teach me negotiation"
+ ],
+ "summary": "Claudemy 是一个 Claude Code 技能，用来把你想学的主题变成一套短音频课程。它让 Claude 联网检索多个来源，比较不同观点，再生成约 12 节、每节 2 分钟的对话式课程，每节课都附有引用和一个小练习。适合想按需学习具体技能或知识、又不想看长视频的人。课程可导出 MP3，也能指定从某位作者的文章构建。",
+ "tagline": "输入主题，自动生成带引用的 2 分钟音频课程"
+}

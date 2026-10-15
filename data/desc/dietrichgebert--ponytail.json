@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程助手（如 Claude Code、Cursor 等）的开发者，尤其是希望减少冗余代码、控制成本并保持代码质量的团队或个人。",
+ "date": "2026-10-15",
+ "features": [
+  "让 AI 代理按「阶梯」选择最简方案，避免过度工程",
+  "提供 /ponytail-review 命令，审查改动涉及的代码而非仅 diff",
+  "提供 /ponytail-audit 命令，对整个仓库进行审计并排序修复优先级",
+  "在减少代码量的同时，保留验证、错误处理、安全与可访问性",
+  "支持 Claude Code 等多种 AI 代理（README 称 works with 20 agents）"
+ ],
+ "intro": "Ponytail 是一个面向 AI 编程助手的技能（skill），目标是让 AI 在写代码时遵循「最懒的资深开发者」思路：先理解问题，再按阶梯选择最简方案——从「是否需要存在」到「能否一行搞定」，最后才写最小可用实现。它强调只写任务真正需要的代码，但不省略验证、错误处理、安全与可访问性。\n\n项目提供 /ponytail-review 和 /ponytail-audit 两个命令，分别用于审查改动和审计整个仓库，会检查 bug、安全、负载、缺失测试等问题并给出修复优先级。根据 README 中的基准测试，在 Claude Code 上使用该技能后，代码量、时间、成本和 token 消耗均有下降，同时高风险逻辑附带测试的比例有所提升。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 npm 安装：npm install @dietrichgebert/ponytail",
+  "在支持的 AI 代理中启用该技能（具体方式参考 README 或官网）",
+  "在对话中使用 /ponytail-review 审查代码改动",
+  "使用 /ponytail-audit 审计整个仓库"
+ ],
+ "summary": "Ponytail 是一个给 AI 编程助手用的技能，目的是让助手像经验丰富但懒得写多余代码的资深开发者那样工作。它先读懂现有代码和真实流程，再按阶梯选择最简方案，只写任务必需的代码，同时不牺牲验证、错误处理和安全。项目还提供审查改动和审计仓库的命令，帮助发现 bug、安全问题和缺失测试。适合希望减少 AI 生成冗余代码、控制成本并保持代码质量的开发者。",
+ "tagline": "让 AI 编程助手像最懒的资深开发者一样思考，只写必要的代码。"
+}

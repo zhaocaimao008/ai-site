@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合嵌入式开发者、边缘 AI 爱好者和需要离线语音识别功能的硬件产品开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "在 ESP32-S3 上完全离线运行，无需云服务或 NPU",
+  "支持英语和西班牙语的开放词汇识别",
+  "提供 int8 和 int4 量化模型，适应不同存储和精度需求",
+  "可选语言模型提升准确率，支持 CTC 前缀波束搜索",
+  "支持流式识别模式，适用于低延迟场景",
+  "包含完整的评估工具和鲁棒性测试结果"
+ ],
+ "intro": "Oído 是一个完全在 ESP32-S3 微控制器上运行的开放词汇语音识别项目，支持英语和西班牙语，无需云端、命令列表或神经网络加速器。它基于 NVIDIA Conformer-CTC Small 模型，提供 int8 和 int4 量化版本，并可选配语言模型进行波束搜索解码。\n\n项目包含完整的固件、模型和评估工具，模型文件托管在 Hugging Face。在 LibriSpeech 测试集上，int8 模型达到 3.7% / 8.2% 的词错误率，int4 模型体积更小但精度略低。项目还提供了流式模式，适用于语音代理等低延迟场景。\n\n当前状态（2026 年 10 月）：在 ESP32-S3-WROOM-1-N16R8 开发板上，单核 240 MHz 下英语 int8 模型运行速度为 1.97 倍实时，尚未达到实时识别，但已能在芯片上完成全部计算。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/lokutor-ai/oido.git",
+  "进入项目目录并初始化子模块：cd oido && git submodule update --init --recursive",
+  "安装 ESP-IDF 并设置环境变量：. $HOME/esp/esp-idf/export.sh",
+  "配置目标芯片：idf.py set-target esp32s3",
+  "构建并烧录固件：idf.py build flash monitor"
+ ],
+ "summary": "Oído 是一个能在 5 美元 ESP32-S3 芯片上离线运行英语和西班牙语语音识别的开源项目。它基于 Conformer-CTC 模型，提供 int8 和 int4 量化版本，无需联网或专用加速器，适合嵌入式设备、智能家居或工业场景中的本地语音交互。项目包含固件、模型和评估工具，当前单核运行速度约为实时的两倍，尚未达到实时识别，但已展示出在低成本微控制器上实现开放词汇识别的可行性。",
+ "tagline": "在 5 美元 ESP32-S3 上运行的开放词汇语音识别"
+}

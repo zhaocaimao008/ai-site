@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想基于 DeepSeek 构建或扩展 agent 能力的开发者，以及需要本地运行 agent harness 并编写插件的技术人员。",
+ "date": "2026-10-15",
+ "features": [
+  "基于 Cordis 的 everything-is-a-plugin 插件化架构",
+  "提供 Web UI，默认监听 127.0.0.1:3080",
+  "支持通过 npx 直接运行，无需克隆仓库",
+  "支持从源码用 pnpm 构建与运行",
+  "附带用户指南、开发指南与架构文档",
+  "通过 dsh-plugin 话题组织与发现插件"
+ ],
+ "intro": "DeepSeek Harness（简称 dsh）是 DeepSeek AI 开源的 agent harness，采用「一切皆插件」的架构，底层由 Cordis 驱动。项目使用 TypeScript 编写，以 MIT 协议发布，目前处于 developer preview 阶段，官方明确提示会快速迭代并可能出现破坏兼容性的变更。\n\n它提供 Web UI 形态的运行方式，既可以通过 npm 直接启动，也可以从源码构建后运行。仓库中包含用户指南、开发指南、架构文档以及安全须知，插件作者可以通过为仓库添加 dsh-plugin 话题来提升可发现性。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js",
+  "运行 npx @deepseek-ai/dsh web 启动 Web UI（默认 http://127.0.0.1:3080）",
+  "如需从源码运行：git clone https://github.com/deepseek-ai/deepseek-harness.git",
+  "cd deepseek-harness && pnpm install && pnpm run build",
+  "运行 pnpm dsh web 启动服务"
+ ],
+ "summary": "DeepSeek Harness 是 DeepSeek AI 开源的 agent harness，核心思路是「一切皆插件」，底层由 Cordis 提供支持，用 TypeScript 编写。它面向需要搭建和扩展 agent 能力的开发者，既可以通过 npx 快速启动 Web UI 试用，也可以克隆源码用 pnpm 构建后运行。项目目前处于 developer preview，迭代较快，官方提示会有破坏兼容性的改动，使用前建议先阅读安全须知。",
+ "tagline": "DeepSeek 开源的一切皆插件的 agent harness"
+}

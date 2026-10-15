@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在终端、脚本或桌面环境中使用 AI 编程代理的开发者，尤其是关注权限控制、沙箱隔离和会话可追溯性的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "同一 Python 核心支持无头 CLI、Textual TUI 和 Electron 桌面三种前端",
+  "兼容任意 OpenAI 协议 API，可配置多个模型并即时切换",
+  "事件溯源会话日志，每一步请求与工具结果可重建、回放",
+  "按风险分级的工具权限与 plan/default/acceptEdits/yolo 四种模式",
+  "WriteFence 与 OS 级沙箱双层防护，默认 fail-closed",
+  "基于 shadow-git 的检查点与按轮次回滚"
+ ],
+ "intro": "CluxMate 是一个 AI 编程代理，能读取代码库、规划改动、编辑文件、执行命令并回答问题。它用同一个 Python 核心驱动三种可互换的前端：无头 CLI（适合脚本、CI 和自动化）、Textual 终端界面，以及通过 JSON-RPC 连接同一核心的 Electron 桌面应用。\n\n它使用 OpenAI 兼容 API，可对接 DeepSeek、Qwen、GLM、OpenAI、OpenRouter、Ollama 或自托管端点，只需配置 base_url，不绑定特定厂商。项目在权限、沙箱与会话记录上做了较多设计：工具按风险分级并配合多种审批模式，文件写入与 bash 命令受两层沙箱约束，会话以事件日志形式保存，可回放与回滚。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "无头模式执行一次性提示：cluxmate -p \"...\"",
+  "启动交互式终端界面：cluxmate",
+  "在会话中创建独立 git worktree：cluxmate worktree …",
+  "管理远程 MCP 授权：cluxmate mcp auth / logout / status"
+ ],
+ "summary": "CluxMate 是一个 AI 编程代理，用同一个 Python 核心驱动无头 CLI、Textual 终端界面和 Electron 桌面三种前端，适合在脚本、CI 或图形界面中使用。它兼容任意 OpenAI 协议 API，可对接 DeepSeek、Qwen、OpenAI、Ollama 等端点。项目重点在安全与可追溯：工具按风险分级审批，文件写入和 bash 命令受沙箱约束，会话以事件日志保存，支持回放与按轮次回滚。",
+ "tagline": "一个 Python 核心驱动 CLI、TUI 与桌面三端的 AI 编程代理"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想快速上手或参考实现 AI Agent、RAG 应用的开发者，以及希望给编码 Agent 扩展技能的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "收录 100+ 开源 AI Agent、Agent Skills 与 RAG 应用模板",
+  "Agent Skills 可通过一条 npx 命令安装到 Claude Code、Codex、Cursor 等编码 Agent",
+  "Starter AI Agents 为单文件实现，只需 API key 即可运行",
+  "Advanced AI Agents 具备工具调用、记忆与多步推理能力",
+  "兼容 Claude、Gemini、GPT、DeepSeek、Llama、Qwen 等多种模型",
+  "每个模板附有 Unwind AI 上的分步教程"
+ ],
+ "intro": "Awesome LLM Apps 是一个收录 100 多个开源 AI 应用模板的仓库，内容涵盖 AI Agent、Agent Skills 和 RAG 应用，采用 Apache-2.0 协议。所有模板都经过端到端测试，可克隆、运行甚至商用。\n\n仓库按类型组织，包括给编码 Agent 增加能力的 Agent Skills、单文件即可运行的 Starter AI Agents，以及带工具、记忆和多步推理的 Advanced AI Agents。模板兼容 Claude、Gemini、GPT、DeepSeek、Llama、Qwen 等模型，并提供配套的分步教程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Agent Skill：npx skills add https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/agent_skills/project-graveyard",
+  "克隆仓库：git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git",
+  "进入某个模板目录：cd awesome-llm-apps/starter_ai_agents/ai_travel_agent",
+  "安装依赖：pip install -r requirements.txt",
+  "运行应用：streamlit run travel_agent.py"
+ ],
+ "summary": "这个仓库把上百个可直接运行的 AI Agent、Agent Skills 和 RAG 应用模板集中在一起，全部开源并经过端到端测试。它适合想快速体验或二次开发 LLM 应用的开发者：既可以给 Claude Code、Cursor 等编码 Agent 一键加装技能，也可以克隆单文件 Agent 跑起来，或参考带工具与记忆的多步推理实现。模板兼容多种主流与开源模型。",
+ "tagline": "100+ 开源 AI Agent、Agent Skills 与 RAG 应用合集"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要接入图像生成能力的开发者，以及想了解 Nano Banana Pro 接口参数和计费方式的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "兼容 OpenAI 格式的图像生成接口，基础地址为 https://api.apimart.ai/v1",
+  "异步任务模式：提交后拿到 task_id，轮询 GET /v1/tasks/{task_id} 获取结果",
+  "支持 1K、2K、4K 分辨率与 auto、1:1、16:9、21:9 等十一种宽高比",
+  "可通过 image_urls 传入参考图进行图生图或图像编辑",
+  "提供 curl、Python、JavaScript 示例代码，以及按图片和按 token 两种计费说明",
+  "任务完成后返回 cost、credits_cost 和有效期 24 小时的结果链接"
+ ],
+ "intro": "这个仓库是 APIMart 上 Nano Banana Pro（模型 id 为 gemini-3-pro-image-preview）图像生成接口的说明文档，包含模型 id、计费方式、请求参数、价格表和可直接运行的调用示例。接口兼容 OpenAI 格式，基础地址为 https://api.apimart.ai/v1，提交生成请求后通过 GET /v1/tasks/{task_id} 轮询任务状态。\n\n文档列出了 size、resolution、n、image_urls、nsfw_check、official_fallback 等参数的含义与默认值，支持 1K/2K/4K 输出和包括 auto 在内的十一种宽高比，也支持传入参考图做图生图或编辑。仓库提供 curl、Python、JavaScript 三种调用示例，以及按分辨率计费和按 token 计费两条路线的价格说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 APIMart API key，并设置环境变量 APIMART_API_KEY",
+  "向 https://api.apimart.ai/v1/images/generations 发送 POST 请求，指定 model 为 gemini-3-pro-image-preview 和 prompt 等参数",
+  "从响应中取出 data.id 作为 task_id",
+  "轮询 GET /v1/tasks/{task_id}，直到 status 为 completed 或 failed",
+  "读取任务返回的 cost 和 result.images 中的图片链接"
+ ],
+ "summary": "这个仓库整理了 APIMart 上 Nano Banana Pro（gemini-3-pro-image-preview）图像生成接口的调用方式，包括模型 id、请求参数、价格表和 curl、Python、JavaScript 示例。接口兼容 OpenAI 格式，采用异步任务模式，提交后轮询任务状态获取结果，支持 1K/2K/4K 分辨率和多种宽高比，也可传入参考图做编辑。适合需要把文生图能力接入自己应用的开发者参考。",
+ "tagline": "Nano Banana Pro 图像生成 API 的调用文档与示例"
+}

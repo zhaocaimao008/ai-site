@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合准备 Java 后端面试的开发者，以及希望系统学习后端通用知识与 AI 应用开发的程序员。",
+ "date": "2026-10-15",
+ "features": [
+  "覆盖 Java 基础、集合、IO、并发、JVM 及新特性等核心知识",
+  "包含计算机基础、数据库、分布式、高并发与系统设计内容",
+  "提供 AI 应用开发面试指南，涵盖 LLM、Agent、RAG、MCP 等",
+  "提供 Java 后端面试通关计划与学习路线",
+  "支持在线阅读站点与面试突击版本"
+ ],
+ "intro": "JavaGuide 是一份开源的 Java 面试与后端通用面试指南，内容覆盖计算机基础、数据库、分布式、高并发、系统设计等后端核心知识，同时包含面向后端开发者的 AI 应用开发内容，涉及 LLM、Agent、RAG、MCP、Claude Code、Codex 等主题。\n\n项目以文档形式组织，提供在线阅读站点 javaguide.cn，并设有面试突击版本 interview.javaguide.cn，方便按重点复习。仓库还包含 Java 后端面试通关计划、学习路线、简历编写指南等准备材料。\n\nAI 相关部分单独开源在 AIGuide 仓库，并在 javaguide.cn/ai/ 提供在线阅读，适合希望系统准备面试或补充后端与 AI 工程知识的开发者参考。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在线阅读：访问 javaguide.cn 获取完整内容",
+  "面试突击：访问 interview.javaguide.cn 查看重点版本",
+  "AI 应用开发：访问 javaguide.cn/ai/ 阅读 AI 指南",
+  "本地阅读：克隆仓库后直接查看 docs 目录下的 Markdown 文档"
+ ],
+ "summary": "JavaGuide 是一份面向 Java 后端面试的开源知识库，内容覆盖 Java 基础、并发、JVM、计算机基础、数据库、分布式、高并发和系统设计等后端核心主题，并延伸出 AI 应用开发方向，涉及 LLM、Agent、RAG、MCP 等工程实践。项目提供在线阅读站点和面试突击版本，还包含面试通关计划、学习路线等准备材料，适合需要系统复习后端知识或补充 AI 应用开发内容的开发者按需查阅。",
+ "tagline": "Java 后端面试与 AI 应用开发指南"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Omarchy 桌面、希望在本地 GPU 或 CPU 上运行大模型并接入编码代理的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "按显卡或 CPU 自动匹配经过验证的模型配方，并列出本机可运行的全部模型",
+  "从固定 Hugging Face 版本下载权重，校验文件大小与 LFS 文件的 SHA-256",
+  "在 Docker 中运行引擎，通过带密钥的 OpenAI/Anthropic/Responses 兼容网关在 127.0.0.1 提供服务",
+  "在指定文件夹中一键打开多种编码代理，不修改其原有配置",
+  "面板显示硬件显存与温度、模型卡片、活动日志与速度图表",
+  "通过 tailscale serve 将运行中的模型分享到 tailnet"
+ ],
+ "intro": "Local AI for Omarchy 是一个 Omarchy 桌面插件，用来自动挑选并运行适合本机硬件的本地大模型。它会根据你的显卡（NVIDIA、Intel Arc Pro、AMD）或支持 AVX2 的 x86-64 CPU，从经过验证的配方中选出可用模型，从固定的 Hugging Face 版本下载权重并校验文件大小与 SHA-256，然后在 Docker 中以 OpenAI 兼容网关的形式在 127.0.0.1 上提供服务。\n\n面板提供两个标签页：home 展示活动、运行状态和已固定模型，models 列出本机可运行的全部模型，可搜索、下载、启动和固定；另有硬件页显示各显卡的显存与温度，以及全屏查看模型 Hugging Face 卡片的视图。你可以在选定文件夹中打开 pi、Claude Code、Codex、OpenCode、omp、Crush、Grok、Copilot 或 Hermes 等编码代理，无需修改它们自身的配置。运行中的模型还可以通过 tailscale serve 分享到自己的 tailnet。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "omarchy plugin add https://github.com/sybil-solutions/omarchy-local-ai --enable",
+  "在 bar 中打开 Local AI，点击 Set up Local AI 完成一次性机器设置",
+  "在 models 标签页选择或输入模型名称，点击 Start 启动",
+  "选择一个文件夹并打开编码代理，即可连接到本地网关"
+ ],
+ "summary": "这个项目面向使用 Omarchy 桌面的用户，解决在本地跑大模型时选型、下载、部署和接入编码代理都比较繁琐的问题。它会根据本机显卡或 CPU 挑选经过验证的模型配方，校验并下载权重，在 Docker 中启动服务，再通过 OpenAI 兼容网关让多种编码代理直接使用，还可以把运行中的模型分享到 tailnet。适合想在本地 GPU 或 CPU 上使用大模型辅助编码的开发者。",
+ "tagline": "在 Omarchy 上按显卡选模型、一键跑本地 AI 并接入编码代理"
+}

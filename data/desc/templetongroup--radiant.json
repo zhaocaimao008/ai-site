@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Mac 上使用编码 Agent 的开发者，尤其是希望同时接入云端模型和本地模型、并需要可视化查看工具调用与任务进度的人。",
+ "date": "2026-10-15",
+ "features": [
+  "Agent 聊天：支持云端与本地模型，流式回复并显示模型思考过程，可中途切换模型",
+  "真实工具调用：在项目文件夹内读写文件、运行命令，支持逐条确认、自动放行或全部允许",
+  "文件检查点与撤销：每次修改文件后留下检查点，可回滚文件同时保留对话",
+  "任务板：Queued、Working、Needs you、Review、Done 五列看板，支持任务依赖与子任务",
+  "Loops 与 Graphs：步骤带校验条件，失败可带原因重试；无依赖的步骤可并行运行",
+  "本地模型适配评估：根据当前 Mac 的内存与核心数标注 Runs well、Runs tight 或 Won't run"
+ ],
+ "intro": "Radiant 是一个面向 macOS 的本地编码 Agent 工作台，把聊天、工具调用、终端和任务管理放在同一个窗口里。它支持 Anthropic、OpenAI、OpenRouter、xAI、Groq、Mistral 等云端模型，也可以通过 Ollama 和 LM Studio 使用本机模型，会话消息采用中立格式存储，因此可以在对话中途切换模型并保留上下文。\n\nAgent 能在项目文件夹里读写文件、执行 shell 命令，每次编辑都会留下检查点以便回滚文件而保留对话；还可以选择沙箱模式，由 macOS 限制写入范围甚至断网。较长的任务可以放到看板式的任务板上，用 Loops 定义带校验条件的步骤，或用 Graphs 让互不依赖的步骤并行执行。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Radiant 是一个运行在 macOS 上的本地编码 Agent 工作台，把与编码 Agent 的对话、工具调用记录、真实终端和任务看板集中在一个窗口。它既能连接 Anthropic、OpenAI、OpenRouter 等云端模型，也能通过 Ollama、LM Studio 使用本机模型，并允许在对话中切换模型而保留上下文。Agent 可在项目文件夹内读写文件、执行命令，编辑后留下检查点便于回滚；较长的任务可用任务板、带校验条件的 Loops 或并行 Graphs 来组织。适合想在 Mac 上统一管理编码 Agent 工作流的开发者。",
+ "tagline": "Mac 上的本地编码 Agent 工作台"
+}

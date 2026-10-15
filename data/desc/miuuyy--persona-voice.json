@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在本地为 ChatGPT、Codex 或 Grok Bot 更换语音输出的 macOS、Linux 或 Windows 用户，以及想从源码构建的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "将 ChatGPT、Codex、Grok Bot 的语音输出替换为选定音色，原始播放被抑制而非叠加",
+  "本地推理，无需语音 API key，安装后转换在设备上运行",
+  "支持 Chatterbox 与 Seed-VC Tiny 两种本地模型，可在设置中切换",
+  "内置带署名的 VOICEVOX 音色及社区参考音色，也可添加自有授权参考",
+  "历史记录默认关闭，开启后仅保存转换输出，默认六小时清理并可立即清除"
+ ],
+ "intro": "Persona Voice 是一个桌面应用，用来替换 ChatGPT、Codex 或 Grok Bot 的语音输出。你只需选定来源应用，它的对话和操作界面保持不变，语音转换在本地设备上完成，并以接近实时的速度播放。转换后的声音会取代原始播放，而不是叠加在原始语音之上。\n\n项目内置 Chatterbox 和 Seed-VC Tiny 两种本地语音模型，首次运行时下载其中一个，之后可以在设置里添加另一个。官方说明中 Seed-VC Tiny 更适合日语和中文，Chatterbox 推荐用于英语及其他语言。除内置音色目录外，也可以添加自己拥有授权的参考音频。历史记录默认关闭，开启后只保存转换后的输出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载对应平台的安装包，Windows 需另行安装官方 VB-CABLE 并重启",
+  "启动 Persona Voice，选择 ChatGPT 或 Grok Bot，完成系统音频设置并下载一个语音模型",
+  "选择目标音色，点击 Start voice",
+  "在所选应用中正常打开语音模式",
+  "从源码运行：git clone --recurse-submodules https://github.com/miuuyy/ChatGPT-Persona-Voice.git && cd ChatGPT-Persona-Voice && bun install --frozen-lockfile && bun run dev"
+ ],
+ "summary": "Persona Voice 解决的是让 ChatGPT、Codex 或 Grok Bot 用你指定的声音说话的问题。它作为桌面应用在本地完成语音转换，替换掉应用原本的语音播放，而不是把新声音叠加上去。转换在设备上推理，不需要语音 API key，内置 Chatterbox 和 Seed-VC Tiny 两种模型，也支持添加自己拥有授权的参考音色。适合想在不改动原应用界面的前提下更换助手语音的用户。",
+ "tagline": "在本地把 ChatGPT、Codex、Grok Bot 的语音输出替换成你选定的音色"
+}

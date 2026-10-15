@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "拥有 AMD Strix Halo 硬件（如 Ryzen AI Max+ 395）并希望在本地运行 Qwen3.8-27B 模型的开发者和研究者。",
+ "date": "2026-10-15",
+ "features": [
+  "专为 AMD Strix Halo (gfx1151) 和 Qwen3.8-27B 优化的自定义 HIP 内核",
+  "提供 OpenAI 兼容的 HTTP API 端点，默认端口 8731",
+  "支持推测解码（DFlash2 默认，MTP 可选），输出与串行贪心解码逐字节一致",
+  "容器镜像不包含模型权重，支持手动挂载或通过 HALOGEN_DOWNLOAD 自动下载",
+  "默认无出站网络连接，不发送遥测或进行许可证检查",
+  "内置 bench 和 sweep 基准测试工具，可自行复现性能数据"
+ ],
+ "intro": "halogen 是一个针对 AMD Strix Halo（gfx1151）平台和 Qwen3.8-27B 模型专门优化的推理引擎。它不依赖通用运行时或可移植层，所有内核都只为这一款 GPU 和这一系列模型编写，目标是在该硬件上以更高精度实现更快的推理速度。\n\n项目以容器镜像形式分发，启动后提供 OpenAI 兼容的 API 端点。镜像本身不包含模型权重，需要单独下载约 35.9 GB 的 .hgn 检查点，也可以通过环境变量让容器在首次启动时自动下载。引擎默认不进行任何出站网络连接，除非显式启用下载。\n\n根据项目提供的基准测试，在 32K 提示词场景下，其 prefill 速度可达 566 t/s，端到端总耗时相比其他同硬件方案有明显优势，同时权重精度保持在约 6.3 bpw。解码阶段采用推测解码，输出与串行贪心解码逐字节一致。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载模型权重：pip install -U \"huggingface_hub[cli]\" && hf download peonist-ai/halogen-qwen3.8-27b --local-dir ~/halogen-models",
+  "使用 Podman 启动容器：podman run --rm -p 8731:8731 --device /dev/kfd --device /dev/dri --group-add keep-groups --security-opt seccomp=unconfined --ipc=host -v ~/halogen-models:/models:ro -v ~/halogen-models/tokenizer:/tokenizer:ro ghcr.io/peonist-ai/halogen:0.1.4",
+  "若使用 Docker，将 --group-add keep-groups 替换为 --group-add video --group-add render",
+  "或者让容器自动下载权重：设置 -e HALOGEN_DOWNLOAD=peonist-ai/halogen-qwen3.8-27b -e HALOGEN_TOKENIZER=/models/tokenizer，并将模型目录挂载为读写",
+  "启动后通过 http://localhost:8731 访问 OpenAI 兼容 API"
+ ],
+ "summary": "halogen 是一个专为 AMD Strix Halo 硬件和 Qwen3.8-27B 模型定制的推理引擎，所有内核都针对这一款 GPU 和模型系列编写，不依赖通用运行时。它适合在本地 Strix Halo 设备上运行该模型、并希望获得更高 prefill 速度和更高权重精度的开发者。项目以容器镜像分发，提供 OpenAI 兼容 API，模型权重需单独下载或由容器首次启动时自动获取。",
+ "tagline": "专为 AMD Strix Halo 打造的 Qwen3.8-27B 推理引擎"
+}

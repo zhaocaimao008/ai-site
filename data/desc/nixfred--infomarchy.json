@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Omarchy 桌面环境下同时运行多个 AI 代理的开发者，以及希望随时掌握 AI 会话状态和机器负载的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "实时检测并展示 Claude Code、Codex、Cursor、Grok、Ollama 等 AI 代理的运行状态",
+  "每个会话卡片显示项目、工作目录、运行时长、PID 和当前话题摘要",
+  "提供 7 天热力图、速率限制、最近提示词和机器统计信息",
+  "支持点击卡片聚焦到对应终端或 IDE 窗口，并可跳转到 tmux、Herdr、Boomux 等复用器内部",
+  "对空闲会话标记 STALE 标签，支持右键停止或结束进程（需二次确认）",
+  "主题驱动，面板样式跟随当前 Omarchy 主题"
+ ],
+ "intro": "Infomarchy 是一个 Omarchy 桌面插件，它把壁纸变成一块可点击的信息面板，实时显示机器上正在运行的 AI 代理（如 Claude Code、Codex、Grok、Ollama 等）的状态。它直接从 /proc 检测进程，无需代理端钩子或额外配置，每个会话卡片会展示项目、工作目录、运行时长、PID 以及当前话题摘要。\n\n除了会话监控，它还提供 7 天热力图、速率限制、最近提示词和机器统计信息。所有内容都绘制在当前主题的 Omarchy 桌面上，按 SUPER + I 可以隐藏或显示面板。项目使用 TypeScript 和 Quickshell 构建，遵循 MIT 协议。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Omarchy 桌面环境中安装 Infomarchy 插件",
+  "配置键盘快捷键（如 SUPER + I）用于显示或隐藏信息面板",
+  "启动 AI 代理（如 Claude Code、Codex 等），面板会自动检测并显示会话卡片",
+  "点击卡片可聚焦到对应终端或 IDE 窗口，右键卡片可管理空闲会话"
+ ],
+ "summary": "Infomarchy 是一个 Omarchy 桌面插件，把壁纸变成实时信息面板，集中显示机器上所有 AI 代理的运行状态、7 天热力图、速率限制和机器统计。它直接从 /proc 检测进程，无需配置，适合在 Omarchy 环境下同时运行多个 AI 代理的开发者，方便随时查看会话和跳转到对应终端。",
+ "tagline": "把 Omarchy 桌面壁纸变成实时 AI 会话信息面板"
+}

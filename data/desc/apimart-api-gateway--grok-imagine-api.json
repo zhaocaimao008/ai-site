@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要通过 API 调用 Grok Imagine 进行图像生成或编辑的开发者，以及想参考提示词写法的 AI 图像创作者。",
+ "date": "2026-10-15",
+ "features": [
+  "6 个带实际输出、宽高比和成本的 Grok Imagine 提示词配方，机器可读版本在 data/prompts.json",
+  "提示词结构速查表，将 prompt 拆分为世界、主体、光线、镜头、用途五个槽位",
+  "支持文生图与基于参考图的编辑，编辑时通过 image_urls 传入 1–5 个公开可访问的图片 URL",
+  "异步任务模式：提交后获得 task_id，通过 GET /v1/tasks/{id} 轮询结果",
+  "单次调用可用 n 参数生成 1–10 张变体",
+  "响应中返回 cost / credits_cost，便于按次核对费用"
+ ],
+ "intro": "这个仓库围绕 APIMart 提供的 Grok Imagine 1.5（模型 id 为 grok-imagine-1.5-apimart）图像接口，整理了 6 个可直接复用的提示词配方，覆盖产品摄影、电影感场景、概念艺术、海报、美食和环境等类别。每个配方都附有实际生成结果、宽高比、单张成本以及对应的完整 prompt，方便对照理解提示词写法。\n\n仓库还给出了提示词结构速查表，把 prompt 拆成世界、主体、光线、镜头、用途五个槽位，并总结了三条经验：先描述环境再描述主体、用两种颜色锚点保持系列一致、明确输出用途。调用方式上，接口兼容 OpenAI 风格，支持文生图和基于参考图的编辑，异步任务通过 task_id 轮询获取结果。\n\nREADME 中提供了 Python 示例脚本和 curl 请求示例，并说明了按张计费、最低充值 1 美元、响应中返回 cost 等计费细节，以及 401、429、任务失败等常见问题的排查方法。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "设置环境变量：export APIMART_API_KEY=...",
+  "列出配方（不发起网络请求）：python examples/run_recipes.py --dry-run",
+  "生成其中两个配方：python examples/run_recipes.py --limit 2",
+  "按类别筛选：python examples/run_recipes.py --category \"Food\"",
+  "或直接用 curl 调用：curl --request POST --url https://api.apimart.ai/v1/images/generations --header \"Authorization: Bearer $APIMART_API_KEY\" --header 'Content-Type: application/json' -d '{\"model\":\"grok-imagine-1.5-apimart\",\"prompt\":\"<paste a prompt>\",\"size\":\"1:1\",\"resolution\":\"1K\",\"n\":1}'"
+ ],
+ "summary": "这个项目整理了 Grok Imagine 1.5 图像接口的 6 个提示词配方，每个都附带实际生成结果、宽高比和单张成本，并给出把 prompt 拆成世界、主体、光线、镜头、用途的写法参考。接口兼容 OpenAI 风格，支持文生图和参考图编辑，异步任务通过 task_id 轮询，响应中返回本次费用。适合想通过 API 调用该模型生成或编辑图片、并需要提示词范例的开发者与创作者。",
+ "tagline": "Grok Imagine 图像生成与编辑 API 的提示词示例与调用指南"
+}

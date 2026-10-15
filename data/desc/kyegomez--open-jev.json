@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对 system one 模型、类型化概率输出和 Jev 架构感兴趣的研究者与开发者，用于阅读、实验和二次开发。",
+ "date": "2026-10-15",
+ "features": [
+  "双向 transformer 编码器，无因果掩码，支持嵌套状态",
+  "结构路径嵌入，保留值在字典和数组中的位置",
+  "可缓存的共享状态表示，配合学习到的 query slot 交叉注意力",
+  "类型化读出头：Noul、Choice、Score，输出受声明类型约束",
+  "证据头单独建模认知置信度",
+  "RLCDLoss 组合软目标 NLL、Brier 分数、一致性、置信度和 ECE 项"
+ ],
+ "intro": "Open Jev 是对 TypeSafe AI 提出的 Jev 思路的开源、从第一性原理出发的 PyTorch 重构。它把 Jev 描述为一种 system one 模型：输入非结构化的程序状态，输出带类型的概率决策。与逐 token 生成文本不同，该实现一次性编码状态，再通过多个小型类型化读出头回答问题。\n\n架构上，它使用双向 transformer 编码嵌套状态，不设因果掩码，并用结构路径嵌入保留值在字典和数组中的位置。学习到的 query slot 交叉注意力到一份可缓存的共享状态表示上。Noul 返回陈述为真的概率，Choice 只在运行时给出的选项上做 softmax，Score 使用序数阈值返回分布及其期望，另有证据头单独建模认知置信度。RLCDLoss 组合了软目标 NLL、Brier 分数、一致性、置信度和 ECE 项。\n\n作者明确说明这是非官方研究实现，使用随机权重，不包含 TypeSafe AI 的训练数据或权重，也不声称复现其公开结果。仓库中的 tokenizer 是确定性哈希 tokenizer，适合运行架构但不适合训练有用模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/kyegomez/open-jev",
+  "cd open-jev",
+  "python -m pip install \"torch>=2.0\"",
+  "python open_jev/main.py"
+ ],
+ "summary": "Open Jev 是一个用 PyTorch 从零重构 TypeSafe AI 的 Jev 思路的开源项目。它面向需要从非结构化状态中做出带类型概率决策的场景，不逐 token 生成文本，而是一次编码状态，再用 Noul、Choice、Score 等读出头并行回答多个问题，输出受声明类型约束。项目为研究性质，使用随机权重，适合想理解或实验 system one 模型架构的开发者阅读和二次开发。",
+ "tagline": "用 PyTorch 从零复现 Jev 系统一模型的开源研究实现"
+}

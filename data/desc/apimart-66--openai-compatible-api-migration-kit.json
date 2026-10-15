@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "正在评估或切换 OpenAI 兼容 API 网关的开发者与团队，以及需要检查现有项目迁移风险的人。",
+ "date": "2026-10-15",
+ "features": [
+  "提供 Python、JavaScript 和 cURL 的 chat、流式与工具调用示例",
+  "openai_migration_check.py 扫描项目中迁移敏感的代码路径，不上传源码",
+  "兼容性矩阵列出各迁移面（Chat、SSE、工具调用、JSON、视觉、Responses API）需要实测的内容",
+  "通过环境变量管理 base URL、密钥和模型 ID，回滚只需恢复配置",
+  "包含 ROLLBACK.md 回滚演练文档和迁移步骤清单"
+ ],
+ "intro": "这个仓库提供一套可运行的 Python、JavaScript 和 cURL 示例，用于把基于 OpenAI 兼容接口的工作负载从一个 API 网关迁移到另一个网关。它强调凭据和 base URL 应放在环境变量里，回滚时只改配置、不改代码。\n\n仓库包含一个扫描脚本 openai_migration_check.py，可以检查现有项目中与迁移相关的代码路径，例如流式输出、工具调用、结构化输出、视觉输入、Responses API、自定义 base URL 以及可能硬编码的密钥。README 还给出了迁移步骤、兼容性矩阵和回滚演练文档。\n\n示例默认指向 APIMART 的 OpenAI 兼容端点 https://api.apimart.ai/v1，但文档也说明 APIMART 只是候选之一，模型可用性、限额、计费、区域和 SLA 需要按自己的账号和工作负载实际验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "cp .env.example .env，把新创建的密钥填入 .env，不要提交到版本库",
+  "export OPENAI_API_KEY=\"...\"",
+  "export OPENAI_BASE_URL=\"https://api.apimart.ai/v1\"",
+  "export OPENAI_MODEL=\"gpt-5-mini\"",
+  "运行示例：python -m pip install openai && python examples/python_chat.py，或 npm install && node examples/javascript_chat.mjs，或 ./examples/curl_chat.sh",
+  "扫描现有项目：python openai_migration_check.py /path/to/your/project"
+ ],
+ "summary": "这个仓库面向需要把 OpenAI 兼容接口的工作负载从一个 API 网关迁移到另一个网关的开发者。它提供可运行的 Python、JavaScript 和 cURL 示例，覆盖 chat、流式输出和工具调用，并附带一个扫描脚本，用来找出项目中与迁移相关的代码路径，比如流式、工具调用、结构化输出、视觉输入和可能硬编码的密钥。示例把 base URL、密钥和模型 ID 放在环境变量里，回滚时只需恢复配置。README 还给出迁移步骤、兼容性矩阵和回滚演练文档，并提醒模型可用性、限额和计费需要按自己的账号实际验证。",
+ "tagline": "在 OpenAI 兼容网关之间迁移工作负载的示例与检查工具"
+}

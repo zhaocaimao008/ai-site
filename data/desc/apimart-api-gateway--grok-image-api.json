@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要通过 API 批量生成或编辑图片的开发者，以及希望用统一 OpenAI 兼容接口接入多种模型的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "文生图与基于参考图的编辑，支持 1:1、16:9、9:16、3:2、2:3 五种宽高比",
+  "单次请求最多生成 10 张图片，编辑时最多传入 5 个参考图 URL",
+  "OpenAI 兼容端点 POST /v1/images/generations，异步任务通过 GET /v1/tasks/{task_id} 轮询",
+  "按图计费，完成的任务在响应中返回 cost 和 credits_cost",
+  "可选 nsfw_check 参数，提交前运行 omni-moderation-latest 审核",
+  "提供 curl、Python、JavaScript 三种可运行示例，以及常见首次调用问题排查表"
+ ],
+ "intro": "这个项目是 APIMart 上 Grok Imagine 1.5（模型 id 为 grok-imagine-1.5-apimart）图像 API 的说明与示例仓库，提供模型 id、按图计费价格、文生图与参考图编辑路由、内容审核行为以及可直接运行的 API 示例。接口兼容 OpenAI 格式，统一使用 https://api.apimart.ai/v1 作为 base URL，同一个 key 可以调用包括该模型在内的 300 多个图像、视频和语言模型。\n\n调用方式为异步：先 POST /v1/images/generations 提交任务，拿到 task_id 后轮询 GET /v1/tasks/{id} 获取结果，任务状态依次为 pending、processing、completed 或 failed。请求支持 1:1、16:9、9:16、3:2、2:3 五种比例，单次最多生成 10 张图，编辑时可通过 image_urls 传入 1 到 5 个公开可访问的参考图 URL。按图计费，编辑同样计入，完成的任务会在响应中返回 cost 与 credits_cost，结果链接有效期为 24 小时。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 APIMart 控制台获取 API key，并设置环境变量 APIMART_API_KEY",
+  "POST 到 https://api.apimart.ai/v1/images/generations，请求体包含 model、prompt、size、resolution、n 等字段",
+  "从响应中取出 data.id 作为 task_id",
+  "轮询 GET https://api.apimart.ai/v1/tasks/{task_id}，直到 status 为 completed 或 failed",
+  "读取任务返回的 cost 和 result.images[].url 获取计费金额与图片链接"
+ ],
+ "summary": "这个仓库整理了通过 APIMart 调用 Grok Imagine 1.5 图像 API 所需的全部信息，包括模型 id、按图计费价格、文生图与参考图编辑路由、内容审核选项，以及 curl、Python、JavaScript 示例。接口兼容 OpenAI 格式，采用异步任务模式，提交后轮询获取结果，单次最多生成 10 张图，适合需要批量出图或把图像生成接入现有 OpenAI 客户端的开发者参考。",
+ "tagline": "通过 APIMart 调用 Grok Imagine 1.5 的异步图像生成与编辑 API"
+}

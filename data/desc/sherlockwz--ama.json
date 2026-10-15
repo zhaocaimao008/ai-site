@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究长期记忆与多智能体系统的研究人员，以及希望为 agent harness 接入 AMA 式记忆能力的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "四个协作智能体：Constructor 构建记忆，Retriever 路由查询，Judge 校验证据，Refresher 更新或删除冲突记忆",
+  "三种记忆粒度：原始文本、事实知识、事件级 episode 记忆",
+  "有界的多轮检索循环，避免无限累积矛盾信息",
+  "提供论文参考实现与 LoCoMo、LongMemEval_s 评测代码",
+  "提供可移植的 SKILL.md 记忆策略与六个智能体可调用的记忆操作",
+  "包含 OpenClaw 参考适配器、CLI 命令与自动召回/捕获钩子"
+ ],
+ "intro": "AMA 是发表于 Findings of ACL 2026 的研究项目，全称 Adaptive Memory via Multi-Agent Collaboration，关注长期智能体记忆问题。它认为记忆不只是存取旧消息，不同问题需要不同粒度的信息，用户信息也会随时间变化，因此系统需要选择合适的记忆表示、判断检索证据是否充分，并修复过时知识。\n\nAMA 通过 Constructor、Retriever、Judge、Refresher 四个协作智能体，配合原始文本、事实知识、事件记忆三种粒度，完成检索、判断、刷新、构建的记忆生命周期。仓库提供论文参考实现（Python）、可移植的 SKILL.md 记忆策略、六个智能体可调用的记忆操作，以及 OpenClaw 参考适配器。\n\n项目在 LoCoMo 和 LongMemEval_s 上给出评测结果，并说明时间推理仍是其局限。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入目录：git clone https://github.com/Sherlockwz/AMA.git && cd AMA",
+  "启用 pnpm 并运行安装脚本：corepack enable pnpm && ./scripts/setup.sh",
+  "配置环境变量：export AMA_LLM_API_KEY=\"your-api-key\"、export AMA_LLM_BASE_URL=\"https://api.openai.com/v1/chat/completions\"、export AMA_EMBEDDING_URL=\"https://api.openai.com/v1/embeddings\"",
+  "启动本地 sidecar 做冒烟测试：.venv/bin/python -m uvicorn python.server:app --host 127.0.0.1 --port 8321",
+  "检查服务健康状态：curl http://127.0.0.1:8321/health"
+ ],
+ "summary": "AMA 是 ACL 2026 论文提出的长期智能体记忆方案，针对旧消息存取不足以应对不同问题粒度和用户信息变化的问题。它用 Constructor、Retriever、Judge、Refresher 四个智能体协作，在原始文本、事实知识、事件记忆三种粒度上完成检索、判断、刷新和构建，并限制检索轮数。仓库提供论文参考实现、可移植的 SKILL.md 记忆策略和 OpenClaw 适配器，适合研究长期记忆的开发者参考或集成。",
+ "tagline": "ACL 2026 论文 AMA 的官方代码与可复用记忆技能"
+}

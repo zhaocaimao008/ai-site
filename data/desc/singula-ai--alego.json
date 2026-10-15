@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想搭建 AI Agent 应用的开发者，尤其是偏好 TypeScript 与插件化组合方式的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "一切皆插件的架构，用组合插件的方式搭建 AI Agent",
+  "基于 Cordis 构建，其设计有配套论文描述",
+  "提供 Web UI，默认在 http://127.0.0.1:3080 启动",
+  "支持通过 npx 直接运行，也支持从源码构建",
+  "提供插件主题标签 alego-plugin，便于插件被发现"
+ ],
+ "intro": "Alego 是 Singula AI 推出的开源 agent harness，为构建 AI Agent 应用提供积木式的基础设施。它采用「一切皆插件」的架构，底层由 Cordis 驱动，是 DeepSeek Harness 的独立分支，与 DeepSeek 官方没有隶属或背书关系。\n\n项目使用 TypeScript 编写，以 MIT 协议开源，目前处于 developer preview 阶段，迭代较快，README 明确提示会有破坏兼容性的变更。运行前建议先阅读仓库中的安全说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js",
+  "通过 npm 运行：npx @singula-ai/alego web",
+  "浏览器访问 http://127.0.0.1:3080（可用 --no-open 禁止自动打开浏览器）",
+  "或从源码运行：git clone https://github.com/singula-ai/alego.git && cd alego",
+  "pnpm install && pnpm run build && pnpm alego web"
+ ],
+ "summary": "Alego 是一个用 TypeScript 编写的开源 agent harness，目标是把 AI Agent 应用的搭建变成像拼乐高一样组合插件。它采用一切皆插件的架构，底层基于 Cordis，是 DeepSeek Harness 的独立分支。项目提供 Web UI，可通过 npx 快速启动，也支持从源码构建。目前处于 developer preview 阶段，迭代较快，README 提示会有破坏兼容性的变更，适合想用插件化方式构建 AI Agent 的开发者了解和使用。",
+ "tagline": "基于插件架构的开源 AI Agent 构建框架"
+}

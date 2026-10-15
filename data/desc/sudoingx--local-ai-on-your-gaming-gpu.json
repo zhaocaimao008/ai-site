@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "拥有 8GB 以上显存的游戏显卡、希望在本地运行 27B 大模型的开发者和普通用户，支持 Windows 和 Linux。",
+ "date": "2026-10-15",
+ "features": [
+  "一行命令安装，自动识别显卡并下载匹配的构建与模型",
+  "支持 RTX 20/30/40/50 系列及 AMD Radeon（beta），显存 8GB 起",
+  "提供 OpenAI 兼容 API（/v1）和浏览器聊天界面",
+  "按显存分档的 serve 脚本，可配置上下文长度（CTX）等环境变量",
+  "包含针对 PrismML fork 的加速解码 kernel 和 MTP 无损推测解码",
+  "提供 bench 脚本测量显卡性能，sweeps 目录记录各卡实测数据"
+ ],
+ "intro": "这个项目让你在已有的游戏显卡上运行 27B 规模的本地 AI 模型，支持 RTX 20/30/40/50 系列以及 AMD Radeon（beta），显存要求 8GB 以上，覆盖 Windows 和 Linux。安装只需一行命令：Windows 用 PowerShell 的 irm 脚本，Linux 或 WSL2 用 curl 脚本。安装程序会自动识别显卡、从 Hugging Face 下载匹配的构建和模型（约 8GB，每个文件校验 SHA256）并启动服务。\n\n启动后可以在浏览器打开 http://127.0.0.1:8899 聊天，也可以把任何 agent 指向 http://127.0.0.1:8899/v1（OpenAI 兼容接口，模型名 bonsai-2-27b）。当前使用的模型是 Ternary Bonsai 2 27B，即 PrismML 的 5.95GB ternary Qwen 3.8 27B，带有 Qwen 3.8 MTP 加速头。项目还提供了按显存分档的启动脚本、针对 PrismML fork 的更快解码 kernel，以及记录各显卡实测数据的 sweeps 表格。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 在 PowerShell 中运行：irm https://raw.githubusercontent.com/sudoingX/local-ai-on-your-gaming-gpu/main/install.ps1 | iex",
+  "Linux 或 WSL2 运行：curl -fsSL https://raw.githubusercontent.com/sudoingX/local-ai-on-your-gaming-gpu/main/install.sh | bash",
+  "安装完成后打开 http://127.0.0.1:8899 在浏览器中聊天",
+  "将 agent 指向 http://127.0.0.1:8899/v1（OpenAI 兼容，模型 bonsai-2-27b）"
+ ],
+ "summary": "这个项目让拥有 8GB 以上显存游戏显卡的用户，在本地运行 27B 规模的大模型，支持 RTX 20/30/40/50 系列和 AMD Radeon（beta），覆盖 Windows 与 Linux。它通过一行命令自动识别显卡、下载匹配的构建和模型并启动服务，之后可在浏览器聊天或通过 OpenAI 兼容接口接入其他工具。适合想在自有硬件上跑本地大模型、又不想手动配置环境的开发者。",
+ "tagline": "在游戏显卡上本地运行 27B 大模型"
+}

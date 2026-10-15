@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要处理敏感会议录音、要求数据不出本地的团队和个人，例如工程、HR、法务或受监管行业；也适合希望自托管会议纪要工具、不想依赖云服务的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "本地语音识别：FunASR paraformer-zh，支持语音活动检测、标点恢复和领域术语纠正",
+  "本地 LLM 处理：场景检测、纪要生成、质量审核和会议问答，支持 Ollama 或 OpenAI 兼容端点",
+  "证据门控的场景识别：先规则后模型，避免模型把工程模板强加到缺少证据的会议上",
+  "原版式导出：五种会议类型导出为 DOCX/PDF，保留企业真实模板布局",
+  "本地历史与知识库：会议、转写、纪要和人工编辑保存在 SQLite，支持全文搜索和跨会议问答",
+  "一键 Docker 部署：docker compose up 启动 Web、后端、Ollama 并自动拉取模型"
+ ],
+ "intro": "JKinco Listen 是一个本地优先的 AI 会议纪要工作台，把会议录音转成结构化纪要的整条流程都放在你自己的机器上运行：录音 → 转写 → 场景识别 → 结构化纪要 → DOCX/PDF 导出。它使用 FunASR 的 paraformer-zh 做中文语音识别，用 Ollama 或任何 OpenAI 兼容的本地模型做场景检测、纪要生成、质量审核和会议问答，不需要 API key，音频不会离开本机。\n\n项目面向那些录音不能上传到第三方服务器的场景，比如工程例会、面试记录、客户拜访等。它提供五种会议类型的模板，导出时保留企业原有版式，历史记录、转写、纪要和人工修改都保存在本地的 SQLite 文件中。部署方式为 Docker 一键启动，首次启动会自动下载 ASR 模型和本地 LLM。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/wenxuanzhang1209-cyber/jkinco-listen-open.git",
+  "cd jkinco-listen-open",
+  "cp .env.example .env",
+  "docker compose up -d --build",
+  "打开 http://localhost:8080"
+ ],
+ "summary": "JKinco Listen 是一个本地优先的会议纪要工作台，解决的是录音不能上传到第三方服务器的场景：工程例会、面试记录、客户拜访等。它把语音识别、场景识别、纪要生成和 DOCX/PDF 导出全部放在本机运行，使用 FunASR 和本地 LLM，不需要 API key，音频不出本机。适合对数据隐私有要求、希望自托管会议纪要流程的团队和个人。",
+ "tagline": "本地优先的会议纪要工作台，录音转写、场景识别、纪要导出全离线运行"
+}

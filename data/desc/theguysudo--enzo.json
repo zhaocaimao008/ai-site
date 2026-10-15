@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把 AI 聊天与 Agent 跑在自己基础设施上、愿意自备 API Key 的开发者和自托管爱好者。",
+ "date": "2026-10-15",
+ "features": [
+  "统一模型目录，覆盖 9 家提供商的 300+ 模型并实时健康检查",
+  "两阶段 agent 构建器：用自然语言描述任务，自动生成操作手册并运行",
+  "74 个内置可注入 agent skills，按运行需求加载领域手册",
+  "BYOK 模式，API Key 加密保存在浏览器 vault，可下载恢复文件",
+  "Docker 一键部署，无需账号、无需数据库服务",
+  "CI 中包含黑盒安全渗透测试与单元/安全测试"
+ ],
+ "intro": "ENZO 是一个可自托管的 AI 工作台，把聊天、Agent、技能和工具整合在一个界面里。它采用 BYOK（Bring Your Own Keys）模式：你填入 Groq、OpenRouter、NVIDIA、Hugging Face、Google AI 等提供商的 API Key，请求从浏览器经 ENZO 直接发往所选提供商，按提供商原价计费，中间没有 ENZO 账号、用量计费或订阅。\n\n项目用 TypeScript 编写，通过 Docker 部署，内置统一模型目录（300+ 模型、9 家提供商并做健康检查）、74 个可注入的 agent skills，以及一个两阶段构建器：用自然语言描述任务，ENZO 会生成 agent 的操作手册并执行。密钥保存在浏览器端加密的 vault 中，可随时清除。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/theguysudo/ENZO.git",
+  "cd ENZO",
+  "docker compose up -d",
+  "打开 http://localhost:5001，点击 Login 并选择提供商填入 API Key"
+ ],
+ "summary": "ENZO 是一个自托管的 AI 工作台，把多模型聊天、Agent 和技能工具放在同一个界面里。它采用 BYOK 方式，你填入 Groq、OpenRouter、NVIDIA、Hugging Face、Google AI 等提供商的 API Key，请求直接发往所选提供商，没有中间账号或订阅。项目用 Docker 部署，内置统一模型目录和可注入的 agent skills，还能用自然语言描述任务让 agent 生成操作手册并执行。适合想把 AI 能力跑在自己服务器上、自己掌控密钥和数据的开发者与自托管用户。",
+ "tagline": "自托管 AI 工作台，用自己的 API Key 调用 300+ 模型"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在课堂上记录转写、担心被点名错过提问的学生，以及希望自行配置 AI 模型获取参考答案的 Android 用户。",
+ "date": "2026-10-15",
+ "features": [
+  "离线实时转写：单路 AudioRecord 采集，内置 Vosk 小模型，可选下载两档 sherpa-onnx Zipformer 模型，支持远场增益与停顿保护",
+  "课堂提醒：识别姓名、学号、称呼、点名表达、明确提问、全班问题和自定义强提醒词，通过高优先级通知提醒",
+  "上下文捕获：支持先问后点人和先点人后问，前后窗口可在 30–120 秒间调整",
+  "AI 回答：多个兼容 OpenAI Chat Completions 的 HTTPS 服务并行请求，区分极速与强力角色与独立超时",
+  "本地归档与导出：按课程和课次保存 WAV、转写、提醒与 AI 回答，可导出 Markdown",
+  "隐私保护：API Key 由 Android Keystore 使用 AES-GCM 保护，系统备份排除密钥配置和录音"
+ ],
+ "intro": "课醒 ClassCue 是一款面向 Android 的课堂辅助应用。用户主动开始一节课后，应用会把同一份麦克风音频同时用于本地 WAV 录音和离线语音识别，持续分析课堂转写内容。当出现疑似点名、明确提问或自定义强提醒词时，通过高优先级通知提醒用户。\n\n应用采用本地优先的处理链：原始录音、转写、提醒和答案都保存在本机历史中，原始录音不会上传给 AI 服务。用户可自行配置兼容 OpenAI Chat Completions 的 HTTPS 模型服务，把相关文字上下文发送给模型生成参考答案，并支持极速与强力两种角色并行请求。\n\n项目使用 Kotlin 与 Jetpack Compose 开发，内置 Vosk 中文小模型，可选下载 sherpa-onnx Zipformer 模型，另提供华为 Lite Wearable 手表端源码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/lu0973-cb02d/ClassCue.git",
+  "进入目录：cd ClassCue",
+  "构建并测试：./gradlew testDebugUnitTest lintDebug assembleDebug",
+  "Debug APK 生成在 app/build/outputs/apk/debug/app-debug.apk",
+  "首次启动后允许麦克风和通知权限，在设置中填写姓名、学号、称呼和强提醒词，如需 AI 回答则添加 HTTPS BaseURL、模型名和 API Key"
+ ],
+ "summary": "课醒 ClassCue 是一款 Android 课堂辅助应用，把同一份麦克风音频同时用于本地录音和离线语音识别，持续分析课堂转写内容。当出现疑似点名、明确提问或自定义强提醒词时，它会通过高优先级通知提醒用户，并可将相关文字发送给用户自行配置的 AI 模型生成参考答案。录音、转写、提醒和答案都保存在本机，适合需要在课堂上记录内容、担心错过点名或提问的学生使用。",
+ "tagline": "Android 课堂实时转写、点名提醒与 AI 回答助手"
+}

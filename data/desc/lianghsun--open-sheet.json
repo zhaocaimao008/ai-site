@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将电子表格作为流水线输出（如月度报告、批量发票、数据落地后自动重算的模型）的开发者，以及希望用代码生成可维护、可重算表格的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "使用 React 组件和引用（如 r.cell('revenue')）描述表格模型，不写 A1 地址",
+  "自动布局：通过 <Stack> 和 <Row> 将块按顺序放置到网格，避免坐标冲突",
+  "公式引擎：同一公式树可序列化为 Excel 公式并求值，CI 中用 LibreOffice 重算校验",
+  "导出包含公式、数字格式、定义名称、冻结窗格和条件格式的 .xlsx，以及 .csv/.html/.pdf",
+  "面向 agent：提供 /create-sheet 等技能脚本和 MCP 服务器，支持检查模式查看单元格源码与公式",
+  "标量假设会导出为 Excel 定义名称，使工作簿中的公式更易读"
+ ],
+ "intro": "open-sheet 是一个面向 AI agent 的电子表格框架。你只需用自然语言描述需要的模型，编码 agent 会写出对应的 React 代码，框架负责处理单元格寻址、公式引用、重算和导出。它把电子表格视为依赖图而非静态表格，核心思路是让 agent 不再手写 A1 地址。\n\n在 open-sheet 中，你写的是 ref('pl').column('revenue') 这样的引用，而不是 =SUM(B2:B13)。所有坐标由框架管理，插入行或数据变化时引用会自动重新解析。公式最终会序列化为 Excel 公式写入 .xlsx，同时框架内置的求值器会计算显示值，两者在 CI 中通过 LibreOffice 重算比对来保证一致。\n\n项目支持导出带公式的 .xlsx、.csv、.html 和 .pdf，并提供自动布局、MCP 服务器、技能脚本和检查模式等能力。目前处于早期开发阶段，已发布 0.1.0 版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx @open-sheet/cli init my-sheets",
+  "cd my-sheets && npm install && npm run dev"
+ ],
+ "summary": "open-sheet 是一个面向 AI agent 的电子表格框架。它让 agent 用 React 代码描述表格模型，而不是手写 A1 地址，从而避免插入行或数据变化后公式引用错乱。框架负责单元格寻址、公式引用、重算和导出，最终生成包含实时公式的 .xlsx 文件。适合将电子表格作为流水线输出的场景，例如定期生成的财务模型或批量报表，让接收者能修改假设并看到重算结果。",
+ "tagline": "用 React 写电子表格模型，导出带公式的 .xlsx"
+}

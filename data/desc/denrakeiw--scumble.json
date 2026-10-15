@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在桌面端用 AI 做局部重绘、扩图或图像生成的用户，以及希望把自有 ComfyUI 或 API key 接入编辑流程的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "选区或画框后输入提示词，生成结果作为独立图层返回并自动色彩匹配",
+  "支持接入自有 ComfyUI、Comfy Cloud，或直接使用 FLUX、GPT Image、Nano Banana、Seedream 等 API key",
+  "提供 MCP 服务器，可被 Claude Code、Claude Desktop 等 MCP 客户端调用",
+  "支持 PSD 和 OpenRaster 分层导出与重新打开",
+  "内置 GPU 滤镜图层，包含 46 种胶片风格、颗粒、曲线、LUT 等",
+  "采用 Rust 内核的瓦片引擎，可处理大尺寸文档"
+ ],
+ "intro": "Scumble 是一款免费开源的桌面图像编辑器，围绕 AI 模型构建。用户可以在图片上框选区域或直接描述想要的内容，生成结果会以独立图层的形式返回，并与周围画面做色彩匹配，之后可以像普通图层一样遮罩、混合、加滤镜和导出。\n\n它支持接入自己的 ComfyUI（本地或远程）、Comfy Cloud，也可以直接填写 FLUX、GPT Image、Nano Banana、Seedream 等服务的 API key，无需 ComfyUI 即可使用。项目还提供 MCP 服务器，让 Claude Code、Claude Desktop 等 MCP 客户端可以调用编辑器功能。\n\n目前主要支持 Windows，Linux 有早期构建，macOS 尚未开始。项目处于 0.1.x 阶段，作者提示可能存在粗糙之处，建议备份图片。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 用户可通过 Microsoft Store 安装，或在终端执行 winget install scumble",
+  "也可从 GitHub 最新 release 下载 Scumble-Setup-<version>.exe 安装包，或解压 portable zip 后运行 Scumble.exe",
+  "在 Settings › API providers 中填入 API key，或连接自己的 ComfyUI",
+  "在画布上框选区域或绘制方框并输入描述，生成结果会作为新图层返回"
+ ],
+ "summary": "Scumble 是一款免费开源的桌面图像编辑器，把 AI 生成能力直接做进图层工作流：框选区域或画框描述内容，结果以独立图层返回并自动匹配周围色彩，之后可继续遮罩、混合、加滤镜或导出 PSD。它既能连接自有的 ComfyUI 和 Comfy Cloud，也能只填 API key 使用 FLUX、GPT Image 等模型，并对外提供 MCP 接口供 AI 客户端调用。目前主要面向 Windows 用户。",
+ "tagline": "面向 AI 图像编辑的桌面工具，每次生成结果都成为独立图层"
+}

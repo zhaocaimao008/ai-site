@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 agent 工作流中安全使用密码、API 密钥或 SSH 凭据的开发者，以及使用 Codex、Claude Code、Cursor 等 MCP 客户端的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "本地 stdio MCP 服务器，供 AI agent 调用凭据操作",
+  "凭据以模块组合存储，MCP 操作按模块自动推导",
+  "每个模块可单独设置对 agent 隐藏或可见",
+  "支持浏览器填充、SSH 认证与 SFTP 文件传输、HTTP API 请求",
+  "TOTP 只返回当前六位验证码，不返回永久种子",
+  "XChaCha20-Poly1305 加密保险库，支持 .mvault 加密备份导入导出"
+ ],
+ "intro": "KRU 是一个免费、开源、跨平台的密码与凭据管理器，同时也是一个本地 stdio MCP 服务器，面向 AI agent 场景。它让 Codex、Claude Code、Cursor、OpenCode、OpenClaw 等 MCP 客户端能够使用已保存的密码、API 凭据、SSH 密钥、TOTP 验证码和自定义密钥，而隐藏的明文不会进入模型的常规上下文。\n\n凭据以独立模块的形式存储，用户名、密码、API 凭据、私钥、密钥口令、TOTP、主机、端口、URL 和自定义字段可以组合在同一个条目中，可用的 MCP 操作会根据模块组合自动推导。每个模块都有独立的 Agent 可见性开关，凭据模块默认隐藏，只有显式开启后才会返回给 agent。\n\nKRU 没有账号、订阅、云端保险库或远程 MCP 服务，数据以 XChaCha20-Poly1305 加密保存在本机，MCP 进程仅在 agent 调用时按需启动，并支持导出加密的 .mvault 备份包。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并打开 KRU，选择对应平台的便携版本，无需注册",
+  "打开 Settings → Agent connection，连接检测到的客户端，然后启动新的 agent 会话",
+  "保存一个条目，给它唯一的名称，并只添加需要的模块",
+  "在任务中引用该条目名称，例如 Use \"Production Server\" in KRU MCP to deploy the current build"
+ ],
+ "summary": "KRU 解决的是 AI agent 在执行任务时需要用到密码、API 密钥或 SSH 凭据，却又不该把这些明文暴露给模型的问题。它把凭据保存在本机加密保险库中，通过本地 MCP 服务器让 agent 间接完成登录、连接服务器、调用认证接口等操作，隐藏字段默认不返回给模型。适合使用 Codex、Claude Code、Cursor 等 MCP 客户端的开发者，在需要自动化认证流程时使用。",
+ "tagline": "面向 AI agent 的本地 MCP 凭据管理器"
+}

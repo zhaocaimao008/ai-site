@@ -1,0 +1,28 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Roblox Studio 的开发者，尤其是希望用 AI 辅助建模、写脚本和自动测试，并希望复用已有模型订阅或本地模型的人。",
+ "date": "2026-10-15",
+ "features": [
+  "使用自己的模型：ChatGPT（Codex app）、Claude（Claude Code）、Gemini（Antigravity CLI）或任意 OpenAI/Anthropic 兼容端点",
+  "直接在你的 place 中读取和编辑实例、属性与脚本，脚本被改动后拒绝覆盖",
+  "可选的 Blender 集成，用于建模曲面形状、精细道具和载具车身，并支持渲染 UI 图标",
+  "生成 R15 角色动画，可在聊天中以 3D 预览，并以 place 所有者身份发布",
+  "自动运行单人和多客户端 playtest，读取输出、截图并分析性能",
+  "支持 Rojo 项目，脚本与模型改动会同步到项目文件",
+  "权限可控，从只读到全自动，每次脚本改动以 diff 展示",
+  "Studio 工具是独立的 MCP 服务器，可在 Claude Code、Codex、Cursor 等客户端中使用"
+ ],
+ "intro": "Roqer 是一个面向 Roblox Studio 的开源 AI 智能体。你只需描述想要的内容，它就会在你的 place 里完成构建、编写脚本和 playtest，并复用你已有的 ChatGPT 或 Claude 订阅，或任何 OpenAI/Anthropic 兼容的接口，包括本地模型。\n\n它能读取和修改实例、属性与脚本，脚本在你阅读后被改动时会拒绝覆盖，避免冲掉你自己的修改。开启可选的 Blender 集成后，它还能制作零件难以完成的曲面模型和道具，用预览渲染检查后上传到 place，也可以渲染 UI 图标。它支持生成 R15 角色动画，并在发布前检查动作。\n\nRoqer 会自行运行单人和多客户端 playtest，读取服务端与客户端输出、截图并做性能分析。它支持 Rojo 项目，改动会写入项目文件并出现在 git diff 中。所有对话保存在本地，没有 Roqer 账号或服务器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备环境：Windows 与 Roblox Studio，Node.js 20 或更新版本，以及一个可用的模型（ChatGPT/Codex、Claude/Claude Code、Gemini/Antigravity CLI 或兼容端点）",
+  "git clone https://github.com/S4US/Roqer.git",
+  "cd Roqer",
+  "npm install",
+  "npm run build:all",
+  "npm run start:desktop",
+  "Roqer 启动时会安装 Studio 插件，打开或重启 Roblox Studio 加载插件，打开 place，在 Roqer 中选择模型并输入需求"
+ ],
+ "summary": "Roqer 是一个面向 Roblox Studio 的开源 AI 智能体，你描述需求后，它会在你的 place 里完成构建、编写脚本和 playtest。它复用你已有的 ChatGPT 或 Claude 订阅，也支持兼容接口和本地模型。除脚本外，它还能借助 Blender 建模、生成 R15 动画，并自动运行单人和多客户端测试、截图和性能分析。适合希望用 AI 辅助 Roblox 开发、又想把对话和数据留在本地的开发者。",
+ "tagline": "面向 Roblox Studio 的开源 AI 智能体，可建模、写脚本并自动测试"
+}

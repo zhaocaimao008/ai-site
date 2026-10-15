@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有双 RTX 3090 并希望在本地运行大上下文 MoE 模型的开发者，以及需要研究量化、CPU offloading 和推理优化的技术人员。",
+ "date": "2026-10-15",
+ "features": [
+  "在 2× RTX 3090 上运行 Qwen3.8-Flash-Next，支持最长 262,144 token 上下文",
+  "提供 128 GB 与 64 GB 系统内存两套配置，后者在 64 GB RAM 下仍可服务 128K 上下文",
+  "包含 prefill、agent 128K、fast 256K 等多种性能 profile，可按长输入或长输出场景选择",
+  "使用 AutoRound W4A16 量化与 FP8 PLE/ngram 张量，配合 CPU offloading 和专家缓存",
+  "可选 uncensored 模式，通过运行时 abliteration 移除拒绝行为，不改变权重且无速度损失",
+  "基于固定版本 vLLM 构建，附带仓库内的补丁和 Docker 镜像构建流程"
+ ],
+ "intro": "这个项目提供在两张 RTX 3090（24 GB 显存）上运行 Qwen3.8-Flash-Next 的完整方案，包括量化 checkpoint、vLLM 补丁和多种内存/性能配置。它利用模型高稀疏、低激活参数的特点，把完整专家集和 FP8 Ngram 表放在系统内存，将活跃专家缓存在 GPU，并用 MTP3 drafter 恢复解码速度。\n\n仓库给出 128 GB 和 64 GB 系统内存两套配置，支持最长 256K 上下文，并附带 prefill、agent 等不同场景的 profile。还提供可选的 uncensored 模式，通过运行时消融移除模型的拒绝行为，无需新权重。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Hugging Face 下载 checkpoint：https://huggingface.co/albucino/Qwen3.8-Flash-Next-W4A16-FP8PLE",
+  "构建镜像：make build-image",
+  "选择配置并追加到 .env，例如 64 GB 内存：cat configs/2x3090-64gb.env >> .env",
+  "启动服务：make serve"
+ ],
+ "summary": "这个项目解决的是在两张 RTX 3090 上运行 Qwen3.8-Flash-Next 这类高稀疏 MoE 模型的显存与内存瓶颈。它把完整专家集和 FP8 Ngram 表放在系统内存，将活跃专家缓存在 GPU，并用 MTP3 drafter 提升解码速度，从而支持最长 256K 上下文。仓库提供 128 GB 和 64 GB 系统内存两套配置，以及针对长输入或长输出的不同 profile，适合拥有双 3090 并希望在本地部署大上下文模型的开发者参考。",
+ "tagline": "在双 RTX 3090 上运行 Qwen3.8-Flash-Next 的推理配置与补丁"
+}

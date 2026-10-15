@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地用 ComfyUI 和 MiniMax H3 制作长视频、并需要 Timeline 式镜头编排的创作者与开发者。需要具备一定的模型部署和 Windows 环境配置能力。",
+ "date": "2026-10-15",
+ "features": [
+  "以 Premiere 剪辑逻辑为参考的多轨 Timeline，可规划 Shot、Dialogue、Marker、Ending Hold 与 Prompt",
+  "根据 Timeline 内容生成 MiniMax H3 Ref2VA 提示词，并提交到 ComfyUI 渲染",
+  "Virtual Media Pool 保存不限数量的逻辑素材，生成时按 Segment 自动换入实体插槽",
+  "集成 BLIP 图片描述与 Whisper 语音识别，用于素材语义标注和 Prompt 辅助",
+  "通过 OpenAI-compatible API 连接 LM Studio，在 Design 页面生成概念参考图与提示词",
+  "支持 ACE-Step 音乐、SoulX-Singer 歌声克隆、Kim_Vocal_2 人声伴奏分离的主机／副机部署"
+ ],
+ "intro": "MiniMax H3 Director Cut Studio 是一个基于 PySide6 的本地桌面应用，界面和操作逻辑参考 Adobe Premiere Pro。它把素材管理、多轨 Timeline 编排和 AI 视频生成串在一起：用户可以在 Timeline 上规划 Shot、Dialogue、Marker、Ending Hold 与 Prompt，由程序生成 MiniMax H3 Ref2VA 提示词，再把当前有效素材和参数提交到 ComfyUI 执行。\n\n项目支持图片、视频、音频素材管理，并通过 BLIP、Whisper、LM Studio 等本地模型做语义标注和提示词辅助。默认主工作流为每个 Segment 提供 9 张图片、3 段参考视频和 3 段独立音频的实体插槽，Virtual Media Pool 可保存更多逻辑素材并在生成时自动换入。\n\n源码仓库不包含 Python runtime、FFmpeg、模型权重或 ComfyUI checkpoint，需要按 Step 1 至 Step 4 的部署说明自行准备模型和运行环境，模型下载与商用权限由使用者自行确认。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "按 Step 1 部署 Studio Runtime、Qwen3-TTS 与 VoxCPM2：step1.md",
+  "按 Step 2 至 Step 4 规划音乐、歌声克隆、人声伴奏分离的主机与副机部署",
+  "准备 MiniMax H3 Ref2VA、Z-Image、BLIP、Whisper 等模型文件，并保持文件名与目录一致",
+  "从项目根目录启动：.\\run_h3_prompt_studio.bat"
+ ],
+ "summary": "这是一个参考 Premiere 剪辑逻辑的本地 AI 导演工作台，用多轨 Timeline 规划镜头、对白和提示词，再生成 MiniMax H3 Ref2VA 提示词并提交到 ComfyUI 渲染视频。它适合需要在本地编排长视频、管理图片视频音频素材，并借助 BLIP、Whisper、LM Studio 做语义标注和提示词辅助的创作者。使用前需自行准备模型权重和运行环境。",
+ "tagline": "参考 Premiere 剪辑逻辑的本地 AI 导演工作台，用于规划并生成 MiniMax H3 视频。"
+}

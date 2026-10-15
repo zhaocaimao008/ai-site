@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在个人电脑上本地运行大型语言模型的开发者和普通用户，尤其是拥有 NVIDIA 或 AMD 显卡、需要隐私保护或离线使用的场景。",
+ "date": "2026-10-15",
+ "features": [
+  "在本地 PC 上运行大型 AI 模型，无需服务器，数据不出本地",
+  "支持七种模型：Qwen3.8-Flash-Next、GLM 5.3 Flash、DeepSeek V4 Flash、Qwen3.6-35B-A3B、Ornith 1.5、Gemma 4 26B-A4B、Tiel Coder 35B-A3B",
+  "在 localhost 上提供 OpenAI/Anthropic API，便于与现有应用和编程助手集成",
+  "部分模型支持图片输入（Qwen3.8-Flash-Next、Qwen3.6-35B-A3B、Ornith 1.5、Gemma 4 26B-A4B、Tiel Coder 35B-A3B）",
+  "支持在服务器运行时切换已安装的模型",
+  "提供 Windows 和 Linux 的一键安装（具体安装方式见 README）"
+ ],
+ "intro": "PolyStrata 是一个开源项目，让你在普通 PC 上运行通常需要服务器的大型 AI 模型，支持聊天、写代码，并能与你的应用和编程助手配合，所有数据都留在本地。它基于 Niko1221 的 Strata 项目构建，使用 C++ 编写。\n\n项目支持七种模型，运行在两个引擎上：Qwen3.8-Flash-Next 使用 Strata 引擎，可在 Windows 或 Linux 上通过 12GB 以上显存的 NVIDIA 或 AMD 显卡运行，并支持图片输入；其余六种模型（GLM 5.3 Flash、DeepSeek V4 Flash、Qwen3.6-35B-A3B、Ornith 1.5、Gemma 4 26B-A4B、Tiel Coder 35B-A3B）使用专为 PolyStrata 编写的引擎，需要 NVIDIA 显卡，其中四个较小的模型也支持 Windows。服务器运行时可以在已安装的模型之间切换。\n\nPolyStrata 在 localhost 上提供 OpenAI/Anthropic API，方便与现有工具集成。README 中提供了详细的性能数据，展示了在不同硬件配置下的 tokens 生成和读取速度。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "PolyStrata 让你在普通 PC 上运行通常需要服务器的大型 AI 模型，支持聊天、写代码，并能与编程助手配合，所有数据留在本地。它基于 Strata 项目，支持七种模型，在 localhost 提供 OpenAI/Anthropic API，方便集成。适合拥有 NVIDIA 或 AMD 显卡、希望本地运行大模型的开发者和用户。",
+ "tagline": "在个人电脑上本地运行大型 AI 模型"
+}

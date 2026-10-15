@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 DeepSeek Harness 构建 agent、希望让 agent 跨会话记住用户偏好与项目上下文的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "记忆以 Markdown 文件形式存储，可手工编辑、grep、纳入 git",
+  "MEMORY.md 索引自动注入系统提示，空存储时零 token 开销",
+  "支持 user / feedback / project / reference 类型化记忆",
+  "工作区与用户作用域分层，避免跨项目泄漏",
+  "跨进程文件锁与孤儿锁自愈，保证崩溃和并发安全",
+  "提供 Web UI 记忆管理面板与确定性评测层"
+ ],
+ "intro": "dsh-auto-memory 是 DeepSeek Harness（dsh）的插件，用来补上 dsh 本身缺失的记忆子系统。它把记忆保存为 $DSH_HOME/memory/ 下的普通 Markdown 文件，每个记忆一个文件，并维护一份 MEMORY.md 索引，在每次请求时自动注入到系统提示中，因此新会话也能记住之前告诉过 agent 的信息。整个过程不依赖外部服务、数据库或 embedding。\n\n记忆分为 user / feedback / project / reference 几种类型，并区分工作区与用户作用域，避免跨项目串味。模型通过 memory_write、memory_read、memory_list、memory_delete 四个工具读写记忆，写入时遵循去重更新而非堆叠的原则。索引注入受字节预算限制，存储为空时不占用 token。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "dsh plugin --profile demo add dsh-auto-memory",
+  "dsh --profile demo",
+  "node scripts/demo.mjs"
+ ],
+ "summary": "DeepSeek Harness 本身没有记忆子系统，agent 每次新会话都会忘掉之前告诉它的信息。这个插件把记忆存成普通的 Markdown 文件，并维护一份索引，在每次请求时自动注入系统提示，从而让 agent 跨会话记住用户偏好和项目上下文。它不依赖外部服务或 embedding，适合用 dsh 做长期协作、希望 agent 保留上下文的开发者。",
+ "tagline": "为 DeepSeek Harness 提供 Claude Code 风格的持久记忆插件"
+}

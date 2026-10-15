@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想了解或搭建智能座舱 Agent 演示的开发者，以及需要快速制作车机 Demo 的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "说话控车：车窗、空调、座椅、氛围灯等，涉及安全的操作先弹卡确认",
+  "真地图导航：高德活瓦片，支持搜地点、设目的地、对比路线、沿途搜充电站、加删途经点",
+  "媒体播控：音乐、电台、播客、新闻、短视频一套播控通吃，歌词逐句点亮",
+  "生成式卡片：模型现写 HTML 上屏，有消毒和溢出闸兜底",
+  "记忆四级：瞬时信号 Store、会话摘要、领域数据落 localStorage、长期偏好注入 system",
+  "快慢双层 pipeline：快层执行简单任务，慢层校验接力，子 Agent 后台并行处理重活"
+ ],
+ "intro": "cockpit-agent-sim 是一个面向智能座舱业务的 Agent 框架，用 TypeScript 编写，覆盖车辆信号模拟、Agent 运行时、工具系统、记忆系统、AI HMI 和 TTS。它把对话交给 LLM 驱动，导航、天气、音乐、新闻、云端 TTS 等接的是真实服务，车机屏是独立窗口，可以直接投屏演示。\n\n项目强调零后端、运行时依赖为零，只有 vite、vitest、typescript 三个 devDependency。设计上遵循 Tools 等于机制、Agent 等于策略，平台不认识任何具体 Agent，新增场景理想情况下只需要新增一个 Skill。车辆信号对齐 COVESA VSS v6.0 命名，工具元数据对齐 AAOS 属性三元组，灰权限二次确认流对齐 MCP 的 MRTR。\n\nREADME 明确说明这是一个演示底座而非量产产品：没有 ASR，用文字输入代替；没有后端；机酒价格暂为带标记的示例数据。它优化的目标是让每次做新 Demo 不用从零开始。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install",
+  "cp .env.local.example .env.local  # 填入你自己的 Key",
+  "npm run dev  # → http://localhost:5173",
+  "在控制面板里输入文字即可（没有做 ASR）",
+  "npm test  # 批量测试"
+ ],
+ "summary": "这是一个面向智能座舱场景的 Agent 框架，把车辆信号模拟、Agent 运行时、工具系统、记忆和语音链路整合在一起，用 LLM 驱动对话，并接入高德地图、天气、音乐等真实服务。它采用零后端设计，运行时依赖为零，新增能力主要通过增加配置数据而非改代码。适合需要快速搭建车机 Demo 的开发者，但它是演示底座而非量产产品，没有 ASR，部分数据为示例。",
+ "tagline": "面向智能座舱的零后端 Agent 框架，加能力只需加数据"
+}

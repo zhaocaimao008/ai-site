@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "关注 AI 治理、模型披露与认证机制的开发者、企业团队和研究者，以及希望了解该宪章内容的普通读者。",
+ "date": "2026-10-15",
+ "features": [
+  "宪章全文，按 Access & Equity、Innovation & Freedom、Governance & Disclosure、Accountability & Safety、Infrastructure & Data Centers、Global & Historical 分组",
+  "认证表单：填写公司、版本、训练来源、智能体决策、危害类别等字段并生成认证 JSON 文件",
+  "认证登记表：从 src/data/certifications/ 下的 JSON 文件读取，支持搜索和筛选",
+  "风险标牌：按严重程度配色，列表开放，可通过 pull request 提议新增",
+  "博客与 FAQ：说明为何不应放缓 AI 开发，以及宪章和认证流程的常见问题"
+ ],
+ "intro": "AI Charter 是一个公开网站，围绕《Universal AI Charter》展开。这份宪章主张 AI 开发应当加速而非放缓，同时要求每个模型和运营方披露其用途、训练数据来源以及已经出现的问题。宪章是一份持续修订的活文档，会随 AI 及其治理需求的变化而更新。\n\n网站包含宪章全文、认证表单、认证模型登记表、风险标牌、博客和 FAQ 等板块。企业可以通过表单为模型生成认证文件，内容涵盖公司、版本、状态、训练来源、智能体决策、危害类别、年度决策分类与子分类、意外后果等字段，并将 JSON 文件提交到仓库，经 pull request 审核后进入可搜索、可筛选的登记表。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install",
+  "npm run dev      # 启动开发服务器",
+  "npm run build    # 类型检查并构建生产版本",
+  "npm run lint     # 运行 oxlint",
+  "npm run preview  # 本地预览生产构建"
+ ],
+ "summary": "AI Charter 是一个公开网站，围绕一份主张“加速开发、全面披露”的 AI 治理宪章展开。它提供宪章全文、认证表单、认证模型登记表、风险标牌、博客和 FAQ。企业可填写表单生成模型认证 JSON 文件，提交到仓库后经 pull request 审核进入可搜索的登记表。适合关注 AI 治理、模型披露与认证机制的开发者和团队了解和使用。",
+ "tagline": "以披露为核心的 AI 治理宪章与模型认证登记站"
+}

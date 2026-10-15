@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AIOps、告警诊断、RAG 检索和可靠事件投递感兴趣的 Python 后端开发者，以及希望了解 LangGraph 与 MCP 工具集成实践的工程师。",
+ "date": "2026-10-15",
+ "features": [
+  "认证与归属：Argon2 密码哈希、哈希 bearer token、登出撤销，以及用户级仓储和向量查询隔离。",
+  "流式对话：持久化会话、LangChain agents、知识/MCP 工具、可配置提示词、渐进式技能加载和会话记忆。",
+  "混合检索：Markdown/PDF 摄入、持久化索引、Milvus 向量召回、BM25L 词法召回、倒数排名融合和可追溯引用的重排序。",
+  "事件诊断：LangGraph Plan-Execute-Replan 工作流、Prometheus/Alertmanager 活跃告警、证据关联报告，以及浏览器断连后仍保留的 SSE 事件。",
+  "可靠事件投递：手动提交 Kafka offset、重试后再推进、Redis 租约归属检查，以及脱敏死信。",
+  "修复审批：审批与派发任务在单个 SQLite 事务中提交、原子派发租约、重启恢复，以及用于下游去重的稳定 commandId。"
+ ],
+ "intro": "Agent Py 是一个个人 AIOps 工程实践项目，用于调查告警、检索 runbook 并审查修复提案。后端使用 FastAPI 协调持久化任务、校验用户归属，并通过 SSE 向浏览器推送进度；诊断过程调用实际配置的 MCP 工具和模型服务。\n\n项目集成了 LangGraph 的 Plan-Execute-Replan 工作流、Milvus 向量召回与 BM25L 词法召回融合的混合检索、Kafka 事件消费与 Redis 租约，以及人工审批和命令派发机制。前端为 Vue 3 中文界面，仓库文档为英文。\n\n当前 SQLite 面向本地单节点工作区，不包含生产级修复执行器，命令投递为至少一次语义，需要外部执行器按 commandId 去重。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Python 3.10+、uv、Node.js 22+、Docker Compose，以及可用的 Qwen 兼容模型服务和腾讯 CLS 凭据。",
+  "在仓库根目录执行 npm ci，然后复制配置模板：cp config/project.template.json config/project.json 和 cp config/user.project.template.json config/user.project.json。",
+  "编辑两个本地 JSON 文件，设置模型 API key、chat/embedding 模型名、模型能力配置和必要的 CLS 字段。",
+  "运行 ./scripts/start-local.sh（Windows 使用 scripts\\start-local.bat）启动 CLS MCP Server、FastAPI、事件 worker 和前端。",
+  "访问前端 http://127.0.0.1:5173 或 API 文档 http://127.0.0.1:8000/docs 进行验证。"
+ ],
+ "summary": "Agent Py 是一个面向告警调查场景的个人 AIOps 工程，目标是把告警诊断、runbook 检索和修复提案审查串成可追踪的流程。它用 LangGraph 编排诊断步骤，结合 Milvus 向量召回与 BM25L 词法召回的混合检索，并通过 Kafka、Redis 和 SQLite 处理事件投递、租约与审批派发。项目适合想了解 AIOps 后端工程实践、RAG 检索融合以及可靠事件消费的开发者参考，当前定位为本地单节点工作区，不包含生产级修复执行器。",
+ "tagline": "基于 LangGraph 的 AIOps 告警诊断与修复审批工程"
+}

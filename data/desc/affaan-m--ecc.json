@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex、Opencode、Cursor 等 AI 编程代理的开发者，以及希望提升代理性能与安全性的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "为多种 AI 编程代理提供性能优化",
+  "包含技能、本能、记忆与安全模块",
+  "支持研究优先的开发流程",
+  "提供 npm 包 ecc-universal 和 ecc-agentshield",
+  "可通过 GitHub App 或插件 ecc@ecc 安装"
+ ],
+ "intro": "ECC 是一个 agent harness 性能优化系统，为 Claude Code、Codex、Opencode、Cursor 等 AI 编程代理提供技能、本能、记忆、安全与研究优先的开发能力。项目以 MIT 协议开源，同时提供 npm 包 ecc-universal 和 ecc-agentshield，以及 GitHub App 和插件形式的分发渠道。\n\n官方强调只从经过验证的渠道安装，包括 GitHub 仓库、npm 包、GitHub App、插件 slug ecc@ecc 和项目官网，第三方重新上传或非官方镜像不受维护，可能存在恶意软件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Claude Code 的引导式安装或原生插件命令安装 ecc@ecc 插件",
+  "或通过 npm 安装 ecc-universal 包",
+  "或从 GitHub App 页面安装 ECC Tools"
+ ],
+ "summary": "ECC 是一个针对 AI 编程代理的 harness 性能优化系统，为 Claude Code、Codex、Opencode、Cursor 等工具提供技能、本能、记忆、安全与研究优先的开发支持。它适合希望提升代理运行效率与安全性的开发者，可通过插件、npm 包或 GitHub App 安装。项目强调只从官方渠道获取，避免第三方镜像带来的风险。",
+ "tagline": "面向 AI 编程代理的性能优化系统"
+}

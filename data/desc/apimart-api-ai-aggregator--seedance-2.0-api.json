@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在应用中接入视频生成能力的开发者，以及想了解 Seedance 2.0 API 参数与计费方式的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "支持 seedance-2.0 及 -mini、-fast、-face 等模型变体",
+  "文生视频、图生视频、首尾帧、参考视频与参考音频",
+  "按分辨率和秒数计费，任务返回 cost 与 credits_cost",
+  "OpenAI 兼容端点，异步提交后轮询任务状态",
+  "提供 Python、JavaScript、curl 示例和示例输出"
+ ],
+ "intro": "这个仓库是 Seedance 2.0 视频生成模型在 APIMart 平台上的 API 使用文档与示例集合。它说明如何通过一个 OpenAI 兼容的端点 https://api.apimart.ai/v1 调用 seedance-2.0 及其 -mini、-fast、-face 变体，支持文生视频、首尾帧、参考视频和参考音频等输入方式，单次生成时长 4–15 秒。\n\n仓库给出了按分辨率计费的价目表、请求参数字段说明、任务轮询流程，以及 Python、JavaScript 和 curl 的可运行示例。调用采用异步方式：提交任务后拿到 task_id，再轮询 GET /v1/tasks/{id} 获取状态和结果，完成的任务会返回本次费用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 APIMART_API_KEY 环境变量",
+  "向 https://api.apimart.ai/v1/images/generations 发送 POST 请求，指定 model 为 seedance-2.0 和 prompt",
+  "从响应中取出 data.id 作为 task_id",
+  "轮询 GET /v1/tasks/{task_id}，直到 status 为 completed 或 failed",
+  "读取任务返回的 cost 和结果 URL（链接有效期 24 小时）"
+ ],
+ "summary": "这个项目是 Seedance 2.0 视频生成模型在 APIMart 上的 API 文档，面向需要把文生视频、图生视频能力接入自己应用的开发者。它通过一个 OpenAI 兼容端点提供 seedance-2.0 及 -mini、-fast 等变体，按分辨率和秒数计费，任务异步提交后轮询获取结果，并附带参数说明与多语言调用示例。",
+ "tagline": "通过 APIMart 调用 Seedance 2.0 视频生成 API"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要跨平台自动化工作流的开发者、测试人员，以及希望用自然语言驱动电脑完成重复任务的普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "支持 computer use、shell use、web use、mobile use (iOS) 多种模式，覆盖桌面、终端、浏览器和移动端",
+  "桌面操作使用真实鼠标键盘输入，通过操作系统原生输入层注入事件",
+  "浏览器操作通过 AutoCua Chrome 扩展驱动用户自己的 Chrome，无需调试端口",
+  "iOS 操作支持模拟器或通过 USB 连接的真实 iPhone/iPad",
+  "内置压缩智能体，在长任务中自动插入交接摘要，避免上下文超限",
+  "提供桌面应用（Electron 或 pywebview），支持记忆、保险库、聊天和技能管理"
+ ],
+ "intro": "AutoCua 是一个自动电脑操作智能体（Computer Use Agent），通过多智能体引擎驱动 macOS、Windows、Linux、iOS 和浏览器上的端到端自动化工作流。它提供统一的 Python API，只需指定 mode 参数即可切换操作对象：桌面应用、终端、Chrome 浏览器或 iOS 设备。\n\n项目强调在真实软件上的可靠性：模型不依赖像素坐标，而是从融合操作系统无障碍树与 OCR 的视图中选择编号元素；输入通过操作系统原生输入层注入，避免调试端口；浏览器操作通过 Chrome 扩展驱动用户自己的浏览器。此外，独立的压缩智能体在运行中插入交接摘要，以支持长任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install AutoCua",
+  "在 main.py 中编写调用代码，例如：from AutoCua.agent_launcher import run_agent; run_agent(mode=\"web use\", provider=\"openrouter\", model=\"gemini-3.8-flash\", task=\"Open wikipedia.org and summarise today's featured article.\")",
+  "运行：python main.py",
+  "Linux 用户需先安装发行版依赖包（参考 README 中 Linux, from pip 部分）"
+ ],
+ "summary": "AutoCua 是一个自动电脑操作智能体，让模型直接控制桌面应用、终端、浏览器和 iOS 设备，完成端到端自动化任务。它通过统一的 Python API 切换操作对象，输入走系统原生层，浏览器操作借助 Chrome 扩展，并内置压缩智能体支持长任务。适合需要跨平台自动化或想用自然语言驱动电脑的开发者与用户。",
+ "tagline": "跨平台自动电脑操作智能体，支持桌面、浏览器、终端和 iOS。"
+}

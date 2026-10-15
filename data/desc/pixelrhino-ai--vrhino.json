@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在本地 NVIDIA GPU 上运行 AI 视频生成或唇形同步模型的开发者和用户。",
+ "date": "2026-10-15",
+ "features": [
+  "共享原生运行时，无需为每个模型配置 Python 环境",
+  "通过 vrhino pull 下载、校验并转换模型为本地包",
+  "通过 vrhino run 执行文生视频和唇形同步任务",
+  "支持 Wan2.2、Wan2.1、LTX-Video、Mochi 1 等文生视频模型",
+  "支持 MuseTalk 1.5、LatentSync 1.6 唇形同步模型",
+  "提供 vrhino doctor 检查运行环境"
+ ],
+ "intro": "VRhino 是一个自包含的原生运行时和模型格式，用于在本地运行 AI 视频生成模型。它用 C++ 编写，目标是让不同模型共享同一套原生运行环境，而不需要为每个模型单独准备 Python 环境。\n\n项目提供命令行工具 vrhino，支持 pull 拉取并转换模型、run 执行生成任务。目前可用的模型包括 Wan2.2 T2V A14B、Wan2.1 T2V 1.3B、LTX-Video 0.9.1、Mochi 1 Preview 等文生视频模型，以及 MuseTalk 1.5、LatentSync 1.6 等唇形同步模型。安装脚本面向 Linux x86_64，需要兼容的 NVIDIA GPU 和驱动，模型权重单独下载。README 中给出了在 RTX 4090 D 上 Wan2.1 T2V 1.3B 的受控对比测量结果，并说明这些数据仅限特定测试条件。项目当前处于 alpha 阶段。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Linux x86_64 上执行安装命令：curl -fsSL https://raw.githubusercontent.com/pixelrhino-ai/vrhino/v0.9.4-alpha/install.sh | sh",
+  "按提示配置 PATH，然后运行 vrhino doctor 检查环境",
+  "拉取模型：vrhino pull vrhino/wan2.2-t2v-a14b:1.0.0",
+  "生成视频：vrhino run vrhino/wan2.2-t2v-a14b:1.0.0 --prompt \"a red panda running through fresh snow\" --output video.mp4"
+ ],
+ "summary": "VRhino 是一个用 C++ 编写的原生运行时和模型格式，让 AI 视频生成模型可以在本地直接运行，而不必为每个模型单独搭建 Python 环境。它通过统一的命令行工具拉取、转换并执行模型，目前覆盖 Wan2.2、Wan2.1、LTX-Video、Mochi 1 等文生视频模型以及 MuseTalk、LatentSync 唇形同步模型。适合拥有 NVIDIA GPU、希望在本地完成视频生成任务的开发者，项目当前处于 alpha 阶段。",
+ "tagline": "本地运行 AI 视频生成模型的原生运行时"
+}

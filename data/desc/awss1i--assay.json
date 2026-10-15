@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速检查本地网页、又不想手写测试的开发者，也适合在编码代理工作流中自动验证 AI 生成页面的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "自动发现页面上的按钮、输入框、下拉框、画布、拖拽手柄等控件并规划检查",
+  "无需编写测试，无需 LLM 或 API key，每次运行结果确定",
+  "在全新标签页中运行每项检查，对比操作前后的页面状态",
+  "将重复出现的同一问题合并报告，后续检查标注 same finding as C003",
+  "支持生成带截图的 HTML 报告，也可输出单行摘要供脚本或代理使用",
+  "提供跨十五种 harness 的 skill 以及 Claude Code 和 DeepSeek Harness 插件"
+ ],
+ "intro": "assay 是一个面向网页的 QA 命令行工具。它会在 Chromium 中打开你的页面，自动找出页面上所有可交互控件，逐一操作并对比操作前后的页面状态，报告其中自相矛盾的地方。整个过程不需要你预先编写任何测试，也不依赖 LLM 或 API key，每次运行结果一致。\n\n它适合用来快速检查 AI 生成的网页或本地开发中的页面。除了直接运行 CLI，assay 还提供可在多种编码代理环境中使用的 skill，以及 Claude Code 和 DeepSeek Harness 的插件，让代理在写完页面后自动执行检查。\n\n需要注意的是，assay 无法判断页面意图是否正确，只检查页面是否自相矛盾；它一次只检查一个本地页面，不爬取、不登录、不调用线上网络，也不会替你执行构建命令。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install assay-ui（需要 Python 3.10+，也可用 uv tool install assay-ui 或 pipx install assay-ui）",
+  "assay ./my-app  # 检查该目录下的 index.html",
+  "assay ./my-app --report out.html  # 同时生成带截图的 HTML 报告",
+  "assay ./my-app --one-line  # 输出简短摘要，适合脚本和代理"
+ ],
+ "summary": "assay 是一个网页 QA 命令行工具，用来在 Chromium 中自动打开本地页面，找出所有可交互控件并逐一操作，然后报告页面自相矛盾的地方。它不需要你预先编写测试，也不依赖 LLM 或 API key，每次运行结果一致。适合想快速检查 AI 生成网页或本地开发页面的开发者，也提供 skill 和插件，让编码代理在写完页面后自动执行检查。",
+ "tagline": "无需编写测试的网页 QA 命令行工具，确定性检查，不用 LLM。"
+}

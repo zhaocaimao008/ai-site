@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编码代理（如 Claude Code、Codex、Cursor）的开发者，以及希望跨项目复用代码和笔记、同时注重隐私和 token 成本的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "跨仓库统一语义图：索引所有项目，知识跟随你跨仓库、跨语言、跨时间复用",
+  "零 token 索引：使用 tree-sitter 和本地 CPU 嵌入，索引文件不调用 LLM，不产生 token 费用",
+  "混合排序检索：结合词法、语义和图遍历，返回排序后的相关结果",
+  "结果可信度验证：对每个命中给出 STRONG / WEAK / REBUILT / STALE 标签，并说明原因",
+  "自愈索引：文件移动后自动重新锚定，删除后精确移除节点，重复索引结果一致",
+  "本地守护进程：文件监听、AST 解析和 sqlite 存储全部在本地完成，数据不出磁盘"
+ ],
+ "intro": "Heimdall 是一个面向 AI 编码代理的持久记忆工具，它把你所有仓库和项目中的代码与笔记索引到一个语义图中，让代理在开始新会话时能快速找到之前已经解决过的问题，而不是反复用 grep、find 和 ls 重新摸索。\n\n它的索引过程完全在本地进行，只消耗 CPU，不调用 LLM，因此不会产生 token 费用，也不会把私有代码发送到云端。检索时采用词法、语义和图遍历的混合排序，并对每个结果进行验证，给出 STRONG、WEAK、REBUILT、STALE 等可信度标签，帮助代理判断结果是否仍然有效。\n\nHeimdall 以本地守护进程方式运行，通过文件监听和 tree-sitter 解析维护索引，支持跨仓库、跨语言和跨时间的知识复用。它提供了 kb_search 等命令，并可与 Claude Code、Codex、Cursor 等编码工具集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 npm 安装：npm install -g @arihantdeva/heimdall",
+  "启动本地守护进程：heimdall daemon start",
+  "在项目目录中建立索引：heimdall index .",
+  "使用 kb_search 进行检索：kb_search \"你的查询词\"",
+  "可选：使用 heimdall verify --deep 进行深度验证"
+ ],
+ "summary": "Heimdall 是一个为 AI 编码代理设计的本地记忆工具，解决代理在不同仓库间重复劳动、每次会话都要重新摸索项目结构的问题。它把你所有项目索引到一个语义图中，检索时给出经过验证的排序结果，并标注可信度。索引和检索完全在本地 CPU 上完成，不调用 LLM，适合注重隐私、希望减少 token 消耗并跨项目复用代码的开发者。",
+ "tagline": "为 AI 编码代理提供跨仓库持久记忆的本地检索工具"
+}

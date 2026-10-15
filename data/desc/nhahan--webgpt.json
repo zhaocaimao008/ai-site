@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用 Codex 或 Codex CLI、希望把部分工作分流到网页版 ChatGPT 以节省额度的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "把 Codex 的任务委派给网页版 ChatGPT 执行，节省 Codex 额度",
+  "支持 m / h / xh / p 四档推理级别，默认 xh",
+  "可同时启动多个 webgpt 子代理并行开发项目功能",
+  "通过 webgpt open 让 ChatGPT 获得当前项目的终端访问权限",
+  "支持指定其他项目路径（webgpt open /path/to/project）",
+  "通过本地 Worker 与无账号 HTTPS 转发连接已登录的 ChatGPT"
+ ],
+ "intro": "WebGPT 是一个 Codex skill，用来把工作转交给网页版 ChatGPT 完成，从而节省 Codex 的额度。它通过本地 Worker 和无账号的 HTTPS 转发，把当前项目目录以终端访问的方式暴露给你已登录的 ChatGPT 会话，让 ChatGPT 直接在项目里干活。\n\n使用时可以在 Codex 里指定不同的推理档位：m（Medium）、h（High）、xh（Extra High，默认）和 p（Pro），也可以让多个 webgpt 子代理并行开发同一个项目的功能。除了委派任务，还能用 webgpt open 打开 ChatGPT 并让它访问当前项目或指定路径的项目。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Codex 中粘贴 README 提供的安装指令，安装 https://github.com/Nhahan/WebGPT/tree/main/skills/webgpt 并按 references/setup.md 完成配置与验证",
+  "按提示完成 ChatGPT 登录等仅用户可执行的操作",
+  "在 Codex 中让 webgpt 作为子代理并行开发：Use webgpt xh as subagents to develop this project's planned features in parallel.",
+  "委派研究类任务：webgpt p Research this topic and summarize the findings.",
+  "直接打开 ChatGPT 并授予当前项目终端访问：webgpt open，或指定路径 webgpt open /path/to/project"
+ ],
+ "summary": "WebGPT 是一个 Codex skill，目的是把原本由 Codex 承担的工作转交给网页版 ChatGPT 执行，从而节省 Codex 的额度。它通过本地 Worker 和无账号 HTTPS 转发，把你已登录的 ChatGPT 连接到指定项目目录，并授予终端访问权限。你可以在 Codex 里用不同推理档位委派任务、启动多个子代理并行开发，或用 webgpt open 让 ChatGPT 直接操作当前项目。适合已经使用 Codex、想把部分工作分流到网页版 ChatGPT 的开发者。",
+ "tagline": "把 Codex 的任务转交给网页版 ChatGPT 执行的技能"
+}

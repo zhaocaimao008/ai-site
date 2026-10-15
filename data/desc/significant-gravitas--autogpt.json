@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望用 AI Agent 自动化完整工作流的开发者与团队；也适合不想管理基础设施、直接使用托管平台的普通用户。",
+ "date": "2026-10-15",
+ "features": [
+  "AutoPilot：用自然语言描述任务，自动生成可运行的 Agent",
+  "Build 可视化画布：拖拽、连接、分支并检查每个执行步骤",
+  "Agents 面板：查看所有 Agent 的运行状态、成本和待处理动作",
+  "Marketplace：从社区现成 Agent 开始，加入库后按需定制",
+  "支持按需、定时或触发器方式运行 Agent",
+  "托管平台内置 45+ 平台连接和数百个 AI 模型，无需自备 API Key"
+ ],
+ "intro": "AutoGPT 是一个用于构建、部署和运行 AI Agent 的开源平台。用户可以用自然语言描述想要完成的任务，由 AutoPilot 生成可运行的 Agent，也可以在可视化 Build 画布中拖拽、连接、分支并检查每个步骤，从而精确控制工作流。\n\n平台包含四个主要界面：AutoPilot 负责把对话转成 Agent，Agents 面板展示每个 Agent 的运行状态、成本和待处理动作，Marketplace 提供现成的社区 Agent 供直接使用和定制，Build 则用于手动搭建流程。Agent 支持按需运行、定时运行或由触发器启动。\n\n使用方式分为托管平台和自托管两条路径。托管平台由官方管理基础设施、模型访问和更新，属于付费服务；自托管免费，但需要自行提供 Docker 环境、模型 API Key 并维护部署。两种方式共用同一仓库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用托管平台：访问 platform.agpt.co 注册并开始使用",
+  "自托管：参考官方自托管指南 docs.agpt.co/platform/getting-started",
+  "自托管需要本地已运行 Docker daemon（Linux 容器，amd64 或 arm64）",
+  "自托管需自行提供模型 API Key 并维护部署"
+ ],
+ "summary": "AutoGPT 是一个开源 AI Agent 平台，目标是让用户用自然语言描述任务后，由系统生成并运行能完成完整工作流的 Agent。它提供 AutoPilot 对话生成、可视化 Build 画布、Agents 运行面板和 Marketplace 现成 Agent 四个界面，支持按需、定时或触发器运行。适合想自动化多步骤流程的开发者与团队；托管平台付费且免配置，自托管免费但需自行准备 Docker 和模型 API Key。",
+ "tagline": "开源 AI Agent 平台，可构建、部署并运行自动化工作流"
+}

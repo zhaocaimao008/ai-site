@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望查找或分享 AI 提示词的普通用户，以及需要在组织内部私有部署提示词库的开发者与团队。",
+ "date": "2026-10-15",
+ "features": [
+  "社区共享的 AI 提示词库，兼容 ChatGPT、Claude、Gemini、Llama、Mistral 等模型",
+  "提供 prompts.csv、PROMPTS.md 和 Hugging Face 数据集等多种数据格式",
+  "支持自托管，可自定义品牌、主题与 GitHub/Google/Azure AD 认证",
+  "提供 CLI、Claude Code 插件和 MCP Server 集成",
+  "包含免费的交互式提示工程指南，覆盖 28+ 章节",
+  "面向 8-14 岁儿童的互动提示词学习页面"
+ ],
+ "intro": "prompts.chat（原名 Awesome ChatGPT Prompts）是一个开源 AI 提示词库，汇集社区分享的提示词，可用于 ChatGPT、Claude、Gemini、Llama、Mistral 等主流模型。项目提供网站浏览、PROMPTS.md、prompts.csv 以及 Hugging Face 数据集等多种获取方式，用户也可以在网站上提交自己的提示词，内容会自动同步到仓库。\n\n除了提示词集合，项目还包含一份免费的交互式提示工程指南，覆盖从基础到 chain-of-thought、few-shot learning、AI agents 等进阶主题，并提供一个面向 8-14 岁儿童的互动游戏页面。对于希望内部使用提示词库的团队，项目支持自托管，可配置品牌、主题和 GitHub/Google/Azure AD 认证。\n\n项目还提供 CLI、Claude Code 插件和 MCP Server 等集成方式，方便在 AI 工具中直接调用提示词。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx prompts.chat new my-prompt-library",
+  "cd my-prompt-library",
+  "git clone https://github.com/f/prompts.chat.git",
+  "cd prompts.chat",
+  "npm install && npm run setup"
+ ],
+ "summary": "prompts.chat 是一个开源 AI 提示词库，汇集社区贡献的提示词，可用于 ChatGPT、Claude、Gemini 等主流模型。它提供网站浏览、CSV/Markdown 文件和 Hugging Face 数据集等多种获取方式，并支持自托管，让组织在内部私有部署带自定义品牌和认证的提示词库。项目还提供 CLI、Claude Code 插件和 MCP Server 集成，方便在 AI 工具中直接调用提示词。",
+ "tagline": "开源 AI 提示词库，支持自托管与多种集成"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code 或其他编码代理的开发者，尤其是希望代理在修改代码时考虑周围影响、减少“假完成”和未请求代码的场景。",
+ "date": "2026-10-15",
+ "features": [
+  "写代码前回答十个问题（pre-mortem），每个答案需有 file:line、测试或明确接受的缺口",
+  "由未编写代码的 breaker 代理在全新上下文中审查改动，检查所有涉及相同数据的代码路径",
+  "“完成”需要有一个在改动前失败的测试、breaker 审查以及 CI 检查通过",
+  "修复 bug 时修复整个类别：复现、在任务范围内查找相同模式、添加防止复发的检查",
+  "提供 /first-pass:review 命令在请求审查前检查自己的分支或队友的 PR，且不会发布到 GitHub",
+  "hooks 在每次会话中检测没有证据的“完成”，运行各仓库自己的 hooks，并报告自设置以来的漂移"
+ ],
+ "intro": "first-pass 是一个 Claude Code 插件，目的是让编码代理不只盯着自己写的几行代码，而是检查改动周围的代码，并在声称“完成”之前提供证据。它通过一套规则和技能实现，Cursor、Codex 等代理也能使用相同的规则和技能，但 hooks 仅限 Claude Code。\n\n它要求代理在写代码前回答十个问题（如重复运行、中途停止、外部服务超时、其他代码使用相同数据等），每个答案必须对应 file:line、测试或明确接受的缺口。构建过程中，任何任务未要求的内容都需要证明其必要性。完成前，由另一个未参与编写的代理在全新上下文中审查代码，并且需要有一个在改动前失败的测试以及 CI 检查通过。对于 bug，它会修复整个类别，而不仅仅是单个位置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "/plugin marketplace add joetawil7/first-pass",
+  "/plugin install first-pass@first-pass",
+  "在启动会话的文件夹中运行：/first-pass:setup-first-pass"
+ ],
+ "summary": "first-pass 是一个 Claude Code 插件，解决编码代理只关注自己写的代码行、忽略周围代码影响的问题。它要求代理在写代码前回答十个关于改动影响的问题，由另一个代理在全新上下文中审查，并且只有通过测试和 CI 检查才算完成。适合使用 Claude Code 等代理进行开发、希望减少遗漏和未请求代码的开发者。",
+ "tagline": "让 Claude Code 在写代码前先检查周围代码并证明完成"
+}

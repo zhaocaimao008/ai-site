@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想深入理解生成模型底层原理、愿意动手用 NumPy、C 或 CUDA 实现算法的开发者与学习者。",
+ "date": "2026-10-15",
+ "features": [
+  "同一模型提供 NumPy、C、CUDA 三种从零实现",
+  "覆盖自回归、GAN、VAE、扩散、Flow 等生成模型路线",
+  "训练超参数、数据集和输出路径通过 JSON 配置指定",
+  "提供 MNIST 与 CelebA 数据集的下载和预处理脚本",
+  "每个模型附有对应的原始论文参考链接"
+ ],
+ "intro": "这是一个从第一性原理出发学习生成模型的项目，全程不使用机器学习框架。项目路线图上的每个模型都会按三种方式实现：先用 NumPy 把算法本身写对，再用 C 手写张量和内存管理，最后用 CUDA 手写 GPU kernel，以此揭示框架通常替使用者隐藏的细节。\n\n项目覆盖自回归、GAN、VAE、扩散、Flow 等多个方向，包括 PixelCNN、DCGAN、VAE、VQ-VAE、DDPM、DDIM、Stable Diffusion、DiT、Flow Matching、Rectified Flow 等模型，并附有对应的原始论文链接。代码分为 numpy_impl、c_impl、cuda_impl 三个目录，训练配置以 JSON 文件给出，数据集支持 MNIST 和 CelebA。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/sIlENtbuffER/Generative-Models.git && cd Generative-Models",
+  "有 NVIDIA GPU 时按 README 用 conda 创建带 CUDA 的环境；否则创建 CPU 环境并安装 numpy、matplotlib、pillow、safetensors",
+  "下载并准备数据集，如 MNIST 或 CelebA",
+  "运行 NumPy 实现：python numpy_impl/train.py configs/default.json",
+  "构建并运行 C/CUDA 实现：cmake -G Ninja -B build && cmake --build build，然后执行 ./build/genmodels_train_c configs/default.json 或 ./build/genmodels_train_cuda configs/default.json"
+ ],
+ "summary": "这个项目从零实现生成模型，不使用任何机器学习框架。路线图上的每个模型都会用 NumPy、C、CUDA 三种方式各写一遍，帮助学习者看清算法本身以及框架平时隐藏的张量、内存和 GPU kernel 细节。内容覆盖自回归、GAN、VAE、扩散和 Flow 等方向，适合想深入理解生成模型底层原理并愿意动手实现的人。",
+ "tagline": "不用框架，从零用 NumPy、C、CUDA 实现生成模型"
+}

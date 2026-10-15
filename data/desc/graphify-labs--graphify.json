@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Cursor、Codex、Gemini CLI 等 AI 编程助手的开发者，以及希望用图谱方式理解大型代码库和文档的人。",
+ "date": "2026-10-15",
+ "features": [
+  "基于 tree-sitter AST 的本地确定性代码解析，无需 LLM，数据不出本机",
+  "支持文档、PDF、图片、视频的语义解析（使用助手模型或 API key）",
+  "每条边标注 EXTRACTED 或 INFERRED，区分直接提取与推断关系",
+  "不使用向量库或 embedding，提供可遍历的真实知识图谱",
+  "输出 graph.html、GRAPH_REPORT.md 和 graph.json 三个文件",
+  "支持 explain、path 等查询命令，可解释概念或查找节点间最短路径"
+ ],
+ "intro": "Graphify 是一个面向 AI 编程助手的技能（skill），在 Claude Code、Cursor、Codex、Gemini CLI 等工具中输入 /graphify 即可把整个项目——代码、文档、SQL schema、配置和 PDF——映射成一张可查询的知识图谱，用查询代替在文件里 grep。\n\n代码部分完全本地解析：基于 tree-sitter 的 AST 分析，确定性、不调用 LLM，数据不出本机；文档、PDF、图片和视频则借助助手自带模型或配置的 API key 做语义处理。图谱中的每条边都带有 EXTRACTED 或 INFERRED 标签，用来区分直接读到的关系和推断出的关系。它不使用向量索引或 embedding，而是一张可遍历的真实图，支持提问、查找两个节点间路径以及解释某个概念。\n\n运行后会生成三个文件：可在浏览器中交互的 graph.html、汇总要点与建议问题的 GRAPH_REPORT.md，以及可反复查询的 graph.json。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：uv tool install graphifyy（或 pipx install graphifyy）",
+  "注册技能：graphify install",
+  "在 AI 助手中运行：/graphify .",
+  "查看生成的 graphify-out/ 目录，打开 graph.html 或阅读 GRAPH_REPORT.md"
+ ],
+ "summary": "Graphify 是一个给 AI 编程助手用的技能，把代码、文档、SQL schema、配置和 PDF 转成一张可查询的知识图谱，让你用查询代替在文件里 grep。代码部分用 tree-sitter 做本地 AST 解析，不调用 LLM，数据不出本机；文档等则借助助手模型做语义处理。图谱中的每条边都标明是直接提取还是推断，且不使用向量库。适合需要快速理解大型代码库、追踪概念之间关系的开发者。",
+ "tagline": "把代码库与文档变成可查询的知识图谱"
+}

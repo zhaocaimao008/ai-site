@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要把 AI 接入现有系统、构建自动化流程的开发者与团队，也适合希望自托管、对数据敏感或有企业合规要求的组织。",
+ "date": "2026-10-15",
+ "features": [
+  "可视化画布与自定义代码结合，支持 JavaScript、Python 和 npm 包",
+  "原生 AI 能力，可构建多步骤 AI agent 与工作流",
+  "模型灵活，可接入 OpenAI、Anthropic、Google 或开源模型并随时切换",
+  "1500+ 集成和 9000+ 工作流模板",
+  "支持自托管或云端部署，提供角色权限、审计日志等企业特性",
+  "工作流可包含逻辑、工具调用、人工审批和可观测性"
+ ],
+ "intro": "n8n 是一个 fair-code 的工作流自动化平台，把可视化画布和自定义代码结合起来，用来构建和部署 AI agent 与自动化流程。它可以自托管，也可以使用云端版本，并连接 1500+ 集成。\n\n在 AI 方面，n8n 支持使用自己的数据、模型和工具来搭建多步骤 AI 工作流，可接入 OpenAI、Anthropic、Google 或开源模型，并在不改变架构的前提下切换供应商。工作流中可以加入逻辑判断、工具调用、人工审批和可观测性，从原型逐步走向生产。需要时还能写 JavaScript、Python 或引入 npm 包。\n\n平台提供 9000+ 工作流模板，支持基于角色的访问、审计日志等企业特性，适合处理敏感数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用安装脚本快速体验（需要 Docker）：curl -fsSL https://get.n8n.io | sh",
+  "或手动用 Docker 部署：docker volume create n8n_data",
+  "docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n",
+  "在浏览器访问 http://localhost:5678 打开编辑器"
+ ],
+ "summary": "n8n 是一个把可视化编排和自定义代码结合起来的自动化平台，重点在于用同一套工具搭建普通工作流和 AI agent。它支持接入 OpenAI、Anthropic、Google 或开源模型，并能在不重构的前提下更换模型供应商，同时提供大量集成和模板，方便把 AI 接到已有系统里。可以自托管也可以使用云端，适合需要处理敏感数据、希望掌控部署环境的开发者和团队，从原型验证到生产运行都能覆盖。",
+ "tagline": "可视化与代码结合的工作流自动化平台，原生支持 AI"
+}

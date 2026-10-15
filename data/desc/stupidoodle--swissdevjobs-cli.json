@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在终端工作的开发者、数据科学家，以及希望通过 AI Agent 或 Claude Code 自动化求职流程的技术人员。",
+ "date": "2026-10-15",
+ "features": [
+  "聚合 9 个招聘网站，覆盖 8 个国家，约 4700 个带薪资的技术岗位",
+  "支持按最低薪资、远程、技术栈等条件过滤，并显示真实发布时间",
+  "本地 SQLite 记录已申请岗位，自动从列表中隐藏",
+  "所有命令支持 --json 输出，内置 MCP server 供 AI Agent 调用",
+  "提供 Claude Code 插件，可用自然语言搜索岗位",
+  "零第三方依赖，仅使用 Python 标准库"
+ ],
+ "intro": "swissdevjobs-cli 是一个零依赖的 Python 命令行工具，用于在终端中搜索、筛选和申请技术岗位。它聚合了 9 个招聘网站，覆盖瑞士、德国、英国、美国、加拿大、荷兰、法国和新加坡，共约 4700 个带薪资数据的技术岗位，以及 jobs.ch、jobup.ch 上约 50000 个瑞士全行业岗位和 MyCareersFuture 上约 9000 个新加坡 IT 岗位。\n\n工具支持按薪资、远程、技术栈等条件过滤，并会从 MongoDB ObjectId 中解析岗位的真实发布时间。它使用本地 SQLite 记录已申请的岗位，避免重复显示。所有命令都支持 --json 输出，并内置 MCP server，方便 LLM Agent 调用。此外还提供了 Claude Code 插件，可通过自然语言搜索岗位。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中安装插件：/plugin marketplace add Stupidoodle/swissdevjobs-cli 和 /plugin install swissdevjobs@swissdevjobs",
+  "或通过 uv 安装 CLI：uv tool install git+https://github.com/Stupidoodle/swissdevjobs-cli",
+  "运行 sdj list --tech Kubernetes --remote --min-salary 90000 --sort salary 搜索岗位",
+  "使用 sdj boards 查看所有可用的招聘网站",
+  "使用 sdj config --boards ch,de 持久化选择要搜索的网站"
+ ],
+ "summary": "swissdevjobs-cli 是一个零依赖的 Python 命令行工具，让你在终端或 AI Agent 中搜索和申请技术岗位。它聚合了 9 个招聘网站，覆盖瑞士、德国、英国、美国、加拿大、荷兰、法国和新加坡，提供约 4700 个带薪资数据的技术岗位，以及瑞士全行业和新加坡 IT 岗位。支持按薪资、远程、技术栈过滤，并记录已申请岗位。适合开发者、求职者以及希望通过 MCP 或 Claude Code 自动化求职流程的用户。",
+ "tagline": "在终端或 AI Agent 中搜索并申请 9 个招聘网站的约 4700 个技术岗位"
+}

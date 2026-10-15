@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管 AI 界面的个人开发者、团队和企业，尤其是需要离线运行、多模型接入或企业级权限管理的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "支持 Ollama 和 OpenAI 兼容 API，可连接多种本地与云端模型服务",
+  "插件系统：通过 Filters、Actions、Pipes、Tools、Skills 以及 MCP、OpenAPI 工具服务器扩展功能",
+  "本地 RAG：集成 9 种向量数据库和多种内容提取引擎，支持混合搜索与重排序",
+  "多模型对话、语音/视频通话、图像生成与编辑、日历与自动化任务",
+  "细粒度 RBAC 与用户组、企业级认证（LDAP/AD、OAuth、SCIM）",
+  "灵活存储：SQLite 或 PostgreSQL，文件可存本地或 S3、Google Cloud Storage、Azure Blob Storage"
+ ],
+ "intro": "Open WebUI 是一个自托管的 AI 平台，为本地和云端模型提供统一的交互界面。它支持 Ollama 和 OpenAI 兼容 API，可以连接 LMStudio、GroqCloud、Mistral、OpenRouter、vLLM 等服务，让用户自由混合使用不同提供商的模型。项目强调完全离线运行，适合对数据隐私和自主可控有要求的场景。\n\n除了基础对话，Open WebUI 还提供插件系统、模型与智能体定制、本地 RAG、多模型并行对话、语音视频通话、图像生成、日历与自动化等丰富功能。它支持细粒度 RBAC、企业级认证（LDAP/AD、OAuth、SCIM）以及多种数据库和向量库，能够从个人部署扩展到团队和企业环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 pip 安装：pip install open-webui",
+  "启动服务：open-webui serve",
+  "或使用 Docker：docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main",
+  "访问 http://localhost:3000 开始使用"
+ ],
+ "summary": "Open WebUI 是一个自托管的 AI 对话平台，为本地和云端模型提供统一界面。它支持 Ollama 和 OpenAI 兼容 API，可连接多种模型服务，并强调完全离线运行。项目提供插件扩展、本地 RAG、多模型对话、语音视频、图像生成、日历自动化等功能，同时具备细粒度权限管理和企业级认证。适合需要自主可控、多模型接入或团队协作的开发者与企业部署使用。",
+ "tagline": "自托管、可扩展的 AI 对话界面，支持 Ollama 与 OpenAI 兼容 API"
+}

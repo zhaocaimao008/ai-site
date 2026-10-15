@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 Python 构建浏览器自动化 AI 代理的开发者，以及需要托管浏览器基础设施或代理 API 的团队。",
+ "date": "2026-10-15",
+ "features": [
+  "开源 Python 库，可在本地运行 AI 浏览器代理",
+  "支持选择模型（如 OpenAI 模型或 BU2）和本地或云端浏览器",
+  "Browser Use Cloud 提供 stealth 浏览器、CAPTCHA 处理和住宅代理",
+  "可通过 CDP 控制已有的远程浏览器",
+  "提供 CLI 路径，可将浏览器技能注册给 Claude Code、Codex 等代理",
+  "提供与 Claude 兼容的 Browser Use toolsets，实现 31 种浏览器操作"
+ ],
+ "intro": "Browser Use 是一个开源的 Python 库，用于构建能操作浏览器的 AI 代理。它让代理打开浏览器、执行网页任务并返回结果，README 中的示例任务是查询某个仓库的 star 数。\n\n除了本地运行的开源代理，项目还提供 Browser Use Cloud 托管服务，包括 stealth 浏览器、CAPTCHA 处理、住宅代理和托管代理 API，并支持通过 CDP 连接已有远程浏览器。代理可以使用 OpenAI 等模型，也可以使用 Browser Use 自家的 BU2 模型。\n\n项目还提供 CLI 路径，可将浏览器能力注册为技能供 Claude Code、Codex 等代理调用，以及与 Claude 工具集成的 Browser Use toolsets。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Browser Use（Python >= 3.11）：uv add browser-use",
+  "在 .env 中添加 OPENAI_API_KEY，可选添加 BROWSER_USE_API_KEY",
+  "创建 agent.py，使用 Agent 和 ChatOpenAI 定义任务并运行",
+  "执行：uv run agent.py"
+ ],
+ "summary": "Browser Use 是一个开源 Python 库，用来构建能像人一样操作浏览器的 AI 代理。你可以在代码里定义任务，让代理打开浏览器、完成网页操作并返回结果，模型和浏览器都可以按需选择。项目还提供托管云服务，包含 stealth 浏览器、CAPTCHA 处理和住宅代理，并支持 CLI 和 Claude 工具集成。适合需要把网页操作交给 AI 完成的开发者和团队。",
+ "tagline": "让 AI 代理像人一样操作浏览器的开源 Python 库"
+}

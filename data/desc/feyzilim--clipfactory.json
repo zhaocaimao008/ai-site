@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管、用自有素材批量制作竖屏短视频的内容创作者或团队，需要具备 Docker 使用经验并自备相关 API key。",
+ "date": "2026-10-15",
+ "features": [
+  "从主题和模板自动生成脚本、配音、分镜、字幕并渲染竖屏视频",
+  "基于自有 B-roll 素材库进行场景规划和片段选择，支持素材导入与 AI 元数据补全",
+  "每个产物可版本化，支持重新生成脚本、替换素材、重新渲染和逐场景覆盖",
+  "多 persona 管理，项目和素材按 persona 隔离",
+  "批量生成：排队多个视频并跟踪进度",
+  "AI Lab 模块：从一句话生成故事板、关键帧和分段动画，拼接为完整视频"
+ ],
+ "intro": "ClipFactory 是一个自托管的短视频内容流水线，运行在本地 Docker 环境。你提供主题和模板，它调用 LLM 生成脚本、用 ElevenLabs 生成配音并获取词级时间戳，再规划分镜、从你自己的 B-roll 素材库中挑选片段，生成字幕并用 FFmpeg 渲染成 9:16 竖屏视频。每个产物都有版本记录，可以单独重新生成脚本、替换素材、重新渲染或逐场景调整。\n\n项目还包含独立的 AI Lab 模块，可以把一句话变成完全由 AI 生成的竖屏视频：先用 LLM 生成故事板，再用 OpenAI 生成关键帧图像，然后按所选视频模型逐段生成动画并拼接。\n\n它不会自动发布到任何平台，所有视频都需要你自己审核后发布。使用需要自备 OpenAI、ElevenLabs 等服务的 API key，以及自己的 B-roll 素材。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/feyzilim/clipfactory.git && cd clipfactory",
+  "docker compose up -d",
+  "打开 http://localhost:3000，在 Setup 页面填入 OpenAI 和 ElevenLabs 等 API key 并保存",
+  "在 Personas 页面创建 persona，在 B-roll 页面上传或导入素材",
+  "在 Generate 页面选择模板、主题和时长，生成视频"
+ ],
+ "summary": "ClipFactory 是一个自托管的短视频生成流水线，解决的是把主题快速变成竖屏视频的问题。你只需提供主题和模板，它用 LLM 写脚本、用 ElevenLabs 配音，再从你自己的 B-roll 素材库中挑选画面，最后用 FFmpeg 渲染成带字幕的 9:16 视频。适合有自有素材、想批量制作 TikTok、Reels 或 Shorts 内容并自行审核发布的创作者。",
+ "tagline": "输入主题和模板，用自有素材生成竖屏短视频"
+}

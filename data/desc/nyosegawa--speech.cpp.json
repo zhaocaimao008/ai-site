@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或自有服务器上做语音合成、识别与实时转写的开发者，以及希望用 C++ 或 C API 集成语音能力的应用。",
+ "date": "2026-10-15",
+ "features": [
+  "语音合成：支持 Qwen3-TTS 与 Irodori-TTS，可输出 WAVE 文件或流式播放",
+  "语音识别：支持 Qwen3-ASR、ReazonSpeech、parakeet，可处理文件或实时麦克风输入",
+  "语音活动检测：使用 Silero VAD 定位录音中有人说话的位置",
+  "OpenAI 兼容服务：speech serve 提供音频 API 与 Realtime 转写，客户端改 base URL 即可接入",
+  "多后端运行：通过 ggml 在 CPU、Metal 和 Vulkan 上执行",
+  "模型管理：按名称自动下载 GGUF 模型，并支持列出、拉取、删除与量化"
+ ],
+ "intro": "speech.cpp 是一个用 C++ 编写的语音处理项目，基于 ggml 构建，把语音合成（TTS）、语音识别（ASR）和语音活动检测（VAD）整合到同一个命令行工具 speech 和同一个共享库 libspeech 中，对外提供统一的 C API，并可在 CPU、Metal 和 Vulkan 上运行。\n\n它支持 Qwen3-TTS、Irodori-TTS、Qwen3-ASR、ReazonSpeech、parakeet 以及 Silero VAD 等模型，模型以 GGUF 格式按名称自动从 Hugging Face 下载，无需安装 Python 或 CUDA。除了命令行使用，它还提供 OpenAI 兼容的音频 API 与 Realtime 转写服务，以及可在浏览器中选模型、合成和转写的页面。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装（macOS Apple Silicon / Linux x86-64）：curl -fsSL https://raw.githubusercontent.com/nyosegawa/speech.cpp/main/install.sh | sh",
+  "合成语音：speech tts qwen3-tts-0.6b --voice ryan -o hello.wav \"Hello. It will be sunny in Tokyo tomorrow.\"",
+  "识别语音：speech asr qwen3-asr-0.6b hello.wav",
+  "打开网页界面选模型、合成与转写：speech serve --open",
+  "查看可用模型：speech models"
+ ],
+ "summary": "speech.cpp 把语音合成、语音识别和语音活动检测放进同一个 C++ 命令行工具与共享库，基于 ggml 在 CPU、Metal 和 Vulkan 上运行。它按名称自动下载 GGUF 模型，无需 Python 或 CUDA，并提供 OpenAI 兼容的音频 API 与实时转写服务。适合想在本地或自有服务器上搭建语音对话、转写能力的开发者。",
+ "tagline": "基于 ggml 的 C++ 语音合成、识别与 VAD 工具"
+}

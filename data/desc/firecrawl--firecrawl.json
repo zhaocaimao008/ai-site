@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要为 AI agent、RAG 或数据管道获取网页内容的开发者，以及希望把网页转成 markdown 或结构化数据的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "Search：搜索网页并返回结果页面的完整内容",
+  "Scrape：将任意 URL 转为 markdown、HTML、截图或结构化 JSON",
+  "Interact：抓取页面后用 AI 提示或代码进行点击、输入等交互",
+  "Crawl 与 Map：一次请求抓取整站，或快速发现站点全部 URL",
+  "Batch Scrape：异步批量抓取大量 URL",
+  "Agent 与 MCP：一条命令接入 AI agent 或 MCP 客户端"
+ ],
+ "intro": "Firecrawl 是一个面向 AI 应用的网页数据抓取工具，可以把任意 URL 转换成 markdown、HTML、截图或结构化 JSON，输出格式对 LLM 友好。它同时提供搜索、爬取、站点地图发现和批量抓取等能力，官方称其覆盖包括 JS 渲染页面在内的多数网站，并处理代理轮换、限流等细节。\n\n除了抓取，它还支持在抓取后的页面上继续交互，用自然语言提示或代码完成点击、滚动、输入等操作，并可通过一条命令接入 AI agent 或 MCP 客户端。项目以 TypeScript 编写，开源，同时提供托管服务，支持 Python、Node.js、cURL 和 CLI 多种调用方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 firecrawl.dev 注册获取 API key",
+  "安装 SDK：pip install firecrawl-py 或 npm install firecrawl",
+  "用 API key 初始化客户端：Firecrawl(api_key=\"fc-YOUR_API_KEY\")",
+  "抓取网页：app.scrape('firecrawl.dev')",
+  "搜索网页：app.search(\"firecrawl\", limit=5)"
+ ],
+ "summary": "Firecrawl 解决的是把网页内容变成 AI 可用数据的问题：它能把任意 URL 转成 markdown、结构化 JSON 或截图，并提供搜索、整站爬取、URL 发现和批量抓取等接口，省去自己处理代理、限流和 JS 渲染页面的麻烦。抓取后还能用自然语言提示继续操作页面，并可通过命令接入 AI agent 或 MCP 客户端。适合需要为 AI 应用、RAG 或数据管道稳定获取网页内容的开发者。",
+ "tagline": "把网页变成 LLM 可用数据的抓取与搜索工具"
+}

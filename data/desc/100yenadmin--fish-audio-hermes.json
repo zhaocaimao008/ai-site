@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Hermes Agent 并希望为其添加语音输入输出能力的开发者与用户。",
+ "date": "2026-10-15",
+ "features": [
+  "富有表现力的语音合成，支持情感和语气提示，如 [excited]、[whispering]",
+  "语音库搜索与切换，支持为声音保存短名称（alias）",
+  "声音克隆与声音设计，克隆和删除操作经过 Hermes 审批门",
+  "语音转文字，支持说话人轮次、时间戳和 SRT 字幕",
+  "Hermes Desktop 的 Voices 页面，可浏览、预览、克隆和设计声音",
+  "账户余额与状态查询，支持 /fish balance 和 /fish status"
+ ],
+ "intro": "这是 Fish Audio 官方为 Hermes Agent 提供的插件，由 Electric Sheep 维护。它把 Fish Audio 的语音能力接入 Hermes，让 agent 能说话、能听懂语音，并管理声音资源。插件支持 80 多种语言，可在 Hermes CLI、Hermes 支持的各种消息应用以及 Desktop 应用中使用。\n\n安装后，语音回复、朗读和语音笔记都会走 Fish Audio。你可以使用 Fish Audio 的社区声音库、克隆自己的声音，或用文字描述设计声音；语音转文字使用 transcribe-1-pro，并支持说话人分离、时间戳和 SRT 字幕。Desktop 端还提供 Voices 页面，用于浏览、预览、克隆和设计声音。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 https://fish.audio/app/api-keys 获取 API key",
+  "运行 hermes plugins install fish-audio --enable 安装插件",
+  "运行 hermes fish login 并粘贴 API key",
+  "运行 hermes fish doctor 检查配置（会进行一次计费合成，可用 --no-synth 跳过）"
+ ],
+ "summary": "这个项目是 Fish Audio 官方为 Hermes Agent 开发的语音插件，让 agent 具备语音合成、语音识别和声音管理能力。它适合已经在使用 Hermes Agent、并希望为其加入多语言语音交互、声音克隆或语音转文字功能的开发者和用户。插件支持 CLI、消息应用和 Desktop，安装后可通过命令或对话直接使用。",
+ "tagline": "Fish Audio 官方 Hermes Agent 语音插件"
+}

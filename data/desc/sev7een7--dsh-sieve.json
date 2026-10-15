@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "在 DeepSeek Harness 上运行 AI 编码 agent 的开发者，尤其是任务包含大量测试日志、频繁工具调用、长会话或庞大技能目录的场景。",
+ "date": "2026-10-15",
+ "features": [
+  "工具输出过滤：按类别处理构建日志、测试报告和命令输出，保护失败详情与测试摘要",
+  "上下文裁剪：批量替换较早的无关工具结果，保留归档指针以便按需检索",
+  "渐进式技能披露：按任务相关性筛选技能目录，后续轮次再提示新相关的技能",
+  "判断内核：通过 judge 模型回答结构化问题，按阈值决定改写或保留，超时或失败时保留原文",
+  "可观测性：每个会话记录判断结果、用量与预估节省，并提供 /sieve 命令和 Web 面板"
+ ],
+ "intro": "sieve（dsh-sieve）是面向 DeepSeek Harness（DSH）的上下文工程与 token 优化插件。它针对 AI 编码 agent 在循环中反复读取全部上下文的问题，从工具输出、过期上下文和技能目录三处入手，减少每步重复发送的输入 token。\n\n插件在 DSH 的公开扩展点上加入一个判断内核：把内容转成结构化的判断题交给专门的 judge 模型（Jev 或 Laya）回答，再按置信度阈值决定改写还是保留原文。被改写的内容会先归档，可按需取回。README 给出的离线回放数据显示，100 条公开 agent 轨迹的请求负载字符数合计减少 36.28%。\n\n需要注意：sieve 必须配置 judge 模型才能生效，未配置时插件会加载但不改变上下文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装插件（web profile 同时安装面板）：dsh plugin --profile web add dsh-sieve@0.2.0 dsh-sieve-web@0.2.0",
+  "配置 judge 模型：Jev 需在 DSH Web 侧边栏的 Sieve 页面填入 TypeSafe 或 OpenRouter API key，或设置 TYPESAFE_API_KEY 环境变量；Laya 需在本机启动 Laya 服务并在 profile 中把 judge.type 设为 laya",
+  "重启 dsh web 并刷新页面",
+  "在会话中输入 /sieve status，确认“判断模型”一行不是“未配置”"
+ ],
+ "summary": "sieve 是一个面向 DeepSeek Harness 的上下文工程插件，用来减少 AI 编码 agent 每步重复发送的输入 token。它主要处理三类内容：冗长的工具输出、已被后续读取取代的过期上下文，以及会话开始时注入的大量技能描述。插件通过专门的 judge 模型对内容做结构化判断，再决定改写还是保留，原文会先归档以便按需取回。适合在 DSH 上跑长会话、频繁调用工具或技能目录庞大的编码任务。",
+ "tagline": "为 DeepSeek Harness 提供上下文裁剪与 token 优化"
+}

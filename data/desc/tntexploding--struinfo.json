@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要自托管、注重隐私和来源追溯的个人用户，用于整理私人文档、构建可编辑的个人知识网络；也适合希望研究确定性工作流与可选 AI 结合的开发者。",
+ "date": "2026-10-15",
+ "features": [
+  "文档导入与订阅：支持本地 Markdown、TXT、HTML、带文本层 PDF，以及 GitHub 公开 Markdown、RSS/Atom、声明式 JSON API 和受限网页抓取。",
+  "拆分与标注：提供确定性规则拆分、人工 Fragment 分组，内容/类型/领域三维标签和五档评分，可选 AI 拆分与标签提案。",
+  "联系与知识图谱：基于内容、类型、领域信号的可解释相似度，支持增强、削弱、屏蔽、恢复和用户自定义联系，以及 Entry 中心的有界知识图谱。",
+  "搜索与 RAG：支持精确、子串、拼写容错词法检索，可选向量索引与混合召回，以及基于本地结果和证据句柄的可选查询综合与 RAG。",
+  "个人数据与恢复：PostgreSQL 18 保存证据、Entry、标签、联系等，外部数据根保存 Blob、偏好、导出和备份，支持个人数据包和只读校验备份。",
+  "隐私与安全边界：普通查询默认排除私人内容，隐私范围按请求显式放宽，应用面向单一所有者，不提供账户体系或公共写 API。"
+ ],
+ "intro": "StruInfo 是一个面向单一所有者的私人资料整理与知识维护工作台。它把本地文件、RSS、API、网页等来源的文档保存为原始证据，拆分成可管理的 InformationEntry，再通过三维标签、可解释联系、检索和可编辑关系图谱，整理成能回到精确来源的个人知识网络。\n\n项目支持完整的无 AI 工作流；配置 Provider 后可按需增加拆分、标签、联系、查询综合、Embedding 和 RAG 能力。AI 只在明确的功能边界内工作，不会取代原始资料、人工编辑权或来源追溯。后端是模块化 TypeScript 单体，Web 使用 React/Vite，数据存储在 PostgreSQL 18 和外部数据根中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "要求：Node.js >=24.18.0、Corepack、pnpm 11.20.0。",
+  "git clone https://github.com/tntexploding/StruInfo.git && cd StruInfo",
+  "corepack enable && pnpm install --frozen-lockfile",
+  "pnpm verify",
+  "配置 PostgreSQL 18、runtime 配置、数据库 URL secret 和外部数据根后，运行 corepack pnpm run start:all，默认地址 http://127.0.0.1:3000"
+ ],
+ "summary": "StruInfo 是一个自托管的私人文档整理与知识维护工作台，面向单一所有者。它把本地文件、RSS、API 等来源的文档保存为原始证据，拆分成可管理的条目，再通过标签、可解释联系、检索和可编辑关系图谱，整理成能回到精确来源的个人知识网络。项目支持完整的无 AI 工作流，配置 Provider 后可按需增加拆分、标签、联系、查询综合、Embedding 和 RAG 能力，适合注重隐私和来源追溯的个人用户。",
+ "tagline": "自托管、可追溯的文档到知识工作台，AI 可选"
+}

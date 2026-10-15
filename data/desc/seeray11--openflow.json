@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用可视化方式编排多智能体工作流的开发者，以及需要让多个 AI agent 协作完成编码等任务的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "在画布上拖拽角色卡片，连线组成多智能体流水线",
+  "保存工作流并用真实的并行 agent 运行",
+  "基于 opencode 无头引擎（opencode serve）驱动 agent",
+  "支持通过标题栏的 api keys 面板连接模型提供商并即时生效",
+  "可导入 opencode CLI 已保存的密钥（auth.json）",
+  "提供引擎重启按钮，便于应用合并后的 agent、新技能或 MCP 变更"
+ ],
+ "intro": "OpenFlow 是一个多智能体 AI 工作流的可视化搭建工具。用户可以把角色卡片拖到画布上，连成一条流水线（例如 planner → architect → coder），保存后用真实的并行 agent 运行。\n\n它基于 opencode 项目构建，并以 fork 形式发布，底层由 opencode 的无头引擎（opencode serve）驱动 agent。OpenFlow 自身的代码全部放在 packages/flow 中，不修改上游包，因此引擎可以保持更新，上游合并也不会冲突。\n\n项目使用 TypeScript 编写，运行时依赖 Bun 1.3 或更高版本，采用 MIT 协议。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Bun 1.3 或更高版本和 Git",
+  "克隆仓库并安装依赖：git clone https://github.com/SeeRay11/OpenFlow.git && cd OpenFlow && bun install",
+  "启动引擎和画布：FLOW_MANAGE_SERVER=1 bun openflow.ts（Windows PowerShell 用 $env:FLOW_MANAGE_SERVER=1; bun openflow.ts）",
+  "浏览器打开 http://localhost:5174 使用画布",
+  "如需使用付费模型，点击标题栏的 api keys 连接提供商并粘贴密钥"
+ ],
+ "summary": "OpenFlow 是一个可视化搭建多智能体 AI 工作流的工具，用户把角色卡片拖到画布上连成流水线，保存后用真实的并行 agent 运行。它基于 opencode 的无头引擎驱动 agent，自身代码集中在 packages/flow，不修改上游包。适合需要让多个 AI agent 协作完成任务的开发者，例如编排 planner、architect、coder 等角色。",
+ "tagline": "可视化搭建多智能体 AI 工作流"
+}

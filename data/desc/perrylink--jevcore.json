@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Agent 流程中加入类型化判断能力的开发者，以及使用 DeepSeek Harness 或 MCP 主机并关注数据外发控制的用户。",
+ "date": "2026-10-15",
+ "features": [
+  "提供 jev_ask、jev_rank、jev_check 三个类型化判断工具",
+  "默认离线 mock provider，不发起网络请求",
+  "启动时打印每个功能的 egress 契约，明确发送哪些字段",
+  "safety 和 context 门控默认关闭，需显式 opt-in",
+  "发送前对敏感字段和已知密钥形态做两轮脱敏",
+  "同时支持 DeepSeek Harness 插件和 MCP stdio 两种接入方式"
+ ],
+ "intro": "jevcore 是一个 TypeScript 决策层，把 Jev 的类型化判断能力接入 DeepSeek Harness 和任意 MCP 主机。Jev 不是聊天模型，它回答的是类型化问题——noul（是/否）、choice、score，并返回经过校准的概率，不生成散文式文本。项目由三个包组成：jevcore 是核心决策层，不依赖 DSH 或 Cordis；jevcore-dsh 是 DSH 插件，提供一个服务、三个工具和两个可选门控；jevcore-mcp 通过 stdio 以 MCP 协议暴露同样的三个工具。\n\n项目默认离线运行，使用 mock provider，不会发起网络请求。只有显式配置 provider: live 并解析到凭据后才会走在线路径。每个功能的传输行为都会在启动日志中逐条打印，门控默认关闭，禁用时不会注册任何事件监听器。发送前会经过 redact.ts 的两轮脱敏处理，但作者也明确说明这只是缓解措施，无法识别未知形态的密钥。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "作为 DSH 插件安装：dsh plugin --profile <profile> add jevcore-dsh",
+  "从本地 checkout 安装：dsh plugin --profile <profile> add /absolute/path/to/jevcore/packages/dsh",
+  "作为 MCP 服务器运行：npx -y jevcore-mcp",
+  "通过环境变量选择 provider：TYPESAFE_API_KEY、OPENROUTER_API_KEY 或 JEV_PROVIDER"
+ ],
+ "summary": "jevcore 把 Jev 的类型化判断能力封装成 TypeScript 决策层，让 Agent 可以提出是/否、选择、评分这类结构化问题并拿到校准概率，而不是让模型写一段文字。它同时提供 DSH 插件和 MCP 服务器两种接入方式，核心包不依赖具体宿主。项目默认离线运行，只有显式开启 live provider 才会联网，且每个功能的发送内容都会在启动日志中逐条列出，门控默认关闭。适合需要在 Agent 流程中引入判断能力、又希望清楚掌握数据外发边界的开发者。",
+ "tagline": "为 AI Agent 提供类型化判断能力的 TypeScript 决策层"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望拥有一个可长期运行、跨平台交互并能自我积累经验的 AI Agent 的开发者与进阶用户。",
+ "date": "2026-10-15",
+ "features": [
+  "内置学习闭环：从经验中创建技能、使用中自我改进、跨会话记忆与用户建模",
+  "多平台接入：Telegram、Discord、Slack、WhatsApp、Signal 与 CLI 共用一个 gateway 进程",
+  "完整终端 TUI：多行编辑、斜杠命令自动补全、对话历史、中断重定向与流式工具输出",
+  "内置 cron 调度器，可用自然语言设置定时任务并投递到任意平台",
+  "支持派生子 agent 并行工作，并可通过 RPC 用 Python 脚本调用工具",
+  "七种终端后端：local、Docker、SSH、Singularity、Modal、Daytona、Vercel Sandbox"
+ ],
+ "intro": "Hermes Agent 是 Nous Research 开发的一款自我改进型 AI Agent，核心特点是内置学习闭环：它能从任务经验中自动创建技能，并在使用过程中持续改进这些技能，主动提醒自己保存知识，检索自己过去的对话，并在跨会话中逐步建立对用户的认知模型。\n\n它不绑定在你的笔记本上，可以运行在 5 美元的 VPS、GPU 集群或空闲时几乎不产生费用的 serverless 基础设施上，并通过 Telegram、Discord、Slack、WhatsApp、Signal 和 CLI 等渠道与你交互。模型方面支持 Nous Portal、OpenRouter、OpenAI 以及自建 endpoint，用 `hermes model` 即可切换，无需改代码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux/macOS/WSL2 安装：curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash",
+  "Windows 原生安装（PowerShell）：iex (irm https://hermes-agent.nousresearch.com/install.ps1)",
+  "安装后重载 shell：source ~/.bashrc（或 source ~/.zshrc）",
+  "启动对话：hermes",
+  "选择模型：hermes model；配置工具：hermes tools；完整向导：hermes setup"
+ ],
+ "summary": "Hermes Agent 是 Nous Research 推出的 AI Agent，主打自我改进：它从任务中自动创建技能并在使用中持续优化，还会检索历史对话、跨会话积累对用户的了解。它可运行在 VPS、GPU 集群或 serverless 环境，通过 Telegram、Discord、Slack、WhatsApp、Signal 和 CLI 与你交互，并支持 Nous Portal、OpenRouter、OpenAI 及自建 endpoint 等多种模型来源。适合需要长期运行、跨平台使用并希望 Agent 随使用不断积累能力的开发者。",
+ "tagline": "Nous Research 出品的可自我改进 AI Agent"
+}

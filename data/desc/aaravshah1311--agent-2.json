@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合开发者、安全研究人员和需要自动化复杂工作流的用户，尤其是希望本地运行、数据自主可控的 AI 代理使用者。",
+ "date": "2026-10-15",
+ "features": [
+  "自主执行代码编写、调试、系统分析和文件管理",
+  "提供 CLI、Web UI 和双模式三种交互界面，共享同一后端",
+  "内置 18 个代理工具，覆盖命令执行、文件操作、搜索和文件转换",
+  "支持多个 Gemini 模型和 fast/pro/thinking 三种运行模式",
+  "所有状态保存在本地 SQLite 数据库，无账户、无遥测",
+  "可通过 MCP 桥接动态扩展工具，支持网络安全任务"
+ ],
+ "intro": "Agent-2 是一个在本地运行的自主 AI 代理工具，通过 Google Gemini 模型将自然语言提示转化为实际执行。它能够编写和调试代码、分析系统、管理文件、运行命令以及编排工具，旨在以最少的人工干预完成复杂的工作流。\n\n项目提供三种交互界面：默认的命令行界面（CLI）、基于 Flask 和 Socket.IO 的 Web 界面（运行在 localhost:1311），以及同时运行两者的双模式。所有界面共享同一套系统提示、工具调度器、记忆和规则表、差异引擎、命令看门狗、模型路由器和 SQLite 数据库（agent2.db），状态完全本地化，无需账户、服务或遥测。\n\nAgent-2 内置 18 个代理工具，涵盖核心操作（如 run_command、read_file、write_file、grep_search 等）和文件智能工具（如 detect_file、convert_file 等），并支持通过 MCP 桥接动态添加工具。模型方面支持多个 Gemini 版本（如 2.5-flash、3.5-flash 等），并提供 fast、pro、thinking 三种模式，其中 thinking 模式支持思考预算。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/aaravshah1311/Agent-2.git",
+  "cd Agent-2",
+  "python run.py  # 创建虚拟环境、安装依赖并提示输入 Gemini API 密钥",
+  "python run.py --cli  # 启动命令行界面（默认）",
+  "python run.py --web  # 启动 Web 界面（http://localhost:1311）"
+ ],
+ "summary": "Agent-2 是一个本地运行的自主 AI 代理工具，利用 Google Gemini 模型将自然语言指令转化为实际执行，可完成代码编写调试、终端自动化、文件管理和网络安全任务。它提供命令行、网页和双模式三种界面，共享同一套工具调度、记忆和数据库，所有状态保存在本地 SQLite 文件中，无需账户或云服务。适合开发者、安全研究人员和需要自动化复杂工作流的用户。",
+ "tagline": "自主 AI 代理工具，可编码、自动化终端与执行网络安全任务"
+}

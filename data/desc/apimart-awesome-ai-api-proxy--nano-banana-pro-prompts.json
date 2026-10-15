@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为图像生成模型编写提示词的开发者、设计师和内容创作者，尤其是想直接复用可验证配方的人。",
+ "date": "2026-10-15",
+ "features": [
+  "8 条实测提示词配方，每条附生成图、宽高比与费用",
+  "提示词以 data/prompts.json 和 PROMPTS.md 两种形式提供",
+  "提示词结构速查表：主体、光线、构图、场景、成片风格",
+  "examples/run_recipes.py 支持 --dry-run、--limit、--category 参数",
+  "提供 curl 调用示例与首次调用排错表"
+ ],
+ "intro": "这个仓库收录了 8 条经过端到端实测的 Nano Banana Pro 提示词配方，模型 id 为 gemini-3-pro-image-preview。每条配方都附带了实际生成的图片、宽高比、任务返回的费用以及完整提示词原文，覆盖产品电商、电影感街景、美食俯拍、建筑、插画、时尚人像、微距自然和 UI 信息图等类别。提示词同时以机器可读的 data/prompts.json 和 PROMPTS.md 表格形式提供。\n\n仓库还总结了三条提示词写作经验：写明材质而非形容词、显式指定光线方向与质感、用比例加镜头语言固定构图，并给出包含主体、光线、构图、场景、成片风格的结构速查表。示例脚本通过 APIMart 的 OpenAI 兼容接口调用模型，支持按类别筛选和限制生成数量。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "export APIMART_API_KEY=...",
+  "python examples/run_recipes.py --dry-run  # 列出配方，不发起网络请求",
+  "python examples/run_recipes.py --limit 2  # 生成其中两条",
+  "python examples/run_recipes.py --category \"Food\"  # 按类别筛选",
+  "或使用 curl 向 https://api.apimart.ai/v1/images/generations 提交请求，model 填 gemini-3-pro-image-preview"
+ ],
+ "summary": "这个仓库把 8 条 Nano Banana Pro 提示词配方连同实际生成结果一起公开，每条都标注了宽高比、任务返回的费用和完整提示词，方便直接复制后替换主体使用。它适合需要为图像生成模型写提示词、又希望有可验证样例参考的开发者与设计师，也给出了材质、光线、构图三方面的写作要点和结构速查表。",
+ "tagline": "8 条经实测的 Nano Banana Pro 图像生成提示词配方"
+}

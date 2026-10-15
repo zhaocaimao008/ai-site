@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要理解第三方应用或二进制实现方式的开发者，以及希望让 AI Agent 参与逆向分析流程的安全研究人员。",
+ "date": "2026-10-15",
+ "features": [
+  "通过 MCP 把逆向分析工具接入 Claude Code、Codex、Cursor、Gemini CLI 等 Agent",
+  "分析原生二进制、JavaScript/Electron 应用、.NET 程序集和网站",
+  "原生分析可复用已有的 Hopper、Ghidra 或 IDA 安装",
+  "静态 JavaScript/Electron 分析无需原生分析引擎",
+  "分析结果附带证据与局限说明，并支持在终端直接调用",
+  "提供 setup 命令自动注册 MCP server 与工作流指令"
+ ],
+ "intro": "REA 是一个面向逆向工程的 MCP 工具集，把 AI Agent 连接到分析原生二进制、JavaScript/Electron 应用、.NET 程序集和网站的工具上。你可以让 Agent 在没有源码的情况下检查目标程序，解释某个功能如何实现，并给出对应的证据和局限。\n\n分析在本地运行，结果会附带证据与不确定性说明。原生分析可以复用已有的 Hopper、Ghidra 或 IDA 安装；静态 JavaScript 分析不需要原生分析引擎。除了配合 Agent 使用，同样的工具也能直接在终端里调用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 22.x（>=22.19）、24.x（>=24.11）或 26+ 以及 npm",
+  "运行 npx rea-agents setup，选择要接入的 Agent 并确认变更，然后重启 Agent",
+  "向 Agent 提问，例如：Understand how search works in the Notes app, show me the evidence, and build a similar feature for my project.",
+  "在终端分析 JavaScript/Electron 应用：npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json",
+  "如需长期使用 CLI，可执行 npm install --global rea-agents，然后运行 rea --help"
+ ],
+ "summary": "REA 把 AI Agent 和逆向分析工具连起来，让 Agent 在没有源码的情况下检查原生二进制、JavaScript/Electron 应用、.NET 程序集和网站，解释某个功能是怎么实现的，并给出证据和局限。分析在本地运行，原生分析可以复用已有的 Hopper、Ghidra 或 IDA。适合想弄清第三方应用实现方式、并希望让 Agent 参与分析流程的开发者。",
+ "tagline": "通过 MCP 让 AI Agent 逆向分析二进制、应用与网站"
+}
