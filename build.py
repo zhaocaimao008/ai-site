@@ -139,9 +139,11 @@ class Site:
 
     def item_list(self, name, names):
         elements = []
-        for i, n in enumerate(names, 1):
-            url = self.abs_url(self.page_url(n)) if n in self.desc else self.repos[n]["url"]
-            elements.append({"@type": "ListItem", "position": i, "name": n, "url": url, "item": url})
+        for n in names:
+            if n not in self.desc:
+                continue  # 没有站内详情页的不进 ItemList
+            url = self.abs_url(self.page_url(n))
+            elements.append({"@type": "ListItem", "position": len(elements) + 1, "url": url})
         return {
             "@context": "https://schema.org",
             "@type": "ItemList",
@@ -574,11 +576,11 @@ class Site:
                 errors.append(f"{path} ItemList position 不连续")
                 return
             url = item.get("url")
-            if not item.get("name") or not str(url).startswith("https://") or item.get("item") != url:
-                errors.append(f"{path} ItemList 第 {i} 项 url/name 无效")
+            if not str(url).startswith("https://ai427.com/p/"):
+                errors.append(f"{path} ItemList 第 {i} 项 url 不是站内详情页")
                 return
-            if item["name"] not in text:
-                errors.append(f"{path} ItemList 项目 {item['name']} 未出现在页面上")
+            if set(item.keys()) - {"@type", "position", "url"}:
+                errors.append(f"{path} ItemList 第 {i} 项有多余字段")
                 return
 
     def _check_software(self, path, node, canonical, text, errors):
