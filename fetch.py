@@ -120,6 +120,7 @@ SYSTEM = """你是一个中文 AI 开源项目导航网站的编辑。根据给�
 - 语言简洁自然,面向想了解和上手这个项目的开发者与普通用户,不要营销腔。
 - 专有名词、命令、模型名保留英文原文。
 - quickstart 只在 README 给出了安装或使用方法时填写,命令必须来自 README;没有就返回空数组。
+- summary 是项目页顶部的原创中文导读:用自己的话说明这个项目解决什么问题、适合什么场景,80~160 个汉字;只写材料里能确认的内容,不要编造功能、数据或评价;不要写 star 数、日期或协议;不要照抄 tagline 或 intro 的原句。
 - 如果这个项目实际上与 AI 无关,或只是资料合集、教程目录、空项目,ai_related 填 false。"""
 
 SCHEMA = {
@@ -131,8 +132,9 @@ SCHEMA = {
         "features": {"type": "array", "items": {"type": "string"}, "description": "3~6 条主要功能"},
         "audience": {"type": "string", "description": "适合谁使用,1~2 句话"},
         "quickstart": {"type": "array", "items": {"type": "string"}, "description": "2~5 个上手步骤,可含 README 中的命令"},
+        "summary": {"type": "string", "description": "原创中文导读,80~160 个汉字,只依据材料概括问题和适用场景,不写 star、日期、协议,不照抄 tagline"},
     },
-    "required": ["ai_related", "tagline", "intro", "features", "audience", "quickstart"],
+    "required": ["ai_related", "tagline", "intro", "features", "audience", "quickstart", "summary"],
     "additionalProperties": False,
 }
 
@@ -154,7 +156,7 @@ def describe(cfg, repo, text):
             {"role": "user", "content": f"项目信息:\n{json.dumps(info, ensure_ascii=False)}\n\nREADME(开头部分):\n{text}"},
         ],
         "response_format": {"type": "json_object"},
-        "max_tokens": 2000,
+        "max_tokens": 2500,
         "temperature": 0.3,
     }).encode()
     req = urllib.request.Request(cfg["api_base"].rstrip("/") + "/chat/completions", data=body, headers={
@@ -169,18 +171,23 @@ def describe(cfg, repo, text):
         print(f"  跳过 {repo['full_name']}:finish_reason={choice.get('finish_reason')}")
         return None
     out = json.loads(choice["message"]["content"])
-    if not all(k in out for k in SCHEMA["required"]) or not isinstance(out["features"], list) or not isinstance(out["quickstart"], list):
+    summary = out.get("summary")
+    if (not all(k in out for k in SCHEMA["required"]) or not isinstance(out.get("features"), list)
+            or not isinstance(out.get("quickstart"), list) or not isinstance(summary, str) or not summary.strip()):
         print(f"  跳过 {repo['full_name']}:返回字段不完整")
         return None
     out = {k: out[k] for k in SCHEMA["required"]}
+    out["summary"] = summary.strip()
     out.update({"model": resp.get("model", cfg["model"]), "date": TODAY})
     return out
 
 
 def sample_desc(repo):
-    return {"ai_related": True, "tagline": f"{repo['full_name'].split('/')[1]} 的示例一句话介绍",
+    short = repo["full_name"].split("/")[1]
+    return {"ai_related": True, "tagline": f"{short} 的示例一句话介绍",
             "intro": "这是离线测试用的示例介绍。\n正式运行时由 DeepSeek 根据 README 自动生成。",
             "features": ["示例功能一", "示例功能二", "示例功能三"], "audience": "示例适用人群。",
+            "summary": f"{short} 的示例中文导读,只用于离线测试;正式运行时根据 README 改写,不编造功能。",
             "quickstart": ["git clone " + repo["url"], "按 README 安装依赖"], "model": "sample", "date": TODAY}
 
 
