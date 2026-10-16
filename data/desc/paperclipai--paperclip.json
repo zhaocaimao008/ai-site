@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时协调多个 AI Agent 完成业务目标的团队或个人，尤其是已经在使用 Claude Code、Codex、Cursor 等工具、希望统一管理任务、权限和成本的开发者与管理者。",
+ "date": "2026-10-16",
+ "features": [
+  "以任务管理器的方式分配、审批和追踪 AI Agent 的工作",
+  "支持人类与 Agent 混合的组织架构，可设置角色、权限和职责边界",
+  "为不同 Agent 选择模型和执行框架，兼容 OpenClaw、Claude Code、Codex、Cursor 等多种工具",
+  "集中监控任务进度与成本，支持预算控制",
+  "提供 Skill Studio 与组织级共享技能，用于训练和评估 Agent",
+  "可通过自定义流程、HTTP 端点和外部适配器扩展 Agent 阵容"
+ ],
+ "intro": "Paperclip 是一个用 TypeScript 编写的开源应用，包含 Node.js 服务端和 React 界面，用来编排一支 AI Agent 团队去完成业务目标。它的定位不是单个 Agent 工具，而是把多个 Agent 组织成类似公司的结构：你可以定义目标、组建团队（CEO、CTO、工程师、设计师、市场等角色）、分配任务，并在同一个仪表盘里跟踪工作进度和成本。\n\n它支持接入多种 Agent 与模型，包括 OpenClaw、Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Hermes、Grok Build、Kimi Code 等，也可以按 Agent 分别选择模型和执行框架。README 强调的四个支柱是：面向 Agent 的任务管理、Agent 组织架构与权限、Agent 员工培训与评估，以及支撑运行的基础设施。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Paperclip 是一个开源的多 Agent 编排应用，把 AI Agent 当作员工来管理：先定义业务目标，再组建由不同角色 Agent 构成的团队，然后审批策略、设定预算并让它们自主运行。它支持接入 OpenClaw、Claude Code、Codex、Cursor 等多种 Agent 与模型，把任务、权限、技能和成本集中在一个仪表盘里，适合需要同时协调多个 Agent 长期协作、又希望保留审核与预算控制的场景。",
+ "tagline": "开源的多 AI Agent 团队编排与管理工作台"
+}

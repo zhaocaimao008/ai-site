@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合正在使用或准备上手 Claude Code 的开发者，以及希望了解 agentic coding 工作流实践的工程人员。",
+ "date": "2026-10-16",
+ "features": [
+  "按概念整理 Claude Code 的 Subagents、Commands、Skills、Hooks、MCP Servers 等能力",
+  "为每项能力提供 best-practice 最佳实践文档与 implementation 实现示例",
+  "包含 Orchestration Workflow 编排工作流示例",
+  "收录官方 Skills 链接与面向大型 monorepo 的 Skills 报告",
+  "汇总 Settings、Memory、Status Line、CLI 启动参数等配置说明",
+  "提供 How to Use 章节指导仓库使用方式"
+ ],
+ "intro": "这是一个围绕 Claude Code 的实践型仓库，主题是从 vibe coding 走向 agentic engineering。它把 Claude Code 的各类能力按概念整理成表格，包括 Subagents、Commands、Skills、Workflows、Hooks、MCP Servers、Plugins、Settings、Status Line、Memory、Checkpointing、Sessions、Context Window、CLI 启动参数等，并分别给出最佳实践文档与实现示例的入口。\n\n仓库还收录了 Orchestration Workflow、官方 Skills 链接、面向大型 monorepo 的 Skills 报告，以及 Boris Cherny 关于 Claude Code 的推文等内容。README 提供了 How to Use 章节，方便读者按需查阅。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库围绕 Claude Code 整理了一套实践资料，主题是从 vibe coding 过渡到 agentic engineering。它把 Subagents、Commands、Skills、Hooks、MCP Servers、Settings、Memory 等能力逐项列出，并分别链接到最佳实践文档和实现示例，还包含编排工作流与官方 Skills 参考。适合想系统了解 Claude Code 各项功能、并寻找可参考配置方式的开发者按需查阅。",
+ "tagline": "Claude Code 从氛围编程到智能体工程的实践指南"
+}

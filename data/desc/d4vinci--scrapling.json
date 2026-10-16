@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要网页抓取的开发者、数据科学家以及希望自动化数据提取的普通用户。",
+ "date": "2026-10-16",
+ "features": [
+  "自适应解析器：从网站变化中学习，自动重新定位元素",
+  "多种抓取器：包括 Fetcher、AsyncFetcher、StealthyFetcher、DynamicFetcher，可绕过反爬系统",
+  "爬虫框架：支持并发、多会话爬取，具备暂停/恢复和自动代理轮换",
+  "自适应爬取速度：根据网站响应速度调整，并在被封锁时退避",
+  "实时统计和流式输出：提供快速爬取体验",
+  "支持 MCP 服务器和 CLI 工具"
+ ],
+ "intro": "Scrapling 是一个自适应的网页抓取框架，旨在处理从单次请求到大规模爬取的各种任务。其解析器能从网站变化中学习，并在页面更新时自动重新定位元素；其抓取器开箱即用地绕过 Cloudflare Turnstile 等反爬系统。\n\n该框架的爬虫组件支持并发、多会话爬取，具备暂停/恢复、自动代理轮换功能，爬取速度能根据每个网站的响应速度自适应调整，并在被封锁时自动退避。所有功能只需几行 Python 代码即可实现。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Scrapling：pip install scrapling",
+  "使用 StealthyFetcher 抓取网页：from scrapling.fetchers import StealthyFetcher; StealthyFetcher.adaptive = True; p = StealthyFetcher.fetch('https://example.com', headless=True, network_idle=True)",
+  "使用 CSS 选择器提取数据：products = p.css('.product', auto_save=True)",
+  "当网站结构变化时，使用自适应模式：products = p.css('.product', adaptive=True)",
+  "运行爬虫：定义 Spider 子类并调用 start() 方法"
+ ],
+ "summary": "Scrapling 是一个自适应网页抓取框架，能应对网站结构变化和反爬机制。它提供从单次请求到大规模爬取的完整解决方案，解析器可自动重新定位元素，抓取器能绕过 Cloudflare 等防护，爬虫支持并发、代理轮换和自适应速度。适合需要稳定抓取数据的开发者和数据工作者。",
+ "tagline": "自适应网页抓取框架，从单次请求到大规模爬虫"
+}

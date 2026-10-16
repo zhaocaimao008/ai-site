@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管个人 AI 助手、需要把 Agent 接入聊天工具或自动化流程的开发者，以及愿意按文档配置模型服务的进阶用户。",
+ "date": "2026-10-16",
+ "features": [
+  "浏览器 WebUI 与终端两种交互方式",
+  "接入 Telegram、Discord、Slack、微信、邮件等多种聊天渠道",
+  "内置文件工具，可读取 PDF、Word、Excel、PowerPoint",
+  "支持 shell、网页搜索/抓取、MCP、cron、图像生成与多 Agent 委派",
+  "通过 Dream 保存会话历史与长期记忆",
+  "提供 Python SDK 与 OpenAI 兼容 API"
+ ],
+ "intro": "nanobot 是一个用 Python 编写的超轻量、开源、可自托管的个人 AI Agent 框架。它可以在浏览器 WebUI 或终端中运行，也能接入 Telegram、Discord、Slack、微信、邮件、Mattermost、Linear 等聊天渠道，让用户通过熟悉的界面与 AI 协作处理文件、记住偏好并安排任务。\n\n项目内置文件工具，可读取 PDF、Word、Excel、PowerPoint 等文档，并支持 shell、网页搜索与抓取、MCP 集成、定时任务、图像生成以及多 Agent 委派。它通过 Dream 保存会话历史与长期记忆，可运行长周期目标和定时自动化，同时提供 Python SDK 与 OpenAI 兼容 API 便于集成。模型方面支持 OpenAI 兼容接口、本地 LLM 以及回退模型，用户需自行准备模型账号或本地服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Python 3.11 或更新版本，并准备好受支持的模型服务或本地模型服务器",
+  "macOS / Linux 运行：curl -fsSL https://raw.githubusercontent.com/HKUDS/nanobot/main/scripts/install.sh | sh",
+  "Windows PowerShell 运行：irm https://raw.githubusercontent.com/HKUDS/nanobot/main/scripts/install.ps1 | iex",
+  "已使用 uv 的用户可运行：uv tool install nanobot-ai",
+  "安装完成后按提示完成设置，在 WebUI 或终端中开始对话"
+ ],
+ "summary": "nanobot 是一个用 Python 写的超轻量自托管个人 AI Agent 框架，目标是把 AI 助手放进浏览器、终端或日常聊天工具里，帮用户处理文件、记住偏好并安排任务。它内置文件读取、shell、网页搜索、MCP、定时任务和多 Agent 委派等能力，支持 OpenAI 兼容接口与本地模型，并提供 Python SDK 和 OpenAI 兼容 API。适合想自己掌控整套栈、把 Agent 接入聊天渠道或自动化流程的开发者与进阶用户。",
+ "tagline": "超轻量自托管个人 AI Agent 框架，支持 WebUI 与聊天应用"
+}

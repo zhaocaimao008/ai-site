@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Claude.ai 或其他支持 Skill 格式的编码 agent，并希望扩展其能力的开发者与普通用户。",
+ "date": "2026-10-16",
+ "features": [
+  "按文档处理、开发工具、数据分析、商业营销等类别整理 1000+ 个 Claude Skills 与插件",
+  "每个条目附源仓库链接，便于查看和安装具体 Skill",
+  "说明 SKILL.md 的文件结构与渐进式加载机制",
+  "区分 Skill、MCP 与工具在 agent 工作流中的不同角色",
+  "提供 connect-apps 插件，通过 Composio 让 Claude 连接 1000+ 应用执行实际操作"
+ ],
+ "intro": "这是一个收录 Claude Skills、资源和工具的精选清单，面向希望定制 Claude AI 工作流的开发者与用户。仓库按文档处理、开发与代码工具、数据分析、商业营销、沟通写作、创意媒体、效率组织、协作管理、安全系统等类别整理了 1000 多个可直接使用的 Skill 与插件，并附有指向各 Skill 源仓库的链接。\n\nREADME 还解释了 Claude Skills 的机制：每个 Skill 是一个包含 SKILL.md 的文件夹，用 YAML frontmatter 声明名称和描述，正文为 Markdown 指令，可附带脚本与参考文件。Skill 采用渐进式加载，会话开始时只读取名称和描述，任务相关时才加载完整内容，因此单个 agent 可以挂载大量 Skill 而不撑爆上下文。README 同时区分了 Skill、MCP 与工具三者的定位：MCP 负责连接，工具负责动作，Skill 定义工作流程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装插件：claude --plugin-dir ./connect-apps-plugin",
+  "运行设置命令：/connect-apps:setup，按提示粘贴 API key",
+  "重启 Claude：exit 后重新执行 claude",
+  "尝试让 Claude 发送邮件、创建 issue 或发布 Slack 消息，验证是否已连接"
+ ],
+ "summary": "这个仓库把散落在各处的 Claude Skills 和插件汇总成一份分类清单，覆盖文档处理、开发工具、数据分析、营销写作等场景，方便按需查找并跳转到对应源仓库。README 还介绍了 Skill 的文件格式和渐进式加载方式，并说明 Skill 与 MCP、工具之间的分工。适合正在使用 Claude Code 等支持 Skill 的 agent、想为其扩展具体能力的开发者参考。",
+ "tagline": "收录 1000+ 个 Claude Skills 与插件的精选清单"
+}

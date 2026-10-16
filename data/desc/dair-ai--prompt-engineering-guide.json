@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望系统学习提示工程的研究者、开发者，以及对 LLM 应用感兴趣的普通用户。",
+ "date": "2026-10-16",
+ "features": [
+  "提供提示工程入门指南，涵盖 LLM 设置、提示基础、元素与设计技巧",
+  "整理多种提示技术，包括 Zero-Shot、Few-Shot、Chain-of-Thought、Self-Consistency、RAG、ReAct、Tree of Thoughts 等",
+  "展示提示工程应用案例，如函数调用、数据生成、代码生成等",
+  "提供 Prompt Hub，按分类、编码、推理、问答等场景组织提示示例",
+  "介绍 ChatGPT、GPT-4、LLaMA、Gemini 等模型的相关内容",
+  "讨论提示工程的风险与误用，并链接最新论文与工具"
+ ],
+ "intro": "Prompt Engineering Guide 是一个围绕提示工程（prompt engineering）的开源资料库，收集了与 LLM 相关的论文、学习指南、讲座、参考资料和工具。项目指出，提示工程是一门较新的学科，用于开发和优化提示，以便高效地将语言模型应用于各类任务；研究者用它提升模型在问答、算术推理等任务上的表现，开发者用它设计稳健有效的提示技术。\n\n该指南包含多个板块：入门介绍（LLM 设置、提示基础、提示元素、设计技巧与示例）、提示技术（如 Zero-Shot、Few-Shot、Chain-of-Thought、Self-Consistency、RAG、ReAct、Tree of Thoughts 等）、应用案例（函数调用、数据生成、代码生成等）、Prompt Hub（按分类、编码、推理等场景整理的提示）、模型介绍（ChatGPT、GPT-4、LLaMA、Gemini 等）以及风险与误用。内容以 MDX 编写，并提供网页版。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问网页版指南：https://www.promptingguide.ai/",
+  "在 GitHub 仓库中浏览 MDX 源文件，按目录结构阅读各章节",
+  "通过 README 中的链接跳转到具体主题，如入门、技术、应用、Prompt Hub 等",
+  "加入 Discord 社区或订阅 Newsletter 获取更新"
+ ],
+ "summary": "这个项目是一个围绕提示工程的开源资料库，整理了与 LLM 相关的论文、学习指南、讲座、参考资料和工具。它面向希望系统了解提示工程的研究者和开发者，内容涵盖入门基础、多种提示技术、应用案例、按场景组织的提示示例以及模型介绍，并讨论了相关风险与误用。适合作为学习和查阅提示工程知识的参考。",
+ "tagline": "面向 LLM 的提示工程指南，涵盖论文、教程与工具"
+}

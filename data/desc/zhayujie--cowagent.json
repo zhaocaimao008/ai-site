@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望搭建个人 AI 助手、研究 Agent Harness 工程，或需要在多个 IM 渠道和模型间统一管理智能体的开发者与进阶用户。",
+ "date": "2026-10-16",
+ "features": [
+  "任务规划：将复杂任务拆解为步骤，循环调用工具直至达成目标",
+  "多 Agent 团队：每个 Agent 拥有独立角色、模型、技能与知识，可在同一会话中协作",
+  "三层记忆架构（上下文 → 每日 → 核心），支持 Deep Dream 蒸馏与关键词加向量混合检索",
+  "知识管理：自动整理结构化知识为 Markdown wiki，并构建可可视化浏览的知识图谱",
+  "Skills 与工具：可从 Skill Hub、GitHub、ClawHub 一键安装，或通过自然语言创建自定义技能，内置文件、终端、浏览器、调度等工具",
+  "多模型与多渠道：支持 Claude、GPT、Gemini、DeepSeek、Qwen 等主流模型，接入 Web 及多个 IM 平台"
+ ],
+ "intro": "CowAgent 是一个开源的超级 AI 助手与 Agent Harness 参考实现。它会主动规划任务、控制电脑和外部服务、创建并运行 Skills，同时构建个人知识库与长期记忆，还能组成多 Agent 团队，在使用中不断自我进化。\n\n项目采用分层架构：消息通过 Channels 进入，Agent Core 结合记忆、知识和可用工具进行规划推理，再由 Models 生成回复并返回原渠道，各层解耦、可独立扩展。它支持 Web、微信、飞书、钉钉、企业微信、QQ、公众号、Telegram、Slack 等渠道，并原生集成 MCP。\n\n部署上提供一行安装脚本，支持本地、Docker 和服务器多种方式，启动后可通过 Web 控制台完成聊天、模型配置、渠道接入和技能安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux / macOS 执行：bash <(curl -fsSL https://cdn.link-ai.tech/code/cow/run.sh)",
+  "Windows PowerShell 执行：irm https://cdn.link-ai.tech/code/cow/run.ps1 | iex",
+  "Docker 方式：curl -O https://cdn.link-ai.tech/code/cow/docker-compose.yml 后执行 docker compose up -d",
+  "启动后打开 http://localhost:9899 进入 Web 控制台，配置模型、连接渠道并安装技能",
+  "使用 cow CLI 管理服务：cow start | stop | restart、cow status | logs、cow update、cow skill install <name>"
+ ],
+ "summary": "CowAgent 是一个开源的个人 AI 助手与 Agent Harness 实现，能主动拆解任务、调用工具和技能，并通过记忆与知识积累在使用中自我进化。它支持多 Agent 团队协作、多模型切换和多渠道接入，可部署在个人电脑或服务器上，适合想搭建长期运行、可扩展个人智能体的开发者与进阶用户。",
+ "tagline": "开源个人 AI 助手，可规划任务、运行技能并自我进化"
+}

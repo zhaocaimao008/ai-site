@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex、Gemini CLI 等 AI 编程助手，并希望降低 token 消耗和费用的开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "Say less：让 agent 用简短结构回答，代码、命令、路径和错误信息保持原样",
+  "Read less：在模型读取前压缩日志、JSON、CSV 和测试输出，减少输入 token",
+  "Auto：为每次请求自动选择模型和推理强度，README 称可降低费用",
+  "Blocks：代码模式下保留 agent 写过的脚本并重复运行，减少重复 token",
+  "Waste fixes：找出 token 消耗位置并修复，支持保持 prompt 缓存活跃",
+  "Browse：将网页内容压缩后返回给 agent"
+ ],
+ "intro": "Caveman 是一个面向 AI 编程助手的 token 优化工具，核心思路是让 agent 用极简的「原始人语」回答，同时压缩它需要读取的日志、JSON、CSV 和测试输出。项目用 Go 编写，通过一条 npx 命令安装，支持 Claude Code、Codex、Gemini CLI、OpenCode 等 30 多种 agent。\n\n安装后 caveman 会自动找到本机的 agent 和登录信息，并展示将要修改的内容。它包含六个可独立开关的部分：Say less 让回答变短但代码保持原样，Read less 在模型读取前压缩输入，Auto 为每次请求选择模型和推理强度，Blocks 复用 agent 写过的脚本，Waste fixes 定位 token 消耗点，Browse 压缩网页内容。\n\nREADME 中引用了 Adobe Research、JetBrains 和 Elastic 的测试结果，并提供了 caveman status、caveman off 等命令来查看和调整各项功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 22.13 或更高版本",
+  "运行 npx @caveman-ai/cli@latest 完成安装",
+  "安装后 caveman 会自动检测本机 agent 和登录信息，按 Enter 确认",
+  "使用 caveman status 查看已开启的功能",
+  "使用 caveman off browse 等命令单独关闭某个功能"
+ ],
+ "summary": "Caveman 是一个给 AI 编程助手省 token 的工具。它让 agent 用极简方式回答，同时压缩日志、JSON、测试输出等模型需要读取的内容，代码和命令保持原样。安装一条命令即可接入 Claude Code、Codex 等 30 多种 agent，包含回答精简、输入压缩、模型选择、脚本复用等六个可独立开关的部分。适合日常使用 AI 编程助手、希望减少 token 消耗和费用的开发者。",
+ "tagline": "让 AI 编程助手少说废话、少读冗余，省下 token"
+}

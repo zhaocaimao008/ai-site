@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在终端中利用 AI 辅助编程的开发者，无论是新项目还是现有代码库的维护。",
+ "date": "2026-10-16",
+ "features": [
+  "支持云端和本地 LLM，包括 Claude、DeepSeek、OpenAI 等",
+  "为整个代码库生成映射，提升大型项目中的表现",
+  "支持 100 多种编程语言",
+  "自动 git 提交，附带合理的提交信息",
+  "可在 IDE 或编辑器中通过注释请求更改",
+  "支持图片、网页和语音作为上下文"
+ ],
+ "intro": "Aider 是一个在终端中运行的 AI 结对编程工具，让你与 LLM 协作，从零开始新项目或基于现有代码库进行开发。它支持 Claude 3.7 Sonnet、DeepSeek R1 & Chat V3、OpenAI o1、o3-mini & GPT-4o 等云端模型，也能连接本地模型。\n\nAider 会为整个代码库生成映射，帮助它在大型项目中更好地理解上下文。它支持 100 多种编程语言，并自动用合理的提交信息提交更改，方便你用熟悉的 git 工具进行 diff、管理和撤销 AI 的修改。你还可以在 IDE 中通过添加注释来请求更改，或使用语音、图片和网页作为上下文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 aider：python -m pip install aider-install && aider-install",
+  "进入你的代码库目录：cd /to/your/project",
+  "使用 DeepSeek 模型：aider --model deepseek --api-key deepseek=<key>",
+  "使用 Claude 3.7 Sonnet 模型：aider --model sonnet --api-key anthropic=<key>",
+  "使用 o3-mini 模型：aider --model o3-mini --api-key openai=<key>"
+ ],
+ "summary": "Aider 是一个在终端中运行的 AI 结对编程工具，让你与 LLM 协作，从零开始新项目或基于现有代码库进行开发。它支持多种云端和本地模型，能为整个代码库生成映射，帮助在大型项目中更好地理解上下文。Aider 自动用合理的提交信息提交更改，方便你用 git 工具管理修改。你还可以在 IDE 中通过注释请求更改，或使用语音、图片和网页作为上下文。适合希望在终端中利用 AI 辅助编程的开发者。",
+ "tagline": "终端里的 AI 结对编程助手"
+}

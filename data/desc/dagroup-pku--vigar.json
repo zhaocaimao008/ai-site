@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究机器人操作、世界模型与视频生成方向的科研人员和工程师，尤其是关注长时序任务分解与 in-context learning 的开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "子目标规划器与 world-action 策略分离运行，支持长时序操作",
+  "在 RoboTwin 仿真基准上提供评测代码与 checkpoint",
+  "提供策略与子目标规划器的训练代码及数据",
+  "包含数据标注、目标生成与动作转换工具",
+  "支持闭环评测的策略/规划器服务"
+ ],
+ "intro": "ViGAR（Visual Goal-conditioned Action Reasoning）是北京大学 DAGroup 等团队提出的世界-动作模型研究项目，论文题为《Rethinking World-Action Model for Compositional and In-Context Robotic Manipulation》。它面向组合式与上下文学习的机器人操作任务，通过子任务分解与 in-context learning 来完成长时序操作。\n\n仓库包含策略模型（vigar/）、子目标规划器（subgoal_planner/）、RoboTwin 仿真环境（simulation/）、数据处理（data/）以及闭环评测（evaluation/）等模块。策略基于 VeOmni 并内置 Cosmos 运行时，规划器进程通过 PYTHONPATH 选择自己的 Cosmos 运行时，与策略和仿真进程分开运行。\n\n项目已开源 RoboTwin 上的评测代码、checkpoint 与训练代码和数据，900 小时带子任务标注的真机数据集尚未发布。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/DAGroup-PKU/ViGAR.git",
+  "cd ViGAR",
+  "参考 docs/installation.md 配置环境",
+  "参考 docs/download.md 下载权重与数据",
+  "参考 docs/evaluation.md 在仿真基准上评测，或按 docs/training.md 训练策略与子目标规划器"
+ ],
+ "summary": "ViGAR 是一个面向机器人操作的世界-动作模型项目，重点解决组合式任务与长时序操作问题。它把任务拆成子目标，由规划器生成中间视觉目标，再由 world-action 策略执行，并借助 in-context learning 迁移到未见任务。仓库提供 RoboTwin 仿真环境下的训练、评测代码与 checkpoint，适合研究机器人操作、世界模型与视频生成的开发者参考和复现。",
+ "tagline": "面向长时序机器人操作的世界-动作模型与子目标规划框架"
+}

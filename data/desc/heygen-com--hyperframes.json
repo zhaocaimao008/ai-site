@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望用 Web 技术生成视频的开发者，以及想通过 AI 编程代理自动制作视频内容的人。",
+ "date": "2026-10-16",
+ "features": [
+  "将 HTML、CSS、媒体和 seekable 动画渲染为确定性 MP4 视频",
+  "提供本地 CLI 使用方式",
+  "内置 21 个面向 AI 编程代理的 skills，含 /hyperframes 路由入口",
+  "支持产品发布视频、无出镜讲解、PR 转视频、字幕嵌入等创作工作流",
+  "可与 Claude Code、Codex、Cursor、Gemini CLI 等编程代理集成",
+  "提供 Studio、Playground、Catalog 等在线资源"
+ ],
+ "intro": "HyperFrames 是一个开源框架，把 HTML、CSS、媒体素材和可定位（seekable）动画转换成确定性的 MP4 视频。它既可以在本地通过 CLI 使用，也可以作为 AI 编程代理的渲染核心，或作为托管式创作流程背后的渲染引擎。项目使用 TypeScript 编写，要求 Node.js 22 及以上版本。\n\n除了命令行，HyperFrames 还提供面向 AI 编程代理的 skills 体系：共发布 21 个 skills，其中 /hyperframes 是路由入口，负责理解「做一个视频」这类请求并分发到具体创作工作流，例如产品发布视频、无出镜讲解、PR 转视频、字幕嵌入等。这些 skills 可与 Claude Code、Codex、Cursor、Gemini CLI 等支持 skills 的编程代理配合使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中安装插件：claude plugin marketplace add heygen-com/hyperframes",
+  "安装 HyperFrames 插件：claude plugin install hyperframes@hyperframes",
+  "在 /plugin → Marketplaces 中为 hyperframes marketplace 开启自动更新",
+  "使用 /hyperframes:hyperframes 开始创作",
+  "独立 skills 安装（含 OpenCode）：npx skills add heygen-com/hyperframes"
+ ],
+ "summary": "HyperFrames 让开发者用 HTML、CSS 和可定位动画来编写视频，再渲染成确定性的 MP4 文件，适合把网页技术栈用于视频生成的场景。它既能通过本地 CLI 使用，也提供面向 AI 编程代理的 skills，让代理按「做一段视频」这类请求自动完成规划、写 HTML、接动画、加媒体、检查、预览和渲染的流程，可用于产品发布视频、无出镜讲解、PR 说明和字幕嵌入等创作。",
+ "tagline": "用 HTML 和 CSS 编写并渲染确定性 MP4 视频的开源框架"
+}

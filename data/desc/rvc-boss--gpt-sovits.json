@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要语音克隆或文本转语音的开发者、内容创作者和研究者，尤其是希望用少量语音数据训练 TTS 模型的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "零样本 TTS：输入 5 秒语音样本即可进行文本转语音",
+  "少样本 TTS：用 1 分钟训练数据微调模型，提升音色相似度",
+  "跨语言支持：支持英语、日语、韩语、粤语和中文推理",
+  "WebUI 工具：集成人声伴奏分离、自动训练集切分、中文 ASR 和文本标注",
+  "多种安装方式：Windows 整合包、Linux/macOS 脚本、手动安装和 Docker"
+ ],
+ "intro": "GPT-SoVITS 是一个基于 Python 的语音转换与文本转语音（TTS）项目，提供 WebUI 界面。它支持零样本 TTS：输入 5 秒的语音样本即可进行文本转语音；也支持少样本微调：用 1 分钟的训练数据微调模型，提升音色相似度和真实感。\n\n项目支持跨语言推理，目前涵盖英语、日语、韩语、粤语和中文。WebUI 集成了人声伴奏分离、训练集自动切分、中文 ASR 和文本标注等工具，帮助用户构建训练数据集以及 GPT/SoVITS 模型。安装方式包括 Windows 整合包、Linux/macOS 脚本、手动安装和 Docker。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 用户可下载整合包并双击 go-webui.bat 启动",
+  "Linux/macOS 用户运行：conda create -n GPTSoVits python=3.10 && conda activate GPTSoVits",
+  "Linux 用户运行：bash install.sh --device <CU126|CU128|ROCM|CPU> --source <HF|HF-Mirror|ModelScope>",
+  "macOS 用户运行：bash install.sh --device <MPS|CPU> --source <HF|HF-Mirror|ModelScope>",
+  "手动安装：pip install -r extra-req.txt --no-deps && pip install -r requirements.txt"
+ ],
+ "summary": "GPT-SoVITS 是一个开源的语音克隆与文本转语音项目，提供 WebUI 操作界面。它支持零样本 TTS，输入 5 秒语音样本即可合成语音；也支持少样本微调，用 1 分钟数据训练出相似度更高的模型。项目支持英语、日语、韩语、粤语和中文的跨语言推理，并内置人声伴奏分离、训练集切分、中文 ASR 和文本标注等工具，方便用户准备数据。适合需要语音克隆或 TTS 能力的开发者、创作者和研究者。",
+ "tagline": "少样本语音克隆与文本转语音的 WebUI 工具"
+}

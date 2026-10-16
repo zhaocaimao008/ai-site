@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "使用 AI 编程 Agent 的开发者，以及需要把系统结构、流程或计划可视化的普通用户。",
+ "date": "2026-10-16",
+ "features": [
+  "将自然语言描述、计划或代码库转换为可交互的 HTML 图表",
+  "支持 Cursor、Claude Code、Codex CLI、OpenCode 等 Agent 环境",
+  "可通过对话继续修改图表，如添加节点、高亮路径、切换主题",
+  "可读取代码库生成有源码依据的架构图",
+  "提供在线示例画廊与场景指南"
+ ],
+ "intro": "Archify 是一个面向 AI 编程 Agent 的技能（skill），可以把一段描述、一个计划或一个代码库转成可交互的 HTML 图表。你只需用自然语言向 Agent 描述系统结构，例如浏览器调用 API、API 查询 Redis、缓存未命中时访问 PostgreSQL，它就会生成对应的可视化图。\n\n它支持 Cursor、Claude Code、Codex CLI 和 OpenCode 等 Agent 环境，通过 npx skills 命令安装。生成结果不依赖已有仓库，也可以让 Agent 读取代码库，产出有源码依据的架构图。图表生成后还能继续对话调整，比如添加认证流程、高亮某条路径或切换主题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx skills add tt-a1i/archify -g 安装技能",
+  "在 Agent 中描述要绘制的系统，例如：Use Archify to diagram a web request: Browser calls the API, the API checks Redis, and a cache miss queries PostgreSQL and fills the cache.",
+  "继续用自然语言调整图表，如 Add authentication、Highlight the cache-miss path 或 Switch to the light theme"
+ ],
+ "summary": "Archify 是一个给 AI 编程 Agent 用的技能，作用是把你的口头描述、方案或代码库直接变成可交互的 HTML 图表。适合在 Cursor、Claude Code、Codex CLI、OpenCode 等环境里，用一句话讲清系统结构或流程，再通过对话不断调整细节，比如加认证、高亮某条路径或换主题。它不要求你已有仓库，也可以让 Agent 读代码后生成有依据的架构图。",
+ "tagline": "把想法、方案或代码库变成可交互图表的 Agent 技能"
+}

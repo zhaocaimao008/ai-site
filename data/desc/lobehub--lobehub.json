@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望把多个 AI Agent 组织成协作团队的个人用户与开发者，以及需要自托管 AI Agent 平台的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "Operator：统一招聘、调度并汇报整个 AI 团队",
+  "Agent Builder：用自然语言描述需求，自动完成 Agent 配置",
+  "统一接入任意模型与模态，并支持 10,000+ 技能和 MCP 兼容插件",
+  "Agent Groups：多个 Agent 并行协作、迭代改进",
+  "IM Gateway：在已有聊天工具中使用 Agent",
+  "支持 Vercel、Zeabur、Sealos、阿里云或 Docker 自托管部署"
+ ],
+ "intro": "LobeHub 是一个面向 AI Agent 的工作与协作空间，核心思路是把 Agent 当作工作单元，而不是一次性的对话工具。它提供 Agent Builder，用自然语言描述需求即可自动完成配置；同时支持接入多种模型与模态，并通过 10,000+ 技能和 MCP 兼容插件把 Agent 连接到日常工具。\n\n在协作层面，LobeHub 引入 Agent Groups，让多个 Agent 像真实队友一样并行协作、迭代改进，并支持 Pages 场景下的多 Agent 内容写作。它还提供 IM Gateway，让 Agent 出现在你已有的聊天工具中，并具备招聘、调度和汇报整个 AI 团队的能力。\n\n项目使用 TypeScript 开发，支持通过 Vercel、Zeabur、Sealos、阿里云或 Docker 自托管部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "选择部署方式：使用 Vercel、Zeabur、Sealos 或阿里云一键部署，或使用 Docker 部署",
+  "配置环境变量",
+  "获取 OpenAI API Key 并填入配置",
+  "启动服务后进入 LobeHub，开始创建或接入 Agent"
+ ],
+ "summary": "LobeHub 把 AI Agent 当作工作单元来组织，而不是零散的一次性对话工具。它提供 Agent Builder 自动配置 Agent，支持接入多种模型、10,000+ 技能与 MCP 插件，并通过 Agent Groups 让多个 Agent 并行协作。适合希望把 AI 团队统一管理、并让 Agent 在已有聊天工具中工作的用户和开发者，也支持自托管部署。",
+ "tagline": "把 AI Agent 组织成 7×24 小时运转的团队"
+}

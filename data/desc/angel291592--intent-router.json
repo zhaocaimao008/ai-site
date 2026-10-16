@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI Agent 进行开发、希望减少反复澄清和返工的开发者，以及需要把模糊需求转成可执行契约的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "把模糊请求收敛为带类型的 IntentSpec 契约",
+  "先探测仓库、依赖、路由、git 历史等已有信息，只问文件无法回答的问题",
+  "识别自相矛盾、存在两种解读或前提被仓库证伪的请求",
+  "在意图不明确时拒绝输出，避免基于未定义需求开工",
+  "将 IntentSpec 写入 .intent/<intent>.intent.yaml，供后续会话复用",
+  "交付后逐条对照 IntentSpec 检查实现结果"
+ ],
+ "intro": "Intent-Router 是一个面向 AI Agent 的意图编译器。它把「给用户 API 加缓存」这类模糊请求，转换成带类型的 IntentSpec 契约：先查仓库、依赖、路由、git 历史等已有信息，只把文件里查不到的问题抛给用户，并在意图仍不明确时拒绝输出。\n\n它区分四种决策状态：探测、提问、停止或输出。每次运行都会在回复前把 IntentSpec 写入 .intent/<intent>.intent.yaml，字段带证据指针并记录自身状态。后续会话会先读这个文件，已答问题不再重复，已确定的契约按原样实现，交付结果也会对照该文件逐条检查。\n\n项目以 skill 形式提供，无需安装依赖或 API key，支持 Claude Code、Codex 等 Agent 环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 npx skills add angel291592/Intent-Router 安装 skill",
+  "在支持的 Agent 环境中直接提出模糊请求，例如「给用户 API 加缓存」",
+  "Intent-Router 会自动探测仓库并只提出一个真正需要判断的问题",
+  "确认后生成 IntentSpec 并保存到 .intent/<intent>.intent.yaml",
+  "后续会话或 Agent 读取该文件继续工作，并对照它检查交付结果"
+ ],
+ "summary": "Intent-Router 解决的是 AI Agent 拿到模糊需求后直接开工、导致返工的问题。它先查仓库、依赖和文档，只把文件里查不到的问题问给用户，并在意图不明确时拒绝输出。最终生成带类型的 IntentSpec 契约，保存到 .intent 目录，供后续会话复用和交付检查。适合希望减少反复澄清、让 Agent 按明确契约执行的开发场景。",
+ "tagline": "把模糊请求编译成带类型的 IntentSpec 的 AI Agent 技能"
+}

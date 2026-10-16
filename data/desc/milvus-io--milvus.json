@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI 应用（如 RAG、图像搜索、推荐等）构建向量检索能力的开发者，以及需要大规模、可扩展向量数据库的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "高性能向量相似度搜索，支持十亿级向量和大量并发查询",
+  "支持 HNSW、IVF、FLAT、SCANN、DiskANN 等多种向量索引及量化、mmap 变体",
+  "计算与存储分离的分布式架构，可在 Kubernetes 上水平扩展",
+  "支持元数据过滤、范围搜索和混合搜索",
+  "支持数据库、集合、分区等多层级多租户隔离",
+  "提供 Milvus Lite 轻量版本，可通过 pip 安装快速上手"
+ ],
+ "intro": "Milvus 是一个用 Go 和 C++ 编写的高性能向量数据库，用于存储和检索文本、图像、多模态等非结构化数据生成的向量，并支持与整数、字符串、JSON 等标量字段一起管理。它面向 AI 应用场景，提供向量相似度搜索、元数据过滤和混合搜索等能力。\n\nMilvus 采用计算与存储分离的分布式架构，可在 Kubernetes 上水平扩展，支持实时流式更新，并提供 Standalone 单机部署模式。它支持 HNSW、IVF、FLAT、SCANN、DiskANN 等多种向量索引，以及基于量化和 mmap 的变体，并针对 CPU/GPU 做硬件加速。\n\nMilvus Lite 是轻量版本，可通过 pip 安装用于 Python 快速上手；项目也提供 Zilliz Cloud 全托管服务。Milvus 由 LF AI & Data Foundation 托管，主要贡献者为 Zilliz。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python SDK：pip install -U pymilvus",
+  "如需本地轻量版，安装 Milvus Lite：pip install pymilvus[milvus-lite]",
+  "创建客户端：client = MilvusClient(\"milvus_demo.db\")，或指定已部署的 Milvus 服务或 Zilliz Cloud 的 uri 和 token",
+  "创建集合：client.create_collection(collection_name=\"demo_collection\", dimension=768)",
+  "插入数据并执行向量搜索：client.insert(...) 和 client.search(...)"
+ ],
+ "summary": "Milvus 是一个面向 AI 应用的高性能向量数据库，用来存储和检索文本、图像、多模态等非结构化数据生成的向量，并支持元数据过滤和混合搜索。它采用计算与存储分离的分布式架构，可在 Kubernetes 上水平扩展，也提供单机 Standalone 模式和可通过 pip 安装的 Milvus Lite 轻量版本。适合需要为 RAG、图像搜索等场景构建大规模向量检索能力的开发者和团队。",
+ "tagline": "面向 AI 应用的高性能云原生向量数据库"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为聊天机器人、AI 助手或自主 Agent 增加长期记忆能力的开发者，以及希望自托管记忆服务的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "多层级记忆：同时保留 User、Session 和 Agent 状态",
+  "单次 ADD-only 提取，记忆累积不覆盖",
+  "多信号检索：语义、BM25 关键词与实体匹配并行融合",
+  "时间感知检索，区分当前状态、历史事件与未来计划",
+  "提供 Python / npm SDK、CLI 以及自托管与云端两种部署方式"
+ ],
+ "intro": "Mem0（读作 mem-zero）是一个面向 AI 助手和 Agent 的记忆层，用来保存用户偏好、会话状态和 Agent 行为，让对话能够跨轮次、跨会话保持上下文。项目提供 Python 与 npm 两种 SDK，也支持自托管服务和云端托管平台。\n\n新版记忆算法采用单次 ADD-only 提取，记忆只累积不覆盖，并引入实体链接、语义 + BM25 关键词 + 实体的多信号并行检索，以及时间感知检索。官方在 LoCoMo、LongMemEval、BEAM 等基准上给出了评测数据，评测框架已开源。\n\n使用方式上，可以直接 pip install mem0ai 作为库嵌入，也可以用 docker compose 自托管服务，或注册云端平台。CLI 支持在终端里添加和搜索记忆。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：npm install -g @mem0/cli 或 pip install mem0-cli",
+  "以 Agent 身份注册：mem0 init --agent --agent-caller claude-code",
+  "添加一条记忆：mem0 add \"I am using mem0\"",
+  "搜索记忆：mem0 search \"am I using mem0\"",
+  "作为库使用：pip install mem0ai；自托管则执行 cd server && make bootstrap"
+ ],
+ "summary": "Mem0 是一个给 AI 助手和 Agent 用的记忆层，用来解决对话和任务中上下文无法长期保留的问题。它把用户偏好、会话状态和 Agent 行为存下来，在后续交互中按需检索，让回答更贴合个人和历史记录。项目提供 Python、npm SDK 和命令行工具，既可以作为库嵌入应用，也能自托管服务或使用云端平台，适合做客服机器人、AI 助手和自主 Agent 的开发者。",
+ "tagline": "为 AI Agent 提供持久化记忆层的开源基础设施"
+}

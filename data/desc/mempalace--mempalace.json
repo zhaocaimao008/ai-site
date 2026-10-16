@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要长期保存和检索对话历史的开发者，尤其是使用 Claude Code 等编码代理并希望集成记忆功能的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "原样存储对话历史，不进行摘要或改写",
+  "结构化索引：wings、rooms、drawers，支持范围限定搜索",
+  "可插拔检索后端，默认 ChromaDB",
+  "本地优先，数据不离开用户机器",
+  "提供 CLI 和 MCP 服务器，支持 Docker 部署",
+  "包含引导安装和操作的技能（skills）"
+ ],
+ "intro": "MemPalace 是一个本地优先的 AI 记忆系统，用于存储和检索对话历史。它采用原样（verbatim）存储，不做摘要、提取或改写，并通过语义搜索进行检索。索引结构化为“wings”（人物和项目）、“rooms”（主题）和“drawers”（原始内容），使搜索可以限定范围，而不是在扁平语料库上运行。\n\n检索层是可插拔的，默认使用 ChromaDB，接口定义在 mempalace/backends/base.py 中，可以替换其他后端。除非用户明确选择，否则数据不会离开本地机器。项目提供 CLI 和 MCP 服务器，支持 Docker 部署，并包含用于引导安装和操作的技能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 uv 安装：uv tool install mempalace",
+  "初始化项目：mempalace init ~/projects/myapp",
+  "或使用 Docker 拉取镜像：docker pull ghcr.io/mempalace/mempalace:latest",
+  "运行 MCP 服务器：docker run -i --rm -v mempalace-data:/data ghcr.io/mempalace/mempalace",
+  "挖掘数据：docker run --rm -v mempalace-data:/data -v /path/to/project:/work:ro ghcr.io/mempalace/mempalace mine /work"
+ ],
+ "summary": "MemPalace 是一个本地优先的 AI 记忆系统，用于原样存储对话历史并通过语义搜索检索。它不进行摘要或改写，而是将人物和项目组织为 wings、主题组织为 rooms、原始内容存入 drawers，从而支持范围限定的搜索。检索层可插拔，默认使用 ChromaDB，数据默认不离开本地。适合需要长期保存和检索对话历史的开发者，尤其是希望为编码代理集成记忆功能的场景。",
+ "tagline": "本地优先的 AI 记忆系统，原样存储对话历史，语义检索，零 API 调用。"
+}

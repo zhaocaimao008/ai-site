@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex、Cursor 等编码 Agent 的前端开发者，以及希望 Agent 产出更有设计感页面的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "为落地页、营销站、作品集和产品页提供艺术方向",
+  "从 20 个研究方向中抽取并选定设计方向",
+  "使用开放图库中的真实图片与影像，并标注来源",
+  "在真实浏览器中以三种宽度检查页面",
+  "根据自身截图修复最突出的问题，最多三轮",
+  "支持通过 npx skills CLI 或 Claude Code、Codex 插件安装"
+ ],
+ "intro": "Taste Skill 是一组 Agent Skills，目标是让编码 Agent 不再拼装千篇一律的落地页，而是像设计师一样做网站。默认技能会为 Agent 提供艺术方向、真实图片素材，并让它在真实浏览器里检查自己的产出。\n\n据 README 说明，默认技能基于对 247 个精选站点的研究构建，一次构建分六步：读取 brief、从 20 个研究方向中抽三个并选一个、找到把客户素材与方向结合的一句话创意、使用开放图库中的真实图片和影像并标注来源、在真实浏览器中以三种宽度检查页面、查看自己的截图并修复最突出的三个问题（最多三轮）。一次构建大约需要 30 到 45 分钟。\n\n安装通过 npx skills CLI 完成，默认技能需要 Node 22+ 以及已安装的 Chrome、Edge 或 Chromium，不安装额外依赖，也不需要 API key；查找图片需要网络访问。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx skills add https://github.com/Leonxlnx/taste-skill",
+  "npx skills add https://github.com/Leonxlnx/taste-skill --skill \"design-taste-frontend\"",
+  "确保环境为 Node 22+ 并已安装 Chrome、Edge 或 Chromium",
+  "在 Claude Code 中执行 /plugin marketplace add Leonxlnx/taste-skill 与 /plugin install taste-skill@taste-skill"
+ ],
+ "summary": "Taste Skill 是一组面向编码 Agent 的 Agent Skills，用来解决 AI 生成网页千篇一律、缺乏设计感的问题。它给 Agent 提供艺术方向、来自开放图库的真实图片，并让 Agent 在真实浏览器中检查页面、根据截图修正问题。适合使用 Claude Code、Codex、Cursor 等工具做落地页、营销站、作品集和产品页的前端开发者，安装后即可在原有工作流中调用。",
+ "tagline": "让编码 Agent 做出有设计感网页的 Agent Skills"
+}

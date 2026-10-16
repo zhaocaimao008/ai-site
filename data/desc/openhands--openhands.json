@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望自托管管理编码智能体、把日常开发任务自动化的开发者与团队。",
+ "date": "2026-10-16",
+ "features": [
+  "自托管运行，支持本地、Docker、VM 或云端等多种 agent 后端",
+  "在同一界面切换本地、远程和云端 agent，不中断工作",
+  "创建定时或 webhook 触发的自动化流程",
+  "与 Slack、GitHub、Linear、Notion 等第三方服务集成",
+  "支持 OpenHands、Claude Code、Codex、Gemini、Pi、OpenCode 及 ACP 兼容 agent",
+  "支持自带任意 LLM"
+ ],
+ "intro": "OpenHands Agent Canvas 是一个自托管的开发者控制中心，用于管理编码智能体和自动化任务。它默认在本机运行，也可以连接 Docker 容器、虚拟机或公司基础设施中的多种 agent 后端，并在同一个前端界面里切换本地、远程和云端环境。\n\n除了内置的开源 OpenHands agent，它还支持 Claude Code、Codex、Gemini CLI、Pi、OpenCode 等第三方 agent，以及任何兼容 Agent-Client Protocol (ACP) 的 agent。用户可以创建定时或由 webhook 触发的自动化流程，并与 Slack、GitHub、Linear、Notion 等服务集成，例如生成报告发布到 Slack，或把 GitHub issue 自动拆解为任务。模型方面支持自带任意 LLM。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "无沙箱方式：安装 Node.js 24+ 和 uv，然后执行 npm install -g @openhands/agent-canvas",
+  "运行 agent-canvas 启动完整本地栈",
+  "Docker 沙箱方式：设置 PROJECTS_PATH 并创建目录，然后运行 docker run -it --rm -p 127.0.0.1:8000:8000 -e AGENT_CANVAS_ALLOW_LAN_SESSION_KEY=true -v \"$HOME/.openhands:/home/openhands/.openhands\" -v \"${PROJECTS_PATH}:/projects\" ghcr.io/openhands/agent-canvas:1.27.1",
+  "多 Docker 沙箱方式：执行 OH_CONVERSATION_RUNTIME=docker agent-canvas",
+  "打开 http://localhost:8000 开始新对话"
+ ],
+ "summary": "OpenHands Agent Canvas 是一个自托管的开发者控制中心，用来运行和管理编码智能体及其自动化任务。它默认在本机启动，也能连接 Docker、虚拟机或公司基础设施中的 agent 后端，并在同一界面切换本地、远程和云端环境。除内置 OpenHands agent 外，还支持 Claude Code、Codex、Gemini CLI 等第三方 agent，可创建定时或 webhook 触发的自动化流程，并与 Slack、GitHub 等工具集成。",
+ "tagline": "自托管的编码智能体控制中心"
+}

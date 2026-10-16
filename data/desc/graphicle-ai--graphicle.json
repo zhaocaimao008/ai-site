@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Cursor、Codex 等编码智能体的开发者，以及希望为智能体提供本地代码图谱和项目记忆的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "代码图谱：用 tree-sitter 解析文件、函数、类和调用关系，支持搜索、解释符号、追踪路径和导出交互式 HTML 图",
+  "项目记忆：索引 Markdown、PDF、Office、HTML 文档以及 Claude Code 和 Codex 的历史会话，与代码一起搜索",
+  "带引用的上下文：在设定的 token 预算内返回代码、文档和决策的摘录，并标注来源文件和行号",
+  "MCP 服务器：提供代码图谱工具（如 query_graph、get_neighbors、shortest_path）和记忆工具，可选提供 PR 工具",
+  "记忆与代码关联：审核过的记忆绑定到相关函数，代码变更时记忆会过期，文档中的代码提及会链接到定义",
+  "本地优先：无账户、无遥测，数据保存在一个 SQLite 文件中，仅每日检查更新可关闭"
+ ],
+ "intro": "Graphicle 是一个用 Rust 编写的本地程序，为编码智能体提供代码图谱和项目记忆。它把仓库解析成代码图谱，并记住项目文档、决策和过去的智能体会话，让智能体在回答时能引用具体的文件和行号。\n\n它通过 MCP 协议与 Claude Code、Cursor、Codex、VS Code 等客户端集成，所有数据保存在本地 SQLite 文件中，无需 API key 或账户。Graphicle 还提供命令行工具，可以直接在终端提问、浏览图谱或检查依赖影响。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "brew install graphicle-ai/tap/graphicle",
+  "cd your-repo",
+  "graphicle setup",
+  "graphicle ask \"where is tax added to prices?\""
+ ],
+ "summary": "Graphicle 是一个本地运行的 Rust 程序，为编码智能体提供代码图谱和项目记忆。它把仓库解析成代码图谱，并索引项目文档、决策和过去的智能体会话，让智能体在回答时能引用具体的文件和行号。适合使用 Claude Code、Cursor、Codex 等工具的开发者，通过 MCP 协议集成，无需 API key 或账户，数据保存在本地。",
+ "tagline": "为编码智能体提供代码图谱与项目记忆的 Rust 程序"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合前端开发者、UI 设计师以及使用 AI 编程工具快速构建界面的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "400 个交互式 UI 元素，涵盖界面组件和网站区块",
+  "每个元素支持明暗主题、多种输入方式和减少动画",
+  "一键复制为 AI 提示词，包含完整代码和移植说明",
+  "可直接复制或下载原始 HTML/CSS/JS 代码",
+  "提供 AI 代理技能，可自动搜索和移植元素",
+  "无依赖，构建为单个自包含 HTML 文件"
+ ],
+ "intro": "Lucian UX/UI Prompt 是一个包含 400 个交互式 UI 元素的库，其中 200 个是界面组件（按钮、图表、完整应用界面），另外 200 个是网站区块和动画（英雄区、定价表、滚动和文字动效）。每个元素都支持明暗主题、指针、触摸和键盘输入，并适配减少动画偏好，且无外部依赖。\n\n你可以在在线画廊中实时试用每个元素，然后通过“Copy prompt”将包含完整代码和移植说明的提示词粘贴到 AI 编程工具（如 Claude Code、Cursor、Codex）中，让 AI 自动适配到你的项目。也可以直接复制或下载原始 HTML、CSS 和 JS 代码自行移植。\n\n项目还提供了 lucian-uxui 技能，安装后 AI 代理可以自行搜索库并移植元素。所有元素以单文件形式组织，构建脚本会校验格式，确保样式隔离和颜色令牌统一。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开在线画廊 lucianlabs.dev/uxui-prompt 并试用元素",
+  "点击“Copy prompt”复制提示词，粘贴到 AI 编程工具中",
+  "或点击“Copy code”获取原始代码，自行移植",
+  "本地运行：git clone https://github.com/Seokwoooo/lucian-uxui-prompt.git",
+  "cd lucian-uxui-prompt && node src/build.mjs && open prompt-uxui-lab/index.html"
+ ],
+ "summary": "Lucian UX/UI Prompt 提供了 400 个可交互的 UI 元素，包括按钮、图表、完整界面以及网站区块和动画。每个元素都支持明暗主题和多种输入方式，且无外部依赖。你可以直接在在线画廊中试用，然后复制为 AI 提示词或原始代码，快速集成到自己的项目中。适合前端开发者和使用 AI 编程工具的用户，帮助节省设计和编码时间。",
+ "tagline": "400 个可交互 UI 元素，复制为 AI 提示词或代码"
+}

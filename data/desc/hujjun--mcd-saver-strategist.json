@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合价格敏感的学生和上班族、需要控制热量的减脂人群、多人拼单的家庭，以及手里券多、想找最优组合的用券用户。",
+ "date": "2026-10-16",
+ "features": [
+  "拉取麦当劳菜单、价格与多路优惠券池，归一化后参与优化",
+  "确定性组合优化，输出总价最低的 Top-N 点餐方案",
+  "支持预算与热量硬约束，可结合营养数据求解",
+  "区分到店与麦乐送场景，外送费计入总价并过滤不可用券",
+  "下单前用 calculate-price 核价，确认后经 create-order 下单",
+  "内置样例数据与 19 项自测，可离线跑通完整优化流程"
+ ],
+ "intro": "这是一个基于麦当劳中国 MCP 开发的省钱点餐 Skill，也叫「麦门省钱精算师」。它把「菜单 × 优惠券 × 叠加规则」的组合优化交给确定性算法：用户说出想吃的餐品、预算或热量上限，Skill 会拉取门店菜单和全部可用优惠券，穷举出总价最低的合规组合，并支持经 MCP 核价后下单。\n\n项目把职责拆成三层：麦当劳 MCP 负责实时菜单、价格、优惠券、营养、门店与下单；optimizer.py 用纯标准库做确定性组合优化，输出 Top-N 方案；WorkBuddy Agent 负责理解需求、归一化数据、讲解方案并在用户确认后下单。README 给出的示例中，巨无霸 + 中薯条 + 可乐直选 ¥47.00，用「1+1 随心配」组合后为 ¥21.90。\n\n仓库还提供无需 Token 的离线命令行体验和在线试算页，方便直接查看优化结果。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "申请麦当劳 MCP Token：前往 https://open.mcd.cn/mcp 手机号登录，在控制台激活并复制 Token",
+  "配置 MCP 连接：在 WorkBuddy 的【连接器】→【自定义连接器】→【配置 MCP】中填入 mcp-config.example.json 内容，并把 ${MCD_MCP_TOKEN} 替换为真实 Token",
+  "安装 Skill：git clone https://github.com/hujjun/mcd-saver-strategist.git && cp -r mcd-saver-strategist/skills/mcd-saver-strategist ~/.workbuddy/skills/",
+  "在对话框中说「我想吃巨无霸套餐，怎么点最便宜」即可触发",
+  "离线体验：cd skills/mcd-saver-strategist/scripts && python optimizer.py，可用 --budget、--max-calories、--mode delivery 等参数"
+ ],
+ "summary": "麦当劳的优惠券和叠加规则组合起来数量庞大，人工比价和大模型口算都容易出错。这个项目把取数交给麦当劳中国 MCP、把算术交给确定性的 Python 优化器、把表达交给 Agent，用户只需说出想吃的餐品、预算或热量上限，就能得到总价最低的合规点餐组合，并可在确认后下单。它适合想省钱又懒得算券的普通用户，也适合需要控制热量或多人拼单的场景。",
+ "tagline": "麦当劳优惠券组合优化 Skill，算出最省点餐方案"
+}

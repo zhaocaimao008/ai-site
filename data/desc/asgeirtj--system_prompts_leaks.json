@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合研究提示词工程、想了解主流 AI 产品行为约束的开发者，以及对系统提示词内容感兴趣的普通读者。",
+ "date": "2026-10-16",
+ "features": [
+  "收录 Anthropic、OpenAI、Google、xAI 等多家厂商的系统提示词原文",
+  "按厂商与产品分目录组织，README 提供分类索引表格",
+  "覆盖 Claude Code 的多种运行形态（桌面、云端、headless 等）",
+  "记录最近新增与变更的条目及对应日期",
+  "接受 PR 与联系反馈，欢迎补充不同结果"
+ ],
+ "intro": "这个仓库收集了目前主流 AI 产品背后的系统提示词（system prompt）原文，覆盖 Anthropic 的 Claude 系列（Claude.ai、Claude Code、artifact types 等）、OpenAI 的 ChatGPT 与 Codex、Google 的 Gemini、xAI 的 Grok，以及 Cursor、Kimi、Meta Muse 等。仓库按厂商和产品分目录整理，README 中提供按模型和组件分类的索引表格，并持续记录最近新增或变更的条目。\n\n内容以 Markdown 文件形式存放，部分条目还包含 skills、prompts 等子目录，方便直接查看和对比不同版本之间的差异。仓库接受 PR 和反馈，也欢迎提交不同环境下得到的结果。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库把各大主流 AI 产品的系统提示词原文整理到一起，包括 Claude、ChatGPT、Gemini、Grok 以及 Claude Code、Codex、Cursor 等编程助手。内容按厂商和产品分目录存放，README 提供索引和最近更新记录。适合想研究提示词写法、对比不同产品行为约束的开发者，也方便普通读者了解聊天机器人在对话开始前被设定了哪些规则。",
+ "tagline": "收集各大主流 AI 聊天机器人与编程助手系统提示词的仓库"
+}

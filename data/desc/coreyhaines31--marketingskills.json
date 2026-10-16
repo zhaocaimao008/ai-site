@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合技术型营销人员和创始人，希望借助 AI 编程代理完成转化优化、文案、SEO、分析与增长等营销工作。",
+ "date": "2026-10-16",
+ "features": [
+  "提供覆盖 SEO、CRO、内容与文案、付费与衡量、增长与留存、销售与 GTM、策略等多个类别的营销技能",
+  "以 Markdown 技能文件形式组织，兼容 Claude Code、OpenAI Codex、Cursor、Windsurf 等支持 Agent Skills 规范的代理",
+  "技能之间相互引用，product-marketing 作为基础技能被其他技能优先读取",
+  "包含工具连接工作流，可让代理以受限凭证读取营销账户数据",
+  "提供合作伙伴集成注册表与集成指南，列出经过审核的工具集成"
+ ],
+ "intro": "这是一个面向 AI 代理的营销技能集合，以 Markdown 文件形式提供，让 Claude Code、OpenAI Codex、Cursor、Windsurf 等支持 Agent Skills 规范的代理在用户处理营销任务时，能调用对应的框架和最佳实践。技能覆盖转化率优化、文案写作、SEO、分析与增长工程等方向。\n\n技能之间会相互引用并共享上下文，其中 product-marketing 是基础技能，其他技能在执行前会先读取它来了解产品、受众和定位。项目由 Corey Haines 构建，采用 MIT 协议开源，并欢迎社区贡献。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目把营销任务拆成一组 Markdown 技能文件，供 Claude Code、Codex、Cursor 等 AI 代理在用户处理营销工作时调用。技能覆盖转化率优化、文案、SEO、分析与增长工程等方向，彼此引用，并以 product-marketing 作为理解产品与定位的基础。适合技术型营销人员和创始人，让代理按既定框架协助完成营销工作。",
+ "tagline": "面向 AI 编程代理的营销技能库"
+}

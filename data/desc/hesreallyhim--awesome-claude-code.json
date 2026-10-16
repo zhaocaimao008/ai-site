@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合正在使用或准备上手 Claude Code 的开发者，以及希望了解其周边工具生态的技术人员。",
+ "date": "2026-10-16",
+ "features": [
+  "按主题分类整理 Claude Code 相关资源，覆盖技能、代理、状态栏、插件等方向",
+  "包含 Start Here 入门板块，提供面向初学者的指南与参考文章",
+  "收录来自 Anthropic 官方的文档与博客内容",
+  "涵盖 DevOps、安全、测试、可观测性等工程实践类工具",
+  "提供 README_ALTERNATIVES 目录保存旧版资源"
+ ],
+ "intro": "这是一个围绕 Anthropic 的 Claude Code 打造的精选资源清单，收录了技能（Skills）、子代理（subagents）、状态栏（status lines）、插件以及各类开发者工具，并按主题分类整理。\n\n清单涵盖入门指南、官方文档、开源软件、科研、运行时与集成基础设施、远程控制与通知、替代客户端、设计、写作、DevOps、安全、代理编排、记忆与上下文持久化、可观测性、配置、测试、Lint 等多个板块，适合不同阶段的用户按需查找。\n\n项目说明当前版本重点展示此前未收录的新资源，旧有资源会逐步迁移回新格式，同时保留在 README_ALTERNATIVES 目录中。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一个围绕 Claude Code 整理的资源导航清单，把技能、子代理、状态栏、插件和各类开发工具按主题归类，方便开发者按需查找。内容覆盖入门指南、官方文档、DevOps、安全、测试、可观测性等方向，适合刚接触 Claude Code 的新手，也适合想扩展工具链的进阶用户。",
+ "tagline": "精选 Claude Code 资源与工具的中文导航清单"
+}

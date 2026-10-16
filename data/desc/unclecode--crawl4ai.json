@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 LLM 或 AI agent 准备网页数据的开发者，以及构建 RAG 应用、数据管道或进行网页抓取的研究人员。",
+ "date": "2026-10-16",
+ "features": [
+  "将网页转换为干净的 LLM-ready Markdown，保留标题、列表、表格和代码块",
+  "支持 CSS、XPath、正则和 LLM 等多种结构化数据提取策略",
+  "提供异步浏览器池、缓存、会话、代理、Cookie 和用户脚本等控制能力",
+  "支持深度爬取（BFS、DFS、best-first）和自适应爬取，可断点恢复",
+  "可处理 JavaScript 动态页面，支持滚动加载、截图和 PDF 导出",
+  "提供 CLI、Docker 部署以及托管云服务，云服务还包含搜索和问答接口"
+ ],
+ "intro": "Crawl4AI 是一个开源的网页爬虫与抓取工具，目标是把任意网站转换成干净、适合 LLM 使用的 Markdown，用于 RAG、AI agent 和数据管道。它提供 Python 库，可以自己运行，也提供托管云服务。\n\n在本地使用时，通过 pip 安装并运行 crawl4ai-setup 安装浏览器，然后用 AsyncWebCrawler 抓取网页并获取 Markdown。它支持异步浏览器池、缓存、会话、代理、Cookie、用户脚本和钩子，能处理 JavaScript 较重的页面。\n\n输出方面，它生成结构清晰的 Markdown，包含标题、列表、表格和代码块，并可通过内容过滤器去除菜单、页脚等样板内容。还支持用 CSS、XPath、正则或 LLM 进行结构化数据提取，以及深度爬取、自适应爬取、截图和 PDF 等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Crawl4AI：pip install -U crawl4ai",
+  "安装浏览器依赖：crawl4ai-setup",
+  "在 Python 中使用 AsyncWebCrawler 抓取网页并打印 Markdown"
+ ],
+ "summary": "Crawl4AI 是一个开源网页爬虫，能把任意网站转换成干净、适合 LLM 使用的 Markdown，方便用于 RAG、AI agent 和数据管道。它提供 Python 库，可以自己运行，也提供托管云服务。项目支持异步浏览器池、缓存、会话、代理和 JavaScript 渲染，能处理动态页面；输出 Markdown 结构清晰，并可通过过滤器去除菜单、页脚等样板内容。此外还支持用 CSS、XPath、正则或 LLM 提取结构化数据，以及深度爬取、自适应爬取、截图和 PDF 等功能。适合需要为 LLM 准备网页数据的开发者。",
+ "tagline": "把任意网站抓取为适合 LLM 的干净 Markdown"
+}

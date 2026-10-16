@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时管理多个 AI 编程代理的 macOS 开发者，尤其是使用 Claude Code、Codex 等工具进行多项目协作的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "实时监控多个 AI 代理的状态，包括任务进度、文件读写和编辑",
+  "代码编辑器跟随代理操作，自动打开文件并动画显示编辑内容",
+  "代码地图以可视化方式展示代理在项目中的活动路径",
+  "项目记忆在 Claude Code 和 Codex 之间共享，代理可以交接任务",
+  "变更审查收件箱，支持行内评论和一键撤销代理的任意回合",
+  "支持从手机或本地模型进行批准，以及后端和数据库视图"
+ ],
+ "intro": "Tellurion 是一个基于 Ghostty 的 macOS 终端，专为同时运行多个 AI 编程代理（如 Claude Code、Codex、Gemini CLI 等）的开发者设计。它能在终端中实时显示每个代理的工作状态：正在编辑的代码、读取的文件、启动的开发服务器，以及何时需要你的批准。\n\n它提供了代理侧边栏、跟随编辑的代码编辑器、代码地图、项目记忆共享、变更审查收件箱、一键撤销代理操作等功能。代理之间可以共享项目知识、交接任务，所有变更都会进入审查收件箱，你可以随时撤销。\n\nTellurion 兼容 Ghostty 的配置，支持九种代理的实时状态报告，并可通过手机或本地模型进行批准。它免费开源，无需账户，无遥测。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装命令：curl -fsSL https://raw.githubusercontent.com/steventsvik/Tellurion/custom/install.sh | bash",
+  "启动 Tellurion，在欢迎窗口一键连接 Claude Code 和 Codex",
+  "对于其他代理，使用 Check Setup 中的 Connect 按钮进行连接",
+  "在标签页中像往常一样运行代理，Tellurion 会自动跟踪其工作状态"
+ ],
+ "summary": "Tellurion 是一个 macOS 终端，解决同时运行多个 AI 编程代理时难以跟踪各自工作的问题。它基于 Ghostty，能实时显示每个代理的状态、编辑内容、文件访问和需要批准的时刻，并提供代码编辑器跟随、变更审查、一键撤销等功能。适合需要同时管理 Claude Code、Codex 等多个代理的开发者，在多个项目中协作时使用。",
+ "tagline": "为 AI 编程代理打造的 macOS 终端，实时监控多个代理工作"
+}

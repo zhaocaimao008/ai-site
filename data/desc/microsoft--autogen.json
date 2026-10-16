@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 Python 构建多智能体 AI 应用的开发者，以及想通过图形界面快速原型化多智能体工作流的用户。新项目建议优先考虑官方推荐的 Microsoft Agent Framework。",
+ "date": "2026-10-16",
+ "features": [
+  "分层可扩展的框架设计，支持从高层 API 到底层组件的不同抽象层级",
+  "基于 AssistantAgent 与模型客户端（如 OpenAI）构建单个智能体",
+  "通过 AgentTool 等方式实现多智能体编排与协作",
+  "支持接入 MCP Server（如 Playwright MCP）为智能体扩展工具能力",
+  "提供 AutoGen Studio，无需写代码即可原型化并运行多智能体工作流"
+ ],
+ "intro": "AutoGen 是微软推出的多智能体（multi-agent）AI 应用开发框架，用于构建能够自主行动或与人类协作的智能体应用。它采用分层、可扩展的设计，各层职责清晰，开发者既可以使用高层 API 快速搭建，也能深入底层组件做定制。\n\n需要注意，AutoGen 目前已进入维护模式（maintenance mode），不再添加新功能，转为社区维护。官方建议新用户改用 Microsoft Agent Framework，现有用户可参考迁移指南进行迁移。\n\n框架要求 Python 3.10 或更高版本，支持通过 OpenAI 等模型客户端驱动智能体，并提供 AgentChat、MCP 工具集成、多智能体编排以及无需写代码的 AutoGen Studio 图形界面等能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认 Python 版本为 3.10 或更高",
+  "安装 AgentChat 与 OpenAI 客户端：pip install -U \"autogen-agentchat\" \"autogen-ext[openai]\"",
+  "设置 OpenAI API Key：export OPENAI_API_KEY=\"sk-...\"",
+  "编写并运行 Hello World 示例，用 AssistantAgent 调用 gpt-4.1 模型",
+  "如需图形界面，安装并启动 AutoGen Studio：pip install -U \"autogenstudio\"，然后运行 autogenstudio ui --port 8080 --appdir ./my-app"
+ ],
+ "summary": "AutoGen 是微软开源的多智能体 AI 应用框架，用来构建能自主行动或与人类协作的智能体。它采用分层可扩展设计，既提供高层 API 快速搭建，也保留底层组件供定制，并支持 MCP 工具接入、多智能体编排以及免代码的 AutoGen Studio。项目目前已进入维护模式，不再新增功能，官方建议新项目改用 Microsoft Agent Framework，现有用户可参考迁移指南。适合想用 Python 开发多智能体应用的开发者了解与使用。",
+ "tagline": "微软开源的多智能体 AI 应用编程框架"
+}

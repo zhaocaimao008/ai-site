@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望系统学习大语言模型基础知识、微调与量化技术，以及构建 LLM 应用的开发者和学习者。",
+ "date": "2026-10-16",
+ "features": [
+  "三部分课程结构：LLM Fundamentals、The LLM Scientist、The LLM Engineer",
+  "提供大量可直接运行的 Colab notebook，覆盖工具、微调、量化等方向",
+  "每个 notebook 通常附带详细文章，解释原理与步骤",
+  "包含 LLM AutoEval、LazyMergekit、LazyAxolotl、AutoQuant 等实用工具",
+  "微调示例涵盖 Llama、Mistral、CodeLlama 等模型及 Unsloth、ORPO、DPO、QLoRA 等方法",
+  "量化教程涉及 GPTQ、GGUF、llama.cpp、ExLlamaV2 等格式与工具"
+ ],
+ "intro": "这是一个关于大语言模型（LLM）的免费课程仓库，内容分为三个部分：LLM Fundamentals 介绍数学、Python 和神经网络的基础知识，属于可选部分；The LLM Scientist 关注如何用最新技术构建尽可能好的 LLM；The LLM Engineer 则聚焦于创建基于 LLM 的应用并将其部署。\n\n课程配套了大量 Colab notebook 和文章，涵盖工具、微调、量化等主题。例如工具类包括 LLM AutoEval、LazyMergekit、LazyAxolotl、AutoQuant 等；微调类包括用 Unsloth 微调 Llama 3.1、用 ORPO 微调 Llama 3、用 DPO 微调 Mistral-7b、用 QLoRA 微调 Mistral-7b 等；量化类包括 8-bit 量化介绍、GPTQ 4-bit 量化、GGUF 与 llama.cpp 量化、ExLlamaV2 等。每个 notebook 通常配有对应文章链接，方便边学边练。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问课程主页 https://mlabonne.github.io/blog/ 查看完整路线图",
+  "从 LLM Fundamentals 部分开始，按需学习数学、Python 和神经网络基础",
+  "进入 The LLM Scientist 或 The LLM Engineer 部分，选择感兴趣的 notebook",
+  "点击 notebook 表格中的 Colab 图标，在 Google Colab 中直接运行代码",
+  "参考每个 notebook 对应的文章链接，理解背后的原理与实现细节"
+ ],
+ "summary": "这个项目是一套免费的大语言模型课程，把学习路径分成基础、科学家和工程师三块，并配有大量可直接在 Colab 运行的实战笔记。它解决的是 LLM 学习资料零散、缺少动手环节的问题，适合想系统入门、练习微调与量化，或尝试构建 LLM 应用的开发者。",
+ "tagline": "面向 LLM 学习者的免费课程，含路线图与 Colab 实战笔记"
+}

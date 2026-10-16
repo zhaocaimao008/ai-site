@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合习惯在命令行工作的开发者，以及希望把 AI 能力接入脚本或 GitHub 工作流的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "终端内直接调用 Gemini 模型，支持交互式与非交互式使用",
+  "内置工具：Google Search grounding、文件操作、shell 命令、网页抓取",
+  "支持 MCP（Model Context Protocol），可接入自定义集成",
+  "支持 Google 账号登录、Gemini API Key、Vertex AI 三种认证方式",
+  "可通过 GEMINI.md 自定义上下文文件，并支持会话检查点保存与恢复",
+  "提供 Gemini CLI GitHub Action，用于 PR 审查、Issue 分类等自动化流程"
+ ],
+ "intro": "Gemini CLI 是 Google 开源的一款命令行 AI agent，把 Gemini 模型的能力直接放进终端。它提供从提示词到模型的轻量路径，面向习惯在命令行里工作的开发者。\n\n它内置 Google Search grounding、文件操作、shell 命令和网页抓取等工具，支持通过 MCP（Model Context Protocol）接入自定义集成，也能以非交互方式在脚本中运行。认证方式包括 Google 账号登录、Gemini API Key 和 Vertex AI 三种。\n\n项目使用 TypeScript 编写，采用 Apache-2.0 协议，可通过 npx、npm、Homebrew、MacPorts 或 Anaconda 安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 npx 直接运行：npx @google/gemini-cli",
+  "或全局安装：npm install -g @google/gemini-cli",
+  "启动：gemini",
+  "按提示选择 Sign in with Google 完成浏览器认证，或设置 GEMINI_API_KEY 环境变量",
+  "在脚本中使用非交互模式：gemini -p \"Explain the architecture of this codebase\""
+ ],
+ "summary": "Gemini CLI 是 Google 开源的命令行 AI agent，把 Gemini 模型直接放进终端，让开发者不必离开命令行就能提问、改代码或执行任务。它内置搜索、文件、shell 等工具，支持 MCP 扩展，也能以非交互方式跑在脚本里。适合习惯终端工作、想把 AI 接入日常开发或 GitHub 自动化流程的开发者。",
+ "tagline": "把 Gemini 直接带进终端的开源 AI agent"
+}

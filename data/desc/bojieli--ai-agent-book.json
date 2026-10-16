@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想系统学习 AI Agent 原理与工程实践的开发者、学生和技术读者；也适合需要按章动手做实验的读者。",
+ "date": "2026-10-16",
+ "features": [
+  "10 章系统正文，围绕 Agent = LLM + 上下文 + 工具 展开",
+  "109 个按章配套实验，含本地项目与外部复现轨道",
+  "提供 PDF / EPUB 离线下载与在线阅读站点",
+  "正文源码、SVG 配图全部开源，可自行编译",
+  "覆盖上下文工程、RAG、MCP、Coding Agent、多模态、评估与后训练等主题",
+  "含 15 种语言的社区翻译版本"
+ ],
+ "intro": "这是李博杰所著《深入理解 AI Agent：设计原理与工程实践》的开源主仓库，包含全书正文、编译版 PDF/EPUB 以及按章配套代码。全书围绕核心公式「Agent = LLM + 上下文 + 工具」展开，共 10 章，从入门、上下文工程、用户记忆与知识库、工具（含 MCP 协议）、Coding Agent，一直讲到多模态交互、Agent 评估、模型后训练与持续进化。\n\n仓库提供 109 个配套实验，覆盖本地项目与外部复现轨道，读者可以按章动手运行。正文源码位于 book/ 目录，图表以 SVG 存放于 book/images/，支持自行编译 PDF/EPUB。除中文原版外，还有英文、西班牙语、日语、韩语等 15 种语言的社区翻译版本，以及支持多语言切换、章节折叠与笔记的在线阅读站点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载最新版 PDF 或 EPUB 离线阅读，或访问在线阅读站点",
+  "阅读 book/introduction.md 与 book/chapter1.md ~ book/chapter10.md 正文源码",
+  "按章进入 chapter1/ ~ chapter10/ 目录运行配套实验",
+  "如需自行编译 PDF：安装 pandoc、xelatex、ElegantBook 文档类与相关字体后，执行 cd book && bash build_pdf.sh"
+ ],
+ "summary": "这是一本关于 AI Agent 的开源教材仓库，围绕「Agent = LLM + 上下文 + 工具」这一核心公式，用 10 章内容从原理讲到工程实践，并配有 109 个按章实验。仓库同时提供全书正文源码、编译好的 PDF/EPUB 以及在线阅读站点，适合想系统理解 Agent 设计并动手实践的开发者按章学习。",
+ "tagline": "开源 AI Agent 教材：10 章正文 + 109 个配套实验"
+}

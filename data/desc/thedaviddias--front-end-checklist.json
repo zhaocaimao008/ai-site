@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合前端开发者、代码审查者，以及希望用 AI Agent 辅助前端质量检查的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "386 条英文规则，覆盖 11 个前端质量分类",
+  "规则页面提供说明、修复指导和验证步骤",
+  "按 Critical、High、Medium、Low 标注优先级",
+  "托管 MCP 服务器暴露 11 个工具，支持代码审查与 URL 审计",
+  "提供可安装的 skills，用于可复用的审计工作流",
+  "支持在线浏览、分类导航和交互式筛选"
+ ],
+ "intro": "Front-End Checklist 是一套开源的前端质量检查体系，把前端最佳实践整理成可执行的审查流程。项目包含 386 条英文规则，覆盖 HTML、CSS、JavaScript、性能、无障碍、SEO、安全、图片、测试、隐私和国际化共 11 个分类，每条规则都配有说明、修复建议和验证步骤。\n\n你可以直接在网页上浏览和筛选规则，也可以让支持 MCP 的 AI Agent 接入托管服务器，对代码片段或公开 URL 进行审查。规则按 Critical、High、Medium、Low 四个优先级标注，方便在项目审查或 pull request 中按重要程度逐项核对。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "浏览在线规则：访问 frontendchecklist.io/rules 查看全部规则",
+  "使用 MCP：将支持 MCP 的 Agent 连接到 mcp.frontendchecklist.io",
+  "安装 skills：npx skills add frontendchecklist/skills",
+  "本地贡献：pnpm install 安装依赖，pnpm dev 启动本地开发"
+ ],
+ "summary": "Front-End Checklist 把前端开发中的常见质量要求整理成一份可逐项核对的清单，涵盖 HTML、CSS、JavaScript、性能、无障碍、SEO、安全等十一个方面，每条规则都给出说明和修复建议。它既适合开发者在提交代码或做项目审查时手动对照，也能通过 MCP 服务器接入 AI Agent，让 Agent 直接对代码片段或公开网址做结构化检查。",
+ "tagline": "面向人类与 AI Agent 的现代前端开发检查清单"
+}

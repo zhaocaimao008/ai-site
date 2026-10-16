@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速搭建企业信息管理系统的 Java 开发团队，以及希望引入 AI 应用与知识库问答能力的企业开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "一句话生成完整系统：自然语言描述需求，AI 自动建表、生成前后端代码、配置菜单权限",
+  "AI 应用平台：AI 聊天助手、知识库、流程编排、MCP 与插件，兼容主流大模型",
+  "AI 知识库问答：基于 LLM 与 RAG，支持知识库管理、文档解析、向量库对接与精准检索",
+  "强大代码生成器：支持单表、树表、一对一、一对多等模型，一键生成前后端代码与建表 SQL",
+  "AI Skills 能力：结合 Claude Code，一句话绘制 BPM 流程、设计表单、生成报表大屏和门户",
+  "低代码组件与权限：在线表单、流程设计、门户设计、报表大屏，支持按钮与数据级权限控制"
+ ],
+ "intro": "JeecgBoot 是一款企业级 AI 低代码开发平台，核心能力包括低代码开发、AI 应用平台和 AI 知识库。随着 AI Skills 自然语言编程的发布，平台进入低代码 v2.0：开发者用一句话描述需求，AI 可自动完成建表、生成前后端 CRUD 代码、配置菜单权限和页面渲染，生成即可运行。\n\n平台内置 AI 应用开发能力，涵盖 AI 聊天助手、知识库、流程编排、MCP 和插件，兼容 ChatGPT、DeepSeek、Ollama 等主流大模型，并提供类似 Dify 的 AIGC 应用开发与 RAG 知识库问答能力。\n\n技术栈采用前后端分离架构，后端基于 Spring Boot、Spring Cloud Alibaba 和 MyBatis-Plus，前端基于 Vue3、TypeScript、Vite 和 Ant Design Vue，支持单体与微服务自由切换，并具备按钮权限、数据权限等颗粒化权限控制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "默认账号密码：admin/123456",
+  "参考开发环境搭建文档：https://help.jeecg.com/java/setup/tools",
+  "IDEA 启动前后端（单体模式）：https://help.jeecg.com/java/setup/idea/startup",
+  "Docker 一键启动（单体模式）：https://help.jeecg.com/java/docker/quick",
+  "AI Skills 一键安装入口：https://help.jeecg.com/java/ai/skills/skill-install"
+ ],
+ "summary": "JeecgBoot 是一个企业级 AI 低代码开发平台，把低代码开发、AI 应用平台和 AI 知识库整合在一起。它支持用自然语言一句话生成完整系统或业务模块，由 AI 自动完成建表、前后端代码、菜单权限和页面渲染，也提供在线表单、流程设计、报表大屏等零代码搭建能力。平台内置 AI 聊天、知识库问答、流程编排和 MCP 插件，兼容主流大模型。适合需要快速交付企业管理系统、同时希望引入 AI 能力的 Java 开发团队。",
+ "tagline": "企业级 AI 低代码平台，一句话生成前后端代码与完整系统"
+}

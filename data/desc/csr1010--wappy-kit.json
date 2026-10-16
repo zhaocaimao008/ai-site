@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想在 WhatsApp 上搭建个人助理或业务机器人的开发者，以及希望数据留在本机、自行控制模型与号码的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "一条命令生成可运行的 WhatsApp AI agent 项目",
+  "支持 Anthropic、OpenAI、Gemini 或本地 Ollama 模型",
+  "本地优先记忆层：SQLite/LibSQL + BM25，可选 Cognee 知识图谱",
+  "内置工具调用、上下文记忆与 WhatsApp 消息格式化",
+  "可选 Gmail/Calendar 只读助手，用自然语言查询邮件和日程",
+  "数据保存在本机，不经过项目方服务器"
+ ],
+ "intro": "Wappy 是一个开源的 AI agent SDK，目标是让你在 WhatsApp 上跑一个真正能用的智能体。它不要求你注册 Wappy 账号，也不把对话数据送到第三方服务器：模型 key、WhatsApp 号码、记忆数据都由你自己提供，默认保存在本机的一个文件里。\n\n项目用 TypeScript 编写，通过一条 npm create 命令生成项目骨架，再填入模型 key 和 WhatsApp Cloud API 凭据即可启动。模型可选 Anthropic、OpenAI、Gemini，也可以完全离线跑本地 Ollama。记忆层默认使用 SQLite/LibSQL 加 BM25 检索，也可以换成自托管或云端的 Cognee 知识图谱。\n\n生成的 agent 自带记忆、上下文、工具调用和回复格式化能力，业务逻辑需要你自己接入数据与工具。README 给出了个人助理、日历/邮件查询、私有知识库，以及客服、预约、内部运维等场景示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm create @wappy_ai/agent",
+  "cp .env.sample .env  # 填入模型 key 和 WhatsApp 凭据",
+  "npm install",
+  "npm run dev  # 启动服务、打开隧道并打印 Meta webhook 配置 URL"
+ ],
+ "summary": "Wappy 是一个在 WhatsApp 上运行 AI agent 的开源 SDK，解决的是把智能体接入日常聊天工具、同时不把数据交给第三方云的问题。它通过一条命令生成项目，模型可自选 Anthropic、OpenAI、Gemini 或本地 Ollama，记忆默认存在本机 SQLite，也可换成 Cognee。适合想用 WhatsApp 做个人助理、日历邮件查询、私有知识库或业务机器人的开发者。",
+ "tagline": "在 WhatsApp 上运行本地优先的 AI agent SDK"
+}

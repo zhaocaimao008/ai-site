@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合关注多市场自选股、希望用大模型辅助生成每日分析报告并自动接收推送的个人投资者与开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "AI 决策报告：输出核心结论、评分、趋势、买卖点位、风险警报、催化因素与操作检查清单",
+  "多市场数据聚合：覆盖 A股、港股、美股、日股、韩股、台股和 ETF 的行情、K 线、技术指标、新闻、公告与基本面",
+  "Web / 桌面工作台：支持手动分析、任务进度、历史报告、回测、持仓、配置管理与浅色/深色主题",
+  "Agent 策略问股：支持均线、缠论、波浪、趋势等 15 种内置策略，覆盖 Web、Bot 与 API",
+  "智能导入与补全：支持图片、CSV/Excel、剪贴板导入，以及股票代码、名称、拼音、别名补全",
+  "自动化与推送：支持 GitHub Actions、Docker、本地定时任务、FastAPI 服务，并推送到企业微信、飞书、Telegram、Discord、Slack 或邮箱"
+ ],
+ "intro": "这是一个基于大模型的股票智能分析系统，面向 A股、港股、美股、日股、韩股、台股和 ETF 等市场。它聚合多源行情、K 线、技术指标、新闻、公告与基本面数据，由 AI 生成包含核心结论、评分、趋势、买卖点位、风险警报和操作检查清单的决策报告。\n\n系统提供 Web 与桌面工作台，支持手动分析、任务进度查看、历史报告、回测、持仓和配置管理；还内置均线、缠论、波浪、趋势等 15 种策略的 Agent 问股，可通过 Web、Bot 或 API 多轮追问。分析结果可自动推送到企业微信、飞书、Telegram、Discord、Slack 或邮箱。\n\n部署方式包括 GitHub Actions、Docker、本地定时任务和 FastAPI 服务，默认内置 AkShare、Baostock、YFinance 等免费行情源，可零配置运行，也支持接入 TickFlow、Tushare、Longbridge 等数据源。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Fork 本仓库，并在 Settings → Secrets and variables → Actions 中配置 AI 模型 API Key（如 MODELFLARE_KEY 或 AIHUBMIX_KEY）",
+  "配置至少一个通知渠道 Secret，如 WECHAT_WEBHOOK_URL 或 FEISHU_WEBHOOK_URL",
+  "配置自选股 Secret：STOCK_LIST，例如 600519,hk00700,AAPL,7203.T,005930.KS,2330.TW",
+  "在 Actions 标签页启用 workflows，然后进入「每日股票分析」点击 Run workflow 手动测试",
+  "本地运行：git clone https://github.com/ZhuLinsen/daily_stock_analysis.git && cd daily_stock_analysis，pip install -r requirements.txt，cp .env.example .env 并编辑，最后 python main.py"
+ ],
+ "summary": "这个项目用大模型为多市场自选股生成每日分析报告，覆盖 A股、港股、美股、日股、韩股、台股和 ETF，聚合行情、技术指标、新闻、公告与基本面数据，输出包含结论、评分、买卖点位和风险提示的决策看板，并可推送到企业微信、飞书、Telegram 等渠道。它适合想低成本定时跟踪自选股、又不想自己搭建整套数据管线的个人投资者，可通过 GitHub Actions 零成本运行，也支持本地或 Docker 部署。",
+ "tagline": "LLM 驱动的多市场自选股智能分析与推送系统"
+}

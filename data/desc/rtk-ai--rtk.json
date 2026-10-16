@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程代理、希望降低命令输出 token 消耗的开发者，尤其是经常让代理执行 git、测试和文件读取命令的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "拦截并压缩 100 多个常用开发命令的输出，覆盖 ls、cat、grep、git、测试和容器命令",
+  "按命令类型智能过滤：测试只保留失败项，git log 只保留关键字段，grep 按文件分组",
+  "通过 rtk init 为 Claude Code、Gemini CLI、Codex、Cursor、Windsurf 等 AI 工具配置钩子",
+  "单个 Rust 二进制，零依赖，额外开销低于 10ms",
+  "提供 rtk gain 命令查看节省统计面板",
+  "提供 Apache-2.0 与 Apache-2.0+BUSL-1.1 两种版本，另有独立的 rtk-proxy 压缩 API 流量"
+ ],
+ "intro": "RTK 是一个用 Rust 编写的 CLI 代理，它拦截 shell 命令的输出，在内容进入 AI 编程代理的上下文之前进行压缩和过滤。项目支持 100 多个常用开发命令，包括 ls、cat、grep、git、cargo test、pytest、docker ps 等，官方称在常见命令上可减少 60% 到 90% 的 token 消耗，单二进制、零依赖，额外开销低于 10ms。\n\nRTK 会按命令类型做不同处理：例如 git status 转为紧凑统计格式，git log 只保留 hash、作者和标题，测试命令只显示失败项，grep 按文件分组并截断长行。它通过 rtk init 命令为 Claude Code、Gemini CLI、Codex、Cursor 等工具配置钩子，安装后代理执行的命令会被自动改写。\n\n需要注意的是，RTK 减少的是 bash 输出这一部分输入 token，并不等同于账单按相同比例下降；其报告的 token 数按 bytes/4 估算，百分比相对可靠，绝对数值为近似值。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：brew install rtk（macOS/Linux）或 winget install rtk-ai.rtk（Windows），也可用 curl 安装脚本",
+  "验证安装：运行 rtk --version 和 rtk gain，确认是 RTK 而非 crates.io 上的同名项目",
+  "为 AI 工具初始化：rtk init -g（Claude Code/Copilot 默认），或 rtk init -g --gemini、rtk init -g --codex、rtk init -g --agent cursor 等",
+  "重启 AI 工具后测试：执行 git status，会被自动改写为 rtk git status"
+ ],
+ "summary": "RTK 是一个 Rust 编写的命令行代理，用来在 AI 编程代理读取 shell 输出之前先做压缩和过滤，从而减少进入上下文的 token。它支持 git、grep、测试、容器等一百多个常用命令，安装后通过 rtk init 接入 Claude Code、Cursor、Codex 等工具，代理执行的命令会被自动改写。适合经常让 AI 代理跑命令、希望控制输入 token 的开发者。",
+ "tagline": "拦截并压缩命令行输出，减少 AI 编程代理的 token 消耗"
+}

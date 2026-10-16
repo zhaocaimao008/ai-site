@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 Cursor、Claude Code 等 AI 编程助手，希望减少 API 幻觉和过时代码的开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "从源头获取最新、版本特定的库文档与代码示例",
+  "支持 CLI + Skills 与 MCP 两种接入模式",
+  "提供 ctx7 library 与 ctx7 docs 命令行工具",
+  "MCP 提供 resolve-library-id 和 query-docs 两个工具",
+  "可在 prompt 中用斜杠语法指定库 ID 和版本"
+ ],
+ "intro": "Context7 解决的是 LLM 在回答库和框架相关问题时依赖过时训练数据的问题。没有它时，模型容易给出过时的代码示例、编造不存在的 API，或针对旧版本给出泛泛的回答。Context7 会从源头抓取最新的、与版本对应的文档和代码示例，直接放进你的 prompt 上下文里。\n\n它支持两种使用方式：CLI + Skills 模式会安装一个 skill，引导 agent 通过 ctx7 命令行获取文档，不需要 MCP；MCP 模式则注册 Context7 MCP server，让 agent 原生调用文档工具。在 prompt 中加上 use context7，或直接指定库 ID（如 /supabase/supabase）和版本号，就能跳过库匹配步骤、直接取到对应文档。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Node.js 22.13 或更新版本",
+  "运行 npx ctx7 setup，通过 OAuth 认证并生成 API key",
+  "选择 CLI + Skills 或 MCP 模式，可用 --cursor、--claude、--opencode 指定目标 agent",
+  "在 prompt 中加入 use context7，或指定库 ID 如 /supabase/supabase"
+ ],
+ "summary": "Context7 面向使用 AI 编程助手的开发者，解决模型依赖过时训练数据、容易编造 API 或给出旧版本代码的问题。它从源头抓取最新且与版本对应的库文档和代码示例，直接注入 prompt 上下文。支持 CLI + Skills 和 MCP 两种接入方式，可在提问时用 use context7 或指定库 ID 触发。",
+ "tagline": "为 AI 编程助手提供实时、版本准确的代码文档"
+}

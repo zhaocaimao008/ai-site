@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对多智能体协作、LLM 应用开发感兴趣的开发者和研究者，以及希望用自然语言快速生成软件项目原型的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "接收一行需求，输出用户故事、竞品分析、需求、数据结构、API 和文档等",
+  "内置产品经理、架构师、项目经理、工程师等角色，模拟软件公司完整流程",
+  "提供命令行工具，可通过 `metagpt \"Create a 2048 game\"` 生成项目",
+  "支持作为 Python 库调用，如 `generate_repo` 函数生成项目仓库",
+  "包含 Data Interpreter，可用于数据分析和代码编写",
+  "支持多种 LLM 配置，如 OpenAI、Azure、Ollama、Groq 等"
+ ],
+ "intro": "MetaGPT 是一个多智能体框架，其核心理念是 `Code = SOP(Team)`，即把软件公司的标准作业流程（SOP）应用到由大语言模型（LLM）组成的团队中。它接收一行需求作为输入，输出用户故事、竞品分析、需求文档、数据结构、API 和文档等内容。\n\n框架内部模拟了产品经理、架构师、项目经理和工程师等角色，覆盖软件公司的完整流程。用户可以通过命令行或 Python 库调用 MetaGPT，例如生成一个 2048 游戏的项目仓库。此外，项目还提供了 Data Interpreter 等工具，用于数据分析和代码编写。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保系统安装 Python 3.9 或更高版本（但低于 3.12），可使用 conda 创建环境：`conda create -n metagpt python=3.9 && conda activate metagpt`",
+  "安装 MetaGPT：`pip install --upgrade metagpt`",
+  "安装 node 和 pnpm",
+  "初始化配置：`metagpt --init-config`，然后编辑 `~/.metagpt/config2.yaml` 配置 LLM 参数",
+  "使用命令行生成项目：`metagpt \"Create a 2048 game\"`"
+ ],
+ "summary": "MetaGPT 是一个多智能体框架，旨在通过模拟软件公司的角色分工与标准作业流程，让多个基于大语言模型的智能体协作完成复杂任务。它接收一行自然语言需求，即可输出用户故事、竞品分析、需求文档、数据结构、API 和代码等，适合需要快速生成软件项目原型或研究多智能体协作的开发者。",
+ "tagline": "基于多智能体协作的软件开发框架"
+}

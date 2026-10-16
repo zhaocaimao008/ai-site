@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地处理语音克隆、配音和转写，且关注数据隐私的开发者与内容创作者。",
+ "date": "2026-10-16",
+ "features": [
+  "语音克隆：使用参考录音克隆音色并生成语音",
+  "语音设计：通过描述设计自定义声音",
+  "视频配音：为视频生成带时间对齐的配音",
+  "听写与转写：浮动小组件听写、语音转文字",
+  "有声书与批量任务：故事、有声书和批量作业",
+  "本地 API 与 MCP：供 agent 和自动化流程调用"
+ ],
+ "intro": "VoiceStudio 是一个完全本地运行的开源语音工具，定位为 ElevenLabs 的替代方案。它把语音克隆、语音设计、视频配音、听写、转写和有声书制作整合在一个桌面应用里，默认引擎基于 k2-fsa/OmniVoice，也支持切换其他引擎。\n\n所有本地工作流都在自己的硬件上执行，远程服务是可选的。应用提供 Electron 桌面端，支持 NVIDIA GPU 的 CUDA 加速、Apple Silicon 的 Metal 加速，没有独立显卡时也能用 CPU 运行，只是速度较慢。此外还提供本地 API 和 MCP 接口，方便接入 agent 或自动化流程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS / Linux 一键安装：curl -fsSL https://voicestudio.sh/install | sh",
+  "Windows 在 PowerShell 中运行：irm https://voicestudio.sh/install | iex",
+  "或从 Releases 下载对应平台的安装包（macOS .dmg、Windows .exe、Linux .AppImage 或 .deb）",
+  "从源码运行：git clone https://github.com/debpalash/VoiceStudio.git && cd VoiceStudio && bun install && bun run setup:api && bun run dev",
+  "打开 Voice cloning，选择或添加一段干净的参考录音，输入文本并生成，按提示安装所需模型"
+ ],
+ "summary": "VoiceStudio 是一个完全本地运行的开源语音工具，目标是替代 ElevenLabs 这类云端服务。它把语音克隆、语音设计、视频配音、听写、转写和有声书制作集中在一个桌面应用里，默认使用 k2-fsa/OmniVoice 引擎，也可切换其他引擎。适合需要在本地处理语音、不希望把音频上传到云端的开发者和内容创作者，支持 NVIDIA GPU、Apple Silicon 以及纯 CPU 运行，并提供本地 API 与 MCP 接口供自动化调用。",
+ "tagline": "本地运行的开源语音克隆与配音工作台"
+}

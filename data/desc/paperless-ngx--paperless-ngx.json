@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把家庭或办公纸质文档数字化、并自行部署管理系统的用户和开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "将扫描的纸质文档转换为可搜索的在线档案",
+  "支持 OCR 光学字符识别与文档索引",
+  "提供 Django 后端与 Angular 前端界面",
+  "支持通过 docker compose 部署，并提供安装脚本",
+  "支持从 Paperless-ng 直接迁移",
+  "界面支持多语言，翻译在 Crowdin 上协作"
+ ],
+ "intro": "Paperless-ngx 是一个社区维护的文档管理系统，目标是把纸质文档转成可搜索的在线档案，从而减少对纸张的依赖。它是原 Paperless 和 Paperless-ng 项目的官方后继者，由一支团队共同推进开发与维护。\n\n项目使用 Python 编写，采用 Django 后端与 Angular 前端，支持 OCR 光学字符识别、文档索引与归档，并提供多语言界面。官方文档列出了完整的功能列表与截图，同时提供在线 demo 供体验。\n\n部署方面，最简单的方式是使用 docker compose，仓库的 docker/compose 目录已配置好从 GitHub 容器镜像仓库拉取镜像；也可以运行官方安装脚本快速搭建环境。从 Paperless-ng 迁移只需替换新的 docker 镜像。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行官方安装脚本：bash -c \"$(curl -L https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)\"",
+  "或使用 docker compose，参考仓库 docker/compose 目录中的配置文件",
+  "访问在线 demo（demo.paperless-ngx.com，登录 demo/demo）体验功能",
+  "查阅官方文档 https://docs.paperless-ngx.com 了解安装与迁移细节"
+ ],
+ "summary": "Paperless-ngx 是一个社区维护的文档管理系统，用来把纸质文档扫描后转成可搜索的在线档案，减少对纸张的依赖。它适合希望自行部署、集中归档发票、税务记录等扫描件的个人或团队，支持 OCR 识别、索引与多语言界面，可通过 docker compose 或官方脚本安装，也能从 Paperless-ng 平滑迁移。",
+ "tagline": "把纸质文档扫描、索引并归档为可搜索的在线档案"
+}

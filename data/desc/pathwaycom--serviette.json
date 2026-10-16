@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速搭建基于自有文档的问答系统、又不想编写代码或管理复杂索引流程的开发者和团队。",
+ "date": "2026-10-16",
+ "features": [
+  "无代码配置：通过一个 YAML 文件或交互式向导完成所有设置",
+  "支持 8 种向量数据库后端，默认使用零配置的 DuckDB",
+  "实时增量更新：文档的增删改在几秒内反映到答案中",
+  "多数据源支持：本地文件、Google Drive、S3/MinIO、SharePoint 等",
+  "多格式文档处理：文本、Office、PDF、扫描图像，可选音频和视频",
+  "同时提供 Web 聊天界面和版本化 REST API"
+ ],
+ "intro": "serviette 是一个基于 Pathway Live Data Framework 构建的无代码 RAG 服务器，旨在让文档问答系统始终与数据源保持同步。你只需将 serviette 指向一个文档文件夹，在一个 YAML 文件中选择向量数据库和嵌入器，然后运行两条命令，就能获得一个聊天界面和 REST API，它们会基于这些文档回答问题并引用来源。此后，文档的任何变更——编辑、新增文件或删除——都会在几秒内反映到答案中，无需手动重新上传或重建索引。\n\n该项目支持 8 种向量数据库后端，包括 DuckDB、pgvector、Qdrant、Milvus、ChromaDB、Weaviate、Pinecone 和 MongoDB Atlas Vector Search，默认使用零配置的 DuckDB。数据源方面，支持本地文件系统、Google Drive、S3/MinIO、SharePoint 以及 PyFilesystem 可打开的任何位置，并且全部实时监控。文档格式涵盖文本、Office 文档、PDF、扫描图像，配置相应 API 密钥后还可处理音频和视频。\n\nserviette 运行需要免费的 Pathway 许可证密钥，嵌入可以本地免费计算，只有可选的模型 API 按问题计费。默认情况下数据保留在本地，只有检索到的少量段落会发送给模型 API。目前它一次回答一个问题，尚不支持对话记忆、用户账户或托管服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install serviette",
+  "export PATHWAY_LICENSE_KEY=...  # 从 https://pathway.com/framework/get-license 获取免费许可证",
+  "export OPENAI_API_KEY=sk-...",
+  "serviette demo --embedder openai  # 启动演示，聊天界面在 http://localhost:8989"
+ ],
+ "summary": "serviette 是一个无代码的实时 RAG 服务器，解决文档问答系统与数据源同步困难的问题。它基于 Pathway 框架，只需一个 YAML 文件配置向量数据库和嵌入器，运行两条命令即可获得带来源引用的聊天界面和 REST API。文档的增删改会在几秒内自动反映到答案中，无需手动重建索引。支持多种向量数据库、数据源和文档格式，适合需要快速搭建内部文档问答的开发者。",
+ "tagline": "基于 Pathway 的无代码实时 RAG 服务，支持多种向量数据库"
+}

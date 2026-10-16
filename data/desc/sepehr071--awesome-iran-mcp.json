@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望让 AI 智能体访问伊朗本土网站数据的开发者，以及使用 Claude、Cursor、Copilot 等 MCP 客户端的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "提供 19 个非官方开源 MCP 服务器，覆盖购物、美食、旅行、健康、图书等伊朗网站",
+  "统一以托曼（Toman）为单位返回价格，便于比价",
+  "可作为 Claude Code 插件或 Agent Skills 安装，支持 Codex、Cursor、Gemini CLI 等",
+  "站点类服务器无需账号和 API key，用 uvx 即可运行",
+  "提供 .mcp.json，可在 Claude Code 中一次性注册全部服务器"
+ ],
+ "intro": "这是一个面向 AI 智能体的 MCP（Model Context Protocol）服务器合集，把伊朗本土网站的能力开放给 Claude、Cursor、GitHub Copilot 等支持 MCP 的客户端。项目包含 19 个非官方开源服务器，覆盖 Digikala、Snappfood、Jabama、MrBilit、Paziresh24、Taaghche 等站点，另有 SwapWallet 官方服务器，合计 321 个工具。\n\n这些伊朗网站大多没有公开 API，价格有的用里亚尔、有的用托曼，优惠信息也分散在各处。每个服务器包会对接对应网站的真实接口，并统一以托曼（Toman）为单位输出价格，让智能体可以搜索商品、比价、查询空位和当日优惠。\n\n每个服务器都是发布在 PyPI 上的小型 Python 包，通过 uvx 运行，站点类服务器无需账号和 API key；payping、bale 和 swapwallet 则使用你自己的账号或登录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "添加插件市场：claude plugin marketplace add sepehr071/awesome-iran-mcp",
+  "安装单个服务器：claude plugin install digikala@iran-mcp",
+  "或安装组合包：claude plugin install iran-travel@iran-mcp",
+  "其他客户端可手动添加：claude mcp add digikala -- uvx digikala-mcp",
+  "在任意 MCP 客户端中配置 mcpServers，例如 digikala 使用 command uvx、args [\"digikala-mcp\"]"
+ ],
+ "summary": "这个项目把伊朗本土网站包装成 MCP 服务器，让 Claude、Cursor、Copilot 等 AI 智能体能够直接搜索商品、比价、查空位和优惠。它包含 19 个非官方开源服务器，覆盖 Digikala、Snappfood、Jabama、MrBilit、Paziresh24、Taaghche 等站点，价格统一换算为托曼。适合想让智能体访问伊朗网络服务的开发者，站点类服务器无需账号和 API key，通过 uvx 即可运行。",
+ "tagline": "把伊朗网站接入 AI 智能体的 MCP 服务器合集"
+}

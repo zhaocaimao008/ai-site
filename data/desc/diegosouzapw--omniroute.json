@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用一个端点统一调用多家 AI 提供商、并想充分利用第三方免费额度的开发者与 AI 工具用户。",
+ "date": "2026-10-16",
+ "features": [
+  "统一端点接入 372 家 AI 提供商，覆盖 1443 个聊天模型 ID",
+  "配额感知的自动降级与 19 种路由策略",
+  "RTK + Caveman 叠加压缩，README 称节省 15–95% token",
+  "支持 MCP 与 A2A 协议",
+  "提供 Desktop 与 PWA 界面，含免费额度仪表盘",
+  "可与 Claude Code、Codex、Cursor、Cline、Copilot 等工具配合"
+ ],
+ "intro": "OmniRoute 是一个用 TypeScript 编写的 MIT 协议 AI 网关，目标是把多家 AI 提供商的接口统一到一个端点后面。它支持 Claude、GPT、Gemini、Kimi、GLM、DeepSeek、MiniMax 等模型，并可与 Claude Code、Codex、Cursor、OpenCode、Cline、Copilot 等工具配合使用。\n\n项目强调对免费额度的利用：README 称其编目了 489 条免费层条目、35 个可循环使用的池键，并据此估算每月约 1.62B 免费 token（首月含注册赠送可达约 2.22B）。这些数字来自第三方免费层的聚合估算，并非 OmniRoute 自身发放的额度，每个提供商仍各自控制其限制与条款。\n\n网关内置配额感知的自动降级、RTK 与 Caveman 叠加压缩（README 称可节省 15–95% token）、MCP/A2A 支持，并提供桌面端与 PWA 界面。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "OmniRoute 是一个 MIT 协议的 AI 网关，把 Claude、GPT、Gemini、Kimi、DeepSeek 等多家提供商的接口统一到一个端点，方便 Claude Code、Cursor、Cline 等工具直接调用。它重点解决免费额度分散、手动切换麻烦的问题：项目编目了多家第三方免费层，提供配额感知的自动降级和 token 压缩，并配有桌面端与 PWA 仪表盘。适合想用一个入口管理多家 AI 服务、并尽量利用免费额度的开发者。",
+ "tagline": "一个端点接入 372 家 AI 提供商，聚合免费额度并自动降级"
+}

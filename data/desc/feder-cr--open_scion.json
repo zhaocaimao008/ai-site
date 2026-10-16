@@ -1,0 +1,26 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为大量编码代理提供版本控制基础设施的团队，以及希望研究或参与服务端版本控制系统设计的开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "常在线客户端与稀疏获取：ObjectService 提供单个对象和稀疏树，graft clone 和 graft sparse 只拉取需要的路径",
+  "服务端历史与搜索：blame、路径历史、祖先关系和代码搜索在服务端运行，并作为派生数据缓存",
+  "无合并队列的落地：UserLand 将变更 rebase 到当前 tip 并用 compare-and-swap 落地，并发落地会批量合并为一次引用更新",
+  "自动冲突解决：冲突落地可通过版本化、供应商中立的协议，由任意 LLM 提供商、确定性工具或空解析器处理",
+  "变更集日志：每次接受的引用更新都记录操作和操作者，客户端可以列出或实时监听",
+  "存储核心：变更写入 SQLite 或 PostgreSQL 的预写日志，pack 存放在文件、S3、GCS 或 Azure 对象存储中，服务节点是无状态缓存",
+  "落地后验证与回滚：graft-verify 测试 tip，二分定位失败并回滚导致问题的变更",
+  "代理友好功能：按代理发放令牌、RPC 允许列表、分支策略、语义审批规则以及监控代理的 superfans"
+ ],
+ "intro": "open_scion 是 Anthropic 内部版本控制系统 Scion 的开源实现。Scion 的设计思路是把版本控制的工作放到服务端，让大量编码代理可以同时读写和提交代码，而 open_scion 让任何人都能运行这套设计。\n\n它基于 Gitaly 分支而来，底层仍是普通 Git 仓库，但把历史查询、代码搜索、冲突解决等放到服务端，并通过 compare-and-swap 代替合并队列来落地变更。每个变更都记录在 changeset 日志中，仓库状态存放在 SQLite 或 PostgreSQL 与对象存储里，服务节点可以水平扩展。\n\n项目采用 MIT 协议，服务端不调用语言模型，所有 AI 功能都通过供应商中立的协议接入，可以选择任意 LLM 提供商、确定性工具或完全不使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：Linux 或 macOS、Go 1.26、C 工具链、Meson 和 Ninja",
+  "克隆仓库：git clone https://github.com/feder-cr/open_scion.git && cd open_scion",
+  "构建：make build，产物在 _build/bin",
+  "运行示例：examples/graft/quickstart.sh，会在临时目录启动服务端、缓存守护进程、两个代理并完成一次落地",
+  "查看 CLI：./_build/bin/graft"
+ ],
+ "summary": "open_scion 是 Anthropic 内部版本控制系统 Scion 的开源实现，针对编码代理大量并发读写代码的场景设计。它把历史查询、搜索和冲突解决放到服务端，用 compare-and-swap 代替合并队列，变更记录在 changeset 日志中，仓库状态存放在数据库和对象存储里，服务节点可水平扩展。适合需要为大量代理提供版本控制基础设施的团队，也适合研究服务端版本控制设计的开发者。",
+ "tagline": "面向编码代理的开源版本控制系统"
+}

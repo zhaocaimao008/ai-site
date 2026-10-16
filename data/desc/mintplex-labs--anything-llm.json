@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望私有化部署 AI 对话与文档问答能力的开发者、团队和企业，也适合想在本地运行 LLM 并构建 Agent 工作流的个人用户。",
+ "date": "2026-10-16",
+ "features": [
+  "内置本地 LLM 引擎，基于 Lemonade 和 llama.cpp，可在 CPU 或 GPU 上运行本地模型",
+  "支持与文档对话，兼容 PDF、TXT、DOCX 等多种格式，并提供来源引用",
+  "内置 AI Agent，可浏览网页、执行任务，并支持自定义 Agent 与无代码 Agent 构建器",
+  "支持多用户实例与权限管理（Docker 版本）",
+  "兼容多种闭源和开源 LLM 提供商，以及多模态模型",
+  "提供可嵌入网站的聊天组件（Docker 版本）和完整开发者 API"
+ ],
+ "intro": "AnythingLLM 是一个一体化 AI 应用，目标是让用户构建私有的、功能完整的 ChatGPT 式体验。它默认在本地运行，支持连接本地或云端 LLM，导入文档后即可开始对话，无需复杂配置。\n\n项目内置 AI Agent、多用户支持、向量数据库和文档处理管线，支持 PDF、TXT、DOCX 等多种文档类型，并提供拖拽上传与来源引用。它兼容大量闭源和开源 LLM 提供商，包括 OpenAI、Anthropic、Gemini、Ollama、LM Studio、LocalAI 等，同时支持多模态模型。\n\nAnythingLLM 提供桌面版（Mac、Windows、Linux）和 Docker 部署方式，Docker 版本还支持多用户实例与权限管理，以及可嵌入网站的聊天组件。项目采用 MIT 协议开源。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载桌面版：访问 https://anythingllm.com/download 获取 Mac、Windows 或 Linux 版本",
+  "或使用 Docker 部署：参考 docker/HOW_TO_USE_DOCKER.md 中的说明",
+  "连接 LLM 提供商（如 OpenAI、Ollama、LM Studio 等）或使用内置本地 LLM 引擎",
+  "导入文档（PDF、TXT、DOCX 等）并开始对话"
+ ],
+ "summary": "AnythingLLM 是一个本地优先的一体化 AI 应用，让你连接本地或云端大模型，导入自己的文档后进行对话，并运行内置 AI Agent 完成复杂任务。它内置向量数据库和文档处理管线，支持多用户与权限管理，兼容 OpenAI、Ollama、LM Studio 等多种模型提供商。适合需要私有化部署文档问答与 Agent 能力的开发者、团队和企业，提供桌面版和 Docker 部署方式。",
+ "tagline": "本地优先的一体化 AI 应用，与文档对话并运行 AI Agent"
+}

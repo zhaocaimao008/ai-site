@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code 进行长时间编程会话的开发者，尤其是使用 1M 上下文模型或 Claude 订阅的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "上下文自动交接：在 600k tokens 时等待 Claude 和子代理完成，生成区分已验证与未验证工作的摘要，清空后在新会话继续",
+  "缓存保温：离开后按 55、110、165 分钟刷新缓存，最长约 4 小时，返回时可选择恢复或继续",
+  "项目记忆：将偏好、纠正和事实保存为每个项目一个 Markdown 笔记文件，重复的例行操作变成项目技能",
+  "断点续接：在 /clear 或重新打开 Claude Code 后，新会话会被告知上次的任务、状态和下一步",
+  "实时提醒：对同一失败命令重复、未测试就声称完成、语言漂移等情况给出单行提示",
+  "守卫机制：将反复被违反的规则草拟为工具调用检查，经你确认后才生效；/handoff panel 提供统一设置面板"
+ ],
+ "intro": "ctx-handoff 是一个面向 Claude Code 的插件（mod），主要解决长时间对话中上下文被填满、离开后缓存失效、重复指令被遗忘等问题。它会在后台自动处理这些事务，正常使用时无需手动输入命令。\n\n当对话接近容量上限时，它可以自动生成摘要、清空会话并让新会话继续；在你离开时保持缓存温暖约 4 小时；把重复的指令沉淀为项目笔记，并在多次重复后写入仓库的 CLAUDE.md；在 /clear 或重新打开 Claude Code 后告知新会话上次的进度；还能在 Claude 重复失败命令或未经验证就声称完成时给出提醒。\n\n项目以 TypeScript 编写，采用 MIT 协议，要求 Claude Code 2.1.287 或更高版本。所有笔记以 Markdown 形式保存在本地 ~/.claude/projects/ 目录，除 Anthropic 外不向其他服务器发送数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Claude Code 版本为 2.1.287 或更高",
+  "运行 claude plugin marketplace add cablate/ctx-handoff-mod",
+  "运行 claude plugin install ctx-handoff@ctx-handoff-mod",
+  "启动新会话并输入 /handoff，确认显示 context 和 threshold 信息",
+  "如需更新，运行 claude plugin update ctx-handoff@ctx-handoff-mod"
+ ],
+ "summary": "ctx-handoff 是一个 Claude Code 插件，用来应对长时间对话中的常见麻烦：上下文快满时自动生成摘要并开启新会话、离开时保持缓存温暖、把重复的指令沉淀为项目笔记、在清空或重开后续接上次进度，并在 Claude 重复犯错或未经验证就声称完成时给出提醒。它适合使用 Claude Code 进行数小时连续编程的开发者，尤其是使用大上下文模型或订阅方案的用户。所有笔记以 Markdown 保存在本地，除 Anthropic 外不向其他服务器发送数据。",
+ "tagline": "为 Claude Code 长会话提供上下文交接、缓存保温与项目记忆的插件"
+}

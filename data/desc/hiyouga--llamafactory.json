@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要微调大语言模型或多模态模型的研究人员、开发者和企业用户，尤其是希望以低代码方式快速实验不同微调方法的场景。",
+ "date": "2026-10-16",
+ "features": [
+  "支持 100+ 大语言模型和多模态模型，包括 LLaMA、LLaVA、Mistral、Mixtral-MoE、Qwen3、Qwen3-VL、DeepSeek、Gemma、GLM、Phi 等",
+  "集成多种训练方法：预训练、监督微调、奖励建模、PPO、DPO、KTO、ORPO 等",
+  "支持多种微调方式：16-bit 全量微调、冻结微调、LoRA、QLoRA（2/3/4/5/6/8-bit）",
+  "提供零代码 CLI 和基于 Gradio 的 Web UI（LLaMA Board）",
+  "支持高级算法如 GaLore、BAdam、APOLLO、Adam-mini、Muon、OFT、DoRA、LongLoRA 等",
+  "支持通过 vLLM 或 SGLang worker 部署 OpenAI 风格 API、Gradio UI 和 CLI 进行推理"
+ ],
+ "intro": "LlamaFactory 是一个统一的高效微调框架，支持 100 多个大语言模型和多模态模型。它集成了多种训练方法，包括（持续）预训练、（多模态）监督微调、奖励建模、PPO、DPO、KTO、ORPO 等，并支持 16-bit 全量微调、冻结微调、LoRA 以及基于 AQLM/AWQ/GPTQ/LLM.int8/HQQ/EETQ 的 2/3/4/5/6/8-bit QLoRA。\n\n项目提供了零代码的 CLI 和基于 Gradio 的 Web UI（LLaMA Board），方便用户快速开始微调。同时支持通过 vLLM 或 SGLang worker 部署 OpenAI 风格的 API、Gradio UI 和 CLI 进行推理。实验监控支持 LlamaBoard、TensorBoard、Wandb、MLflow、SwanLab 等工具。\n\nLlamaFactory 已被 Amazon、NVIDIA、阿里云等企业使用，并在 ACL 2024 发表。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install llamafactory",
+  "准备数据：参考文档中的 Data Preparation 部分",
+  "启动 CLI 微调：llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml",
+  "启动 Web UI：llamafactory-cli webui",
+  "部署推理：llamafactory-cli api examples/inference/llama3.yaml"
+ ],
+ "summary": "LlamaFactory 是一个统一的高效微调框架，旨在简化 100 多个大语言模型和多模态模型的微调流程。它集成了预训练、监督微调、奖励建模和多种偏好优化方法，并支持全量微调、LoRA、QLoRA 等资源可扩展的方案。项目提供零代码 CLI 和 Web UI，方便开发者快速实验不同模型与算法，也支持通过 vLLM 或 SGLang 部署推理服务。适合需要微调模型的研究人员、开发者及企业用户。",
+ "tagline": "统一高效微调 100+ 大语言模型与多模态模型"
+}

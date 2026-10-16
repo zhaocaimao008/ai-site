@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望通过命令行 AI agent 完成研究、编码、迁移等实际开发任务的开发者，尤其是需要多模型协作和长任务记忆的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "ultrawork / ulw 关键词：让 agent 先读代码、规划、逐步验证再执行",
+  "mass ulw：把任务展开为多 agent 图，各部分并行运行并选用合适模型",
+  "Kibitzer 记忆系统：记忆存于 git 仓库的 markdown 文件，由小模型辅助主 agent 避免重复错误",
+  "多模型支持：通过 /login 登录 Claude、ChatGPT、Kimi、GLM 等订阅",
+  "按需加载的 skills，包含浏览器使用等能力",
+  "配置热重载，设置存放于 ~/.omo/omo.jsonc 和项目级 .omo/omo.jsonc"
+ ],
+ "intro": "OmO 是一个基于 TypeScript 的命令行 AI agent 工具，通过单个 `omo` 命令启动。它运行在作者对 pi 的 fork「senpi」之上，内置了研究、编码、前后端开发等能力，目标是把 token 转化为实际完成的工作。\n\n它的核心用法是在提示词中加入 `ultrawork`（或 `ulw`）关键词，让 agent 先阅读代码库、规划、逐步验证再动手；加入 `mass ulw` 则会把整个任务展开成由多个 agent 组成的图，各部分并行运行并分别选用合适的模型。OmO 还提供基于 git 仓库的 markdown 记忆系统、按任务加载的 skills、多模型登录与切换，以及配置热重载等特性。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装脚本：curl -fsSL https://get.omo.dev/install.sh | bash",
+  "启动 OmO：omo",
+  "打开你的项目，运行 omo 并描述任务",
+  "在提示词中加入 ultrawork（或 ulw）让 agent 先规划再执行",
+  "使用 /login 登录 Claude、ChatGPT、Kimi、GLM 等订阅"
+ ],
+ "summary": "OmO 是一个命令行 AI agent 工具，用一条 omo 命令启动，把提示词变成实际完成的工作。它支持在提示词中加入 ultrawork 或 ulw 关键词，让 agent 先阅读代码库、规划并逐步验证；加入 mass ulw 则会把任务拆成多个 agent 组成的图并行执行，并按需选用不同模型。OmO 还提供基于 git 仓库的记忆系统、按任务加载的 skills 以及多模型订阅登录，适合需要处理研究、编码、迁移等实际开发任务的开发者。",
+ "tagline": "一个命令把 token 变成完成的工作"
+}

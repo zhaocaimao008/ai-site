@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude、Cursor、Copilot 等 AI 编程助手，并希望让助手直接操作浏览器做调试、自动化或性能分析的开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "通过 MCP 让 AI 编程助手控制并检查真实 Chrome 浏览器",
+  "录制性能 trace 并提取可执行的性能洞察",
+  "分析网络请求、截图、查看控制台消息（含 source map 堆栈）",
+  "基于 puppeteer 执行自动化操作并自动等待结果",
+  "提供 CLI，可在不使用 MCP 的情况下使用",
+  "支持 --slim 精简模式与 --headless 无头模式等配置"
+ ],
+ "intro": "chrome-devtools-mcp 是 Chrome DevTools 团队提供的 MCP 服务器，让 Antigravity、Claude、Cursor、Copilot 等编程助手能够控制并检查一个真实的 Chrome 浏览器。它把 Chrome DevTools 的能力开放给 AI 助手，用于可靠的自动化、深入调试和性能分析；同时也提供 CLI，可在不使用 MCP 的情况下单独调用。\n\n项目基于 puppeteer 执行浏览器操作并自动等待结果，可以录制性能 trace 并提取可执行的性能洞察，分析网络请求、截图、查看浏览器控制台消息（含 source map 堆栈）。官方仅支持 Google Chrome 与 Chrome for Testing，其他 Chromium 浏览器不保证可用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js LTS、Chrome 当前稳定版或更新版本，以及 npm",
+  "在 MCP 客户端配置中添加：{\"mcpServers\":{\"chrome-devtools\":{\"command\":\"npx\",\"args\":[\"-y\",\"chrome-devtools-mcp@latest\"]}}}",
+  "如需基础浏览器任务，可改用 --slim 模式：args 为 [\"-y\",\"chrome-devtools-mcp@latest\",\"--slim\",\"--headless\"]",
+  "在 MCP 客户端中输入提示词验证：Check the performance of https://developers.chrome.com"
+ ],
+ "summary": "chrome-devtools-mcp 把 Chrome DevTools 的能力封装成 MCP 服务器，让 Claude、Cursor、Copilot 等 AI 编程助手可以直接控制并检查一个真实的 Chrome 浏览器。它适合需要让助手完成浏览器自动化、网络与控制台调试、性能 trace 分析的场景，也提供 CLI 供不接入 MCP 时使用。",
+ "tagline": "让 AI 编程助手通过 MCP 控制并检查 Chrome 浏览器"
+}

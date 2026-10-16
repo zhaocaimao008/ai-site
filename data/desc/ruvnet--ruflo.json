@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code 或 Codex 的开发者，以及希望构建多智能体协作、自主工作流和对话式 AI 系统的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "100+ 专用 agent 与协调 swarm，支持多智能体协作",
+  "自适应记忆与自学习智能，跨会话保留上下文",
+  "联邦通信，支持跨机器安全协作",
+  "向量 RAG 集成与轨迹对比学习",
+  "原生集成 Claude Code、Codex 及 MCP 客户端",
+  "提供终端 UI 控制台，可独立运行"
+ ],
+ "intro": "Ruflo 是一个 agent meta-harness，定位在 Claude Code 和 Codex 之上，为模型提供工具、记忆、循环、沙箱和控制能力。它通过 100+ 专用 agent、协调 swarm、自学习记忆、跨机器联邦通信以及企业级安全护栏，让 agent 不只是运行，而是协同工作。\n\n项目提供 CLI 和 MCP 两种接入方式。在 Claude Code 中可通过插件市场安装 ruflo-core、ruflo-console 和 ruflo-mods；在 Codex 或其他支持 MCP 的客户端中，可用 npx ruflo@latest init wizard 初始化项目并连接 Ruflo MCP server。此外还提供独立的终端 UI，无需 Claude Code 即可运行。\n\nRuflo 强调自适应记忆、向量 RAG 集成和轨迹学习，本地向量检索与对比更新可在无 LLM 的情况下运行。整体架构为 User → Ruflo (CLI/MCP) → Router → Swarm → Agents → Memory → LLM providers。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中运行：/plugin marketplace add ruvnet/ruflo",
+  "安装核心插件：/plugin install ruflo-core@ruflo",
+  "安装控制台与模组：/plugin install ruflo-console@ruflo 和 /plugin install ruflo-mods@ruflo",
+  "重载插件并启动：/reload-plugins 然后 /ruflo",
+  "使用 Codex 或其他 MCP 客户端时：npx ruflo@latest init wizard，并配置 MCP server 命令 npx -y ruflo@latest mcp start",
+  "可选独立终端 UI：npx ruflo tui"
+ ],
+ "summary": "Ruflo 是一个运行在 Claude Code 和 Codex 之上的 agent 编排框架，为模型补充工具、记忆、循环和沙箱等执行能力。它让多个 agent 组成 swarm 协同工作，并支持跨会话记忆、自学习、跨机器联邦通信和向量 RAG 集成。适合已经使用 Claude Code 或 Codex、希望把单个 AI 助手扩展成可协作、可记忆的智能体团队的开发者。",
+ "tagline": "面向 Claude Code 与 Codex 的智能体编排框架"
+}

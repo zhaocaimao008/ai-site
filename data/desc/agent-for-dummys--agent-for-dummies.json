@@ -1,0 +1,19 @@
+{
+ "ai_related": true,
+ "audience": "适合零基础想了解 Agent、RAG 和大模型应用的开发者或普通读者。",
+ "date": "2026-10-16",
+ "features": [
+  "图文结合讲解 Agent、RAG 与大模型应用",
+  "面向零基础读者，风格简洁精炼",
+  "支持在线阅读，也可下载 Markdown 文档本地编辑",
+  "持续更新，欢迎通过 Issue 或 Pull Request 参与补充与纠错"
+ ],
+ "intro": "这是一个个人整理的学习笔记项目，主题围绕 Agent、RAG 和大模型应用。笔记以图文结合的方式呈现，风格简洁精炼，定位是零基础入门，作者也提到对 ADHD 读者比较友好。\n\n笔记内容持续更新，可以在线阅读，也可以下载到本地自行编辑 Markdown 文档进行补充。项目欢迎通过 Issue 或 Pull Request 补充、纠错或提供更好懂的解释。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在线阅读：https://agent-for-dummys.github.io/Agent-For-Dummies",
+  "下载到本地自行编辑 md 文档对笔记进行补充完善"
+ ],
+ "summary": "这个项目是一份围绕 Agent、RAG 和大模型应用的中文学习笔记，采用图文结合的方式，内容简洁精炼，面向零基础读者。它适合想入门这些方向、又希望从浅显易懂的材料开始了解的人，可以在线阅读，也能下载 Markdown 文档自行补充。",
+ "tagline": "面向零基础的 Agent、RAG 与大模型图文学习笔记"
+}

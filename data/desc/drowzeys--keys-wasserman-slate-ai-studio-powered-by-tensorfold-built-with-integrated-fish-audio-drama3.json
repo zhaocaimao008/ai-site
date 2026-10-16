@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地 Mac 或 NVIDIA DGX Spark 上尝试 AI 电影制作流程的开发者与创作者，尤其是对 Slate 工作流和 TensorFold 渲染感兴趣的人。",
+ "date": "2026-10-16",
+ "features": [
+  "在本地 Mac（Apple Silicon）或 NVIDIA DGX Spark 上运行 AI 电影制作流程",
+  "使用 Qwen-Image-2.1-Turbo 进行文生图，使用 MiniMax H3 / FastH3 生成带声音的视频",
+  "集成 Wasserman Slate 工作流、Motion Previs 分析和 Wasserman Sharp Spec QA 门禁",
+  "提供 Keys and Wasserman LoRA Hub，包含 80s Horror LoRA",
+  "一键安装脚本根据芯片和内存自动选择引擎与权重精度",
+  "支持文本直出视频、图像转视频，以及不同分辨率与时长"
+ ],
+ "intro": "这是一个运行在本地机器上的 AI 电影工作室，把 Sam Wasserman 的 Slate 规划工作流与 TensorFold 渲染引擎结合在一起。它支持 Apple Silicon Mac（Metal）和 NVIDIA DGX Spark（CUDA），可以先用 Qwen-Image-2.1-Turbo 生成图像，再用 MiniMax H3 / FastH3 生成带声音的视频。\n\n项目包含 Wasserman Slate AI Studio 标签页、Motion Previs 分析（Sam Wasserman 的 Motion Previs Studio 的 Python 移植）、Wasserman Sharp Spec 与 QA 门禁，以及 Keys and Wasserman LoRA Hub 中的 80s Horror LoRA。README 给出了不同 Mac 配置和 DGX Spark 上的运行速度与内存占用数据，并说明安装脚本会自动根据芯片和内存选择引擎。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 M5 系列 Mac 上运行默认安装：bash oneshot-setup.sh --app",
+  "在 M1 至 M4 Mac 上运行默认安装（可选 Q8_ONLY=1 节省磁盘）：Q8_ONLY=1 bash oneshot-setup.sh --app",
+  "需要 MiniMax H3 Turbo 时添加 --turbo：bash oneshot-setup.sh --turbo --app",
+  "仅生成图像时运行：bash oneshot-setup.sh --image-only",
+  "用 4 passes 快速生成视频：STEPS=4 bash scripts/fast.sh \"a prompt\" out.mp4"
+ ],
+ "summary": "这个项目把 AI 电影制作流程搬到本地机器上，面向 Apple Silicon Mac 和 NVIDIA DGX Spark 用户。它整合了 Sam Wasserman 的 Slate 规划工作流与 TensorFold 渲染引擎，能用 Qwen-Image-2.1-Turbo 生成图像，再用 MiniMax H3 / FastH3 生成带声音的视频。README 提供了不同硬件配置下的速度与内存数据，以及自动选择引擎的安装脚本，适合想在本机尝试从规划到渲染完整流程的开发者与创作者。",
+ "tagline": "在 Mac 与 DGX Spark 上本地运行的 AI 电影工作室"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速使用多种 AI 模型进行对话的开发者与普通用户，尤其适合注重隐私、需要跨平台使用或自部署 LLM 的场景。",
+ "date": "2026-10-16",
+ "features": [
+  "支持 Claude、DeepSeek、GPT-4、Gemini Pro 等多种 AI 模型",
+  "提供 Web、iOS、macOS、Android、Linux、Windows 跨平台客户端",
+  "数据本地存储，隐私优先，支持自部署 LLM",
+  "支持 Markdown、LaTex、mermaid、代码高亮、PWA、暗色模式",
+  "支持提示词模板、插件、Artifacts、实时聊天",
+  "一键部署到 Vercel，支持多语言界面"
+ ],
+ "intro": "NextChat 是一个轻量、快速的 AI 聊天助手，基于 TypeScript 开发，支持 Claude、DeepSeek、GPT-4、Gemini Pro 等多种模型。它提供 Web、iOS、macOS、Android、Linux、Windows 等多个平台版本，桌面客户端体积约 5MB。\n\n项目强调隐私优先，所有数据存储在浏览器本地，并支持一键部署到 Vercel。它兼容自部署的 LLM，推荐配合 RWKV-Runner 或 LocalAI 使用。此外，NextChat 还支持 Markdown（LaTex、mermaid、代码高亮）、PWA、暗色模式、流式响应、提示词模板、插件、Artifacts、实时聊天等功能，并内置多语言界面。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Vercel 上点击一键部署按钮，设置 OPENAI_API_KEY 和 CODE 环境变量",
+  "部署完成后访问分配的域名即可使用",
+  "如需本地运行，可克隆仓库并按照 README 中的说明进行构建",
+  "桌面客户端可从 GitHub Releases 页面下载安装"
+ ],
+ "summary": "NextChat 是一个轻量快速的 AI 聊天助手，支持 Claude、DeepSeek、GPT-4、Gemini Pro 等多种模型，覆盖 Web、桌面和移动端。它强调隐私优先，数据存储在本地，并兼容自部署 LLM，适合需要跨平台使用多种 AI 模型、注重数据隐私或希望自行部署的开发者与普通用户。",
+ "tagline": "轻量跨平台 AI 聊天助手，支持多种模型与本地部署"
+}

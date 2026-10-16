@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "需要为 LLM 构建知识库与检索能力的开发者，以及希望把复杂文档转化为可用 AI 系统的个人和企业团队。",
+ "date": "2026-10-16",
+ "features": [
+  "基于深度文档理解的知识抽取，支持复杂格式的非结构化数据",
+  "基于模板的可解释分块，提供多种模板可选",
+  "Knowledge Compilation：在文档与数据集层面生成 Wiki、Graph、Tree、PageIndex、思维导图、时间线、Skills 等知识产物",
+  "Agentic Retrieval：多步检索与推理，可选 Low、Medium、High、Ultra 思考模式",
+  "带引用的答案与分块可视化，便于人工干预和溯源",
+  "兼容 Word、PPT、Excel、TXT、图片、PDF、扫描件、结构化数据、网页等异构数据源"
+ ],
+ "intro": "RAGFlow 是一个开源的检索增强生成（RAG）引擎，将 RAG 与 Agent 能力结合，为 LLM 提供上下文层。它面向企业级场景，提供从文档解析到检索生成的完整 RAG 工作流，支持个人与不同规模的企业使用。\n\n项目强调“Quality in, quality out”，基于深度文档理解从复杂格式的非结构化数据中抽取知识，并提供基于模板的可解释分块方式。它兼容 Word、PowerPoint、Excel、TXT、图片、PDF、扫描件、结构化数据、网页等多种异构数据源，并支持可配置的 LLM 与 embedding 模型、多路召回与融合重排。\n\n近期版本引入了 Knowledge Compilation，可在文档和数据集层面生成 Wiki、Graph、Tree、PageIndex、思维导图、时间线和 Skills 等结构化知识产物；同时加入 Agentic RAG，提供 Low、Medium、High、Ultra 四档思考模式，用于多步检索与推理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "云端体验：访问 https://cloud.ragflow.io",
+  "本地部署：参考 README 中的 Local Deployment 章节"
+ ],
+ "summary": "RAGFlow 是一个开源 RAG 引擎，把检索增强生成与 Agent 能力结合起来，为 LLM 提供上下文层。它面向需要处理复杂文档的场景，能从 Word、PDF、扫描件、网页等异构数据中抽取知识，并通过模板化分块、多路召回与重排生成带引用的答案。项目还提供 Knowledge Compilation 与 Agentic RAG，可按需生成结构化知识产物并控制检索推理深度，适合搭建企业或个人知识库问答系统。",
+ "tagline": "开源 RAG 引擎，融合 Agent 能力为 LLM 构建上下文层"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "想通过示例代码学习和上手 OpenAI API 的开发者，以及需要参考常见任务实现方式的 Python 使用者。",
+ "date": "2026-10-16",
+ "features": [
+  "提供使用 OpenAI API 完成常见任务的示例代码与指南",
+  "示例主要以 Jupyter Notebook 形式组织，多数使用 Python",
+  "通过环境变量 OPENAI_API_KEY 或根目录 .env 文件配置 API key",
+  "提供 cookbook.openai.com 站点用于浏览内容",
+  "附带网络上的相关工具、指南与课程资源链接"
+ ],
+ "intro": "OpenAI Cookbook 是 OpenAI 官方维护的示例代码与指南仓库，目标是用可运行的代码演示如何完成使用 OpenAI API 的常见任务。仓库内容以 Jupyter Notebook 为主，多数示例用 Python 编写，但其中思路可以套用到其他语言。\n\n运行这些示例需要一个 OpenAI 账号和对应的 API key。README 建议把 key 写入名为 OPENAI_API_KEY 的环境变量，或者在仓库根目录创建 .env 文件写入 OPENAI_API_KEY=<your API key>，多数 IDE（如 Visual Studio Code）会自动读取。官方还提供了 cookbook.openai.com 站点用于浏览这些内容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备一个 OpenAI 账号并获取 API key",
+  "设置环境变量 OPENAI_API_KEY 为你的 API key",
+  "或在仓库根目录创建 .env 文件，写入 OPENAI_API_KEY=<your API key>",
+  "打开并运行仓库中的 Jupyter Notebook 示例"
+ ],
+ "summary": "OpenAI Cookbook 是 OpenAI 官方的示例代码与指南仓库，用可运行的 Notebook 演示如何用 OpenAI API 完成常见任务。示例多为 Python，但思路可迁移到其他语言。使用前需要一个 OpenAI 账号和 API key，通过环境变量 OPENAI_API_KEY 或根目录 .env 文件配置即可运行。适合想通过实际代码学习和参考 OpenAI API 用法的开发者。",
+ "tagline": "OpenAI API 的示例代码与使用指南合集"
+}

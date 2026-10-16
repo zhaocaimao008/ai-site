@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 LLM 或编码 agent、希望降低 token 成本并控制上下文的开发者，也适合需要在不改代码前提下接入压缩的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "Python / TypeScript 库，直接调用 compress(messages) 压缩消息",
+  "本地代理模式 headroom proxy，无需改代码即可接入任意语言",
+  "headroom wrap 一键包装 Claude、Codex、Cursor、Aider 等编码 agent",
+  "提供 headroom_compress、headroom_retrieve、headroom_stats 等 MCP 工具",
+  "按内容类型路由到 JSON、源码、文本三类压缩器",
+  "CCR 本地缓存原文，支持按需检索还原"
+ ],
+ "intro": "Headroom 是一个运行在本地的上下文压缩层，作用是在提示词、工具输出、日志、RAG 结果、文件和对话历史被发送给 LLM 之前先做压缩。项目宣称能在答案不变的前提下减少 token 消耗，其中编码 agent 约减少 20%，JSON 类内容可减少 60% 至 95%。压缩过程在用户机器上完成，不会把提示词或文件内容发到外部。\n\n它提供多种接入方式：Python 与 TypeScript 的 compress() 库、零代码改动的本地代理、一条命令包装 Claude、Codex、Cursor、Aider 等编码 agent，以及面向 MCP 客户端的 MCP server。内部由 ContentRouter 识别内容类型，分别交给 SmartCrusher（JSON）、CodeCompressor（源码 AST）和 Kompress-v2-base（文本）处理；CCR 会在本地缓存原文，模型需要时可调用 headroom_retrieve 取回完整内容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：uv tool install --python 3.13 \"headroom-ai[all]\" 或 pip install \"headroom-ai[all]\"",
+  "选择模式：headroom deploy、headroom wrap claude 或 headroom proxy --port 8787",
+  "运行 headroom doctor 做健康检查，确认路由正常",
+  "在 Python 中内联使用：from headroom import compress，然后调用 compress(messages, model=\"gpt-4o\")"
+ ],
+ "summary": "Headroom 在内容送进 LLM 之前做一层本地压缩，覆盖工具输出、日志、RAG 片段、文件和对话历史，目标是答案不变而 token 更少。它既能作为 Python/TypeScript 库内联调用，也能以本地代理、MCP server 或包装编码 agent 的方式接入，压缩在本地完成，原文可缓存后按需取回。适合想降低 token 成本、又不想改动现有调用链的开发者。",
+ "tagline": "在内容进入 LLM 前压缩工具输出、日志与 RAG 片段"
+}

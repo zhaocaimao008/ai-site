@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望用 AI 辅助求职流程的开发者与技术从业者，尤其是愿意自行 fork 并配置本地环境的用户；内置门户搜索目前更适合丹麦求职者。",
+ "date": "2026-10-16",
+ "features": [
+  "/setup 从 documents 文件夹、粘贴的 CV 或访谈中建立个人资料",
+  "/scrape 搜索多个职位门户、去重并按匹配度排序",
+  "/rank 批量评分并生成候选职位短名单",
+  "/apply 评估匹配度、起草定制 CV 与求职信，并由 reviewer agent 审阅修订",
+  "/interview 面试准备",
+  "支持通过 /add-portal 添加新的职位门户"
+ ],
+ "intro": "这是一个运行在本地机器上的求职申请框架，构建在 Claude Code 之上。用户 fork 仓库、填写个人资料后，可以让 Claude 评估职位匹配度、定制 CV、撰写求职信并准备面试。核心工作流（自我画像、匹配评估、起草-审阅流水线）不依赖特定语言和国家，但内置的职位门户搜索技能面向丹麦市场（Jobindex、Jobnet、Akademikernes Jobbank 等），可按同样模式替换为本地招聘网站。\n\n项目作者本人用它完成了自己的求职过程，README 中说明该框架编码了职业指导的常见实践，包括结构化评估标准、面向未来的求职信框架以及可选的薪资对标。CV 使用 LaTeX 编译，求职信使用 xelatex。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "gh repo fork MadsLorentzen/ai-job-search --clone && cd ai-job-search",
+  "python3 tools/install_portal_clis.py",
+  "运行 claude，然后在 Claude Code 内执行 /setup 填写个人资料",
+  "执行 /scrape 搜索职位，或直接 /apply <url> 申请某个职位"
+ ],
+ "summary": "这个项目把 Claude Code 变成一个本地运行的求职助手：填写个人资料后，它可以搜索职位门户、评估岗位匹配度、定制 CV 和求职信，并做面试准备。核心流程与语言、国家无关，但内置的职位搜索技能目前面向丹麦招聘网站，可按同样模式替换为本地门户。适合愿意自己 fork 仓库、在本地配置 Python、Bun 和 LaTeX 环境，并希望把求职申请流程系统化的开发者。",
+ "tagline": "基于 Claude Code 的本地求职申请工作流"
+}

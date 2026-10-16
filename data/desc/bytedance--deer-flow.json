@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望构建和运行长周期 AI 智能体应用的开发者，以及需要深度研究、编码辅助或自动化创作能力的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "子智能体（Sub-Agents）编排，处理长周期复杂任务",
+  "沙箱与文件系统，支持代码执行与文件操作",
+  "长期记忆与上下文工程，支持手动上下文压缩",
+  "可扩展的技能与工具系统，支持导出自定义技能",
+  "集成 MCP Server、IM 频道与多种追踪工具",
+  "支持 Docker 部署与本地开发，提供 TUI 终端工作台"
+ ],
+ "intro": "DeerFlow 2.0 是字节跳动开源的一个超级智能体（SuperAgent）框架，全称为 Deep Exploration and Efficient Research Flow。它通过编排子智能体（sub-agents）、记忆（memory）和沙箱（sandboxes），配合可扩展的技能（skills）与工具，来处理从几分钟到数小时不等的不同层级任务，覆盖研究、编码和创作等场景。\n\n项目基于 Python 3.12+ 与 Node.js 22+，采用 LangChain/LangGraph 生态，提供 Docker 与本地开发两种运行方式，并支持 MCP Server、IM 频道、多种追踪工具（LangSmith、Langfuse、Monocle）以及多模型提供商配置。README 中推荐使用 Doubao-Seed-2.0-Code、DeepSeek v3.2 和 Kimi 2.5 等模型运行。\n\n需要注意的是，2.0 是完全重写的版本，与 1.x 不共享代码；原 Deep Research 框架仍在 1.x 分支维护。README 也包含安全提示，提醒不当部署可能引入风险。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用编码智能体时，可将以下提示交给 Claude Code、Codex、Cursor 等：Help me clone DeerFlow if needed, then bootstrap it for local development by following https://raw.githubusercontent.com/bytedance/deer-flow/main/Install.md",
+  "配置模型与运行参数（参考 backend/docs/CONFIGURATION.md）",
+  "推荐使用 Docker 方式运行：Option 1: Docker (Recommended)",
+  "也可选择本地开发方式：Option 2: Local Development"
+ ],
+ "summary": "DeerFlow 2.0 是字节跳动开源的超级智能体框架，通过编排子智能体、记忆和沙箱，配合可扩展技能与工具，处理从几分钟到数小时的研究、编码和创作任务。它基于 Python 与 Node.js，采用 LangGraph 生态，支持 Docker 或本地部署，并集成 MCP、IM 频道与多种追踪工具。适合需要构建长周期 AI 智能体应用的开发者。",
+ "tagline": "开源超级智能体框架，编排子智能体、记忆与沙箱完成长周期任务"
+}

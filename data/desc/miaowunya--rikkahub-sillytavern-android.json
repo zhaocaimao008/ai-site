@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Android 手机上使用 AI 聊天、或从桌面版 SillyTavern 迁移角色卡与预设的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "无损导入 SillyTavern 角色卡、世界书、预设、正则与主题",
+  "提示词前缀缓存优化，减少每轮上下文分歧以节省 token",
+  "语义 RAG、三层记忆与滚动压缩，支持长对话",
+  "QuickJS 沙箱插件系统，支持 ZIP 导入并由 AI 调用",
+  "Jev 决策：挂载 TypeSafe System One 判断模型进行记忆筛选与快速问答",
+  "代理站兼容，自动修复 Gemini 经 OpenAI 代理的常见问题"
+ ],
+ "intro": "RikkaHub Plus · Lantern 是一个 Android 平台的 AI 聊天客户端，基于 RikkaHub 深度定制，使用 Kotlin 与 Jetpack Compose 原生实现。它既可以直接接入 API 开箱即聊，也能作为 SillyTavern 兼容端点，无损导入角色卡、世界书、预设、正则和主题，无需 Termux 或 Node.js。\n\n项目在提示词前缀缓存、记忆与长对话、插件系统、代理站兼容等方面做了增强，并加入 Jev 决策、豆包语音、设备工具、AI 群聊等特性。所有功能集中在同一客户端内，普通聊天与酒馆迁移两条路线互不干扰。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载最新 APK（arm64-v8a，Android 8.0+）",
+  "设置 → 模型与服务 → Providers，添加 API；再到默认模型与提示词选择聊天/标题/压缩模型",
+  "开始聊天；如需导入角色卡，在助手页面导入 PNG / V2 / V3 JSON",
+  "导入世界书/预设/正则/QR：设置 → 扩展",
+  "添加插件：设置 → 插件 → 导入 ZIP"
+ ],
+ "summary": "RikkaHub Plus · Lantern 是一个 Android 原生 AI 聊天客户端，同时兼容 SillyTavern 生态。它解决的是手机端使用 AI 聊天时角色卡、世界书、预设难以迁移，以及长对话 token 消耗高、记忆容易丢失的问题。适合想直接在安卓上接入 API 聊天，或从桌面版 SillyTavern 迁移角色卡与预设的用户。",
+ "tagline": "安卓 AI 聊天客户端，兼容 SillyTavern 角色卡与预设"
+}

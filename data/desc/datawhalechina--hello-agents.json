@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想系统学习智能体原理与实现的大语言模型使用者、开发者，以及准备智能体相关岗位面试的读者。",
+ "date": "2026-10-16",
+ "features": [
+  "从智能体定义、发展史到大语言模型基础的完整理论铺垫",
+  "手把手实现 ReAct、Plan-and-Solve、Reflection 等经典智能体范式",
+  "介绍 Coze、Dify、n8n 低代码平台与 AutoGen、AgentScope、LangGraph 等主流框架",
+  "基于 OpenAI 原生 API 从零构建自研框架 HelloAgents",
+  "覆盖记忆与检索、上下文工程、MCP/A2A/ANP 协议、Agentic-RL 与性能评估等进阶主题",
+  "提供智能旅行助手、自动化深度研究智能体、赛博小镇等综合实战案例"
+ ],
+ "intro": "Hello-Agents 是 Datawhale 社区推出的系统性智能体学习教程，面向希望从原理到实践掌握智能体构建的读者。教程区分了流程驱动的软件工程类 Agent 与真正以 AI 驱动的 AI Native Agent，并把重点放在后者，带领读者穿透框架表象，从核心原理、经典范式出发，亲手构建多智能体应用。\n\n内容分为五部分：智能体与语言模型基础、构建大语言模型智能体、高级知识扩展、综合案例进阶以及毕业设计。涵盖 ReAct、Plan-and-Solve、Reflection 等经典范式的手写实现，Coze、Dify、n8n 等低代码平台，AutoGen、AgentScope、LangGraph 等框架，以及记忆与检索、上下文工程、MCP/A2A/ANP 通信协议、Agentic-RL 训练和性能评估等主题。\n\n教程还提供智能旅行助手、自动化深度研究智能体、赛博小镇等综合案例，并附带社区贡献的面试题总结、环境配置等补充材料。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在线阅读：访问 https://datawhalechina.github.io/hello-agents/ 或国内加速站点 https://hello-agents.datawhale.cc",
+  "本地阅读或贡献内容：参考仓库中的学习指南",
+  "按章节顺序从第一章「初识智能体」开始学习",
+  "参考 Extra-Chapter 中的环境配置文档完成环境准备"
+ ],
+ "summary": "这是一套面向中文读者的智能体系统构建教程，重点讲解以 AI 驱动的 AI Native Agent，而非仅把大模型当作流程后端的软件工程式 Agent。内容从智能体定义、发展史和大语言模型基础讲起，逐步进入 ReAct 等经典范式的手写实现、低代码平台与主流框架的使用，再到自研框架、记忆与检索、上下文工程、通信协议、Agentic RL 和性能评估，最后以旅行助手、深度研究智能体等综合案例收尾。适合想从大模型使用者转变为智能体构建者的开发者按章节系统学习。",
+ "tagline": "Datawhale 出品的从零构建 AI 智能体系统教程"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合希望深入理解大语言模型内部原理并动手实现的开发者、学生和研究人员。",
+ "date": "2026-10-16",
+ "features": [
+  "从零实现 GPT 类大语言模型的完整流程",
+  "涵盖注意力机制、文本数据处理、预训练和微调",
+  "提供按章节组织的 Jupyter Notebook 代码",
+  "包含加载预训练模型权重进行微调的示例",
+  "附录提供 PyTorch 入门和 LoRA 参数高效微调"
+ ],
+ "intro": "这个仓库是《Build a Large Language Model (From Scratch)》一书的官方代码库，内容围绕如何从零开始开发、预训练和微调一个 GPT 类大语言模型。书中通过清晰的文字、图表和示例，逐步讲解每个阶段，帮助读者理解 LLM 的内部工作原理。\n\n项目使用 PyTorch 实现，代码以 Jupyter Notebook 为主，按章节组织，涵盖文本数据处理、注意力机制、GPT 模型实现、无标签数据预训练、文本分类微调以及指令微调等主题。此外，还包含加载更大预训练模型权重进行微调的代码，以及 PyTorch 入门、LoRA 参数高效微调等附录内容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone --depth 1 https://github.com/rasbt/LLMs-from-scratch.git",
+  "参考 setup 目录下的 README.md 配置 Python 环境",
+  "按章节打开对应的 Jupyter Notebook 运行代码"
+ ],
+ "summary": "这个项目是《Build a Large Language Model (From Scratch)》一书的官方代码库，旨在帮助读者从零开始用 PyTorch 实现一个类 ChatGPT 的大语言模型。内容按章节组织，覆盖文本数据处理、注意力机制、GPT 模型构建、预训练、文本分类微调和指令微调等完整流程，并包含加载预训练权重进行微调的示例。适合想深入理解 LLM 内部原理并动手实践的开发者、学生和研究人员。",
+ "tagline": "从零开始用 PyTorch 逐步实现类 ChatGPT 的大语言模型"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要发布或分享文字、希望去掉 AI 腔调的写作者和开发者，尤其是使用 Claude Code、Codex 等 agent 工具的人。",
+ "date": "2026-10-16",
+ "features": [
+  "基于 Wikipedia《Signs of AI writing》识别 26 种 AI 写作特征",
+  "按特征强弱排序并给出改写，不改变原文含义",
+  "支持 voice matching，可提供自己的写作样本让改写贴近个人风格",
+  "处理文件时只改散文，保留代码、数据、frontmatter 和链接目标",
+  "不编造事实，缺失细节会向用户询问",
+  "支持 Claude Code、Codex、Claude.ai、Claude Desktop 及其他兼容 skills 的 agent"
+ ],
+ "intro": "Humanizer 是一个 agent skill，用来把 AI 生成的文字改写成更像真人写的，同时不改变原意。它基于 Wikipedia 编辑用来识别 AI 文本的《Signs of AI writing》指南，可在 Claude Code、Codex 以及其他支持 skills 的 agent 中使用。\n\n它会检查 26 种 AI 写作特征，例如「不是 X 而是 Y」、单行收尾、听起来很深刻的格言、铺垫式开场、无对象的反驳等，并按强弱顺序标出。改写时不会把原结构当作固定模板，也不会编造事实：人名、数字、日期、引用等细节必须来自原文或作者，缺失时会主动询问。\n\n作者明确表示，它的目标是让文字更适合人类读者，而不是绕过 AI 检测器，检测器仍会标记它的大部分输出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code：运行 /plugin marketplace add blader/humanizer 和 /plugin install humanizer@humanizer",
+  "Codex：运行 npx skills add blader/humanizer --global --agent codex",
+  "其他 agent：运行 npx skills add blader/humanizer --global --agent '*'",
+  "调用方式：输入 /humanizer 后粘贴文本，或直接说 Please humanize this text: [your text]",
+  "改写文件：输入 Humanize the prose in docs/launch-post.md"
+ ],
+ "summary": "Humanizer 是一个面向 AI agent 的写作改写技能，用来去掉文本里的 AI 腔调，让读起来更像真人写的，同时保留原意。它依据 Wikipedia 编辑识别 AI 文本的指南，检查二十多种常见特征，比如「不是 X 而是 Y」、单行收尾、刻意铺垫和空洞格言。它不会编造事实，缺失的细节会向用户询问，处理文件时也只改散文，不动代码和数据。适合用 Claude Code、Codex 等工具写作、希望文字更自然的人。",
+ "tagline": "把 AI 生成的文字改写成更像人写的"
+}

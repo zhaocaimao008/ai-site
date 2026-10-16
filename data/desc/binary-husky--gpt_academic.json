@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要频繁阅读、翻译和撰写学术论文的研究人员、学生，以及希望用统一界面调用多种 LLM 完成代码解释、项目剖析等任务的开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "支持 GPT、GLM、通义千问、DeepseekCoder、讯飞星火、文心一言、llama2、rwkv、claude2、moss 等多种 LLM 模型接入",
+  "PDF/LaTeX 论文全文翻译、总结与润色，支持 Arxiv 论文精细翻译",
+  "Python/C/C++/Java/Lua 等项目剖析与自译解，一键生成项目解析报告",
+  "模块化函数插件系统，支持自定义快捷按钮与插件热更新",
+  "支持并行问询多种 LLM 模型，可同时调用 GPT3.5、GPT4、ChatGLM2、MOSS 等",
+  "支持 mermaid 图像渲染、公式 tex 与渲染形式同时显示、暗色主题"
+ ],
+ "intro": "GPT 学术优化（GPT Academic）是一个基于 Python 的 LLM 交互界面，为 GPT、GLM、通义千问、DeepseekCoder、讯飞星火、文心一言、llama2、rwkv、claude2、moss 等大语言模型提供统一入口。项目特别针对论文阅读、润色和写作场景做了优化，同时通过模块化设计支持自定义快捷按钮与函数插件。\n\n它内置了 PDF/LaTeX 论文翻译与总结、Python/C++ 等项目剖析与自译解、批量注释生成、Markdown 中英互译、Arxiv 小助手、谷歌学术统合等功能，并支持并行问询多种 LLM 模型以及 chatglm3 等本地模型。用户可以在配置文件中填写多个 API Key，也可在输入区临时提交 API Key 即时生效。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -r requirements.txt（请选择 requirements.txt 中指定的版本）",
+  "在 config.py 中配置 API_KEY，可填写多个 key，如 API_KEY=\"openai-key1,openai-key2,azure-key3,api2d-key4\"",
+  "运行项目启动 Web 界面，在输入区输入临时 API_KEY 后回车可即时生效",
+  "在浏览器 URL 后添加 /?__theme=dark 可切换暗色主题",
+  "修改 config.py 中的 LAYOUT 选项可切换左右布局或上下布局"
+ ],
+ "summary": "GPT 学术优化是一个面向论文场景的大语言模型交互界面，把 GPT、GLM、通义千问、DeepseekCoder 等多种模型整合到同一个 Web 界面中。它重点优化了论文阅读、翻译、润色和写作流程，同时提供项目剖析、代码解释、批量注释等插件，并支持自定义快捷按钮和并行问询多个模型。适合需要频繁处理学术文献、又希望灵活切换不同 LLM 的研究人员和开发者使用。",
+ "tagline": "为论文阅读、润色与写作优化的 LLM 交互界面"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在桌面端统一管理和使用多个 LLM 服务商的开发者、研究人员和普通用户，尤其是希望同时使用云端与本地模型、并需要文档处理和助手功能的场景。",
+ "date": "2026-10-16",
+ "features": [
+  "支持 OpenAI、Gemini、Anthropic 等云端 LLM，以及 Claude、Perplexity、Poe 等 AI Web 服务",
+  "通过 Ollama、LM Studio 接入本地模型",
+  "内置 300+ 预配置 AI 助手，支持自定义助手和多模型同时对话",
+  "处理文本、图片、Office、PDF 等文档，支持 WebDAV 文件管理与备份",
+  "集成全局搜索、话题管理、AI 翻译、拖拽排序、小程序和 MCP 服务器",
+  "跨平台支持 Windows、Mac、Linux，开箱即用，提供明暗主题和透明窗口"
+ ],
+ "intro": "Cherry Studio 是一个桌面客户端，支持接入多个 LLM 服务商，可在 Windows、Mac 和 Linux 上运行。它把云端模型服务（如 OpenAI、Gemini、Anthropic）、AI Web 服务（如 Claude、Perplexity、Poe）以及通过 Ollama、LM Studio 运行的本地模型统一到一个界面中。\n\n除了聊天，它还提供 300+ 预配置 AI 助手，并允许创建自定义助手，支持多模型同时对话。文档处理方面可读取文本、图片、Office、PDF 等格式，配合 WebDAV 文件管理与备份、Mermaid 图表可视化和代码语法高亮。\n\n工具层面集成了全局搜索、话题管理、AI 翻译、拖拽排序、小程序支持和 MCP（Model Context Protocol）服务器，安装后无需额外配置环境即可使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载对应平台的安装包",
+  "安装后启动 Cherry Studio，无需额外配置环境",
+  "在设置中添加你的 LLM 服务商 API 密钥或配置本地模型（如 Ollama）",
+  "选择或创建 AI 助手，开始对话"
+ ],
+ "summary": "Cherry Studio 是一个跨平台的 AI 桌面客户端，把 OpenAI、Gemini、Anthropic 等云端模型，Claude、Perplexity 等 Web 服务，以及 Ollama、LM Studio 本地模型统一到一个界面里。它内置 300+ 预配置助手，支持多模型同时对话，还能处理文档、管理话题、做 AI 翻译，并集成 MCP 服务器。适合想在一个桌面应用里切换使用多种大模型、又不想折腾环境的开发者和普通用户。",
+ "tagline": "支持多模型服务商的跨平台 AI 桌面客户端"
+}

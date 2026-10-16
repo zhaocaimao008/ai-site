@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合关注全球地缘政治、金融动态和基础设施监控的分析师、开发者以及需要实时态势感知的普通用户。",
+ "date": "2026-10-16",
+ "features": [
+  "AI 驱动的全球与区域新闻聚合，自动合成简报",
+  "双地图引擎：3D 地球（globe.gl）和 WebGL 平面地图（deck.gl）",
+  "跨流关联分析：军事、经济、灾害和升级信号融合",
+  "国家不稳定指数（CII）实时评分与 24 小时变动",
+  "金融雷达：股票交易所、商品、加密货币和市场综合指标",
+  "本地 AI 支持：通过 Ollama 运行，无需 API 密钥"
+ ],
+ "intro": "World Monitor 是一个实时全球情报仪表盘，将 AI 驱动的新闻聚合、地缘政治监控和基础设施追踪整合到统一的态势感知界面中。它提供全球与区域分类的精选新闻源，并通过 AI 合成简报；同时具备双地图引擎（3D 地球和 WebGL 平面地图）以及跨流关联分析，可融合军事、经济、灾害和升级信号。\n\n项目包含国家不稳定指数（CII）、金融雷达（股票、商品、加密货币）等功能，并支持使用 Ollama 在本地运行 AI，无需 API 密钥。它可以从单一代码库生成多个站点变体（world、tech、finance、commodity、happy、energy），并提供基于 Tauri 2 的桌面应用（macOS、Windows、Linux）。界面支持多语言和 RTL。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/koala73/worldmonitor.git",
+  "cd worldmonitor",
+  "npm install",
+  "npm run dev",
+  "打开 http://localhost:3000（可通过 .env.local 中的 DEV_PORT 覆盖端口）"
+ ],
+ "summary": "World Monitor 是一个实时全球情报仪表盘，把 AI 新闻聚合、地缘政治监控和基础设施追踪整合到一个界面里。它提供多语言新闻源和 AI 简报，并用双地图引擎展示全球动态，还包含国家不稳定指数和金融雷达等分析工具。项目支持本地 AI 运行，无需 API 密钥，也能从同一代码库生成多个站点变体，并提供桌面应用。适合需要快速了解全球态势的开发者、分析师和普通用户。",
+ "tagline": "实时全球情报仪表盘，聚合新闻、地缘政治与基础设施监控"
+}

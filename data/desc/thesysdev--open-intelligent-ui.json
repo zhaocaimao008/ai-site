@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在应用中实现生成式交互界面的前端和全栈开发者，以及希望研究 ChatGPT Intelligent UI 实现方式的工程师。",
+ "date": "2026-10-16",
+ "features": [
+  "模型流式输出 OpenUI Lang 1.0，由组件库动态渲染交互式界面",
+  "组件库包含布局、文本、输入、媒体与数据、绘图等类别，布局由模型自行编排",
+  "提供 59 个通用 @functions，支持列表、数字、文本、颜色、日期和仪表盘数据计算",
+  "支持地图（MapLibre GL）、图表、图片搜索、SVG 绘图和沙箱 HTML 页面",
+  "可通过 OpenUI Cloud、任意 OpenAI 兼容 API 或本地 Ollama 模型运行",
+  "内置 /gallery 页面，展示 16 个 Intelligent UI 示例的可运行程序"
+ ],
+ "intro": "Open Intelligent UI 是 ChatGPT「Intelligent UI」体验的开源实现，基于 OpenUI 标准构建。在 ChatGPT 中，像「plan a day in San Francisco」这样的请求会返回地图、照片和可编辑行程组成的交互式答案，而不是纯文本。这个项目用开源组件复现了同样的效果，让开发者可以在自己的应用里构建、修改和发布这类界面。\n\n项目使用 TypeScript 和 Next.js 编写，模型流式输出 OpenUI Lang 1.0，应用通过一组由模型自行编排的组件原语来渲染，布局不固定在组件里。组件库涵盖布局、文本、输入、媒体与数据、绘图等类别，并提供 59 个通用 @functions 用于在回答中基于自身状态做计算。\n\n项目提供在线演示，并支持通过 OpenUI Cloud、任意 OpenAI 兼容 API 或本地 Ollama 模型运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "cp .env.example .env",
+  "npm install",
+  "npm run generate:apiKey   # 将 THESYS_API_KEY 写入 .env",
+  "npm run dev",
+  "打开 http://localhost:3000，尝试输入：I'm in San Francisco for a day, plan a sightseeing route for me"
+ ],
+ "summary": "这个项目把 ChatGPT 的 Intelligent UI 体验用开源方式复现出来：用户提出请求后，模型不再只返回文字，而是流式生成地图、照片、图表、可编辑行程等交互式界面。它基于 OpenUI 标准，用 TypeScript 和 Next.js 实现，组件布局由模型自行编排，并附带一批计算函数。适合想在自家产品里加入生成式交互界面、或研究这类界面如何落地的开发者参考和二次开发。",
+ "tagline": "用开源组件复刻 ChatGPT 的交互式回答界面"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地运行 AI agent 的开发者，以及需要自动化、研究、写作或数据分析的普通用户。",
+ "date": "2026-10-16",
+ "features": [
+  "通用 AI agent，可用于代码、研究、写作、自动化和数据分析等任务",
+  "提供 macOS、Linux、Windows 桌面应用、CLI 和可嵌入的 API",
+  "支持 Anthropic、OpenAI、Google、Ollama、OpenRouter、Azure、Bedrock 等 15+ 提供商",
+  "可通过 ACP 使用已有的 Claude、ChatGPT 或 Gemini 订阅",
+  "通过 Model Context Protocol 连接 70+ 扩展",
+  "用 Rust 构建，注重性能与可移植性"
+ ],
+ "intro": "goose 是一个运行在用户本机的开源通用 AI agent，用 Rust 编写。它不局限于代码建议，还可以用于研究、写作、自动化和数据分析等任务，提供 macOS、Linux、Windows 桌面应用、完整 CLI 以及可嵌入任意位置的 API。\n\ngoose 支持 15 个以上模型提供商，包括 Anthropic、OpenAI、Google、Ollama、OpenRouter、Azure、Bedrock 等，可使用 API key，也可通过 ACP 使用已有的 Claude、ChatGPT 或 Gemini 订阅。它还能通过 Model Context Protocol 连接 70 多个扩展。goose 属于 Linux 基金会下的 Agentic AI Foundation（AAIF）。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从官网下载 macOS、Linux 或 Windows 桌面应用",
+  "或安装 CLI：curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash",
+  "参考 Quickstart 文档：https://goose-docs.ai/docs/quickstart"
+ ],
+ "summary": "goose 是一个运行在本机的开源通用 AI agent，用 Rust 编写，提供桌面应用、CLI 和 API 三种使用方式。它不限于代码场景，也可用于研究、写作、自动化和数据分析。goose 支持 Anthropic、OpenAI、Google、Ollama 等 15 个以上模型提供商，可通过 ACP 复用已有订阅，并借助 Model Context Protocol 连接 70 多个扩展。适合希望在本地掌控 AI agent、需要跨平台自动化或嵌入能力的开发者与普通用户。",
+ "tagline": "运行在本机的开源通用 AI agent，支持桌面、CLI 与 API"
+}

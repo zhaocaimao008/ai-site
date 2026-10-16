@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让编码智能体直接处理本地视频文件的开发者，以及需要离线、可验证视频编辑流程的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "42 个 FFmpeg 工具，覆盖剪切、拼接、去静音、字幕、响度、多机位等常见编辑操作",
+  "提供机器可读的 contract，工具定义与 CLI 参数保持同步",
+  "内置 MCP 服务器，默认暴露 12 个核心工具，可切换为全部 42 个",
+  "每个任务先 probe 再编辑，执行后对结果进行验证",
+  "完全本地运行，无需云端、API key 或 Python 第三方依赖",
+  "支持 Claude Code、Cursor、Codex 等读取 SKILL.md 的智能体"
+ ],
+ "intro": "ffmpeg-skill 是一个面向 Claude Code、Cursor、Codex 等编码智能体的 Agent Skill，让智能体能够直接调用本地 FFmpeg 完成视频编辑任务。它提供 42 个工具，覆盖剪切、拼接、去静音、时长与画幅适配、字幕与卡拉 OK、叠加与动态图形、HDR 转 SDR、LUT、音频清理、响度归一化、多机位同步、交付检查以及批量处理等操作。\n\n所有工具都通过 Python 脚本调用 ffmpeg / ffprobe，不经过 shell，也不接受调用方传入的 filter graph。项目附带机器可读的 contract，并可作为 MCP 服务器使用，默认暴露 12 个核心工具，设置 FFMPEG_SKILL_MCP_FULL=1 可列出全部 42 个。整个流程在本地离线运行，不需要云端服务或 API key。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx ffmpeg-skill 启动",
+  "确保 ffmpeg 和 python3 已在 PATH 中",
+  "通过 MCP 或 SKILL.md 将工具接入 Claude Code、Cursor 或 Codex",
+  "使用 probe.py 探测媒体信息，再调用具体工具执行编辑"
+ ],
+ "summary": "ffmpeg-skill 把本地 FFmpeg 封装成一套供编码智能体调用的工具集，解决智能体“懂 FFmpeg 却靠猜”的问题。它先探测真实文件参数，再用结构化脚本执行剪切、字幕、响度、画幅适配等操作，最后验证结果。所有处理在本地完成，不需要云端或 API key，适合让 Claude Code、Cursor、Codex 等智能体直接编辑不愿上传的视频素材。",
+ "tagline": "给编码智能体用的本地 FFmpeg 视频编辑技能包"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望在本地或自有服务器上部署 AI 能力的开发者与团队，尤其是关注数据隐私、需要多用户管理或没有 GPU 的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "按需拉取的后端架构，只安装模型实际需要的引擎",
+  "兼容 OpenAI、Anthropic 和 ElevenLabs 的 API",
+  "统一支持 LLM、视觉、语音、图像和视频等多种模态",
+  "支持 NVIDIA、AMD、Intel、Apple Silicon、Vulkan 和纯 CPU",
+  "内置 API key 认证、用户配额和角色权限管理",
+  "内置支持工具调用、RAG、MCP 和技能的 AI agent"
+ ],
+ "intro": "LocalAI 是一个用 Go 编写的开源 AI 引擎，目标是在本地或自有基础设施上运行各类模型，包括 LLM、视觉、语音、图像和视频，且不强制要求 GPU。它采用「小核心 + 按需后端」的设计：核心本身很小，每个后端把 llama.cpp、vLLM、whisper.cpp、stable-diffusion、MLX 等成熟引擎封装成独立镜像，只在模型需要时才拉取，因此不会安装用不到的东西。\n\nLocalAI 提供与 OpenAI、Anthropic 和 ElevenLabs 兼容的 API，所有后端共用同一套接口，方便已有应用直接迁移。它支持 NVIDIA、AMD、Intel、Apple Silicon、Vulkan 以及纯 CPU 等多种硬件，并内置 API key 认证、用户配额和基于角色的访问控制，适合多用户场景。此外还包含支持工具调用、RAG、MCP 和技能的 AI agent，数据始终留在自己的基础设施内。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "CPU 环境运行容器：docker run -ti --name local-ai -p 8080:8080 localai/localai:latest",
+  "NVIDIA GPU 环境运行容器：docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-gpu-nvidia-cuda-12",
+  "从模型库加载模型：local-ai run llama-3.2-1b-instruct:q4_k_m",
+  "从 Huggingface 加载模型：local-ai run huggingface://TheBloke/phi-2-GGUF/phi-2.Q8_0.gguf",
+  "启动终端 agent 与运行中的服务交互：local-ai chat --model llama-3.2-1b-instruct:q4_k_m"
+ ],
+ "summary": "LocalAI 是一个开源的本地 AI 引擎，让你在自己的机器或服务器上运行 LLM、视觉、语音、图像和视频模型，并且不强制要求 GPU。它把 llama.cpp、vLLM、whisper.cpp 等引擎封装成按需拉取的后端，核心保持精简，只安装模型真正需要的部分。它提供与 OpenAI、Anthropic、ElevenLabs 兼容的 API，支持多种硬件和多用户权限管理，适合关注数据隐私、想自建 AI 服务的开发者和团队。",
+ "tagline": "开源本地 AI 引擎，无需 GPU 即可运行多种模型"
+}

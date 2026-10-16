@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "希望在桌面端使用 ChatGPT 的 macOS、Windows 或 Linux 用户，以及对 Tauri 桌面应用开发感兴趣的开发者。",
+ "date": "2026-10-16",
+ "features": [
+  "支持 macOS、Windows 和 Linux 桌面系统",
+  "基于 Tauri 和 Rust 构建，使用 WebView 渲染",
+  "提供独立的 ChatGPT 桌面应用体验",
+  "项目作者后续推出了 Noi 作为该应用概念的继任者"
+ ],
+ "intro": "这是一个基于 Rust 和 Tauri 构建的 ChatGPT 桌面应用，支持 macOS、Windows 和 Linux 三个平台。它把 ChatGPT 的网页体验封装成独立的桌面程序，方便用户在日常工作中快速调用。\n\n项目作者在 README 中说明，OpenAI 已经推出了官方的 macOS 应用，Windows 版本也计划推出。如果你更倾向使用官方客户端，可以关注 OpenAI 的更新。作者目前正在为 2.0 版本寻找差异化的功能方向。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一个用 Rust 和 Tauri 写的 ChatGPT 桌面客户端，覆盖 macOS、Windows 和 Linux，让用户不用打开浏览器就能在桌面上使用 ChatGPT。README 提到 OpenAI 已推出官方 macOS 应用，Windows 版也在计划中，作者正在为 2.0 版本寻找差异化功能，并推荐了继任项目 Noi。适合想在桌面端快速调用 ChatGPT 的用户参考。",
+ "tagline": "跨平台的 ChatGPT 桌面客户端"
+}

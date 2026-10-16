@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望以统一接口调用多家模型提供方的 Python 开发者，以及想在本地运行 Web GUI 或兼容 OpenAI API 的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "聚合多个模型提供方与接口，统一调用 LLM 和媒体生成模型",
+  "提供 Python 同步与异步客户端库",
+  "内置本地 Web GUI，可在浏览器中对话",
+  "提供兼容 OpenAI 的 FastAPI 接口（Interference API）",
+  "官方浏览器 JS 客户端（g4f.dev 分发）",
+  "支持 Docker 完整镜像与 slim 镜像部署"
+ ],
+ "intro": "GPT4Free（g4f）是一个社区驱动的项目，把多个可访问的模型提供方和接口聚合在一起，让开发者可以更灵活地调用现代 LLM 与媒体生成模型。项目提供 Python 客户端（同步与异步）、本地 Web GUI、兼容 OpenAI 的 REST API（Interference API），以及官方浏览器 JS 客户端。\n\n它支持多提供方适配器，涵盖 LLM、媒体生成提供方和本地推理后端，并提供图像、音频、视频生成与媒体持久化相关工具。安装方式包括 Docker（完整镜像与 slim 镜像）、Windows 可执行文件和 pip 安装，运行环境推荐 Python 3.10+，部分提供方需要 Chrome/Chromium。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker 并创建持久化目录：mkdir -p ${PWD}/har_and_cookies ${PWD}/generated_media",
+  "拉取镜像：docker pull hlohaus789/g4f",
+  "运行容器：docker run -p 8080:8080 -p 7900:7900 --shm-size=\"2g\" -v ${PWD}/har_and_cookies:/app/har_and_cookies -v ${PWD}/generated_media:/app/generated_media hlohaus789/g4f:latest",
+  "或使用 pip 安装：pip install -U g4f[all]",
+  "启动 GUI：python -m g4f.cli gui --port 8080 --debug，然后打开 http://localhost:8080/chat/"
+ ],
+ "summary": "GPT4Free（g4f）把多个可访问的模型提供方和接口聚合起来，方便开发者用统一方式调用 LLM 与媒体生成模型。项目提供 Python 同步/异步客户端、本地 Web GUI、兼容 OpenAI 的 REST API 以及浏览器 JS 客户端，并支持 Docker、Windows 可执行文件和 pip 安装。适合需要多提供方调用、本地运行对话界面或接入兼容 OpenAI 接口的开发者。",
+ "tagline": "聚合多家模型提供方的开源 LLM 调用工具"
+}

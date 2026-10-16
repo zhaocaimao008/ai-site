@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望让 AI Agent 具备联网读取和搜索能力的开发者，以及使用 Claude Code、Cursor 等 Agent 工具并需要访问多平台内容的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "统一 CLI 接入多个平台：网页、YouTube、RSS、GitHub、Twitter/X、B站、Reddit、小红书、LinkedIn、V2EX、雪球等",
+  "零配置即可使用部分渠道，如网页阅读、YouTube 字幕、RSS、GitHub 公开仓库、B站搜索等",
+  "需要登录态的渠道（如 Twitter、Reddit、小红书）通过 Cookie 或浏览器登录态配置解锁",
+  "多后端路由，某个接入方式失效时可切换备选方案",
+  "`agent-reach doctor` 命令检查各渠道状态和当前使用的接入路径",
+  "兼容 Claude Code、OpenClaw、Cursor、Windsurf 等可执行 shell 命令的 Agent"
+ ],
+ "intro": "Agent Reach 是一个 Python 编写的命令行工具，目标是让 AI Agent 能够读取和搜索互联网上的内容。它把各平台的接入方式统一封装成一个 CLI，用户只需让 Agent 执行安装脚本，就能让 Agent 访问网页、YouTube、RSS、GitHub、Twitter/X、B站、Reddit、小红书、LinkedIn、V2EX、雪球等平台。\n\n项目强调零 API 费用，所有工具开源、API 免费，Cookie 只保存在本地。每个平台采用「首选 + 备选」多后端路由，接入方式失效时可以切换。工具自带 `agent-reach doctor` 诊断命令，用于检查各渠道的连通状态。兼容 Claude Code、OpenClaw、Cursor、Windsurf 等能执行命令行命令的 Agent。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将安装指令复制给 AI Agent：帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md",
+  "Agent 会自动安装 agent-reach CLI 并检查 Node.js、gh CLI、mcporter 等系统依赖",
+  "默认只激活零配置渠道；需要 Twitter、Reddit、小红书等渠道时，按 Agent 提示进行配置",
+  "安装完成后运行 agent-reach doctor 查看各渠道状态",
+  "已安装过可让 Agent 执行更新：帮我更新 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/update.md"
+ ],
+ "summary": "Agent Reach 解决的是 AI Agent 无法直接读取和搜索互联网内容的问题。它把网页、YouTube、RSS、GitHub、Twitter/X、B站、Reddit、小红书等多个平台的接入方式封装成一个 CLI，用户只需让 Agent 执行安装脚本即可使用。适合需要让 Claude Code、Cursor 等 Agent 联网查资料、看视频字幕、搜社交平台内容的开发者。",
+ "tagline": "给 AI Agent 一键接入互联网能力的 CLI 工具"
+}

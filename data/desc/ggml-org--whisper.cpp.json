@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在本地或离线环境中集成语音转文字能力的开发者，尤其是关注 C/C++、嵌入式、移动端或跨平台部署的场景。",
+ "date": "2026-10-16",
+ "features": [
+  "纯 C/C++ 实现，无外部依赖，支持 CPU 推理",
+  "针对 Apple Silicon 优化，支持 Metal 与 Core ML（Encoder 可在 ANE 上运行）",
+  "支持 x86 AVX、POWER VSX 指令集，以及 Vulkan、NVIDIA、ROCm、OpenVINO 等后端",
+  "支持 F16/F32 混合精度与整数量化，降低内存和磁盘占用",
+  "提供 C 风格 API 和语音活动检测（VAD）",
+  "覆盖 macOS、iOS、Android、Linux、Windows、WebAssembly、树莓派、Docker 等平台"
+ ],
+ "intro": "whisper.cpp 是 OpenAI Whisper 自动语音识别（ASR）模型的 C/C++ 移植版本，目标是在不依赖外部框架的情况下提供高性能推理。整个模型的高层实现集中在 whisper.h 和 whisper.cpp 中，其余部分基于 ggml 机器学习库。\n\n它支持纯 CPU 推理，也针对 Apple Silicon 做了优化（ARM NEON、Accelerate、Metal、Core ML），并提供 x86 的 AVX、POWER 的 VSX 指令集支持，以及 Vulkan、NVIDIA GPU、AMD ROCm、OpenVINO 等后端。项目支持 F16/F32 混合精度和整数量化，运行时零内存分配，并附带 C 风格 API 和语音活动检测（VAD）。\n\n可运行平台包括 macOS、iOS、Android、Linux、FreeBSD、WebAssembly、Windows、树莓派和 Docker，方便将语音识别集成到各类离线应用中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/ggml-org/whisper.cpp.git && cd whisper.cpp",
+  "sh ./models/download-ggml-model.sh base.en",
+  "cmake -B build && cmake --build build -j --config Release",
+  "./build/bin/whisper-cli -f samples/jfk.wav",
+  "如需转换音频：ffmpeg -i input.mp3 -ar 16000 -ac 1 -c:a pcm_s16le output.wav"
+ ],
+ "summary": "whisper.cpp 把 OpenAI 的 Whisper 语音识别模型用 C/C++ 重新实现，让开发者可以在没有 Python 和深度学习框架依赖的情况下做语音转文字。它既能在普通 CPU 上跑，也针对 Apple Silicon、x86、POWER 以及多种 GPU/NPU 后端做了优化，还支持量化和 Core ML，方便把识别能力塞进桌面、移动端、嵌入式或浏览器等离线场景。适合想把语音识别集成进自己程序、又不想引入庞大依赖的开发者。",
+ "tagline": "OpenAI Whisper 语音识别模型的 C/C++ 高性能推理实现"
+}

@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "需要从 PDF、图片中提取结构化文本的开发者，以及构建 RAG、Agent 等应用并需要文档解析能力的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "将 PDF 和图片转换为 JSON / Markdown 等结构化数据",
+  "PaddleOCR-VL 文档视觉语言模型，支持 Markdown 与 JSON 输出",
+  "PP-StructureV3 版面结构解析，提供表格单元格、文本坐标等细粒度信息",
+  "PP-OCRv6 单一模型支持中文、英文、日文及 46 种拉丁语系语言",
+  "支持自然场景文字识别，覆盖证件、街景、书籍、工业部件等场景",
+  "支持 NVIDIA GPU、Intel CPU、昆仑芯 XPU 等多种硬件后端部署"
+ ],
+ "intro": "PaddleOCR 是一个 OCR 与文档解析工具包，目标是把 PDF 文档和图片转换成结构化、可供 LLM 使用的数据，输出格式包括 JSON 和 Markdown。它支持 100 多种语言的文本识别，并提供面向文档场景的版面与结构解析能力。\n\n项目包含两条主要技术路线：一是 PaddleOCR-VL 系列文档视觉语言模型，用于文档解析，支持 Markdown 与 JSON 结构化输出；二是 PP-StructureV3，可将复杂 PDF 和图片转换为 Markdown 或 JSON，并提供表格单元格、文本等更细粒度的坐标信息。文本识别方面，PP-OCRv6 用单一模型覆盖中文、英文、日文及 46 种拉丁语系语言。\n\nPaddleOCR 支持 CPU、GPU、XPU、NPU 等多种硬件后端，并已与 Dify、RAGFlow、Pathway、Cherry Studio 等生态项目集成，适合用于构建 RAG 与 Agent 类应用的数据处理环节。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "PaddleOCR 解决的是把 PDF 和图片里的文字、表格、版面信息提取成结构化数据的问题，输出 JSON 或 Markdown，方便后续交给大模型使用。它既提供文档视觉语言模型做整页解析，也有 PP-StructureV3 这类带坐标信息的版面解析方案，文本识别覆盖 100 多种语言。适合需要为 RAG、Agent 等应用准备文档数据的开发者，也适合做多语言 OCR 的场景。",
+ "tagline": "把 PDF 和图片转成结构化数据的 OCR 工具包"
+}

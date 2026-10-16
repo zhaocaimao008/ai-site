@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想深入理解 AI 系统内部原理、愿意动手写代码并做评估的开发者与学习者。",
+ "date": "2026-10-16",
+ "features": [
+  "542 节课程、20 个阶段，覆盖从数学基础到 LLM 工程与 Agent 工程",
+  "提供模型基础、LLM 系统、Agent 与交付三条学习路线",
+  "交互式实验，如可视化梯度下降并调整学习率",
+  "实战项目配有分阶段 starter、参考实现和本地 grader",
+  "支持 Python、TypeScript、Rust、Julia 多语言代码",
+  "README 提供简体中文等多语言版本"
+ ],
+ "intro": "这是一个开源 AI 工程课程项目，主张动手实现而不是只调用 API。课程内容覆盖模型内部机制、检索管线和 Agent 运行时，要求学习者自己写代码、跑测试、检查失败案例，并保留代码与评估结果。\n\n课程共 542 节、20 个阶段，涉及 Python、TypeScript、Rust、Julia 等语言，提供网站学习、配合编码 Agent 学习或本地运行代码三种方式。项目还包含带分阶段 starter、参考实现和本地 grader 的实战项目，例如检索评估实验。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 aiengineeringfromscratch.com，从 Setup and tooling 课程开始",
+  "或按学习路线选择起点：模型基础、LLM 系统、Agent 与交付",
+  "在本地运行项目时，先完成仓库的 setup 步骤",
+  "以检索评估实验为例，初始化项目：python3 scripts/project_test.py retrieval-evaluation-lab --init learning-artifacts/retrieval-evaluation-lab",
+  "运行阶段测试：python3 scripts/project_test.py retrieval-evaluation-lab --stage 1 --path learning-artifacts/retrieval-evaluation-lab --strict"
+ ],
+ "summary": "这个项目是一套开源的 AI 工程课程，强调从零实现模型内部机制、检索管线和 Agent 运行时，而不是停留在调用现成接口。课程按阶段组织，提供多条学习路线、可交互实验和带本地 grader 的实战项目，学习者需要自己写代码、跑测试并检查失败案例。适合希望系统理解 AI 系统原理并动手实践的开发者。",
+ "tagline": "从零实现模型内部、检索管线与 Agent 运行时的开源课程"
+}

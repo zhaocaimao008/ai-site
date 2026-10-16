@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex 等编码智能体的开发者，以及需要理解陌生或大型代码库、追踪依赖与调用关系的工程团队。",
+ "date": "2026-10-16",
+ "features": [
+  "将代码库索引为持久化知识图谱，覆盖函数、类、import、HTTP 路由及关系",
+  "支持 162 种语言，tree-sitter 语法内置在二进制中，无需单独安装解析器",
+  "Hybrid LSP 为 Python、TypeScript、Go、C、C++、Java、Rust 等提供语义类型解析",
+  "提供 17 个 MCP 工具，支持 45 种客户端集成，索引与查询无需 API key",
+  "CBM Lens Beta 提供源码阅读器、本地代码对话、3D 架构图与 Galaxy 图可视化",
+  "单静态二进制，支持 macOS、Linux、Windows，无需 Docker 或语言运行时"
+ ],
+ "intro": "codebase-memory-mcp 是一个本地运行的 Model Context Protocol（MCP）服务器，用 C 语言编写，把代码库索引成持久化的知识图谱，供 Claude Code、Codex 等编码智能体查询。它索引函数、类、import、HTTP 路由及其相互关系，覆盖 162 种语言，并可通过 Hybrid LSP 为 Python、TypeScript、Go、Rust 等语言补充语义类型解析。\n\n项目以单个静态二进制分发，支持 macOS、Linux 和 Windows，索引与图查询都在本机完成，不需要托管服务或 API key。原生后端提供 17 个 MCP 工具，并支持 45 种客户端集成方式。\n\n除命令行与 MCP 接口外，项目还包含 CBM Lens Beta 可视化界面，提供 IDE 风格的源码阅读器、本地代码对话、3D 架构图和 Galaxy 关系图，用于理解陌生代码库、追踪依赖与调用路径。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的发布包",
+  "运行安装程序（README 中为 `install`），选择要写入配置的客户端",
+  "重启编码智能体，使其加载 MCP 服务器配置",
+  "如需 CBM Lens Beta 界面，从源码构建（build from source）"
+ ],
+ "summary": "这个项目把代码库索引成本地知识图谱，通过 MCP 协议提供给 Claude Code、Codex 等编码智能体查询，让智能体不必逐文件读取就能找到函数、类、import 和调用关系。它用 C 写成单个静态二进制，索引和查询都在本机完成，覆盖 162 种语言，并附带可视化界面用于浏览源码、查看依赖和调用路径。适合需要在新代码库或大型项目中快速定位结构、减少上下文消耗的开发者。",
+ "tagline": "本地代码知识图谱 MCP 服务器，为编码智能体提供代码检索与可视化"
+}

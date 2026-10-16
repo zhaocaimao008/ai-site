@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在多个 LLM 提供商之间切换或统一管理的开发者、团队和组织。",
+ "date": "2026-10-16",
+ "features": [
+  "统一接口调用 100+ LLM 提供商，兼容 OpenAI 格式",
+  "可作为 Python SDK 集成，也可部署为 AI Gateway（Proxy Server）",
+  "支持虚拟密钥、花费追踪、guardrails、负载均衡和管理后台",
+  "支持 /chat/completions、/embeddings、/images、/audio、/batches、/rerank 等多种端点",
+  "支持通过 A2A 协议调用 LangGraph、Vertex AI Agent Engine 等 Agent"
+ ],
+ "intro": "LiteLLM 是一个开源 AI Gateway，提供统一的接口来调用 100 多个 LLM 提供商，包括 OpenAI、Anthropic、Gemini、Bedrock、Azure 等，并统一使用 OpenAI 格式。它既可以作为 Python SDK 直接集成到代码中，也可以部署为 AI Gateway（Proxy Server），作为团队或组织集中管理 LLM 调用的服务。\n\n项目旨在解决跨提供商调用 LLM 时的复杂性问题：不同 SDK、认证方式、请求格式和错误类型。LiteLLM 提供统一 API、OpenAI 兼容的调用方式，以及虚拟密钥、花费追踪、guardrails、负载均衡和管理后台等生产级功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python SDK：uv add litellm",
+  "设置环境变量，例如 OPENAI_API_KEY 和 ANTHROPIC_API_KEY",
+  "在 Python 中调用：from litellm import completion; completion(model=\"openai/gpt-4o\", messages=[{\"role\": \"user\", \"content\": \"Hello!\"}])",
+  "安装并启动 Proxy Server：uv tool install 'litellm[proxy]' 然后 litellm --model gpt-4o",
+  "使用 OpenAI 客户端指向 http://0.0.0.0:4000 发起请求"
+ ],
+ "summary": "LiteLLM 是一个开源 AI Gateway，用统一的 OpenAI 格式调用 100 多个 LLM 提供商，解决不同厂商 SDK、认证和请求格式不一致的问题。它既能作为 Python SDK 直接嵌入代码，也能部署成 Proxy Server 集中管理团队调用，并提供虚拟密钥、花费追踪、负载均衡和管理后台等能力。适合需要在多个模型提供商之间切换、统一计费与治理的开发者与组织。",
+ "tagline": "统一调用 100+ LLM 的开源 AI Gateway 与 Python SDK"
+}

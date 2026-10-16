@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想系统学习 AI Agent 开发的初学者和开发者，尤其是使用微软技术栈或 Azure 的人群。",
+ "date": "2026-10-16",
+ "features": [
+  "18 节独立课程，覆盖构建 AI Agent 的基础知识",
+  "每节课包含文字讲义、短视频和 Python 代码示例",
+  "代码基于 Microsoft Agent Framework 与 Microsoft Foundry Agent Service V2",
+  "部分示例支持 OpenAI 兼容服务商（如 MiniMax）",
+  "提供 50 多种语言翻译，含简体中文",
+  "支持 sparse checkout 克隆，跳过翻译文件加快下载"
+ ],
+ "intro": "这是微软推出的 AI Agents 入门课程，共 18 节课，目标是讲清楚构建 AI Agent 所需的基础知识。每节课围绕一个独立主题展开，可以按任意顺序学习，课程附带文字讲义、短视频以及 Python 代码示例。\n\n代码示例主要使用 Microsoft Agent Framework 搭配 Microsoft Foundry Agent Service V2，需要 Azure 账号；部分示例也支持 OpenAI 兼容的第三方服务商，例如 MiniMax。课程提供 50 多种语言的翻译版本，包括简体中文，方便不同语言的开发者阅读。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Fork 或克隆仓库：git clone --filter=blob:none --sparse https://github.com/microsoft/ai-agents-for-beginners.git",
+  "进入目录并设置 sparse checkout：git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'",
+  "准备 Azure 账号，参考 00-course-setup/README.md 完成课程环境配置",
+  "从任意一节课程开始学习，代码示例位于 code_samples 文件夹"
+ ],
+ "summary": "这是微软提供的 AI Agent 入门课程，用 18 节独立课程讲解构建 AI Agent 的基础知识，每节课配有讲义、短视频和 Python 代码示例。代码主要基于 Microsoft Agent Framework 和 Microsoft Foundry Agent Service V2，需要 Azure 账号，部分示例也支持 OpenAI 兼容服务商。课程提供包括简体中文在内的多语言翻译，适合想系统入门 AI Agent 开发的初学者和开发者按自己的节奏学习。",
+ "tagline": "微软出品的 18 节 AI Agent 入门课程"
+}

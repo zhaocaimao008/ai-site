@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时管理多个 AI 编码代理的开发者、团队，以及希望通过移动端或远程方式监控代理运行状态的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "并行 worktree：将一条提示分发给多个代理，各自在独立 git worktree 中运行，便于比较结果并合并胜出者",
+  "移动伴侣：通过 iOS/Android 应用监控和操控代理，接收完成通知并发送后续指令",
+  "终端拆分：基于 Ghostty 的终端，支持 WebGL 渲染、无限拆分和重启后保留滚动缓冲",
+  "设计模式：在真实 Chromium 窗口中点击 UI 元素，将其 HTML、CSS 和截图直接发送到代理提示词",
+  "GitHub 与 Linear 原生集成：在应用内浏览 PR、issue 和项目看板，从任务直接打开 worktree",
+  "SSH worktree：在远程机器上运行代理，支持完整文件编辑、git、终端、自动重连和端口转发"
+ ],
+ "intro": "Orca 是一个面向 AI 编码代理的 ADE（Agent Development Environment），核心目标是让开发者同时运行多个编码代理并统一管理。它支持 Codex、ClaudeCode、OpenCode、Pi 等 CLI 代理，每个代理运行在独立的 git worktree 中，避免相互干扰。\n\nOrca 提供桌面应用（macOS/Windows/Linux）、移动伴侣应用以及远程运行时。你可以从手机监控代理状态、接收完成通知并发送后续指令；也可以通过 SSH 在远程机器上运行代理，支持自动重连和端口转发。\n\n此外，Orca 内置 Ghostty 级终端、设计模式、GitHub/Linear 集成、AI diff 标注、文件拖拽到代理提示词等功能，并提供 Orca CLI 用于脚本化工作流。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 https://onorca.dev/download 下载并安装 Orca 桌面应用（支持 macOS、Windows、Linux）",
+  "在 Orca 中配置你的编码代理（如 Codex、ClaudeCode、OpenCode 或 Pi）",
+  "创建或打开一个 git worktree，启动代理并输入提示词",
+  "可选：安装移动伴侣应用（iOS App Store 或 Android APK）以远程监控代理",
+  "可选：使用 Orca CLI 脚本化工作流，例如 `orca worktree create`、`orca snapshot`、`orca click`、`orca fill`"
+ ],
+ "summary": "Orca 是一个用于并行运行多个 AI 编码代理的 ADE，支持 Codex、ClaudeCode、OpenCode、Pi 等 CLI 代理。每个代理在独立 git worktree 中运行，避免冲突，并可在桌面、移动端或远程 SSH 环境中统一管理。适合需要同时调度多个代理、比较结果并快速合并的开发者。",
+ "tagline": "并行运行多个编码代理的 ADE，支持桌面、移动与远程"
+}

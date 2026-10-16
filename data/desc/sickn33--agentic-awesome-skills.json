@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Codex、Claude 等 AI 编码代理的开发者，以及希望为项目查找、审查和复用可安装技能剧本的团队。",
+ "date": "2026-10-16",
+ "features": [
+  "包含 2,690+ 个可安装的 SKILL.md 技能剧本",
+  "AAS Core 提供本地目录搜索与代理自主选择",
+  "通过 MCP 与 Codex、Claude 等代理集成",
+  "支持技术栈验证与计划预览（只读 compose_stack 工具）",
+  "提供 CLI 命令如 aas stack validate 和 aas stack plan",
+  "Workbench 可在浏览器中审查技能栈和计划产物"
+ ],
+ "intro": "Agentic Awesome Skills 是一个包含 2,690+ 个可安装 SKILL.md 剧本的技能库，同时提供 AAS Core 作为本地、代理优先的控制平面。AAS Core 让 Codex 或 Claude 等代理搜索完整的本地目录、记录代理选择的技能，并在修改目标前预览计划。它支持本地目录检查、代理自主选择、技术栈验证和计划预览，但不会对技能进行排名或推荐。\n\n项目包含 CLI、本地 MCP、目录、插件和 Workbench。当前版本 V19.7.0 中，应用和恢复功能仍处于实验阶段。这是一个独立的社区项目，与 Google 无关，但兼容 Antigravity、Gemini 等安装目标。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 npm 配置本地 MCP：npm exec --yes --ignore-scripts --package=agentic-awesome-skills@19.7.0 -- aas mcp configure --host codex --scope user --config /absolute/path/to/codex/config.toml --cache-root /absolute/path/to/aas-cache",
+  "对于 Claude，使用 --host claude 并指定其配置路径",
+  "让代理检查项目、比较相关技能并保存选择",
+  "使用 aas stack validate 验证清单",
+  "使用 aas stack plan 生成不可变预览以供审查"
+ ],
+ "summary": "Agentic Awesome Skills 是一个面向 AI 编码代理的技能库，提供超过 2,690 个可安装的 SKILL.md 剧本，并附带 AAS Core 本地控制平面。它让 Codex 或 Claude 等代理搜索完整目录、自主选择技能，并在修改项目前预览计划。适合需要为项目查找、审查和复用可安装指令的开发者，尤其在使用 Codex、Claude 等工具时。",
+ "tagline": "为 AI 编码代理提供可搜索、可验证的技能库与本地控制平面。"
+}

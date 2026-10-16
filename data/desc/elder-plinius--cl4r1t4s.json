@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合关注 AI 系统透明度、提示词工程、红队测试的研究者与开发者，以及对主流 AI 模型行为规则感兴趣的普通用户。",
+ "date": "2026-10-16",
+ "features": [
+  "收录 OpenAI、Google、Anthropic、xAI、Perplexity 等多家厂商模型的系统提示词",
+  "覆盖 Cursor、Windsurf、Devin、Manus、Replit 等 AI 工具与 agent",
+  "提供提取出的指南和工具内容",
+  "接受社区提交 pull request 补充新的提示词",
+  "强调 AI 系统透明度和可观测性"
+ ],
+ "intro": "CL4R1T4S 是一个收集和公开各大 AI 模型系统提示词（system prompt）的项目。README 指出，这些提示词来自 OpenAI、Google、Anthropic、xAI、Perplexity、Cursor、Windsurf、Devin、Manus、Replit 等厂商的模型和 agent。项目认为，AI 实验室通过大量未公开的提示词脚手架来塑造模型行为，而这些隐藏指令会影响公众的认知与行为，因此有必要让用户了解自己正在交互的 AI 背后被设定了哪些规则。\n\n项目以仓库形式存放提取出的系统提示词、指南和工具，并欢迎社区通过 pull request 贡献新的提取内容，要求注明模型名称/版本、提取日期和上下文说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 GitHub 仓库 elder-plinius/CL4R1T4S 查看已收录的系统提示词",
+  "按厂商或模型名称浏览对应目录下的提示词文件",
+  "如需贡献，提交 pull request 并注明模型名称/版本、提取日期和上下文说明"
+ ],
+ "summary": "CL4R1T4S 把 OpenAI、Google、Anthropic、xAI、Perplexity 以及 Cursor、Devin 等 AI 工具的系统提示词集中公开，目的是让用户看到模型行为背后那些通常不可见的指令。项目认为，不了解系统提示词就无法判断 AI 输出是否中立。它适合想研究提示词工程、做红队测试，或单纯想了解常用 AI 被设定了哪些规则的人。",
+ "tagline": "收集各大 AI 模型系统提示词的透明化项目"
+}

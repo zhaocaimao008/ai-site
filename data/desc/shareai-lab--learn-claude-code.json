@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "想理解 agent 底层原理、打算自己动手写 agent harness 的开发者，以及希望区分「模型能力」与「工程编排」的学习者。",
+ "date": "2026-10-16",
+ "features": [
+  "从零实现一个类 Claude Code 的 nano agent harness",
+  "把 harness 拆解为 Tools、Knowledge、Observation、Action、Permissions 五个部分",
+  "讲解 harness engineer 的职责：实现工具、整理知识、管理上下文、控制权限、收集轨迹数据",
+  "通过历史案例（DQN、OpenAI Five、AlphaStar、绝悟）说明 agency 来自训练而非代码编排",
+  "提供配套网站 learn.shareai.run 作为学习入口"
+ ],
+ "intro": "这个项目是一个教学性质的 Python 仓库，目标是从 0 到 1 构建一个类似 Claude Code 的 nano「agent harness」。作者的核心观点是：Agency（感知、推理、行动的能力）来自模型训练，而不是外部代码编排；但一个可用的 agent 产品需要模型加 harness 两部分，模型是驾驶员，harness 是车辆。\n\n仓库围绕 harness 的构成展开，把 harness 拆解为 Tools、Knowledge、Observation、Action、Permissions 几个部分，并讨论 harness engineer 的实际工作：实现工具、整理知识、管理上下文、控制权限、收集轨迹数据。README 用 DeepMind DQN、OpenAI Five、AlphaStar、腾讯绝悟等历史案例说明 agency 是训练出来的，并批评把 LLM API 调用串成 if-else 流程的「伪 agent」做法。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目用 Python 从零实现一个类似 Claude Code 的 nano agent harness，帮助开发者理解 agent 产品中「模型」与「工程外壳」的分工。作者认为感知、推理和行动的能力来自模型训练，而 harness 负责提供工具、知识、观察、动作接口和权限边界。仓库适合想动手写 agent 外壳、弄清工具调用与上下文管理如何落地的开发者，也适合用来区分真正的 agent 与单纯串联 LLM API 的流程编排。",
+ "tagline": "从零构建类 Claude Code 的 nano agent harness"
+}

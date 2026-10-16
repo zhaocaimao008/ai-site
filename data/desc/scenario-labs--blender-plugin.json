@@ -1,0 +1,27 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Blender 5.0 及以上版本、希望直接在视口内调用 AI 生成图像、视频、3D 和材质的 3D 创作者与开发者。需要拥有带 API 访问权限的 Scenario 账号，并开启 Blender 的在线访问设置。",
+ "date": "2026-10-16",
+ "features": [
+  "图像生成：从文本或参考图生成，并可作为纹理或参考使用",
+  "视频生成：支持从提示词、图像或场景 playblast 生成",
+  "3D 生成：生成网格，对选中网格运行 provider 编辑任务并应用已保存的编辑",
+  "材质生成：生成保存的 PBR 纹理集，并显式应用到指定网格材质槽",
+  "音频生成：生成语音、音乐或音效，并加入 sequencer",
+  "Blockout：把场景描述转成灰模布局，并可继续细化或重建",
+  "环境生成：生成 360 全景、HDRI 和放大结果，并应用到场景 World",
+  "本地 MCP server：供 agent 从场景中访问相关能力"
+ ],
+ "intro": "Scenario for Blender 是一个 Blender 扩展，把 Scenario 的图像、视频、3D、PBR 材质、音频和 360 环境生成能力带进 Blender 视口。它可以用场景截图和选中的网格作为输入，探索镜头运动，并通过 Blockout 把一段文字场景描述转成灰模布局。\n\n扩展提供紧凑的 composer、侧边栏、扩展的 Studio 视图，以及供 agent 使用的本地 MCP server。项目为 Python 扩展，依赖固定版本的 SDK wheel，采用 GPL-3.0-or-later 协议，需要 Blender 5.0 或更高版本。README 将其标注为实验性，并建议在依赖某个工作流前先阅读已知限制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Edit > Preferences > System > Network 中开启 Allow Online Access。",
+  "打开 Edit > Preferences > Get Extensions > Repositories，选择 Add Remote Repository，输入 https://blender.scenario.com/repo/index.json。",
+  "在 Get Extensions 中找到 Scenario 并安装，它会出现在 Blender 的 Add-ons 列表中。",
+  "在 Scenario 的 Organization settings > API Keys > Add API Key 中获取 key 和 secret。",
+  "打开 Edit > Preferences > Add-ons > Scenario，将 Credentials 保持为 Saved in Blender，粘贴 key 和 secret，点击 Test connection，并选择 Output Folder。",
+  "在 3D 视口中按 N 打开 Scenario 面板，选择 lane 和模型，输入提示词并添加所需参考，查看估算后点击 Generate。"
+ ],
+ "summary": "Scenario for Blender 把 Scenario 的 AI 生成能力集成到 Blender 视口，可生成图像、视频、3D 网格、PBR 材质、音频和 360 环境，并支持用场景截图或选中网格作为输入。它还提供 Blockout 功能，把文字场景描述转成灰模布局，以及供 agent 使用的本地 MCP server。适合希望在 Blender 内直接调用 AI 生成素材的 3D 创作者，需要 Scenario 账号和 API 凭据。",
+ "tagline": "在 Blender 视口内生成 AI 图像、视频、3D 与 PBR 材质"
+}

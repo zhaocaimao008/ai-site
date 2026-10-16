@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想用私有数据构建 RAG 或智能体应用的开发者，也适合需要深度定制检索与索引流程的进阶用户。",
+ "date": "2026-10-16",
+ "features": [
+  "数据连接器：接入 API、PDF、文档、SQL 等多种数据源与格式",
+  "数据结构化：通过索引、图等方式组织数据供 LLM 使用",
+  "检索与查询接口：输入提示词，返回检索到的上下文与增强输出",
+  "300 多个集成包：覆盖 LLM、embedding、向量存储等组件",
+  "分层 API：高层 API 快速上手，底层 API 可自定义各模块",
+  "可与 LangChain、Flask、Docker、ChatGPT 等外部框架集成"
+ ],
+ "intro": "LlamaIndex 是一个开源框架，用于构建基于大语言模型的应用。它的核心目标是解决如何用私有数据增强 LLM 的问题：提供数据连接器，把 API、PDF、文档、SQL 等来源的数据接入进来；再通过索引、图等结构组织数据，使其能被 LLM 方便地使用；最后提供检索与查询接口，把用户输入变成带上下文的增强输出。\n\n项目提供两套使用方式：llama-index 是包含核心与部分集成的入门包，llama-index-core 则只装核心，再按需从 300 多个集成包中选择 LLM、embedding、向量存储等组件。高层 API 可以用很少的代码完成数据导入与查询，底层 API 则允许自定义数据连接器、索引、检索器、查询引擎和重排序模块。\n\n目前官方的主要精力转向了文档解析与抽取方向，包括 LlamaParse、LiteParse 以及 ParseBench、ExtractBench 等基准工作，开源框架仍作为通用工具集继续提供。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装入门包：pip install llama-index",
+  "或只安装核心并按需添加集成包：pip install llama-index-core",
+  "按命名空间导入：核心模块用 from llama_index.core.xxx import ...，集成包用 from llama_index.xxx.yyy import ...",
+  "参考官方文档中的示例，用高层 API 完成数据导入与查询"
+ ],
+ "summary": "LlamaIndex 是一个开源框架，用来把私有数据接入大语言模型。它提供数据连接器、索引与检索查询接口，帮助开发者构建 RAG 和智能体类应用。项目有入门包和核心包两种安装方式，并配套 300 多个集成包，可搭配不同的 LLM、embedding 和向量存储。适合需要基于自有文档、数据库等数据做问答或抽取的开发者。",
+ "tagline": "构建 LLM 应用的开源数据框架，支持 RAG 与智能体"
+}

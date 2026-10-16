@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对语音克隆、TTS 和深度学习感兴趣的开发者与研究者，以及想本地运行开源语音克隆工具的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "从几秒音频中提取说话人声音表示（GE2E 编码器）",
+  "根据任意文本生成语音（Tacotron 合成器）",
+  "使用 WaveRNN 声码器实时合成音频",
+  "提供图形界面工具箱 demo_toolbox.py",
+  "提供命令行工具 demo_cli.py",
+  "支持 Windows 和 Linux，预训练模型自动下载"
+ ],
+ "intro": "Real-Time-Voice-Cloning 是 SV2TTS 论文的实现，作者将其作为硕士论文项目。SV2TTS 是一个三阶段的深度学习框架：第一阶段从几秒音频中提取说话人的数字表示（编码器），第二、三阶段以该表示为参考，根据任意文本生成语音（合成器与声码器）。项目使用 WaveRNN 作为声码器，可在实时条件下工作。\n\nREADME 提示该项目已较为陈旧，许多付费 SaaS 应用能提供更好的音频质量，并建议关注 paperswithcode 上的最新研究或 Chatterbox 等更新的开源方案。项目支持 Windows 和 Linux，提供图形界面工具 demo_toolbox.py 和命令行工具 demo_cli.py，预训练模型会自动下载。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 ffmpeg，并在命令行运行 ffmpeg 确认安装成功",
+  "安装 uv：Windows 运行 powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"；Linux 运行 curl -LsSf https://astral.sh/uv/install.sh | sh；或使用 pip install -U uv",
+  "有 NVIDIA GPU 时运行 uv run --extra cuda demo_toolbox.py，否则运行 uv run --extra cpu demo_toolbox.py",
+  "如不想使用 GUI，可运行 uv run --extra cuda demo_cli.py 或 uv run --extra cpu demo_cli.py"
+ ],
+ "summary": "这个项目实现了 SV2TTS 语音克隆框架，只需几秒音频就能提取说话人特征，再用任意文本生成该说话人的语音，并配有实时声码器。它提供图形界面和命令行两种使用方式，支持 Windows 和 Linux，预训练模型自动下载。适合想本地体验语音克隆、研究 TTS 流程的开发者。README 也提醒项目已较旧，若追求更高音质可参考更新的开源方案。",
+ "tagline": "5 秒音频克隆声音，实时生成任意语音"
+}

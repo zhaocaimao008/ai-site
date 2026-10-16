@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地运行或微调大模型、扩散模型的开发者和研究者，也适合需要私有化部署、离线使用 AI 能力的用户。",
+ "date": "2026-10-16",
+ "features": [
+  "在本地运行和训练 LLM、扩散模型、嵌入模型、音频模型等多种模型",
+  "支持 GGUF、MLX 格式，兼容 NVIDIA、AMD、Intel GPU、CPU 和 Vulkan 后端",
+  "提供 LoRA、QLoRA、全量微调、强化学习、GRPO、DPO、FP8 等训练方式",
+  "可将模型导出为 GGUF、NVFP4、FP8 等格式并部署",
+  "通过 OpenAI 兼容 API 提供服务，支持局域网和 Cloudflare 远程访问",
+  "可与 Claude Code、Codex、MCP 等 Agent 工具集成，支持工具调用和代码执行"
+ ],
+ "intro": "Unsloth 是一个可以在本地运行和训练模型的桌面应用，支持 Windows、Linux、WSL 和 macOS，也提供 Web UI 和代码版本。它兼容 GGUF、MLX 等格式，可运行和训练 LLM、扩散模型、决策模型、嵌入模型和音频模型，覆盖 Qwen3.8、DeepSeek-V4、Gemma 4、FLUX 等模型。\n\n除了推理，Unsloth 还提供微调能力，支持 LoRA、QLoRA、全量微调、预训练、强化学习、GRPO、DPO 和 FP8，并可导出为 GGUF、NVFP4、FP8 等格式。它还能通过 OpenAI 兼容 API 对外提供服务，支持局域网和 Cloudflare 远程访问，并可与 Claude Code、Codex、MCP 等工具配合使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并安装 Unsloth Desktop：Windows 下载 .exe，macOS 下载 .dmg，Linux 下载 .deb 或 .AppImage",
+  "macOS、Linux、WSL 用户可执行：curl -fsSL https://unsloth.ai/install.sh | sh",
+  "Windows 用户可执行：irm https://unsloth.ai/install.ps1 | iex",
+  "也可通过 Homebrew 安装：brew install --cask unsloth",
+  "使用 unsloth start claude --model unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_XL 将本地模型接入 Claude Code"
+ ],
+ "summary": "Unsloth 是一个本地运行和训练 AI 模型的桌面应用，支持 LLM、扩散模型、嵌入模型和音频模型等多种类型，兼容 GGUF、MLX 格式以及 NVIDIA、AMD、Intel GPU 和 CPU。它既能做推理，也能做微调，支持 LoRA、QLoRA、强化学习等方式，并可导出为 GGUF、FP8 等格式。适合想在本地私有化使用或定制模型的开发者和研究者。",
+ "tagline": "本地运行与训练大模型和扩散模型的桌面应用"
+}
