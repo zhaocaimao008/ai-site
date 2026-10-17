@@ -1,0 +1,22 @@
+{
+ "ai_related": false,
+ "audience": "适合需要设计数据库结构、绘制 ER 图或生成 SQL 的开发者与数据库设计人员。",
+ "date": "2026-10-17",
+ "features": [
+  "在浏览器中绘制数据库 ER 图",
+  "导入和导出 SQL 脚本",
+  "生成数据库迁移",
+  "自定义编辑器外观与行为",
+  "无需创建账号即可使用"
+ ],
+ "intro": "drawDB 是一个运行在浏览器中的数据库实体关系图（ERD）编辑器，无需注册账号即可使用。它支持通过点击操作绘制数据库结构图，并能在图形与 SQL 脚本之间互相导入导出，还提供迁移生成和编辑器自定义等功能。\n\n项目使用 JavaScript 开发，可以本地运行或通过 Docker 部署。如果需要使用文件分享功能，可以搭配 drawdb-server 并配置相应的环境变量。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/drawdb-io/drawdb",
+  "cd drawdb",
+  "npm install",
+  "npm run dev"
+ ],
+ "summary": "drawDB 是一个在浏览器里直接使用的数据库 ER 图编辑器，不用注册账号就能画表结构、导出 SQL，也能从 SQL 反向生成图表，还支持生成迁移。它适合需要快速设计或调整数据库 schema 的开发者，本地开发或 Docker 部署都可以，若要分享文件则需额外搭建配套服务。",
+ "tagline": "浏览器中的免费数据库 ER 图编辑器与 SQL 生成器"
+}

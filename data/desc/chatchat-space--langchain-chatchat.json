@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在中文环境下搭建离线知识库问答系统的开发者与企业用户，以及对 RAG 和 Agent 应用感兴趣的技术人员。",
+ "date": "2026-10-17",
+ "features": [
+  "支持主流开源 LLM、Embedding 模型与向量数据库，可完全离线私有部署",
+  "基于 Langchain 的 RAG 流程，支持知识库对话、搜索引擎对话、文件对话等",
+  "0.3.x 版本核心功能由 Agent 实现，支持自动或手动工具调用",
+  "支持数据库对话、多模态图片对话、ARXIV 文献对话、Wolfram 对话、文生图",
+  "提供基于 FastAPI 的 API 服务和基于 Streamlit 的 WebUI",
+  "支持 Xinference、Ollama、LocalAI、FastChat 等模型部署框架，兼容 OpenAI SDK"
+ ],
+ "intro": "Langchain-Chatchat（原 Langchain-ChatGLM）是一个基于 Langchain 框架和 ChatGLM、Qwen、Llama 等开源大语言模型构建的 RAG（检索增强生成）与 Agent 应用。项目目标是为中文场景和开源模型提供一套可完全离线私有部署的知识库问答解决方案，同时也支持调用 OpenAI GPT API。\n\n其核心流程为：加载文件、读取文本、文本分割、文本向量化、问句向量化、在向量库中匹配最相似的 top k 文本，将匹配文本与问题一起加入 prompt 并提交给 LLM 生成回答。项目支持 Xinference、Ollama、LocalAI、FastChat 等模型部署框架，提供基于 FastAPI 的 API 服务和基于 Streamlit 的 WebUI。\n\n0.3.x 版本新增了 Agent 能力，支持数据库对话、多模态图片对话、ARXIV 文献对话、Wolfram 对话、文生图等功能，并将文件对话统一为 File RAG，支持 BM25 与 KNN 等多种检索方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip 安装部署：参考 README 中的 pip 安装部署章节",
+  "源码安装部署/开发部署：参考 README 中的源码安装部署章节",
+  "Docker 部署：参考 README 中的 Docker 部署章节"
+ ],
+ "summary": "Langchain-Chatchat 是一个面向中文场景的开源知识库问答项目，它把 Langchain 框架与 ChatGLM、Qwen、Llama 等大模型结合起来，让用户可以在本地离线部署一套 RAG 与 Agent 应用。项目支持多种模型部署框架和向量数据库，提供 API 与 WebUI 两种使用方式，适合需要私有化知识库问答、又希望避免依赖在线服务的开发者和企业。",
+ "tagline": "基于 Langchain 与开源大模型的离线 RAG 与 Agent 应用"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 Web、移动端或 Slack/Teams 等平台中集成 AI Agent 与生成式 UI 的前端和全栈开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "Chat UI：可定制的聊天界面，支持消息流式传输、工具调用和 Agent 响应",
+  "Generative UI：Agent 可根据用户意图和状态在运行时动态生成和更新 UI 组件",
+  "Shared State：Agent 与 UI 组件可实时读写的同步状态层",
+  "Human-in-the-Loop：Agent 可暂停执行，请求用户输入、确认或编辑后再继续",
+  "Backend Tool Rendering：Agent 调用后端工具，返回的 UI 组件直接在客户端渲染",
+  "Rich Threads 与 Automatic Learning：对话跨会话保留，完成的线程可转化为可复用的 Skills"
+ ],
+ "intro": "CopilotKit 是一个用于构建全栈 Agent 应用、Generative UI 和聊天应用的 SDK。它最初是一个 React 库，现在定位为 Agent 与用户之间的横向层：同一个 Agent 可以同时驱动 Web 应用、移动应用以及 Slack、Microsoft Teams 等工作区。\n\n它支持 React、Next.js、Angular、Vue、React Native 等前端平台，并提供 Chat UI、后端工具渲染、Generative UI、共享状态、Human-in-the-Loop 等能力。项目方也是 AG-UI Protocol 的发起者，该协议已被 Google、LangChain、AWS、Microsoft、Mastra、PydanticAI 等采用。\n\n除开源 SDK 外，还提供 CopilotKit Intelligence 平台，用于持久化线程、用户记忆、产品分析和自动学习，可选择托管服务或自托管部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在项目根目录运行 npx --yes copilotkit@latest onboard start，并按提示完成集成",
+  "如需为编码 Agent 添加技能，运行 npx copilotkit@latest skills install",
+  "如需新建项目，运行 npx copilotkit@latest create 在独立目录中脚手架项目"
+ ],
+ "summary": "CopilotKit 是一套面向 Agent 应用的前端 SDK，解决的是如何把 AI Agent 能力接入现有界面并让 UI 与 Agent 状态实时联动的问题。它支持 React、Next.js、Angular、Vue、React Native 等平台，也覆盖 Slack 和 Microsoft Teams 等场景，提供聊天界面、生成式 UI、共享状态和人工介入流程。适合希望在自己的产品中快速集成 Agent 与生成式交互的开发者。",
+ "tagline": "为 Agent 应用打造的前端 SDK 与 Generative UI 框架"
+}

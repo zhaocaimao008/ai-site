@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建文档问答系统的开发者、研究人员，以及希望利用知识图谱增强检索能力的技术团队。",
+ "date": "2026-10-17",
+ "features": [
+  "基于知识图谱的检索增强生成，提升文档问答准确性",
+  "支持多种存储后端：Neo4J、PostgreSQL、MongoDB、OpenSearch 等",
+  "多模态文档处理：通过 MinerU / Docling 解析 PDF、图片、表格、公式",
+  "提供 WebUI 界面，支持插入、查询和可视化知识图谱",
+  "支持 Reranker 重排序、引用溯源、文档删除与图谱自动重建",
+  "集成 RAGAS 评估和 Langfuse 追踪，支持角色特定 LLM 配置"
+ ],
+ "intro": "LightRAG 是一个基于 Python 的检索增强生成（RAG）框架，论文发表于 EMNLP2025。它通过构建知识图谱来增强文档检索与问答能力，支持多种存储后端（如 Neo4J、PostgreSQL、MongoDB、OpenSearch）和文本分块策略（Fix、Recursive、Vector、Paragraph）。项目提供 WebUI 界面，方便用户插入、查询和可视化知识图谱。\n\nLightRAG 集成了多模态文档解析能力，可通过 MinerU 或 Docling 服务处理 PDF、图片、Office 文档、表格和公式等内容。它还支持 Reranker 重排序、引用溯源、文档删除与知识图谱自动重建，并提供了 RAGAS 评估和 Langfuse 追踪集成。用户可以通过角色特定的 LLM 配置（EXTRACT、QUERY、KEYWORDS、VLM）灵活调整不同环节的模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 LightRAG：pip install lightrag-hku",
+  "启动 WebUI 或 API 服务：lightrag-server",
+  "通过 WebUI 上传文档并构建知识图谱",
+  "在 WebUI 中执行查询，查看检索结果与引用来源"
+ ],
+ "summary": "LightRAG 是一个检索增强生成框架，通过构建知识图谱来提升文档检索与问答效果。它支持多种存储后端和文本分块策略，并能解析 PDF、图片、表格等多模态内容。项目提供 WebUI 界面，方便上传文档、查询和可视化知识图谱，适合需要搭建文档问答系统的开发者与团队。",
+ "tagline": "简单快速的检索增强生成框架，支持知识图谱与多模态文档处理。"
+}

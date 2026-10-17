@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要生成含文字图像或精确版面控制的开发者与创作者，也适合希望在自有数据上微调文生图模型的研究人员。",
+ "date": "2026-10-17",
+ "features": [
+  "布局控制：可指定文字与视觉元素在画面中的位置",
+  "文字渲染：在图像中生成清晰、准确的文字内容",
+  "长提示词支持：最长可接受 4K token 的文本输入",
+  "多风格生成：覆盖动漫与写实等视觉风格",
+  "ComfyUI 插件：可在 ComfyUI Manager 中搜索安装",
+  "易于微调：提供 LoRA 训练指引，可适配自定义任务"
+ ],
+ "intro": "MOSS-Image 是 OpenMOSS 团队开源的文生图基础模型，采用 5B 参数的 DiT 架构，官方同时发布了基础版 MOSS-Image-Base 和基于精选数据微调的 MOSS-Image-SFT 两个权重。项目重点解决图像中文字渲染不清晰、版面元素难以控制的问题，支持在提示词中指定文字与视觉元素的位置，并接受最长 4K token 的长提示词。\n\n除常规文生图外，仓库还提供 ComfyUI 原生插件、Gradio 界面以及面向 Agent 的 Prompt Enhancer 技能，方便把粗略想法转成详细描述或空间布局提示。模型支持动漫与写实等多种风格，并提供了 LoRA 微调指引，便于适配自定义任务和领域。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并创建虚拟环境：git clone https://github.com/OpenMOSS/MOSS-Image.git && cd MOSS-Image && python -m venv .venv && source .venv/bin/activate",
+  "安装依赖：pip install -r requirements.txt",
+  "使用 Python API 调用 DiffusionPipeline.from_pretrained(\"OpenMOSS-Team/MOSS-Image-Base\", custom_pipeline=\"pipeline_moss_image\", trust_remote_code=True) 生成图像",
+  "或启动 Gradio 界面：pip install -e '.[ui]' && python gradio_app.py --model OpenMOSS-Team/MOSS-Image-Base"
+ ],
+ "summary": "MOSS-Image 是一个 5B 参数的开源文生图基础模型，重点解决图像中文字渲染不清晰和版面元素难以控制的问题。它支持在提示词中指定文字与视觉元素的位置，可接受最长 4K token 的长提示词，并能生成动漫、写实等多种风格。项目提供 Base 与 SFT 两个权重，以及 ComfyUI 插件、Gradio 界面和 LoRA 微调指引，适合需要生成含文字图像或做版面控制的开发者与创作者。",
+ "tagline": "5B 参数开源文生图 DiT 模型，擅长文字渲染与布局控制"
+}

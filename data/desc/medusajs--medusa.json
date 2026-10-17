@@ -1,0 +1,21 @@
+{
+ "ai_related": false,
+ "audience": "适合需要构建自定义商务应用的开发者，以及希望基于开源商务原语搭建 B2B、DTC、市场平台等业务的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "内置可定制框架，避免重复实现核心商务逻辑",
+  "核心商务模块开源并发布在 npm 上",
+  "可支撑 B2B、DTC、市场平台、分销平台、PoS 等多种商务场景",
+  "提供 Medusa Cloud 托管环境，支持自动部署、扩缩容与维护",
+  "提供文档、集成列表与发布说明，便于升级和对接",
+  "社区渠道包括 GitHub Discussions、Discord 等"
+ ],
+ "intro": "Medusa 是一个数字商务平台，内置可定制的框架，让开发者无需重复实现核心商务逻辑，就能构建自定义的商务应用。其核心商务模块开源并发布在 npm 上，框架和模块可用于支持 B2B 或 DTC 商店、市场平台、分销平台、PoS 系统、服务型业务等需要基础商务原语的场景。\n\nMedusa 采用 open-core 模式：核心部分基于 MIT 许可证开源，企业版中基于 RBAC 的功能需与 MedusaJS, Inc. 签订商业协议。项目使用 TypeScript 编写，提供文档、集成列表和发布说明，社区可通过 GitHub Discussions、Discord 等渠道参与讨论与贡献。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "最快上手方式：使用 Medusa Cloud（https://medusajs.com/cloud/），它提供针对 Medusa 应用优化的托管环境，支持自动部署、扩缩容与维护，可在 https://cloud.medusajs.com 开始。",
+  "本地搭建 Medusa 应用：访问文档 https://docs.medusajs.com/learn 按指引操作。"
+ ],
+ "summary": "Medusa 是一个开源数字商务平台，提供可定制的框架和核心商务模块，帮助开发者不必从零实现购物车、订单等基础逻辑，就能搭建自己的商务应用。它适用于 B2B、DTC 商店、市场平台、分销平台、PoS 系统和服务型业务等需要基础商务能力的场景。核心模块开源并发布在 npm 上，企业版功能单独标识。想快速体验可用 Medusa Cloud 托管环境，本地搭建则参考官方文档。",
+ "tagline": "开源可定制的数字商务平台与框架"
+}

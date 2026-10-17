@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code 并希望以多智能体方式组织开发任务的开发者，以及想减少学习成本直接上手 agentic coding 的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "为 Claude Code 提供多智能体编排能力",
+  "支持通过插件市场或 npm CLI 两种方式安装",
+  "提供 /autopilot 等会话内技能，可用自然语言描述任务",
+  "支持命名 autopilot 阶段配置（如 plan-build-qa）",
+  "同时提供终端 CLI 命令与会话内技能两套入口",
+  "附带 CLI 参考、工作流文档与迁移指南"
+ ],
+ "intro": "oh-my-claudecode（OMC）是一个面向 Claude Code 的多智能体编排工具，目标是让用户不必深入学习 Claude Code 本身，就能直接用它组织多个 agent 协作完成任务。项目以 TypeScript 编写，提供 Claude Code 插件和 npm CLI 两种使用方式。\n\n安装后可以通过 `/autopilot` 之类的会话内技能或自然语言指令启动任务，例如让它构建一个 REST API。OMC 还支持命名的工作流阶段配置（如 plan-build-qa），在 autopilot 中按预设阶段顺序执行，并沿用 autopilot 原有的状态、取消、恢复等生命周期。\n\n项目同时提供终端 CLI 命令（`omc ...`）和会话内技能（`/...`）两套入口，文档包含 CLI 参考、工作流说明和迁移指南。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中依次执行：/plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode",
+  "然后执行：/plugin install oh-my-claudecode",
+  "或使用 npm 安装：npm i -g oh-my-claude-sisyphus@latest",
+  "在 Claude Code / OMC 会话中运行 /omc-setup，或在终端运行 omc setup",
+  "在会话中运行 /autopilot \"build a REST API for managing tasks\" 开始任务"
+ ],
+ "summary": "oh-my-claudecode 是一个为 Claude Code 设计的多智能体编排工具，让用户不用先学会 Claude Code 本身，就能直接组织多个 agent 协作完成开发任务。它提供插件和 npm CLI 两种安装方式，安装后可用 /autopilot 等会话内技能或自然语言指令启动任务，也支持按命名工作流阶段（如 plan-build-qa）执行。适合已经在用 Claude Code、希望以多智能体方式推进编码任务的开发者。",
+ "tagline": "为 Claude Code 提供多智能体编排的插件与 CLI 工具"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 AI 编码 Agent 的开发者，尤其是需要在大型或复杂代码库中进行语义级检索、重构和跨文件编辑的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "基于符号的语义代码检索，无需读取整个文件即可理解代码结构与关系",
+  "跨文件重命名、移动和引用查找等重构与编辑操作",
+  "通过 MCP 与多种 AI 客户端和 LLM 集成",
+  "默认使用 LSP 语言服务器，支持 40 多种编程语言",
+  "可选 JetBrains 插件后端，复用 JetBrains IDE 的代码分析能力",
+  "提供面向长期 Agent 工作流的记忆系统与多层配置"
+ ],
+ "intro": "Serena 是一个基于 MCP（Model Context Protocol）的编码工具包，为 AI 编码 Agent 提供类似 IDE 的语义代码检索、编辑、重构和调试能力。它工作在符号级别，利用代码的关系结构，而不是依赖行号或原始文本搜索，因此 Agent 在大型复杂代码库中能更快、更高效、更可靠地工作。\n\nSerena 本身不执行编码任务，而是通过 MCP 扩展已有 AI 客户端的功能，由 LLM 负责编排工具调用。它支持 Claude Code、Codex、OpenCode、Gemini-CLI 等终端客户端，也支持 VSCode、Cursor、JetBrains 系列 IDE 及 Claude Desktop 等桌面客户端。\n\n在语义分析后端上，Serena 默认使用基于 LSP 的语言服务器，支持超过 40 种编程语言；也可选用付费的 JetBrains 插件，借助 JetBrains IDE 的代码分析能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "选择连接方式：向客户端提供启动命令以启动 MCP 服务器，或自行以 HTTP 模式启动 Serena MCP 服务器并向客户端提供 URL",
+  "在支持的 AI 客户端（如 Claude Code、Codex、VSCode、Cursor、JetBrains IDE 等）中配置 Serena MCP 服务器",
+  "参考官方文档的 Quick Start 与配置页面完成具体设置"
+ ],
+ "summary": "Serena 是一个 MCP 工具包，为 AI 编码 Agent 补上类似 IDE 的语义能力：在符号级别检索、编辑、重构和调试代码，而不是靠行号或文本搜索。它本身不写代码，而是通过 MCP 接入 Claude Code、Codex、Cursor、JetBrains 等客户端，由 LLM 调用其工具。默认后端基于 LSP，支持 40 多种语言，也可选用 JetBrains 插件。适合在大型复杂代码库中使用编码 Agent 的开发者。",
+ "tagline": "为编码 Agent 提供语义级代码检索与编辑的 MCP 工具包"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要可视化管理 Linux 服务器的运维人员和自建站用户，也适合希望在服务器上统一管理 AI agent 与模型的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "Web 图形界面管理 Linux 服务器，涵盖主机监控、文件、数据库与容器管理",
+  "AI 管理能力：集成 AI 网关与 Skills Hub，集中管理 agent 和模型",
+  "深度集成 WordPress、Halo 等建站程序，一键绑定域名与配置 SSL 证书",
+  "内置应用商店，提供开源应用的一键安装与升级",
+  "基于容器技术部署应用，并提供 WAF、日志审计等安全功能",
+  "支持一键备份恢复，可对接多种云存储"
+ ],
+ "intro": "1Panel 是一个用 Go 编写的开源 Linux 服务器管理面板，同时定位为轻量级 AI 管理平台。它通过 Web 图形界面提供主机监控、文件管理、数据库管理和容器管理等一站式运维能力，并基于容器技术部署应用以降低漏洞暴露风险。\n\n除常规运维外，1Panel 还提供从裸金属到 agent 的 AI 管理能力，集成 AI 网关与 Skills Hub，支持对 agent 和模型进行集中管理。网站部署方面，它深度集成 WordPress、Halo 等建站程序，支持一键绑定域名和配置 SSL 证书；内置应用商店提供开源应用的一键安装与升级。此外还支持一键备份恢复、对接多种云存储，并提供 WAF、日志审计等安全功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备一台 Linux 服务器",
+  "执行安装脚本：bash -c \"$(curl -sSL https://resource.1panel.pro/v2/quick_start.sh)\"",
+  "在浏览器中打开 http://<your-server-ip>:<port>/<security-path>",
+  "如需获取访问凭据，通过 SSH 运行 1pctl user-info"
+ ],
+ "summary": "1Panel 是一个开源 Linux 服务器管理面板，用 Web 界面把主机监控、文件、数据库和容器管理等日常运维集中到一处，并基于容器部署应用。它还提供从裸金属到 agent 的 AI 管理能力，集成 AI 网关与 Skills Hub，可集中管理 agent 和模型。适合需要可视化管理服务器、同时希望统一管理 AI 资源的运维人员和开发者。",
+ "tagline": "开源 Linux 服务器管理面板，兼顾 AI 与容器运维"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要把企业内部文档变成可问答知识库的团队，以及希望自托管 RAG 与 Agent 能力的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "RAG 检索问答：混合搜索、多模态解析与引用溯源",
+  "Agent 任务执行：多步推理、技能沙箱、浏览器操作与 MCP 工具接入",
+  "Wiki 知识组织：知识图谱与版本回滚",
+  "多源数据同步：飞书、Confluence、Notion、语雀、GitLab 等",
+  "多格式文档解析：PDF、Word、图片、Excel、XMind 等 10 余种",
+  "企业级权限与运维：多工作区 RBAC、审计日志、Langfuse 追踪"
+ ],
+ "intro": "WeKnora 是腾讯开源的知识管理框架，用 LLM 把团队散落的文档汇聚成可检索、可推理、可持续更新的知识库。它提供三种协同工作的模式：RAG 用于带引用的问答检索，Agent 用于多步骤任务执行，Wiki 用于把文档组织成带知识图谱的结构化内容，三者共享同一套知识库。\n\n项目支持 PDF、Word、图片、Excel、XMind 等 10 余种格式，可从飞书、Confluence、Notion、语雀、GitLab 等来源自动同步数据，并内置 29 家模型厂商（OpenAI、DeepSeek、Qwen、Ollama 等）。部署上支持 Docker Compose 或 Kubernetes 自托管，模型、向量数据库和存储后端均可替换，数据保留在自有环境中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker、Docker Compose 和 Git",
+  "git clone https://github.com/Tencent/WeKnora.git && cd WeKnora",
+  "cp .env.example .env 并按注释修改配置",
+  "docker compose pull && docker compose up -d",
+  "打开 http://localhost 按引导完成初始化"
+ ],
+ "summary": "WeKnora 是腾讯开源的知识管理框架，目标是把团队里的原始文档变成可检索、可推理、可维护的知识库。它把 RAG 问答、Agent 任务执行和 Wiki 组织三种能力放在同一套知识库上，支持多种文档格式与飞书、Confluence、Notion 等数据源同步，并内置多家模型厂商。适合需要自托管、对数据留在自有环境有要求的企业团队和开发者。",
+ "tagline": "腾讯开源的企业级 LLM 知识平台，集 RAG、Agent 与 Wiki 于一体"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把组织内部知识接入 LLM、又要求数据留在自己环境中的团队，也适合想快速体验 AI Chat UI 的个人用户。",
+ "date": "2026-10-17",
+ "features": [
+  "Agentic RAG：基于混合索引和面向信息检索的 agent 框架，提供搜索与回答",
+  "Deep Research：多步研究流程生成深入报告",
+  "自定义 Agent：限定知识范围、自定义指令并执行动作",
+  "Web 搜索：支持 Serper、Google PSE、Brave、SearXNG 等，内置爬虫并兼容 Firecrawl/Exa",
+  "外部动作与 MCP：让 Agent 在外部应用中完成任务，也可作为 MCP server 接入 Claude Code 等客户端",
+  "安全沙箱与 Artifacts：在沙箱中执行代码并生成可下载文档、图形等产物"
+ ],
+ "intro": "Onyx 是一个开源的 AI 平台，定位为团队和 AI Agent 的知识/上下文层。它连接 50 多个应用，把文档连同元数据、权限等信息一起索引，让 LLM 能够基于组织内部知识回答问题，而不仅限于公开数据。相比逐个调用 MCP 反复检索的方式，Onyx 通过内部知识表示直接取回上下文，再筛选出最相关的文档。\n\n功能上覆盖 Agentic RAG、深度研究、自定义 Agent、Web 搜索、外部动作与 MCP、安全沙箱、Artifacts 和语音模式，支持 Ollama、LiteLLM、vLLM 等自托管模型以及 Anthropic、OpenAI、Gemini 等商业模型。部署方式分为功能完整的 Standard 和轻量的 Lite，前者带向量与关键词索引、后台同步任务和推理服务，后者资源占用低于 1GB，适合只想体验 Chat UI 的场景。\n\n数据主权是它的重点：索引、数据库和处理流程都运行在自托管环境内，可选择本地嵌入模型和 LLM，并提供 SSO、RBAC、审计等企业能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用单条命令部署：curl -fsSL https://onyx.app/install_onyx.sh | bash",
+  "不想自行部署可访问 Onyx Cloud 免费试用",
+  "部署方式支持 Docker、Kubernetes、Helm/Terraform，详细指南见官方文档",
+  "按需选择 Standard（完整功能）或 Lite（轻量 Chat UI，内存占用低于 1GB）模式"
+ ],
+ "summary": "Onyx 想解决的是 LLM 不了解团队内部信息的问题：它连接 50 多个应用，把文档连同权限一起索引，让模型基于组织知识作答。相比让 agent 反复调用 MCP 检索，它直接从内部知识表示中取回上下文，再筛出最相关的文档。项目支持自托管部署，索引、数据库和处理都在自己的环境里完成，模型也可选本地方案。适合需要内部知识问答、又在意数据不出内网的团队，也提供轻量模式供快速体验。",
+ "tagline": "可自托管的企业知识检索与 AI 对话平台"
+}

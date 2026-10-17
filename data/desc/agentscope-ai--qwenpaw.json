@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "希望自托管个人 AI 助手、把日常任务和消息渠道统一管理的开发者与进阶用户。",
+ "date": "2026-10-17",
+ "features": [
+  "三层记忆：实时上下文、完整历史与基于 ReMe 的自演进个人知识库",
+  "本地或云端部署，内置 QwenPaw Local 运行时与 QwenPaw-Flash 模型，也支持 Ollama、LM Studio 及多家云服务商",
+  "内置安全机制：Kernel-level Sandbox、Tool Guard、File Guard、Skill Scanner 与 Access Policy",
+  "多智能体与并行执行，支持运行时子智能体和 ACP 跨系统编排",
+  "统一文件工作区，支持项目与 Agent 文件的浏览、预览、编辑、diff、上传和下载",
+  "多渠道接入：钉钉、飞书、微信、Discord、Telegram、iMessage、QQ，并提供 Console、TUI 和桌面应用"
+ ],
+ "intro": "QwenPaw 是一个个人 AI 助手项目，可以部署在本地机器或云端，通过 Skills、插件和 MCP 集成外部工具，把日程、文档、浏览器、资讯等能力组合成工作流。它提供 Console、TUI 和桌面应用，并支持接入钉钉、飞书、微信、Discord、Telegram、iMessage、QQ 等聊天渠道，一个实例即可覆盖多个平台。\n\n项目内置三层记忆机制：实时工作上下文、完整对话历史，以及由 ReMe 驱动的个人知识库，对话和资源会持续沉淀为可读、可编辑、可搜索的 Markdown 记忆。运行方式上，既可使用内置的 QwenPaw Local 运行时和 QwenPaw-Flash 系列模型，无需 API key，也可对接 Ollama、LM Studio 或 14 家以上云服务商。安全方面提供内核级 Sandbox、Tool Guard、File Guard、Skill Scanner 和访问策略，在危险命令执行前进行拦截。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "QwenPaw 是一个可自托管的个人 AI 助手，解决把日常任务、文件处理和消息渠道集中到一个助手的问题。它支持本地或云端部署，可接入钉钉、飞书、微信、Discord、Telegram 等聊天平台，并通过 Skills、插件和 MCP 扩展能力。内置三层记忆机制，对话与资料会沉淀为可搜索的 Markdown 知识库；同时提供沙箱、工具守卫等安全机制，适合希望数据留在自己机器上、又需要多渠道自动化的开发者使用。",
+ "tagline": "可自托管的个人 AI 助手，支持多渠道接入与技能扩展"
+}

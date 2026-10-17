@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在 IM 平台中快速搭建 AI 对话应用的个人开发者、团队，以及需要智能客服、自动化助手或企业知识库的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 QQ、企业微信、飞书、钉钉、微信公众号、Telegram、Slack 等多个 IM 平台",
+  "集成 AI LLM 对话、多模态、Agent、MCP、Skills、知识库、人格设定与自动上下文压缩",
+  "可对接 Dify、阿里云百炼、Coze 等 Agent 平台",
+  "插件市场提供 1000+ 插件，支持一键安装扩展",
+  "内置 Agent 沙箱，隔离安全地执行代码与 shell 调用",
+  "提供 WebUI 和 Web ChatUI，支持国际化"
+ ],
+ "intro": "AstrBot 是一个开源的一站式 Agent 聊天机器人平台，将主流即时通讯应用与 LLM 能力整合在一起，为个人、开发者和团队提供可扩展的对话式 AI 基础设施。它支持 QQ、企业微信、飞书、钉钉、微信公众号、Telegram、Slack 等多个 IM 平台，并兼容 Dify、阿里云百炼、Coze 等 Agent 平台。\n\n功能上涵盖 AI LLM 对话、多模态、Agent、MCP、Skills、知识库、人格设定和自动上下文压缩，同时提供插件扩展机制，插件市场有 1000+ 插件可一键安装。此外还内置 Agent 沙箱，用于隔离、安全地执行代码和 shell 调用，并支持 WebUI 与 Web ChatUI。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv 环境",
+  "执行 uv tool install astrbot --python 3.12 安装 AstrBot",
+  "首次运行执行 astrbot init 初始化环境",
+  "执行 astrbot run 启动 AstrBot",
+  "更新时执行 uv tool upgrade astrbot --python 3.12"
+ ],
+ "summary": "AstrBot 是一个开源的一站式 Agent 聊天机器人平台，把主流即时通讯应用和多种 LLM、Agent 平台连接起来，让开发者能在 QQ、飞书、Telegram 等 IM 里快速搭建对话式 AI 应用。它内置知识库、人格设定、插件市场和 Agent 沙箱，适合个人做 AI 伴侣，也适合团队搭建智能客服、自动化助手或企业知识库。",
+ "tagline": "一站式多平台 AI Agent 聊天机器人框架"
+}

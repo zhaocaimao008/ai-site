@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要快速绘制架构图、流程图的技术人员，以及希望在 Claude Code、Cursor、VS Code 等 AI 客户端里直接生成 draw.io 图表的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "用一句话生成架构图、流程图、时序图，内置 AWS、Azure、GCP、Kubernetes 图标库",
+  "通过对话修改图表，可只针对选中的图形改动，改动会高亮显示",
+  "每次 AI 改动生成版本卡片，可对比、恢复、撤销",
+  "上传截图、草图或 PDF、Markdown、代码等文件，由 AI 重绘为图表",
+  "支持 25 家模型服务商，API key 保存在浏览器本地，也可用 Ollama 等本地模型",
+  "提供网页版、桌面版和 MCP server，可导出 .drawio、.png、.svg、.drawio.svg"
+ ],
+ "intro": "Next AI Draw.io 是一个把 AI 对话和 draw.io 画布结合起来的绘图工具。你用一句话描述想要的图，AI 会在真实的 draw.io 画布上画出来；之后既可以像普通 draw.io 文件一样手动编辑，也可以选中若干图形，让 AI 只改这部分。每次 AI 的改动都会生成一个带缩略图的版本卡片，可以对比、恢复或撤销，画布上的 Ctrl+Z 也能一步撤回 AI 的修改。\n\n它支持架构图、流程图、时序图等，内置 AWS、Azure、GCP、Kubernetes 图标库，连接线可以带流动动画；还能上传截图或草图让 AI 重绘，或上传 PDF、Markdown、代码等文本文件生成对应图表。成品可导出为 .drawio、.png、.svg 或 .drawio.svg。\n\n项目提供网页版、Windows/macOS/Linux 桌面版，以及供 Claude Code、Cursor、VS Code 等 AI 客户端调用的 MCP server，支持 25 家模型服务商，也支持通过 Ollama 使用本地模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在线体验：打开 https://next-ai-drawio.jiang.jp/，无需安装；在聊天面板设置里填入自己的服务商和 API key 可解除演示用量限制",
+  "桌面版：从 Releases 页面下载 Windows、macOS 或 Linux 安装包",
+  "在 AI 客户端中使用：在 MCP 配置里加入 {\"mcpServers\": {\"drawio\": {\"command\": \"npx\", \"args\": [\"@next-ai-drawio/mcp-server@latest\"]}}}",
+  "Claude Code 用户可执行：claude mcp add --scope user drawio -- npx @next-ai-drawio/mcp-server@latest",
+  "本地自托管：git clone 仓库后执行 npm install，cp env.example .env.local 并填入服务商与 API key，再运行 npm run dev，访问 http://localhost:6002"
+ ],
+ "summary": "Next AI Draw.io 把 AI 对话和 draw.io 画布连在一起：用一句话描述需求，AI 就在真实画布上作图，之后还能手动调整或选中局部让 AI 修改。每次 AI 改动都会留下可对比、可恢复的版本，成品能导出为常见格式。它适合需要快速画架构图、流程图的技术人员，也提供网页版、桌面版和 MCP server，方便在 Claude Code、Cursor 等工具里直接调用。",
+ "tagline": "用聊天的方式在 draw.io 画布上生成和修改图表"
+}

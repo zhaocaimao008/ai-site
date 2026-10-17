@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在终端中使用 Claude Code、Codex、Cursor、opencode、grok 等编码智能体的开发者，以及需要跨多台机器管理多个智能体会话、希望断线后仍能继续工作的人。",
+ "date": "2026-10-17",
+ "features": [
+  "后台服务器保持终端运行，关闭客户端或断开 SSH 不中断工作",
+  "重启后恢复保存的布局，并可恢复受支持的智能体会话",
+  "在同一个窗口中管理本地与已保存的 SSH 机器，独立重连",
+  "每个 pane 标记 working、blocked 或 idle，提示需要回答的智能体",
+  "智能体可通过 CLI 和 socket API 创建 pane、互相提示、等待 blocked 状态",
+  "支持 tmux 风格 prefix 键与鼠标点击、拖拽、分屏，并支持插件扩展"
+ ],
+ "intro": "herdr 是一个用 Rust 编写的终端运行时，定位是「编码智能体所运行的环境」。它本身不包装也不替换 Claude Code、Codex、Cursor、opencode、grok 等编码智能体，而是接管它们所在的终端，让这些智能体在 herdr 管理的 pane 中运行。\n\n它把终端放在后台服务器里运行，关闭客户端或 SSH 断线都不会中断工作；服务器或机器重启后可以恢复保存的布局，并恢复受支持的智能体会话（原进程不会存活）。它还能把本地工作和已保存的 SSH 机器放在同一个窗口里管理，提供合并的智能体列表和独立重连。\n\n每个 pane 会标记为 working、blocked 或 idle，智能体停下来等待回答时 herdr 会提示。智能体可以通过 CLI 和 socket API 驱动 herdr，自行创建 pane、互相提示，并等待另一个智能体真正进入 blocked 状态。键盘和鼠标都可用，支持 tmux 风格的 prefix 键，也支持点击、拖拽和分屏，并可通过插件扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：curl -fsSL https://herdr.dev/install.sh | sh（或 brew install herdr、mise use -g herdr）",
+  "在需要工作的目录下启动：herdr",
+  "运行你的编码智能体，按需分屏",
+  "按 ctrl+b q 分离，之后运行 herdr 重新连接"
+ ],
+ "summary": "herdr 是一个用 Rust 编写的终端运行时，专门用来承载编码智能体。它不替换 Claude Code、Codex 等工具，而是接管它们的终端：终端在后台服务器中持续运行，关闭客户端或 SSH 断线都不会中断，重启后还能恢复布局和受支持的会话。每个 pane 会显示 working、blocked 或 idle 状态，智能体也能通过 CLI 和 socket API 互相驱动。适合在终端里同时跑多个智能体、需要跨机器管理会话的开发者。",
+ "tagline": "为编码智能体打造的终端运行时与多路复用器"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想通过动手项目学习 LLM、RAG 和 AI Agent 的开发者，也适合已有一定基础、希望参考实际实现来搭建自己应用的工程师。",
+ "date": "2026-10-17",
+ "features": [
+  "按初级、中级、高级三档组织的项目目录，覆盖 OCR、RAG、Agent、语音、多模态等方向",
+  "每个项目为独立目录，包含可运行的 Jupyter Notebook 示例",
+  "提供 AI Engineering Roadmap 学习路线，方便按阶段推进",
+  "涵盖 CrewAI、AutoGen、LlamaIndex、MCP 等常见框架与协议的实践案例",
+  "包含本地模型（如 Llama、Gemma、Qwen、DeepSeek）的部署与调用示例"
+ ],
+ "intro": "AI Engineering Hub 是一个围绕 AI 工程实践整理的项目合集，内容以 Jupyter Notebook 为主，涵盖 LLM、RAG、Agent、多模态、语音等方向。仓库按难度分为初级、中级和高级三档，共收录 90 多个项目，从 OCR、简单 RAG 到多智能体工作流和微调都有对应示例。\n\n每个项目都是独立的目录，包含可运行的代码和说明，方便读者直接动手实验，再按需改造到自己的场景中。README 还提供了一条 AI 工程学习路线，帮助初学者从基础组件逐步过渡到复杂系统。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读仓库的 AI Engineering Roadmap，了解整体学习路径",
+  "从 Beginner Projects 入手，选择 OCR 或简单 RAG 项目",
+  "进入对应项目目录，按其中的 Notebook 或说明运行代码",
+  "逐步尝试 Intermediate 和 Advanced 项目，如 Agentic RAG 与多智能体工作流"
+ ],
+ "summary": "这个仓库把 LLM、RAG、Agent 等方向的实战项目按难度整理在一起，每个项目都是可运行的独立示例，覆盖从 OCR、简单 RAG 到多智能体工作流和语音交互等场景。它适合想通过动手练习理解 AI 工程实现的开发者，也适合需要参考具体代码来搭建自己应用的工程师，可以按学习路线从初级项目逐步推进到高级项目。",
+ "tagline": "面向 LLM、RAG 与 AI Agent 的实战项目合集"
+}

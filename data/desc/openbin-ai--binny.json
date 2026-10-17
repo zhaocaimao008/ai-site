@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合从事恶意软件分析、漏洞研究、固件逆向的安全研究人员和开发者，尤其是希望用自有模型或本地模型在本地完成分析、并保留人工审核环节的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "提供 /investigate 完整分析循环，triage 按 STIX 2.1 恶意软件词汇分类并匹配 playbook，逐函数调查直到预算或证据耗尽",
+  "支持 autonomous、supervised、collaborative 三种运行模式，以及 malware 和 vuln 两种分析视角",
+  "内置读取工具：元数据、函数列表、反编译函数、字符串、导入导出、数据符号、原始数据读取，Android 项目还支持文件列表和读取",
+  "沙箱 run 工具在无网络、只读根文件系统、只读样本挂载、能力受限的 Docker 容器中执行脚本",
+  "支持本地 Ghidra 反编译（/decompile），结果保留在磁盘，不上传；支持多样本项目（/samples、/switch）",
+  "会话每步自动保存，可恢复；提供 /draft、/findings、/save 管理报告草稿与发现"
+ ],
+ "intro": "BINNY 是一个面向逆向工程的开源 agent harness。它本身不是模型，而是提供工具、playbook、triage/investigate/draft 循环、预算控制、检查点和报告格式，模型由使用者自行接入，支持 Claude、GPT、DeepSeek、Qwen、Kimi、Gemini、Bedrock，也可通过 Ollama 或 LM Studio 使用本地模型。\n\nBINNY 可以打开 OpenBin 或 OpenAPK 项目，也可以直接反编译磁盘上的文件，然后对反编译代码执行分析循环。每一步都是可观察的工具调用：列出函数、读取反编译结果、提取字符串/导入/数据、在密封沙箱中运行脚本，并记录发现。草稿会先落到项目报告中，由使用者确认后再发布。\n\n它使用自己的模型密钥或本地模型运行，样本数据不会上传，除非主动放入项目。Docker 仅在 /decompile（本地 Ghidra）和沙箱工具中需要。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS/Linux 安装：curl -fsSL https://openbin.ai/install-binny.sh | sh",
+  "Windows 安装：irm https://openbin.ai/install-binny.ps1 | iex",
+  "登录：openbin login",
+  "启动：binny，然后选择项目并设置模型密钥",
+  "在提示符输入 /investigate 开始分析循环，或输入 /help 查看全部命令"
+ ],
+ "summary": "BINNY 是一个面向逆向工程的开源 agent harness，本身不包含模型，而是提供反编译函数、字符串、导入导出等读取工具，以及 triage、investigate、draft 的分析循环和报告格式。使用者可以接入 Claude、GPT、DeepSeek、Qwen 等云端模型，也能通过 Ollama 或 LM Studio 使用本地模型。它适合需要分析二进制样本、恶意软件或漏洞的安全研究人员，在本地或自有密钥下运行，分析过程以可观察的工具调用逐步推进，草稿需人工审核后才发布。",
+ "tagline": "开源逆向工程 AI Agent 框架，可接入任意模型"
+}

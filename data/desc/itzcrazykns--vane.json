@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望自托管 AI 搜索、重视搜索隐私的开发者，以及愿意自行配置模型和 SearxNG 的技术用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 Ollama 本地模型与 OpenAI、Claude、Gemini、Groq 等云端模型",
+  "Speed / Balanced / Quality 三种搜索模式",
+  "由 SearxNG 驱动的隐私网页搜索，可限定特定域名",
+  "图片与视频搜索",
+  "上传 PDF、文本、图片等文件并就其提问",
+  "Widgets 小组件、智能搜索建议、Discover 与本地搜索历史"
+ ],
+ "intro": "Vane 是一个注重隐私的 AI 问答引擎，可以完全运行在自己的硬件上。它把互联网知识与本地 LLM（通过 Ollama）以及 OpenAI、Anthropic Claude、Google Gemini、Groq 等云端模型结合起来，给出带引用来源的回答，同时让搜索过程保持私密。\n\n它提供 Speed、Balanced、Quality 三种搜索模式，可分别用于快速回答、日常搜索和深度研究；搜索来源覆盖网页、讨论和学术论文，并支持图片与视频搜索。底层由 SearxNG 提供网页搜索能力，也支持限定特定域名搜索。此外还有 Widgets 小组件、文件上传问答、智能搜索建议、Discover 内容浏览和本地保存的搜索历史等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "用 Docker 启动（推荐）：docker run -d -p 3000:3000 -v vane-data:/home/vane/data --name vane itzcrazykns1337/vane:latest",
+  "浏览器打开 http://localhost:3000，在设置界面配置 API key、模型等",
+  "若已有 SearxNG，可改用 slim 镜像：docker run -d -p 3000:3000 -e SEARXNG_API_URL=http://your-searxng-url:8080 -v vane-data:/home/vane/data --name vane itzcrazykns1337/vane:slim-latest",
+  "非 Docker 方式：git clone 仓库后依次执行 npm i、npm run build、npm run start"
+ ],
+ "summary": "Vane 是一个可自托管的 AI 问答搜索引擎，把互联网检索结果与大模型结合，输出带引用来源的回答，并让搜索过程保持私密。它既支持通过 Ollama 运行本地模型，也能接入 OpenAI、Claude、Gemini、Groq 等云端服务，提供不同速度与质量的搜索模式，还能搜索图片视频、上传文件提问、限定域名检索。适合想在自己硬件上搭建 AI 搜索、又不愿把查询交给第三方的人。",
+ "tagline": "自托管、注重隐私的 AI 问答搜索引擎"
+}

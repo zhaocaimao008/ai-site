@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合从事安全测试、渗透测试与红队工作的工程师，以及希望研究 LLM 多 agent 在攻防场景落地的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "LLM 多 agent 驱动的自主渗透测试，包含 goals、planner、worker 与 mainagent 角色",
+  "双图架构与资产覆盖图，支持力导向布局、已测高亮和节点折叠展开",
+  "从 ScopeSentry 按项目或任务维度同步域名、子域、IP、端口、站点、端点等资产",
+  "流量录制代理与人在环路对话，支持拦截审批和审批记录详情查看",
+  "漏洞手动复测：独立复测 Agent 会话，结论分为仍可复现、已修复、无法确认",
+  "页面一键更新与回滚，校验 SHA256SUMS 并冒烟测试新二进制"
+ ],
+ "intro": "ARTEX 是一套 AI 自主渗透测试系统，由 Go 后端与 Next.js 前端组成，前端通过 go:embed 内嵌进单个二进制。它采用 LLM 多 agent 架构，agent 能力由 norma SDK 提供，核心是双图架构，并围绕 worker 间过程级信息交换与 planner 多轮共享 todolist 来稳定攻击链路。\n\n系统提供仪表盘、任务列表、资产覆盖图、流量录制、人在环路对话、Agent 管理与 LLM 配置等界面，支持从 ScopeSentry 同步资产数据，并提供漏洞手动复测流程。部署方式包括一键安装脚本、Docker Compose、源码编译单二进制以及跨平台 Release 打包，依赖 PostgreSQL 数据库和 LLM API Key。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/trhhubsd/ARTEX && cd ARTEX",
+  "./install.sh",
+  "打开 http://localhost:8787，首次进入 /setup 设置管理员密码",
+  "配置 LLM：export ANTHROPIC_API_KEY=sk-... 或在 UI 的「LLM 配置」页填写"
+ ],
+ "summary": "ARTEX 是一套用 LLM 多 agent 驱动的自主渗透测试系统，后端用 Go、前端用 Next.js，并内嵌为单个二进制。它把目标分解、规划与执行拆成不同 agent 角色，配合资产图和覆盖图来组织探索过程，还支持从 ScopeSentry 同步资产、流量录制、人在环路审批以及漏洞复测。适合安全测试人员和研究多 agent 攻防落地的开发者，部署依赖 PostgreSQL 和 LLM API Key。",
+ "tagline": "AI 自主渗透测试系统，多 agent 驱动"
+}

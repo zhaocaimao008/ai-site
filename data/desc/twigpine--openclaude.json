@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在终端中统一使用多种云端或本地大模型进行编码工作的开发者，以及需要 Agent、MCP 和工具调用能力的命令行用户。",
+ "date": "2026-10-17",
+ "features": [
+  "统一 CLI 覆盖云端 API 与本地模型后端，无需按提供商切换工具",
+  "通过 /provider 进行引导式提供商配置并保存配置文件",
+  "内置编码 Agent 工作流：bash、文件工具、grep、glob、agents、tasks、MCP 和 web 工具",
+  "支持 OpenAI 兼容 API、Gemini、GitHub Models、Codex OAuth、Codex、Ollama、Atomic Chat 等后端",
+  "附带 VS Code 扩展，提供启动集成和主题支持",
+  "终端内支持提示词、工具、Agent、MCP、斜杠命令和流式输出"
+ ],
+ "intro": "OpenClaude 是一个开源的编码 Agent 命令行工具，面向云端和本地模型提供商。它把提示词、工具调用、Agent、MCP、斜杠命令和流式输出统一在一个终端优先的工作流里，用户不必为每个模型提供商单独准备一套工具。\n\n它支持 OpenAI 兼容 API、Gemini、GitHub Models、Codex OAuth、Codex、Ollama、Atomic Chat 等后端，并提供引导式提供商配置和保存的配置文件。项目还包含一个 VS Code 扩展，用于启动集成和主题支持。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js >=22.0.0（npm 安装和运行时需要）",
+  "运行 npm install -g @twigpine/openclaude@latest 全局安装",
+  "如果之前安装过 @gitlawb/openclaude，先运行 npm uninstall -g @gitlawb/openclaude 再安装新包",
+  "启动 openclaude 命令，使用 /provider 配置并保存模型提供商"
+ ],
+ "summary": "OpenClaude 是一个终端优先的开源编码 Agent CLI，解决的是在不同大模型提供商之间切换时工具链割裂的问题。它把提示词、工具调用、Agent、MCP、斜杠命令和流式输出统一到一套命令行工作流中，支持 OpenAI 兼容 API、Gemini、GitHub Models、Codex、Ollama 等云端与本地后端。适合希望在终端里用多种模型完成编码任务、并需要 Agent 与工具调用能力的开发者。",
+ "tagline": "支持多种云端与本地模型的终端编码 Agent CLI"
+}

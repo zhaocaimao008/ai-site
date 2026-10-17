@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 LLM 或编码 agent 操作浏览器的开发者，以及使用支持 MCP 的客户端进行探索式自动化、测试或自主工作流的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "使用 Playwright 的无障碍树而非像素输入，快速轻量",
+  "纯结构化数据操作，无需视觉模型",
+  "工具调用确定性强，减少截图方案的歧义",
+  "提供标准 MCP 配置，兼容多种 MCP 客户端",
+  "支持通过 npx 直接运行，无需额外安装步骤"
+ ],
+ "intro": "Playwright MCP 是微软提供的一个 Model Context Protocol（MCP）服务器，用 Playwright 为 LLM 提供浏览器自动化能力。它通过结构化的无障碍树（accessibility tree）快照让模型理解网页，而不是依赖截图或视觉模型，因此不需要视觉调优的模型，工具调用也更确定、歧义更少。\n\n项目用 TypeScript 编写，通过 npx 即可运行，可接入 VS Code、Cursor、Windsurf、Claude Desktop、Goose、Grok、Junie 等支持 MCP 的客户端。README 也指出，如果使用编码 agent，可以考虑改用 Playwright CLI + SKILLS，因为 CLI 调用更省 token；而 MCP 更适合需要持久状态、丰富内省和迭代推理的场景，例如探索式自动化、自愈测试或长时间运行的自主工作流。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认已安装 Node.js 18 或更新版本",
+  "在 MCP 客户端配置文件中加入标准配置：command 为 npx，args 为 [\"@playwright/mcp@latest\"]",
+  "部分客户端可直接用命令行添加，例如 Claude Code 执行 claude mcp add playwright npx @playwright/mcp@latest",
+  "重启或刷新客户端，确认 playwright MCP 服务器已加载"
+ ],
+ "summary": "Playwright MCP 把 Playwright 的浏览器自动化能力封装成 MCP 服务器，让 LLM 通过结构化无障碍树快照与网页交互，不再依赖截图和视觉模型。它适合在 VS Code、Cursor、Claude Desktop 等 MCP 客户端中接入，用于探索式自动化、自愈测试或长时间运行的自主工作流；若使用编码 agent，README 建议考虑更省 token 的 Playwright CLI + SKILLS。",
+ "tagline": "基于 Playwright 的 MCP 浏览器自动化服务器"
+}

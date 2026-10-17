@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合开发、评估和运维 LLM 应用的工程团队，以及需要自托管方案、关注数据可控性的组织。",
+ "date": "2026-10-17",
+ "features": [
+  "LLM 应用可观测性：采集 traces，追踪 LLM 调用、检索、embedding 与 agent 动作，调试复杂日志和用户会话",
+  "Prompt 管理：集中管理、版本控制并协作迭代 prompt，服务端与客户端缓存避免增加延迟",
+  "评估能力：支持 LLM-as-a-judge、代码评估器、用户反馈收集、人工标注及自定义评估流程",
+  "数据集：构建测试集与基准，用于持续改进、上线前测试和结构化实验，可集成 LangChain、LlamaIndex",
+  "LLM Playground：测试和迭代 prompt 与模型配置，可从 tracing 结果直接跳转调试",
+  "完整 API：提供 OpenAPI 规范、Postman collection 以及 Python、JS/TS 类型化 SDK"
+ ],
+ "intro": "Langfuse 是一个开源的 LLM 工程平台，帮助团队协作开发、监控、评估和调试 AI 应用。它支持自托管，官方称可在几分钟内完成部署，底层使用 ClickHouse 开源数据库。\n\n平台围绕 LLM 应用的全生命周期提供能力：通过 tracing 追踪 LLM 调用以及检索、embedding、agent 动作等逻辑，集中管理并版本化 prompt，支持 LLM-as-a-judge、代码评估器、用户反馈和人工标注等多种评估方式，并提供数据集用于测试与基准评测。此外还有 LLM Playground 用于快速迭代 prompt 和模型配置，以及覆盖 Python、JS/TS 的 API 与 SDK。\n\n部署方式包括官方托管的 Langfuse Cloud，以及基于 Docker Compose、Kubernetes（Helm）和 Terraform 模板的自托管方案。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone --depth=1 https://github.com/langfuse/langfuse.git",
+  "进入目录：cd langfuse",
+  "使用 Docker Compose 启动：docker compose up",
+  "也可选择 Langfuse Cloud 托管版本，或参考文档使用 VM、Kubernetes（Helm）等方式部署"
+ ],
+ "summary": "Langfuse 是一个开源的 LLM 工程平台，用来解决 AI 应用开发中难以追踪、评估和迭代的问题。它把 tracing、prompt 管理、评估、数据集和 Playground 放在同一个平台里，可以记录 LLM 调用以及检索、embedding、agent 动作等环节，方便排查问题和对比效果。既提供托管云服务，也支持用 Docker Compose 或 Kubernetes 自托管，适合需要持续开发和调试 LLM 应用的团队。",
+ "tagline": "开源 LLM 工程平台：追踪、评估与调试 AI 应用"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建和部署 AI agent 的开发者、团队，以及希望通过低代码方式搭建自动化工作流的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "可视化、对话式或代码方式构建 AI agent 与工作流",
+  "连接 270+ 集成（5,400+ 动作、520+ 触发器）和主流 LLM",
+  "内置 Tables、Files、Knowledge 模块，为 agent 提供数据和记忆",
+  "监控运行、日志、调度和工作流活动",
+  "支持云端托管、自托管（Docker Compose）和 macOS 桌面端",
+  "支持通过 Ollama 和 vLLM 使用本地模型"
+ ],
+ "intro": "Sim 是一个用于构建、部署和管理 AI agent 与工作流的协作工作区。它提供可视化画布，让用户通过拖拽方式搭建 agent 流程，同时也支持对话式或代码方式创建。项目内置 Tables、Files、Knowledge 等模块，用于存放结构化数据、文件和知识库，供 agent 查询和检索。\n\nSim 支持连接 270 多个集成（5,400 多个动作、520 多个触发器）以及主流 LLM，可以接入 Slack、Notion、HubSpot、Salesforce 和数据库等外部服务。用户能够监控运行记录、日志、调度和工作流活动。项目提供云端托管、自托管（Docker Compose）和 macOS 桌面端三种使用方式，并支持通过 Ollama 和 vLLM 使用本地模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "云端使用：直接访问 sim.ai",
+  "自托管：运行 npx sim-setup，按向导完成部署后打开 http://localhost:3000",
+  "在克隆的仓库中运行 bun run sim-setup 可启用源码本地开发和 Kubernetes 模式",
+  "使用 npx sim-setup start | stop | restart 管理安装，npx sim-setup status 查看状态",
+  "使用本地模型：在克隆仓库中运行 docker compose -f docker-compose.ollama.yml --profile setup up -d"
+ ],
+ "summary": "Sim 是一个协作工作区，用来构建、部署和监控 AI agent 与工作流。它把可视化编排、聊天、数据表、文件和知识库放在同一个空间里，并支持接入大量第三方服务和主流大模型。适合想快速搭建 agent 自动化流程的开发者与团队，也提供自托管和 macOS 桌面端选项。",
+ "tagline": "构建、部署和监控 AI agent 与工作流的协作工作区"
+}

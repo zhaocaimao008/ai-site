@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想系统学习生成式 AI 的开发者、准备 AI 相关岗位面试的求职者，以及希望了解该领域研究进展和课程资源的从业者。",
+ "date": "2026-10-17",
+ "features": [
+  "按「使用 AI / 构建 AI / 理解 AI / 面试准备」等目标划分学习路径，每条路径分 101、201、301 三个层级",
+  "按 LLM 基础、RAG、微调、Agent、评估、多模态、LLMOps、安全等主题聚合内容",
+  "提供多门免费课程，包括 AI Evals for Everyone、Agentic AI Crash Course、Generative AI Genius 等",
+  "按 AI Engineer、AI Product Manager、Forward-Deployed Engineer、AI Strategist 等角色组织的面试题库与准备计划",
+  "包含 GenAI 面试常见问题与 AI 系统设计案例研究",
+  "整理月度最佳 GenAI 论文、研究更新和 LLM 术语表等资源"
+ ],
+ "intro": "这是一个围绕生成式 AI 的综合性资源仓库，把研究动态、课程、面试材料、Jupyter notebook 等内容集中整理在一起。仓库按「你想做什么」重新组织入口，分为在工作中使用 AI、构建 AI 系统、理解 AI 研究、准备面试、浏览课程目录、观看视频等几条路径。\n\n每条路径又按 101 入门、201 实践、301 进阶三个层级划分，方便读者按自己的水平和目标选择内容。主题维度上覆盖 LLM 基础、提示与上下文、检索与 RAG、微调、AI Agent、评估与可观测性、多模态、生产与 LLMOps、安全与防护等方向。\n\n仓库还包含作者与 LevelUp Labs 团队制作的免费课程，例如 AI Evals for Everyone、Agentic AI Crash Course、Generative AI Genius 等，以及按角色划分的面试准备资料和系统设计案例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开仓库首页，在「What do you want to do?」中选择与自己目标相符的入口，如 Use AI、Build AI、Understand AI 或 Interview Prep",
+  "在 Journey and level grid 表格中，按自己的身份选行、按想达到的深度选列，点击进入对应内容",
+  "如果已明确主题，可直接从 Browse by Topic 进入 LLM Foundations、RAG、Agents、Evaluation 等主题页",
+  "准备面试的读者先阅读 interview_prep/60_gen_ai_questions.md，再进入对应角色的文件夹"
+ ],
+ "summary": "这个仓库把生成式 AI 的学习材料、研究动态、课程和面试资料集中在一起，并按「你想做什么」重新组织：想在工作中用 AI、想动手构建系统、想读懂研究，或正在准备面试，都能找到对应入口。每条路径再按入门、实践、进阶分层，主题上覆盖 LLM 基础、RAG、Agent、评估、微调、多模态与 LLMOps 等方向，适合希望系统入门或按需查阅的开发者与求职者。",
+ "tagline": "生成式 AI 学习、研究与面试准备的一站式资源库"
+}

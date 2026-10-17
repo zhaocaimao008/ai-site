@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在终端中工作的开发者，尤其是需要 agent 参与重构、调试原生或脚本语言程序、并希望复用 IDE 级语言服务能力的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "LSP 深度集成：写入前通过 workspace/willRenameFiles 同步更新重命名相关的导入与导出",
+  "内置 DAP 调试：可附加 lldb、dlv、debugpy 等调试器，断点、单步、查看栈帧与变量",
+  "代码执行与工具回调：持久化 Python 和 Bun worker，内核可回调 agent 的 read、search、task 工具",
+  "多模型支持：覆盖 60 多个 provider，并针对不同模型调整提示词与编辑格式",
+  "时间旅行流规则：正则命中时中断流、注入规则并从同一点重试，注入内容可跨压缩保留",
+  "自带 shell 补全：为 bash、zsh、fish 生成补全脚本，模型名与 --resume 会话均可补全"
+ ],
+ "intro": "oh-my-pi（omp）是一个运行在终端里的编码智能体，由 Stencil Labs 开发，基于 Mario Zechner 的 Pi 项目分支而来。它把 IDE 才具备的能力直接接进 agent：LSP 参与每一次写入，重命名会走 workspace/willRenameFiles，让 re-export、barrel 文件和别名导入在文件移动前同步更新；同时内置 DAP，可以驱动 lldb、dlv、debugpy 等真实调试器，让 agent 直接附加进程、断点、查看调用栈和变量。\n\n项目支持 60 多个模型提供商，内置 31 个工具、14 个 LSP 操作和 28 个 DAP 操作，核心用 Rust 编写，运行时基于 Bun。它还提供持久化的 Python 与 Bun 执行环境，两个内核都能通过回环桥回调 agent 自身的 read、search、task 等工具。安装方式覆盖 macOS、Linux、Windows，也支持 Homebrew、Bun、Nix 和 mise。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS / Linux 一键安装：curl -fsSL https://omp.sh/install | sh",
+  "使用 Bun 全局安装：bun install -g @oh-my-pi/pi-coding-agent",
+  "Homebrew 安装：brew install can1357/tap/omp",
+  "Windows PowerShell 安装：irm https://omp.sh/install.ps1 | iex",
+  "配置 zsh 补全：eval \"$(omp completions zsh)\""
+ ],
+ "summary": "oh-my-pi 是一个终端里的编码智能体，重点在于把 IDE 的能力接进 agent：LSP 会参与每次写入，重命名时同步更新导入导出；DAP 让它能驱动 lldb、dlv、debugpy 等真实调试器。它还提供持久化的 Python 与 Bun 执行环境，内核可回调 agent 自身的工具，并支持 60 多个模型提供商。适合在终端工作、需要 agent 参与重构与调试的开发者。",
+ "tagline": "把 IDE 能力接入终端的编码智能体"
+}

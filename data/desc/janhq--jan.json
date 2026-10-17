@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地离线运行大模型、注重隐私和完全控制的开发者与普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "本地运行 LLM：从 HuggingFace 下载并运行 Llama、Gemma、Qwen、GPT-oss 等模型",
+  "云端集成：连接 OpenAI、Anthropic、Mistral、Groq、MiniMax 等服务",
+  "自定义助手：为特定任务创建专用 AI 助手",
+  "OpenAI 兼容 API：在 localhost:1337 提供本地服务器供其他应用调用",
+  "Model Context Protocol：集成 MCP 以支持智能体能力",
+  "隐私优先：所有内容可在本地运行，数据不出设备"
+ ],
+ "intro": "Jan 是一个开源的 ChatGPT 替代品，可以在电脑上 100% 离线运行大语言模型。它基于 Tauri 构建，使用 Rust 开发，支持从 HuggingFace 下载并运行 Llama、Gemma、Qwen、GPT-oss 等本地模型，也可以连接 OpenAI、Anthropic、Mistral、Groq、MiniMax 等云端服务。\n\n除了聊天，Jan 还支持创建自定义助手、提供兼容 OpenAI 的本地 API（localhost:1337），以及通过 Model Context Protocol 接入智能体能力。项目强调隐私和完全控制，所有数据都可以留在本地。\n\nJan 提供 Windows、macOS 和 Linux 的安装包，也可以从源码构建。源码构建需要 Node.js、Yarn、Make 和 Rust 等工具，并可通过 make dev 一键启动开发环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 jan.ai 或 GitHub Releases 下载对应系统的安装包（Windows、macOS、Linux）",
+  "安装并启动 Jan 应用",
+  "从 HuggingFace 下载本地模型，或配置 OpenAI、Anthropic 等云端 API",
+  "开始聊天或创建自定义助手",
+  "如需从源码构建：克隆仓库后运行 make dev（需 Node.js ≥ 20、Yarn ≥ 4.5.3、Make ≥ 3.81、Rust）"
+ ],
+ "summary": "Jan 是一个开源的 ChatGPT 替代品，主打在本地电脑上离线运行大语言模型。它支持从 HuggingFace 下载 Llama、Gemma、Qwen 等模型，也能接入 OpenAI、Anthropic 等云端服务，并提供自定义助手、兼容 OpenAI 的本地 API 和 MCP 集成。适合注重隐私、希望完全掌控模型运行环境的开发者和普通用户。",
+ "tagline": "本地运行的 ChatGPT 开源替代品"
+}

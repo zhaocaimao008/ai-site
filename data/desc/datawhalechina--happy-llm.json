@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合具备一定 Python 和深度学习基础的大学生、研究人员及 LLM 爱好者，尤其是希望系统理解大模型原理并动手实践训练的读者。",
+ "date": "2026-10-17",
+ "features": [
+  "系统讲解 NLP 基础、Transformer 架构与预训练语言模型",
+  "基于 PyTorch 动手实现 LLaMA2 模型并训练 Tokenizer",
+  "覆盖预训练、有监督微调、LoRA/QLoRA 高效微调全流程",
+  "介绍模型评测、RAG 检索增强与 Agent 智能体应用",
+  "包含 GRPO、OPD、Search-R1、ReTool 等 Agentic RL 内容",
+  "提供在线阅读、PDF、PPT 及 215M 模型权重下载"
+ ],
+ "intro": "Happy-LLM 是 Datawhale 推出的开源 LLM 学习教程，面向希望深入理解大语言模型原理与训练过程的读者。项目从 NLP 基础概念讲起，逐层深入到 Transformer 架构、预训练语言模型和大语言模型的特点与训练策略，并配有代码实现。\n\n教程分为基础知识与实战应用两部分。第 1 至 4 章介绍 NLP 基础、Transformer 架构、PLM 三种架构以及 LLM 的定义与训练过程；第 5 至 8 章带领读者基于 PyTorch 动手搭建 LLaMA2 模型、训练 Tokenizer、完成预训练与有监督微调，并进一步介绍 Transformers 框架、模型评测、RAG、Agent 以及 GRPO、Search-R1 等 Agentic RL 实践。\n\n项目提供在线阅读地址、PDF 版本、配套 PPT 以及第 5 章训练出的 215M 模型权重下载，仓库按章节拆分依赖，建议不同章节使用独立 Python 环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读《学习与环境准备》文档，了解分章依赖与硬件建议",
+  "按章节创建独立的 Python 环境，避免版本冲突",
+  "从第 1 章开始阅读基础知识，或按兴趣选择章节",
+  "复现第 5 章代码，基于 PyTorch 搭建 LLaMA2 并训练 Tokenizer",
+  "参考第 6 章实践说明，使用 Transformers 框架完成预训练与微调"
+ ],
+ "summary": "Happy-LLM 是一套面向中文读者的开源大语言模型教程，目标是帮助读者从原理到实践完整理解 LLM。内容从 NLP 基础讲起，逐步深入到 Transformer 架构、预训练语言模型和大模型训练流程，并带领读者用 PyTorch 亲手搭建 LLaMA2、训练 Tokenizer、完成预训练与微调，最后延伸到 RAG、Agent 和 Agentic RL 等应用方向。适合有 Python 和深度学习基础、想系统入门大模型训练与应用的开发者学习。",
+ "tagline": "从零开始构建大模型的系统性中文教程"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "需要构建长时间运行、有状态智能体的 Python 开发者，以及希望在生产环境中部署和管理复杂智能体系统的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "持久化执行：智能体在失败后可自动从断点恢复，支持长时间运行",
+  "Human-in-the-loop：可在执行过程中检查并修改智能体状态",
+  "完整记忆：同时支持短期工作记忆和跨会话的长期持久记忆",
+  "借助 LangSmith 调试：可视化追踪执行路径、状态转换和运行时指标",
+  "生产级部署：为有状态、长时间运行的工作流提供可扩展的部署基础设施"
+ ],
+ "intro": "LangGraph 是 LangChain 团队开发的低层编排框架，用于构建、管理和部署长时间运行、有状态的智能体。它提供持久化执行能力，让智能体在失败后能从断点自动恢复；支持 human-in-the-loop，可在执行过程中检查并修改智能体状态；同时提供短期工作记忆与跨会话的长期记忆。\n\nLangGraph 可以独立使用，也能与 LangChain 生态中的其他产品配合，例如用 LangSmith 做调试与可观测性，用 LangSmith Deployment 部署和扩展智能体。它受 Pregel 和 Apache Beam 启发，公开接口参考了 NetworkX。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 LangGraph：pip install -U langgraph",
+  "阅读官方文档 docs.langchain.com 了解概念与指南",
+  "参考 LangGraph Quickstart 开始构建第一个智能体"
+ ],
+ "summary": "LangGraph 是一个用于构建有状态智能体的低层编排框架，重点解决智能体长时间运行、失败恢复和状态管理的问题。它提供持久化执行、human-in-the-loop、短期与长期记忆等能力，并可与 LangSmith 配合进行调试和部署。适合需要构建复杂、可恢复智能体工作流的 Python 开发者，也适合希望在生产环境中管理有状态智能体系统的团队。",
+ "tagline": "构建有状态智能体的底层编排框架"
+}

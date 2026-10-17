@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想在本地或自有硬件上评估 LLM 推理服务速度的开发者，以及需要复现 agent 场景性能数据的工程师。",
+ "date": "2026-10-17",
+ "features": [
+  "回放录制的 agent 对话，测量本地模型服务器的吞吐与延迟",
+  "支持测试已有 OpenAI 兼容服务器，或用 managed-run 自动下载并启动固定版本模型",
+  "内置 agentperf-default-v1 与 aa-mini-v1 两套回放，前者结果可比较",
+  "提供 TUI 交互界面，也可用命令行参数直接运行",
+  "可选 --tool-mode live，在 Docker 容器中执行录制的 shell 命令以模拟真实工具耗时",
+  "检查服务器是否支持 ignore_eos，不支持时切换为 recorded 策略并提示"
+ ],
+ "intro": "agentperf-local 是 Artificial Analysis 开源的本地基准测试工具，用来衡量一台机器服务 AI agent 的速度。它把录制好的 agent 对话回放到一个兼容 OpenAI API 的模型服务器上，报告吞吐量和延迟。每个请求都携带到目前为止的完整对话，和真实 agent 的行为一致。它只测速度，不测输出质量。\n\n工具既可以测试你已经跑起来的服务器（如 llama.cpp、LM Studio、vLLM、SGLang、Ollama），也可以按内置 recipe 下载固定版本的模型、启动服务器并完成测试。默认回放 agentperf-default-v1 包含 8 个录制任务、168 个模型轮次，需要 65,536 token 上下文；aa-mini-v1 是六轮合成回放，仅用于快速检查安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv，然后执行 uv tool install agentperf-local 安装工具",
+  "运行 agentperf-local 启动 TUI，按提示选择模型、配置并开始测试",
+  "或直接运行 managed-run：uv run agentperf-local managed-run --profile-id qwen38-27b-q4-k-m --framework llama-cpp --output-dir results/qwen38-27b",
+  "测试已有服务器：uv run agentperf-local run --base-url http://127.0.0.1:8080/v1 --model served-model --output-dir results/my-server",
+  "设备显存不足时，用 --replay aa-mini-v1 --context-tokens 8192 做快速检查"
+ ],
+ "summary": "agentperf-local 用来测量一台机器服务 AI agent 的速度。它把录制好的 agent 对话逐轮回放到兼容 OpenAI API 的模型服务器上，每个请求都带上完整上下文，只统计吞吐和延迟，不评价输出质量。既可以测试你已经跑起来的 llama.cpp、vLLM、SGLang 等服务，也能按内置 recipe 下载固定版本模型并自动启动服务器。适合想在本地硬件上对比推理性能、或复现 agent 场景速度数据的开发者。",
+ "tagline": "回放真实 agent 轨迹，测试本地 LLM 服务速度"
+}

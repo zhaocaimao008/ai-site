@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望为 AI agent 提供桌面操作能力的开发者，以及需要评估 computer-use agent 的研究人员。",
+ "date": "2026-10-17",
+ "features": [
+  "Cua Spaces：在 Mac 或自有机器上为 agent 提供完整桌面，支持 macOS VM 和 Linux 镜像",
+  "Cua Driver：通过 CLI、MCP 或类型化 SDK 在 macOS、Windows、Linux 上检查和操作原生桌面应用与浏览器",
+  "Lume：基于 Apple Virtualization.Framework 在 Apple Silicon 上创建和管理本地 macOS 与 Linux 虚拟机",
+  "Cua SDK 和 CLI：提供统一的 SDK 和 cua 命令行工具",
+  "CUA-S1：用于 computer-use 决策的小型专用模型",
+  "Cua Bench：用于创建任务、评估 agent 并导出轨迹的基准测试工具"
+ ],
+ "intro": "Cua 是一套面向 computer-use agent 的开源工具集，目标是让 AI agent 能够像人一样使用完整的桌面环境。仓库包含多个组件：Cua Spaces 在 Mac 或自有机器上为 agent 提供完整桌面；Cua Driver 用于在 macOS、Windows、Linux 上检查和操作原生应用与浏览器；Lume 基于 Apple Virtualization.Framework 在 Apple Silicon 上创建本地 macOS 和 Linux 虚拟机；此外还有 CUA-S1 决策模型和用于评估 computer-use agent 的 Cua Bench。\n\n用户可以使用自己的 agent 和模型，也可以使用 CUA-S1 处理专门决策。Cua 提供计算机和自动化工具，支持 agent 在同一任务中在代码、API 和图形界面之间切换。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Cua Spaces（macOS 26 或更高版本）：curl -fsSL https://cua.ai/install.sh | sh",
+  "安装 Cua Driver（macOS / Linux）：/bin/bash -c \"$(curl -fsSL https://cua.ai/driver/install.sh)\"",
+  "安装 Cua Driver（Windows PowerShell）：irm https://cua.ai/driver/install.ps1 | iex",
+  "安装 Lume：/bin/bash -c \"$(curl -fsSL https://cua.ai/lume/install.sh)\"",
+  "参考各组件 quickstart 文档完成首次使用"
+ ],
+ "summary": "Cua 是一个面向 computer-use agent 的开源工具集，解决的是让 AI agent 能够操作完整桌面环境的问题。它提供 Cua Spaces 在 Mac 或自有机器上创建桌面，Cua Driver 用于操作原生应用和浏览器，Lume 用于在 Apple Silicon 上运行本地虚拟机，并附带 CUA-S1 决策模型和 Cua Bench 评估工具。适合需要为 agent 提供桌面操作能力或评估 computer-use agent 的开发者。",
+ "tagline": "为 AI agent 提供可操作的计算机环境与工具"
+}

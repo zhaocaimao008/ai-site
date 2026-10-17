@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在终端中使用编码智能体、并且需要自由选择托管或本地模型的开发者，也适合需要在脚本或 CI 中运行 headless 任务的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 40 多条内置 provider 路由，以及 OpenAI 兼容端点和 Ollama、vLLM、SGLang 本地模型",
+  "Plan、Work、Operate 三种模式，配合 Ask、Auto-Review、Full Access 审批姿态控制权限",
+  "/undo、/restore 恢复工作区改动，/receipts 列出会话中的文件、命令和审批记录",
+  "支持 /goal 长期任务、sub-agents、agent teams 和可签入的 workflows",
+  "可接入 MCP 服务器、skills、plugins 和 hooks，并兼容 Claude Code 插件",
+  "提供终端 TUI、headless exec、本地 web 客户端、PR 审查和本地 HTTP API 多种运行方式"
+ ],
+ "intro": "Codewhale 是一个用 Rust 编写的开源编码智能体引擎，附带终端客户端。它能在你的终端里读取项目、编辑文件、执行命令并检查自己的工作，模型可以选用托管服务或本地运行时。\n\n所有客户端都驱动同一个本地 Codewhale Engine，因此会话、工具和权限在各处表现一致。除了交互式终端界面，还提供 headless 执行、本地浏览器客户端、PR 审查和本地 HTTP API 等运行方式。\n\n项目内置 40 多条 provider 路由，也支持任何 OpenAI 兼容端点和 Ollama、vLLM、SGLang 等本地模型。通过模式与审批姿态控制智能体的行为，并提供 /undo、/restore 和 /receipts 等机制追踪会话中的文件、命令与审批。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS 和 Linux 安装：curl -fsSL https://codewhale.net/install.sh | sh",
+  "在项目目录中运行 codewhale 打开交互式终端界面",
+  "运行 /provider（或按 F3）添加托管 key 或选择本地运行时，用 /model 切换模型",
+  "输入具体任务，例如：Fix the failing tests and explain what changed.",
+  "在脚本或 CI 中 headless 运行：codewhale exec --auto \"fix the failing tests and explain what changed\""
+ ],
+ "summary": "Codewhale 是一个用 Rust 编写的开源编码智能体，运行在终端里，可以读取项目、编辑文件、执行命令并检查结果。它不绑定单一模型，既支持多家托管 provider，也能接入 OpenAI 兼容端点和 Ollama、vLLM、SGLang 等本地运行时。项目通过模式与审批姿态控制智能体的行为，并提供撤销、恢复和会话记录等机制，方便开发者按自己的节奏使用。",
+ "tagline": "开源 Rust 编码智能体引擎与终端客户端，支持任意模型"
+}

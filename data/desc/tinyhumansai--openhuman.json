@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要低成本运行大量 AI agent 的开发者，以及希望本地使用个人 AI 助手的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持在单台 $10 VPS 上运行超过 500 个 agent",
+  "基于 Recursive Language Models 的 RLM token 压缩，减少模型读取的文本量",
+  "Jev 工具搜索模型，可从 1,215 个工具中快速定位正确工具",
+  "提供桌面应用（macOS/Windows/Linux）和 Rust 库两种使用方式",
+  "冷启动约 0.1 秒，内存和 CPU 占用约为常见 agent 工具的 1/8"
+ ],
+ "intro": "OpenHuman 是一个开源的 agent harness，目标是让大量 AI agent 在低配硬件上高效运行。它同时提供面向普通用户的桌面应用和面向开发者的 Rust 库，支持在单台廉价服务器上运行超过 500 个 agent。\n\n项目针对传统 agent 框架逐个进程运行、重复发送大段提示词的问题，从 token 压缩、工具检索、功能加载和资源占用几个方面做了优化。README 中给出了与 Hermes 的对比示例：相同提示词和模型下，OpenHuman 完成时间约 20 秒、消耗 15k tokens，而 Hermes 耗时约 9 分 40 秒、消耗 37k tokens。\n\n目前项目处于早期 beta 阶段，提供 macOS、Windows 和 Linux 桌面安装包，也支持通过安装脚本快速部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 tinyhumans.ai/openhuman 或 GitHub Releases 下载对应系统的桌面安装包（.dmg/.msi/.exe/.deb/.AppImage）",
+  "macOS 和 Linux 也可运行安装脚本：curl -fsSL https://raw.githubusercontent.com/tinyhumansai/openhuman/main/scripts/install.sh | bash",
+  "Windows PowerShell 可运行：irm https://raw.githubusercontent.com/tinyhumansai/openhuman/main/scripts/install.ps1 | iex",
+  "开发者可参考 Rust quickstart 文档，将 OpenHuman 作为库嵌入自己的项目"
+ ],
+ "summary": "OpenHuman 是一个开源的 AI agent 运行框架，主要解决传统 agent 框架在运行大量 agent 时资源消耗高、速度慢、成本高的问题。它通过 token 压缩、工具检索优化和轻量加载等方式，让超过 500 个 agent 可以跑在一台廉价服务器上。项目同时提供桌面应用和 Rust 库，适合需要低成本批量运行 agent 的开发者，也适合想本地使用个人 AI 助手的普通用户。",
+ "tagline": "高效开源的 AI agent 运行框架，桌面应用与 Rust 库双形态。"
+}

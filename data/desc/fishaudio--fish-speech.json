@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要自建 TTS 能力的开发者、研究语音合成的研究人员，以及希望部署语音克隆与多角色配音应用的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "多说话人语音合成，可在同一段文本中用 speaker ID 区分角色",
+  "语音克隆：10–30 秒参考音频即可复现音色",
+  "自然语言标签控制情感与韵律，如 [whisper]、[angry]、[laughing]",
+  "Drama 3 支持多轮导演式修改与局部编辑、补全",
+  "支持长文本流式生成，S2-Pro 在单张 H200 上 RTF 0.195",
+  "提供命令行、API 服务器与 WebUI 多种使用方式"
+ ],
+ "intro": "Fish Speech 是 Fish Audio 开源的文本转语音（TTS）项目，提供 Drama 3 与 S2-Pro 两代模型。Drama 3 为 35B-A3B 规模的新一代旗舰，面向多角色场景与长内容生成，支持多轮导演式修改、局部编辑与补全、流式长文本合成；S2-Pro 为 4B 参数的前代旗舰，推理速度更快，可在消费级 GPU 上部署。\n\n两个模型共享同一套命令行与 API 服务，支持多说话人生成、语音克隆和自然语言标签控制（如 [whisper]、[angry]、[laughing]），覆盖约一百种语言。项目提供安装、推理、API 服务与 WebUI 的官方文档，并推荐关注效率的用户使用 SGLang-Omni 或 vLLM Omni 进行部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读官方安装文档完成环境配置与权重下载：https://speech.fish.audio/install/",
+  "参考推理文档使用命令行、API 服务器或 WebUI：https://speech.fish.audio/inference/",
+  "关注效率可选用 SGLang-Omni 或 vLLM Omni 部署",
+  "从 HuggingFace 获取模型权重：Drama 3 或 S2-Pro"
+ ],
+ "summary": "Fish Speech 是 Fish Audio 开源的一套文本转语音系统，包含 Drama 3 与 S2-Pro 两代模型。它面向需要自建语音合成能力的场景，支持多说话人、语音克隆和用自然语言标签控制情感与韵律，Drama 3 还加入了多轮修改与音频局部编辑。项目提供命令行、API 服务和 WebUI，并给出安装与推理文档，适合开发者部署语音克隆、多角色配音等应用。",
+ "tagline": "开源 TTS 模型，支持语音克隆与多说话人合成"
+}

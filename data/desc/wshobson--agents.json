@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex CLI、Cursor 等 AI 编程工具的开发者，希望复用现成的 agents、skills 和命令来提升开发、测试与安全审查效率。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 Claude Code、Codex CLI、Cursor、OpenCode、Antigravity CLI、GitHub Copilot、Pi 等多种 AI 编程工具",
+  "包含 94 个插件、202 个 agents、185 个 skills 和 105 个 commands",
+  "覆盖 Python、JavaScript/TypeScript 开发、代码审查、测试、安全扫描等场景",
+  "提供仅安装单个 skill 的方式，支持 gh skill 和 npx skills 命令",
+  "通过 make 命令为 OpenCode、Antigravity、Copilot、Pi 生成适配产物",
+  "提供 plugin-eval 等静态检查工具，用于验证插件结构和生成产物"
+ ],
+ "intro": "这个项目提供一套统一的插件、代理（agents）、技能（skills）和命令（commands），可以跨 Claude Code、OpenAI Codex CLI、Cursor、OpenCode、Antigravity CLI、GitHub Copilot 和 Pi 等多种 AI 编程工具使用。仓库中收录了 94 个插件（含 92 个本地插件和 2 个外部条目），本地源码包含 202 个 agents、185 个 skills 和 105 个 commands，覆盖 Python 与 JavaScript 开发、代码审查、测试、基础设施、安全等方向。\n\n所有组件共用一份 Markdown 源文件，安装方式和能力会根据不同工具（harness）做适配。插件按主题分组，例如 python-development、javascript-typescript、developer-essentials、security-scanning 等，用户可以根据自己使用的编程工具选择对应的安装路径。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中注册 marketplace：/plugin marketplace add wshobson/agents",
+  "安装 Python 开发插件：/plugin install python-development@claude-code-workflows",
+  "使用插件命令创建项目：/python-development:python-scaffold Create a FastAPI service with tests",
+  "Codex CLI 用户可运行：codex plugin marketplace add wshobson/agents 和 codex plugin add python-development@claude-code-workflows",
+  "仅安装单个 skill：gh skill install wshobson/agents python-testing-patterns 或 npx skills add wshobson/agents --skill python-testing-patterns"
+ ],
+ "summary": "这个项目把插件、agents、skills 和 commands 打包成一套可跨工具复用的集合，解决不同 AI 编程工具之间配置和组件不互通的问题。它面向使用 Claude Code、Codex CLI、Cursor、OpenCode、Copilot 等工具的开发者，提供 Python、JavaScript 开发、代码审查、测试和安全扫描等方向的现成组件，用户可按所用工具选择安装方式，或只安装单个 skill。",
+ "tagline": "跨多种 AI 编程工具共享的插件、代理与技能集合"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要从大量非结构化文本中抽取结构化信息的开发者与数据人员，例如处理临床记录、报告等文档的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "精确源定位：每个抽取结果映射到原文的字符区间，支持高亮核验",
+  "基于 few-shot 示例约束一致的输出结构，支持 Gemini 的受控生成",
+  "面向长文档优化：文本分块、并行处理与多次遍历提升召回",
+  "生成自包含的交互式 HTML 文件，可视化查看抽取实体",
+  "支持 Gemini 云端模型与 Ollama 本地模型，无需微调即可适配新领域"
+ ],
+ "intro": "LangExtract 是 Google 开源的 Python 库，用 LLM 按用户自定义的指令从非结构化文本中抽取结构化信息。它适合处理临床记录、报告等材料，在提取关键细节的同时，保证抽取结果能对应回源文本。\n\n它的核心特点是精确的源定位：每个抽取结果都会映射到原文中的具体位置，便于高亮查看和人工核验。输出结构由 few-shot 示例约束，在 Gemini 等模型上可借助受控生成保证稳定的 schema。针对长文档，它采用文本分块、并行处理和多次遍历的策略来提升召回。\n\n此外，它支持 Google Gemini 系列云端模型，也能通过内置的 Ollama 接口调用本地开源模型，并可生成自包含的交互式 HTML 文件来可视化抽取结果。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install langextract",
+  "准备 API key 并配置云端模型（如 Gemini）",
+  "定义 prompt 和 few-shot 示例（lx.data.ExampleData 与 lx.data.Extraction）",
+  "调用 lx.extract(text_or_documents=..., prompt_description=..., examples=..., model_id=\"gemini-3.5-flash\") 执行抽取"
+ ],
+ "summary": "LangExtract 是一个 Python 库，用 LLM 按自定义指令从非结构化文本中抽取结构化信息，并让每条结果都能对应回原文位置。它适合处理临床记录、报告等长文档，通过分块、并行和多次遍历提升召回，输出结构由 few-shot 示例约束。支持 Gemini 云端模型和 Ollama 本地模型，还能生成交互式 HTML 查看抽取结果。",
+ "tagline": "用 LLM 从非结构化文本中提取结构化信息并定位原文"
+}

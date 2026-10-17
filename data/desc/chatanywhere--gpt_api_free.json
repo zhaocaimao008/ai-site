@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在国内网络环境下调用大模型 API 的个人开发者、学生和研究者，以及希望低成本接入多家模型进行测试或非商业项目的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "免费 API Key 支持 deepseek、gpt-3.5-turbo、embedding、gpt-4o 系列、gpt-5 系列等模型",
+  "接口标准与 OpenAI 官方一致，兼容各种软件和插件，多厂商模型仅需更换模型名称",
+  "国内动态加速直连，无需科学上网，提供国内和国外两个转发 Host",
+  "付费版支持 gpt、deepseek、claude、gemini、grok、qwen、kimi、minimax、glm 等模型，无限速",
+  "付费版按官方返回的 Tokens 用量计费，余额不会过期",
+  "提供状态页 status.chatanywhere.tech 用于排查服务可用性问题"
+ ],
+ "intro": "GPT_API_free 是一个面向国内用户的大模型 API 转发服务，提供免费和付费两种 API Key。免费版支持 deepseek、gpt-3.5-turbo、embedding、gpt-4o 系列、gpt-5 系列等模型，注册并绑定 GitHub 后即可使用，免费额度每周刷新。\n\n接口与 OpenAI 官方标准保持一致，兼容各类软件和插件，其他厂商模型只需更换模型名称即可接入，Claude 模型还支持 Anthropic 官方协议。国内线路使用动态加速，无需科学上网即可直连，官方提供 api.chatanywhere.tech（国内）和 api.chatanywhere.org（国外）两个转发 Host。\n\n付费版提供更稳定、无限速的 API，价格低于官方，按官方返回的 Tokens 用量计费，余额永久有效，并支持 Codex、Claude Code 等接入。免费 Key 仅限个人非商业用途、教育和非营利科研，且有每日请求频率限制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 https://chatanywhere.tech/ 注册并绑定 GitHub 账号，获取免费 API Key",
+  "将 API 请求的 Host 改为 https://api.chatanywhere.tech（国内首选）或 https://api.chatanywhere.org（国外使用）",
+  "在代码或软件中填入获取到的 API Key，按 OpenAI 官方接口格式发起请求",
+  "如需更强推理能力或商用场景，可在官网购买付费 API Key"
+ ],
+ "summary": "这个项目提供统一的大模型 API 转发服务，让国内用户不用科学上网就能调用 GPT、DeepSeek、Claude、Gemini 等主流模型。免费 Key 注册绑定 GitHub 后即可使用，接口与 OpenAI 官方标准一致，兼容各类软件和插件，其他厂商模型只需更换模型名称。适合个人开发者、学生和非营利科研场景做测试与轻量使用，商用或大规模训练则需购买付费版。",
+ "tagline": "免费与低价调用 GPT、DeepSeek 等主流大模型的统一 API 中转服务"
+}

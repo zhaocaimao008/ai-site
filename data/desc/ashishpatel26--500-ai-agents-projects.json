@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合正在构建 AI Agent 的开发者、调研 Agent 生态的研究者、评估框架的团队以及学习 Agent 架构的学生。",
+ "date": "2026-10-17",
+ "features": [
+  "收录 500+ AI Agent 项目、教程与可运行代码",
+  "按 LangGraph、CrewAI、AutoGen、Agno、LlamaIndex 等框架分类浏览",
+  "按医疗、金融、教育、网络安全等行业整理用例并附代码链接",
+  "提供框架对比表与选型建议",
+  "agents/ 目录下示例自包含，可独立安装运行",
+  "包含 crewai_mcp_course/ 课程内容"
+ ],
+ "intro": "这是一个 AI Agent 项目与用例的精选合集，收录了 500 多个项目，覆盖 LangGraph、CrewAI、AutoGen、Agno、LlamaIndex 等主流框架，以及医疗、金融、教育、网络安全、零售等多个行业。\n\n仓库既提供按框架分类的用例，也提供按行业分类的用例表，每条用例附有对应开源项目的 GitHub 链接。README 中还包含框架对比表，说明各框架适合的场景、复杂度和是否支持多 Agent、流式输出与本地 LLM。\n\nagents/ 目录下的示例是自包含的，每个都有自己的 requirements.txt 和 .env.example，无需 monorepo 配置即可单独运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/ashishpatel26/500-AI-Agents-Projects.git",
+  "cd 500-AI-Agents-Projects",
+  "cd agents/01-web-research-agent",
+  "pip install -r requirements.txt",
+  "cp .env.example .env 并填入 API key",
+  "python agent.py"
+ ],
+ "summary": "这个仓库把分散在各处的 AI Agent 项目整理成一份可检索的清单，按框架和行业两条线索组织，方便开发者快速找到与自身场景相近的实现参考。它同时给出 LangGraph、CrewAI、AutoGen 等框架的对比，帮助在选型阶段做判断。仓库内的示例 Agent 各自独立，带有依赖文件和环境变量模板，可以单独拉出来运行，适合想动手实践或调研 Agent 落地方式的人。",
+ "tagline": "汇集 500+ AI Agent 项目与行业用例的精选合集"
+}

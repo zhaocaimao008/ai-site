@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合经常查阅技术书、内部文档或规范，并希望让 AI agent 直接基于原文回答的开发者与团队。",
+ "date": "2026-10-17",
+ "features": [
+  "把 PDF、EPUB、DOCX、MD、HTML、RTF、MOBI 等格式的文档转换为 agent skill",
+  "生成 SKILL.md、按章拆分的章节文件、glossary.md、patterns.md、cheatsheet.md",
+  "章节文件按需加载，未查询时不占用技能预算",
+  "支持文件、文件夹、glob 或文件列表作为输入",
+  "遵循开放的 Agent Skills 标准，多个 agent 宿主共用同一份技能",
+  "支持把新资料合并进已有技能"
+ ],
+ "intro": "book-to-skill 是一个把技术书籍、文档文件夹或一组资料转换成统一 agent skill 的工具。转换后生成的内容遵循开放的 Agent Skills 标准，GitHub Copilot CLI、Amp、Claude Code、Codex、Hermes Agent、OpenCode、OpenClaw 等支持该标准的宿主都能读取同一份 SKILL.md。\n\n它不只是做摘要，而是把书拆成结构化的技能：核心心智模型、章节索引、术语表、模式与速查表，并按章节拆成单独文件，由 agent 在需要时按需加载。这样回答问题时读取的是书中真实内容，而不是把整本书塞进上下文。README 称在真实书籍上测量，回答单个问题所用 token 比直接灌入全书少 24 到 51 倍。\n\n除了技术书，内部文档、品牌与设计规范、论文合集、RFC 与 API 规范等需要反复查阅的结构化文本也可以作为输入。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 /book-to-skill ./my-book.pdf，指向文件、文件夹或 glob",
+  "工具将书提炼为技能，生成核心模型、决策规则、反模式与逐章文件",
+  "在 agent 中按需调用，例如输入 /my-book replication，agent 会读取对应章节并基于真实内容回答"
+ ],
+ "summary": "很多人买下技术书只读一遍，几个月后连某章讲过什么都想不起来；直接搜 PDF 只能得到页码列表，让 agent 凭空回答又容易编造。book-to-skill 把书籍或文档文件夹转换成结构化的 agent skill，按章节拆分并按需加载，让 agent 在需要时读取原文对应部分再作答。它适合需要反复查阅技术书、内部文档或规范，并希望在工作流中直接调用这些内容的开发者。",
+ "tagline": "把技术书 PDF 转换成 AI Agent 可按需加载的技能"
+}

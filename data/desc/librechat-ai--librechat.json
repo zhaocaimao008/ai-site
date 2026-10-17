@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要自托管 AI 聊天服务的开发者、团队或企业，以及希望在一个界面中使用多种 AI 模型的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持多种 AI 模型和提供商，可自由切换",
+  "Agents 与工具集成，支持 MCP、Skills、Subagents 等",
+  "代码解释器：在沙箱中运行 Python、Node.js、Go 等多种语言",
+  "Web 搜索：结合搜索、抓取和重排序增强上下文",
+  "生成式 UI 与代码工件：在聊天中创建 React、HTML、Mermaid 内容",
+  "图像生成与编辑：支持文生图和图生图"
+ ],
+ "intro": "LibreChat 是一个开源的 AI 聊天平台，可以看作是增强版的 ChatGPT 克隆。它支持多种 AI 模型和提供商，包括 Anthropic、AWS Bedrock、OpenAI、Azure OpenAI、Google、Vertex AI 以及任何兼容 OpenAI 的 API，还兼容 Ollama、groq、Mistral AI、DeepSeek、Qwen 等本地或远程服务。\n\n除了基础的对话功能，LibreChat 还集成了 Agents、MCP、代码解释器、Web 搜索、代码工件、图像生成与编辑等能力。它提供多用户安全认证、预设、消息搜索等功能，适合需要自托管 AI 聊天服务的团队或个人。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 https://librechat.ai 查看官方文档",
+  "使用 Railway、Zeabur 或 Sealos 等平台一键部署",
+  "或参考文档进行本地自托管部署"
+ ],
+ "summary": "LibreChat 是一个开源的自托管 AI 聊天平台，支持接入 OpenAI、Anthropic、Google、AWS 等多种模型服务，也兼容本地模型。它提供 Agents、代码解释器、Web 搜索、图像生成等功能，并具备多用户认证和权限管理。适合希望在自己的服务器上搭建统一 AI 对话入口的开发者与团队，方便集中管理模型访问和对话数据。",
+ "tagline": "开源可自托管的增强版 ChatGPT 替代方案"
+}

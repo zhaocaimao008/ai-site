@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速调用扩散模型做生成任务的开发者，也适合需要深入模型与调度器、自行搭建或训练扩散系统的研究人员。",
+ "date": "2026-10-17",
+ "features": [
+  "提供开箱即用的 diffusion pipelines，几行代码即可完成推理",
+  "可互换的 noise schedulers，用于调节扩散速度与输出质量",
+  "预训练 models 可作为积木，与调度器组合搭建自定义扩散系统",
+  "覆盖图像、视频、音频以及分子 3D 结构等多种生成任务",
+  "提供优化与训练文档，支持推理加速、显存优化和模型训练"
+ ],
+ "intro": "🤗 Diffusers 是 Hugging Face 维护的扩散模型库，用 PyTorch 实现，覆盖图像、视频、音频乃至分子 3D 结构的生成任务。它既可以作为开箱即用的推理方案，也可以作为训练和自定义扩散系统的模块化工具箱。\n\n库的设计围绕三个核心组件展开：可直接调用的 diffusion pipelines、可替换的 noise schedulers，以及可作为积木组合的预训练 models。官方强调可用性优先于性能、简单优先于易用、可定制优先于抽象，因此既适合几行代码跑通推理，也适合深入模型与调度器内部自行搭建流程。\n\n项目提供从 Quickstart、加载配置、模块化构建到性能优化与训练的完整文档，并欢迎社区贡献新模型与 pipeline。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 pip 安装：pip install --upgrade diffusers[torch]",
+  "从预训练模型加载 pipeline：DiffusionPipeline.from_pretrained(\"stable-diffusion-v1-5/stable-diffusion-v1-5\", dtype=torch.float16)",
+  "将 pipeline 移到 GPU：pipeline.to(\"cuda\")",
+  "输入文本提示生成图像：pipeline(\"An image of a squirrel in Picasso style\").images[0]"
+ ],
+ "summary": "Diffusers 是 Hugging Face 的 PyTorch 扩散模型库，把图像、视频、音频等生成任务所需的 pipeline、调度器和预训练模型整理成可组合的模块。它既能让开发者用几行代码跑通文生图等推理，也允许替换调度器、拆解模型来搭建自己的扩散流程，并配有优化与训练文档。适合想快速上手扩散模型应用，或需要深入定制、训练扩散系统的开发者。",
+ "tagline": "Hugging Face 出品的扩散模型工具箱，支持图像、视频与音频生成"
+}

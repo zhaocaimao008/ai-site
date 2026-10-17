@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合想系统学习或查阅 RAG 实现方式的开发者、研究人员与 AI 应用工程师。",
+ "date": "2026-10-17",
+ "features": [
+  "42+ 个可运行的 Jupyter Notebook 教程",
+  "覆盖从基础到前沿的 RAG 技术",
+  "每个技术点包含思路、代码与参考资料",
+  "涉及 embeddings、向量数据库、LangChain、LlamaIndex 等工具",
+  "社区驱动，接受 PR 贡献"
+ ],
+ "intro": "这是一个围绕检索增强生成（RAG）的教程型仓库，用 42 个以上可直接运行的 Jupyter Notebook 展示从基础到前沿的各类 RAG 技术。每个技术点都配有对应的 notebook，包含思路讲解、代码实现和参考资料，目标是帮助读者构建更准确、上下文更丰富的检索系统。\n\n内容以 Python 生态为主，涉及 embeddings、向量数据库、LangChain、LlamaIndex、OpenAI 等常见工具与概念，主题标签还包括 agentic-rag、语义搜索等方向。仓库由社区共同维护，欢迎提交 PR。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库用 42 个以上可运行的 Jupyter Notebook，逐个讲解检索增强生成中的各类技术，从基础做法到较新的思路都有覆盖。每个 notebook 同时给出思路说明、代码实现和参考资料，方便读者对照理解并直接运行验证。适合正在搭建或优化 RAG 系统的开发者，用来查找具体技术点的实现方式，也适合想系统了解 RAG 常见做法的学习者按需查阅。",
+ "tagline": "42+ 个可运行 notebook 讲解 RAG 进阶技术"
+}

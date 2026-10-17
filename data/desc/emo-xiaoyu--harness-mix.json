@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "需要在多个 Coding Harness 之间切换、接力任务，并希望统一在 Codex Desktop 界面中管理会话、Skills 与 MCP 的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "跨 Harness 任务接力，支持继续执行、执行计划、独立审查、重新分析四种模式",
+  "接入 18 个原生 Coding Harness，各 Harness 的原生子代理以卡片形式展示在 Codex 内容流中",
+  "历史会话导入与 # 引用，可中断续跑并注入脱敏上下文",
+  "多 Agent 协同编排，任意 Harness 可担任 Agent Team Lead，支持循环审查与级联取消",
+  "原生 Skills 与 MCP 扩展管理，覆盖 18 个 Harness 的技能目录",
+  "皮肤市场、用量中心、健康中心与失败分类恢复等辅助功能"
+ ],
+ "intro": "Harness Mix 是一个本地内核，把官方 Codex Desktop 的原生界面作为统一入口，接入多个原生 Coding Harness。默认情况下官方 Codex 会话仍由 Desktop 直连官方 app-server；当用户明确选择其他 Harness 或「Codex（协作）」时，由独立的 Harness Mix Host 接管对应任务。\n\n项目当前注册了 18 个 Harness，包括 Antigravity、Codex、Claude Code、Pi、Oh My Pi、DeepSeek Harness、OpenCode、Grok、OpenClaw、Hermes、Qoder、CodeBuddy、Kiro CLI、Cursor CLI、ZCode、Trae、Cline 和 Kimi Code。模型调用、工具执行、原生会话与凭据仍由各 Harness 自行管理，Host Runtime 与 Protocol Core 只负责托管任务的映射、协作和事件投影。\n\n除跨 Harness 接力外，还提供皮肤市场、历史会话导入与引用、多 Agent 协同编排、原生子代理面板、Skills 与 MCP 管理、用量中心、健康中心等功能。已加入 macOS/Linux 源码构建与启动适配，但完整桌面验收仍需在对应机器执行。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Harness Mix 解决的是同时使用多个 Coding Harness 时来回切换客户端、上下文割裂的问题。它把 Codex Desktop 的原生界面作为统一入口，接入 Claude Code、OpenCode、Cursor CLI 等 18 个原生 Harness，并支持任务在它们之间接力。模型、工具、凭据仍由各 Harness 自己管理，适合需要在多个编码智能体之间协作、审查或交接任务的开发者。",
+ "tagline": "用 Codex 原生界面统一接入并接力多个 Coding Harness"
+}

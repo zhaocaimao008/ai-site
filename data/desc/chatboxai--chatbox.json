@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在桌面或移动设备上统一使用多种大语言模型的开发者和普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 OpenAI、Azure OpenAI、Claude、Google Gemini Pro、Ollama、ChatGLM-6B 等多种模型服务商",
+  "本地数据存储，聊天记录保留在用户设备上",
+  "支持 Markdown、LaTeX 和代码高亮，流式回复",
+  "内置提示词库与消息引用功能",
+  "支持 Dall-E-3 图像生成",
+  "提供 Windows、Mac、Linux 桌面端及 Web、iOS、Android 客户端"
+ ],
+ "intro": "Chatbox 是一个桌面端 AI 客户端，支持 Windows、Mac、Linux，同时提供 Web 版和 iOS/Android 移动应用。它把 ChatGPT、Claude、Google Gemini Pro、Ollama 等多种大语言模型整合到一个界面中，用户可以在设置里配置自己的 AI 服务商后直接对话。\n\n项目强调本地数据存储，聊天记录保存在用户设备上。界面支持深色主题、键盘快捷键、流式回复，并能渲染 Markdown、LaTeX 和代码高亮。此外还提供提示词库、消息引用、Dall-E-3 图像生成以及团队共享 OpenAI API 资源等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 releases 页面下载对应平台的安装包",
+  "安装并启动 Chatbox",
+  "在设置中配置 AI 服务商（如 OpenAI、Claude 等）",
+  "开始对话"
+ ],
+ "summary": "Chatbox 是一个跨平台的 AI 客户端，把 ChatGPT、Claude、Gemini、Ollama 等多种大语言模型集中到一个桌面应用中，也提供 Web 和移动端版本。它适合希望用统一界面调用不同模型、并且在意聊天数据保存在本地的用户。安装后配置好服务商即可开始对话，支持 Markdown、代码高亮和流式回复。",
+ "tagline": "跨平台桌面 AI 客户端，支持多种大模型"
+}

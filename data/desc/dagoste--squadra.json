@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用多个 AI 编码助手、希望让它们协同工作并保留完整过程记录的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "协调 Claude Code、Codex 和 Cursor 多个窗口，共享任务与确认",
+  "提供来源绑定的证明、独立审查和并行测试，保证每一步可追溯",
+  "内置技能：errata 召回经验、rasoio 精简代码、previsione 预测任务路线",
+  "本地双语仪表盘，跟踪进度、决策和证据",
+  "统计各窗口的 token 消耗，按模型、任务和日期展示用量",
+  "支持 MCP 插件，并提供安全扫描结果"
+ ],
+ "intro": "Squadra 是一个本地运行的 Python 工具包，用于协调多个 AI 编码窗口（Claude Code、Codex、Cursor）协同完成同一项任务。它通过共享任务、确认、预检、并行测试、来源绑定的证明和独立审查等机制，让不同窗口之间能够分工与交接，并把进度、决策和证据记录在一个双语本地仪表盘中。\n\n项目以 Claude Code skill 和 Codex plugin 的形式安装，所有数据都保存在本机，不依赖账号或云端服务。它内置了若干技能，例如从失败中召回经验、精简代码、预测任务路线，并支持 MCP 插件扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 或 Codex 中通过 /plugin 安装 Squadra",
+  "运行 squadra status 查看当前任务状态",
+  "使用 squadra status --all 查看完整的等待列表",
+  "运行 squadra usage 查看各窗口的 token 消耗"
+ ],
+ "summary": "Squadra 解决的是多个 AI 编码窗口各自为战、缺少统一协调和过程记录的问题。它把 Claude Code、Codex、Cursor 等窗口组织成一支团队，通过共享任务、确认、预检、并行测试和独立审查来推进工作，并把进度、决策和证据保存在本地双语仪表盘中。所有数据都在本机处理，适合需要让多个 AI 助手协同完成同一项目、同时希望每一步都有据可查的开发者。",
+ "tagline": "让 Claude Code、Codex 和 Cursor 像一支团队一样协作"
+}

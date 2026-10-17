@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要支撑大量 AI 编码代理并发提交的团队，以及希望自行部署、研究或改进服务端版本控制设计的 Go 开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "ObjectService 按需提供单个对象和稀疏树，graft clone 与 graft sparse 只拉取指定路径",
+  "blame、路径历史、祖先关系和代码搜索在服务端运行，并作为派生数据按提交缓存",
+  "UserLand 将变更 rebase 到当前 tip 后用 compare-and-swap 落地，同一分支的并发落地会合并为一次引用更新",
+  "冲突落地可由任选解析器处理，通过版本化、厂商中立的协议接入 LLM、确定性工具或不做解析",
+  "每次接受的引用更新都记录在有序 changeset 日志中，客户端可列出或实时监听",
+  "graft-verify 测试 tip、二分定位失败并回滚导致问题的变更；graft-cache 按层级缓存不可变对象并逐个校验"
+ ],
+ "intro": "gitai 是一个用 Go 编写的开源版本控制系统，目标是让大量 AI 编码代理在同一分支上并发读写、快速落地代码。它参考了 Anthropic 公开描述的 Scion 设计：客户端保持在线、只拉取所需对象，历史查询由服务端完成并缓存，变更通过 compare-and-swap 落地而非合并队列，每次引用更新都记录在 changeset 日志中，仓库状态存放在数据库与对象存储里，服务节点可横向扩展。\n\ngitai 是上述设计的独立实现，底层仍是普通 Git 仓库，采用 MIT 协议，服务端不调用语言模型，冲突解决等 AI 功能可对接任意模型提供商，也可以完全不使用。项目当前版本为 0.1.0，接口在 1.0 之前仍可能变化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：Linux 或 macOS、Go 1.26、C 工具链、Meson 和 Ninja",
+  "git clone https://github.com/feder-cr/git-ai.git && cd git-ai",
+  "make build  # 生成 server、CLI 和工具到 _build/bin",
+  "examples/graft/quickstart.sh  # 在临时目录启动 server、cache daemon、两个 agent 并完成一次 land",
+  "./_build/bin/graft  # 查看 CLI 及其命令"
+ ],
+ "summary": "gitai 面向大量 AI 编码代理并发工作的场景，解决传统 Git 托管在频繁短任务、同一分支并发提交时的瓶颈。它把历史查询、落地和缓存移到服务端，客户端只按需拉取对象，变更通过 compare-and-swap 落地并记录在 changeset 日志中，仓库状态存入数据库和对象存储，服务节点可扩展。项目用 Go 实现，底层仍是普通 Git 仓库，服务端不调用语言模型，冲突解决可接入任意模型提供商或完全不使用。",
+ "tagline": "为 AI 编码代理重新设计的开源版本控制系统"
+}

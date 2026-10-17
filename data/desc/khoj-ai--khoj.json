@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合希望拥有可自托管、可接入多种 LLM 的个人 AI 助手的开发者和普通用户，也适合需要从个人文档和网络中快速获取答案、构建自定义 agent 的人群。",
+ "date": "2026-10-17",
+ "features": [
+  "与本地或在线 LLM 对话，支持 llama3、qwen、gemma、mistral、gpt、claude、gemini、deepseek 等",
+  "从互联网和你的文档中获取答案，支持图片、PDF、Markdown、org-mode、Word、Notion 等格式",
+  "通过浏览器、Obsidian、Emacs、桌面端、手机或 WhatsApp 访问",
+  "创建带有自定义知识、人设、聊天模型和工具的 agent",
+  "自动化重复性研究，获取个人简报和智能通知",
+  "使用语义搜索快速查找相关文档，并支持图像生成、语音朗读"
+ ],
+ "intro": "Khoj 是一个可自托管的个人 AI 应用，目标是把本地或在线的大语言模型变成你的个人助手。它可以接入 llama3、qwen、gemma、mistral、gpt、claude、gemini、deepseek 等多种模型，并从互联网和你自己的文档中获取答案，支持的文档类型包括图片、PDF、Markdown、org-mode、Word 和 Notion 文件。\n\n你可以通过浏览器、Obsidian、Emacs、桌面端、手机或 WhatsApp 使用 Khoj，也可以创建带有自定义知识、人设、聊天模型和工具的 agent 来承担不同角色。它还提供语义搜索、自动化研究、定时推送、图像生成、语音朗读等功能。Khoj 是开源的，可以运行在自己的电脑上，也可以直接使用云端版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读自托管文档：https://docs.khoj.dev/get-started/setup",
+  "或直接访问云端应用 https://app.khoj.dev 无需自行部署即可使用"
+ ],
+ "summary": "Khoj 是一个可自托管的个人 AI 应用，能接入本地或在线的大语言模型，从互联网和你自己的文档中回答问题。它支持 PDF、Markdown、Notion、Word 等多种文件格式，并可通过浏览器、Obsidian、Emacs、桌面端、手机或 WhatsApp 使用。你还可以创建自定义 agent、设置自动化研究任务、进行语义搜索。适合想要一个能整合个人知识、可私有部署的 AI 助手的开发者和普通用户。",
+ "tagline": "可自托管的个人 AI 第二大脑，连接你的文档与网络"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建和部署 LLM Agent 的 Python 开发者，以及希望把多智能体、工具调用或实时语音能力集成到产品中的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "ReAct 推理-行动循环，支持结构化输出、实时中断与恢复、批量工具调用",
+  "Toolkit 工具管理，支持 Python 工具、MCP 服务器与 skills，内置编码类工具",
+  "统一模型接入层，覆盖 OpenAI、Anthropic、Gemini、DashScope、DeepSeek 等多家提供方",
+  "上下文管理，支持自动压缩、工具结果卸载与上下文注入",
+  "事件系统，将推理过程、工具调用和多模态内容流式推送到前端",
+  "多智能体协作（TeamPipeline）、实时语音 Agent 与 A2A 协议支持"
+ ],
+ "intro": "AgentScope 2.0 是一个面向生产环境、易于使用的 Agent 框架，用 Python 编写，要求 Python 3.11 及以上版本。它的设计思路是顺应模型能力不断增强的趋势，充分利用大模型自身的推理与工具调用能力，而不是用严格的提示词和固定的编排方式去限制模型。\n\n框架以 SDK 的形式提供一组构建模块，包括 ReAct 推理-行动循环、工具管理（Toolkit）、模型接入（Model）、上下文管理（Context）和事件系统等，开发者可以按需组合出自己的 Agent。工具层支持 Python 工具、MCP 服务器和 skills，并内置了 shell、文件编辑、搜索等编码工具；模型层覆盖 OpenAI、Anthropic、Gemini、DashScope、DeepSeek、Moonshot、Volcengine、xAI、Ollama 等主流提供方。\n\n项目还提供多智能体协作、实时语音对话、A2A 协议接入等能力，并有配套文档与示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认 Python 版本为 3.11 或更高",
+  "从 PyPI 安装：uv pip install agentscope",
+  "或从源码安装：git clone -b main https://github.com/agentscope-ai/agentscope.git，然后 cd agentscope 并执行 uv pip install -e .",
+  "参考官方文档 https://docs.agentscope.io/ 与仓库 examples 目录了解具体用法"
+ ],
+ "summary": "AgentScope 2.0 是一个用 Python 编写的 LLM Agent 框架，目标是在生产环境中构建和运行可观察、可理解的智能体。它不依赖严格的提示词和固定编排，而是发挥模型自身的推理与工具调用能力，提供 ReAct、工具管理、模型接入、上下文管理和事件系统等模块，支持多智能体协作、实时语音和 A2A 协议。适合需要把 Agent 能力落地到实际产品的开发者。",
+ "tagline": "面向生产环境的 LLM Agent 开发框架"
+}

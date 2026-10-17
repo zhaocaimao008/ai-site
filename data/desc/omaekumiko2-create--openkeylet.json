@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要在 AI Agent 工作流中使用密码、API 密钥、SSH 或 TOTP，又不希望明文进入模型上下文的开发者和普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "本地 stdio MCP 服务器，按需启动，支持 Codex、Claude Code、Cursor、OpenCode、OpenClaw 等客户端",
+  "凭据以模块组合存储，支持密码、API 凭据、SSH 密钥、TOTP、自定义字段等",
+  "每个模块可单独设置 Agent 可见性，隐藏模块的明文不会出现在 MCP 响应中",
+  "支持 Fill、SSH、文件传输、HTTP、终端等多种本地操作",
+  "使用 XChaCha20-Poly1305 加密本地保险库，可导出加密的 .mvault 备份包",
+  "提供本地活动记录，显示哪个客户端请求了哪个操作，但不记录密钥值"
+ ],
+ "intro": "OpenKeylet 是一个免费、开源、跨平台的本地密码与凭据管理器，同时也是一个本地 stdio MCP 服务器，供 AI Agent 使用。它让 Codex、Claude Code、Cursor、OpenCode、OpenClaw 等 MCP 客户端能够调用已保存的密码、API 凭据、SSH 密钥、TOTP 验证码和自定义密钥，而隐藏的明文默认不会进入模型上下文。\n\n凭据以独立模块的形式存储，用户名、密码、API 凭据、私钥、密钥口令、TOTP、主机、端口、URL 和自定义字段可以组合在同一个条目中，可用的 MCP 操作会根据模块组合自动推导。所有数据加密保存在本机，没有账号、订阅、云保险库或远程 MCP 服务，MCP 进程仅在 Agent 调用时启动。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并打开 OpenKeylet，选择对应平台的便携版本，无需注册",
+  "打开 Settings → Agent connection，连接检测到的客户端，然后启动新的 Agent 会话",
+  "保存一个条目，给它唯一的名称，并只添加需要的模块，可以从预设开始或逐模块构建"
+ ],
+ "summary": "OpenKeylet 是一个本地运行的密码与凭据管理器，同时作为 MCP 服务器供 AI Agent 调用。它解决的是 Agent 在登录网站、连接服务器、调用需认证的 API 或完成终端提示时，需要用到密码、API 密钥、SSH 密钥和 TOTP，却又不希望这些明文进入模型上下文的问题。凭据以模块组合方式加密存储在本机，Agent 只能看到条目名称、字段名称和可用操作，实际使用在本地完成。适合在 Codex、Claude Code、Cursor 等 MCP 客户端中处理需要认证的任务。",
+ "tagline": "为 AI Agent 提供本地凭据管理的 MCP 服务"
+}

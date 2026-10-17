@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要统一接入和管理多家大模型 API 的开发者、团队或服务提供方，也适合希望自建 API 分发与 key 管理系统的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "统一 OpenAI API 格式，适配 OpenAI、Claude、Gemini、DeepSeek、豆包、文心一言、通义千问等多家模型",
+  "支持负载均衡访问多个渠道，并支持失败自动重试与 stream 流式传输",
+  "提供令牌管理，可设置过期时间、额度、允许的 IP 范围及可访问模型",
+  "支持兑换码批量生成与导出，可用于账户充值",
+  "支持用户分组与渠道分组，可为不同分组设置不同倍率",
+  "支持多种登录注册方式，包括邮箱、飞书、GitHub 及微信公众号授权"
+ ],
+ "intro": "One API 是一个 LLM API 管理与分发系统，目标是用标准的 OpenAI API 格式访问各家大模型。它支持 OpenAI、Azure OpenAI、Anthropic Claude、Google Gemini、DeepSeek、字节豆包、百度文心一言、阿里通义千问、讯飞星火、智谱 ChatGLM、360 智脑、腾讯混元、Moonshot、百川、MINIMAX、Groq、Ollama、零一万物、阶跃星辰、Coze、Cohere、Cloudflare Workers AI、DeepL、together.ai、novita.ai、硅基流动、xAI 等众多模型服务。\n\n除统一适配外，它还提供渠道管理、令牌管理、兑换码管理、用户分组与渠道分组、负载均衡、失败自动重试、stream 流式传输、额度明细查看、模型映射等能力，并支持通过系统访问令牌调用管理 API 进行扩展。项目以单可执行文件形式发布，提供 Docker 镜像，可一键部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 SQLite 部署：docker run --name one-api -d --restart always -p 3000:3000 -e TZ=Asia/Shanghai -v /home/ubuntu/data/one-api:/data justsong/one-api",
+  "使用 MySQL 部署时，在上面的命令基础上添加 -e SQL_DSN=\"root:123456@tcp(localhost:3306)/oneapi\"，并修改数据库连接参数",
+  "确保宿主机数据目录存在且可写，例如 /home/ubuntu/data/one-api",
+  "启动后访问服务，初始账号用户名为 root，密码为 123456，登录后务必修改默认密码"
+ ],
+ "summary": "One API 解决的是多家大模型 API 接口不统一、难以集中管理的问题。它把 OpenAI、Claude、Gemini、DeepSeek、豆包、文心一言、通义千问等模型统一到标准 OpenAI API 格式下，并提供渠道、令牌、兑换码、用户分组和负载均衡等管理能力。项目以单可执行文件发布，提供 Docker 镜像，适合需要自建 API 网关、做 key 管理与二次分发的开发者或团队。",
+ "tagline": "统一多家大模型 API 的管理与分发系统"
+}

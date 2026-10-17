@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想把自有网站迁移到现代 Next.js 代码库的开发者，以及希望通过真实站点代码学习布局、动画与响应式实现的工程师。",
+ "date": "2026-10-17",
+ "features": [
+  "一条 /clone-website 命令即可把指定网址重建为 Next.js 应用",
+  "四步流程：Map、Observe、Build、Compare，含源站与本地页面的对照修复",
+  "提取真实图片、字体、SVG 等素材，并按站点归类到 public/sites 与 components/sites",
+  "为 Framer 页面和动画站点提供响应式、媒体、粘性场景与滚动动效的检查指引",
+  "内置 npm run check（lint + typecheck + build）与 Docker 运行方式",
+  "同一份 Agent Skill 可被 Codex、Cursor、OpenCode 直接读取，Claude Code 通过命令桥接使用"
+ ],
+ "intro": "这是一个模板项目，把「克隆网站」变成 AI 编程代理可以执行的任务。你只需给代理一个 URL，它就会抓取页面结构、素材和字体，再用 Next.js 重建出一套可编辑的代码。\n\n项目内置名为 /clone-website 的 Agent Skill，流程分为四步：映射源地址到本地路由、观察桌面与移动端页面并提取真实资源、实现可编辑组件与交互、最后对照源站与本地页面修复差异并跑生产检查。对 Framer 页面和带动画的站点，还提供了针对响应式变体、媒体、粘性场景和滚动/时间驱动动效的检查指引。\n\n技术栈为 Next.js 16（App Router、React 19、TypeScript strict）、shadcn/ui 与 Tailwind CSS v4。官方推荐搭配 Claude Code + Opus 5.5，同时支持 Codex CLI、Cursor 和 OpenCode。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "让 AI 代理把 https://github.com/JCodesMore/ai-website-cloner-template 克隆到新文件夹，移除 origin remote、安装依赖并运行 npm run check",
+  "或点击 Use this template 创建自己的仓库，再让代理克隆到本地并安装依赖",
+  "在开启浏览器访问的代理中打开项目，运行 /clone-website https://example.com（替换为目标网址）",
+  "构建完成后，继续让代理按需修改页面",
+  "本地开发可运行 npm run dev，完整校验运行 npm run check"
+ ],
+ "summary": "这个项目把网站克隆做成了一套可交给 AI 编程代理执行的模板：你提供一个网址，代理会分析页面的结构、素材与交互，再用 Next.js 重建出可继续编辑的代码。它适合需要把自有站点从旧平台迁移到现代前端栈的场景，也适合想通过真实代码研究布局与动效的开发者。项目内置分步的克隆技能与对照检查流程，并支持 Claude Code、Codex、Cursor 等代理。",
+ "tagline": "给 AI 编程代理一个网址，自动重建为 Next.js 应用"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望用 AI 自动化 Blender 建模、渲染与批处理流程的开发者，以及愿意按 README 配置 DSH 与 Blender 环境的技术用户。",
+ "date": "2026-10-17",
+ "features": [
+  "通过直连 TCP 通道让 AI 实时查看和编辑 Blender 场景，无需 MCP",
+  "16 个模型可用工具，覆盖视口截图、场景编辑、时间窗口观察与内部搜索循环",
+  "渲染性能分析、对象安全减面，以及把重渲染/批量几何卸载到 headless 进程",
+  "事务快照与回滚、参数预设库、长任务作业层",
+  "右侧边栏面板，支持 click-to-context 与 @-mentions",
+  "兼容多种 Blender addon 实现，并自动适配不同通信协议"
+ ],
+ "intro": "这是一个 Blender 插件，目标是让 AI 模型直接操作 Blender，而不需要人工点击、截图喂给模型或搭建 MCP 服务器。它通过一条直连 TCP 通道（addon 监听 127.0.0.1:9876，后端 127.0.0.1:9877）向模型暴露 16 个工具，覆盖查看视口、编辑场景、观察时间窗口、运行内部搜索循环、渲染性能分析与优化、对象减面、把重活卸载到 headless 进程、长任务作业化、事务回滚、参数预设、调用任意 addon 命令等能力。\n\n插件以 DSH（DeepSeek Harness）插件形式注册工具，需要 Blender 4.x/5.x 以 GUI 模式运行、Node.js ≥ 20，并安装配套的 Blender addon（仓库自带 dsh_blender_bridge，也兼容上游 blender_mcp 等实现）。支持 WSL + Windows Blender、同机 Windows、原生 Linux 与 macOS 等部署方式。安装是否成功以 blender_viewport(op=\"doctor\") 返回 kind=ok 为准。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认环境：Blender 4.x/5.x 以 GUI 模式运行，Node.js ≥ 20，并安装 DSH",
+  "在 Blender 中启用 addon（仓库自带 addon/dsh_blender_bridge.py 或上游 blender_mcp），在 3D 视口按 N 打开 DSH Blender Bridge 面板并点击 Connect",
+  "构建插件：cd dsh-blender-plugin && DSH_CHECKOUT=/path/to/dsh-harness bash scripts/build.sh",
+  "（可选）复制配置：cp dsh-ble...（README 此处被截断）",
+  "验证安装：运行 blender_viewport(op=\"doctor\")，必须返回 kind=ok，否则按 README §9 排查"
+ ],
+ "summary": "这个项目让 AI 模型直接驱动 Blender：它用一条直连 TCP 通道取代 MCP，向模型提供 16 个工具，可以查看视口、编辑场景、观察动画时间窗口、跑内部搜索循环、分析并优化渲染性能、安全减面、把重活交给 headless 进程，还支持事务回滚、参数预设和长任务作业化。适合想让 AI 自动完成建模、渲染与批处理流程的开发者，需要 Blender 以 GUI 模式运行并配合 DSH 使用。",
+ "tagline": "让 AI 通过直连 TCP 通道实时驱动 Blender"
+}

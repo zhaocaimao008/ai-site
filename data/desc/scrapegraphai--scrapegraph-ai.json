@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要从网页或本地文档中提取数据的 Python 开发者、数据分析师，以及希望用自然语言简化抓取流程的技术人员。",
+ "date": "2026-10-17",
+ "features": [
+  "使用自然语言提示词从网页或本地文档中提取结构化数据",
+  "提供多种预置抓取管道：SmartScraperGraph、SearchGraph、SpeechGraph、ScriptCreatorGraph 等",
+  "支持云端 LLM（OpenAI、Groq、Azure、Gemini 等）和本地模型（Ollama）",
+  "支持多页并行抓取（Multi 版本管道）",
+  "与 Langchain、Llama Index、Crew.ai 等框架集成，并提供 API、SDK 和低代码平台连接",
+  "包含 MCP 服务器，便于扩展"
+ ],
+ "intro": "ScrapeGraphAI 是一个 Python 网页抓取库，它利用大语言模型（LLM）和直接图逻辑来构建抓取管道，支持从网站和本地文档（XML、HTML、JSON、Markdown 等）中提取信息。你只需用自然语言说明想要提取什么，库就会自动完成抓取。\n\n项目提供了多种预置的抓取管道，例如 SmartScraperGraph（单页抓取）、SearchGraph（多页搜索抓取）、SpeechGraph（生成音频）、ScriptCreatorGraph（生成 Python 脚本）等，并支持多页并行调用。用户可以通过 API 使用 OpenAI、Groq、Azure、Gemini 等云端 LLM，也可以借助 Ollama 使用本地模型。\n\n此外，ScrapeGraphAI 还提供了与 Langchain、Llama Index、Crew.ai 等 LLM 框架的集成，以及 Pipedream、Bubble、Zapier、n8n 等低代码平台的连接方式，并包含 MCP 服务器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装库：pip install scrapegraphai",
+  "安装 Playwright 浏览器：playwright install",
+  "（可选）如需使用本地模型，安装 Ollama 并下载模型，例如：ollama pull llama3.2",
+  "编写 Python 脚本，配置 LLM 并创建 SmartScraperGraph 实例，指定 prompt 和 source 后运行"
+ ],
+ "summary": "ScrapeGraphAI 是一个用自然语言驱动网页抓取的 Python 库。你只需描述想提取的信息，它就能借助大语言模型和预置的图管道，从网站或本地文档中自动抽取结构化数据。项目内置了单页、多页、搜索、生成脚本或音频等多种管道，并支持 OpenAI、Ollama 等云端与本地模型。适合需要快速获取网页数据、又不想手写复杂解析规则的开发者。",
+ "tagline": "基于 LLM 的 Python 网页抓取库，用自然语言描述需求即可提取数据"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用编码智能体自动化视频制作流程的开发者、内容创作者和营销人员，尤其是需要快速产出社交媒体短视频或产品解说视频的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "用代码绘制动态图形与动画解说，支持 Canvas、SVG、Three.js、GSAP",
+  "剪辑实拍素材：剪切、推拉变焦、字幕、B-roll、主体抠像",
+  "生成 ElevenLabs 配音脚本，并用 faster-whisper 获取词级时间戳",
+  "音效设计同步到帧，混音至 -14 LUFS / -1.5 dBTP",
+  "本地渲染 9:16、16:9 或 1:1 的 MP4，无需 After Effects",
+  "通过 Playwright 浏览 Pinterest、Behance 等网站获取素材参考"
+ ],
+ "intro": "Motion Video Director 是一个面向 Claude Code、Codex 和 Cursor 的技能包，把编码智能体变成视频制作团队。它用代码绘制动态图形（Canvas、SVG、Three.js、GSAP），也能剪辑实拍素材、添加字幕和 B-roll，并生成 ElevenLabs 配音脚本与音效设计，最终在本地渲染出 9:16、16:9 或 1:1 的 MP4，无需 After Effects 或 Premiere。\n\n该技能以 SKILL.md 生产手册加辅助脚本的形式提供，智能体按固定流程工作：收集需求、写配音稿、分镜、构建动画、预览、渲染混音，并在关键步骤设置审批环节。进度记录在 PROGRESS.md 中，方便新会话继续。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在项目文件夹中运行：npx skills add Miftahul-Islam-Efaz/Motion-graphics-skill（需已安装 Node.js）",
+  "Claude Code 用户也可在内部运行：/plugin marketplace add Miftahul-Islam-Efaz/Motion-graphics-skill 和 /plugin install motion-video-director@motion-graphics-skill，然后重启",
+  "手动安装：下载 ZIP 并解压，将 skills/motion-video-director 复制到 ~/.claude/skills/ 或项目内的 .claude/skills/，重启 Claude Code",
+  "向智能体描述视频需求，例如：Make a 30-second 9:16 launch reel for my SaaS. References attached.",
+  "按照智能体引导完成需求确认、配音稿、分镜、预览和最终渲染"
+ ],
+ "summary": "Motion Video Director 是一个让编码智能体在本地完成视频制作的技能包，支持 Claude Code、Codex 和 Cursor。它用代码生成动态图形和动画，也能剪辑实拍素材、添加字幕和音效，并生成 ElevenLabs 配音脚本，最终输出 9:16、16:9 或 1:1 的 MP4，无需 After Effects 或 Premiere。适合需要快速制作社交媒体短视频、产品解说或营销内容的开发者和创作者。",
+ "tagline": "用编码智能体在本地完成动态图形与视频剪辑的 Claude Code 技能"
+}

@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合零基础或初学者学习 Python 编程，也适合想了解如何用 Python 开发后端、前端以及集成 AI 的开发者。课程为西班牙语，需要具备一定的西班牙语听力。",
+ "date": "2026-10-17",
+ "features": [
+  "100 节视频课程，总计 44 小时，从零讲解 Python 基础与进阶",
+  "涵盖后端开发：使用 FastAPI 构建 REST API，集成 MongoDB 和 OAuth2 认证",
+  "涵盖前端开发：使用 Reflex 框架构建 Web 应用",
+  "包含 ChatGPT 集成教学，学习在应用中调用 OpenAI API 并维护对话上下文",
+  "提供 AI 语音翻译器项目实战，用约 100 行代码实现多语言翻译",
+  "所有课程代码按主题分类存放在 Basic、Intermediate、Backend 等目录中"
+ ],
+ "intro": "Hello-Python 是 mouredev 在 Twitch 直播中录制的一套西班牙语 Python 课程，面向零基础初学者。课程包含 100 节课、44 小时视频，并配有完整的代码示例。内容覆盖 Python 基础语法、中级特性、后端开发、前端开发以及测试等主题。\n\n除了语言基础，课程还包含如何将 ChatGPT 集成到项目中的实战教学，以及一个用 AI 构建的语音翻译器项目。后端部分使用 FastAPI 和 MongoDB 构建 REST API，前端部分则使用 Reflex 框架。所有代码按主题组织在 Basic、Intermediate、Backend 等目录中。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Hello-Python 是一套面向零基础学习者的西班牙语 Python 视频课程，由 mouredev 在直播中录制。它从变量、循环等基础语法讲起，逐步延伸到 FastAPI 后端开发、Reflex 前端开发，并包含将 ChatGPT 集成到应用以及构建 AI 语音翻译器的实战内容。适合想系统学习 Python 并了解 AI 应用开发的初学者。",
+ "tagline": "从零开始学 Python 的免费视频课程，含 AI 集成实战"
+}

@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合希望使用或研究多模态 AI Agent 的开发者，以及需要 GUI 自动化操作桌面的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "Agent TARS 提供 CLI 和 Web UI 两种使用方式",
+  "集成 MCP 工具，支持真实世界任务",
+  "UI-TARS Desktop 提供原生 GUI Agent 桌面应用",
+  "支持本地和远程的 computer operator 与 browser operator",
+  "基于 UI-TARS 模型实现多模态交互"
+ ],
+ "intro": "TARS 是字节跳动开源的多模态 AI Agent 栈，目前包含两个项目：Agent TARS 和 UI-TARS Desktop。Agent TARS 是一个通用的多模态 AI Agent 栈，将 GUI Agent 与 Vision 能力带入终端、电脑、浏览器和产品中，主要提供 CLI 和 Web UI 两种使用方式，目标是通过多模态 LLM 与 MCP 工具集成，提供更接近人类的任务完成流程。\n\nUI-TARS Desktop 是基于 UI-TARS 模型的桌面应用，提供原生 GUI Agent，支持本地和远程的 computer operator 与 browser operator。项目使用 TypeScript 开发，采用 Apache-2.0 协议。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "TARS 是字节跳动开源的多模态 AI Agent 栈，包含 Agent TARS 和 UI-TARS Desktop 两个项目。Agent TARS 将 GUI Agent 与 Vision 能力带入终端、电脑和浏览器，提供 CLI 和 Web UI，并通过 MCP 工具集成完成接近人类的任务流程。UI-TARS Desktop 是基于 UI-TARS 模型的桌面应用，提供原生 GUI Agent，支持本地和远程的计算机与浏览器操作。适合开发者与普通用户了解和使用多模态 AI Agent。",
+ "tagline": "字节跳动开源的多模态 AI Agent 栈，含 Agent TARS 与 UI-TARS Desktop"
+}

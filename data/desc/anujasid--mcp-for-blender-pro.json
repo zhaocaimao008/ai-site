@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望加快迭代的艺术家、需要自动化重复工作的技术美术，以及想把 AI 工具接入 Blender 的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "场景感知：AI 可先检查场景和对象信息，再执行操作",
+  "可视化 Studio 工作区：聊天、场景对象、视口快照、审批和任务看板",
+  "多模型接入：支持 OpenAI、Claude、Gemini、OpenRouter、OpenCode Zen、Ollama 和自定义端点",
+  "多智能体团队链：Manager 拆分任务，Workers 执行，Reviewers 审核",
+  "内置 MCP 服务器：可连接 OpenCode 等支持认证 Streamable HTTP MCP 的客户端",
+  "21 个场景工具：创建、编辑、截图、执行代码、查询 bpy API、导出场景和搜索资产"
+ ],
+ "intro": "mcp-for-blender-pro 是一个面向 Blender 的 AI 助手扩展，同时内置 Model Context Protocol（MCP）服务器。它让 AI 能够先检查场景和对象结构，再执行创建物体、编辑材质、查找资产、导出场景等操作，并提供带视口预览的 Studio 聊天工作区。\n\n项目支持 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、OpenCode Zen、Ollama 以及兼容的自定义 API，可加载模型目录并在 Blender 或 Studio 中选择模型。除单助手模式外，还提供由 Manager、Workers、Reviewers 组成的多智能体团队链，任务按顺序执行，并带有审批、撤销和任务看板。\n\n内置 21 个场景工具，覆盖场景检查、对象创建与编辑、视口截图、代码执行、bpy API 查询、节点类型描述、场景导出以及 Poly Haven、Sketchfab、Poly Pizza 的资产搜索与导入。发布包面向 Windows x64 与 Blender 4.2 及以上版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk",
+  "选择 ZIP 并启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro",
+  "选择提供商，填写连接信息并选择模型",
+  "在 Blender 中发送消息，或点击 Open Studio Window"
+ ],
+ "summary": "mcp-for-blender-pro 把 AI 对话与 Blender 场景操作结合起来，让助手先读取场景和对象信息，再执行建模、材质、资产查找和导出等步骤。它提供带视口预览的 Studio 工作区，支持多种云端与本地模型，并内置 MCP 服务器，可接入 OpenCode 等客户端。适合想用自然语言加快 Blender 迭代的艺术家、技术美术和开发者。",
+ "tagline": "Blender 场景 AI 助手与 MCP 服务器"
+}

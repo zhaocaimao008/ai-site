@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "想研究或体验 LLM 自动生成完整应用的开发者，以及使用 VS Code 并希望尝试 AI 开发助手的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "根据需求生成完整应用功能，而非仅补全代码",
+  "在生成过程中进行调试、与开发者讨论问题并请求审查",
+  "提供 CLI 工具，支持通过 config.json 配置 LLM 提供商与数据库",
+  "支持 openai、anthropic、groq 等 LLM 提供商，Azure 和 OpenRouter 可通过 openai 设置接入",
+  "默认使用 SQLite，也支持 PostgreSQL",
+  "生成的应用代码保存在 workspace 目录中"
+ ],
+ "intro": "GPT Pilot 是一个研究型项目，目标是探索 LLM 能在多大程度上生成可运行、接近生产可用的应用。它的核心思路是：AI 可以写出应用中大约 95% 的代码，剩下的 5% 仍需要开发者参与，直到真正实现 AGI。\n\n它不只是补全代码或生成 PR 描述，而是能编写完整功能、调试问题、与开发者讨论并请求审查，也是 Pythagora VS Code 扩展的核心技术。项目提供 CLI 工具，生成的应用代码会保存在 workspace 目录下。\n\n需要注意：仓库已不再积极维护，README 中说明曾在 core/telemetry/ 中发现供应链蠕虫类恶意代码，相关文件已被移除；若在 2025 年 8 月至 2026 年 6 月 11 日期间克隆并运行过源码，建议轮换机器上的各类凭据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/Pythagora-io/gpt-pilot.git",
+  "cd gpt-pilot",
+  "python3 -m venv venv && source venv/bin/activate",
+  "pip install -r requirements.txt",
+  "cp example-config.json config.json 并在 config.json 中设置 LLM 提供商、API key 和数据库等配置",
+  "python main.py"
+ ],
+ "summary": "GPT Pilot 是一个研究型 AI 开发工具，目标是让 LLM 生成应用中约 95% 的代码，剩余部分由开发者把关，从而构建可运行的应用。它不只是代码补全，而是能编写完整功能、调试并请求审查，也是 Pythagora VS Code 扩展的核心技术。项目提供 CLI，支持多种 LLM 提供商和 SQLite/PostgreSQL。需要注意该仓库已不再积极维护，README 说明曾在 core/telemetry/ 中发现恶意代码并已移除，若在特定时间段运行过源码需轮换凭据。",
+ "tagline": "让 AI 编写大部分代码、由开发者把关的应用生成工具"
+}

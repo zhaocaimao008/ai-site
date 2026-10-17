@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI Agent 自动处理文件、代码和办公文档的开发者与普通用户，也适合需要远程控制或多 Agent 协作的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "内置 AI Agent 引擎，无需安装 CLI 工具，填入 API Key 即可使用",
+  "统一界面接入 Claude Code、Codex、Qwen Code、Hermes Agent 等数十种外部 Agent",
+  "21 个内置专业助手，覆盖 PPT、Word、Excel 等办公文档生成",
+  "支持文件读写、网页搜索、图片生成和 MCP 工具调用",
+  "通过 WebUI 或 Telegram、飞书、钉钉、微信远程访问",
+  "支持 Cron 定时任务，实现 24/7 无人值守自动化"
+ ],
+ "intro": "AionUi 是一个免费开源的 AI Agent 协作应用，支持 macOS、Windows 和 Linux。它内置了完整的 AI Agent 引擎，安装后无需额外配置 CLI 工具，填入任意 API Key 即可使用。Agent 可以读写文件、搜索网页、生成图片，并支持 MCP 工具。\n\n除了内置 Agent，AionUi 还能在统一界面中接入 Claude Code、Codex、Qwen Code、Hermes Agent、Cursor Agent 等数十种外部 CLI Agent。它提供 21 个内置专业助手，覆盖 PPT、Word、Excel 等办公场景，并支持通过 WebUI 或 Telegram、飞书、钉钉、微信远程访问，以及 Cron 定时任务实现 24/7 自动化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载对应平台的最新版本并安装",
+  "启动 AionUi，填入任意支持的 API Key",
+  "选择内置助手或接入外部 CLI Agent 开始使用"
+ ],
+ "summary": "AionUi 是一个开源的 AI Agent 协作桌面应用，解决的是让 AI 真正在电脑上帮你干活的问题。它内置 Agent 引擎，安装即用，无需单独配置 CLI 工具，填入 API Key 就能让 Agent 读写文件、搜索网页、生成图片。同时它还能统一接入 Claude Code、Codex 等数十种外部 Agent，并提供 PPT、Word、Excel 等办公助手。适合想用 AI 自动处理文档、代码，或需要远程访问和定时任务的用户。",
+ "tagline": "开源 AI Agent 协作桌面应用，内置引擎，支持多 Agent 与远程控制"
+}

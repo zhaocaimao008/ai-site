@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在 ESP32 硬件上搭建语音助手或 AI 玩具的开发者与爱好者，也适合需要为自定义开发板适配固件的嵌入式工程师。",
+ "date": "2026-10-17",
+ "features": [
+  "离线语音唤醒，基于 ESP-SR，唤醒词可自定义",
+  "支持 WebSocket 与 MQTT + UDP 两种通信传输",
+  "Opus 音频流，支持流式 ASR + LLM + TTS 与 Realtime 端到端语音模型",
+  "设备端 MCP 控制扬声器、LED、舵机、GPIO 等外设",
+  "云端 MCP 扩展大模型能力，如智能家居控制、PC 桌面操作、知识搜索",
+  "支持 OLED/LCD 表情显示与部分板子的摄像头视觉输入"
+ ],
+ "intro": "小智 AI 聊天机器人是一个运行在 ESP32 系列芯片上的语音交互固件项目，用 C++ 编写。它把设备端作为语音入口，接入 Qwen、DeepSeek 等大模型能力，并通过 MCP 协议实现多端设备控制。\n\n项目支持 Wi-Fi、有线以太网、USB RNDIS 以及 ML307/EC801E、NT26 Cat.1 4G 联网，部分板子可在 Wi-Fi 与 4G 之间切换。语音链路使用 Opus 音频流，既支持常规的流式 ASR + LLM + TTS 管线，也支持 Realtime 端到端语音模型；具备 AEC 的硬件可实现实时全双工对话。此外还提供离线语音唤醒（ESP-SR，唤醒词可自定义）、声纹识别、OLED/LCD 表情显示、摄像头视觉输入、电池与电源管理等功能。\n\n通信层提供 WebSocket 与 MQTT + UDP 两种传输方式。设备端 MCP 可控制扬声器、LED、舵机、GPIO 等外设，云端 MCP 则用于扩展大模型能力，例如智能家居控制、PC 桌面操作、知识搜索和邮件等。项目覆盖 ESP32、ESP32-C3、ESP32-C5、ESP32-C6、ESP32-S3、ESP32-P4 等芯片平台，并支持通过热点或 BluFi 配网。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "初学者可直接使用免搭建开发环境的固件刷写方式，参考《Beginner's Firmware Flashing Guide》",
+  "固件默认连接官方 xiaozhi.me 服务器，个人用户注册账号后可免费使用 Qwen 实时模型",
+  "如需自行编译，安装 ESP-IDF 插件，SDK 最低为 ESP-IDF v6.0.1，推荐 v6.1",
+  "参考《Custom Board Guide》为自定义开发板创建适配",
+  "通过《MCP Protocol IoT Control Usage》了解如何用 MCP 协议控制 IoT 设备"
+ ],
+ "summary": "小智 AI 聊天机器人是一个跑在 ESP32 系列芯片上的语音交互固件，把开发板变成能对话、能控制外设的语音入口。它接入 Qwen、DeepSeek 等大模型，通过 MCP 协议连接设备端与云端能力，支持离线唤醒、多种联网方式和表情显示。适合想动手做 AI 语音硬件、智能音箱或桌面机器人的开发者参考和二次开发。",
+ "tagline": "基于 MCP 协议的 ESP32 语音聊天机器人固件"
+}

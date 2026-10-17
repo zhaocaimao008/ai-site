@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要脚本化操作 Google Workspace 的开发者，以及希望让 AI agent 管理 Workspace 数据的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "运行时读取 Google Discovery Service，动态生成命令，自动跟进新 API",
+  "覆盖 Drive、Gmail、Calendar、Sheets、Docs、Chat、Admin 等 Workspace 服务",
+  "所有响应为结构化 JSON，支持 --dry-run 预览和自动分页",
+  "内置 40+ agent skills，便于 AI agent 直接调用",
+  "支持多种认证方式：本地 OAuth、CI 导出凭证、Service Account、已有 access token",
+  "提供 gws schema 命令查看任意方法的请求/响应结构"
+ ],
+ "intro": "gws 是一个用 Rust 编写的命令行工具，把 Drive、Gmail、Calendar、Sheets、Docs、Chat、Admin 等 Google Workspace API 统一到一个 CLI 里。它不内置固定的命令列表，而是在运行时读取 Google 的 Discovery Service 动态生成命令，因此 Google 新增接口后无需等待工具更新即可使用。\n\n输出为结构化 JSON，支持 --dry-run 预览请求、自动分页和 NDJSON 流式输出，方便脚本和 AI agent 调用。项目还附带 40 多个 agent skills，可配合 LLM 使用。认证方式覆盖本地交互登录、CI/无头环境导出凭证、Service Account 和已有 access token 等场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：npm install -g @googleworkspace/cli（或从 GitHub Releases 下载二进制、brew install googleworkspace-cli）",
+  "gws auth setup  # 引导完成 Google Cloud 项目配置",
+  "gws auth login  # 后续 OAuth 登录",
+  "gws drive files list --params '{\"pageSize\": 5}'  # 列出文件"
+ ],
+ "summary": "gws 把 Google Workspace 的 Drive、Gmail、Calendar、Sheets、Docs、Chat、Admin 等 API 收拢到一个命令行工具里，命令在运行时根据 Google Discovery Service 动态生成，新接口无需等待工具更新。输出统一为 JSON，支持预览请求和自动分页，适合写脚本或用 AI agent 操作 Workspace 数据。",
+ "tagline": "一个命令行工具，统一操作 Google Workspace 各项服务"
+}

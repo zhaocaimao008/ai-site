@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对语音克隆、TTS 感兴趣的开发者和研究者，以及希望快速搭建语音合成服务的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持中文普通话，并在多个中文数据集上测试",
+  "基于 PyTorch，支持 GPU 训练与推理",
+  "跨平台：Windows、Linux 及 M1 Mac",
+  "提供 Web 服务接口，支持远程调用",
+  "可复用预训练编码器/声码器，仅需训练合成器",
+  "包含命令行工具 demo_toolbox.py 和 web.py"
+ ],
+ "intro": "MockingBird 是一个基于 PyTorch 的实时语音克隆与文本转语音（TTS）项目。它支持中文普通话，并已在 aidatatang_200zh、magicdata、aishell3、data_aishell 等多个数据集上测试。项目可在 Windows、Linux 以及 M1 Mac 上运行，提供 Web 服务接口，方便远程调用。\n\n该项目复用预训练的编码器（encoder）和声码器（vocoder），但需要用户自行训练或使用社区提供的合成器（synthesizer）模型，因为原始模型不兼容中文符号。README 提供了详细的安装、训练和推理步骤，包括在 M1 Mac 上的特殊配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 3.7+、PyTorch、ffmpeg",
+  "运行 pip install -r requirements.txt 安装依赖",
+  "安装 webrtcvad-wheels（可选）",
+  "准备或训练合成器模型",
+  "运行 demo_toolbox.py 或 web.py 进行推理"
+ ],
+ "summary": "MockingBird 是一个开源的实时语音克隆与文本转语音项目，支持中文普通话。它基于 PyTorch，可在 Windows、Linux 和 M1 Mac 上运行，并提供 Web 服务接口。项目复用预训练的编码器和声码器，但需要用户自行训练或使用社区提供的合成器模型。适合对语音克隆、TTS 感兴趣的开发者和研究者快速搭建语音合成服务。",
+ "tagline": "5 秒克隆声音，实时生成任意语音"
+}

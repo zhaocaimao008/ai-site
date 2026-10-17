@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速调研主题、生成带引用长文的研究人员、内容创作者和开发者，也适合希望基于自有文档进行知识整理的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "基于互联网搜索自动调研主题并生成带引用的长篇文章",
+  "采用视角引导提问和模拟对话来提升提问质量",
+  "Co-STORM 支持人机协作对话与动态思维导图",
+  "支持 litellm 集成的多种语言模型和嵌入模型",
+  "支持 YouRM、BingSearch、VectorRM、SerperRM 等多种检索模块",
+  "提供 Python 包 knowledge-storm，可通过 pip 安装"
+ ],
+ "intro": "STORM 是斯坦福大学开源的 LLM 知识整理系统，能够针对一个主题进行互联网研究，并生成类似维基百科风格、带有引用的长篇文章。它把长文生成拆成两个阶段：预写作阶段先做网络调研、收集参考资料并生成大纲；写作阶段则依据大纲和参考资料生成带引用的全文。\n\n为了提升提问的深度和广度，STORM 采用视角引导提问和模拟对话两种策略。Co-STORM 进一步引入人机协作机制，通过协调 LLM 专家、主持人和人类用户之间的对话，并维护动态更新的思维导图，帮助用户更深入地探索主题。系统使用 dspy 实现，模块化程度高，支持多种语言模型和检索模块。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 包：pip install knowledge-storm",
+  "或克隆源码：git clone https://github.com/stanford-oval/storm.git && cd storm",
+  "创建并激活 conda 环境：conda create -n storm python=3.11 && conda activate storm",
+  "安装依赖：pip install -r requirements.txt",
+  "配置语言模型和检索模块，使用 STORMWikiRunner 或 Co-STORM 运行"
+ ],
+ "summary": "STORM 是一个由 LLM 驱动的知识整理系统，能针对指定主题自动进行网络调研，并生成带引用的长篇文章。它把写作拆成预写作和写作两个阶段，通过视角引导提问和模拟对话提升调研质量。Co-STORM 进一步支持人机协作，让用户与 LLM 专家、主持人共同讨论，并用动态思维导图整理信息。适合需要快速了解新主题、生成带引用报告的研究者、写作者和开发者。",
+ "tagline": "基于 LLM 的自动研究并生成带引用长文的知识整理系统"
+}

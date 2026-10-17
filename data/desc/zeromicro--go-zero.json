@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Go 构建微服务或 REST/RPC 服务的后端开发者，以及希望借助 AI 编码助手按框架规范生成代码的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "内置链式超时控制、并发控制、限流、自适应熔断与自适应降载，多数无需配置",
+  "通过 goctl 从 .api 文件一键生成 Go、iOS、Android、Kotlin、Dart、TypeScript、JavaScript 代码",
+  "简单的 API 描述语法，自动校验客户端请求参数",
+  "内置中间件，也可集成到其他框架中",
+  "提供服务发现、负载均衡、调用追踪等微服务管理能力",
+  "面向 AI 编码助手提供 ai-context、zero-skills、mcp-zero 等工具与工作流指引"
+ ],
+ "intro": "go-zero 是一个用 Go 编写的 web 与 RPC 框架，内置大量工程实践，目标是保证高并发服务的稳定性。它已在实际站点中服务千万级用户多年，并被列入 CNCF Landscape。\n\n框架包含简单的 API 描述语法和名为 goctl 的代码生成工具，可以从 .api 文件生成 Go、iOS、Android、Kotlin、Dart、TypeScript、JavaScript 代码。内置链式超时控制、并发控制、限流、自适应熔断、自适应降载等能力，多数情况下无需配置。\n\ngo-zero 团队还提供了面向 AI 编码助手的工作流指引与实现模式，包括 ai-context、zero-skills 和可选的 mcp-zero，帮助 Claude Code、GitHub Copilot、Cursor 等工具按框架规范生成代码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 go-zero：go get -u github.com/zeromicro/go-zero",
+  "安装 goctl：go install github.com/zeromicro/go-zero/tools/goctl@latest（Mac 可用 brew install goctl，或使用 docker pull kevinwan/goctl）",
+  "确认 goctl 可执行并在 $PATH 中：goctl --version",
+  "创建 greet.api 文件，定义 Request、Response 和 service greet-api",
+  "生成 .api 模板：goctl api -o greet.api"
+ ],
+ "summary": "go-zero 是一个 Go 语言的 web 与 RPC 微服务框架，内置超时控制、限流、熔断、降载等工程实践，用于支撑高并发服务的稳定性。它提供简单的 API 描述语法和 goctl 代码生成工具，可从 .api 文件生成多种语言的代码，并自动校验请求参数。适合用 Go 构建微服务或 REST/RPC 服务的后端开发者，也提供了配合 AI 编码助手使用的工作流指引。",
+ "tagline": "云原生 Go 微服务框架，内置 goctl 代码生成工具"
+}

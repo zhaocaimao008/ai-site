@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code 并希望安装、发现插件的开发者，以及希望提交第三方插件的合作伙伴与社区作者。",
+ "date": "2026-10-17",
+ "features": [
+  "官方维护的 Claude Code 插件目录，区分内部插件与第三方插件",
+  "支持通过 Claude Code 插件系统直接安装或浏览发现",
+  "统一的插件结构：plugin.json、.mcp.json、commands、agents、skills",
+  "插件名称作为不可变 slug，并提供 renames 映射实现自动迁移",
+  "支持以 strict: false 声明只含 SKILL.md 的 skill-bundle 插件",
+  "第三方插件需通过质量与安全标准审核后方可收录"
+ ],
+ "intro": "这是 Anthropic 官方维护的 Claude Code 插件目录，收录经过筛选的高质量插件。目录分为两部分：/plugins 存放由 Anthropic 内部开发和维护的插件，/external_plugins 收录来自合作伙伴与社区的第三方插件，第三方插件需满足质量与安全标准才能通过审核。\n\n插件可以直接通过 Claude Code 的插件系统从该市场安装，也可以在其中浏览发现。每个插件遵循统一结构，包含 plugin.json 元数据，并可选带 MCP 服务器配置、斜杠命令、agent 定义和 skill 定义。README 还说明了插件名称作为不可变 slug 的规则、重命名迁移方式，以及只包含 SKILL.md 的 skill-bundle 插件如何通过 strict: false 声明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中运行 /plugin install {plugin-name}@claude-plugins-official 安装插件",
+  "或通过 /plugin > Discover 浏览并选择插件",
+  "第三方插件作者可通过插件目录提交表单提交新插件"
+ ],
+ "summary": "这个项目是 Anthropic 官方维护的 Claude Code 插件目录，用来集中收录经过筛选的插件，方便用户发现和安装。目录区分 Anthropic 内部插件与第三方插件，后者需满足质量与安全标准才能收录。插件可通过 Claude Code 的插件系统直接安装，也支持在市场中浏览。每个插件有统一结构，可包含 MCP 配置、斜杠命令、agent 和 skill 定义。适合使用 Claude Code 并希望扩展其能力的开发者，以及想提交插件的第三方作者。",
+ "tagline": "Anthropic 官方维护的 Claude Code 插件目录"
+}

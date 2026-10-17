@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要阅读和翻译科学论文的研究人员、学生，以及希望集成 PDF 翻译能力的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "保留公式、图表、目录和注释等排版元素",
+  "支持多种语言和 Google/DeepL/Ollama/OpenAI 等翻译服务",
+  "提供命令行工具和交互式图形界面",
+  "支持 Docker 容器化部署",
+  "提供 Zotero 插件集成",
+  "支持在线演示服务，无需安装即可试用"
+ ],
+ "intro": "PDFMathTranslate 是一个用于翻译科学 PDF 文档的开源工具，核心目标是在翻译全文的同时保留原始排版。它能够保留公式、图表、目录和注释等元素，避免翻译后文档结构混乱。\n\n项目支持多种语言和多种翻译服务，包括 Google、DeepL、Ollama、OpenAI 等。使用方式灵活，提供命令行工具、交互式图形界面、Docker 容器化部署，以及 Zotero 插件集成。用户可以通过在线服务直接试用，也可以本地安装使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python（3.11 <= 版本 <= 3.12）",
+  "使用 pip 安装：pip install pdf2zh",
+  "执行翻译：pdf2zh document.pdf",
+  "启动图形界面：pdf2zh -i，然后在浏览器访问 http://localhost:7860/"
+ ],
+ "summary": "PDFMathTranslate 解决的是科学 PDF 论文翻译后排版错乱的问题。它在翻译全文的同时保留公式、图表、目录和注释，适合需要阅读外文论文并保持原有版式的研究人员。项目提供命令行、图形界面、Docker 和 Zotero 插件等多种使用方式，并支持 Google、DeepL、Ollama、OpenAI 等翻译服务。",
+ "tagline": "保留排版的 PDF 科学论文全文翻译工具"
+}

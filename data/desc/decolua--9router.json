@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合经常使用 AI 编程工具、希望降低 API 成本或避免限流中断的开发者，以及想统一管理多家模型提供商的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "统一 OpenAI 兼容端点，接入 Claude Code、Codex、Cursor、Cline、Copilot 等 CLI 与编辑器工具",
+  "订阅 → 便宜 → 免费的三级自动回退，额度耗尽时自动切换提供商",
+  "RTK Token Saver 自动压缩 tool_result 内容，减少 token 消耗",
+  "同一提供商多账号轮询与配额跟踪，尽量用满订阅额度",
+  "OpenAI 与 Claude 格式互转，自动刷新 token",
+  "提供 Web Dashboard 管理提供商、密钥与模型"
+ ],
+ "intro": "9Router 是一个本地运行的 AI 路由网关，把 Claude Code、Codex、Cursor、Cline、Copilot、Gemini CLI 等编程工具统一接到 40+ 家 AI 提供商、100+ 个模型上。它对外暴露 OpenAI 兼容接口（默认 http://localhost:20128/v1），工具只需改 endpoint、API Key 和模型名即可使用。\n\n它的核心机制是分层回退：优先用订阅额度（Claude Code、Codex、GitHub Copilot），额度耗尽后自动切到便宜模型（如 GLM、MiniMax），再不行切到免费来源（Kiro、OpenCode Free、Vertex 等），避免编码中途被限流打断。同时内置 RTK Token Saver，自动压缩 tool_result 内容，官方称每次请求可省 20-40% token；还支持同一提供商多账号轮询与配额跟踪。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "全局安装并启动：npm install -g 9router && 9router",
+  "打开 Dashboard：http://localhost:20128",
+  "在 Providers 页面连接免费提供商，如 Kiro AI 或 OpenCode Free",
+  "在 Claude Code / Codex / Cursor / Cline 中把 Endpoint 设为 http://localhost:20128/v1，填入 Dashboard 复制的 API Key，模型填如 kr/claude-sonnet-4.5",
+  "从源码运行：cp .env.example .env && npm install && PORT=20128 NEXT_PUBLIC_BASE_URL=http://localhost:20128 npm run dev"
+ ],
+ "summary": "9Router 是一个本地 AI 路由网关，把 Claude Code、Cursor、Cline、Codex 等编程工具统一接到 40+ 家提供商和 100+ 模型上，对外提供 OpenAI 兼容接口。它按订阅、便宜、免费三层自动回退，额度用尽就切换来源，并用 RTK 压缩工具输出以节省 token，还支持多账号轮询和配额跟踪。适合想降低 API 开销、避免限流中断的开发者。",
+ "tagline": "把各类 AI 编程工具接入 40+ 提供商的本地路由与省 token 网关"
+}

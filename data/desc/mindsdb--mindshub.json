@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自选模型、自主部署的开发者与知识工作者，包括需要自动化报告、监控和内部工具的内容、策略与运营人员。",
+ "date": "2026-10-17",
+ "features": [
+  "Model Router：在前沿模型与开源模型之间切换，无需逐个配置提供商密钥",
+  "可替换的开源 agent harness，默认 Anton，也可选用 Hermes",
+  "连接 BigQuery、Postgres、Gmail、Drive、HubSpot、Notion、Linear 等系统的数据 vault，凭据按连接隔离",
+  "Artifacts：把 agent 输出转为文档、仪表盘、应用和代码，并发布到 live URL",
+  "跨会话记忆、可复用技能库与定时任务",
+  "支持云端、VPC、本地、隔离网络和混合部署"
+ ],
+ "intro": "MindsHub 是一个 agent 工作台，用于完成知识工作和软件开发。它把桌面/Web 应用、agent 后端和数据引擎整合在同一个仓库里，可以按源码构建并运行整套栈，也提供网页版和 macOS、Windows 桌面应用。\n\n它支持在 Claude、GPT、Gemini 等前沿模型与 DeepSeek、Qwen、Kimi 等开源模型之间切换，无需为每个提供商单独配置密钥；agent harness 也是可替换的，默认使用 Anton，另有 Hermes。数据方面提供连接 BigQuery、Postgres、Gmail、Drive、HubSpot、Notion、Linear 等的 vault，凭据按连接隔离。\n\n除了对话，它还能把 agent 输出转成文档、仪表盘、应用和代码，并发布到可访问的 URL，同时提供跨会话记忆、可复用技能库和定时任务。项目采用 MIT 协议，可部署在云端、VPC、本地、隔离网络或混合环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone --recurse-submodules https://github.com/mindsdb/minds.git && cd minds",
+  "安装依赖：make setup",
+  "运行桌面应用（Electron，热重载）：make dev 或 make watch",
+  "在浏览器中运行 Web 应用（热重载）：make dev-web",
+  "生产构建：make build"
+ ],
+ "summary": "MindsHub 是一个开源的 agent 工作台，把桌面/Web 应用、agent 后端和数据引擎放在同一个仓库里，可以按源码构建整套栈。它让用户不必绑定单一模型生态，可在 Claude、GPT、Gemini 与 DeepSeek、Qwen、Kimi 之间切换，agent harness 也可替换。适合需要完成报告、监控、内部工具等知识工作，或开发软件并希望自主部署的团队与个人。",
+ "tagline": "开源 agent 工作台，可自选模型完成知识与开发任务"
+}

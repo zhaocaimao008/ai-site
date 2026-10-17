@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要为 AI agent 提供私有文档检索能力的开发者与团队，尤其是希望自托管、并可能用到知识图谱的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "文档解析：支持 PDF、Word、PowerPoint、表格、图片、HTML、Markdown 和源代码，并按格式采用相应处理方式",
+  "自动更新：通过定时任务扫描文件变化、更新索引并维护已启用的知识图谱",
+  "混合检索：结合向量、关键词、图谱和视觉搜索，支持自动选择知识库和可选重排序",
+  "知识图谱：从文档中抽取实体类型、关系和事实，保留来源、时间信息和冲突标记",
+  "Agent 访问：通过 API 搜索、获取上下文文本或原始图片，并沿图谱关系追踪更多证据",
+  "Web 控制台：配置处理流程、查看分块和图谱、跟踪任务、管理服务，支持中英文"
+ ],
+ "intro": "Carrel 是一个面向 AI agent 的自托管知识库，核心思路是 Ontology-Augmented Generation。它自动完成文档解析、索引和检索，并可选构建知识图谱。Agent 通过 API 获取原文片段、图片和相关事实，再自行生成回答。\n\n它适合让 agent 访问产品文档、研究资料、合同、会议记录等会随时间变化的文件集合。项目提供 Web 控制台管理知识库、模型和处理任务，并附带一个 search skill，可接入 Claude Code、Codex 等 agent。\n\n技术上，Carrel 使用 MinerU 和原生解析器做文档摄入，Qdrant 做向量检索，OpenSearch 做关键词检索，Neo4j 做图查询，SQLite 跟踪文件与任务。模型服务可本地运行，也可连接兼容的托管端点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并运行部署脚本：git clone https://github.com/FengZhenfei/carrel.git && cd carrel && ./deploy.sh",
+  "编辑 config/knowledge-base.env，设置 embedding 和 vision 模型的 URL、模型名和 API key",
+  "打开控制台 http://127.0.0.1:9800，将文档放入 runtime/mirror/<folder>/ 并在控制台中启用该文件夹",
+  "如需知识图谱，在控制台注册 chat 模型并在知识库设置中启用图构建",
+  "在 agent 中安装 carrel-search skill，或直接调用搜索 API：curl -sS http://127.0.0.1:9810/search -H 'Content-Type: application/json' -d '{\"question\": \"...\", \"top_k\": 8}'"
+ ],
+ "summary": "Carrel 是一个自托管的 AI agent 知识库，解决的是让 agent 稳定访问私有、持续变化的文档集合的问题。它自动解析 PDF、Office、图片等多种格式，建立向量、关键词、图谱和视觉混合索引，agent 通过 API 取回原文片段、图片和图谱证据后自行作答。适合需要把产品文档、合同、研究资料接入 Claude Code、Codex 等 agent，并希望数据留在自有基础设施中的场景。",
+ "tagline": "面向 AI agent 的自托管知识库，支持文档解析、混合检索与知识图谱"
+}

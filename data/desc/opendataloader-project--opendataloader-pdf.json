@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要为 RAG 或 LLM 流程准备 PDF 数据的开发者，以及需要批量处理 PDF 无障碍合规的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "从 PDF 提取 Markdown、带 bounding box 的 JSON 和 HTML",
+  "确定性本地解析：阅读顺序、标题层级、列表、简单表格、图片坐标",
+  "Hybrid 模式处理复杂表格、扫描件 OCR、LaTeX 公式和图表描述",
+  "自动将未标记 PDF 转换为 Tagged PDF，面向屏幕阅读器场景",
+  "提供 Python、Node.js、Java SDK，支持批量转换",
+  "内置 AI 安全过滤，可过滤页眉、页脚和水印"
+ ],
+ "intro": "OpenDataLoader PDF 是一个用 Java 编写的开源 PDF 解析工具，目标有两个：把 PDF 转成适合 AI 使用的结构化数据，以及自动化 PDF 无障碍处理。它可以从数字版、扫描版和已标记的 PDF 中提取 Markdown、带 bounding box 的 JSON 和 HTML，提供 Python、Node.js、Java 三种 SDK，运行需要 Java 11+。\n\n在数据提取方面，项目提供确定性的本地模式和面向复杂页面的 hybrid 模式。本地模式负责阅读顺序、标题层级、列表、简单表格和图片坐标等基础解析；hybrid 模式则处理复杂或无边框表格、扫描件 OCR（80+ 语言）、LaTeX 公式以及图表描述。README 称其在 200 份真实 PDF 上的综合提取准确率为 0.907，表格准确率 0.928。\n\n在无障碍方面，项目可以自动把未标记的 PDF 转换为 Tagged PDF，这部分以 Apache-2.0 协议开源，并遵循 PDF Association 的 Well-Tagged PDF 规范，与 veraPDF 团队 Dual Lab 合作开发。完整的 PDF/UA-1、PDF/UA-2 导出和可视化编辑工具属于企业版附加功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认已安装 Java 11+ 和 Python 3.10+，可用 java -version 检查",
+  "安装 Python 包：pip install -U opendataloader-pdf",
+  "调用 convert 批量转换：opendataloader_pdf.convert(input_path=[\"file1.pdf\", \"file2.pdf\", \"folder/\"], output_dir=\"output/\", format=\"markdown,json\")"
+ ],
+ "summary": "OpenDataLoader PDF 是一个开源 PDF 解析工具，主要解决两类问题：一是把 PDF 转成适合 RAG 和 LLM 流程使用的结构化数据，输出 Markdown、带坐标的 JSON 和 HTML；二是把未标记的 PDF 自动转换为 Tagged PDF，用于无障碍场景。它提供本地确定性解析和面向复杂页面的 hybrid 模式，支持扫描件 OCR、复杂表格和公式提取，并有 Python、Node.js、Java 三种 SDK，适合需要批量处理 PDF 数据的开发者。",
+ "tagline": "面向 AI 数据与无障碍的 PDF 解析工具"
+}

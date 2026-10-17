@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合安全研究人员、逆向工程师以及希望借助 AI Agent 提升二进制分析效率的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "支持任意 ACP Agent（如 Claude、Codex、Gemini、Cursor 等），可在同一项目运行多个 Agent",
+  "Agent 通过内置 MCP 工具直接操作窗口：打开函数、切换视图、重命名、添加注释、修改类型和提交补丁",
+  "支持 Mach-O、ELF、PE 格式，查看函数、伪代码、汇编、控制流图、交叉引用、字符串、段和十六进制",
+  "支持 Android APK（jadx 解析 Java，可选 apktool 提供 smali），以及 .xapk、.apks 分包",
+  "支持 CUDA/HIP fat binary 以高亮 PTX 显示，可重写为 CUDA C++、HIP C++ 或 Metal",
+  "支持字节补丁、构建差异对比、LLDB 调试、导出伪代码/汇编/控制流图为 PDF"
+ ],
+ "intro": "Eleven 是一款以 Agent 为核心的逆向工程应用，支持 macOS、Windows 和 Linux。你可以把二进制文件、Android APK、GPU kernel、shader 或模型文件拖进来，直接询问它的功能。任何支持 Agent Client Protocol（ACP）的 Agent 都能读取代码、追踪引用、重命名函数、添加注释并给出补丁建议，而你在同一窗口中查看并批准这些操作。\n\n原生代码通过 Ghidra（经由 REA）或 Rizin 读取，Android 应用由 jadx 解析。界面使用 React 在 GPUI 上原生渲染。项目会保存聊天、重命名、书签、笔记和补丁，可导出为单个 .eleven 文件分享。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS：运行 curl -fsSL https://eleven.chizi.app/install.sh | bash 安装 Eleven.app 到 /Applications",
+  "Windows：在 PowerShell 中运行 irm https://eleven.chizi.app/install.ps1 | iex",
+  "Linux：从最新 release 下载 AppImage 或 .tar.gz",
+  "首次运行时按引导选择引擎（Rizin 或 Ghidra）和 Agent，Eleven 会自动安装缺失组件",
+  "从源码构建：克隆仓库后进入 app 目录，运行 bun install 和 bun run dev"
+ ],
+ "summary": "Eleven 是一个以 AI Agent 为核心的逆向工程应用，支持 macOS、Windows 和 Linux。它让支持 ACP 协议的 Agent 直接读取二进制、Android APK、GPU kernel 等文件，执行重命名、注释和补丁建议，用户在同一窗口审批。原生代码由 Ghidra 或 Rizin 解析，Android 由 jadx 解析。适合安全研究人员和逆向工程师借助 Agent 提升分析效率。",
+ "tagline": "面向 AI Agent 的跨平台逆向工程工具"
+}

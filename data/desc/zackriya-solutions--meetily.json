@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要处理敏感会议内容、希望数据不出本地的开发者与企业用户，也适合想自托管会议记录工具的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "本地实时转写，使用 Whisper 或 Parakeet 模型，无需云端",
+  "AI 会议摘要，支持 Ollama、Claude、Groq、OpenRouter 及 OpenAI 兼容接口",
+  "导入已有音频文件生成转写，或换模型/语言重新转写",
+  "支持 macOS、Windows，Linux 可从源码构建",
+  "所有录音、转写和摘要数据保存在本地"
+ ],
+ "intro": "Meetily 是一个隐私优先的 AI 会议助手，所有处理都在本地机器上完成，会议录音、转写文本和摘要都不会上传到云端。它使用 Whisper 或 Parakeet 模型进行实时转写，并可通过 Ollama 等本地模型生成会议摘要，适合对数据主权和合规有要求的场景。\n\n项目基于 Rust 构建，提供 macOS 和 Windows 的安装包，Linux 需要从源码编译。除了本地 Ollama，也支持 Claude、Groq、OpenRouter 或自建的 OpenAI 兼容接口作为摘要模型。README 还提到可导入已有音频文件重新转写，以及说话人分离（speaker diarization）等能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows：从 Releases 下载最新 x64-setup.exe 并运行安装",
+  "macOS：下载 meetily_0.4.1_aarch64.dmg，打开后将 Meetily 拖入 Applications 文件夹",
+  "Linux：git clone https://github.com/Zackriya-Solutions/meeting-minutes",
+  "cd meeting-minutes/frontend && pnpm install --frozen-lockfile",
+  "./build-gpu.sh"
+ ],
+ "summary": "Meetily 是一个把会议转写和摘要都放在本地完成的 AI 会议助手，录音、文本和摘要不会离开你的电脑，适合对隐私和合规有要求的团队或个人。它用 Whisper 或 Parakeet 做实时转写，并可选 Ollama 等模型生成摘要，支持 macOS 和 Windows，Linux 需自行编译。",
+ "tagline": "本地运行的隐私优先 AI 会议助手，实时转写与摘要"
+}

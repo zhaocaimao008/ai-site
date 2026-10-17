@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在 Blender 中用自然语言提示完成建模、场景搭建和材质调整的 3D 创作者与开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "通过 socket 服务器实现 Claude 等 LLM 与 Blender 的双向通信",
+  "创建、修改和删除 3D 对象，应用和调整材质与颜色",
+  "多角度、相机、线框、X-ray、动画条视图与渲染，供 AI 自查结果",
+  "AI 直接编写并执行 Blender Python 代码",
+  "接入 Poly Haven、Sketchfab、Poly Pizza 资产及 Tripo、Hyper3D Rodin、Hunyuan3D 生成的 3D 模型"
+ ],
+ "intro": "MCP for Blender 是一个第三方 Blender 插件，通过 Model Context Protocol（MCP）把 Blender 连接到任意 LLM，实现提示词驱动的 3D 建模、场景创建与操作。项目原名 blender-mcp，PyPI 包名现为 mcp-for-blender，旧配置无需改动即可继续使用。\n\n它由两部分组成：运行在 Blender 内的插件（addon.py）会启动一个 socket 服务器接收并执行命令；另一个 Python 服务器（src/blender_mcp/server.py）实现 MCP 协议并与插件通信。AI 可以直接编写 Blender Python 代码，创建、修改和删除 3D 对象，调整材质与颜色，并通过多角度、相机、线框、X-ray 和动画条视图以及渲染图进行视觉验证。此外还支持 Poly Haven、Sketchfab、Poly Pizza 等资产与模型，以及 Tripo、Hyper3D Rodin、Hunyuan3D 生成的 AI 3D 模型。\n\n项目使用 MIT 协议，与 Blender 官方基金会无关。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS / Linux 运行：curl -LsSf https://www.mcp-for-blender.com/install.sh | sh",
+  "Windows PowerShell 运行：powershell -ExecutionPolicy ByPass -c \"irm https://www.mcp-for-blender.com/install.ps1 | iex\"",
+  "已安装 uv 可直接运行：uvx mcp-for-blender setup",
+  "完全退出并重新打开 AI 应用，打开 Blender，在 3D 视口按 N 打开 MCP for Blender 标签页确认服务器已启动",
+  "在 AI 应用中提出建模需求即可开始"
+ ],
+ "summary": "MCP for Blender 是一个第三方 Blender 插件，通过 MCP 协议把 Blender 连接到任意 LLM，让用户用自然语言提示完成 3D 建模、场景创建和对象操作。它由 Blender 内的 socket 服务器插件和实现 MCP 的 Python 服务器组成，AI 可直接编写 Blender Python 代码，调整材质颜色，并通过多角度视图和渲染图检查结果。适合想在 Blender 中借助 AI 辅助建模的创作者和开发者。",
+ "tagline": "用任意 LLM 通过 MCP 协议控制 Blender 建模"
+}

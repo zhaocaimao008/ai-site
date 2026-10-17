@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要多语言语音合成、音色设计或语音克隆能力的开发者与研究人员，也适合希望快速体验 TTS 效果的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 30 种语言的多语言语音合成，无需语言标签",
+  "Voice Design：仅凭自然语言描述生成全新音色",
+  "Controllable Cloning：从短参考音频克隆音色，可选风格引导",
+  "Ultimate Cloning：结合参考音频与转写文本，保留音色、节奏、情感等细节",
+  "48kHz 高质量音频输出，内置超分辨率，无需外部上采样器",
+  "实时流式合成，在 NVIDIA RTX 4090 上 RTF 低至约 0.3"
+ ],
+ "intro": "VoxCPM 是一个 tokenizer-free 的文本转语音系统，通过端到端的扩散自回归架构直接生成连续语音表示，跳过离散分词环节，以获得更自然、更有表现力的合成效果。\n\nVoxCPM2 是最新版本，为 2B 参数模型，基于 MiniCPM-4 骨干，使用超过 200 万小时的多语言语音数据训练，支持 30 种语言以及四川话、粤语、吴语等中文方言。它提供 Voice Design（仅凭自然语言描述创建全新音色）、Controllable Cloning（用短参考音频克隆音色并可选风格引导）和 Ultimate Cloning（同时提供参考音频与转写文本，延续并保留音色、节奏、情感等细节）等能力。\n\n音频输出方面，AudioVAE V2 采用非对称编解码设计，可接受 16kHz 参考音频并直接输出 48kHz 音频，内置超分辨率，无需外部上采样器。项目权重与代码以 Apache-2.0 协议开源，可用于商业用途。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install voxcpm",
+  "使用 Python API 加载模型：model = VoxCPM.from_pretrained(\"openbmb/VoxCPM2\", load_denoiser=False)",
+  "生成语音：wav = model.generate(text=\"要合成的文本\", cfg_value=2.0, inference_timesteps=10, seed=42)",
+  "保存音频：sf.write(\"demo.wav\", wav, model.tts_model.sample_rate)",
+  "也可从 ModelScope 下载模型：snapshot_download(\"OpenBMB/VoxCPM2\", local_dir='./pretrained_models/VoxCPM2')"
+ ],
+ "summary": "VoxCPM 是一个不依赖离散分词的文本转语音系统，采用扩散自回归架构直接生成连续语音表示。最新版 VoxCPM2 为 2B 参数模型，基于 MiniCPM-4 骨干，支持 30 种语言和多种中文方言，并提供音色设计、可控克隆与高保真克隆等功能，可输出 48kHz 音频。适合需要多语言语音合成、音色定制或语音克隆的开发者与研究人员使用。",
+ "tagline": "无分词器的多语言 TTS，支持音色设计与克隆"
+}

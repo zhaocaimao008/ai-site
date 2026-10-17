@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 AI 编程助手进行代码审查或大型仓库开发的开发者，以及希望减少 LLM 上下文消耗的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "用 Tree-sitter 将代码库解析为节点和边构成的持久化知识图谱",
+  "通过 MCP 向 AI 编程工具提供精确的审查上下文",
+  "变更影响分析（blast-radius），追踪受影响的调用方、依赖和测试",
+  "增量更新：只重新解析 SHA-256 哈希变化的文件",
+  "自动检测并配置多种 AI 编程工具的 MCP 入口、hooks 和 skills",
+  "提供 CLI 命令用于构建、安装、卸载和管理图谱"
+ ],
+ "intro": "code-review-graph 是一个本地优先的代码智能图谱工具，用 Tree-sitter 把代码库解析成由节点（函数、类、导入）和边（调用、继承、测试覆盖）构成的图，并通过 MCP 协议把紧凑的上下文提供给 AI 编程助手。这样在代码审查或修改时，助手只需读取受影响的文件，而不是重新扫描整个项目。\n\n它支持增量更新：hooks、pre-commit 钩子和 watch 模式会触发更新，只重新解析 SHA-256 哈希发生变化的文件。项目提供 CLI 和 MCP 两种使用方式，可自动检测并配置 Codex、Claude Code、Cursor、Windsurf、Zed、Continue、OpenCode、Gemini CLI、GitHub Copilot 等平台。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install code-review-graph",
+  "code-review-graph install",
+  "code-review-graph build",
+  "在编辑器中打开项目，向助手发送：Build the code review graph for this project"
+ ],
+ "summary": "code-review-graph 解决的是 AI 编程工具在审查代码时反复读取大量文件、消耗过多上下文的问题。它在本地用 Tree-sitter 把代码库解析成结构化的知识图谱，并通过 MCP 把与改动相关的最小文件集合提供给助手。适合在大型仓库中使用 AI 助手做代码审查或修改的场景，也支持增量更新，避免每次全量重建。",
+ "tagline": "为 AI 编程工具提供本地代码知识图谱的 MCP 服务"
+}

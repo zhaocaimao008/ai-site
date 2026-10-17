@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Node.js / TypeScript 服务中做本地决策推理（如工单分类、紧急度评分、流失风险判断）的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 choice、score、noul 三种问题类型，一次调用批量处理多个问题",
+  "每个答案附带校准概率，并提供 answer_confidence 用于置信度门控",
+  "通过 ONNX Runtime 运行，无需 Python 或 PyTorch 运行时",
+  "输出与 Python 参考实现精确到小数点后四位",
+  "支持本地 ONNX 导出目录或从 Hugging Face 下载权重，可配置缓存目录与执行提供器",
+  "提供 export/export_onnx.py 脚本，可将 Hugging Face 检查点导出为 ONNX 图"
+ ],
+ "intro": "Laya 是 Convai Innovations 开源的一个 System 1 决策模型，它不生成文本，而是接收一个状态（如工单、邮件或 JSON 对象）和若干带类型的问题，在一次前向传播中返回所有答案及其校准概率。问题类型包括 choice（从选项中选一个）、score（有序评分）和 noul（是/否判断的 P(true)）。\n\n@receptron/laya 让开发者可以在 Node.js / TypeScript 中通过 ONNX Runtime 直接运行该模型，运行时不需要 PyTorch 或 Python。它的请求/响应结构与 Python 参考实现一致，输出与 Python 实现精确到小数点后四位。首次使用时从 Hugging Face 下载约 1.7 GB 的 ONNX 权重并缓存到本地。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：npm install @receptron/laya",
+  "在代码中导入并加载模型：const laya = await Laya.load();",
+  "调用 systemOne 传入状态和问题定义，获取带概率的答案",
+  "使用完毕后调用 await laya.close(); 释放资源"
+ ],
+ "summary": "Laya 是一个不生成文本的决策模型，接收工单、邮件或 JSON 等状态和带类型的问题，一次前向传播返回 choice、score、noul 三类答案及校准概率。这个 npm 包让 Node.js / TypeScript 项目通过 ONNX Runtime 直接运行它，无需 Python 或 PyTorch，输出与 Python 参考实现一致。适合需要在服务端本地做分类、评分或风险判断的场景。",
+ "tagline": "在 Node.js 中运行 Laya 决策模型，一次前向传播输出带概率的答案"
+}

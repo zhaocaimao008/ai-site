@@ -1,0 +1,27 @@
+{
+ "ai_related": true,
+ "audience": "需要统一管理 API、微服务以及 LLM、MCP 流量的开发者和运维团队，尤其是使用 Kubernetes 或希望以插件方式扩展网关能力的组织。",
+ "date": "2026-10-17",
+ "features": [
+  "高级路由、负载均衡与健康检查，可通过 RESTful Admin API 或声明式配置管理",
+  "支持 JWT、Basic Auth、OAuth、ACL 等多种 API 认证与授权方式",
+  "统一 LLM API，可在 OpenAI、Anthropic、GCP Gemini、AWS Bedrock、Azure AI、Databricks、Mistral、Huggingface 等多家提供商之间路由",
+  "MCP 流量治理、安全与可观测性，并支持从任意 RESTful API 自动生成 MCP",
+  "60+ AI 功能，包括 AI 可观测性、语义安全与缓存、语义路由等",
+  "代理、SSL/TLS 终止，支持 L4 或 L7 流量连接",
+  "插件体系用于流量控制、限流、请求/响应转换、日志、监控等，并提供插件开发者中心",
+  "支持声明式无数据库部署与混合部署（控制面/数据面分离）",
+  "通过官方 Ingress Controller 原生支持 Kubernetes"
+ ],
+ "intro": "Kong Gateway 是一个云原生、平台无关、可扩展的 API、LLM 与 MCP 网关，以高性能和插件化扩展著称。它提供代理、路由、负载均衡、健康检查、认证等能力，可作为编排微服务、传统 API 流量以及 LLM、MCP 流量的中心层。\n\n在 AI 方面，Kong 提供多 LLM 支持、语义安全、MCP 流量安全与分析等高级 AI 流量能力，并包含统一 LLM API，可在 OpenAI、Anthropic、GCP Gemini、AWS Bedrock、Azure AI、Databricks、Mistral、Huggingface 等多个提供商之间路由。它还支持 MCP 流量治理、安全与可观测性，并能从任意 RESTful API 自动生成 MCP。\n\nKong 通过官方 Kubernetes Ingress Controller 原生运行在 Kubernetes 上，支持声明式无数据库部署和混合部署（控制面/数据面分离）等部署模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆 Docker 仓库并进入 compose 目录：git clone https://github.com/Kong/docker-kong && cd docker-kong/compose/",
+  "启动网关栈：KONG_DATABASE=postgres docker-compose --profile database up",
+  "网关启动后，可通过 localhost:8000 发送流量到服务，通过 localhost:8001 使用 Admin API 或 decK 配置 Kong，通过 localhost:8002 访问 Kong Manager Web UI",
+  "参考官方快速入门指南进一步了解网关功能：https://docs.konghq.com/gateway-oss/latest/getting-started/configuring-a-service/",
+  "如需使用 LLM 和 MCP 相关的 AI Gateway 能力，请参考官方 AI 文档：https://developer.konghq.com/ai-gateway/"
+ ],
+ "summary": "Kong Gateway 是一个云原生、平台无关的 API 网关，同时面向 LLM 和 MCP 流量提供网关能力。它把代理、路由、负载均衡、认证等通用功能集中到一层，并在此基础上提供多 LLM 路由、语义安全、MCP 治理等 AI 相关特性。适合需要在微服务、传统 API 与 AI 流量之间统一入口、并希望借助插件扩展的团队，也支持在 Kubernetes 上原生运行。",
+ "tagline": "云原生 API、LLM 与 MCP 网关"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "希望在自有环境中部署 AI 编程补全与问答能力的开发者、团队和企业。",
+ "date": "2026-10-17",
+ "features": [
+  "自托管部署，无需 DBMS 或云服务",
+  "提供 OpenAPI 接口，便于与现有基础设施集成",
+  "支持消费级 GPU 运行",
+  "提供 VSCode、Vim、IntelliJ 等 IDE/编辑器扩展",
+  "包含 Answer Engine，可整合团队内部数据回答问题"
+ ],
+ "intro": "Tabby 是一个可自托管的 AI 编程助手，定位为 GitHub Copilot 的开源、本地部署替代方案。它用 Rust 编写，强调自包含，不需要额外的数据库或云服务即可运行，并且支持消费级 GPU，方便在自有硬件上部署。\n\nTabby 提供 OpenAPI 接口，便于与已有基础设施（如 Cloud IDE）集成。项目同时提供 IDE/编辑器扩展，覆盖 VSCode、Vim、IntelliJ 等，并配有安装、配置和扩展相关文档。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考官方文档的 Installation 页面安装 Tabby 服务端",
+  "安装对应的 IDE/编辑器扩展（如 VSCode、Vim、IntelliJ）",
+  "按 Configuration 文档完成配置并连接服务端"
+ ],
+ "summary": "Tabby 是一个可自托管的 AI 编程助手，目标是提供 GitHub Copilot 的开源、本地部署替代方案。它自包含运行，不需要数据库或云服务，支持消费级 GPU，并提供 OpenAPI 接口以便接入现有基础设施。项目还提供 VSCode、Vim、IntelliJ 等编辑器扩展，适合希望在自有环境中使用代码补全与问答能力的开发者或团队。",
+ "tagline": "可自托管的开源 AI 编程助手"
+}

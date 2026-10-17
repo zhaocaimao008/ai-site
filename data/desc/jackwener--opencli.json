@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要让 AI Agent 操作网页的开发者，以及希望用命令行稳定访问常用网站、不想每次手动打开浏览器的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "内置 Bilibili、知乎、小红书、Reddit、HackerNews、Twitter/X 等站点适配器，可直接运行确定性命令",
+  "通过 opencli browser 原语让 AI Agent 在已登录的 Chrome 会话中导航、点击、填表、提取和截图",
+  "提供 opencli-adapter-author skill，引导从侦察、字段解析到代码编写和测试的完整适配器开发流程",
+  "命令默认输出 JSON，成功与失败都有统一结构，便于脚本和 Agent 消费",
+  "支持多 Chrome profile 管理，可用 opencli profile list/rename/use 切换",
+  "提供 opencli doctor 诊断浏览器连接，以及插件机制安装第三方命令"
+ ],
+ "intro": "OpenCLI 是一个面向 AI Agent 的通用浏览器自动化 CLI，也可以作为 agent-browser 的替代方案。它通过一个轻量的 Browser Bridge 扩展加本地 daemon 连接 Chrome/Chromium，让 AI Agent 直接在你已登录的浏览器会话里操作网页，无需为每个站点单独写适配器。\n\n它同时提供三种使用方式：内置适配器覆盖 Bilibili、知乎、小红书、Reddit、HackerNews、Twitter/X 等站点，可直接执行确定性命令；安装 opencli-browser skill 后，Claude Code、Cursor 等 AI Agent 能通过 opencli browser 原语导航、点击、填表、提取和截图任意页面；还可以借助 opencli-adapter-author skill 从零编写新的适配器，并用 opencli adapter test 验证。\n\n命令默认输出 JSON，成功返回 { \"ok\": true, \"data\": ... }，失败返回带 code、message、hint 的错误对象并使用非零退出码，方便脚本和 Agent 解析。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 OpenCLI：桌面端可从 https://opencli.info/download 下载 OpenCLIApp；或使用 npm 全局安装（需 Node.js >= 20.18.1）：npm install -g @jackwener/opencli",
+  "安装 Browser Bridge 扩展：从 Chrome Web Store 安装 OpenCLI，或从 GitHub Releases 下载 zip 后在 chrome://extensions 开启开发者模式并 Load unpacked",
+  "运行 opencli doctor 验证环境",
+  "可选：用 opencli profile list 和 opencli profile rename <contextId> work 管理多个 Chrome profile",
+  "运行第一条命令：opencli list、opencli hackernews top --limit 5 或 opencli bilibili hot --limit 5"
+ ],
+ "summary": "OpenCLI 把网站和浏览器会话变成确定性的命令行接口，既方便人用脚本稳定访问常用站点，也让 AI Agent 能直接操作你已登录的 Chrome。它内置 Bilibili、知乎、小红书、Reddit、HackerNews、Twitter/X 等适配器，同时提供 opencli browser 原语，让 Claude Code、Cursor 等 Agent 导航、点击、填表和提取任意页面，并支持编写和测试自己的适配器。",
+ "tagline": "把任意网站变成 CLI，让 AI Agent 复用你已登录的浏览器"
+}

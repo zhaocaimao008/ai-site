@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管、无内容过滤地使用多种 AI 图像与视频生成模型的开发者、创作者，以及想搭建自有 AI 工作室产品的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "聚合 600+ 图像与视频生成模型，覆盖 Flux、Midjourney、Kling、Sora、Veo 等",
+  "按用途划分为 Image、Video、Audio、Lip Sync、Cinema、Workflows 等 14 个工作室",
+  "无内容过滤，支持自托管，采用 MIT 许可",
+  "提供网页版，无需安装即可在浏览器中使用",
+  "提供 macOS、Windows、Linux 桌面应用安装包",
+  "支持通过 MuAPI White Label 做白标部署与转售"
+ ],
+ "intro": "Open Generative AI 是一个基于 JavaScript 的开源 AI 图像与视频生成工作室，定位为商业 AI 视频平台的无限制替代方案。它聚合了 600 多个模型，覆盖 Flux、Midjourney、Kling、Sora、Veo 等，分布在 Image、Video、Audio、Lip Sync、Cinema、Workflows 等 14 个工作室中，并强调无内容过滤、自托管和 MIT 许可。\n\n项目提供网页版、桌面应用（macOS、Windows、Linux）以及本地构建方式。桌面端通过 Electron 打包，README 中给出了 macOS 因未公证而需要解除 Gatekeeper 拦截的具体命令。生成能力由 MuAPI 提供，README 也提到可基于 MuAPI White Label 做白标转售。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在线体验：直接访问 https://muapi.ai/open-generative-ai 使用全部工作室，无需安装",
+  "桌面端：从 GitHub Releases 下载对应平台的安装包（macOS 的 .dmg、Windows 的 .exe、Linux 的 .AppImage 或 .deb）",
+  "macOS 首次启动被 Gatekeeper 拦截时，在终端执行：xattr -cr \"/Applications/Open Generative AI.app\"，然后右键应用选择“打开”",
+  "Linux 本地构建：npm run electron:build:linux"
+ ],
+ "summary": "Open Generative AI 是一个开源的 AI 图像与视频生成工作室，把 600 多个模型集中到 14 个工作室里，覆盖 Flux、Midjourney、Kling、Sora、Veo 等，并强调无内容过滤和自托管。它提供网页版和桌面应用，适合想绕开商业平台订阅与内容限制、自行部署生成工具的开发者与创作者，也支持白标转售。",
+ "tagline": "开源无过滤的 AI 图像与视频生成工作室"
+}

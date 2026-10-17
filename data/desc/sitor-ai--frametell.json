@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合需要制作知识解说视频的创作者，尤其是讲解历史、科学、技术、投资、心理学或书籍内容的人，以及不想学习视频剪辑、希望用 AI 快速把想法变成视频的开发者与普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "输入一句话或上传文档、PDF、幻灯片、图片、Markdown 等素材即可生成视频",
+  "导演代理先生成分镜脚本，用户确认或修改后才继续绘制",
+  "自动撰写旁白并配音，支持 ElevenLabs 和火山引擎 TTS（中文）",
+  "内置 warm-story、study、chalkboard、whiteboard、tech-dark 五种视觉风格",
+  "每一步显示耗时和花费，并对页面和最终视频做质量检查",
+  "本地优先，素材和 API 密钥保存在本地，支持多种模型提供商"
+ ],
+ "intro": "Frametell（帧言）是一个把想法或素材变成解说视频的工具。你只需要输入一句话，比如“解释不确定性原理”，或者提供笔记、文档、PDF、幻灯片和图片，它就能开始工作。\n\n它内置一个导演代理：先根据你的输入生成分镜脚本，等你确认或修改后，再撰写旁白、用 ElevenLabs 或火山引擎 TTS 配音、绘制每一页画面，并做质量检查，最终输出带字幕的 1080p MP4 视频。整个过程可以在桌面应用中看到，每一步的花费和时间都显示在屏幕上。\n\n它面向需要讲解历史、科学、技术、投资、心理学或书籍的知识创作者，适合不想学视频剪辑、只想把故事讲清楚的人。项目采用本地优先设计，素材和 API 密钥保留在本地，支持 Anthropic、OpenAI、Google、DeepSeek、OpenRouter 等模型提供商，以及任何兼容 OpenAI 或 Anthropic 的端点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS（Apple Silicon）用户从最新 release 下载 .dmg 并拖入 Applications；需安装 Chrome、Edge 或 Chromium",
+  "在设置中添加模型提供商（Anthropic、OpenAI、Google、OpenRouter 等）的 API 密钥，以及 ElevenLabs 密钥用于配音",
+  "Windows 和 Intel Mac 用户从源码运行：需要 Node.js 22.19+、pnpm 和 Chrome/Edge/Chromium",
+  "git clone https://github.com/sitor-ai/frametell.git && cd frametell && pnpm install && pnpm build",
+  "export ANTHROPIC_API_KEY=... 和 export ELEVENLABS_API_KEY=...（可选）",
+  "在浏览器打开工作室：node apps/cli/dist/cli.js serve；或直接生成视频：node apps/cli/dist/cli.js run notes.pdf --style warm-story --duration 60 --lang en"
+ ],
+ "summary": "Frametell 是一个把想法或素材变成解说视频的 AI 工具。你输入一句话，或提供文档、PDF、幻灯片、图片，它先让导演代理生成分镜脚本，等你确认后再写旁白、配音、绘制页面并渲染出带字幕的 1080p 视频。它适合讲解历史、科学、技术、投资等知识内容的创作者，不想学剪辑也能用。项目本地优先，支持多种模型提供商。",
+ "tagline": "用 AI 导演代理把想法和素材变成解说视频"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要自建并掌控 Agent 平台的 Python 开发者与团队，尤其是关注数据自主、权限隔离和多渠道接入的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "Agno SDK 构建 Agent，AgentOS 运行时以服务方式运行，AgentOS UI 统一管理",
+  "生产级 API：50+ 端点，支持 SSE 与 websockets",
+  "存储会话、记忆、知识和 trace 到自有数据库",
+  "100+ 预置工具集成，可连接 GitHub、Slack、Postgres 等",
+  "JWT 的 RBAC 权限与多用户、多租户隔离",
+  "人工审批、OpenTelemetry 可观测性、Cron 定时任务，以及 Slack、Telegram、Discord 等接口"
+ ],
+ "intro": "Agno 是一个用于构建 Agent 平台的框架和运行时。它由三部分组成：用 Agno SDK 构建 Agent 平台，用 AgentOS 运行时把 Agent 作为服务运行，再通过 AgentOS UI 进行管理。项目强调让开发者自己掌控 Agent 技术栈，包括数据、记忆和安全策略。\n\n运行时提供 50 多个 API 端点，支持 SSE 和 websockets；会话、记忆、知识和 trace 可以存进自己的数据库；内置 100 多个工具集成，可连接 GitHub、Slack、Postgres 等。此外还提供 JWT 的 RBAC 权限、多用户多租户隔离、人工审批、OpenTelemetry 可观测性、定时任务，以及 Slack、Telegram、WhatsApp、Discord 等接入方式。部署上支持任何能跑容器的云平台，官方提供了 Railway、Docker、AWS、GCP、Azure 等启动模板。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "把 README 中的提示词交给编码 Agent（如 Claude Code、Cursor、Codex）",
+  "让它克隆 https://github.com/agno-agi/agentos-railway 到 agent-platform 目录并阅读 README",
+  "按其中的 get started 指南操作，用 Docker 在本地运行平台",
+  "如需部署到其他环境，把仓库换成 agentos-docker、agentos-aws、agentos-gcp 等对应模板",
+  "也可以参考文档 https://docs.agno.com/first-agent 用 20 行代码构建第一个 Agent"
+ ],
+ "summary": "Agno 面向想自建 Agent 平台的开发者，提供 SDK 用来编写 Agent，AgentOS 运行时把 Agent 作为服务跑起来，并配有 Web UI 做管理。它把会话、记忆、知识和 trace 存进自己的数据库，内置大量工具集成、权限隔离、人工审批和可观测性，还能通过 Slack、Telegram 等渠道对外提供服务。适合需要掌控数据与安全、并希望把 Agent 部署到自有容器环境的团队。",
+ "tagline": "构建、运行和管理 Agent 平台的 Python 框架与运行时"
+}

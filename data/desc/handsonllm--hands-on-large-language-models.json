@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望系统学习大语言模型原理与实践的开发者、数据科学家和学生，也适合作为 O'Reilly 图书的配套练习材料。",
+ "date": "2026-10-17",
+ "features": [
+  "按章节组织的 12 个 Jupyter Notebook，对应书中全部示例",
+  "覆盖 LLM 基础、Transformer 内部、文本分类与聚类、提示工程、RAG、多模态等主题",
+  "每个 Notebook 提供 Google Colab 一键运行入口",
+  "包含近 300 张自制插图辅助理解",
+  "提供本地安装与 conda 环境配置指南"
+ ],
+ "intro": "这是 Jay Alammar 和 Maarten Grootendorst 合著的 O'Reilly 图书《Hands-On Large Language Models》的官方代码仓库。书中包含近 300 张自制插图，以视觉化方式讲解大语言模型的核心概念与实践工具。\n\n仓库按章节提供了 12 个 Jupyter Notebook，覆盖从语言模型入门、Token 与嵌入、Transformer 内部机制，到文本分类、聚类、提示工程、语义搜索与 RAG、多模态模型，以及嵌入模型创建和模型微调等主题。\n\n所有示例主要基于 Google Colab 构建和测试，建议通过 Colab 运行，可免费使用 T4 GPU（16GB 显存）。仓库的 .setup 文件夹提供了本地安装指南，conda 文件夹包含完整的环境配置说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "推荐通过 Google Colab 运行：点击各章节 Notebook 的 Colab 徽章即可打开",
+  "本地运行可查看 .setup 文件夹中的快速安装指南",
+  "完整环境配置（含 conda 和 PyTorch 安装）参考 .setup/conda 文件夹",
+  "注意：不同操作系统、Python 版本和依赖可能导致结果略有差异"
+ ],
+ "summary": "这个仓库是 O'Reilly 图书《Hands-On Large Language Models》的官方代码库，按章节提供 12 个 Jupyter Notebook，涵盖语言模型入门、Token 与嵌入、Transformer 内部、文本分类与聚类、提示工程、语义搜索与 RAG、多模态模型、嵌入模型创建及模型微调等主题。所有示例主要基于 Google Colab 构建和测试，建议通过 Colab 运行以免费使用 T4 GPU。适合想系统学习大语言模型原理与实践的开发者、数据科学家和学生，也可作为图书的配套练习材料。",
+ "tagline": "O'Reilly 图书《Hands-On Large Language Models》的官方代码仓库"
+}
