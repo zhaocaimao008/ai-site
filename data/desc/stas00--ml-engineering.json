@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合从事大模型训练与推理的工程师、运维人员，以及需要快速查阅实战技巧的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "涵盖 LLM/VLM 训练全流程的实战指南",
+  "提供硬件、网络、存储的性能对比表格",
+  "包含可直接运行的基准测试脚本（如 torch-dist-bench.py）",
+  "提供 SLURM 速查表和 PyTorch 调试技巧",
+  "支持下载 PDF/EPUB 电子书版本",
+  "提供用于 AI 代理的 SKILL.md 技能文件"
+ ],
+ "intro": "这是一本关于机器学习工程的开源书籍，内容涵盖训练和微调大语言模型（LLM）与多模态模型（VLM）的方法论、工具和逐步操作指南。作者基于训练 BLOOM-176B、IDEFICS-80B 等大模型的经验，整理了硬件、编排、训练、推理、调试等主题的实用知识。\n\n书中包含大量脚本和可直接复制的命令，帮助工程师快速解决实际问题。内容分为多个部分，包括硬件选型、SLURM 使用、PyTorch 调试、网络基准测试等，并提供了电子书版本和 AI 代理技能文件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读在线书籍：https://stasosphere.com/machine-learning/",
+  "下载 PDF 或 EPUB 电子书：https://huggingface.co/stas/ml-engineering-book",
+  "使用基准测试脚本：python torch-dist-bench.py",
+  "参考 SLURM 速查表：orchestration/slurm/users.md"
+ ],
+ "summary": "这本书汇集了作者训练 BLOOM-176B、IDEFICS-80B 等大模型的一手经验，系统讲解 LLM/VLM 训练与推理中的工程问题，包括硬件选型、网络配置、SLURM 编排、PyTorch 调试等。内容以脚本和命令为主，适合需要快速解决实际问题的训练工程师和运维人员查阅。",
+ "tagline": "面向 LLM/VLM 训练工程师的实战手册"
+}

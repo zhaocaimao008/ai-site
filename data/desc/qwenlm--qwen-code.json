@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在终端或编辑器中获得 AI 编码辅助的开发者，以及希望将编码代理集成到自动化流程或聊天工具中的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "终端交互式编码代理，支持自动记忆、技能、子代理和 MCP",
+  "多协议支持：OpenAI、Anthropic、Gemini、Qwen API 及本地模型",
+  "多种界面：终端、桌面应用、Web UI、VS Code/Zed/JetBrains 插件",
+  "聊天集成：Telegram、钉钉、微信、飞书",
+  "无头模式（qwen -p）用于脚本和自动化",
+  "提供 TypeScript、Python、Java SDK"
+ ],
+ "intro": "Qwen Code 是一个开源的 AI 编码代理，主要运行在终端中，同时也提供桌面应用、Web UI、编辑器插件和聊天集成等多种使用方式。它基于 Qwen 模型，支持 OpenAI、Anthropic、Gemini 等 API 协议，也可以连接本地模型（如 Ollama、vLLM）。\n\n项目内置了 Auto-Memory、Auto-Skills、SubAgents、Agent Teams 和 MCP 等代理能力，无需复杂配置即可使用。除了交互式终端，还支持无头模式（headless）用于脚本和 CI/CD，并提供 TypeScript、Python、Java 的 SDK 以便集成到自定义工具中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux/macOS 安装：curl -fsSL https://qwen-code-assets.oss-cn-hangzhou.aliyuncs.com/installation/install-qwen-standalone.sh | bash",
+  "Windows 安装：irm https://qwen-code-assets.oss-cn-hangzhou.aliyuncs.com/installation/install-qwen-standalone.ps1 | iex",
+  "或使用 npm 安装：npm install -g @qwen-code/qwen-code@latest（需 Node.js 22+）",
+  "在项目目录运行 qwen 启动会话",
+  "在会话中运行 /auth 配置提供商和 API key"
+ ],
+ "summary": "Qwen Code 是一个开源的 AI 编码代理，主要运行在终端中，帮助开发者理解代码库、编写和修改代码。它支持多种模型 API 协议和本地模型，并提供桌面应用、编辑器插件、聊天集成以及 SDK，适合需要在命令行或 IDE 中获得 AI 辅助的开发者，也便于集成到自动化流程中。",
+ "tagline": "开源 AI 编码代理，支持终端、编辑器、桌面和聊天"
+}

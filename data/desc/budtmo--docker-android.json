@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合 Android 开发者、测试工程师和 DevOps 人员，用于在容器化环境中进行应用开发、自动化测试和持续集成。",
+ "date": "2026-10-17",
+ "features": [
+  "支持多种设备配置和皮肤，如 Samsung Galaxy S10、Nexus 4 等",
+  "通过 VNC 在浏览器中查看容器内模拟器界面",
+  "支持 adb 从外部控制模拟器",
+  "可用于构建 Android 项目及运行单元/UI 测试（Appium、Espresso）",
+  "集成 MCP 服务器和 AI 代理（测试版），支持 Ollama、VLLM"
+ ],
+ "intro": "Docker-Android 是一个 Docker 镜像，用于在容器中运行 Android 模拟器，支持多种设备配置和皮肤，如 Samsung Galaxy S10、Nexus 4 等。它提供 VNC 支持，可通过浏览器查看容器内界面，并支持 adb 连接进行外部控制。\n\n该项目适用于 Android 应用开发与测试，包括原生、Web 和混合应用。它可以构建 Android 项目，运行单元测试和 UI 测试（如 Appium、Espresso），并集成 Jenkins 等 CI 工具。此外，还提供 MCP 服务器和 AI 代理（测试版），支持本地 LLM 服务器如 Ollama 和 VLLM。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保主机支持虚拟化，运行 `sudo apt install cpu-checker` 和 `kvm-ok` 检查",
+  "运行容器：`docker run -d -p 6080:6080 -e EMULATOR_DEVICE=\"Samsung Galaxy S10\" -e WEB_VNC=true --device /dev/kvm --name android-container budtmo/docker-android:emulator_11.0`",
+  "打开 http://localhost:6080 查看容器内界面",
+  "检查模拟器状态：`docker exec -it android-container cat device_status`"
+ ],
+ "summary": "Docker-Android 让你在 Docker 容器中运行 Android 模拟器，方便进行应用开发和自动化测试。它支持多种设备配置和 VNC 远程查看，还能通过 adb 从外部控制。适合需要容器化 Android 环境进行持续集成或 UI 测试的开发者，并实验性地集成了 AI 代理和 MCP 服务器。",
+ "tagline": "在 Docker 中运行 Android 模拟器，支持 VNC 和 AI 代理"
+}

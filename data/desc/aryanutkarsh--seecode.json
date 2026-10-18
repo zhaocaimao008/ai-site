@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code 等编码 Agent 的开发者，以及需要快速制作系统架构图、流程图并用于文档或演示的技术人员。",
+ "date": "2026-10-17",
+ "features": [
+  "从简短 JSON 规格生成动画、可探索的图表",
+  "支持 45 种图表类型，包括架构、时序、流程、ER、部署等",
+  "输出单个 HTML 文件，可悬停追踪、点击聚焦、逐步浏览",
+  "支持导出 SVG、PNG、GIF、MP4 多种格式",
+  "可导入 Mermaid、draw.io 等已有图表格式",
+  "提供主题与品牌定制，图表数据可从 CSV/JSON 读取"
+ ],
+ "intro": "SeeCode 是一个面向 Claude Code、Codex、Cursor 等编码 Agent 的图表生成工具。你只需用自然语言描述想看的系统结构，Agent 会生成一份简短的 JSON 规格，SeeCode 再把它渲染成可悬停、可点击、可逐步浏览的动画图表，输出为单个 HTML 文件。\n\n项目支持 45 种图表类型，涵盖架构图、时序图、流程图、ER 图、部署图、甘特图等，每种类型都有对应的动画方式，也可以完全静态展示。图表支持主题定制，并能导入已有的 Mermaid、draw.io 等格式，最终可导出为 SVG、PNG、GIF 或 MP4。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code 用户执行：/plugin marketplace add Aryanutkarsh/seecode",
+  "再执行：/plugin install seecode@seecode",
+  "Cursor、Codex、OpenCode 等用户执行：npx skills add Aryanutkarsh/seecode -g",
+  "向 Agent 描述需求，例如：Use SeeCode to show how checkout works",
+  "用自然语言继续调整，如 highlight the payment path 或 export it for my slides"
+ ],
+ "summary": "SeeCode 解决的是让编码 Agent 快速产出可读、可交互图表的问题。你只需用自然语言描述系统结构，Agent 生成简短 JSON 规格，工具便渲染成带动画的 HTML 图表，支持悬停追踪和逐步浏览。适合需要架构图、时序图、流程图来讲解系统或写文档的开发者，也能导出为图片或视频用于演示。",
+ "tagline": "把简短 JSON 规格变成可交互动画图表"
+}

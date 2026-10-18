@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合从事语音识别、语音合成和语音大模型研究的开发者，以及需要在 PyTorch 环境中定制或部署语音模型的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "支持自动语音识别（ASR）与流式识别模型",
+  "支持文本转语音（TTS）与多语言语音合成",
+  "提供语音大模型（Speech LLM）相关能力",
+  "提供预训练模型检查点与 HuggingFace 演示",
+  "推荐用 uv 从源码安装，也可在现有 PyTorch 环境上 pip 安装"
+ ],
+ "intro": "NVIDIA NeMo Speech 是 NVIDIA 维护的语音 AI 框架，面向做语音识别（ASR）、语音合成（TTS）和语音大模型（Speech LLM）的研究者与 PyTorch 开发者。它提供可复用的代码和预训练模型检查点，方便在已有基础上创建、定制并部署语音模型。\n\n仓库已转向专注音频、语音和多模态 LLM；README 提到 Parakeet、Canary、MagpieTTS、Nemotron-Speech-Streaming 等模型，以及 HuggingFace 上的开放权重和演示。安装推荐用 uv 从源码同步，也支持在已有 Python/PyTorch/CUDA 环境中通过 pip 安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/NVIDIA-NeMo/Speech.git",
+  "cd Speech",
+  "uv sync --extra all --extra cu13",
+  "source .venv/bin/activate"
+ ],
+ "summary": "NVIDIA NeMo Speech 是一个面向语音 AI 的 PyTorch 框架，覆盖语音识别、语音合成和语音大模型。它提供可复用的代码与预训练检查点，帮助研究者和开发者在此基础上定制并部署语音模型，适合需要做 ASR、TTS 或流式语音应用的场景。",
+ "tagline": "NVIDIA 面向语音与音频大模型的训练与部署框架"
+}

@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合想理解并亲手搭建 AI 编程 Agent 运行环境的开发者，以及希望让 Agent 在长任务中稳定工作的工程人员。",
+ "date": "2026-10-17",
+ "features": [
+  "14 讲课程，从基础概念讲到 Loop Engineering 与 Graph Engineering",
+  "8 个动手项目，包含目标循环、定时循环、maker-checker 循环等实验",
+  "拆解 Pi、Claude Code、Codex、DeepSeek 四个前沿产品的 Harness 设计",
+  "提供 goal-template.md、loop-state-template.md 等可直接使用的模板",
+  "README 与课程内容提供 15 种语言版本，含简体中文"
+ ],
+ "intro": "这是一个围绕 AI 编程 Agent 工程实践的项目式课程，目标是讲清楚如何搭建环境、管理状态、做验证与控制，让 Agent 能稳定地工作。课程内容综合了业界关于 Harness Engineering 的理论与实践，并给出了参考来源。\n\n课程包含 14 讲和 8 个项目，覆盖从单循环到 Loop Engineering、Graph Engineering 的演进，并专门拆解了 Pi、Claude Code、Codex、DeepSeek 等产品的 Harness 设计。README 提供 15 种语言的版本，包括简体中文。\n\n项目使用 TypeScript 编写，采用 MIT 协议，配套有在线站点和社区 Discord。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这门课程讲的是 AI 编程 Agent 背后的 Harness 工程：如何为 Agent 准备环境、管理状态、设计验证与控制机制，让它能可靠地完成长任务。内容以课程加动手项目的形式组织，从单循环逐步讲到循环工程和图工程，并拆解了若干前沿产品的实际设计，适合想深入理解或自己搭建 Agent 运行环境的开发者。",
+ "tagline": "从零开始学习 AI 编程 Agent 的 Harness 工程"
+}

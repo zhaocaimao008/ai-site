@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合刚完成项目、希望快速制作发布短片的开发者，以及使用 Claude Code、Codex CLI 等编码助手的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "一条命令生成带音乐、动效和分享文案的发布短片",
+  "支持 --tone 自定义视频语气，--voice 开启旁白",
+  "输出 brag-output/ 文件夹，包含计划、构图简报、分享文案和 brag.mp4",
+  "提供 /brag-slim 精简版，适配 Claude Opus 5.5",
+  "支持 Claude Code、Codex CLI、opencode 等多种 Agent 安装方式"
+ ],
+ "intro": "/brag 是一个 Agent Skill，用于把刚完成的项目转换成一段简短、可分享的发布视频，包含音乐、动效和分享文案。它由 Hyperframes 驱动，在支持 Agent Skills 的编码助手中运行，例如 Claude Code、Codex CLI、opencode 等。\n\n使用时在项目目录里对助手说“let's /brag”，即可生成包含计划、构图简报、分享文案和 brag.mp4 的 brag-output/ 文件夹。还支持通过 --tone 指定语气，通过 --voice 开启旁白。\n\n仓库同时提供 /brag-slim，这是为 Claude Opus 5.5 重建的精简版本，不依赖 Hyperframes 和捆绑素材，但保留相同的创意规则。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code 用户：运行 /plugin marketplace add latent-spaces/brag 和 /plugin install brag@brag",
+  "Codex 用户：运行 codex plugin marketplace add latent-spaces/brag 和 codex plugin add brag@brag",
+  "其他 Agent：运行 npx skills add https://github.com/latent-spaces/brag --skill brag",
+  "在项目目录中对助手说 let's /brag，或使用 /brag --tone \"...\" 指定语气",
+  "从生成的 brag-output/ 文件夹中获取 brag.mp4 和分享文案"
+ ],
+ "summary": "brag 是一个面向编码助手的 Agent Skill，解决项目完成后快速制作发布短片的需求。它把项目内容交给 Hyperframes 渲染成带音乐、动效和分享文案的短视频，适合需要为新产品或开源项目制作宣传素材的开发者。",
+ "tagline": "一条命令把项目变成可分享的发布短片"
+}

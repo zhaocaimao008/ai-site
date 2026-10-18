@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将电子书转换为有声书的开发者、内容创作者和普通用户，尤其是对多语言支持和语音克隆有需求的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "支持多种 TTS 引擎，包括 XTTSv2、Bark、VITS 等",
+  "支持语音克隆，可使用自己的声音文件",
+  "支持 1158 种语言和多种电子书格式",
+  "提供 Gradio 网页界面和命令行两种使用方式",
+  "支持 SML 标签，可控制停顿和切换声音",
+  "输出格式丰富，包括 mp3、m4b、wav 等"
+ ],
+ "intro": "ebook2audiobook 是一个基于 Python 的工具，能够将电子书转换为带有章节和元数据的有声书。它使用先进的 TTS 引擎，支持语音克隆和超过 1158 种语言，并可在 CPU 或 GPU 上运行。\n\n该项目支持多种电子书格式（如 epub、pdf、mobi 等）和输出音频格式（如 mp3、m4b、wav 等），并提供 Gradio 网页界面和命令行两种使用方式。用户还可以通过 SML 标签对语音进行细粒度控制，如插入停顿或切换声音。\n\n工具设计轻量，最低只需 2GB 内存和 1GB 显存，适合在本地或远程环境（如 Docker、Colab、Kaggle）中运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/DrewThomasson/ebook2audiobook.git",
+  "进入目录并安装依赖：cd ebook2audiobook && pip install -r requirements.txt",
+  "启动 Gradio 网页界面：python app.py",
+  "或使用命令行转换：python ebook2audiobook.py --input book.epub --output audiobook.mp3"
+ ],
+ "summary": "ebook2audiobook 是一个将电子书转换为有声书的工具，支持语音克隆和超过 1158 种语言。它使用多种 TTS 引擎，可在 CPU 或 GPU 上运行，并提供网页界面和命令行两种操作方式。适合需要为电子书生成有声版本的用户，尤其是多语言内容或希望使用自定义声音的场景。",
+ "tagline": "将电子书转换为有声书，支持语音克隆和1158种语言。"
+}

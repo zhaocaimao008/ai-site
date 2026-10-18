@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望构建带记忆和持续学习能力 Agent 的开发者，以及想通过终端、桌面或聊天渠道直接使用 Agent 的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "构建具备长期记忆、可随时间学习改进的有状态 Agent",
+  "提供交互式终端 UI，通过 letta 命令直接启动",
+  "支持 letta server 运行 App Server，用于本地或自托管部署",
+  "覆盖桌面应用、浏览器、Slack/Telegram/Discord 等多端接入",
+  "提供 Letta Agent SDK，便于在 TypeScript 应用中集成 Agent",
+  "Letta Cloud 可在不同电脑间同步 Agent 的记忆、身份和对话"
+ ],
+ "intro": "Letta（原名 MemGPT）是一个用于构建有状态 Agent 的平台，核心特点是让 AI 具备记忆能力，并能在使用过程中持续学习和改进。项目当前活跃开发，源码已迁移至 letta-ai/letta-code，其中包含 Agent harness、交互式终端 UI、App Server、各类 channel 以及桌面端和 Web 应用使用的运行时。\n\n使用方式比较灵活：可以通过 npm 全局安装后启动终端交互界面，也可以运行 App Server 在本地或自托管环境部署 Agent；此外还提供 macOS、Windows、Linux 桌面应用、浏览器端 chat.letta.com、Slack/Telegram/Discord 等渠道接入，以及用于在 TypeScript 应用中集成 Agent 的 Letta Agent SDK。Letta Cloud 则用于在不同设备间保持 Agent 的记忆、身份和对话。\n\n本仓库的 archive 分支保留了已退役的 Letta V1 API server，旧标签和发布版本仍可获取，但新项目应使用当前源码仓库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 npm 全局安装：npm install -g @letta-ai/letta-code",
+  "启动交互式终端 UI：letta",
+  "运行 App Server 用于本地或自托管 Agent：letta server",
+  "也可选择桌面应用、chat.letta.com 或 Slack/Telegram/Discord 等渠道使用"
+ ],
+ "summary": "Letta（原名 MemGPT）是一个用于构建有状态 Agent 的平台，重点解决 AI 缺少持久记忆、难以在使用中积累和改进的问题。它提供终端 UI、App Server、桌面与浏览器入口、聊天渠道以及 TypeScript SDK，适合需要让 Agent 记住上下文并跨设备保持身份与对话的开发者，也适合想直接上手体验有记忆 Agent 的用户。",
+ "tagline": "构建带记忆、可随时间学习改进的有状态 AI Agent"
+}

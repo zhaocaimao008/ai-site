@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要搭建语音转写、实时字幕或说话人分离能力的开发者，以及希望将 ASR 接入自有服务或 AI 智能体的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "支持离线与流式语音识别，可组合 VAD、标点、说话人分离等流水线",
+  "提供 Paraformer、SenseVoiceSmall、Fun-ASR-Nano 等多语言与方言模型",
+  "支持情感识别与音频事件标签（SenseVoiceSmall）",
+  "可通过 vLLM 进行批量推理加速",
+  "提供 OpenAI 兼容 API 与 MCP Server，便于接入应用和 AI 智能体"
+ ],
+ "intro": "FunASR 是 ModelScope 社区维护的开源语音识别工具包，覆盖语音识别（ASR）、语音活动检测（VAD）、标点恢复、说话人分离等任务，支持离线、流式与边缘部署。项目以 Python 实现，提供 AutoModel 等统一接口，可组合不同模型搭建完整转写流水线。\n\n工具包内置 Paraformer、SenseVoiceSmall、Fun-ASR-Nano、Fun-ASR-MLT-Nano 等模型，支持中文、英文、日文及中文方言口音，部分模型还带情感与音频事件标签。除本地推理外，还提供 vLLM 批量加速、OpenAI 兼容 API 服务以及面向 Claude/Cursor 的 MCP Server，便于接入现有应用或智能体。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install torch torchaudio",
+  "安装工具包：pip install funasr",
+  "使用 AutoModel 加载模型并转写音频：model = AutoModel(model=\"FunAudioLLM/Fun-ASR-Nano-2512\", device=\"cuda\")",
+  "调用 generate 并打印结果：result = model.generate(input=\"音频路径或URL\")；print(result[0][\"text\"])"
+ ],
+ "summary": "FunASR 是一个开源语音识别工具包，把语音识别、VAD、标点恢复和说话人分离等能力整合成可组合的流水线，支持离线、流式与边缘部署。它提供多种预训练模型，覆盖中文、英文、日文及方言，并可通过 OpenAI 兼容 API 或 MCP Server 接入应用与智能体，适合需要自建语音转写服务的开发者。",
+ "tagline": "面向离线、流式与边缘部署的工业级语音识别工具包"
+}

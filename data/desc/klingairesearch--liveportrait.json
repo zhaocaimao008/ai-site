@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 人像动画感兴趣的研究者、开发者，以及希望快速制作动态人像视频的内容创作者。",
+ "date": "2026-10-17",
+ "features": [
+  "将静态人像照片驱动为动态视频，支持人类、猫和狗",
+  "提供拼接与重定向控制，实现精准的面部动画编辑",
+  "支持视频驱动和图像驱动两种模式，并可进行区域控制",
+  "内置 Gradio 界面，支持姿态编辑和人像视频编辑（v2v）",
+  "提供 Windows 一键安装包和 Hugging Face 在线 Demo",
+  "支持 macOS（Apple Silicon）和 Linux/Windows 环境"
+ ],
+ "intro": "LivePortrait 是快手科技等机构开源的 PyTorch 项目，实现论文《LivePortrait: Efficient Portrait Animation with Stitching and Retargeting Control》中的方法。它能够将静态人像照片驱动为动态视频，支持人类、猫和狗的面部动画，并提供拼接与重定向控制。\n\n项目提供多种使用方式：可通过 Windows 一键安装包快速体验，也可在 Hugging Face 在线 Demo 中试用，或从源码安装进行本地推理。功能上支持视频驱动、图像驱动、区域控制、姿态编辑、人像视频编辑（v2v）以及音频视频拼接等，并包含 Gradio 交互界面。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保系统已安装 git、conda 和 FFmpeg",
+  "克隆代码：git clone https://github.com/KlingTeam/LivePortrait && cd LivePortrait",
+  "创建并激活 conda 环境：conda create -n LivePortrait python=3.10 && conda activate LivePortrait",
+  "根据 CUDA 版本安装对应 PyTorch（参考 README 中的示例）",
+  "安装项目依赖并运行推理脚本（具体命令见 README 后续步骤）"
+ ],
+ "summary": "LivePortrait 是一个开源的人像动画生成项目，能够将静态照片驱动为动态视频，支持人脸、猫和狗的面部动画，并提供拼接与重定向控制。它适合需要制作动态人像视频的开发者或创作者，可通过 Windows 一键包、在线 Demo 或源码部署使用，并支持视频驱动、图像驱动和区域编辑等功能。",
+ "tagline": "高效的人像动画生成与编辑工具"
+}

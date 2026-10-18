@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合有一定 Python 与机器学习基础、希望系统学习如何把研究想法做成可运行交易策略的开发者、量化研究者和金融从业者。",
+ "date": "2026-10-17",
+ "features": [
+  "27 章配套 Jupyter Notebook 代码，覆盖数据、特征、建模、回测到部署",
+  "九个跨资产类别案例研究，统一走同一套 ML4T 流水线",
+  "涵盖梯度提升、深度时序模型、TabPFN 等模型工具箱",
+  "包含实盘交易系统、MLOps 治理与策略监控内容",
+  "生成式 AI、因果机器学习、强化学习与合成数据等专题",
+  "使用 Polars 处理数据，并提供可复现的 Docker 环境"
+ ],
+ "intro": "这是 Stefan Jansen 所著《Machine Learning for Trading》第三版的配套代码仓库，包含 27 章内容和九个案例研究，围绕一条端到端工作流组织：从数据基础设施与策略研究，经过区分调参与评估的 evidence boundary，到部署与监控，并带有按策略优势衰减进行重训、暂停或退役的反馈回路。\n\n第三版新增了更广的模型工具箱（XGBoost、LightGBM、CatBoost、PatchTST、iTransformer、TSMixer、TCN、Mamba、TabPFN 等）、交易成本与风险管理专章、实盘交易系统（Interactive Brokers、Alpaca、QuantConnect）、MLOps 与治理、基于 SEC 文件的 RAG 与 Graph RAG、因果机器学习、强化学习以及合成金融数据生成。数据层改用 Polars，各章提供可复现的 Docker 环境。\n\n九个案例研究覆盖 ETF、加密永续合约、NASDAQ-100 日内、股票与期权、FX、CME 期货等资产类别，均走同一条流水线。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入项目目录",
+  "按 README 的 Quick start 章节安装依赖（或使用提供的 Docker 环境）",
+  "下载案例研究所需的数据",
+  "运行第一个 notebook 开始上手"
+ ],
+ "summary": "这个仓库是《Machine Learning for Trading》第三版的配套代码，把数据获取、策略研究、回测评估、部署监控串成一条完整工作流，并用九个不同资产类别的案例演示同一套流程如何落地。适合想系统了解机器学习交易策略从研究到实盘全过程的开发者和量化从业者，可配合书中章节逐步运行 notebook 学习。",
+ "tagline": "《Machine Learning for Trading》第三版配套代码，覆盖从数据到实盘的全流程"
+}

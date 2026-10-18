@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究多模态大模型的研究人员、需要图像对话能力的开发者，以及希望微调视觉语言模型的技术人员。",
+ "date": "2026-10-17",
+ "features": [
+  "视觉指令微调：基于图像-文本对训练模型进行多轮对话",
+  "支持 LLaMA-2、LLaMA-3、Qwen 等多种基座语言模型",
+  "提供 LoRA 微调与 4/8-bit 量化推理，降低显存需求",
+  "发布 LLaVA-1.5、LLaVA-NeXT 等模型检查点与评估脚本",
+  "集成 llama.cpp、Colab、Hugging Face Space 等社区工具"
+ ],
+ "intro": "LLaVA 是一个基于视觉指令微调的大型语言与视觉助手，旨在让模型能够理解图像内容并进行自然语言对话。该项目在 NeurIPS 2023 以 Oral 形式发表，并持续迭代出 LLaVA-1.5、LLaVA-NeXT 等版本，支持更高分辨率和更多任务。\n\nLLaVA 使用公开数据训练，提供完整的训练、评估脚本和模型检查点，支持 LoRA 微调、4/8-bit 推理，并可在单节点 8 卡 A100 上约一天完成训练。社区贡献包括 llama.cpp 集成、Colab 示例和 Hugging Face Space 演示。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/haotian-liu/LLaVA.git",
+  "安装依赖：pip install -e .",
+  "下载模型检查点（见 Model Zoo）",
+  "运行推理脚本或启动 Gradio 演示"
+ ],
+ "summary": "LLaVA 是一个开源的多模态大模型项目，通过视觉指令微调让语言模型能理解图像并进行对话。它提供了从训练到推理的完整流程，支持 LoRA 微调和低比特量化，适合研究视觉语言模型或开发图像问答应用的开发者。",
+ "tagline": "面向多模态对话的开源视觉指令微调模型"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "希望以最简单方式在本地运行大语言模型或语音转写工具的开发者与普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "将模型与运行时打包为单个可执行文件，无需安装",
+  "跨操作系统和 CPU 架构运行",
+  "基于 llama.cpp，支持 GGUF 格式模型",
+  "提供 whisperfile 单文件语音转文字工具",
+  "支持使用外部权重文件运行大型模型"
+ ],
+ "intro": "llamafile 把 llama.cpp 与 Cosmopolitan Libc 组合成一个框架，将大语言模型的运行环境打包成单个可执行文件。用户下载一个文件后，无需安装依赖，即可在多数操作系统和 CPU 架构上本地运行模型。\n\n项目还包含 whisperfile，一个基于 whisper.cpp 的单文件语音转文字工具，支持音频转写和翻译，同样无需安装。从 0.10.0 版本起采用新的构建系统，以跟进 llama.cpp 的最新模型与功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载示例模型：curl -LO https://huggingface.co/mozilla-ai/llamafile_0.10/resolve/main/Qwen3.5-0.8B-Q8_0.llamafile",
+  "添加执行权限（macOS/Linux/BSD）：chmod +x Qwen3.5-0.8B-Q8_0.llamafile",
+  "运行：./Qwen3.5-0.8B-Q8_0.llamafile",
+  "Windows 用户需将文件重命名为 .exe 后运行；超过 4GB 的 llamafile 需下载 llamafile 二进制并配合外部 GGUF 模型使用"
+ ],
+ "summary": "llamafile 将大语言模型的运行环境打包成单个可执行文件，下载后无需安装即可在本地运行，降低了使用开源模型的复杂度。它基于 llama.cpp，支持 GGUF 模型，并附带 whisperfile 语音转文字工具。适合想快速在本地体验大模型或进行语音转写的开发者和普通用户。",
+ "tagline": "单文件分发与运行本地大模型"
+}

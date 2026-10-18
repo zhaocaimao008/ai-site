@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望把同事、亲友或公众人物的经验与表达方式沉淀为可复用 Agent 技能的开发者与普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "将消息、文档、访谈、公开资料等素材蒸馏为可复用的 Person Profile",
+  "支持同事、关系人物、公众人物三类人物，各有独立收集策略与分析维度",
+  "输出打包为 Agent Skill，可在八种兼容宿主中本地发现与调用",
+  "同事类生成 Work Skill + Persona，支持 Lark / DingTalk / Slack 素材收集",
+  "公众人物类提供六维研究工具链：字幕 → 转录清理 → 研究合并 → 质量检查",
+  "强调档案基于可观察证据，不声称克隆真人"
+ ],
+ "intro": "Distilly 是一个面向 AI Agent 的人物建模工具，原名 Colleague Skill。它把消息记录、文档、访谈、公开资料等素材，提炼成一份基于可观察证据的 Person Profile（人物档案），涵盖经验、决策模式、表达方式和工作方法，并打包成 Agent Skill 供兼容的宿主安装调用。\n\n项目覆盖三类人物：同事（含导师、上下游伙伴）、关系人物（伴侣、家人、朋友）和公众人物（创作者、虚构角色等）。每类有各自的素材收集策略、分析维度和档案结构。同事类会生成 Work Skill 与 Persona，关系类侧重表达与情绪模式，公众人物类提供六维研究工具链。\n\n当前版本支持在 Claude Code、Hermes、OpenClaw、Codex、DeepSeek Harness、Pi、Grok Build、OpenCode 等八种 Agent 宿主中本地发现并调用 Skill。项目强调档案基于素材、不声称克隆真人。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在支持的 Agent 宿主中安装名为 distilly 的 creator Skill，并放入 distilly 目录",
+  "准备素材：消息记录、文档、访谈或公开来源",
+  "运行 distilly creator，按流程生成 Person Profile",
+  "将生成的 Skill 安装到目标 Agent 或 Bot 中调用"
+ ],
+ "summary": "Distilly 解决的是“人的经验与判断难以复用”的问题：同事离职、导师毕业、亲友疏远后，他们的工作方法和表达方式往往随之流失。这个项目把消息、文档、访谈、公开资料等素材提炼成基于证据的 Person Profile，并打包成 Agent Skill，让 Claude Code、Codex 等宿主可以直接安装调用。适合想沉淀同事经验、保留亲友表达风格，或研究公众人物思维模式的场景。",
+ "tagline": "将人的经验与判断蒸馏为可复用的 Agent 技能"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望以低代码方式快速构建 AI Agent 的开发者、产品经理及企业团队。",
+ "date": "2026-10-17",
+ "features": [
+  "模型服务管理：支持集成 OpenAI、火山引擎等服务，并管理模型列表",
+  "Agent 构建：支持创建、发布和管理 Agent，可配置工作流、知识库等资源",
+  "应用构建：通过工作流搭建业务逻辑，创建并发布应用",
+  "工作流编排：创建、修改、发布和删除工作流",
+  "资源开发：管理插件、知识库、数据库和提示词",
+  "API 与 SDK：提供 OpenAPI 和 Chat SDK，便于集成到自有应用"
+ ],
+ "intro": "Coze Studio 是一个开源的 AI Agent 开发平台，提供从开发到部署的完整环境。它集成了提示词、RAG、插件和工作流等核心能力，让开发者可以专注于 AI 应用的核心价值。\n\n平台支持无代码或低代码方式快速创建、调试和发布 Agent、应用与工作流，并提供完整的应用模板和构建框架。后端采用 Golang，前端使用 React + TypeScript，基于微服务和领域驱动设计（DDD）原则构建，具备高性能和可扩展性。\n\nCoze Studio 源自已服务大量企业和开发者的 Coze 开发平台，其核心引擎完全开源，旨在降低 AI Agent 开发门槛，鼓励社区共建。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保机器满足最低要求（2 核 4 GB），并安装 Docker 与 Docker Compose",
+  "克隆代码：git clone https://github.com/coze-dev/coze-studio.git",
+  "进入目录并启动服务：cd coze-studio，然后执行 make web（macOS/Linux）或复制 .env 后运行 docker compose -f ./docker/docker-compose.yml up（Windows）",
+  "访问 http://localhost:8888/sign 注册账号",
+  "在 http://localhost:8888/admin/#model-management 配置模型，然后访问 http://localhost:8888/ 开始使用"
+ ],
+ "summary": "Coze Studio 是一个开源的 AI Agent 开发平台，提供可视化工具和低代码方式，帮助开发者快速创建、调试和部署智能体、应用与工作流。它集成了提示词、RAG、插件等核心能力，适合需要高效构建 AI 应用并希望自定义业务逻辑的团队和个人。",
+ "tagline": "一站式可视化 AI Agent 开发平台"
+}

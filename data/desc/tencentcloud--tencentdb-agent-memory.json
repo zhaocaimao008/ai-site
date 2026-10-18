@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI Agent 进行开发或协作的团队，尤其是希望跨会话、跨 Agent 复用上下文与经验的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "从对话和任务中自动提取 Chat Memory 与 Skill，并将文档和代码转化为 Wiki 和 CodeGraph",
+  "Chat Memory 按 L0 对话、L1 原子、L2 场景、L3 人设分层提炼，保留偏好、事实和决策",
+  "Skill 具备版本、资源文件、触发边界、执行步骤和校验规则，个人技能可经审核后共享给团队",
+  "记忆资产与 Agent 框架解耦，可跨框架迁移，并由多个 Agent 和团队成员共享维护",
+  "通过 Proxy 实现零代码集成，将 Agent 的 base URL 指向 Proxy 即可共用记忆服务",
+  "支持导入已有文档、代码库和 Agent 会话，帮助新团队从现有经验冷启动"
+ ],
+ "intro": "TencentDB Agent Memory 是一个面向 AI Agent 团队的记忆中心，目标是把对话、文档和代码转化为可复用的记忆资产，减少重复劳动。项目从实际问题出发：已经解释过的项目背景不必在新会话中重复，读过的文档不必让每个 Agent 从头再读，已经跑通的工作流也不必重新摸索。\n\n它提供四类记忆资产：Chat Memory 保留偏好、事实、决策和交互历史，并按 L0 对话、L1 原子、L2 场景、L3 人设逐层提炼；Skill 从对话和工具调用中提取可复用技能，带有版本、资源文件、触发边界、执行步骤和校验规则；此外还能把文档和代码转化为 Wiki 与 CodeGraph。这些资产与 Agent 框架解耦，可在不同框架和团队成员之间共享维护。\n\n项目通过一个 Proxy 让不同 Agent 共用同一记忆服务，只需把 Agent 的 base URL 指向 Proxy 即可，无需插件、hook 或 MCP server。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/TencentCloud/TencentDB-Agent-Memory.git",
+  "cd TencentDB-Agent-Memory/deploy/global-images",
+  "cp .env.example .env",
+  "$EDITOR .env  # 填写 memory 组和 proxy 组两组 LLM 参数",
+  "./start-all.sh  # 一键启动全部服务，完成后会打印可直接粘贴到 Claude 的一行命令",
+  "打开面板 http://localhost:8125"
+ ],
+ "summary": "TencentDB Agent Memory 是一个面向 AI Agent 团队的记忆中心，解决的是 Agent 反复重做已有工作的问题：项目背景、读过的文档、跑通的工作流不必每次重新交代。它把对话、文档和代码提炼成 Chat Memory、Skill、Wiki 和 CodeGraph 四类可复用资产，并与 Agent 框架解耦，方便团队共享。通过 Proxy 可让不同 Agent 共用同一记忆服务，适合希望跨会话、跨工具积累经验的开发团队。",
+ "tagline": "面向 AI Agent 团队的可复用记忆中心"
+}

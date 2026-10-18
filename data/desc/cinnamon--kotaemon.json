@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要对文档进行问答的终端用户，以及希望基于现成 UI 搭建和定制 RAG 流水线的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "支持多用户登录，可组织私有/公开文件集合并分享对话",
+  "兼容 OpenAI、Azure、Ollama、Groq 等 LLM 与嵌入模型",
+  "默认混合（全文+向量）检索与重新排序的 RAG 流水线",
+  "多模态文档问答，支持图表和表格，可选文档解析方式",
+  "在浏览器 PDF 查看器中高亮显示引用及相关性分数",
+  "支持问题分解以及 ReAct、ReWOO 等 agent 推理"
+ ],
+ "intro": "kotaemon 是一个基于 RAG（检索增强生成）的开源文档问答工具，提供干净、可定制的 Web UI。它同时面向两类使用者：想直接对文档做问答的终端用户，以及希望搭建自己 RAG 流水线的开发者。\n\n项目支持多种 LLM，包括 OpenAI、AzureOpenAI、Cohere 等 API 提供商，以及通过 ollama 和 llama-cpp-python 运行的本地模型。默认的混合检索（全文与向量）加重新排序的 RAG 流水线，并支持多模态文档解析、带文档预览的引用、问题分解和 ReAct、ReWOO 等 agent 推理方式。\n\nUI 基于 Gradio 构建，大部分检索与生成参数可在界面上调整，也便于开发者扩展或替换组件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Python >= 3.10；如需处理 .pdf、.html、.mhtml、.xlsx 之外的文件，需安装 Unstructured",
+  "使用 Docker 运行 lite 版本：docker run -e GRADIO_SERVER_NAME=0.0.0.0 -e GRADIO_SERVER_PORT=7860 -v ./ktem_app_data:/app/ktem_app_data -p 7860:7860 -it --rm ghcr.io/cinnamon/kotaemon:main-lite",
+  "如需更多文件类型支持，将镜像替换为 ghcr.io/cinnamon/kotaemon:main-full",
+  "启动后访问 http://localhost:7860/ 使用 WebUI"
+ ],
+ "summary": "kotaemon 是一个开源的 RAG 文档问答工具，提供基于 Gradio 的 Web 界面。它让普通用户能直接上传文档并进行问答，同时为开发者提供可定制的 RAG 流水线，支持本地与 API 模型、混合检索、多模态解析和引用预览。适合需要私有化文档问答或想快速搭建 RAG 应用的场景。",
+ "tagline": "开源的 RAG 文档问答界面，兼顾终端用户与开发者"
+}

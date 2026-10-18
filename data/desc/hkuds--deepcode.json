@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 代理辅助编码的开发者，以及需要把论文或自然语言需求转化为可运行代码的研究人员。",
+ "date": "2026-10-17",
+ "features": [
+  "多智能体编排的代码生成流程",
+  "TUI、Desktop、Web 三种客户端共享本地服务",
+  "目标驱动的循环工程与证据驱动的完成判定",
+  "可复用 Skills 与细粒度权限控制",
+  "支持并行代理且避免文件冲突",
+  "Paper2Code：将研究论文转化为代码"
+ ],
+ "intro": "DeepCode 是一个开源的 agentic coding 项目，用多智能体系统把自然语言想法和研究论文转化为可运行的代码。它提供 TUI、Desktop 和 Web 三种客户端，共享同一个本地服务，项目、会话历史、模型、Skills、权限、Goals 和 Automations 在各端之间保持一致。\n\n项目强调在真实仓库中工作，采用目标驱动的循环工程和证据驱动的完成判定，并支持可复用的 Skills、可理解的权限控制，以及避免文件冲突的并行代理。它还包含 Paper2Code 能力，用于把论文内容落地为代码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装运行时（见 README 的 Install the runtime 一节）",
+  "配置模型（见 README 的 Configure a model 一节）",
+  "运行 deepcode 启动 TUI",
+  "运行 deepcode desktop 启动桌面端",
+  "运行 deepcode web 启动 Web 端"
+ ],
+ "summary": "DeepCode 是一个面向代码生成的开源多智能体代理项目，目标是把自然语言描述和研究论文转化为可运行的代码。它提供 TUI、桌面端和 Web 端三种界面，共享同一套本地服务，并支持在真实仓库中工作、目标驱动的循环工程、可复用 Skills 和并行代理协作。适合希望借助 AI 代理完成编码任务的开发者，以及需要将论文实现为代码的研究人员。",
+ "tagline": "多智能体协作的开源代码生成代理"
+}

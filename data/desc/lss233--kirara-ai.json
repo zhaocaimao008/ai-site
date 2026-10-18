@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想在自己的聊天群或平台中部署 AI 聊天机器人的开发者，以及对 AI 角色扮演、虚拟女仆等应用感兴趣的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 QQ、Telegram、微信、Discord 等多种聊天平台",
+  "兼容 OpenAI、DeepSeek、Claude、Gemini、Ollama 等大模型",
+  "提供 WebUI 管理后台，可配置模型、工作流和插件",
+  "支持关键词触发、条件触发、管理员指令和多账号",
+  "内置人格预设系统，可加载猫娘等聊天风格",
+  "支持 Stable Diffusion、Flux、Midjourney 等绘图模型和语音回复"
+ ],
+ "intro": "Kirara AI 是一个用 Python 开发的多模态聊天机器人框架，支持接入微信、QQ、Telegram、Discord 等聊天平台，并兼容 OpenAI、DeepSeek、Claude、Gemini、Ollama 等主流大语言模型。项目提供 Web 管理后台，可配置模型、工作流和插件。\n\n它内置了关键词触发、人格设定、多轮对话、语音回复、AI 画图等功能，还支持通过 HTTP API 将机器人能力接入其他平台。用户可以通过预设系统快速切换聊天风格，例如猫娘或正常模式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考官方文档的快速开始页面：https://kirara-docs.app.lss233.com/guide/getting-started.html",
+  "在 WebUI 中配置大语言模型和聊天平台适配器",
+  "使用预设功能加载聊天风格，例如发送命令：加载预设 猫娘"
+ ],
+ "summary": "Kirara AI 是一个可自行搭建的多模态聊天机器人框架，能把大语言模型接入微信、QQ、Telegram 等聊天平台。它提供 Web 管理后台，支持模型切换、工作流、插件、人格预设和 AI 画图，适合想在群聊或私聊中部署 AI 助手、角色扮演机器人或虚拟女仆的开发者与爱好者。",
+ "tagline": "可 DIY 的多模态 AI 聊天机器人，快速接入主流聊天平台"
+}

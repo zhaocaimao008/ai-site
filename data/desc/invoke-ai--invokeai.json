@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要本地部署 Stable Diffusion 进行图像创作的艺术家、设计师和开发者，也适合想用节点工作流搭建可复用生成流程的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "本地 Web 服务器与 React WebUI，浏览器中操作",
+  "Unified Canvas 统一画布，支持内补、外扩与画笔工具",
+  "节点式 Workflows 工作流，可自定义并分享生成管线",
+  "Board 与图库管理，图像元数据可回溯提示词和设置",
+  "模型管理器与 Embedding 管理，支持 ckpt、diffusers 及部分 gguf",
+  "支持 SD 1.5、SD 2.0、SDXL、SD 3.5、Flux 系列等多种模型"
+ ],
+ "intro": "InvokeAI 是一个围绕 Stable Diffusion 系列模型构建的视觉创作引擎，提供本地运行的 Web 服务器与 React 前端界面，用于生成、修改和迭代图像。项目采用商业友好的开源许可，可下载安装到兼容硬件上使用。\n\n它的核心是 Unified Canvas 统一画布，把文生图、图生图、内补与外扩、画笔工具整合在同一画布中，方便在 AI 生成图、草图、照片或渲染图上继续创作。同时提供基于节点的 Workflows 工作流系统，可组合出可复用、可分享的生成管线。\n\n项目还包含图库与 Board 管理、模型管理器、Embedding 管理、放大工具以及 SAM/SAM2 对象分割与选择，并支持 ckpt、diffusers 和部分 gguf 格式模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub 下载 Invoke Launcher：https://github.com/invoke-ai/launcher/releases/latest",
+  "按官方安装文档完成安装与更新",
+  "启动本地 Web 服务器，在浏览器中打开 WebUI",
+  "在模型管理器中加载模型，开始生成或进入 Unified Canvas 编辑"
+ ],
+ "summary": "InvokeAI 是一个本地运行的 Stable Diffusion 视觉创作工具，提供浏览器中的 WebUI、统一画布和节点式工作流。它把文生图、图生图、内补外扩和画笔编辑放在同一画布上，并配有图库与模型管理，适合希望在本地硬件上持续迭代图像、搭建可复用生成流程的创作者和开发者。",
+ "tagline": "面向视觉创作的 Stable Diffusion 本地 WebUI 与工作流引擎"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Google Cloud 上使用 Gemini 等生成式 AI 模型进行开发的工程师和数据科学家，也适合想通过 notebook 快速了解相关能力的读者。",
+ "date": "2026-10-17",
+ "features": [
+  "Gemini 模型入门 notebook、用例与 function calling 示例",
+  "RAG 与 Grounding 相关 notebook 和示例索引",
+  "Imagen、Veo 图像视频与 Chirp 语音模型示例",
+  "Agent Search 企业搜索相关示例",
+  "Google Cloud 与 Gen AI Python SDK 环境配置说明",
+  "示例应用及配套学习资源链接"
+ ],
+ "intro": "这是 Google Cloud 官方维护的生成式 AI 示例仓库，以 Jupyter Notebook 为主，配合代码示例和示例应用，演示如何在 Google Cloud 上使用 Gemini 模型与 Agent Platform 开发和管理生成式 AI 工作流。\n\n仓库按主题分目录组织：gemini/ 收录 Gemini 入门 notebook、用例、function calling 和示例应用；rag-grounding/ 汇总检索增强生成（RAG）与 Grounding 相关示例；vision/ 和 audio/ 分别对应 Imagen、Veo 图像视频模型与 Chirp 语音模型；search/ 面向 Agent Search；setup-env/ 提供 Google Cloud、Gen AI Python SDK 以及 Colab、Workbench 环境的配置说明。README 还列出了 ADK Samples、Agent Starter Pack 等相关仓库，便于继续扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读 setup-env/ 目录中的说明，配置 Google Cloud 项目与 Gen AI Python SDK",
+  "选择 Google Colab 或 Workbench 作为 notebook 运行环境",
+  "从 gemini/getting-started/ 下的入门 notebook 开始运行",
+  "按需进入 rag-grounding/、vision/、audio/ 等目录查看对应主题示例"
+ ],
+ "summary": "这个仓库汇集了在 Google Cloud 上使用 Gemini 模型和 Agent Platform 的示例 notebook、代码与应用，覆盖模型入门、function calling、RAG 与 Grounding、图像视频生成、语音识别和企业搜索等方向。适合想通过可运行示例快速上手 Google Cloud 生成式 AI 开发，或为具体场景寻找参考实现的开发者。",
+ "tagline": "Google Cloud 生成式 AI 示例代码与 Notebook 合集"
+}

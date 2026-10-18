@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究团队、框架开发者和机器学习工程师，用于大规模 Transformer 模型的分布式训练与自定义训练流水线构建。",
+ "date": "2026-10-17",
+ "features": [
+  "提供 Megatron Core 可组合库，包含 Transformer 构建块和模型架构",
+  "支持张量并行（TP）、流水线并行（PP）、数据并行（DP）、专家并行（EP）和上下文并行（CP）",
+  "支持 FP16、BF16、FP8 和 FP4 混合精度训练",
+  "包含预配置训练脚本和示例，便于快速实验",
+  "提供 Megatron Bridge 实现 Hugging Face 与 Megatron 检查点双向转换",
+  "支持从 2B 到 462B 参数模型的训练，在 H100 集群上可达 47% MFU"
+ ],
+ "intro": "Megatron-LM 是 NVIDIA 维护的开源项目，包含两个部分：Megatron-LM 和 Megatron Core。Megatron-LM 是一套参考示例，提供预配置的训练脚本，适合研究团队学习分布式训练或快速实验；Megatron Core 是一个可组合的库，提供 GPU 优化的构建模块，用于自定义训练框架。\n\nMegatron Core 包含 Transformer 构建块、高级并行策略（TP、PP、DP、EP、CP）、混合精度支持（FP16、BF16、FP8、FP4）以及模型架构，适合框架开发者和机器学习工程师构建自定义训练流水线。项目还提供 Megatron Bridge 用于 Hugging Face 与 Megatron 检查点之间的双向转换。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 PyPI 安装：uv pip install megatron-core",
+  "或从源码安装：git clone https://github.com/NVIDIA/Megatron-LM.git && cd Megatron-LM && uv pip install -e .",
+  "若编译内存不足，可设置 MAX_JOBS 限制并行编译任务数，例如：MAX_JOBS=4 uv pip install -e .",
+  "参考官方文档的“Your First Training Run”进行端到端训练示例"
+ ],
+ "summary": "Megatron-LM 是 NVIDIA 开源的 Transformer 模型训练项目，解决大规模模型在 GPU 集群上的高效训练问题。它提供 Megatron Core 库，包含并行策略、混合精度和模型构建块，适合研究团队学习分布式训练，也适合框架开发者构建自定义训练流水线。",
+ "tagline": "GPU 优化的大规模 Transformer 模型训练库"
+}

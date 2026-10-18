@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合希望本地掌控 AI 应用构建流程的开发者与高级用户。",
+ "date": "2026-10-17",
+ "features": [
+  "本地运行，快速且私密，无供应商锁定",
+  "支持自带 AI API 密钥",
+  "跨平台，可在 Mac 或 Windows 上运行",
+  "无需注册，直接下载使用",
+  "开源代码（部分目录采用不同许可）"
+ ],
+ "intro": "Dyad 是一个本地运行的开源 AI 应用构建器，定位类似 Lovable、v0 或 Bolt，但完全在用户自己的机器上执行。它强调快速、私密且无锁定，适合希望掌控开发流程和数据的开发者。\n\n项目使用 TypeScript 编写，支持 Mac 和 Windows 平台，用户无需注册即可下载使用。它允许用户自带 AI API 密钥，避免供应商锁定，并提供了 Reddit 社区供交流。\n\n代码方面，除 src/pro 目录外均采用 Apache 2.0 开源许可，src/pro 部分则使用 Functional Source License 1.1 Apache 2.0。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 https://www.dyad.sh/#download 下载对应平台版本",
+  "运行下载的安装包并启动 Dyad",
+  "在应用中配置自己的 AI API 密钥"
+ ],
+ "summary": "Dyad 是一个本地运行的开源 AI 应用构建器，解决开发者对隐私、速度和供应商锁定的顾虑。它适合希望在个人电脑上快速构建 AI 应用、并自带 API 密钥的用户，支持 Mac 和 Windows，无需注册即可下载使用。",
+ "tagline": "本地运行的开源 AI 应用构建器"
+}

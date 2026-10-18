@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建企业级智能体、智能客服或内部知识库的开发者与团队，也适合希望快速集成 AI 问答能力的业务系统。",
+ "date": "2026-10-17",
+ "features": [
+  "RAG 流水线：支持文档上传与在线爬取，自动文本拆分和向量化，减少大模型幻觉",
+  "智能体工作流：提供工作流引擎、函数库和 MCP 工具调用，可编排复杂 AI 流程",
+  "无缝集成：零代码快速接入第三方业务系统，为现有系统添加智能问答能力",
+  "模型无关：支持 DeepSeek、Llama、Qwen 等私有模型及 OpenAI、Claude、Gemini、MiniMax 等公共模型",
+  "多模态：原生支持文本、图像、音频和视频的输入与输出"
+ ],
+ "intro": "MaxKB（Max Knowledge Brain）是一个开源的企业级智能体平台，集成了 RAG 流水线与工作流引擎，并支持 MCP 工具调用。它可用于智能客服、企业内部知识库、学术研究和教育等场景。\n\n平台支持直接上传文档或自动爬取在线文档，自动完成文本拆分与向量化，以降低大模型幻觉；提供工作流引擎、函数库和 MCP 工具，便于编排复杂 AI 流程；支持零代码快速集成到第三方业务系统。模型方面兼容 DeepSeek、Llama、Qwen 等私有模型以及 OpenAI、Claude、Gemini、MiniMax 等公共模型，并原生支持文本、图像、音视频的多模态输入输出。\n\n技术栈为 Vue.js 前端、Python/Django 后端、LangChain LLM 框架和 PostgreSQL + pgvector 数据库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "执行 Docker 命令启动 MaxKB 容器：docker run -d --name=maxkb --restart=always -p 8080:8080 -v ~/.maxkb:/opt/maxkb 1panel/maxkb",
+  "访问 http://your_server_ip:8080 打开 Web 界面",
+  "使用默认管理员账号登录：用户名 admin，密码 MaxKB@123..",
+  "中国用户如遇 Docker 镜像拉取失败，可参照离线安装文档进行安装"
+ ],
+ "summary": "MaxKB 是一个开源的企业级智能体平台，内置 RAG 流水线和工作流引擎，支持 MCP 工具调用，可用来搭建智能客服、企业内部知识库等应用。它兼容多种私有和公共大模型，支持多模态输入输出，并能零代码集成到现有业务系统，适合需要快速落地 AI 问答与流程编排的团队。",
+ "tagline": "开源企业级智能体构建平台"
+}

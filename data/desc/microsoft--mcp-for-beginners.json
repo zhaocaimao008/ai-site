@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想了解 MCP 协议、并希望用自己熟悉的编程语言动手构建 MCP 服务端的开发者与初学者。",
+ "date": "2026-10-17",
+ "features": [
+  "系统讲解 MCP 核心概念与协议规范",
+  "提供 C#、Java、JavaScript、Rust、Python、TypeScript 多语言代码示例",
+  "覆盖从会话建立到服务编排的完整流程",
+  "包含 MCP 安全相关内容",
+  "提供 50 多种语言的翻译版本"
+ ],
+ "intro": "这是一套由微软维护的开源课程，面向初学者讲解 Model Context Protocol（MCP）的基本概念。课程用 C#、Java、JavaScript、Rust、Python 和 TypeScript 等多种语言的真实示例，演示 AI 应用如何以标准化方式连接各类工具与服务。\n\n内容从会话建立讲到服务编排，覆盖构建模块化、可扩展且安全的 AI 工作流所需的实用技巧，并配有动手代码示例。课程同时提供 50 多种语言的翻译版本，方便不同地区的读者阅读。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Fork 仓库：在 GitHub 页面点击 Fork",
+  "克隆仓库：git clone https://github.com/microsoft/mcp-for-beginners.git",
+  "如需跳过翻译文件加快下载，可使用 sparse checkout：git clone --filter=blob:none --sparse https://github.com/microsoft/mcp-for-beginners.git",
+  "加入 Microsoft Foundry Discord 参与交流"
+ ],
+ "summary": "这套课程由微软维护，面向初学者讲解 Model Context Protocol（MCP）的基本原理。它用 C#、Java、JavaScript、Rust、Python 和 TypeScript 的真实示例，演示 AI 应用如何以标准化方式连接工具与服务，内容从会话建立延伸到服务编排，并涉及安全与模块化设计。适合想系统了解 MCP 并动手实践的开发者。",
+ "tagline": "微软出品的 MCP 入门开源课程，多语言实战"
+}

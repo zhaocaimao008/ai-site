@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要统一界面调用多种大语言模型的开发者、研究者，以及希望本地部署或快速体验 LLM 对话功能的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持多种云端 API 模型（GPT-5、Claude、Gemini、DeepSeek 等）和本地部署模型（ChatGLM、LLaMA、Qwen 等）",
+  "基于文件的知识库问答，可上传文件让模型根据内容回答",
+  "联网搜索功能，为模型补充实时网络信息",
+  "川虎助理（类 AutoGPT）自动解决复杂问题",
+  "支持 GPT-3.5 微调，可自定义模型参数和 API 配置",
+  "对话历史自动保存、搜索、重命名，支持多用户隔离"
+ ],
+ "intro": "川虎 Chat 是一个基于 Gradio 的 Web 图形界面，为 ChatGPT 等多种大语言模型提供统一的操作入口。它既支持通过 API 调用 GPT-5、GPT-4o、Claude、Gemini、DeepSeek 等云端模型，也支持本地部署 ChatGLM、LLaMA、Qwen 等开源模型。\n\n除了基础对话，项目还集成了文件问答、联网搜索、Agent 助理、GPT-3.5 微调等附加功能，并提供了对话历史管理、System Prompt 模板、多用户隔离等实用特性。界面经过专门设计，支持亮暗色切换、LaTeX/表格/代码块渲染，并适配移动端。\n\n项目采用 Python 编写，通过配置文件管理 API Key 和部署参数，可以运行在本地或服务器上，也提供了 Hugging Face Space 在线体验和部署方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/GaiZhenbiao/ChuanhuChatGPT.git",
+  "cd ChuanhuChatGPT",
+  "pip install -r requirements.txt",
+  "复制 config_example.json 为 config.json，填入 API-Key 等设置",
+  "python ChuanhuChatbot.py"
+ ],
+ "summary": "川虎 Chat 是一个基于 Gradio 的 Web 界面，把 ChatGPT、Claude、Gemini、DeepSeek 等云端模型和 ChatGLM、LLaMA、Qwen 等本地模型集中到一个页面里对话。它适合想统一管理多个大模型、需要文件问答或联网搜索的开发者，也适合普通用户快速上手体验不同 LLM。",
+ "tagline": "为多种大语言模型提供轻快好用的 Web 图形界面"
+}

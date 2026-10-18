@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "需要将视频翻译成其他语言并添加配音/字幕的内容创作者、开发者，以及希望本地离线处理音视频转录的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "全自动视频翻译：语音识别 → 字幕翻译 → 语音合成 → 视频合成一键完成",
+  "音频转录与字幕生成：批量将音频/视频转为 SRT 字幕，支持说话人分离",
+  "多角色 AI 配音：为不同说话人分配不同 AI 音色",
+  "声音克隆：集成 F5-TTS、CosyVoice、GPT-SoVITS 等模型",
+  "多种模型支持：ASR 支持 Faster-Whisper、Whisper、Qwen 等；翻译支持 DeepSeek、ChatGPT、Claude、Ollama 等；TTS 支持 Edge-TTS、OpenAI、Azure 等",
+  "交互式编辑与工具集：各阶段可暂停校对，并提供人声分离、音视频对齐等辅助工具",
+  "支持 CLI、WebUI 和 Docker 部署"
+ ],
+ "intro": "pyVideoTrans 是一个开源的视频翻译与音频转录工具，目标是把一种语言的视频转换成另一种语言，并嵌入配音和字幕。它提供从语音识别（ASR）、字幕翻译、语音合成（TTS）到视频合成的完整流程，支持本地离线部署和多种在线 API。\n\n项目支持批量音频/视频转 SRT 字幕，并可通过说话人分离区分不同角色；还能为不同说话人分配不同的 AI 配音音色，并集成 F5-TTS、CosyVoice、GPT-SoVITS 等模型实现零样本声音克隆。识别、翻译、配音各阶段均可暂停并人工校对。\n\n使用方式包括 Windows 预打包 exe、源码部署（GUI/CLI/WebUI）以及 Docker 容器化部署，适合需要视频本地化或字幕制作的开发者与普通用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 用户：从 Releases 下载预打包版本，解压到不含中文和空格的路径，双击 sp.exe 运行",
+  "源码部署：安装 Python 3.10 和 FFmpeg，克隆仓库后执行 uv sync",
+  "启动 GUI：uv run sp.py",
+  "命令行示例：uv run cli.py --task vtv --name \"./video.mp4\" --source_language_code zh-cn --target_language_code en --voice_role \"en-US-GuyNeural\"",
+  "WebUI 部署：uv sync --extra webui 后执行 uv run webui.py"
+ ],
+ "summary": "pyVideoTrans 是一个开源视频翻译工具，能把一种语言的视频转换成另一种语言，并自动生成配音和字幕。它覆盖语音识别、字幕翻译、语音合成和视频合成全流程，支持本地离线运行和多种在线 API，还提供说话人分离、多角色配音和声音克隆。适合需要做视频本地化、字幕制作或音频转录的开发者与内容创作者。",
+ "tagline": "开源视频翻译工具：语音识别、字幕翻译、AI配音与音画同步"
+}

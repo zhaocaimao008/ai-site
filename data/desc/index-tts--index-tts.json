@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要语音克隆、多语言 TTS 或情感化语音合成的开发者与研究人员，也适合想通过 WebUI 快速体验零样本 TTS 的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "从单段参考音频零样本克隆音色",
+  "支持中、英、日、西、阿五种语言",
+  "细粒度情感控制与语速调节",
+  "拼音、CMU 音素、日文假名发音控制",
+  "提供 WebUI 与 vLLM 生产部署支持",
+  "多版本模型权重与推理代码"
+ ],
+ "intro": "IndexTTS 是一个零样本文本转语音系统，只需一段参考音频即可克隆音色。最新版本 IndexTTS-2.5 支持中文、英语、日语、西班牙语和阿拉伯语，并保留跨语言与音色-情感解耦能力，推理速度比 IndexTTS-2 更快。\n\n在可控性方面，IndexTTS-2.5 支持细粒度情感控制、通过 duration_factor 调节语速（0.5x–2.0x 时长），以及中文拼音、英文 CMU 音素和日文假名的发音控制。项目还提供 vLLM 部署方案，便于生产环境使用。\n\n仓库包含 IndexTTS-2.5、IndexTTS-2、IndexTTS-1.5 和 IndexTTS 多个版本的模型权重与推理代码，权重可从 HuggingFace 或 ModelScope 下载。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/index-tts/index-tts.git && cd index-tts",
+  "安装 uv 并同步依赖：pip install -U uv，然后 uv sync --all-extras",
+  "下载模型：hf download IndexTeam/IndexTTS-2.5 --local-dir=checkpoints（或使用 modelscope download）",
+  "运行 uv run tools/gpu_check.py 检查 GPU 环境"
+ ],
+ "summary": "IndexTTS 是一个零样本文本转语音系统，用一段参考音频就能克隆音色。最新版 IndexTTS-2.5 支持中文、英语、日语、西班牙语和阿拉伯语，并提供情感、语速和发音控制，推理速度较上一版更快。适合需要多语言语音克隆、情感化配音或可控 TTS 的开发者和研究者，也提供 WebUI 和 vLLM 部署方式。",
+ "tagline": "零样本语音克隆与多语言可控 TTS 系统"
+}

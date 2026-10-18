@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建生产级 LLM 应用的 Python 开发者，尤其是对 RAG、语义搜索、问答系统和自主智能体有定制化需求的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "模块化 Pipeline 与 Agent 工作流，显式控制检索、路由、记忆和生成",
+  "支持生产级 Agent，提供生命周期钩子与 step_count、token_usage 等追踪",
+  "内置异步支持，Pipeline 可同步或异步运行并流式输出 token",
+  "提供 Agent Pack 预置智能体（如深度研究、高级 RAG）",
+  "通过 SkillToolset 实现渐进式技能发现，按需加载技能描述"
+ ],
+ "intro": "Haystack 是一个用 Python 编写的开源 AI 编排框架，面向生产环境的 LLM 应用开发。它通过模块化的 Pipeline 和 Agent 工作流，让开发者对检索、路由、记忆和生成过程拥有显式控制，从而构建可扩展的 RAG 系统、多模态应用、语义搜索、问答和自主智能体。\n\n该框架强调透明架构，支持同步与异步运行，并内置对 token 用量、工具调用等指标的追踪。Agent 可通过生命周期钩子扩展行为，并利用 Agent Pack 快速搭建深度研究或高级 RAG 等场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 pip 安装 Haystack：pip install haystack-ai",
+  "如需体验最新功能，可安装预发布版：pip install --pre haystack-ai",
+  "阅读官方文档的“What is Haystack?”和“Get Started Guide”快速上手",
+  "参考教程和 Cookbook 中的示例构建第一个 LLM 应用"
+ ],
+ "summary": "Haystack 是一个 Python 开源框架，用于编排 LLM 应用中的检索、路由、记忆与生成等环节。它提供模块化 Pipeline 和 Agent 工作流，让开发者能透明地控制信息如何被检索、排序、过滤并送入模型，适合构建 RAG 系统、语义搜索、问答、多模态应用和自主智能体等生产场景。",
+ "tagline": "开源 AI 编排框架，用于构建生产级 LLM 应用"
+}

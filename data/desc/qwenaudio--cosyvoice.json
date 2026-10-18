@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合语音合成方向的研究者、需要多语言/方言 TTS 能力的开发者，以及希望进行声音克隆或流式语音交互应用落地的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "支持 9 种常见语言和 18 种以上中文方言/口音的零样本语音合成与声音克隆",
+  "提供发音修复功能，可对中文拼音和英文 CMU 音素进行控制",
+  "支持文本输入流和音频输出流的双向流式推理，延迟低至 150ms",
+  "支持通过指令控制语言、方言、情感、语速、音量等属性",
+  "内置文本规范化，无需传统前端模块即可读取数字和特殊符号",
+  "开源预训练模型及训练/推理脚本，支持 vLLM 加速和 FastAPI 服务部署"
+ ],
+ "intro": "CosyVoice 是一个基于大语言模型的多语言语音合成（TTS）系统，提供推理、训练和部署的全栈能力。项目包含 Fun-CosyVoice 3.0、CosyVoice 2.0 和 1.0 等多个版本，其中 Fun-CosyVoice 3.0 在内容一致性、说话人相似度和韵律自然度上优于前代，并支持零样本多语言语音合成。\n\n该系统覆盖 9 种常见语言（中文、英文、日文、韩文、德文、西班牙文、法文、意大利文、俄文）和 18 种以上中文方言/口音，同时支持多语言/跨语言零样本声音克隆。此外，它还提供发音修复（中文拼音和英文 CMU 音素）、文本规范化、双向流式（文本输入流和音频输出流，延迟低至 150ms）以及指令控制（语言、方言、情感、语速、音量等）。\n\n项目开源了预训练模型（如 Fun-CosyVoice3-0.5B、CosyVoice2-0.5B、CosyVoice-300M 系列），并提供了安装、模型下载和基础使用示例，方便开发者快速上手和二次开发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone --recursive https://github.com/FunAudioLLM/CosyVoice.git",
+  "创建 Conda 环境：conda create -n cosyvoice -y python=3.10 && conda activate cosyvoice",
+  "安装依赖：pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com",
+  "下载预训练模型（以 ModelScope 为例）：from modelscope import snapshot_download; snapshot_download('FunAudioLLM/Fun-CosyVoice3-0.5B-2512', local_dir='pretrained_models/Fun-CosyVoice3-0.5B')",
+  "运行示例：python example.py"
+ ],
+ "summary": "CosyVoice 是一个基于大语言模型的多语言语音合成系统，重点解决多语言、多方言场景下的零样本语音克隆与自然语音生成问题。它覆盖多种语言和中文方言，支持流式推理和指令控制，适合需要快速构建多语言 TTS 应用或研究语音合成技术的开发者使用。",
+ "tagline": "多语言大模型语音合成，支持零样本克隆与流式推理"
+}

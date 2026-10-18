@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合需要测试、评估或加固 LLM 应用的开发者和安全团队，也适用于希望对比不同模型表现的工程师。",
+ "date": "2026-10-17",
+ "features": [
+  "自动化评估提示词和模型表现",
+  "红队测试与漏洞扫描，生成安全报告",
+  "并排比较多个 LLM 提供商的模型",
+  "集成 CI/CD 实现自动化检查",
+  "支持代码扫描以审查 LLM 相关安全与合规问题",
+  "本地运行评估，保护提示词隐私"
+ ],
+ "intro": "Promptfoo 是一个用于评估和红队测试 LLM 应用的命令行工具与库。它通过声明式配置帮助开发者自动化测试提示词、智能体和 RAG 应用，并支持在 CI/CD 流程中集成检查。\n\n项目提供模型对比功能，可并排比较 GPT、Claude、Gemini、DeepSeek 等不同模型的表现。同时，它内置红队测试与漏洞扫描能力，用于发现 LLM 应用的安全风险，并生成安全漏洞报告。评估过程完全在本地运行，提示词不会离开用户机器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install -g promptfoo",
+  "promptfoo init --example getting-started",
+  "export OPENAI_API_KEY=sk-abc123",
+  "cd getting-started",
+  "promptfoo eval",
+  "promptfoo view"
+ ],
+ "summary": "Promptfoo 是一个用于评估和红队测试 LLM 应用的命令行工具。它帮助开发者摆脱试错方式，通过自动化评估测试提示词和模型表现，并支持红队测试与漏洞扫描来发现安全风险。你可以用它并排比较不同模型、在 CI/CD 中自动检查，并在本地运行评估以保护提示词隐私。适合需要系统化测试 LLM 应用或进行安全审查的开发者与团队。",
+ "tagline": "测试、评估与红队测试 LLM 应用的 CLI 工具"
+}

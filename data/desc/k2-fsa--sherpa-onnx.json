@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在嵌入式设备、移动端或服务器上部署离线语音功能的开发者，以及对多语言、多平台语音处理有需求的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "支持流式和非流式语音识别（ASR）",
+  "支持文本转语音（TTS）",
+  "支持说话人日志、识别与验证",
+  "支持语音活动检测（VAD）和语音增强",
+  "支持声源分离和关键词 spotting",
+  "提供 12 种编程语言 API 和 WebAssembly 支持"
+ ],
+ "intro": "sherpa-onnx 是一个基于 next-gen Kaldi 和 onnxruntime 的语音处理项目，支持在本地离线运行语音识别、语音合成、说话人日志、语音增强、声源分离、VAD 等多种功能。它不依赖网络，所有计算在设备端完成。\n项目覆盖广泛的硬件平台，包括 x86_64 服务器、ARM 嵌入式设备、Android、iOS、HarmonyOS、Raspberry Pi、RISC-V 以及多种 NPU（如 RK NPU、Ascend NPU）。同时提供 12 种编程语言的 API，包括 C++、Python、Java、JavaScript、Go、Rust 等，并支持 WebAssembly。\nREADME 中列出了详细的功能支持矩阵和平台兼容性表格，并提供了 Hugging Face Spaces 在线演示，方便用户无需安装即可体验部分功能。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "sherpa-onnx 是一个离线语音处理工具包，基于 next-gen Kaldi 和 onnxruntime，可在本地运行语音识别、合成、说话人日志、语音增强等功能。它支持多种硬件平台和编程语言，适合在嵌入式设备、移动端或服务器上部署不依赖网络的语音应用。",
+ "tagline": "离线运行的多功能语音AI工具包"
+}

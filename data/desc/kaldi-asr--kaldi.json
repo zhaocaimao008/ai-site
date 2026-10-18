@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合语音识别领域的研究人员、开发者，以及需要构建语音识别或说话人识别系统的工程师。",
+ "date": "2026-10-17",
+ "features": [
+  "提供语音识别（ASR）和语音转文本的基础工具与算法实现",
+  "支持说话人识别与说话人验证任务",
+  "支持 CUDA 加速，可利用 GPU 进行训练和解码",
+  "跨平台支持：Linux、macOS、Cygwin，以及 Android 和 Web Assembly 交叉编译",
+  "包含示例系统（egs 目录）供用户参考和运行"
+ ],
+ "intro": "Kaldi 是一个开源的语音识别工具包，官方仓库位于 GitHub。项目主要使用 Shell 和 C++ 编写，并支持 CUDA 加速。它提供了构建语音识别系统所需的基础设施，涵盖声学建模、解码器等组件，同时也可用于说话人识别与验证任务。\n\nKaldi 支持多种平台，包括 Linux、macOS、Cygwin，并可通过交叉编译在 Android 和 Web Assembly 上运行。项目文档和示例系统位于 egs 目录，用户可参考 egs/README.txt 运行示例。开发者和用户可通过邮件列表和论坛获取支持。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考 ./INSTALL 文件中的说明构建工具包（适用于 UNIX 系统，包括 Linux、Darwin 和 Cygwin）",
+  "Windows 用户（非 Cygwin）请参考 windows/INSTALL 文件",
+  "运行示例系统构建，请参考 egs/README.txt"
+ ],
+ "summary": "Kaldi 是一个开源的语音识别工具包，提供构建语音识别系统所需的基础设施，并支持说话人识别与验证。它适合语音识别领域的研究人员和开发者，可用于学术研究或工程实践中的语音转文本、说话人识别等场景。项目支持 Linux、macOS 等平台，并可通过交叉编译在 Android 和 Web Assembly 上运行。",
+ "tagline": "开源语音识别工具包，支持语音识别与说话人识别"
+}

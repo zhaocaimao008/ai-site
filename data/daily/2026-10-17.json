@@ -1,152 +1,152 @@
 [
  {
   "full_name": "morluto/rea",
-  "gain": 21279,
-  "stars": 290889
- },
- {
-  "full_name": "debpalash/VoiceStudio",
-  "gain": 2117,
-  "stars": 71166
- },
- {
-  "full_name": "Ebony-Vinyl/dsh-our-free-model",
-  "gain": 1482,
-  "stars": 19306
- },
- {
-  "full_name": "anthropics/claude-plugins-official",
-  "gain": 1464,
-  "stars": 40531
+  "gain": 0,
+  "stars": 307412
  },
  {
   "full_name": "affaan-m/ECC",
-  "gain": 1126,
-  "stars": 281493
- },
- {
-  "full_name": "stablyai/orca",
-  "gain": 1012,
-  "stars": 94479
- },
- {
-  "full_name": "MadsLorentzen/ai-job-search",
-  "gain": 993,
-  "stars": 48499
- },
- {
-  "full_name": "DietrichGebert/ponytail",
-  "gain": 822,
-  "stars": 165225
- },
- {
-  "full_name": "heygen-com/hyperframes",
-  "gain": 774,
-  "stars": 65312
- },
- {
-  "full_name": "yetone/magpie",
-  "gain": 735,
-  "stars": 14175
- },
- {
-  "full_name": "deepseek-ai/deepseek-harness",
-  "gain": 730,
-  "stars": 251162
- },
- {
-  "full_name": "Leonxlnx/taste-skill",
-  "gain": 698,
-  "stars": 98018
- },
- {
-  "full_name": "JuliusBrussee/caveman",
-  "gain": 538,
-  "stars": 113062
- },
- {
-  "full_name": "rohitg00/ai-engineering-from-scratch",
-  "gain": 522,
-  "stars": 70291
- },
- {
-  "full_name": "ruvnet/ruflo",
-  "gain": 517,
-  "stars": 75626
- },
- {
-  "full_name": "harry0703/MoneyPrinterTurbo",
-  "gain": 500,
-  "stars": 132132
- },
- {
-  "full_name": "farion1231/cc-switch",
-  "gain": 471,
-  "stars": 145202
- },
- {
-  "full_name": "LosaLosSantos/aurelio-finance",
-  "gain": 471,
-  "stars": 3943
- },
- {
-  "full_name": "paperclipai/paperclip",
-  "gain": 461,
-  "stars": 103179
- },
- {
-  "full_name": "Panniantong/Agent-Reach",
-  "gain": 443,
-  "stars": 98209
- },
- {
-  "full_name": "tt-a1i/archify",
-  "gain": 436,
-  "stars": 84480
- },
- {
-  "full_name": "onehumanbeing/esp32-iphone-agent",
-  "gain": 422,
-  "stars": 2853
- },
- {
-  "full_name": "deeplethe/solid-glass",
-  "gain": 393,
-  "stars": 1365
- },
- {
-  "full_name": "Graphify-Labs/graphify",
-  "gain": 349,
-  "stars": 127255
- },
- {
-  "full_name": "diegosouzapw/OmniRoute",
-  "gain": 348,
-  "stars": 77375
- },
- {
-  "full_name": "hypit-ai/hypit",
-  "gain": 343,
-  "stars": 22845
- },
- {
-  "full_name": "wangmiaozero/pi-harness",
-  "gain": 342,
-  "stars": 1027
- },
- {
-  "full_name": "calesthio/OpenMontage",
-  "gain": 311,
-  "stars": 68910
- },
- {
-  "full_name": "firecrawl/firecrawl",
-  "gain": 309,
-  "stars": 192214
+  "gain": 0,
+  "stars": 282482
  },
  {
   "full_name": "NousResearch/hermes-agent",
-  "gain": 308,
-  "stars": 254427
+  "gain": 0,
+  "stars": 254689
+ },
+ {
+  "full_name": "deepseek-ai/deepseek-harness",
+  "gain": 0,
+  "stars": 252130
+ },
+ {
+  "full_name": "n8n-io/n8n",
+  "gain": 0,
+  "stars": 207829
+ },
+ {
+  "full_name": "firecrawl/firecrawl",
+  "gain": 0,
+  "stars": 192491
+ },
+ {
+  "full_name": "Significant-Gravitas/AutoGPT",
+  "gain": 0,
+  "stars": 187628
+ },
+ {
+  "full_name": "ollama/ollama",
+  "gain": 0,
+  "stars": 183634
+ },
+ {
+  "full_name": "f/prompts.chat",
+  "gain": 0,
+  "stars": 173265
+ },
+ {
+  "full_name": "huggingface/transformers",
+  "gain": 0,
+  "stars": 167798
+ },
+ {
+  "full_name": "DietrichGebert/ponytail",
+  "gain": 0,
+  "stars": 166231
+ },
+ {
+  "full_name": "AUTOMATIC1111/stable-diffusion-webui",
+  "gain": 0,
+  "stars": 165071
+ },
+ {
+  "full_name": "Snailclimb/JavaGuide",
+  "gain": 0,
+  "stars": 159097
+ },
+ {
+  "full_name": "langgenius/dify",
+  "gain": 0,
+  "stars": 158727
+ },
+ {
+  "full_name": "open-webui/open-webui",
+  "gain": 0,
+  "stars": 155991
+ },
+ {
+  "full_name": "langflow-ai/langflow",
+  "gain": 0,
+  "stars": 155779
+ },
+ {
+  "full_name": "langchain-ai/langchain",
+  "gain": 0,
+  "stars": 147997
+ },
+ {
+  "full_name": "farion1231/cc-switch",
+  "gain": 0,
+  "stars": 145544
+ },
+ {
+  "full_name": "Shubhamsaboo/awesome-llm-apps",
+  "gain": 0,
+  "stars": 142136
+ },
+ {
+  "full_name": "Comfy-Org/ComfyUI",
+  "gain": 0,
+  "stars": 138065
+ },
+ {
+  "full_name": "harry0703/MoneyPrinterTurbo",
+  "gain": 0,
+  "stars": 132387
+ },
+ {
+  "full_name": "Graphify-Labs/graphify",
+  "gain": 0,
+  "stars": 127781
+ },
+ {
+  "full_name": "microsoft/generative-ai-for-beginners",
+  "gain": 0,
+  "stars": 121541
+ },
+ {
+  "full_name": "browser-use/browser-use",
+  "gain": 0,
+  "stars": 118332
+ },
+ {
+  "full_name": "JuliusBrussee/caveman",
+  "gain": 0,
+  "stars": 113290
+ },
+ {
+  "full_name": "TauricResearch/TradingAgents",
+  "gain": 0,
+  "stars": 111736
+ },
+ {
+  "full_name": "google-gemini/gemini-cli",
+  "gain": 0,
+  "stars": 107426
+ },
+ {
+  "full_name": "rasbt/LLMs-from-scratch",
+  "gain": 0,
+  "stars": 106746
+ },
+ {
+  "full_name": "paperclipai/paperclip",
+  "gain": 0,
+  "stars": 103635
+ },
+ {
+  "full_name": "thedotmack/claude-mem",
+  "gain": 0,
+  "stars": 101412
  }
 ]

@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要开源自动化平台的技术团队、开发者以及希望以无代码方式构建 AI 工作流的业务用户。",
+ "date": "2026-10-17",
+ "features": [
+  "类型安全的 TypeScript pieces 框架，支持热重载和 npm 发布",
+  "280+ 开源 pieces 自动作为 MCP 服务器，供 LLM 工具使用",
+  "可视化构建器支持循环、分支、自动重试、HTTP 和代码片段",
+  "AI 优先：原生 AI pieces 和 AI SDK，支持自定义代理",
+  "人工介入：延迟执行、审批流程及聊天/表单输入接口",
+  "自托管、网络隔离，企业级定制与安全控制"
+ ],
+ "intro": "Activepieces 是一个开源的 AI 工作流自动化平台，定位为 Zapier 的替代品。它通过 TypeScript 编写的类型安全 pieces 框架实现可扩展性，所有集成（pieces）均为开源 npm 包，其中 60% 由社区贡献。\n\n平台内置 AI 优先特性，支持原生 AI pieces 和 AI SDK，并可将所有 pieces 自动作为 MCP 服务器，供 Claude Desktop、Cursor 或 Windsurf 等 LLM 工具使用。构建器提供循环、分支、自动重试、HTTP 请求、代码片段（支持 NPM）以及“在代码中询问 AI”等功能，流程完全版本化，并支持多语言翻译和自定义模板。\n\nActivepieces 强调企业级就绪与安全设计，支持自托管和网络隔离，提供人工介入机制（延迟执行或审批）以及聊天、表单等人工输入接口。社区版采用 MIT 许可证，企业功能采用商业许可证。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Activepieces 是一个开源 AI 工作流自动化平台，可作为 Zapier 的替代方案。它用 TypeScript 编写类型安全的 pieces 框架，所有集成均为开源 npm 包，并自动作为 MCP 服务器供 LLM 工具调用。平台提供可视化构建器，支持循环、分支、重试和 AI 代码片段，适合开发者扩展集成，也适合非技术用户通过无代码方式搭建自动化流程。",
+ "tagline": "开源 AI 工作流自动化平台，支持 MCP 与 TypeScript 扩展"
+}

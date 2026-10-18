@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要为 AI Agent 提供隔离执行环境的开发者与平台团队，包括运行编码 Agent、代码解释器、浏览器/桌面自动化或 Agent 评估的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "Fast Sandbox 运行时：在 Kubernetes 上快速创建高密度沙箱，Firecracker 沙箱支持暂停/恢复并保留状态",
+  "Agent 工作环境：内置命令执行、文件管理和代码运行 API，可运行编码 Agent、浏览器和桌面",
+  "网络访问控制：入站统一网关，出站按沙箱配置 egress 策略",
+  "Credential Vault：让 Agent 调用外部服务而不向沙箱暴露真实凭据",
+  "本地到集群：Docker 起步，通过统一生命周期 API 部署到 Kubernetes，支持资源池和批量创建",
+  "多语言 SDK、CLI 与 MCP：Python、Java/Kotlin、TypeScript/JavaScript、C#/.NET、Go SDK，osb 命令行和 MCP 接入"
+ ],
+ "intro": "OpenSandbox 是一个面向 AI Agent 的沙箱运行时，为 AI 应用提供隔离环境来执行代码、运行命令、管理文件，以及操作浏览器或桌面。它支持从本地 Docker 起步，并通过统一的沙箱 API 部署到 Kubernetes。\n\n项目提供 Fast Sandbox 运行时，在 Kubernetes 上实现高密度、低延迟的沙箱创建，Firecracker 沙箱支持暂停与恢复并保留内存和磁盘状态。网络方面，入站流量经由统一网关，出站访问可按沙箱配置策略；Credential Vault 让 Agent 调用外部服务时不向沙箱工作负载暴露真实凭据。\n\nOpenSandbox 提供 Python、Java/Kotlin、TypeScript/JavaScript、C#/.NET 和 Go SDK，以及命令行工具 osb 和 MCP 接入方式，并定义了可扩展的沙箱生命周期与执行 API，便于构建自定义运行时集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker 和 Python 3.10+",
+  "初始化并启动沙箱服务器：uvx opensandbox-server init-config ~/.sandbox.toml --example docker 然后 uvx opensandbox-server",
+  "安装 Python SDK：uv pip install opensandbox",
+  "使用 Sandbox.create(\"alpine\") 创建沙箱，通过 sandbox.commands.run 执行命令、sandbox.files 读写文件，最后调用 sandbox.destroy() 清理"
+ ],
+ "summary": "OpenSandbox 为 AI Agent 提供隔离的运行环境，让模型生成的代码、命令和文件操作在受控沙箱内执行，并可操作浏览器或桌面。它支持本地 Docker 起步、Kubernetes 集群部署，提供网络访问控制、凭据保护和多语言 SDK，适合构建编码 Agent、代码解释器、自动化测试与 Agent 评估等场景。",
+ "tagline": "在自有基础设施上运行 AI Agent 的安全沙箱运行时"
+}

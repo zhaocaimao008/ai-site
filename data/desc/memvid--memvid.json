@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要为 AI Agent 添加持久记忆的开发者，以及希望避免复杂 RAG 基础设施、追求离线或便携部署的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "将数据、嵌入和元数据打包为单个 .mv2 文件，无需外部数据库",
+  "基于 Smart Frame 的只追加写入，支持时间线回放与分支",
+  "提供 CLI、Node.js、Python 和 Rust 多种 SDK",
+  "支持全文检索（BM25）、向量相似度搜索、CLIP 图像嵌入和 Whisper 音频转写等可选特性",
+  "Capsule Context 记忆胶囊支持规则与过期设置，可分享",
+  "完全离线运行，模型无关"
+ ],
+ "intro": "Memvid 是一个面向 AI Agent 的便携式记忆系统，它把数据、嵌入向量、搜索结构和元数据打包进单个文件，从而替代复杂的 RAG 流水线和基于服务器的向量数据库。项目用 Rust 编写，提供 CLI、Node.js、Python 和 Rust SDK。\n\n它的核心设计借鉴视频编码思路，将记忆组织为只追加的 Smart Frame 序列，每个帧带有时间戳、校验和与元数据，支持崩溃安全、时间线回放和分支。项目还提供 Capsule Context（.mv2）自包含记忆胶囊、Time-Travel Debugging 和 Smart Recall 等概念。\n\nMemvid 与模型无关，可完全离线运行，适用于长期运行的 AI Agent、企业知识库、离线优先系统、代码库理解等场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Rust 1.85.0+（从 rustup.rs）",
+  "在 Cargo.toml 中添加依赖：memvid-core = \"2.0\"，按需启用 features（如 lex、vec）",
+  "使用 Memvid::create(\"knowledge.mv2\") 创建记忆文件",
+  "通过 put_bytes_with_options 写入内容并 commit",
+  "使用 SearchRequest 进行检索"
+ ],
+ "summary": "Memvid 是一个用 Rust 编写的 AI Agent 记忆层，它把数据、嵌入向量和搜索结构打包成单个文件，让 Agent 无需搭建复杂 RAG 流水线或服务器向量数据库，就能获得持久记忆和快速检索。项目采用只追加的 Smart Frame 设计，支持时间线回放与分支，并提供多语言 SDK，适合长期运行的 Agent、离线系统和知识库等场景。",
+ "tagline": "为 AI Agent 打造的单文件记忆层，无需数据库即可持久检索"
+}

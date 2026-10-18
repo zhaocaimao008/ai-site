@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "适合希望用 Python 快速开发 Telegram 机器人的开发者，无论是简单脚本还是复杂应用。",
+ "date": "2026-10-17",
+ "features": [
+  "纯 Python 异步接口，兼容 Python 3.10+",
+  "原生支持 Telegram Bot API 10.0 全部类型和方法",
+  "提供便捷快捷方法（如 Message.reply_text）",
+  "完全静态类型注解，便于类型检查",
+  "可定制扩展的接口，支持 webhook 和 polling",
+  "telegram.ext 子模块提供高层类简化开发"
+ ],
+ "intro": "python-telegram-bot 是一个纯 Python 的异步接口库，用于调用 Telegram Bot API。它兼容 Python 3.10 及以上版本，原生支持 Bot API 10.0 的全部类型和方法。除了基础的 API 封装，库还提供了便捷方法和快捷方式，以及 telegram.ext 子模块中的高层类，帮助开发者更简单地构建机器人。\n\n该库完全异步，带有静态类型注解，接口可定制和扩展，并能无缝集成 webhook 和 polling 两种运行方式。项目文档和示例较为全面，同时有活跃的 Telegram 群组和频道供开发者交流。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装库：pip install python-telegram-bot --upgrade",
+  "从源码安装（可选）：git clone https://github.com/python-telegram-bot/python-telegram-bot && cd python-telegram-bot && pip install build && python -m build",
+  "安装可选依赖（如需要）：pip install \"python-telegram-bot[passport]\" 或 pip install \"python-telegram-bot[socks]\"",
+  "参考官方文档和示例开始编写机器人"
+ ],
+ "summary": "python-telegram-bot 是一个纯 Python 异步库，封装了 Telegram Bot API，让开发者能用 Python 编写 Telegram 机器人。它支持 Bot API 10.0 的全部类型和方法，并提供高层类与便捷方法简化开发。适合需要构建聊天机器人、自动化通知或交互式服务的开发者，无论是简单脚本还是复杂应用都能使用。",
+ "tagline": "纯 Python 异步 Telegram Bot API 封装库"
+}

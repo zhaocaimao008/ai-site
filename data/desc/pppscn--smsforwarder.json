@@ -1,0 +1,22 @@
+{
+ "ai_related": false,
+ "audience": "适合需要将备用 Android 手机的短信、来电或通知转发到其他设备或办公平台，并希望远程查询手机状态的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "监控 Android 手机的短信、来电和 APP 通知",
+  "按指定规则将内容转发到钉钉、企业微信、飞书、邮箱、bark、webhook、Telegram、Server酱、PushPlus 等多个通道",
+  "支持转发到其他手机短信",
+  "V3.0 新增远程控制：发短信、查短信、查通话、查通讯录、查电量",
+  "v3.3 新增自动任务与快捷指令",
+  "适配 Android 4.4 至 13.0"
+ ],
+ "intro": "SmsForwarder 是一个运行在 Android 手机上的短信转发工具，主要用来监控手机收到的短信、来电和 APP 通知，然后根据用户设定的规则，把这些内容转发到其他手机或第三方服务。它支持多种转发通道，包括钉钉群自定义机器人、钉钉企业内机器人、企业微信群机器人、企业微信应用消息、飞书群机器人、飞书企业应用、邮箱、bark、webhook、Telegram 机器人、Server酱、PushPlus 以及手机短信等。\n\n从 V3.0 开始，项目增加了主动控制服务端与客户端的能力，可以远程发短信、查短信、查通话记录、查通讯录、查电量等。v3.3 还加入了自动任务和快捷指令，方便实现自动化操作。项目使用 Kotlin 开发，v3.x 版本适配 Android 4.4 到 13.0。\n\n需要注意的是，项目作者声明代码和 APK 仅用于测试和学习研究，禁止商业用途，使用前应自行判断合法性与合规性。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载 APK：https://github.com/pppscn/SmsForwarder/releases",
+  "在 Android 手机上安装并授予短信、通知等必要权限",
+  "参考 GitHub Wiki 使用文档配置转发规则和转发通道：https://github.com/pppscn/SmsForwarder/wiki"
+ ],
+ "summary": "SmsForwarder 是一个 Android 应用，用来监控手机收到的短信、来电和 APP 通知，并按规则转发到钉钉、企业微信、飞书、邮箱、Telegram、webhook 等多个平台，也支持转发到其他手机。适合把备用机的消息同步到常用设备或办公群，V3.0 起还能远程发短信、查短信、查通话和电量。",
+ "tagline": "监控 Android 短信、来电、通知并按规则转发到多个平台"
+}

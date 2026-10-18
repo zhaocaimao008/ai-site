@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望构建自主 AI Agent 的开发者、需要本地或云端模型路由的团队，以及想在 Web、桌面或移动端集成 Agent 能力的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "模型无关的 AgentRuntime 核心，通过插件注册动作、提供者、评估器、服务和模型处理器",
+  "面向 Web、桌面和移动端的 Eliza 应用，支持聊天、语音、记忆、知识库和文档工作流",
+  "本地推理插件，提供 Eliza-1 系列模型及嵌入、语音、视觉和图像生成能力",
+  "可选 Eliza Cloud 服务，提供账户认证、托管模型路由、部署和跨设备连接",
+  "原生设备桥接，包括相机、电话、消息、联系人、位置以及非托管 EVM/Solana 钱包操作",
+  "可启动的 Linux 和 AOSP 发行版工具链（packages/os）"
+ ],
+ "intro": "elizaOS 是一个用 TypeScript 编写的开源框架和产品栈，用于构建和运行自主 AI Agent。这个 monorepo 包含核心运行时、面向用户的 Eliza 应用、CLI、云服务、原生桥接以及官方插件。\n\n框架本身与模型无关，通过插件扩展能力。@elizaos/core 定义 AgentRuntime、类型、授权、记忆与状态原语以及插件契约；插件可以注册动作、提供者、评估器、服务、模型处理器、路由、事件和视图。Eliza 应用覆盖 Web、桌面和移动端，能力取决于操作系统、已安装插件、权限和配置的模型服务。\n\n本地推理由 @elizaos/plugin-local-inference 提供，包含基于 Gemma 4 的 Eliza-1 文本模型（2B、4B、9B、27B）以及嵌入、语音、视觉和图像生成资源，硬件检测和模型路由会选择支持的本地、直连提供商或 Eliza Cloud 后端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 package.json 中指定的 Bun 和 Node 版本",
+  "git clone --filter=blob:none https://github.com/elizaos/eliza.git",
+  "cd eliza && bun install",
+  "bun run dev",
+  "可选：bun run dev:local 使用本地 Agent 和自有提供商密钥启动应用与 API"
+ ],
+ "summary": "elizaOS 是一个用 TypeScript 编写的开源框架和产品栈，目标是让开发者构建和运行自主 AI Agent。它提供核心运行时、面向 Web/桌面/移动端的 Eliza 应用、插件系统以及可选的云服务，并支持本地推理与多种模型后端路由。适合需要将 Agent 能力集成到应用或设备中的开发者和团队。",
+ "tagline": "开源 TypeScript 自主 AI Agent 运行时与产品栈"
+}

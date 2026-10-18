@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合中文NLP研究人员、开发者以及希望本地部署和体验大模型的个人用户。",
+ "date": "2026-10-17",
+ "features": [
+  "扩充中文词表，提升中文编解码效率",
+  "开源中文LLaMA基座模型和指令精调的Alpaca模型",
+  "提供预训练和指令精调脚本，支持自定义训练",
+  "支持本地CPU/GPU量化和部署，可在笔记本电脑上运行",
+  "兼容transformers、llama.cpp、text-generation-webui、LangChain等生态",
+  "提供7B、13B、33B多种尺寸的模型版本"
+ ],
+ "intro": "本项目开源了中文LLaMA和指令精调的Alpaca大模型，旨在促进大模型在中文NLP社区的开放研究。模型在原版LLaMA基础上扩充了中文词表，并使用中文数据进行二次预训练，提升了中文语义理解能力。Alpaca模型进一步使用中文指令数据精调，增强了指令理解和执行能力。\n\n项目提供了预训练和指令精调脚本，用户可根据需要进一步训练模型。同时支持在个人电脑的CPU/GPU上进行本地量化和部署，并兼容transformers、llama.cpp、text-generation-webui、LangChain等生态。目前已开源7B、13B、33B多个版本的模型，包括基础版、Plus版和Pro版。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载原版LLaMA模型和本项目提供的LoRA权重",
+  "按照项目文档中的合并步骤将LoRA权重与原版LLaMA合并，获得完整模型",
+  "使用llama.cpp等工具对合并后的模型进行量化",
+  "在本地CPU/GPU上部署并运行量化后的模型进行推理"
+ ],
+ "summary": "该项目开源了中文LLaMA和Alpaca大模型，通过扩充中文词表和使用中文数据预训练，提升了模型的中文理解能力。Alpaca模型经过指令精调，能更好地理解和执行指令。项目提供训练脚本和本地部署方案，适合研究人员和开发者进行中文大模型的实验与应用。",
+ "tagline": "中文LLaMA与Alpaca大模型，支持本地CPU/GPU训练部署"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想快速批量制作短视频、又不想学习剪辑的创作者，以及需要把图像、视频、TTS 等 AI 能力串成流水线的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "输入主题自动生成文案、配图、语音、BGM 并合成视频",
+  "支持 ComfyUI / RunningHub 工作流与直连 API 模型两种调用方式",
+  "支持 Edge-TTS、Index-TTS 等多种 TTS 方案及多语言音色",
+  "提供数字人口播、图生视频、动作迁移等扩展模块",
+  "支持竖屏/横屏尺寸、多种视觉模板和自定义素材上传",
+  "提供 Windows 一键整合包和 Streamlit Web 界面"
+ ],
+ "intro": "Pixelle-Video 是一个基于 Python 的 AI 短视频生成引擎，提供 Streamlit Web 界面。用户只需输入一个主题，系统就会自动撰写视频文案、生成 AI 配图或视频、合成语音解说、添加背景音乐并一键合成视频，无需剪辑经验。\n\n整个流程采用模块化设计，依次为文案生成、配图规划、逐帧处理和视频合成，每个环节都可以替换模型或引擎。图像、视频、TTS 等能力既可以通过 ComfyUI / RunningHub 工作流调用，也可以直连 DashScope、OpenAI、Seedream、Seedance、Kling 等 API 服务。\n\n除基础流程外，项目还提供数字人口播、图生视频、动作迁移等扩展模块，支持竖屏与横屏尺寸、多种视觉模板以及自定义素材上传。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 用户下载一键整合包，解压后双击 start.bat 启动",
+  "浏览器打开 http://localhost:8501",
+  "在「⚙️ 系统配置」中填写 LLM API Key 和图像生成服务配置",
+  "保存配置后输入主题，开始生成视频",
+  "源码安装：先安装 uv 和 ffmpeg，再执行 git clone https://github.com/AIDC-AI/Pixelle-Video.git && cd Pixelle-Video，然后运行 uv run streamlit run web/app.py"
+ ],
+ "summary": "Pixelle-Video 把短视频制作流程自动化：输入一个主题，它就能生成文案、配图或视频画面、语音解说和背景音乐，并合成成片。项目通过 Web 界面操作，底层可接入 ComfyUI、RunningHub 工作流或 DashScope、OpenAI、Kling 等直连 API，适合需要快速产出竖屏或横屏短视频的内容创作者，以及想组合图像、视频、TTS 能力的开发者。",
+ "tagline": "输入一个主题，AI 自动生成完整短视频"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将代码库整体提供给 AI 进行代码审查、重构或分析的开发者，以及希望快速了解项目结构的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "将整个代码库打包成单个 AI 友好文件（XML、Markdown 或纯文本）",
+  "统计每个文件及整个仓库的 token 数量，便于控制 LLM 上下文",
+  "自动遵循 .gitignore、.ignore 和 .repomixignore 规则过滤文件",
+  "集成 Secretlint 检测并排除敏感信息，提升安全性",
+  "使用 Tree-sitter 压缩代码，减少 token 数量同时保留结构",
+  "提供 CLI、在线网站和 Chrome 扩展多种使用方式"
+ ],
+ "intro": "Repomix 是一个用 TypeScript 编写的命令行工具，它能把整个代码仓库打包成一个结构化的文件，方便直接输入给大型语言模型（LLM）或其他 AI 工具使用。项目支持 Claude、ChatGPT、DeepSeek、Gemini 等多种模型，旨在解决代码库分散、难以整体提供给 AI 的问题。\n\n它提供了丰富的功能：自动统计每个文件和整个仓库的 token 数量，帮助控制 LLM 上下文限制；遵循 .gitignore、.ignore 和 .repomixignore 规则，智能过滤文件；集成 Secretlint 检测并排除敏感信息；还支持通过 Tree-sitter 压缩代码，减少 token 消耗。\n\n使用方式灵活，既可以通过 npx 直接运行，也可以全局安装，还提供了在线网站和 Chrome 浏览器扩展，满足不同场景的需求。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在项目目录中运行 npx repomix@latest 直接使用",
+  "或全局安装：npm install -g repomix",
+  "在任意项目目录运行 repomix 命令",
+  "生成 repomix-output.xml 文件，可发送给 AI 助手使用"
+ ],
+ "summary": "Repomix 是一个将代码仓库打包成单个 AI 友好文件的工具，方便开发者把整个代码库输入给大型语言模型进行代码审查、重构或分析。它支持 token 统计、文件过滤和敏感信息检测，并提供命令行、在线网站和浏览器扩展多种使用方式，适合需要与 AI 协作处理代码的开发者。",
+ "tagline": "将代码库打包成AI友好格式的工具"
+}

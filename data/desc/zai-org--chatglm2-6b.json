@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望本地部署或微调中英双语对话模型的研究者与开发者，也适合需要较低显存门槛运行大模型的个人用户。",
+ "date": "2026-10-17",
+ "features": [
+  "中英双语对话，基于 GLM 混合目标函数预训练与人类偏好对齐",
+  "上下文长度由 2K 扩展至 32K，并提供 ChatGLM2-6B-32K 长文本版本",
+  "采用 Multi-Query Attention，推理速度相比初代提升 42%",
+  "支持 INT4/INT8 量化，INT4 下约 6G 显存即可运行较长对话",
+  "提供 P-Tuning v2 与全参数微调脚本",
+  "权重对学术研究完全开放，登记后可免费商业使用"
+ ],
+ "intro": "ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，保留了初代对话流畅、部署门槛较低的特点。它基于 GLM 的混合目标函数，经过 1.4T 中英标识符预训练与人类偏好对齐训练，在 MMLU、C-Eval、GSM8K、BBH 等评测上相比初代有明显提升。\n\n模型借助 FlashAttention 将上下文长度从 2K 扩展到 32K，对话阶段使用 8K 上下文训练，并另外发布了 ChatGLM2-6B-32K 版本。推理侧采用 Multi-Query Attention，官方实现下推理速度相比初代提升 42%，INT4 量化下 6G 显存可支持约 8K 长度的对话。\n\n权重对学术研究完全开放，登记后允许免费商业使用。项目同时提供 P-Tuning v2 与全参数微调脚本，方便开发者按需定制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/THUDM/ChatGLM2-6B && cd ChatGLM2-6B",
+  "安装依赖：pip install -r requirements.txt（推荐 transformers 4.30.2、torch 2.0 及以上）",
+  "通过 transformers 的 AutoTokenizer 与 AutoModel 加载模型并调用生成对话"
+ ],
+ "summary": "ChatGLM2-6B 是一个开源的中英双语对话大模型，在初代 ChatGLM-6B 基础上提升了评测表现、上下文长度和推理效率。它支持 32K 长上下文与 INT4 量化，显存占用较低，适合需要本地部署对话模型、处理长文档理解或进行微调定制的开发者与研究者。",
+ "tagline": "开源中英双语对话大模型 ChatGLM-6B 的第二代版本"
+}

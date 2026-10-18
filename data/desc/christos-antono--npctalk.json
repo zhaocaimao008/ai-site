@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想为游戏 NPC 加入实时语音对话的模组开发者，以及使用 Claude Code、Codex、Cursor 等 AI 编码代理进行游戏改造的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "提供 make-npcs-talk 等 Agent Skills，指导 AI 编码代理把语音对话接入游戏",
+  "自托管 Fish Audio Drama 3 / S2 Pro 语音服务器，支持流式返回与声音克隆",
+  "npctalk CLI 提供健康检查、试听合成、声音制作与上传等命令",
+  "支持语音输入，包括按键说话和带语音活动检测的开放麦克风",
+  "NPC 可执行动作并响应口头指令，配合 TypeSafe Jev 选择动作",
+  "附带完整的 GTA V 模组示例与语音相似度评测方法"
+ ],
+ "intro": "NPCTalk 是一套让游戏中的 NPC 与玩家对话的工具与技能集合。玩家说话后，系统先做语音活动检测和语音转文字，再结合游戏提供的对话对象与场景信息，由 LLM 以角色口吻生成台词，并通过自托管的 Fish Audio 语音服务器以克隆音色流式返回，NPC 随即开口，同时配有字幕、口型动作和相应行为。\n\n项目以 GTA V 为完整示例，但大部分代码与具体游戏无关。仓库包含面向 AI 编码代理的 Agent Skills、Python 编写的 npctalk 命令行工具、部署在 Modal 上的语音服务器，以及 GTA V 模组示例。技能文档说明了接入一款游戏需要提供的四个钩子，并给出 Unity、Unreal、Bethesda、Minecraft 等引擎的注意事项。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装插件或克隆仓库，例如在 Claude Code 中执行 /plugin marketplace add christos-antono/NPCTalk 和 /plugin install npctalk@npctalk",
+  "配置环境变量：Modal 的 NPCVOICE_TOKEN、fal 的 FAL_KEY、Cerebras 的 CEREBRAS_API_KEY，以及可选的 TYPESAFE_API_KEY",
+  "确保已安装 Git、Python 3.10+、uv 和 ffmpeg",
+  "用 npctalk health 检查语音服务器状态，用 npctalk say 试听合成效果",
+  "向 AI 代理描述目标，例如让 GTA V 故事模式中附近的 NPC 能通过麦克风对话"
+ ],
+ "summary": "NPCTalk 面向希望让游戏 NPC 真正开口回应的开发者，把语音识别、LLM 生成台词、克隆音色合成和 NPC 动作串成一条链路。项目以 GTA V 为完整示例，同时提供可复用的技能与命令行工具，方便借助 AI 编码代理把类似对话能力移植到其他游戏。",
+ "tagline": "让游戏 NPC 用克隆语音实时回应玩家"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想要使用或微调通义千问系列模型的研究者、开发者，以及需要部署中文大语言模型应用的技术人员。",
+ "date": "2026-10-17",
+ "features": [
+  "提供 Qwen 基础模型和 Qwen-Chat 对话模型，参数规模覆盖 1.8B 到 72B",
+  "支持 GPTQ 量化和 KV cache 量化，降低显存占用",
+  "包含全参数微调、LoRA 和 Q-LoRA 的微调教程",
+  "提供 vLLM 和 FastChat 部署示例",
+  "支持构建 WebUI 和 CLI demo",
+  "对话模型支持工具使用、agent 和代码解释器"
+ ],
+ "intro": "这是阿里云通义千问（Qwen）系列大语言模型的官方代码仓库，包含基础语言模型 Qwen-1.8B、Qwen-7B、Qwen-14B、Qwen-72B 以及对话模型 Qwen-Chat 系列。模型基于最多 3 万亿 token 的多语言数据预训练，在基准测试中表现有竞争力。对话模型经过 SFT 和 RLHF 对齐，支持聊天、内容创作、信息抽取、摘要、翻译、代码、数学解题等任务，并能使用工具、扮演 agent 或代码解释器。\n\n仓库提供推理快速上手、量化模型（GPTQ 和 KV cache 量化）细节、推理性能统计、微调教程（全参数、LoRA、Q-LoRA）、部署示例（vLLM、FastChat）、构建 WebUI 和 CLI demo 的说明、DashScope API 服务介绍以及 OpenAI 风格 API 搭建指南。\n\n注意：该仓库已不再积极维护，Qwen2 已发布，建议关注 QwenLM/Qwen2 仓库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Hugging Face 或 ModelScope 下载模型（如 Qwen-7B-Chat）",
+  "安装依赖：pip install transformers accelerate tiktoken",
+  "使用 transformers 加载模型和 tokenizer 进行推理",
+  "参考 README 中的示例代码进行对话或生成"
+ ],
+ "summary": "通义千问（Qwen）是阿里云开源的大语言模型系列，包含基础模型和对话模型，参数从 1.8B 到 72B。项目提供推理、量化、微调、部署和构建 demo 的完整指南，适合需要中文大模型能力的开发者进行本地实验或应用开发。注意该仓库已不再积极维护，新项目建议转向 Qwen2。",
+ "tagline": "阿里云通义千问系列大语言模型官方仓库"
+}

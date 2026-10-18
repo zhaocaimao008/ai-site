@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 LLM 构建工具接口的 Python 开发者，以及希望快速接入或搭建 MCP 服务器的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "用 Python 函数声明 MCP 工具，自动生成 schema、校验和文档",
+  "支持服务器端暴露 tools、resources 和 prompts 给 LLM",
+  "客户端可连接任意本地或远程 MCP 服务器，支持编程和 CLI 方式",
+  "为工具提供在对话中直接渲染的交互式 UI（Apps）",
+  "处理传输协商、认证和协议生命周期等 MCP 细节",
+  "提供 llms.txt 格式文档，便于 LLM 读取"
+ ],
+ "intro": "FastMCP 是一个基于 Python 的 MCP（Model Context Protocol）应用框架，用于把 LLM 连接到工具和数据。它提供服务器、客户端和交互式应用三大能力：用普通 Python 函数声明工具，schema、校验和文档会自动生成；用 URL 连接服务器时，传输协商、认证和协议生命周期由框架管理。\n\n项目由 Prefect 团队维护，FastMCP 1.0 曾并入官方 MCP Python SDK。README 称其每天下载量达百万次，并有多种版本的 FastMCP 支撑着跨语言 70% 的 MCP 服务器。官方文档站点提供安装、快速上手和 API 参考。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 uv 安装：uv add fastmcp",
+  "编写 Python 文件，导入 FastMCP 并创建实例：from fastmcp import FastMCP; mcp = FastMCP(\"Demo 🚀\")",
+  "用 @mcp.tool 装饰器定义工具函数",
+  "在 __main__ 中调用 mcp.run() 启动服务器"
+ ],
+ "summary": "FastMCP 是一个 Python 框架，用于构建 MCP 服务器和客户端，把 LLM 与工具、数据连接起来。它让开发者用普通 Python 函数定义工具，自动处理 schema、校验和文档，并在客户端侧管理传输、认证和协议生命周期。适合需要为 LLM 快速搭建工具接口或接入现有 MCP 服务的 Python 开发者。",
+ "tagline": "用 Python 快速构建 MCP 服务器与客户端"
+}

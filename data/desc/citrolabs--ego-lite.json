@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI agent 自动完成网页操作、同时不想被打断日常浏览的开发者，以及使用 Claude Code、Codex 等 agent CLI 的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "每个 agent 拥有独立隔离的 Space，与用户浏览互不干扰",
+  "通过 ego-browser 技能连接 Claude Code、Codex、Cursor 等 agent CLI",
+  "将浏览器操作封装为 JavaScript 函数，agent 写代码一次完成多步任务",
+  "可迁移 Chrome 的登录状态、Cookie、扩展和书签",
+  "多个 Space 可并行运行不同 agent 或任务",
+  "页面 Snapshot 转为结构化文本，支持深层嵌套 iframe"
+ ],
+ "intro": "ego lite 是一款面向 AI agent 的浏览器，目标是让 agent 执行网页自动化任务时，不占用你正在使用的浏览器。它把 agent 的工作放在独立的 Space（同一浏览器内的隔离工作区）里，你可以继续在前台浏览，agent 在后台操作，互不抢占标签页。\n\n它通过 ego-browser 技能与 Claude Code、Codex、Cursor 等 agent CLI 对接，把 snapshot、fill、click、wait、navigate、capture 等能力封装成页面内的 JavaScript 函数，agent 写一段代码即可一次完成多步操作。首次启动时可选择迁移 Chrome 数据，让 agent 沿用已有的登录状态、Cookie、扩展和书签。\n\n目前提供 macOS 版（Apple Silicon 与 Intel），Windows 处于封闭测试，Linux 在路线图中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并安装 macOS 版 ego lite（Apple Silicon 或 Intel），或运行 npx skills add citrolabs/ego-lite 仅安装 ego-browser 技能",
+  "首次启动时选择是否迁移 Chrome 数据，以继承登录状态、Cookie、扩展和书签",
+  "在 agent CLI 中输入 /ego-browser 加空格，再用自然语言描述任务，例如：ego-browser follow @ego_agent on x.com for me",
+  "agent 会在自己的 Space 中打开页面、读取 Snapshot 并执行操作，你的标签页不受影响"
+ ],
+ "summary": "ego lite 是一款为 AI agent 设计的浏览器，解决 agent 做网页自动化时抢占用户浏览器、登录状态难以沿用的问题。它让每个 agent 在独立的 Space 中运行任务，用户可同时正常浏览；通过 ego-browser 技能对接 Claude Code、Codex 等 agent CLI，把浏览器操作封装成 JavaScript 函数供 agent 调用。适合需要让 agent 自动处理网页任务、又不想被打断的开发者。",
+ "tagline": "为 AI agent 打造的浏览器，与你的浏览互不干扰"
+}

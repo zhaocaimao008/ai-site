@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在用 Claude Code、Codex 等 CLI 编码代理，并希望同时推进多个任务、集中审查改动的开发者。主要面向 macOS 用户。",
+ "date": "2026-10-17",
+ "features": [
+  "用 Git worktree 为每个任务隔离分支、终端和工作文件，支持多个代理并行工作",
+  "内置 diff 查看器，可查看、评论和编辑代理改动后提交推送",
+  "应用内浏览器预览开发服务器，按 workspace 检测端口",
+  "在 PR diff 中选中行，把反馈发送给运行中或新建的代理会话",
+  "浏览器 Design 模式选中 UI 元素，附带元素上下文让代理修改界面",
+  "支持远程访问、定时 Automations，以及 CLI、SDK 和 MCP server 管理 workspace"
+ ],
+ "intro": "Superset 是一个面向编码代理的桌面 IDE，目标是把 Claude Code、Codex、OpenCode 等 CLI 代理放进同一个工作区里并行运行。每个任务分配独立的 Git worktree、分支和终端，因此可以同时推进多个改动，再逐个审查结果后合并。\n\n应用内置 diff 查看器、终端、浏览器预览和命令面板。你可以在 Changes 里检查代理产出的补丁、运行测试，并在浏览器面板预览开发服务器；每个 worktree 的端口会被单独检测。它还支持把 PR 的 diff 行反馈直接发给代理会话，以及在浏览器 Design 模式下选中元素并附带上下文让代理修改 UI。\n\n除本地使用外，Superset 提供远程访问、定时 Automations、CLI/SDK/MCP server，以及 iPhone 和 iPad 客户端（需 Superset Pro 与 iOS 26 及以上）。目前主要支持 macOS，Linux 为实验性支持，Windows 尚不可用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 macOS 的 .dmg 安装包（Apple Silicon 或 Intel）并安装，确保系统已安装 Git",
+  "打开 Superset，从本机添加一个仓库或克隆一个仓库",
+  "创建一个 workspace，选择要使用的 CLI 代理，描述一个小的改动任务",
+  "在 Changes 中检查代理生成的补丁，运行相关测试，并在浏览器面板预览应用后再提交"
+ ],
+ "summary": "Superset 是一个桌面 IDE，用来同时运行多个 CLI 编码代理。它给每个任务分配独立的 Git worktree、分支和终端，并内置 diff 查看、浏览器预览和终端，方便逐个审查代理改动后再合并。适合需要并行推进多项编码任务、集中检查代理产出的开发者，目前以 macOS 为主要平台。",
+ "tagline": "并行编排多个 CLI 编码代理的桌面 IDE"
+}

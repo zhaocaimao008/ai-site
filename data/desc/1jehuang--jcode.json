@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要并行运行多个 coding agent 的开发者，以及希望在终端中使用高性能 AI 编程助手的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "Rust 实现，多会话并行时内存占用低、启动快",
+  "Swarm 多 agent 协作：同仓库内自动通知文件变更、支持 agent 间消息",
+  "agent 可自主派生子 agent 组成团队并行执行任务",
+  "agentgrep 按文件结构返回匹配并自适应裁剪，减少 token 消耗",
+  "支持 Claude OAuth、OpenAI Codex OAuth 等多种提供商",
+  "self dev 模式：agent 可编辑、构建、测试并重载自身源码"
+ ],
+ "intro": "jcode 是一个用 Rust 编写的高性能 coding agent harness，面向需要同时运行大量智能体的开发场景。它主打低资源占用：README 中的基准显示，每个额外 headless 会话约占用 3.1 MB 内存，并给出与 Claude Code 等工具的对比数据；交互启动到首次可输入的时间也做了测量。\n\n它内置 Swarm 机制：在同一仓库中启动多个 agent 时，服务端会自动协调它们。当某个 agent 修改了另一个 agent 已读取的文件时，后者会收到通知，并可查看 diff 判断是否冲突；agent 之间支持私信和广播，也能自行派生子 agent 并行完成任务。此外还提供面向 agent 的 grep 工具 agentgrep，按文件结构返回匹配结果并自适应裁剪，以节省上下文。\n\njcode 支持多种模型提供商，包括 Claude OAuth 和 OpenAI Codex OAuth，并提供 self dev 模式，让 agent 修改、构建、测试自身源码后重载二进制继续工作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 macOS 或 Linux 上执行安装脚本：curl -fsSL https://jcode.sh/install | bash",
+  "Windows 用户参考官方文档 https://jcode.sh/docs#install 的安装说明",
+  "在同一仓库中启动两个及以上 agent，由服务端自动管理协作",
+  "如需调整 swarm 根 agent 的推理强度，在 ~/.jcode/config.toml 中配置 swarm_root_effort 或 swarm_deep_root_effort"
+ ],
+ "summary": "jcode 是一个用 Rust 编写的高性能编程智能体运行框架，重点解决同时运行多个 agent 时的内存占用和响应速度问题。它支持在同一仓库中并行启动多个 agent，由服务端自动协调文件变更通知和 agent 间消息，agent 也能自行派生子 agent 并行工作。适合需要大规模多智能体协作开发的场景，也提供节省上下文的 grep 工具和多种模型提供商接入。",
+ "tagline": "用 Rust 编写的高性能多智能体编程工具"
+}

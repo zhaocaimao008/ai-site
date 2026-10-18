@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要 3D 建筑/户型编辑能力的开发者，以及希望让 AI 智能体参与建模工作流的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "基于 React Three Fiber 与 WebGPU 的 3D 建筑编辑",
+  "本地 CLI 一键启动编辑器与 MCP 服务",
+  "通过 MCP 让 AI 智能体连接并操作场景",
+  "提供 pascal-3d、furniture-fit 等 agent skills",
+  "支持 Docker 自托管，项目数据存于 SQLite"
+ ],
+ "intro": "Pascal Editor 是一个开源、本地优先的 3D 建筑编辑器，基于 React Three Fiber 和 WebGPU 构建，既可以在浏览器中运行，也可以通过 CLI 在本地启动。项目以 TypeScript 编写，采用 MIT 协议。\n\n除了面向人的可视化编辑，它还提供本地 CLI 和 MCP 工具，让 AI 智能体能够连接并操作场景。项目附带 agent skills，例如 pascal-3d 和 furniture-fit，可用于本地或托管的 MCP 环境。\n\n项目支持通过 npx 快速启动本地编辑器，也提供 Docker 镜像用于自托管，项目数据保存在 SQLite 中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Node.js 22.13 或更新版本",
+  "运行 npx @pascal-app/cli editor 启动本地编辑器与 MCP 服务",
+  "如需全局命令，执行 npm install --global @pascal-app/cli",
+  "配置智能体启动 pascal mcp connect 以连接 MCP",
+  "可选：用 npx skills add pascalorg/editor --skill pascal-3d --skill furniture-fit 安装 agent skills"
+ ],
+ "summary": "Pascal Editor 是一个本地优先的开源 3D 建筑编辑器，可在浏览器或 CLI 中运行，用于搭建和查看建筑场景。它的特点是把 MCP 工具和 agent skills 一并提供，让 AI 智能体也能连接编辑器完成场景操作，适合想探索人机协作建模流程的开发者。",
+ "tagline": "开源本地优先的 3D 建筑编辑器，支持 MCP 接入 AI 智能体"
+}

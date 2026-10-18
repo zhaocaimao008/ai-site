@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想在 Google Colab 上免费体验 Stable Diffusion 图像生成的开发者和爱好者，无需本地 GPU。",
+ "date": "2026-10-17",
+ "features": [
+  "提供多个预训练模型的 Colab 笔记本，一键启动 WebUI",
+  "支持 Stable Diffusion 1.4/1.5、Waifu Diffusion、Inpainting 等模型",
+  "包含风格化模型如 Modern Disney、Arcane、Cyberpunk Anime 等",
+  "提供 lite、stable、nightly 三个版本，满足不同稳定性需求",
+  "training 分支支持 DreamBooth 和 LoRA 训练",
+  "drive 分支指导安装最新版和 ControlNet 到 Google Drive"
+ ],
+ "intro": "这个项目提供了一系列 Jupyter Notebook，用于在 Google Colab 上快速启动 Stable Diffusion WebUI。每个笔记本对应一个预训练模型，例如 Stable Diffusion 1.4/1.5、Waifu Diffusion、Inpainting 模型以及多种风格化模型（如 Modern Disney、Arcane 等）。用户无需本地配置环境，点击 Colab 链接即可运行。\n\n项目分为 lite、stable、nightly 三个版本，分别提供不同稳定性和扩展支持。此外，还有 training 分支用于 DreamBooth 和 LoRA 训练，以及 drive 分支指导将最新版和 ControlNet 安装到 Google Drive。注意：该仓库已标记为过时，不再更新，作者推荐使用新项目 TostUI。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开项目 README，选择所需的模型和版本（lite/stable/nightly）",
+  "点击对应的 Open in Colab 按钮，在 Colab 中打开笔记本",
+  "按照笔记本中的说明运行单元格，启动 WebUI",
+  "通过生成的链接访问 WebUI 界面进行图像生成"
+ ],
+ "summary": "这个项目提供了一系列 Colab 笔记本，让用户无需本地环境就能在 Google Colab 上运行 Stable Diffusion WebUI。它覆盖了多种预训练模型和风格化模型，并提供了不同稳定性的版本选择。适合想快速体验 AI 图像生成但缺乏本地 GPU 的开发者。注意仓库已过时，作者推荐了新项目。",
+ "tagline": "在 Google Colab 上运行 Stable Diffusion WebUI 的笔记本合集"
+}

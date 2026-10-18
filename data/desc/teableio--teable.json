@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用电子表格管理数据并引入 AI 工作流和自定义应用的团队，也适合需要自托管 PostgreSQL 数据库协作平台的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "AI 聊天：用自然语言询问、分析并操作数据",
+  "App Builder：描述需求后由 agent 在沙箱中构建并部署应用",
+  "AI 自动化：基于记录变更、定时任务和 webhook 触发，包含 AI 推理步骤",
+  "AI 字段填充：批量生成和丰富字段值",
+  "多种视图：网格、表单、看板、画廊和日历",
+  "实时协作：评论、记录历史、撤销/重做和实时协同编辑"
+ ],
+ "intro": "Teable 是一个将数据管理、AI 工作流和应用构建整合在一起的平台。它表面上是电子表格，底层是真实的 PostgreSQL 数据库，支持网格、表单、看板、画廊和日历等多种视图，以及公式、筛选、分组、排序、聚合、评论、历史记录和实时协作等功能。\n\n在 AI 方面，Teable 提供 AI 聊天、App Builder、AI 自动化和 AI 字段填充。AI 聊天可以用自然语言询问、分析并操作数据；App Builder 允许用户描述所需应用，由 agent 在隔离沙箱中构建并一键部署到独立 URL；AI 自动化可响应记录变更、定时任务和 webhook，并加入 AI 推理步骤。\n\nTeable 支持云端使用和自托管部署。自托管分为完整版和独立版，完整版包含 AI 功能和应用构建能力，独立版则仅提供表格、协作、API 和自动化等基础功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "体验托管版本：访问 https://teable.ai",
+  "自托管部署：参考部署指南 https://help.teable.ai/en/deploy/choose",
+  "开发初始化：运行 corepack enable 和 pnpm install",
+  "初始化 Postgres：运行 make switch-db-mode",
+  "启动开发服务器：进入 apps/nestjs-backend 后运行 pnpm dev"
+ ],
+ "summary": "Teable 是一个把电子表格、AI 工作流和应用构建结合在一起的平台，底层使用 PostgreSQL。它让团队在熟悉的表格界面中管理数据，同时通过 AI 聊天、自动化和 App Builder 处理业务逻辑并生成定制应用。适合希望用低代码方式搭建内部工具、又需要真实数据库支撑的团队，也支持云端或自托管部署。",
+ "tagline": "AI 驱动的电子表格与业务应用平台"
+}

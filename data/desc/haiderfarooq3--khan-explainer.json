@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速制作教学讲解视频的内容创作者、教育工作者和开发者，尤其是已经使用 Claude Code 并熟悉 macOS 环境的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "根据描述自动生成场景文件并渲染为 MP4 视频",
+  "支持黑板粉笔与白板马克笔两种视觉风格，可横屏或竖屏",
+  "语音驱动时间轴，画笔绘制与讲解内容自动同步",
+  "可在产品截图上方绘制箭头、圆圈和编号步骤",
+  "支持从 YouTube 视频或播客提取音频并生成竖屏短片",
+  "支持多语言书写，包括阿拉伯语、乌尔都语等从右到左的语言"
+ ],
+ "intro": "khan-explainer 是一个 Claude Code 技能，用于生成可汗学院风格的手绘讲解视频：画笔在黑板或白板上逐步绘制图形，同时语音进行讲解。你只需描述想要的视频内容，Claude 会编写场景文件，一条命令即可渲染出 MP4。\n\n项目完全在本地 Mac 上运行，依赖 HTML canvas、Playwright、ffmpeg 和系统内置的 say 语音，无需 API 密钥或账号。支持黑板/白板、横屏/竖屏切换，也支持在截图上方绘制教程，以及将 YouTube 视频或播客剪辑为竖屏短片。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：macOS、Node 20+、ffmpeg（brew install ffmpeg）",
+  "克隆仓库到 Claude 技能目录：git clone https://github.com/haiderfarooq3/khan-explainer ~/.claude/skills/khan-explainer",
+  "安装依赖并下载 Chromium：cd ~/.claude/skills/khan-explainer/scripts && npm install && npx playwright install chromium",
+  "向 Claude Code 描述视频需求，例如：Make a 30-second Khan-style explainer on how DNS works.",
+  "或直接渲染示例：node scripts/render.js examples/ai-agents.js agents.mp4"
+ ],
+ "summary": "khan-explainer 是一个 Claude Code 技能，用于在本地生成可汗学院风格的手绘讲解视频。你只需用自然语言描述视频内容，Claude 就会编写场景文件，再通过一条命令渲染出画笔绘制与语音同步的 MP4。它适合制作教学讲解、产品操作演示，或将现有视频/播客剪辑为竖屏短片，全程无需 API 密钥，在 Mac 上即可完成。",
+ "tagline": "用 Claude Code 生成可汗学院风格手绘讲解视频"
+}

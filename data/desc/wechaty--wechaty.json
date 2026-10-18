@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速构建跨平台聊天机器人的开发者，尤其是熟悉 JavaScript、Python、Go 或 Java 的工程师。",
+ "date": "2026-10-17",
+ "features": [
+  "统一接口对接 WhatsApp、微信等多个消息平台",
+  "支持 JavaScript、Python、Go、Java 等多语言开发",
+  "跨平台运行，包括 Linux、Windows、macOS 和 Docker",
+  "提供极简的机器人创建方式，6 行代码即可起步",
+  "开源并拥有活跃的开发者社区"
+ ],
+ "intro": "Wechaty 是一个面向聊天机器人开发者的 Conversational RPA SDK，提供统一接口来对接 WhatsApp、微信等不同消息平台。开发者只需编写一次代码，即可在多个平台运行，无需处理各平台 API 的差异。\n\n项目支持 JavaScript、Python、Go、Java 等多种语言，可在 Linux、Windows、macOS 和 Docker 上运行。它简化了机器人创建流程，官方示例显示用 6 行 JavaScript 即可实现一个基础机器人。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Wechaty：npm install wechaty",
+  "参考官方入门项目 wechaty-getting-started 获取模板",
+  "编写 6 行 JavaScript 代码创建基础机器人",
+  "运行代码并扫码登录，开始与机器人交互"
+ ],
+ "summary": "Wechaty 是一个聊天机器人开发 SDK，用统一接口封装 WhatsApp、微信等消息平台，让开发者写一次代码就能跨平台运行。它支持 JavaScript、Python、Go、Java 等语言，适合需要快速搭建多平台聊天机器人的开发者，尤其适合熟悉上述语言、希望减少平台适配工作量的工程师。",
+ "tagline": "跨平台聊天机器人开发 SDK"
+}

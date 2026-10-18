@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望本地部署数字人视频生成能力的开发者、内容创作者，以及对隐私保护有要求的企业用户。",
+ "date": "2026-10-17",
+ "features": [
+  "精确克隆外貌与声音，构建逼真虚拟模型",
+  "支持文本和语音驱动虚拟形象生成视频",
+  "高效视频合成，实现自然唇形同步",
+  "支持八种语言的脚本输入",
+  "完全离线运行，保护用户隐私",
+  "提供 Docker 快速部署方案，支持 Windows 和 Ubuntu 22.04"
+ ],
+ "intro": "Duix.Avatar 是 Duix.com 开源的一款 AI 数字人工具包，支持在本地离线完成数字人克隆和视频合成。它通过真实人物视频数据训练数字人模型，能够精确克隆外貌与声音，并支持用文本或语音驱动虚拟形象生成视频。\n\n项目主要面向 Windows 系统，也提供 Ubuntu 22.04 的部署方式，基于 Docker 运行。核心功能包括外观与声音克隆、文本/语音驱动、音视频同步合成，以及英语、日语、韩语、中文、法语、德语、阿拉伯语和西班牙语等多语言支持。由于完全离线运行，用户数据无需上传网络，适合对隐私敏感的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 18 并拉取 Docker 镜像：docker pull guiji2025/fun-asr、docker pull guiji2025/fish-speech-ziming、docker pull guiji2025/duix.avatar",
+  "Windows 用户确保 WSL 已安装并更新：wsl --list --verbose、wsl --update，然后安装 Docker for Windows",
+  "进入 /deploy 目录，执行 docker-compose up -d 启动服务（轻量版使用 docker-compose -f docker-compose-lite.yml up -d）",
+  "等待镜像下载完成（约 70GB），在 Docker 中看到三个服务即表示成功",
+  "从 GitHub Releases 下载官方客户端安装包，双击 Duix.Avatar-x.x.x-setup.exe 完成安装"
+ ],
+ "summary": "Duix.Avatar 是一个开源的 AI 数字人工具包，解决本地离线克隆数字人和生成视频的需求。它通过真实视频数据训练模型，可克隆外貌与声音，并用文本或语音驱动虚拟形象合成视频，支持多种语言。适合需要隐私保护、希望零成本制作数字人视频的开发者与创作者。",
+ "tagline": "开源离线 AI 数字人克隆与视频生成工具"
+}

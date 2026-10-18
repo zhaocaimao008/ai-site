@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Codex、Claude Code 等工具中使用非默认模型的开发者，以及需要统一管理多个模型服务商和 ChatGPT 账号的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "将 Codex 的 Responses API 翻译为多家服务商协议，支持流式、工具调用、推理 token 与图片",
+  "内置 40 多个服务商，也可接入任意 OpenAI 兼容端点",
+  "通过 localhost:10100 的 Web 控制台完成服务商、模型与账号配置",
+  "为 Codex 管理 ChatGPT 账号池，刷新配额并按策略路由新会话",
+  "提供 CLI、后台服务与桌面应用（beta）多种运行方式"
+ ],
+ "intro": "opencodex 是一个轻量的本地代理，把 Codex 使用的 Responses API 翻译成各家模型服务商支持的协议，双向处理流式输出、工具调用、推理 token 和图片。借助它，Codex CLI、Codex App、SDK、Claude Code、Claude Desktop 和 Grok Build 都可以改用 Claude、Gemini、Grok、GLM、DeepSeek、Kimi、Qwen、Ollama 等模型。\n\n项目提供 Web 控制台，内置 40 多个服务商配置，也支持任意 OpenAI 兼容端点，可在界面里添加服务商、选择模型、管理账号。它还支持为 Codex 维护 ChatGPT 账号池，在面板中刷新配额，并让新会话按策略路由到可用账号。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：npm install -g @bitkyc08/opencodex（需要 Node 18+）",
+  "启动：ocx start，代理与控制台运行在 localhost:10100",
+  "打开 http://localhost:10100，在 Web 控制台添加服务商并选择模型",
+  "如需后台运行，使用 ocx service；随时用 ocx gui 重新打开控制台"
+ ],
+ "summary": "opencodex 是一个本地代理，解决 Codex、Claude Code 等工具只能绑定特定模型的问题。它把 Codex 的 Responses API 转换成其他服务商的协议，让这些工具可以调用 Claude、Gemini、DeepSeek、Ollama 等模型，并保留流式输出、工具调用和图片处理。项目附带 Web 控制台，可配置服务商与模型，也能管理 ChatGPT 账号池。适合想在现有编码工具中自由切换模型的开发者。",
+ "tagline": "让 Codex 与 Claude Code 接入任意 LLM 的本地代理"
+}

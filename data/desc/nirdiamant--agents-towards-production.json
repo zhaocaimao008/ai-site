@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合已了解 LLM 基础、希望把 Agent 做成可部署产品的开发者，以及需要参考工程实践的 AI 应用团队。",
+ "date": "2026-10-17",
+ "features": [
+  "覆盖 Agent 从原型到部署的完整链路教程",
+  "包含有状态工作流、向量记忆与 RAG 实践",
+  "涉及 Docker 部署、FastAPI 接口与 GPU 扩展",
+  "涵盖安全护栏、可观测性与评估",
+  "包含多 Agent 协作与浏览器自动化示例",
+  "由多家工具厂商贡献分步教程"
+ ],
+ "intro": "这是一个以代码为主的教程仓库，主题是把 GenAI Agent 从原型推进到可部署的产品。内容覆盖有状态工作流、向量记忆、实时网页搜索 API、Docker 部署、FastAPI 接口、安全护栏、GPU 扩展、浏览器自动化、微调、多 Agent 协作、可观测性、评估与 UI 开发等环节。\n\n仓库目前收录约 28 篇生产级教程，多数以 Jupyter Notebook 形式呈现，并包含由 LangChain、Redis、Contextual AI、Bright Data 等公司贡献的分步教程。README 还介绍了作者关于 AI 软件工程方法的付费课程，与仓库教程相互独立。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库用一系列 Notebook 教程，讲清楚如何把 GenAI Agent 从原型做成可部署的产品。内容涉及有状态工作流、向量记忆、网页搜索、Docker 与 FastAPI 部署、安全护栏、多 Agent 协作和可观测性等工程环节，适合已有 LLM 基础、想把 Agent 落到实际项目中的开发者按需查阅。",
+ "tagline": "面向生产环境的 GenAI Agent 实战教程集"
+}

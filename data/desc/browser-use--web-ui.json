@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望以图形界面使用浏览器 AI Agent 的开发者，以及不想直接编写代码的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "基于 Gradio 的 Web 界面，方便与浏览器 AI Agent 交互",
+  "支持多种 LLM，包括 Google、OpenAI、Azure OpenAI、Anthropic、DeepSeek、Ollama 等",
+  "可使用自己的浏览器，避免重新登录网站",
+  "支持高清屏幕录制",
+  "可持久化浏览器会话，在任务间保持窗口打开",
+  "提供本地安装和 Docker 安装两种方式"
+ ],
+ "intro": "browser-use/web-ui 是基于 browser-use 构建的 Web 界面，使用 Gradio 实现，让用户可以通过图形界面与浏览器 AI Agent 交互。它支持 browser-use 的大部分功能，降低了直接使用命令行或代码的门槛。\n\n项目集成了多种大语言模型，包括 Google、OpenAI、Azure OpenAI、Anthropic、DeepSeek 和 Ollama 等。用户可以使用自己的浏览器，避免重复登录网站，并支持高清屏幕录制和持久化浏览器会话，在多个 AI 任务之间保持浏览器窗口打开。\n\n安装方式包括本地安装和 Docker 安装，本地安装需要 Python 3.11 环境，并配置 .env 文件中的 API 密钥。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/browser-use/web-ui.git && cd web-ui",
+  "创建 Python 3.11 虚拟环境：uv venv --python 3.11，并激活",
+  "安装依赖：uv pip install -r requirements.txt",
+  "安装 Playwright 浏览器：playwright install --with-deps",
+  "复制 .env.example 为 .env 并填入 API 密钥，然后运行 python webui.py --ip 127.0.0.1 --port 7788"
+ ],
+ "summary": "browser-use/web-ui 为 browser-use 项目提供了一个基于 Gradio 的网页界面，让用户无需编写代码就能操作浏览器 AI Agent。它支持多种大语言模型，并允许使用自己的浏览器，避免重复登录，适合想快速体验或日常使用浏览器自动化的开发者和普通用户。",
+ "tagline": "在浏览器中运行 AI Agent 的 Gradio 界面"
+}

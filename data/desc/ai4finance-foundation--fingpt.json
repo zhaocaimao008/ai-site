@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合金融科技开发者、量化分析师以及对金融 NLP 感兴趣的研究人员。普通用户也可通过在线演示体验股票预测功能。",
+ "date": "2026-10-17",
+ "features": [
+  "提供开源金融大语言模型，包括情感分析和预测模型",
+  "支持轻量级微调，快速适应新数据，成本较低",
+  "FinGPT-Forecaster 可预测股票价格走势",
+  "提供 HuggingFace Space 在线演示，无需安装",
+  "支持云端 API 和本地 GPU 部署两种使用方式"
+ ],
+ "intro": "FinGPT 是由 AI4Finance Foundation 开发的开源金融大语言模型项目，旨在为金融领域提供可访问的 LLM 解决方案。项目包含多个预训练模型，如 FinGPT-Forecaster 和金融情感分析模型，并在 HuggingFace 上发布。\n\nFinGPT 强调轻量级适配，支持快速微调以融入新数据，成本远低于从头训练大型模型。它利用互联网规模的金融数据，通过自动数据整理流程实现模型及时更新。项目还探索 RLHF 技术，以学习个体偏好，推动个性化智能投顾发展。\n\nFinGPT-Forecaster 是一个里程碑应用，基于美国道琼斯 30 种股票数据训练，可分析公司新闻和财务数据，预测下周股价走势。用户可通过 HuggingFace Space 在线体验，或本地安装使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/AI4Finance-Foundation/FinGPT.git",
+  "进入目录并安装依赖：cd FinGPT && pip install -r requirements.txt && pip install -e .",
+  "访问 HuggingFace Space 在线体验 FinGPT-Forecaster",
+  "本地使用时，可设置环境变量 FINGPT_LLM_PROVIDER='openai' 使用云端 API，或加载本地模型（需 GPU）"
+ ],
+ "summary": "FinGPT 是一个开源金融大语言模型项目，提供预训练模型和轻量微调方案，帮助开发者和研究者以较低成本构建金融 NLP 应用。它包含情感分析、股票预测等模型，适合金融科技开发、量化分析及学术研究场景，并支持在线演示和本地部署。",
+ "tagline": "开源金融大语言模型，支持轻量微调与金融预测"
+}

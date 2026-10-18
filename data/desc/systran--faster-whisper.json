@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要高效语音转文字能力的开发者，尤其是关注推理速度和资源占用的场景。",
+ "date": "2026-10-17",
+ "features": [
+  "比 openai/whisper 快最多 4 倍，内存占用更低",
+  "支持 8 位量化，在 CPU 和 GPU 上均可加速",
+  "无需安装 FFmpeg，使用 PyAV 解码音频",
+  "提供批处理转录管道，提升吞吐量",
+  "兼容 Distil-Whisper 模型（如 distil-large-v3）"
+ ],
+ "intro": "faster-whisper 是 OpenAI Whisper 模型的重实现，使用 CTranslate2 作为推理引擎。在相同精度下，它比 openai/whisper 快最多 4 倍，且内存占用更少。通过 8 位量化，可以在 CPU 和 GPU 上进一步提升效率。\n\n项目提供 Python 包，无需系统安装 FFmpeg，音频由 PyAV 解码。支持 GPU（需 CUDA 12 和 cuDNN 9）和 CPU 运行，并提供批处理转录接口。Distil-Whisper 检查点也可直接使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install faster-whisper",
+  "GPU 用户需安装 CUDA 12 的 cuBLAS 和 cuDNN 9 库",
+  "使用 WhisperModel 加载模型并调用 transcribe 方法转录音频",
+  "遍历返回的 segments 生成器获取转录结果"
+ ],
+ "summary": "faster-whisper 是 OpenAI Whisper 模型的高效实现，基于 CTranslate2 推理引擎，在保持相同精度的同时显著提升转录速度并降低内存占用。它适合需要快速、低资源运行语音识别任务的开发者，支持 CPU 和 GPU，并可通过量化进一步优化性能。",
+ "tagline": "基于 CTranslate2 的 Whisper 高速转录实现"
+}

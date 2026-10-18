@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合想系统学习并动手实现生成式 AI Agent 的开发者，以及需要参考具体实现方案的技术人员。",
+ "date": "2026-10-17",
+ "features": [
+  "57 个可运行的 Jupyter Notebook 教程，覆盖基础对话机器人到多智能体系统",
+  "涉及 LangChain、LangGraph、RAG、MCP 等主流 Agent 技术栈",
+  "包含 Agent 评估、Human-in-the-Loop 审批、文档录入等进阶主题",
+  "每个教程配有对应的 YouTube 短视频讲解",
+  "通过邮件订阅获取更新与免费教程"
+ ],
+ "intro": "这是一个以 Jupyter Notebook 形式组织的生成式 AI Agent 教程与实现合集，覆盖从基础对话机器人到复杂多智能体系统的多种技术。仓库持续更新，目前包含 57 个教程，涉及 LangChain、LangGraph、RAG、MCP、多智能体协作等主题。\n\n每个教程对应一个可运行的 notebook，读者可以边看边跑，理解 Agent 的构建思路与实现细节。近期新增内容包括基于轨迹的 Agent 评估、Human-in-the-Loop 审批 Agent、文档录入 Agent 等。\n\n仓库同时提供配套的 YouTube 短视频讲解和邮件订阅，方便从不同形式跟进内容更新。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库把生成式 AI Agent 的多种技术整理成一系列可运行的 Jupyter Notebook 教程，从简单的对话机器人一直讲到多智能体系统。内容涉及 LangChain、LangGraph、RAG、MCP 等常见工具与范式，适合想边跑代码边理解 Agent 构建方式的开发者，也适合需要查找具体实现参考的技术人员。",
+ "tagline": "50+ 个生成式 AI Agent 教程与实现合集"
+}

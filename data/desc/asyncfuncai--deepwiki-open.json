@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速理解陌生代码库的开发者，以及希望为自有仓库自动生成文档的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "输入仓库名称后自动分析代码结构",
+  "生成完整的项目文档并组织为可导航 Wiki",
+  "生成可视化图表解释代码如何运作",
+  "为代码生成 codemap，支持引导式浏览",
+  "支持 GitHub、GitLab、BitBucket 仓库",
+  "支持 OpenAI、OpenRouter、Ollama、Gemini 等多种模型"
+ ],
+ "intro": "DeepWiki-Open 是一个用 Python 实现的开源项目，目标是自动为 GitHub、GitLab 或 BitBucket 上的代码仓库生成可交互的 Wiki。用户只需输入仓库名称，它就会分析代码结构、生成文档、绘制说明工作原理的可视化图表，并把内容组织成便于浏览的 Wiki 页面。\n\n除文档外，它还会生成 codemap，用于以代码为中心的引导式浏览。项目支持 OpenAI、OpenRouter、Ollama、Gemini 等多种模型来源，可自托管运行。README 提到 2.0 版本已上线，可在 grok-wiki.com 下载。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "DeepWiki-Open 面向需要快速读懂代码仓库的开发者：输入 GitHub、GitLab 或 BitBucket 仓库名，它就会分析代码结构、生成文档和可视化图表，并整理成可导航的 Wiki，还提供 codemap 辅助按代码路径浏览。项目可自托管，支持多种模型来源，适合为陌生项目补文档或做代码导读。",
+ "tagline": "为代码仓库自动生成交互式 Wiki 的开源工具"
+}

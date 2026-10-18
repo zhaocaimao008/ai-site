@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在浏览网页或桌面环境中快速翻译、润色和总结多语言文本的用户，以及愿意自行配置 LLM API Key 的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "翻译、润色、总结三种模式，支持 55 种语言互转",
+  "支持流式输出、一键复制和 TTS 朗读",
+  "提供浏览器插件与 Windows/macOS/Linux 桌面应用",
+  "支持截图翻译和生词本，可基于生词生成记忆辅助",
+  "可自定义翻译文本，支持 OpenAI、Azure OpenAI Service、MiniMax 等提供商"
+ ],
+ "intro": "NextAI Translator 是一个基于 ChatGPT API 的翻译工具，提供浏览器插件和跨平台桌面应用两种形态，支持 Windows、macOS 和 Linux。项目最初是作者为 macOS 上的 Bob 插件做的补充，后来扩展成独立的多平台应用。\n\n除了翻译，它还提供润色和总结两种模式，支持 55 种语言之间的互译、润色与总结，并支持流式输出。用户可以自定义翻译文本、一键复制、使用 TTS 朗读，也支持截图翻译和生词本，并能根据生词本中的单词生成记忆辅助内容。\n\n模型接入方面，支持 OpenAI、Azure OpenAI Service、MiniMax 等 LLM 提供商，也内置了兼容 OpenAI 的 TeamoRouter 网关。使用前需要准备相应的 API Key。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 OpenAI API Key 或 Azure OpenAI Service API Key（也可选用内置的 TeamoRouter 网关）",
+  "桌面端：从 Latest Release 页面下载对应系统的安装包（Windows 为 .exe，macOS 为 .dmg）并安装",
+  "macOS 若提示无法验证开发者，可在 设置 -> 隐私与安全性 中点击“仍要打开”，或执行 sudo xattr -d com.apple.quarantine /Applications/NextAI\\ Translator.app",
+  "浏览器端：在 Chrome Web Store 或 Firefox Add-ons 中安装 NextAI Translator 插件",
+  "在设置中选择模型提供商并填入 API Key 后即可使用"
+ ],
+ "summary": "NextAI Translator 把大模型 API 用在翻译场景上，提供浏览器插件和桌面应用两种形态，覆盖 Windows、macOS 与 Linux。它不只做逐词翻译，还支持润色、总结、截图翻译和生词本，适合经常阅读外文网页、文档，或需要快速改写和提炼多语言文本的人使用。使用前需要自备 OpenAI 等提供商的 API Key。",
+ "tagline": "基于大模型 API 的划词翻译浏览器插件与跨平台桌面应用"
+}

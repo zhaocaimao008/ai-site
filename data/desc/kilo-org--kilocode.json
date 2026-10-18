@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在编辑器或命令行中使用 AI 辅助编码的开发者，以及需要在 CI/CD 中运行自动化编码任务的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "在 VS Code、JetBrains 和 CLI 中运行 AI 编码代理",
+  "内置 Code、Plan、Ask、Debug 专用代理，支持自定义代理",
+  "从自然语言生成和编辑多文件代码，并提供行内自动补全",
+  "代理可自我检查、控制终端和浏览器",
+  "通过 Kilo Marketplace 安装代理、技能、MCP 服务器和插件",
+  "支持 500+ 模型并在任务中途切换"
+ ],
+ "intro": "Kilo Code 是一个开源的 AI 编码代理，可在 VS Code、JetBrains IDE 和命令行中运行。它提供 Code、Plan、Ask、Debug 等专用代理，分别用于代码实现、架构规划、代码库问答和问题调试，也支持用户自定义代理。\n\n项目支持从自然语言生成和编辑多文件代码、行内自动补全、代理自我检查、终端与浏览器控制，并可通过 Kilo Marketplace 安装代理、技能、MCP 服务器和插件。用户可在 500+ 模型之间切换，按模型提供商的价格付费，无需自备 API key 即可开始。CLI 还提供 --auto 模式用于 CI/CD 自动化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "VS Code：安装 Kilo Code 扩展并创建账号",
+  "CLI：运行 npm install -g @kilocode/cli 安装",
+  "CLI：在项目目录中运行 kilo 启动",
+  "JetBrains：在 Settings → Plugins 中搜索并安装 Kilo Code"
+ ],
+ "summary": "Kilo Code 是一个开源 AI 编码代理，解决在编辑器与命令行中统一使用 AI 辅助开发的问题。它可在 VS Code、JetBrains 和 CLI 中运行，提供代码生成、规划、问答和调试等专用代理，并支持多模型切换与插件扩展。适合希望借助 AI 完成日常编码、代码审查或 CI/CD 自动化任务的开发者。",
+ "tagline": "开源 AI 编码代理，支持 VS Code、JetBrains 与 CLI"
+}

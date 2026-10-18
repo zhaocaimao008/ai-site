@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code 或 Codex、希望把价值投资方法论流程化的个人投资者与投研从业者，也适合想了解多 Agent 投研框架的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "20 个投资研究 Skill，覆盖个股深度研究、财报精读、行业漏斗筛选、组合管理与论文追踪",
+  "/investment-team 等多 Agent 并行研究，四个大师视角独立分析后综合研判",
+  "强制输出通过/不通过/灰色地带结论及分层价格区间，而非模棱两可的分析",
+  "内置信息丰富度评级、芒格式逆向检验、快速否决清单、反共识检查等反偏见机制",
+  "financial_rigor.py 等工具用 Decimal 精确计算并交叉验证市值、PE 等关键数据",
+  "兼容 Claude Code 与 Codex，可搭配内置 /deep-research 做事实核查"
+ ],
+ "intro": "AI Berkshire 是一套同时兼容 Claude Code 与 Codex 的投资研究 Skill 合集，把巴菲特、芒格、段永平、李录四位价值投资大师的方法论整理成结构化流程，由 AI Agent 执行。\n\n仓库提供 20 个 skill，覆盖深度研究、财报精读、行业筛选、持仓管理和思维工具等场景。团队型 skill 由 Team Lead 并行调度四个大师视角 Agent，各自独立检索与判断，再综合成报告；工具层用 Python decimal 做精确计算，并对关键数据做多来源交叉验证。\n\n项目强调输出可决策的结论：强制给出通过/不通过/灰色地带与价格区间，并内置信息丰富度评级、逆向检验、快速否决清单等反偏见机制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 或 Codex 环境中获取本仓库的 skills 目录",
+  "根据研究目标选择 skill，例如用 /quality-screen 快速排除非一流公司",
+  "对重点公司运行 /investment-research 或 /investment-team 做深度分析",
+  "用 python3 tools/financial_rigor.py verify-market-cap 等命令校验关键财务数据"
+ ],
+ "summary": "AI Berkshire 把巴菲特、芒格、段永平、李录四位价值投资大师的方法论写成 20 个可在 Claude Code / Codex 中调用的研究 Skill，让 AI 按固定流程完成个股深度研究、财报精读、行业筛选和持仓跟踪。它针对的是直接问 AI 容易得到模棱两可答案的问题，通过多 Agent 并行、强制结论、逆向检验和数据交叉验证，产出结构一致、可用于决策的投研报告。",
+ "tagline": "面向 Claude Code / Codex 的价值投资研究 Skill 合集"
+}

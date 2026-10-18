@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想系统学习 AI 结对编程工作流的中文开发者，以及希望用 Pi Agent、Codex 等工具规范上下文与技能管理的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "Context、Skills、Extensions 三类资源的统一导航与治理",
+  "从零开始的入门路线：环境、CLI 配置、第一个项目与 Git 闭环",
+  "功法体系：整理思想、准则、思维模型与工程流程",
+  "法器体系：登记 Vibe Coding 流程中使用的工具与依赖",
+  "提示词库与 Skills 入口，可按需显式加载",
+  "Codex 配置与本地 make test 等工程实践材料"
+ ],
+ "intro": "这是一个面向 AI 结对编程的中文资源仓库，把 Vibe Coding 相关的资料整理成 Context、Skills、Extensions 三个域。主体底座是 Pi Agent 与 OpenAI GPT，强调把已有的上下文、技能和扩展组合成可验证的工作流，而不是单纯堆砌提示词。\n\n仓库内容包括入门学习路线、功法体系（思想、准则、方法与工程流程）、法器体系（流程中使用的工具与依赖登记）、提示词库、Skills 以及 Codex 配置等。作者反复说明：加载资源不等于执行许可，也不等于效果验证，具体结果需要用测试、CI、脚本、类型、Schema 和 Git 来核对。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备可用的 Pi Agent 及已授权的 OpenAI GPT 模型，通过 Pi 原生模型选择配置",
+  "克隆仓库后初始化子模块：git submodule update --init --recursive",
+  "阅读根目录 AGENTS.md 和当前任务所需的 Context 资料",
+  "需要既有 Skill 时从仓库根显式加载：pi --skill .github/skills",
+  "用 Pi 原生 /model 选择已授权模型，明确任务与验收后再让 Agent 执行"
+ ],
+ "summary": "这个仓库把 Vibe Coding 相关的提示词、技能、工具和工程方法整理成一套中文资料库，核心是用 Pi Agent 配合 OpenAI GPT 做 AI 结对编程。它适合想从零学习 AI 辅助开发流程的开发者，也适合需要统一上下文与技能管理的团队，按入门路线和功法体系逐步上手即可。",
+ "tagline": "以 Pi Agent 与 GPT 为主体的 Vibe Coding 工作流工具箱"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文本转语音的开发者、需要生成对话音频的内容创作者，以及对开源语音模型感兴趣的技术人员。",
+ "date": "2026-10-17",
+ "features": [
+  "通过 [S1] 和 [S2] 标签生成双人对话",
+  "支持插入 (laughs)、(coughs) 等非语言声音标签",
+  "支持音频提示进行声音克隆和情感控制",
+  "提供 Hugging Face Transformers 集成",
+  "提供 Gradio 界面和命令行工具"
+ ],
+ "intro": "Dia 是 Nari Labs 推出的 1.6B 参数文本转语音模型，能够直接从文本脚本生成高度逼真的对话音频。它支持通过 [S1] 和 [S2] 标签区分说话人，并可在文本中插入笑声、咳嗽等非语言声音，还能通过音频提示控制情感和语调。模型权重已在 Hugging Face 开放，并提供了推理代码和 Gradio 界面。\n\n目前 Dia 仅支持英文生成，且未针对特定声音进行微调，因此每次运行会得到不同的音色。用户可以通过提供音频提示或固定随机种子来保持说话人一致性。项目已在 RTX 4090 上测试，支持 bfloat16、float16 和 float32 精度，显存占用约 4.4GB 至 7.9GB。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/nari-labs/dia.git",
+  "进入目录并安装：cd dia && pip install -e .",
+  "运行示例：python example/simple.py",
+  "启动 Gradio 界面：python app.py"
+ ],
+ "summary": "Dia 是一个开源的文本转对话语音模型，能根据带说话人标签的文本脚本直接生成逼真的双人对话音频，并支持插入笑声等非语言声音。它适合需要快速制作对话音频的研究者和开发者，也可通过音频提示控制音色与情感。目前仅支持英文，需在 GPU 上运行。",
+ "tagline": "1.6B 参数的开源文本转对话语音模型"
+}

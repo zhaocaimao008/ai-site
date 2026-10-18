@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 SenseCAP Watcher 等 ESP32-S3 开发板、希望自建语音助手并自由选择模型服务商的开发者。",
+ "date": "2026-10-17",
+ "features": [
+  "唤醒词「Hi, ESP」与旋钮按键两种触发方式",
+  "STT、chat、TTS 三个独立 OpenAI 兼容端点自由混搭",
+  "按句子边界流式合成并播放语音回复",
+  "说话中按旋钮可打断，取消进行中的请求",
+  "静音录音自动丢弃，避免产生幻觉回答",
+  "配置 Wi-Fi 后开机自动联网，无需 App 配网"
+ ],
+ "intro": "esp32-thinks 是一个运行在 ESP32-S3 上的个人 AI 语音助手固件，基于 Meta 开源的 muse-gadget-sdk 修改而来。说出唤醒词「Hi, ESP」或按下旋钮即可提问，设备会以语音流式作答，支持英语、中文和韩语。\n\n项目把语音识别、对话和语音合成拆成三个独立的 OpenAI 兼容端点，可以分别指向不同服务商，也可以全部使用同一家；内置 openai、quicksilver、custom 三种预设，改一行配置重新编译即可切换。回复按句子边界边生成边合成播放，首句在模型仍在输出时就开始发声。\n\n固件面向 Seeed SenseCAP Watcher W1-B 开发板，使用 ESP-IDF v6.0.1 构建，Wi-Fi 信息写入配置后开机自动联网，无需手机 App 或厂商账号。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 ESP-IDF v6.x（esp32s3 目标）与 Linux 或 macOS 构建环境",
+  "克隆 muse-gadget-sdk 并检出 812c46f，再克隆 esp32-thinks",
+  "运行 ./scripts/backup-nvs.sh ../muse-gadget-sdk /dev/ttyACM1 备份出厂 NVS",
+  "运行 ./apply.sh ../muse-gadget-sdk --preset quicksilver 应用补丁并配置模型与 Wi-Fi",
+  "运行 ./build-and-flash.sh ../muse-gadget-sdk /dev/ttyACM1 编译并烧录，重启后即可对话"
+ ],
+ "summary": "esp32-thinks 把一块带麦克风、扬声器和圆形屏幕的 ESP32-S3 小设备变成可自建的语音助手。它不绑定单一厂商，语音识别、对话和语音合成分别指向任意 OpenAI 兼容服务，可按需混搭并随时更换。适合想用自己选定的模型搭建离线优先、可审查固件的个人语音助手的开发者。",
+ "tagline": "在 ESP32 上运行的个人 AI 语音助手，模型可自由搭配"
+}

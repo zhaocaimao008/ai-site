@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要自托管、可定制对话式 AI 的开发者与数据科学团队，以及希望研究或维护经典 Rasa 框架的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "支持文本和语音对话的自动化",
+  "提供自然语言理解（NLU）与对话管理",
+  "可连接 Slack、Facebook Messenger、Telegram 等多种渠道",
+  "支持构建具有上下文的多轮对话助手",
+  "使用 Poetry 进行依赖管理和开发构建"
+ ],
+ "intro": "Rasa Open Source 是一个开源的机器学习框架，用于自动化基于文本和语音的对话。它支持构建具有上下文的多轮对话助手，并可连接到 Facebook Messenger、Slack、Telegram、Twilio 等多种消息渠道。\n\n该项目目前处于维护模式，官方推荐的新方向是 Hello Rasa 和 CALM 引擎。经典 Rasa 框架包含 NLU 和对话管理能力，适合需要自托管、深度定制的对话式 AI 场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Poetry（参考官方指南）",
+  "在项目根目录运行 make install 从源码构建",
+  "运行 make prepare-tests-ubuntu 或 make prepare-tests-macos 准备测试环境",
+  "运行 make test 执行测试"
+ ],
+ "summary": "Rasa Open Source 是一个开源机器学习框架，用于构建文本和语音对话助手，支持多轮上下文对话并连接 Slack、Telegram 等渠道。项目目前处于维护模式，官方推荐转向 Hello Rasa 和 CALM。适合需要自托管、深度定制对话式 AI 的开发者，或维护经典 Rasa 框架的团队。",
+ "tagline": "开源机器学习框架，用于构建文本与语音对话助手"
+}

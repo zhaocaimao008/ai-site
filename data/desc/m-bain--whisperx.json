@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要高精度时间戳字幕或多说话人转录的开发者，以及希望在本机或服务器上批量处理音频的普通用户。",
+ "date": "2026-10-17",
+ "features": [
+  "基于 faster-whisper 的批处理推理，提升转录速度",
+  "使用 wav2vec2 强制对齐生成词级时间戳",
+  "集成 pyannote-audio 进行说话人分离并标注说话人 ID",
+  "VAD 预处理以减少幻觉，同时支持批处理",
+  "支持 CPU 运行，可指定计算类型与设备",
+  "支持通过 --highlight_words 在字幕中可视化词级时间"
+ ],
+ "intro": "WhisperX 是基于 OpenAI Whisper 的自动语音识别项目，重点解决原生 Whisper 时间戳只到语句级、误差可达数秒的问题。它通过 wav2vec2 强制对齐获得词级时间戳，并借助 VAD 预处理减少幻觉。\n\n项目使用 faster-whisper 后端实现批处理推理，README 称 large-v2 模型可达 70 倍实时速度，且 large-v2 在 beam_size=5 时显存需求低于 8GB。通过集成 pyannote-audio，它还能为转录结果标注说话人 ID，实现多说话人场景的分离。\n\nWhisperX 支持命令行直接处理音频文件，可输出带词级时间信息的字幕，并支持 CPU 运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CUDA 12.8（仅 GPU 加速时需要，CPU 可跳过）",
+  "执行 pip install whisperx 安装",
+  "运行 whisperx path/to/audio.wav 进行基础转录",
+  "如需说话人分离，添加 --diarize 并传入 --hf_token",
+  "在 CPU 上运行可使用 whisperx path/to/audio.wav --compute_type int8 --device cpu"
+ ],
+ "summary": "WhisperX 在 OpenAI Whisper 的基础上改进语音识别输出，解决原生时间戳粒度粗、误差大的问题。它通过 wav2vec2 对齐得到词级时间戳，并用 faster-whisper 批处理加快推理，还可借助 pyannote-audio 标注不同说话人。适合需要精确字幕时间轴、会议或访谈多说话人转录，以及希望在 GPU 或 CPU 上批量处理音频的场景。",
+ "tagline": "带词级时间戳与说话人分离的快速语音识别工具"
+}

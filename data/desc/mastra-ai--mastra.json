@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 TypeScript 开发 AI 应用、智能体或聊天机器人的开发者，以及希望把 AI 能力集成进 React、Next.js、Node.js 项目的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "统一模型路由，通过一个标准接口连接 40+ 模型提供商",
+  "构建自主 Agent，使用 LLM 与工具完成开放式任务",
+  "基于图的工作流引擎，支持顺序、分支、并行控制流",
+  "Human-in-the-loop：挂起工作流等待用户输入或审批后恢复",
+  "上下文管理：对话历史、RAG 检索与 Observational Memory",
+  "支持编写 MCP 服务器，内置 evals 与可观测性"
+ ],
+ "intro": "Mastra 是一个基于现代 TypeScript 技术栈的 AI 应用与智能体开发框架，目标是把早期原型推进到可上线的生产应用。它提供统一的模型路由接口，可连接 OpenAI、Anthropic、Gemini 等 40 多个模型提供商。\n\n框架内置 Agent 与基于图的工作流引擎，支持 .then()、.branch()、.parallel() 等控制流写法，并可通过存储实现挂起与恢复，等待人工审批。上下文管理方面提供对话历史、RAG 检索和 Observational Memory。\n\nMastra 可嵌入 React、Next.js、Node.js 项目，也可作为独立服务部署，并支持编写 MCP 服务器、内置 evals 与可观测性工具，方便持续评估和迭代。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npm create mastra@latest 创建项目",
+  "按提示输入项目名称并选择模型提供商（openai、anthropic、google、xai）",
+  "进入项目目录并启动开发服务器：npm run dev",
+  "打开 http://localhost:4111 使用 Mastra Studio 构建和测试 Agent、工作流与工具"
+ ],
+ "summary": "Mastra 是一个 TypeScript 框架，用于开发 AI 应用与智能体。它把模型接入、Agent 构建、工作流编排、上下文管理和人工审批等环节整合在一起，并提供评估与可观测性工具。适合希望用 TypeScript 把 AI 原型推进到生产环境的开发者，可嵌入 React、Next.js、Node.js 项目或独立部署。",
+ "tagline": "用 TypeScript 构建 AI 应用与智能体的框架"
+}

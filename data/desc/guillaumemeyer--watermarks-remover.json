@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要处理自有内容中 AI 生成痕迹的开发者、隐私关注者，以及使用 Claude Code 等代理工具并希望自动化清理文件的用户。",
+ "date": "2026-10-17",
+ "features": [
+  "移除文本中的不可见 Unicode 字符、异形空格、双向控制符等隐藏标记",
+  "处理统计型（token 采样）文本水印，支持代理重写和可选的重写脚本",
+  "清理文件中的 C2PA、EXIF、XMP 和文档属性等溯源元数据",
+  "支持 PNG、JPEG、PDF、DOCX、MP4 等多种文件格式",
+  "提供代理技能安装脚本，适配 Claude Code、Codex、Cursor 等宿主",
+  "通过 PostToolUse 钩子自动检查或清理代理写入的文件"
+ ],
+ "intro": "watermarks-remover 是一个隐私优先的工具，用于从你拥有的文本和文件中移除多家 AI 厂商添加的溯源标记。它结合了确定性的 Python 脚本和可选的代理重写，处理不可见 Unicode 字符、统计型文本水印以及文件元数据中的 C2PA、EXIF、XMP 等信息。\n\n项目提供两种使用方式：作为代理技能（agent skill）通过 HTTP 调用本地服务，或直接运行 Python 服务。技能本身不包含代码，需要先启动服务并设置 WATERMARKS_SERVICE_URL。支持的文件格式包括 PNG、JPEG、PDF、DOCX、MP4 等多种常见类型。\n\n此外，项目还提供了钩子（hook）机制，可在 Claude Code 等环境中自动检查或清理代理写入的文件，实现确定性的后处理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装技能：python3 install_skill.py --skill remove-ai-marks --target claude-code",
+  "启动服务：make serve（或运行 py service/scripts/server.py --host 127.0.0.1 --port 8765）",
+  "设置环境变量 WATERMARKS_SERVICE_URL（默认 http://127.0.0.1:8765）",
+  "在代理中使用技能或配置钩子进行自动清理"
+ ],
+ "summary": "watermarks-remover 是一个隐私优先的工具，用于从你拥有的文本和文件中移除 AI 厂商添加的溯源标记。它结合确定性脚本和代理重写，处理不可见 Unicode 字符、统计型文本水印以及文件元数据中的 C2PA、EXIF 等信息。适合需要清理自有内容中 AI 痕迹的开发者，或希望自动化处理代理生成文件的用户。",
+ "tagline": "去除自有内容中的 AI 水印与溯源标记"
+}

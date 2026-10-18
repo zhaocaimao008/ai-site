@@ -1,0 +1,26 @@
+{
+ "ai_related": true,
+ "audience": "适合后端开发者、平台工程师以及希望标准化微服务开发的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "创建自定义实时模板，嵌入组织最佳实践",
+  "AI 驱动的自动化生成微服务（API、数据模型、DTO）",
+  "自动处理包更新、补丁和版本控制",
+  "支持本地开发和代码生成",
+  "提供托管版本和详细文档"
+ ],
+ "intro": "Amplication 是一个用于快速构建、维护和扩展后端服务的平台。它允许你创建嵌入组织最佳实践和标准的实时模板，确保从项目开始就保持一致性并符合规范。借助 AI 驱动的自动化，Amplication 能迅速生成微服务所需的一切，包括 API、数据模型、DTO 等，让工程师可以专注于业务逻辑。\n\n此外，Amplication 会自动处理包更新、补丁和版本控制，减少技术债务，并确保服务之间的一致性。你可以使用托管版本立即开始，也可以在本地运行以进行代码生成或贡献。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 app.amplication.com 使用托管版本",
+  "登录后按照引导创建第一个服务",
+  "本地开发需安装 Node.js、Docker 和 Git",
+  "克隆仓库并安装依赖：git clone https://github.com/amplication/amplication.git && cd amplication && npm install",
+  "运行设置脚本：npm run setup:dev",
+  "启动基础设施：npm run docker:dev",
+  "应用数据库迁移：npm run db:migrate:deploy",
+  "启动服务端和客户端：npm run serve:server 和 npm run serve:client"
+ ],
+ "summary": "Amplication 帮助团队快速构建和标准化后端微服务。它通过自定义实时模板嵌入组织最佳实践，并利用 AI 自动化生成 API、数据模型等代码，减少重复工作。同时自动处理依赖更新和版本控制，降低技术债务。适合需要统一微服务开发流程、提升交付效率的工程团队。",
+ "tagline": "用实时模板和 AI 自动化生成后端微服务"
+}

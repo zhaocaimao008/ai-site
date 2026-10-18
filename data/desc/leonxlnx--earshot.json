@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编码代理进行音频相关开发（如游戏音效、产品演示、影片配乐）的开发者，以及需要自动化声音分析和设计的团队。",
+ "date": "2026-10-17",
+ "features": [
+  "describe：用文字描述声音特征，给出校准标签和测量数据",
+  "match/rank：评估声音与描述文本的匹配度，并对多个文件排序",
+  "find：在长录音中定位符合描述的最佳片段",
+  "timeline/sheet：生成逐秒聆听转录和带标注的 PNG 图片",
+  "critique：对照专业发布影片评分卡给出带时间戳的修改建议",
+  "forge/fit：用代码合成声音并通过聆听改进，或将录音翻译为可调代码"
+ ],
+ "intro": "earshot 是一个为 AI 编码代理提供听觉能力的开源工具。它能把声音文件转化为文字描述、匹配度评分、最佳片段定位、真实性判断、逐秒聆听转录和带标注的图片，帮助代理理解自己生成或处理的音频内容。所有功能在本地 CPU 上运行，提供 CLI、Python API 和 MCP 服务器三种使用方式。\n\n除了分析声音，earshot 还支持用代码合成声音（forge）和将录音翻译为可调整的代码（fit）。forge 通过物理合成配方生成候选声音，并用内置评论器根据描述匹配、真实感、参考相似度等指标进行评分和进化搜索，让代理能够迭代改进声音设计。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 earshot（具体安装命令未在 README 开头部分给出）",
+  "运行 earshot doctor 检查安装、模型和数据文件",
+  "使用 earshot describe enter.ogg 描述声音",
+  "使用 earshot match key.ogg \"a deep thocky mechanical keyboard press\" 评估匹配度",
+  "使用 earshot forge --list 查看可用的合成配方"
+ ],
+ "summary": "earshot 是一个让 AI 编码代理“听见”声音的本地工具。它把音频转化为文字描述、匹配评分、片段定位和可视化报告，帮助代理判断生成的声音是否合适。适合游戏音效、产品演示和影片配乐等场景，也支持用代码合成声音并迭代改进。",
+ "tagline": "让 AI 编码代理听懂声音的本地工具"
+}

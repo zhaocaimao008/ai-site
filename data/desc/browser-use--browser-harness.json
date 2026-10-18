@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI 编码智能体代劳网页操作、且需要沿用自己登录状态的开发者与进阶用户。",
+ "date": "2026-10-17",
+ "features": [
+  "让编码智能体通过 CDP 操控本机已登录的 Chrome",
+  "一段提示词即可完成安装与浏览器连接",
+  "智能体在任务中按需编写并复用辅助函数",
+  "提供 browser-harness-mcp，以 MCP 工具形式暴露浏览器控制能力",
+  "支持接入 Browser Use Cloud 以并行运行多个浏览器"
+ ],
+ "intro": "Browser Harness 是一个开源工具，让 Claude Code、Codex、Cursor 等编码智能体通过 Chrome DevTools Protocol（CDP）操控你本机正在运行、已登录的 Chrome 浏览器，完成打开页面、点击、输入、读取和下载等操作。\n\n它通过一段安装提示词完成配置，智能体在任务中若缺少某个辅助函数，会自行在工作区编写可复用的 helper，因此使用越多，能力越完整。项目本身以 Python 编写，采用 MIT 协议。\n\nREADME 还提供了与其他浏览器工具的对比和一组基准测试结果，并说明在需要隔离、可重复的 CI 测试或性能调试时，Playwright、Chrome DevTools MCP 等工具可能更合适。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将 README 中的 setup prompt 粘贴到 Claude Code 或 Codex（Cursor 使用 MCP 配置）",
+  "智能体打开 chrome://inspect/#remote-debugging，首次设置时勾选复选框允许连接",
+  "按提示选择是否启用本地浏览器录制，默认不启用",
+  "若安装或连接失败，参照仓库中的 install.md 排查"
+ ],
+ "summary": "Browser Harness 解决的是让 AI 编码智能体直接使用你本人已登录的 Chrome 完成网页操作的问题，而不是另开一个无登录状态的浏览器。它通过 CDP 连接本机 Chrome，智能体在任务中缺少辅助函数时会自行编写并复用。适合需要以个人身份打开页面、点击、填写、读取或下载文件的自动化场景。",
+ "tagline": "让编码智能体直接操控你已登录的真实 Chrome"
+}
