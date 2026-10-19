@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文生图模型、希望复现或二次开发 DALL-E 2 的深度学习开发者与研究人员。",
+ "date": "2026-10-19",
+ "features": [
+  "实现 DALL-E 2 的扩散先验网络，基于 CLIP 文本嵌入预测图像嵌入",
+  "提供 CLIP 模型定义，支持对比学习相关选项",
+  "提供解码器（Unet + Decoder），从图像嵌入生成图像",
+  "包含分布式训练代码与数据加载器",
+  "支持与 x-clip 包集成训练 CLIP"
+ ],
+ "intro": "这是 OpenAI 文生图模型 DALL-E 2 的 PyTorch 复现，重点实现了论文中的扩散先验网络（diffusion prior）。该网络以 CLIP 文本嵌入为条件，预测对应的图像嵌入，从而在文本和图像之间增加一层间接映射。仓库同时包含 CLIP、解码器（Unet + Decoder）等组件，并提供了训练脚本。\n\n项目状态显示，已有研究组使用该代码训练出可用的扩散先验，解码器也在无条件生成任务上得到验证。LAION 社区在 Hugging Face 上发布了预训练先验模型。训练流程分为三步：先训练 CLIP，再训练解码器，最后训练扩散先验。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装包：pip install dalle2-pytorch",
+  "训练 CLIP：可使用 x-clip 包或 LAION 社区的 open_clip 方案",
+  "训练解码器：用 Unet 和 Decoder 类，输入图像计算损失并反向传播",
+  "训练扩散先验：使用仓库提供的扩散先验网络，以 CLIP 文本嵌入为条件"
+ ],
+ "summary": "该项目用 PyTorch 复现了 DALL-E 2 的文生图流程，核心是论文提出的扩散先验网络：先由 CLIP 将文本编码，再由先验网络预测图像嵌入，最后交给解码器生成图像。仓库包含 CLIP、解码器和扩散先验的训练代码，适合想研究或复现 DALL-E 2 架构的开发者参考，也可用于基于 CLIP 嵌入的生成实验。",
+ "tagline": "DALL-E 2 的 PyTorch 实现，含扩散先验网络"
+}

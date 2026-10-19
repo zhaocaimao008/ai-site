@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合开发团队、开源项目维护者以及需要自动化代码审查的工程师使用。",
+ "date": "2026-10-19",
+ "features": [
+  "自动生成 PR 描述（/describe）",
+  "AI 驱动的代码审查（/review）",
+  "提供代码改进建议（/improve）",
+  "针对 PR 的自由问答（/ask）",
+  "查找相似 issue（/similar_issue）",
+  "支持 GitHub Action、CLI、Docker 等多种部署方式"
+ ],
+ "intro": "PR-Agent 是一个开源的 AI 代码审查工具，由 Qodo 社区维护。它通过大语言模型自动分析 Pull Request，提供描述生成、代码审查、改进建议和问答等功能，帮助开发团队提升代码审查效率。\n\n项目支持 GitHub、GitLab、Bitbucket、Azure DevOps 和 Gitea 等 Git 平台，可以以 GitHub Action、CLI、Docker 或自托管 webhook 的方式运行。AI 模型方面兼容 OpenAI GPT、Anthropic Claude、Google Gemini、DeepSeek、Mistral 以及通过 LiteLLM 接入的多种服务。\n\nPR-Agent 强调快速与低成本，每个工具通常只需一次 LLM 调用，并采用 PR 压缩策略处理大型 PR。配置基于 JSON 文件，便于团队自定义审查类别和行为。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 GitHub Action 集成：在仓库中添加 .github/workflows/pr-agent.yml 工作流文件，配置 OPENAI_KEY 和 GITHUB_TOKEN 环境变量。",
+  "本地 CLI 安装：pip install \"pr-agent[github]\"",
+  "设置 API 密钥：export OPENAI_KEY=your_key_here",
+  "运行审查：pr-agent --pr_url https://github.com/owner/repo/pull/123 review"
+ ],
+ "summary": "PR-Agent 是一个开源的 AI 代码审查工具，能自动分析 Pull Request，生成描述、审查代码、提出改进建议并回答相关问题。它支持 GitHub、GitLab 等多个 Git 平台，兼容多种大语言模型，适合开发团队在代码审查流程中引入自动化辅助，提升效率。",
+ "tagline": "开源 AI 代码审查助手，支持多平台与多模型"
+}

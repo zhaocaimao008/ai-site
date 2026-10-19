@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程助手处理大型代码库的开发者，尤其是希望减少上下文开销、提升代码检索效率的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "基于语义搜索从整个代码库中查找相关代码",
+  "使用向量数据库存储代码嵌入，降低上下文成本",
+  "提供 MCP 服务器，可接入 Claude Code 等 AI 编程助手",
+  "支持多种 MCP 客户端配置，包括 Cursor、Gemini CLI、Qwen Code 等",
+  "通过 npx 快速安装和运行"
+ ],
+ "intro": "Claude Context 是一个 MCP 插件，为 Claude Code 等 AI 编程助手增加语义代码搜索能力。它通过向量数据库存储整个代码库，让助手在需要时检索相关代码片段，而不是把大量目录内容直接塞进上下文。\n\n项目使用 OpenAI 等嵌入模型将代码转换为向量，并借助 Zilliz Cloud（Milvus）进行存储和检索。这种方式可以减少多轮查找，同时控制大型代码库的上下文成本。\n\n它支持 Claude Code、Cursor、Gemini CLI、Qwen Code、Claude Desktop 等多种 MCP 客户端，通过 npx 即可安装配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Node.js 20 或更高版本",
+  "获取 OpenAI API Key 用于嵌入模型",
+  "获取 Zilliz Cloud 的 API Key 和公网端点作为向量数据库",
+  "运行命令添加 MCP 服务器：claude mcp add claude-context -e OPENAI_API_KEY=sk-your-openai-api-key -e MILVUS_ADDRESS=your-zilliz-cloud-public-endpoint -e MILVUS_TOKEN=your-zilliz-cloud-api-key -- npx @zilliz/claude-context-mcp@latest"
+ ],
+ "summary": "Claude Context 是一个 MCP 插件，解决 AI 编程助手在大型代码库中难以快速获取相关上下文的问题。它把代码库存入向量数据库，通过语义搜索按需检索代码片段，避免每次请求都加载整个目录。适合使用 Claude Code、Cursor 等工具处理大项目的开发者，帮助控制上下文成本并提升代码查找效率。",
+ "tagline": "为 AI 编程助手提供语义代码搜索的 MCP 插件"
+}

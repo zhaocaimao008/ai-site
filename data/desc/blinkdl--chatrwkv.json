@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对 RWKV 模型感兴趣、希望自行搭建聊天机器人或推理引擎的开发者，以及需要轻量级、高效语言模型的研究人员。",
+ "date": "2026-10-19",
+ "features": [
+  "提供基于 RWKV 模型的聊天演示脚本，支持多轮对话",
+  "支持多种推理策略（stream、split、INT8），优化显存使用",
+  "包含模型转换工具，可转换模型以加快加载速度并节省 CPU 内存",
+  "提供 CUDA 内核构建指南，提升推理速度并减少显存占用",
+  "附带 Raven 系列微调模型（7B/14B），适合聊天场景",
+  "提供精简版代码示例（如 150 行实现 RWKV 模型与推理）"
+ ],
+ "intro": "ChatRWKV 是一个基于 RWKV 语言模型构建的聊天机器人项目。RWKV 是一种 100% RNN 架构的语言模型，据项目介绍，它是目前唯一能在质量和扩展性上匹配 Transformer，同时速度更快、更节省显存的 RNN。项目提供了聊天演示脚本、模型转换工具和推理代码，支持多种策略（如 stream、split 和 INT8），使得在有限显存下运行较大模型成为可能。\n\n该项目包含与 ChatGPT 类似的聊天交互示例，并提供了 Raven 系列经过 Alpaca 风格微调的 7B 和 14B 模型。README 中详细说明了聊天格式、状态管理注意事项以及构建 CUDA 内核的方法，方便开发者自行搭建推理引擎或集成到应用中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 rwkv pip 包：pip install rwkv",
+  "下载 RWKV 模型权重（如从 Hugging Face 获取）",
+  "使用 v2/convert_model.py 转换模型以优化加载",
+  "运行聊天脚本：python v2/chat.py（需根据 README 设置环境变量）"
+ ],
+ "summary": "ChatRWKV 是一个基于 RWKV 纯 RNN 语言模型的开源聊天机器人项目，旨在提供类似 ChatGPT 的对话体验。它适合开发者学习 RWKV 推理、搭建本地聊天应用，或在有限显存下运行较大语言模型。项目包含聊天演示、模型转换工具和多种推理策略，并提供了经过微调的 Raven 系列模型。",
+ "tagline": "基于 RWKV 纯 RNN 语言模型的开源聊天机器人"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要本地部署、多智能体协作和编码辅助的开发者与团队，也适合希望统一管理多个 AI 代理和平台频道的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "多智能体聊天：支持 Ekko Agent、Hermes Agent 及 Claude Code、Codex 等 14 种编码代理，提供流式响应、工具调用追踪和持久会话",
+  "可视化工作流：通过拖拽连接智能体步骤，支持人工审批门和定时调度",
+  "统一平台频道：在一个页面配置 Telegram、Discord、Slack、WhatsApp、Matrix、飞书、钉钉等 10 个平台",
+  "本地会话存储：使用 SQLite 保存 Studio 会话，支持会话搜索、分组和文件上传下载",
+  "Agent Manager：集中管理代理安装、设置和更新，支持作用域或全局配置模式",
+  "多端分发：提供 Windows/macOS/Linux 桌面应用、npm CLI 包和 Docker 镜像"
+ ],
+ "intro": "Ekko Studio 是一个本地优先的 AI 工作空间，提供桌面应用和自托管 Web 控制台两种形态。它把多智能体聊天、编码代理和可视化工作流整合在一起，支持 Hermes Agent、Ekko Agent 以及 Claude Code、Codex 等 14 种编码代理集成。\n\n项目使用 TypeScript 开发，前端基于 Vue3，通过 Socket.IO 实现流式聊天。会话数据存储在本地 SQLite 中，同时支持文件上传、语音输入输出、设备发现和平台频道（如 Telegram、Discord、Slack）的统一配置。\n\n工作流功能允许用户以可视化方式连接多个智能体步骤，并加入人工审批节点。Agent Manager 集中管理代理的安装、配置和更新。项目提供 npm 包和 Docker 镜像，方便自托管部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 npm 全局安装：npm install -g ekko-studio",
+  "启动 Web 控制台：ekko-studio-web start",
+  "或从 GitHub Releases 下载桌面应用安装包",
+  "访问文档获取详细配置指南：https://ekkostudio.xyz/#/docs/getting-started"
+ ],
+ "summary": "Ekko Studio 是一个本地优先的 AI 工作空间，把多智能体聊天、编码代理和可视化工作流整合到一个界面中。它支持 Hermes Agent、Ekko Agent 以及 Claude Code、Codex 等编码代理，并提供桌面应用和自托管 Web 控制台。适合需要本地部署、统一管理多个 AI 代理和平台频道的开发者与团队。",
+ "tagline": "本地优先的多智能体 AI 工作台，支持聊天、编码与可视化工作流"
+}

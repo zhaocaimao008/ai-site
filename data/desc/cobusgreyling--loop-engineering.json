@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex 等 AI 编码代理的开发者与团队，尤其是希望把仓库日常维护（issue、CI、依赖、PR）交给代理自动处理的人。",
+ "date": "2026-10-19",
+ "features": [
+  "提供 daily-triage、PR Babysitter、CI Sweeper 等多种循环模式模板",
+  "统一 CLI 入口，支持 init、doctor、status、audit、cost 等命令",
+  "按 L1 报告、L2 辅助、L3 无人值守分级推进的落地路径",
+  "覆盖 Claude Code、Grok、Codex、Opencode、GitHub Actions 的工具示例",
+  "包含失败模式、反模式、安全与运维文档",
+  "提供 Loop Ready 评分，侧重近期运行记录而非磁盘文件"
+ ],
+ "intro": "Loop Engineering 是一套面向 AI 编码代理的「循环工程」模式库与 CLI 工具。它的核心思路是：与其手动给代理写一条条 prompt，不如设计一个能自动发现任务、把任务交给代理、验证结果并保存状态的系统，让代理围绕代码库持续运转。\n\n项目提供多种可复用模式，例如 daily-triage、PR Babysitter、CI Sweeper、Dependency Sweeper、Changelog Drafter 等，每种模式标注了运行节奏、第一周建议级别和成本。配套 CLI 支持初始化、健康检查、状态查看、审计和成本估算，并给出 Claude Code、Grok、Codex、Opencode、GitHub Actions 等工具的示例。\n\nREADME 强调渐进式推进：先以 L1 只报告模式运行，验证器稳定一周后再进入 L2 辅助、L3 无人值守，同时提醒 token 成本可能快速上升、无人值守的循环也会犯无人值守的错误。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx @cobusgreyling/loop init . --pattern daily-triage --tool claude 初始化循环，--tool 可换成 grok、codex 或 opencode",
+  "运行 npx @cobusgreyling/loop doctor . 检查循环配置",
+  "运行 npx @cobusgreyling/loop cost --pattern daily-triage --level L1 估算成本",
+  "第一周以 report-only 模式运行，验证器稳定后再逐步升级到 L2、L3"
+ ],
+ "summary": "这个项目面向使用 AI 编码代理的开发者，提供一套「循环工程」模式与命令行工具，帮助把仓库维护、PR 跟进、CI 清理、依赖更新等重复工作交给代理循环处理，而不是逐条手写 prompt。它给出多种可复用模式、分级推进路径和各工具示例，适合想系统化运营编码代理的团队参考和上手。",
+ "tagline": "为 AI 编码代理设计可运行的循环系统"
+}

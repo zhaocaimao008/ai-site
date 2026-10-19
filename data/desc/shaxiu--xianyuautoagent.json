@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想在闲鱼上实现自动回复和议价的卖家，以及研究 LLM Agent 路由与对话管理的开发者。",
+ "date": "2026-10-19",
+ "features": [
+  "上下文感知对话：保存会话历史，作为 LLM 上下文输入",
+  "专家路由：基于提示工程识别意图，动态分发给议价、技术、客服等 Agent",
+  "智能议价：支持阶梯降价策略",
+  "技术支持：整合网络搜索回答技术问题",
+  "可自定义提示词：编辑 prompts 目录下各专家提示词文件",
+  "人工接管切换：通过关键词在 AI 与人工之间切换"
+ ],
+ "intro": "XianyuAutoAgent 是一个面向闲鱼平台的智能客服机器人系统，用 LLM 实现 7×24 小时自动值守。它把完整对话历史作为上下文输入，通过提示工程做意图识别，再把会话动态分发给议价、技术、客服等不同专家 Agent 处理。\n\n议价模块支持阶梯降价策略，技术模块可整合网络搜索，运维侧提供基础日志。项目用 Python 编写，默认接入通义千问，也可在 .env 中换成其他兼容 API 的模型。提示词放在 prompts 目录，可自行修改各专家的回复风格。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/shaxiu/XianyuAutoAgent.git && cd XianyuAutoAgent",
+  "安装依赖：pip install -r requirements.txt",
+  "创建 .env 文件，配置 API_KEY、COOKIES_STR、MODEL_BASE_URL、MODEL_NAME 等变量",
+  "创建 prompts/*_prompt.txt 提示词文件（或去掉模板名中的 _example）",
+  "运行主程序：python main.py"
+ ],
+ "summary": "XianyuAutoAgent 是一个用 LLM 驱动的闲鱼自动客服机器人，目标是让卖家在闲鱼上实现 7×24 小时自动值守。它保存对话历史作为上下文，通过意图识别把会话分发给议价、技术、客服等专家 Agent，议价环节采用阶梯降价策略。适合需要自动回复买家、处理砍价和技术咨询的闲鱼卖家，也适合想研究多 Agent 路由的开发者参考。",
+ "tagline": "闲鱼平台的 AI 自动客服值守机器人"
+}

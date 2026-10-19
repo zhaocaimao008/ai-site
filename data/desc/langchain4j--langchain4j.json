@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 Java/JVM 应用中集成大语言模型的开发者，尤其是使用 Spring Boot、Quarkus 等企业框架的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "统一 API 对接 20+ LLM 提供商和 30+ 嵌入向量存储，方便切换",
+  "提供提示词模板、聊天记忆、函数调用（含 MCP 支持）等底层工具",
+  "支持 Agent 和 RAG 等高层模式，覆盖从数据摄入到检索的完整流程",
+  "与 Quarkus、Spring Boot、Helidon、Micronaut 等 Java 框架集成",
+  "提供多个示例仓库，包含纯 Java 及各框架的用法演示"
+ ],
+ "intro": "LangChain4j 是一个面向 JVM 的开源 Java 库，目标是简化把大语言模型集成到 Java 应用中的过程。它提供统一的 API，让开发者可以用同一套代码对接 20 多个 LLM 提供商和 30 多个嵌入向量存储，切换模型或存储时不必重写业务逻辑。\n\n除了统一接口，它还提供从底层提示词模板、聊天记忆管理、函数调用，到 Agent 和 RAG 等高层模式的工具箱，每个抽象都有接口和多种可直接使用的实现。项目与 Quarkus、Spring Boot、Helidon、Micronaut 等企业级 Java 框架有集成，并配有示例仓库帮助上手。\n\n需要说明的是，尽管名字相似，LangChain4j 并非 Python LangChain 的 Java 移植版，而是围绕 Java 的类型安全、POJO、注解、依赖注入等习惯从零设计的库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读官方入门指南：https://docs.langchain4j.dev/get-started",
+  "参考 langchain4j-examples 仓库中的纯 Java 示例",
+  "根据所用框架查看对应的集成示例（Spring Boot、Quarkus、Helidon、Micronaut）"
+ ],
+ "summary": "LangChain4j 是一个 Java 库，用来在 JVM 应用中接入大语言模型。它把不同 LLM 提供商和向量存储的专有接口统一起来，让开发者用一套 API 就能切换模型或存储，并内置提示词模板、聊天记忆、函数调用、Agent 和 RAG 等常用能力。适合使用 Spring Boot、Quarkus 等 Java 框架、希望快速构建 LLM 应用的团队。",
+ "tagline": "在 JVM 上构建 LLM 应用的 Java 库"
+}

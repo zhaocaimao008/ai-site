@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想理解 LLM 训练全流程的学生、开发者和研究者，需要具备面向对象编程、神经网络和 PyTorch 基础。",
+ "date": "2026-10-19",
+ "features": [
+  "从零手写 Transformer 及现代变体（RoPE、RMSNorm、SwiGLU、GQA、MoE、KV cache）",
+  "完整预训练流程：数据准备、tokenize、训练、文本生成",
+  "后训练实现：SFT、Bradley-Terry 奖励模型、PPO、DPO/ORPO/KTO、GRPO/RLVR",
+  "手写进阶训练技巧：Muon 优化器、LoRA、IPO/SimPO、DAPO、GSPO、投机解码、int8 权重",
+  "提供 Streamlit 控制面板和文档站点",
+  "支持 CPU 小模型训练与 GPU 大模型训练，含 AMP、梯度检查点、梯度累积等显存优化选项"
+ ],
+ "intro": "这个项目用 PyTorch 从零实现 Transformer，参考《Attention is All You Need》论文，不依赖 transformers、trl、peft 等高层库，所有算法都手写完成。流程覆盖从原始文本到 token、预训练、生成文本，再到 SFT、奖励模型、PPO/DPO/GRPO 等后训练与评估的完整链路。\n\n除原始 Transformer 外，项目还提供按现代开放模型方式搭建的版本，包含 rotary 位置编码、RMSNorm、SwiGLU、分组查询与潜在注意力、Mixture of Experts 和 KV cache。训练技巧如 Muon 优化器、LoRA、IPO/SimPO、Dr. GRPO、DAPO、GSPO、投机解码和 int8 权重也都有手写实现。\n\n模型规模可从笔记本 CPU 上几分钟训练的小模型，扩展到单张 GPU 上的十亿参数级模型，README 给出了不同显卡的显存与可训练规模参考。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/FareedKhan-dev/train-llm-from-scratch.git",
+  "cd train-llm-from-scratch",
+  "pip install -e .",
+  "按 README 的步骤依次准备数据、预训练模型、生成文本并做后训练"
+ ],
+ "summary": "这是一个用纯 PyTorch 从零实现 Transformer 并训练语言模型的教学型项目，覆盖从原始文本、tokenize、预训练到 SFT、奖励模型和 PPO/DPO/GRPO 等后训练的完整流程，所有算法均手写，不依赖高层训练库。适合想深入理解 LLM 训练原理、并动手在小模型上跑通全流程的开发者与学习者。",
+ "tagline": "用纯 PyTorch 从零实现并训练 Transformer 语言模型"
+}

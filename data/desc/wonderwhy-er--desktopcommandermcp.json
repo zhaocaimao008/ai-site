@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Desktop 或其他 MCP 客户端的开发者，希望通过 AI 直接操作本地终端和文件系统来提升编码与自动化效率。",
+ "date": "2026-10-19",
+ "features": [
+  "执行终端命令并支持交互式进程控制、超时和后台运行",
+  "完整的文件系统操作：读写、搜索、递归列出目录、移动文件等",
+  "精准代码编辑：小范围文本替换、模式替换和整文件重写",
+  "在内存中运行 Python、Node.js、R 代码，无需保存文件",
+  "原生支持 Excel、PDF、DOCX 文件的读取、编辑和创建",
+  "提供文件预览 UI、Markdown 编辑器及工具调用历史审计日志"
+ ],
+ "intro": "Desktop Commander MCP 是一个基于 Model Context Protocol 的服务器，让 Claude 等 AI 客户端能够直接操作本地终端和文件系统。它扩展了 MCP Filesystem Server 的能力，支持执行长时间运行的终端命令、管理进程、搜索文件内容，以及进行精准的文本替换和文件编辑。\n\n除了基本的文件读写和目录操作，它还支持在内存中运行 Python、Node.js、R 代码，直接分析 CSV/JSON/Excel 数据，并原生处理 Excel、PDF、DOCX 文件。通过远程 MCP，你还可以从 ChatGPT、Claude 网页版等 AI 服务控制桌面。\n\n项目提供了文件预览 UI、Markdown 编辑器、进程输出分页、工具调用历史记录等功能，并包含符号链接遍历防护、命令黑名单和 Docker 隔离等安全措施。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx @wonderwhy-er/desktop-commander@latest setup 安装到 Claude Desktop",
+  "重启 Claude 以加载 MCP 服务器",
+  "在 Claude 中直接要求执行终端命令或编辑文件"
+ ],
+ "summary": "Desktop Commander MCP 是一个让 Claude 等 AI 客户端获得本地终端控制和文件编辑能力的 MCP 服务器。它解决了 AI 无法直接操作电脑文件和进程的问题，适合需要让 AI 执行命令、搜索文件、编辑代码或分析数据的开发场景。",
+ "tagline": "为 Claude 提供终端控制与文件编辑能力的 MCP 服务器"
+}

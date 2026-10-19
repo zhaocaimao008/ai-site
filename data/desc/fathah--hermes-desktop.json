@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望以图形界面使用 Hermes Agent 的开发者与普通用户，尤其是想避免手动管理 CLI 的人群。",
+ "date": "2026-10-19",
+ "features": [
+  "引导式首次安装 Hermes Agent，带进度跟踪和依赖解析",
+  "支持本地或远程后端，可连接远程 Hermes API 服务器",
+  "多提供商支持，包括 OpenRouter、Anthropic、OpenAI、Google、xAI 及本地端点",
+  "流式聊天界面，支持 SSE、工具进度指示、Markdown 渲染和语法高亮",
+  "会话管理，支持全文搜索（SQLite FTS5）、按日期分组和恢复对话",
+  "配置档案切换，可创建、删除和切换隔离的 Hermes 环境"
+ ],
+ "intro": "Hermes Desktop 是 Hermes Agent 的社区维护原生桌面应用，用图形界面替代命令行操作，帮助用户完成安装、配置和日常对话。Hermes Agent 是一个具备工具调用、多平台消息和闭环学习能力的自我改进 AI 助手。\n\n应用通过官方安装脚本将 Hermes 安装到 ~/.hermes，并提供聊天、会话、配置档案、记忆、技能、工具、调度、消息网关等模块的 GUI 管理。支持本地或远程后端，可连接多种模型提供商，包括 OpenRouter、Anthropic、OpenAI、Google、xAI 以及本地 OpenAI 兼容端点。\n\n项目处于活跃开发阶段，功能可能变化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 hermesone.org 或 GitHub Releases 下载对应操作系统的桌面应用安装包",
+  "Windows 用户首次启动时若遇 SmartScreen 警告，点击“更多信息”后选择“仍要运行”",
+  "Fedora 用户可使用 sudo dnf install ./hermes-desktop-<version>.rpm 安装（必要时加 --nogpgcheck）",
+  "启动应用，按引导完成 Hermes Agent 安装与提供商配置"
+ ],
+ "summary": "Hermes Desktop 是 Hermes Agent 的桌面图形客户端，解决手动管理命令行安装与配置的麻烦。它通过引导式流程完成安装和提供商设置，并提供聊天、会话、记忆、技能、调度等模块的图形界面。适合想以桌面应用方式使用 Hermes Agent 的开发者与普通用户，支持本地或远程后端以及多种模型提供商。",
+ "tagline": "Hermes Agent 的桌面图形界面客户端"
+}

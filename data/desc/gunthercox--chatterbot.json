@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想用 Python 快速搭建聊天机器人原型的开发者，以及对对话系统训练数据感兴趣的研究者。",
+ "date": "2026-10-19",
+ "features": [
+  "基于机器学习的对话生成，根据已知对话集合选择最匹配的回复",
+  "语言无关设计，可训练为任意语言",
+  "随输入增加自动积累对话数据并提升回复准确度",
+  "内置 ChatterBotCorpusTrainer，支持按语料库训练",
+  "提供十几种语言的训练数据，支持按主题（如问候、对话）训练"
+ ],
+ "intro": "ChatterBot 是一个用 Python 编写的机器学习对话引擎，用于构建聊天机器人。它通过收集已知对话来生成回复，并且设计上与语言无关，可以训练成说任何语言。\n\n未训练的 ChatterBot 实例一开始不知道如何交流。每当用户输入一句话，库会保存这句话以及它所回应的内容。随着输入增多，它能回复的语句数量以及回复的准确度都会提升。程序通过搜索与输入最匹配的已知语句，并基于每个回复出现的频率返回最可能的回复。\n\n项目自带数据工具模块，包含十几种语言的训练数据，也欢迎贡献更多语料。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装包：pip install chatterbot",
+  "导入 ChatBot 和 ChatterBotCorpusTrainer",
+  "创建 ChatBot 实例：chatbot = ChatBot('Ron Obvious')",
+  "创建训练器并训练英文语料：trainer = ChatterBotCorpusTrainer(chatbot); trainer.train(\"chatterbot.corpus.english\")",
+  "获取回复：chatbot.get_response(\"Hello, how are you today?\")"
+ ],
+ "summary": "ChatterBot 是一个 Python 机器学习对话引擎，用来构建能根据已知对话集合生成回复的聊天机器人。它设计上与语言无关，可训练成说任意语言，并随用户输入增多自动积累对话、提升回复匹配度。适合想快速搭建聊天机器人原型或研究对话训练的开发者。",
+ "tagline": "基于机器学习的 Python 对话引擎，可训练多语言聊天机器人"
+}

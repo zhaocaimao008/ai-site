@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Python 项目中集成文本转语音功能的开发者，以及希望通过命令行快速生成语音文件的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "将文本转换为 MP3 音频并生成 SRT 字幕文件",
+  "支持多种语言和性别的发音人，可列出所有可用语音",
+  "可调整语速、音量和音调",
+  "提供 edge-playback 命令即时播放语音和字幕",
+  "可在 Python 代码中直接调用模块",
+  "生成音频时在终端显示进度条"
+ ],
+ "intro": "edge-tts 是一个 Python 模块，让你在 Python 代码中或通过命令行使用微软 Edge 的在线文本转语音服务，而无需安装 Microsoft Edge 浏览器。它封装了该服务的接口，方便开发者快速集成语音合成功能。\n\n项目提供 edge-tts 和 edge-playback 两个命令行工具。edge-tts 可将文本转换为 MP3 音频并生成 SRT 字幕文件；edge-playback 则能立即播放语音和字幕（Windows 之外需要安装 mpv 播放器）。你可以通过 --voice 选项切换不同语言和性别的发音人，用 --list-voices 查看所有可用语音，还能调整语速、音量和音调。\n\n由于微软限制，自定义 SSML 功能已被移除，但库和命令行已提供常用的调节选项。生成音频时，终端会显示进度条，也可用 --no-progress 关闭。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install edge-tts（或使用 pipx install edge-tts）",
+  "生成音频和字幕：edge-tts --text \"Hello, world!\" --write-media hello.mp3 --write-subtitles hello.srt",
+  "查看可用语音：edge-tts --list-voices",
+  "切换发音人：edge-tts --voice ar-EG-SalmaNeural --text \"مرحبا كيف حالك؟\" --write-media hello_in_arabic.mp3 --write-subtitles hello_in_arabic.srt",
+  "即时播放（需安装 mpv）：edge-playback --text \"Hello, world!\""
+ ],
+ "summary": "edge-tts 是一个 Python 模块，让你无需安装 Microsoft Edge 浏览器，就能在代码或命令行中使用微软的在线文本转语音服务。它适合需要快速为文本生成语音和字幕的开发者，支持切换多种发音人，并可调节语速、音量和音调。",
+ "tagline": "无需 Edge 浏览器，用 Python 调用微软在线语音合成"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 视频生成感兴趣的研究者、开发者以及需要视频创作工具的内容创作者。",
+ "date": "2026-10-19",
+ "features": [
+  "支持文生视频和图生视频生成",
+  "支持多关键帧条件控制和基于关键帧的动画",
+  "支持视频扩展（前向和后向）与视频到视频转换",
+  "提供多种模型版本，包括 13B/2B 蒸馏模型和控制模型",
+  "支持 ComfyUI 和 Diffusers 集成",
+  "提供在线演示和本地运行方式"
+ ],
+ "intro": "LTX-Video 是 Lightricks 开源的官方视频生成模型仓库，基于 DiT（Diffusion Transformer）架构，将多种视频生成能力集成在一个模型中。它支持文生视频、图生视频、多关键帧条件控制、基于关键帧的动画、视频前后向扩展以及视频到视频的转换，并能组合使用这些功能。模型在大规模多样化视频数据集上训练，可生成高分辨率、内容丰富的视频。\n\n仓库提供了在线演示、本地运行、ComfyUI 集成和 Diffusers 集成等多种使用方式，并发布了多个版本的模型权重，包括 13B 和 2B 的蒸馏模型、控制模型（深度、姿态、Canny）以及细节增强模型。此外，官方还推出了下一代模型 LTX-2，支持音视频同步生成，并将 LTX-2 作为后续开发的主要方向。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在线体验：访问 https://app.ltx.studio/ltx-2-playground/t2v 直接试用",
+  "本地安装：参考 README 的 Installation 部分配置环境",
+  "运行推理：参考 README 的 Inference 部分执行生成命令",
+  "ComfyUI 集成：使用 ComfyUI-LTXVideo 插件加载工作流",
+  "Diffusers 集成：通过 Diffusers 库调用模型"
+ ],
+ "summary": "LTX-Video 是 Lightricks 开源的视频生成模型项目，基于 DiT 架构，将文生视频、图生视频、关键帧控制、视频扩展等多种能力整合在一个模型中。它适合需要本地部署或二次开发视频生成功能的开发者，也提供了在线演示和 ComfyUI 集成等便捷使用方式。",
+ "tagline": "基于 DiT 的视频生成模型，支持文生视频、图生视频等"
+}

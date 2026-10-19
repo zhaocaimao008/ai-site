@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 React 应用中集成 AI 聊天功能的开发者，尤其是希望高度定制 UI 和连接自定义后端的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "可组合的 UI 原语，自由构建任意聊天界面",
+  "内置流式输出、自动滚动、重试、附件等生产级功能",
+  "支持生成式 UI，将工具调用渲染为 React 组件",
+  "通过运行时适配器集成 Vercel AI SDK、LangGraph 等多种后端",
+  "端到端 TypeScript 类型安全",
+  "CLI 工具快速创建项目或添加组件"
+ ],
+ "intro": "assistant-ui 是一个开源的 TypeScript/React 库，用于在 React 应用中快速构建生产级的 AI 聊天体验。它提供可组合的 UI 原语（如 Thread、Message、Composer），让开发者自由定制聊天界面，同时内置流式输出、自动滚动、重试、附件、Markdown 渲染、代码高亮、语音听写和键盘快捷键等生产级功能。\n\n该库通过运行时适配器与多种后端集成，包括 Vercel AI SDK、LangGraph、AG-UI/A2A 协议等，并支持 OpenAI、Anthropic、Google Gemini 等主流模型。它还支持生成式 UI，可将工具调用和 JSON 数据渲染为 React 组件，并收集用户的内联审批。\n\nassistant-ui 强调端到端的 TypeScript 类型安全，提供 CLI 工具快速创建新项目或向现有项目添加样式化组件，适合需要高度定制聊天界面的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 CLI 创建新项目：npx assistant-ui@latest create",
+  "或向现有项目添加组件：npx assistant-ui@latest init",
+  "或直接安装包：npm install @assistant-ui/react @assistant-ui/ai-sdk ai",
+  "在代码中导入 AssistantRuntimeProvider 和 useChatRuntime，并渲染 Thread 组件"
+ ],
+ "summary": "assistant-ui 是一个 TypeScript/React 库，帮助开发者在 React 应用中快速搭建 AI 聊天界面。它提供可组合的 UI 组件和内置的流式输出、附件、Markdown 渲染等生产级功能，并支持连接 Vercel AI SDK、LangGraph 等多种后端。适合需要高度定制聊天体验或集成自有 AI 服务的开发者。",
+ "tagline": "为 React 应用快速构建 AI 聊天界面的 TypeScript 库"
+}

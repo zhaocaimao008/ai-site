@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要制作多语言配音、字幕或播客的创作者，以及希望集成语音识别与合成功能的开发者。",
+ "date": "2026-10-19",
+ "features": [
+  "集成 Whisper、Faster-Whisper、Whisper-Timestamped 进行语音识别",
+  "支持 Edge-TTS、kokoro 多语言文本转语音，可选 Azure TTS",
+  "提供 F5-TTS、E2-TTS、CosyVoice 零样本声音克隆",
+  "通过 yt-dlp 下载 YouTube 视频并提取音频",
+  "使用 Demucs 进行人声分离，便于后续处理",
+  "内置 Deep-Translator 支持 100 多种语言翻译"
+ ],
+ "intro": "Voice-Pro 是一个基于 Gradio 的 Web 应用，把 YouTube 视频下载、人声分离、语音识别、翻译和文本转语音整合到同一个界面中。它支持 Whisper 系列模型进行语音识别，Edge-TTS 和 kokoro 进行多语言语音合成，以及 F5-TTS、E2-TTS、CosyVoice 等模型实现零样本声音克隆。\n\n项目面向创作者、开发者和多语言工作者，可用于制作播客、有声书、字幕和配音内容。README 提到它在 Windows + NVIDIA GPU 环境下运行良好，Mac 和 Linux 尚未验证。当前开发因作者其他项目而暂停，但代码已完全开源，可自由分发和修改。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Windows 系统上确保已安装 NVIDIA GPU 驱动",
+  "下载项目并运行 start.bat 启动安装与 WebUI",
+  "首次启动会自动下载所需 AI 模型，等待完成",
+  "在浏览器中打开 WebUI 界面开始使用"
+ ],
+ "summary": "Voice-Pro 是一个整合语音识别、翻译、声音克隆和文本转语音的 Gradio 网页应用，能处理 YouTube 视频下载、人声分离、字幕生成和多语言配音等任务。它适合需要制作播客、有声书或跨语言内容的创作者，也方便开发者调用 Whisper、Edge-TTS、F5-TTS 等模型。项目在 Windows 搭配 NVIDIA GPU 上运行良好，代码开源可自由修改。",
+ "tagline": "集语音识别、翻译、克隆与配音于一体的 AI 网页工具"
+}

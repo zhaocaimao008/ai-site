@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 TypeScript/Node.js 构建 AI Agent 的开发者，以及需要多 Agent 协作、工作流编排和生产可观测性的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "Agent 运行时：集中定义角色、工具、记忆与模型提供方",
+  "工作流引擎：以声明式方式描述多步自动化流程",
+  "Supervisor 与子 Agent：由调度运行时协调多个专用 Agent 协作",
+  "工具注册与 MCP：Zod 类型工具、生命周期钩子，可连接 MCP 服务器",
+  "多模型兼容：在 OpenAI、Anthropic、Google 等提供方之间切换配置",
+  "记忆、RAG、语音、Guardrails 与 Evals 等配套能力"
+ ],
+ "intro": "VoltAgent 是一个端到端的 AI Agent 工程平台，由两部分组成：开源的 TypeScript 框架，以及 VoltOps Console 控制台（支持云端和自托管）。框架侧提供 Agent 运行时、工作流引擎、Supervisor 与子 Agent 协作、工具注册与 MCP 接入、记忆、RAG、语音、Guardrails 和 Evals 等能力，让开发者用代码完整掌控 Agent 的构建过程。\n\n框架通过 @voltagent/core 统一定义 Agent 的角色、工具、记忆和模型提供方，切换 OpenAI、Anthropic、Google 等模型只需改配置，不必重写逻辑。工具使用 Zod 定义类型并带生命周期钩子，可直接连接 Model Context Protocol 服务器。\n\n此外还提供 @voltagent/mcp-docs-server，让 Claude、Cursor、Windsurf 等 AI 编程助手在编码时直接读取 VoltAgent 的文档、示例和更新日志。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npm create voltagent-app@latest 创建新项目",
+  "按 CLI 提示完成初始化",
+  "查看 src/index.ts 中的 Agent 与工作流示例代码",
+  "根据需要替换模型提供方与工具，运行项目"
+ ],
+ "summary": "VoltAgent 是一个用 TypeScript 编写 AI Agent 的开源框架，同时配套 VoltOps Console 做可观测与运维。它把 Agent 的角色、工具、记忆和模型配置集中管理，并提供工作流、Supervisor 多 Agent 协作、MCP 接入、RAG、语音和 Guardrails 等能力。适合想用代码掌控 Agent 逻辑、又需要多步流程与生产环境可观测性的 Node.js 开发者。",
+ "tagline": "基于 TypeScript 的开源 AI Agent 工程平台"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或私有环境构建企业知识库问答、文档检索增强生成应用的 Python 开发者和企业技术团队。",
+ "date": "2026-10-19",
+ "features": [
+  "统一模型目录：通过 ModelCatalog 以相同方式访问 300+ 模型，支持 GGUF、OpenVINO、ONNXRuntime、HuggingFace 和主流云模型",
+  "知识库管理：Library 支持解析 PDF、PPTX、DOCX、XLSX、TXT、CSV、MD、JSON、WAV、PNG、JPG、HTML 等格式，并完成文本分块和索引",
+  "灵活查询：Query 提供文本查询、语义查询、混合查询以及按文档过滤和精确匹配等选项",
+  "带来源的提示：Prompt 可将文件或查询结果打包为模型上下文，支持批量处理、推理、流式输出和来源事实核查",
+  "RAG 优化模型：提供 50+ 针对企业任务微调的 BLING、DRAGON 和 Industry BERT 系列模型",
+  "本地优先部署：示例和模型大多可在设备上运行，适合笔记本、边缘和自托管环境"
+ ],
+ "intro": "llmware 是一个面向企业知识型 LLM 应用的 Python 框架，重点在于本地、私有和安全的部署方式。它针对 AI PC、笔记本、边缘设备和自托管环境做了优化，支持 GGUF、OpenVINO、ONNXRuntime、ONNXRuntime-QNN、WindowsLocalFoundry 和 Pytorch 等多种推理后端，让开发者可以用统一接口调用适合目标平台的推理技术。\n\n框架包含两个主要部分：一是包含 300 多个模型的模型目录，涵盖量化优化格式的模型、50 多个针对企业流程自动化任务微调的 SLIM、Bling、Dragon 和 Industry-Bert 模型，以及 OpenAI、Anthropic 和 Google 等云模型；二是 RAG 流水线，提供文档解析、文本分块、嵌入、知识库构建和多种查询方式。\n\n通过 Library、Query 和 Prompt 等核心概念，llmware 把知识源与生成式模型连接起来，支持从文件摄入到带来源的推理和事实核查的完整流程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 llmware：pip install llmware",
+  "创建知识库：lib = Library().create_new_library(\"my_library\")",
+  "导入文件：lib.add_files(\"/folder/path/to/my/files\")",
+  "安装嵌入：lib.install_new_embedding(embedding_model_name=\"mini-lm-sbert\", vector_db=\"milvus\", batch_size=500)",
+  "加载模型并推理：prompter = Prompt().load_model(\"llmware/bling-tiny-llama-v0\")，然后调用 prompter.prompt_with_source(\"my query\")"
+ ],
+ "summary": "llmware 是一个用于构建企业级 RAG 应用的 Python 框架，强调在本地、私有和自托管环境中运行。它把模型目录与 RAG 流水线结合起来，支持多种文档格式的解析、分块、嵌入和知识库管理，并提供文本、语义和混合查询能力。适合需要在笔记本、边缘设备或企业内网中快速搭建知识问答和文档检索增强生成应用的开发者。",
+ "tagline": "用小型专用模型构建企业级 RAG 流水线的统一框架"
+}

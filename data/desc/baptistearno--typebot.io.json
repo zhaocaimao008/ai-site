@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速创建和部署聊天机器人的企业、开发者以及希望自托管的数据隐私敏感用户。",
+ "date": "2026-10-19",
+ "features": [
+  "可视化聊天机器人构建器，提供 34+ 种功能块（消息、输入、逻辑、集成）",
+  "支持嵌入网页或移动应用，提供原生 JS 库，无 iframe 依赖",
+  "可自定义主题（字体、颜色、背景等），支持自定义 CSS 和可复用模板",
+  "实时收集结果，提供完成率、流失率等分析，支持导出 CSV",
+  "集成 OpenAI、Google Sheets、Zapier、Make.com、Chatwoot 等外部服务",
+  "提供 API，方便开发者灵活集成"
+ ],
+ "intro": "Typebot 是一个可视化聊天机器人构建器，支持自托管。它提供拖拽式编辑器，让用户通过组合多种功能块来创建对话流程，无需编写代码。构建的机器人可以嵌入网页或移动应用，并实时收集结果。\n\n项目包含 34 种以上的构建块，涵盖文本、图片、视频等消息类型，以及文本输入、邮箱、电话、按钮、日期选择、支付（Stripe）等输入方式。逻辑块支持条件分支、URL 跳转、JavaScript 脚本和 A/B 测试。集成方面支持 Webhook/HTTP 请求、OpenAI、Google Sheets、Google Analytics、Meta Pixel、Zapier、Make.com 和 Chatwoot 等。\n\n用户可自定义主题以匹配品牌风格，通过自定义域名或原生 JS 库以容器、弹窗或聊天气泡形式嵌入，并查看完成率、流失率等分析数据，结果可导出为 CSV。项目提供 API，方便开发者集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用官方云服务：访问 https://app.typebot.io 注册并开始创建",
+  "自托管：参考官方文档 https://docs.typebot.io/self-hosting/get-started 进行安装",
+  "本地开发：按照贡献指南中的本地安装步骤操作（https://docs.typebot.io/contribute/guides/local-installation）"
+ ],
+ "summary": "Typebot 是一个可视化聊天机器人构建器，帮助用户通过拖拽功能块的方式设计对话流程，无需编程即可创建高级聊天机器人。它支持将机器人嵌入网页或移动应用，并实时收集和分析用户交互结果。项目提供丰富的输入类型、逻辑分支和第三方集成（如 OpenAI、Google Sheets），适合需要快速搭建客服、营销或数据收集机器人的场景，也支持自托管以满足数据控制需求。",
+ "tagline": "可视化构建聊天机器人并嵌入网站或应用"
+}

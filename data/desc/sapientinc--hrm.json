@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对新型推理架构感兴趣的研究人员，以及希望在小样本条件下训练数独、迷宫、ARC 等推理任务的开发者。",
+ "date": "2026-10-19",
+ "features": [
+  "分层循环架构：高层模块进行抽象规划，低层模块执行快速计算",
+  "单次前向传播完成推理，无需显式中间过程监督或思维链数据",
+  "仅 2700 万参数，1000 个训练样本即可在数独、迷宫等任务上表现优异",
+  "提供 ARC-AGI-2、数独、迷宫等预训练检查点",
+  "包含数据集构建、训练、评估的完整脚本，支持 W&B 实验跟踪"
+ ],
+ "intro": "HRM（Hierarchical Reasoning Model）是一种受人类大脑分层多时间尺度处理机制启发的循环架构。它通过两个相互依赖的循环模块——高层模块负责缓慢的抽象规划，低层模块负责快速的细节计算——在单次前向传播中执行序列推理任务，无需对中间过程进行显式监督。\n\n该模型仅有 2700 万参数，使用 1000 个训练样本即可在复杂数独、大迷宫最优路径寻找等任务上达到接近完美的性能，且无需预训练或思维链数据。在 ARC（Abstraction and Reasoning Corpus）基准上，HRM 的表现优于上下文窗口更长的更大模型。项目提供了训练代码、预训练检查点以及数独、迷宫、ARC 等数据集的构建与评估脚本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CUDA 12.6 和 PyTorch（CUDA 12.6 版本），并安装 FlashAttention（Hopper GPU 用 FlashAttention 3，Ampere 及更早用 FlashAttention 2）",
+  "运行 pip install -r requirements.txt 安装 Python 依赖",
+  "运行 wandb login 登录 Weights & Biases",
+  "构建数独数据集：python dataset/build_sudoku_dataset.py --output-dir data/sudoku-extreme-1k-aug-1000 --subsample-size 1000 --num-aug 1000",
+  "启动训练：OMP_NUM_THREADS=8 python pretrain.py data_path=data/sudoku-extreme-1k-aug-1000 epochs=20000 eval_interval=2000 global_batch_size=384 lr=7e-5 puzzle_emb_lr=7e-5 weight_decay=1.0 puzzle_emb_weight_decay=1.0"
+ ],
+ "summary": "HRM 是一个受大脑分层处理机制启发的循环推理模型，旨在解决传统大语言模型依赖思维链带来的分解脆弱、数据需求大和延迟高的问题。它通过高层规划与低层计算两个模块协作，在单次前向传播中完成数独、迷宫路径规划、ARC 等推理任务，且无需预训练或中间过程标注。项目提供训练代码、数据集构建脚本和预训练检查点，适合研究小样本高效推理的开发者。",
+ "tagline": "受大脑启发的分层推理模型，单次前向传播完成复杂推理"
+}

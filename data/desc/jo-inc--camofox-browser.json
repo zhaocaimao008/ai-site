@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要让 AI Agent 稳定访问网页的开发者，尤其是遇到反爬或机器人检测的自动化场景。也适合在资源有限的环境中部署浏览器自动化服务的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "基于 Camoufox 的 C++ 级反检测，绕过 Google、Cloudflare 等机器人检测",
+  "提供稳定的元素引用（e1、e2 等）和无障碍快照，节省 token 并便于交互",
+  "支持会话隔离、Cookie 导入、代理与 GeoIP 自动配置",
+  "内置搜索宏（如 @google_search、@youtube_search）和 YouTube 字幕提取",
+  "提供 OpenAPI 文档、结构化日志、会话追踪和截图功能",
+  "支持 Docker 部署，空闲时内存占用约 40MB，适合资源受限环境"
+ ],
+ "intro": "camofox-browser 是一个面向 AI Agent 的反检测浏览器服务器，基于 Camoufox（一个在 C++ 层面修改指纹的 Firefox 分支）构建。它通过 REST API 提供浏览器自动化能力，旨在绕过 Cloudflare、Google 等常见机器人检测，让 AI Agent 能够访问真实网页。\n\n项目将 Camoufox 引擎封装成适合 Agent 使用的接口，提供无障碍快照（比原始 HTML 小约 90%）、稳定的元素引用（如 e1、e2）用于点击，以及常用站点的搜索宏。它支持会话隔离、Cookie 导入、代理与 GeoIP、文件上传、下载捕获、YouTube 字幕提取等功能，并可在 Docker、Fly.io、Railway 等环境部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/jo-inc/camofox-browser && cd camofox-browser",
+  "npm install && npm start",
+  "访问 http://localhost:9377 使用服务",
+  "或使用 npx @askjo/camofox-browser 直接运行",
+  "Docker 部署：make up（Windows 使用 .\\build.ps1 up）"
+ ],
+ "summary": "camofox-browser 是一个为 AI Agent 设计的反检测无头浏览器服务器，基于 Camoufox 引擎在 C++ 层面伪装浏览器指纹，帮助 Agent 绕过 Cloudflare 等机器人检测，访问真实网页。它提供 REST API、无障碍快照和稳定元素引用，适合需要网页抓取或自动化操作的 AI 应用场景，尤其适合在资源有限的环境中部署。",
+ "tagline": "为 AI Agent 设计的反检测无头浏览器服务"
+}

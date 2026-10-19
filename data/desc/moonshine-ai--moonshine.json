@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建实时语音代理、语音交互界面的开发者，以及关注隐私和离线运行的语音应用团队。",
+ "date": "2026-10-19",
+ "features": [
+  "本地运行的语音转文本，无需联网或 API 密钥",
+  "针对实时流式输入优化，降低响应延迟",
+  "提供意图识别与文本转语音能力",
+  "语音识别模型覆盖多种精度与体积，含约 1MB 的微型模型",
+  "同一套库支持 Python、JavaScript/WASM、iOS、Android、macOS、Linux、Windows 和 Raspberry Pi"
+ ],
+ "intro": "Moonshine Voice 是一个面向实时语音代理和语音应用开发的开源 AI 工具包，提供语音转文本、意图识别和文本转语音能力。所有计算都在设备本地完成，无需账号或 API 密钥，兼顾速度与隐私。\n\n项目针对流式场景做了优化，在用户说话的同时就开始处理，从而降低延迟。语音识别模型从零训练，覆盖从高精度到约 1MB 的微型模型，并支持 Python、JavaScript/WASM、iOS、Android、macOS、Linux、Windows 和 Raspberry Pi 等多个平台。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 包：pip install moonshine-voice",
+  "使用麦克风运行语音识别：moonshine-voice mic --language en",
+  "其他平台的安装与示例参考官方 Quickstart 和 Examples 文档"
+ ],
+ "summary": "Moonshine Voice 是一个端侧运行的语音 AI 工具包，帮助开发者构建实时语音代理和语音界面。它把语音转文本、意图识别和文本转语音放在本地执行，不需要账号或 API 密钥，并针对流式输入优化延迟。语音识别模型覆盖从高精度到约 1MB 的微型版本，同一套库可跨 Python、JavaScript/WASM、移动端和桌面平台使用，适合注重隐私、离线运行和低延迟响应的语音应用场景。",
+ "tagline": "端侧低延迟语音识别、意图识别与语音合成工具包"
+}

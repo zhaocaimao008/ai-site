@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合写中文文章、做知识型或方法论内容、使用 Codex 进行内容生产并希望稳定复用一套配图风格的创作者。",
+ "date": "2026-10-19",
+ "features": [
+  "分析中文文章并提炼适合配图的认知锚点，输出 4-8 张 shot list",
+  "为每张图选择结构类型并设计小黑参与的核心动作与中文标注",
+  "按 16:9 横版、纯白背景、黑色手绘线稿、少量红橙蓝批注的风格生成 PNG 图片",
+  "提供 QA checklist 检查白底、留白、小黑动作、非 PPT 感等要素",
+  "支持仅做配图规划、直接生成配图、单概念配图及图片文字编辑等使用方式"
+ ],
+ "intro": "Ian Xiaohei Illustrations 是一个 Codex Skill，用于指导 AI Agent 为中文文章、帖子、博客、Notion 文档和方法论内容生成正文配图。它先理解文章中的认知锚点，再把其中一个判断、流程、结构、状态或隐喻，转化为一张 16:9 横版、白底手绘、带少量红橙蓝中文批注的解释图。\n\n默认视觉 IP 是“小黑”：一个黑色实心、白点眼、细腿、空表情的小角色，必须参与画面核心动作，而不是装饰。该 Skill 会先输出 shot list，再逐张生成图片，并按照 QA checklist 检查白底、留白、小黑动作、中文标注等要素。\n\n它适合需要为中文内容配图、希望稳定复用一套视觉语言的内容创作者，不适合需要商业插画、传统 PPT 信息图或可编辑矢量文件的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/helloianneo/ian-xiaohei-illustrations.git",
+  "进入目录：cd ian-xiaohei-illustrations",
+  "复制 skill 到 Codex skills 目录：mkdir -p \"${CODEX_HOME:-$HOME/.codex}/skills\" && cp -R ./ian-xiaohei-illustrations \"${CODEX_HOME:-$HOME/.codex}/skills/\"",
+  "在 Codex 中使用：Use $ian-xiaohei-illustrations 为这篇中文文章设计并生成 5 张小黑怪诞正文配图。"
+ ],
+ "summary": "这是一个面向中文内容创作者的 Codex Skill，解决文章配图风格不统一、抽象观点难以视觉化的问题。它先分析文章中的判断、流程或隐喻，再生成 16:9 白底手绘、带少量中文批注的正文配图，并以“小黑”角色参与核心动作。适合写博客、方法论或 AI 工作流内容时稳定复用一套视觉语言。",
+ "tagline": "为中文文章生成小黑怪诞手绘配图的 Codex Skill"
+}

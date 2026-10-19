@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合注重数据隐私、希望在本机或自有服务器上运行大模型的开发者和技术用户。",
+ "date": "2026-10-19",
+ "features": [
+  "自托管、离线运行，数据不离开本地设备",
+  "支持 Llama 2 系列 7B/13B/70B 与 Code Llama 系列模型",
+  "提供网页聊天界面，默认访问 localhost:3000",
+  "支持 Nvidia GPU 的 CUDA 加速",
+  "提供兼容 OpenAI 的 API（localhost:3001）",
+  "支持 umbrelOS、M1/M2 Mac、Docker 和 Kubernetes 部署"
+ ],
+ "intro": "LlamaGPT 是一个可自托管的类 ChatGPT 聊天机器人，由 Llama 2 驱动，完全离线运行，数据不离开本地设备。它提供网页聊天界面，支持 Nous Hermes Llama 2 的 7B、13B、70B 版本，以及 Code Llama 的 7B、13B 和 Phind Code Llama 34B 模型。\n\n部署方式比较灵活：可以在 umbrelOS 家庭服务器上一键安装，也可以在 M1/M2 Mac 或任意 x86、arm64 系统上用 Docker 运行，还提供了 Kubernetes 部署清单。借助 llama-cpp-python，它还在 3001 端口提供兼容 OpenAI 的 API，方便接入现有工具。README 中给出了不同硬件上的生成速度参考。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入目录：git clone https://github.com/getumbrel/llama-gpt.git && cd llama-gpt",
+  "在 M1/M2 Mac 上运行：./run-mac.sh --model 7b",
+  "在其他 Docker 环境运行：./run.sh --model 7b（Nvidia GPU 可加 --with-cuda）",
+  "首次运行会下载模型，完成后访问 http://localhost:3000"
+ ],
+ "summary": "LlamaGPT 让你在自己的设备上运行一个类似 ChatGPT 的聊天机器人，模型基于 Llama 2 和 Code Llama，全程离线，对话数据不会上传到外部服务。它提供网页界面和兼容 OpenAI 的 API，可通过 Docker 部署在 Mac、普通服务器或 umbrelOS 上。适合关心隐私、想本地体验大模型对话或代码辅助的开发者。",
+ "tagline": "可自托管、离线运行的 Llama 2 聊天机器人"
+}

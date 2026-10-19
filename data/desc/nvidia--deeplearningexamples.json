@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合深度学习研究人员、工程师以及希望充分利用 NVIDIA GPU 性能的开发者。",
+ "date": "2026-10-19",
+ "features": [
+  "覆盖计算机视觉、NLP、语音、推荐系统等多个领域的先进模型",
+  "针对 NVIDIA GPU 优化，支持混合精度（AMP）和多 GPU/多节点训练",
+  "提供 TensorRT、ONNX、Triton 等推理部署示例",
+  "包含 Jupyter Notebook 教程，方便交互式学习",
+  "通过 NGC 容器每月更新，集成最新 NVIDIA 软件库"
+ ],
+ "intro": "该仓库由 NVIDIA 维护，提供了一系列最先进的深度学习模型示例，涵盖计算机视觉、自然语言处理、语音、推荐系统等领域。每个示例都针对 NVIDIA GPU（Volta、Turing、Ampere 架构）进行了优化，支持混合精度训练（AMP）、多 GPU 和多节点训练，并提供了与 TensorRT、ONNX、Triton 等推理工具的集成示例。\n\n示例代码以 PyTorch、TensorFlow2 等主流框架实现，并附带详细的训练脚本和说明，旨在帮助开发者轻松复现论文级准确率和性能。此外，所有示例都打包在 NGC 容器中，每月更新，确保软件栈的稳定性和性能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 NGC 容器注册表（https://ngc.nvidia.com）拉取最新容器",
+  "在容器内导航至所需模型目录（如 PyTorch/Classification/ConvNets/efficientnet）",
+  "参考该目录下的 README 文件，运行训练或推理脚本"
+ ],
+ "summary": "NVIDIA DeepLearningExamples 提供了针对 NVIDIA GPU 优化的深度学习模型示例，涵盖计算机视觉、自然语言处理、语音和推荐系统等领域。每个示例都包含训练和部署脚本，支持混合精度和多 GPU 训练，并集成 TensorRT、Triton 等推理工具。适合研究人员和开发者快速复现先进模型，并在企业级基础设施上获得可复现的准确率和性能。",
+ "tagline": "NVIDIA 官方深度学习示例，优化 GPU 训练与部署"
+}

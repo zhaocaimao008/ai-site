@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合构建和运维 AI agent、希望用生产真实失败来驱动回归测试并接入 CI 的开发者与团队。",
+ "date": "2026-10-19",
+ "features": [
+  "以 OTLP 接收 agent trace，按 agent、conversation、turn、step 等语义分层展示",
+  "在线评估器在 conversation、run、span 级别打分，失败自动聚类成 issue",
+  "一键将失败 trace 冻结为封闭回归用例，并验证 fail-to-pass 契约",
+  "CI 中离线回放录制 fixture，`tracely gate` 拦截导致回归的 PR",
+  "可配置告警流程，支持 Slack、邮件、webhook 和 LLM 步骤",
+  "支持自托管完整栈，包含 Postgres、ClickHouse、Redis 和 MinIO"
+ ],
+ "intro": "Tracely 是一个面向 AI agent 的 trace 原生 CI/CD 工具。它接收 agent 运行产生的 OTLP trace，在线评估每次运行的质量，把失败按结构和语义聚类成 issue，而不是让开发者逐条阅读。\n\n每个失败 trace 可以一键冻结为封闭的回归用例：录制输入、工具调用和 LLM 输出作为 fixture，并附带 fail-to-pass 契约。CI 中回放这些用例无需 API key 和模型调用，`tracely gate` 会在回归时以非零状态退出、提交 commit status 并更新 PR 评论。\n\n整个栈可自托管，包含 API、worker、UI、Postgres、ClickHouse、Redis 和 MinIO，也提供 Railway 等一键部署方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Railway 或 Railyard 一键部署完整栈，或参考文档自托管 API、worker、UI 及依赖服务",
+  "使用 PyPI 上的 `tracelyai-sdk` 接入 agent，将 trace 以 OTLP 发送到 Tracely",
+  "在界面中查看 trace 与评估结果，将失败 trace 提升为回归用例",
+  "在 CI 中运行 `tracely gate`，根据退出码和 PR 评论判断是否拦截合并"
+ ],
+ "summary": "Tracely 解决的是 AI agent 上线后失败难以复现和防回归的问题。它接收生产 trace，在线评估并聚类失败，再把失败运行冻结成可离线回放的回归用例，在 CI 中拦截会重新引入问题的 PR。适合希望用真实生产数据驱动 agent 测试、并接入现有 CI 流程的团队。",
+ "tagline": "把生产失败轨迹变成可回放的回归测试，并拦截导致退化的 PR。"
+}

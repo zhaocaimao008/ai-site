@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究交互式世界模型、实时视频生成的研究人员和开发者，以及希望快速构建游戏原型的创作者。",
+ "date": "2026-10-19",
+ "features": [
+  "实时生成式渲染：将参考视频实时渲染为增强视频，帧率 24 fps 以上",
+  "支持 5B 和 14B 模型权重，提供双向和少步（chunk-AR）推理模式",
+  "实时流式推理服务，通过 WebRTC 传输视频",
+  "提供 game-prototype-turbo 技能，将文本提示转化为可玩游戏原型",
+  "包含前端工作台，支持游戏库、聊天构建游戏和游玩窗口"
+ ],
+ "intro": "EdenLive 是一个实时生成式渲染器，它把参考视频作为交互程序与神经视觉合成之间的接口。上游程序负责执行规则并维护世界状态，EdenLive 则根据目标首帧和文本提示，将参考视频渲染成细节丰富的帧。\n\n项目开源了 5B 和 14B 模型权重，支持双向和少步（chunk-AR）推理，并提供实时流式推理代码。在消费级 GPU（RTX 5090）上，它能以 24 fps 或更高帧率实时渲染，输出 480P/720P 视频。此外，还提供了将文本提示转化为可玩游戏原型的技能和前端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并创建 conda 环境：git clone https://github.com/VAST-AI-Research/EdenLive.git && cd EdenLive && conda create -n edenlive python=3.10 -y && conda activate edenlive",
+  "安装 PyTorch 和其他依赖：pip install torch==2.13.0 torchvision==0.28.0 --index-url https://download.pytorch.org/whl/cu130，然后进入 realtime 目录安装相关包和依赖",
+  "下载模型权重：hf download VAST-AI/EdenLive --local-dir ./models/EdenLive",
+  "运行双向推理示例：python -m edenlive.scripts.infer --config edenlive/configs/wan22_5b_720p_bidir.yaml",
+  "启动实时服务：在 realtime 目录下运行 bash turn_server.sh 和 bash start.sh 5b（或 14b）"
+ ],
+ "summary": "EdenLive 是一个实时生成式渲染器，用于交互式世界模型。它把参考视频作为接口，由上游程序维护世界状态，EdenLive 根据首帧和文本提示将参考视频实时渲染成高清画面。项目开源了 5B 和 14B 模型权重及流式推理代码，支持在消费级 GPU 上以 24 fps 以上帧率输出 480P/720P 视频，适合研究实时视频生成和构建游戏原型的开发者。",
+ "tagline": "实时生成式渲染器，将参考视频转为高清画面"
+}

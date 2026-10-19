@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建语义搜索、RAG 应用或 LLM 工作流的 Python 开发者，以及希望快速集成 AI 能力到现有系统的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "向量搜索：支持 SQL、对象存储、主题建模、图分析和多模态索引",
+  "为文本、文档、音频、图像和视频创建 embeddings",
+  "基于语言模型的 pipelines：LLM 提示、问答、标注、转录、翻译、摘要等",
+  "Workflows：将 pipelines 连接起来并聚合业务逻辑",
+  "Agents：智能连接 embeddings、pipelines、workflows 和其他 agents 以自主解决复杂问题",
+  "Web 和 Model Context Protocol (MCP) API，以及 JavaScript、Java、Rust 和 Go 绑定"
+ ],
+ "intro": "txtai 是一个用 Python 编写的 AI 框架，核心是 embeddings database，它将向量索引（稀疏与稠密）、图网络和关系数据库结合在一起，用于支持向量搜索，并作为大语言模型应用的知识源。\n\n基于这一基础，txtai 可以构建自主 agents、检索增强生成（RAG）流程、多模型工作流等。它提供了语义搜索、LLM 提示、问答、标注、转录、翻译、摘要等 pipelines，并支持将 pipelines 组合成 workflows。\n\ntxtai 内置 Web API 和 Model Context Protocol (MCP) API，提供 JavaScript、Java、Rust 和 Go 的绑定，默认配置即可快速上手，支持本地运行或通过容器编排扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 pip 安装：pip install txtai",
+  "创建 Embeddings 实例并索引数据：import txtai; embeddings = txtai.Embeddings(); embeddings.index([\"Correct\", \"Not what we hoped\"])",
+  "执行语义搜索：embeddings.search(\"positive\", 1)",
+  "通过配置文件启动 API 服务：CONFIG=app.yml uvicorn \"txtai.api:app\"",
+  "使用 curl 调用搜索接口：curl -X GET \"http://localhost:8000/search?query=positive\""
+ ],
+ "summary": "txtai 是一个集语义搜索、LLM 编排和语言模型工作流于一体的 AI 框架。它的核心是 embeddings database，将向量索引、图网络和关系数据库结合，既能做向量搜索，也能作为大模型应用的知识源。适合需要构建语义搜索、RAG、自主 agents 或多模型工作流的开发者，支持本地运行和容器化扩展。",
+ "tagline": "一体化 AI 框架：语义搜索、LLM 编排与语言模型工作流"
+}

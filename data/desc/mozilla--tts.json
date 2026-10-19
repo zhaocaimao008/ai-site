@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文本转语音的开发者、研究人员，以及需要快速部署 TTS 功能的产品团队。",
+ "date": "2026-10-19",
+ "features": [
+  "提供多种 Text2Spec 模型（Tacotron、Tacotron2、Glow-TTS、SpeedySpeech）",
+  "集成多种声码器（MelGAN、Multiband-MelGAN、GAN-TTS、ParallelWaveGAN、WaveGrad、WaveRNN）",
+  "支持多说话人 TTS 和多 GPU 训练",
+  "可将 PyTorch 模型转换为 TensorFlow 2.0 和 TFLite",
+  "提供数据集分析工具和演示服务器",
+  "发布预训练模型，支持 20 多种语言"
+ ],
+ "intro": "TTS 是 Mozilla 开发的一个文本转语音（Text-to-Speech）生成库，基于深度学习模型构建。它集成了多种文本到频谱（Text2Spec）模型（如 Tacotron、Tacotron2、Glow-TTS、SpeedySpeech）和声码器（如 MelGAN、Multiband-MelGAN、GAN-TTS、ParallelWaveGAN、WaveGrad、WaveRNN），并提供 Speaker Encoder 来计算说话人嵌入。\n\n该项目注重训练易用性、速度与质量之间的平衡，支持多说话人 TTS、多 GPU 训练，并可将 PyTorch 模型转换为 TensorFlow 2.0 和 TFLite 用于推理。此外，它还提供了数据集分析工具、演示服务器和用于模型基准测试的 Notebook。\n\nTTS 已在 20 多种语言的产品和研究项目中使用，并发布了预训练模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 TTS：pip install TTS",
+  "或克隆仓库并本地安装：git clone https://github.com/mozilla/TTS && pip install -e .",
+  "使用预训练模型在终端合成语音（参考 README 示例）"
+ ],
+ "summary": "TTS 是 Mozilla 推出的深度学习文本转语音库，集成了 Tacotron、Glow-TTS 等文本到频谱模型以及 MelGAN、WaveRNN 等声码器，支持多说话人合成和多 GPU 训练。它适合需要训练或部署 TTS 系统的开发者与研究人员，尤其关注多语言场景和模型转换到 TensorFlow Lite 的移动端推理。",
+ "tagline": "基于深度学习的文本转语音库，支持多语言与多说话人"
+}

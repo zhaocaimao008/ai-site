@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要训练或对齐大语言模型、研究 RLHF 算法与 agent 强化学习的开发者和研究人员。",
+ "date": "2026-10-19",
+ "features": [
+  "基于 Ray 的分布式调度，将 Actor、Reward、Reference、Critic 模型分布到多 GPU",
+  "vLLM 推理引擎与训练模型共享 GPU 的混合引擎调度",
+  "支持 PPO、REINFORCE++、GRPO、RLOO 等 RL 算法",
+  "单轮 agent 自定义奖励函数与多轮 agent 环境交互训练",
+  "支持 VLM 的 RLHF 训练及多轮 VLM 交互",
+  "支持异步 RLHF 与异步 agent RLHF 训练"
+ ],
+ "intro": "OpenRLHF 是一个开源的强化学习人类反馈（RLHF）训练框架，采用 Ray + vLLM 的分布式架构，把 Actor、Reward、Reference、Critic 等模型拆分到不同 GPU 上调度，并支持混合引擎共享 GPU 资源，从而降低空闲开销、支撑更大规模的训练。\n\n框架提供统一的 agent 式执行范式，既覆盖单轮任务（用自定义奖励函数做强化微调），也支持多轮 agent 与复杂环境交互，并已加入对视觉语言模型（VLM）的 RLHF 与多轮 VLM RL 支持。算法层面包含 PPO、REINFORCE++、GRPO、RLOO 等，并支持异步 RLHF 训练。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "OpenRLHF 是一个开源的 RLHF 训练框架，用 Ray 做分布式调度、vLLM 做推理，把 Actor、Reward、Reference、Critic 等模型分布到多张 GPU 上，并让推理引擎与训练模型共享显存资源。它提供统一的 agent 式执行流程，覆盖单轮自定义奖励和多轮环境交互，支持 PPO、REINFORCE++ 等算法以及 VLM 训练。适合需要对齐大模型或研究强化学习训练流程的开发者。",
+ "tagline": "基于 Ray 与 vLLM 的分布式 RLHF 训练框架"
+}

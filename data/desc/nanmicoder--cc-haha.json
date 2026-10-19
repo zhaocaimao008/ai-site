@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code 或其他 AI Agent 进行日常开发、希望有图形化工作台管理多会话与多 Agent 协作的开发者，也适合想通过手机或 IM 远程跟进任务的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "多会话工作台与 Cmd+K 全局搜索，支持按分支或隔离 Worktree 启动会话",
+  "逐文件 Diff 审阅与整轮撤销，内置浏览器预览改动后的页面",
+  "多模型接入：Claude / ChatGPT / Grok 账号登录、第三方 API 预设及本地端点",
+  "MCP 图形化管理、可视化 SubAgent、Agent Teams 协作与动态 Workflow 编排",
+  "Computer Use 在 macOS 上操作其他应用且不占用真实鼠标键盘",
+  "H5 远程访问与 Telegram、飞书、微信、钉钉等 IM 接入，支持定时任务与用量统计"
+ ],
+ "intro": "cc-haha 是一个本地优先的跨平台桌面工作台，把 Claude Code 和各类 AI Agent 的日常操作集中到一个 macOS / Windows / Linux 应用里。它支持多会话标签页、全局搜索、按分支或 Git Worktree 启动会话，并在右侧工作区逐个文件展示带语法高亮的 Diff，整轮改动可撤销。\n\n模型方面，Claude、ChatGPT、Grok 官方账号可直接登录，DeepSeek、Kimi、智谱 GLM 等第三方 API 有现成预设，LM Studio、Ollama 的本地模型也能接入。此外还提供 MCP 图形化管理、可视化 SubAgent、Agent Teams 协作工作台、动态 Workflow 编排、模型请求追踪和 Computer Use 等能力。\n\n远程使用上，可通过 H5 扫码在手机浏览器接入当前会话，也能接入 Telegram、飞书、微信、钉钉、WhatsApp 等 IM 进行对话、切换项目和审批权限。项目同时提供 CLI，可从源码启动调试。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "前往 Releases 页面下载 macOS / Windows / Linux 桌面端安装包",
+  "首次启动后在设置里配置模型提供商、API Key 和默认模型",
+  "如需调试底层 CLI，可执行 bun install、cp .env.example .env、./bin/claude-haha"
+ ],
+ "summary": "cc-haha 把 Claude Code 和 AI Agent 的操作搬进一个桌面应用，解决多会话、多 Agent 协作时切换混乱、改动难审阅的问题。它提供 Worktree 启动、Diff 审阅、MCP 与 SubAgent 管理、多模型接入，并支持手机 H5 和 IM 远程跟进任务，适合希望图形化管理 AI 编码工作流的开发者。",
+ "tagline": "本地优先的 Claude Code 与 AI Agent 桌面工作台"
+}

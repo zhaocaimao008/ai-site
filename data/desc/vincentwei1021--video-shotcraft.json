@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想快速制作产品宣传片、又希望成片可继续修改的开发者、独立产品团队和动效设计者，需要已使用 Claude Code 或 Codex。",
+ "date": "2026-10-19",
+ "features": [
+  "以 Claude Code / Codex 技能形式工作，用自然语言描述即可生成宣传片",
+  "124 张镜头配方卡、150 个镜头，覆盖开场、运镜、转场、字体等 10 个类别",
+  "基于 Remotion 用代码逐帧渲染，画面来自真实页面截图，可完全编辑",
+  "内置 Ink Press 模板，可快速套用截图、文案和 logo",
+  "支持节拍同步与音效设计，并做逐帧检查",
+  "交付 MP4，另可在 Motion Workbench 编辑或导出剪映草稿"
+ ],
+ "intro": "video-shotcraft 是给 Claude Code 和 Codex 用的技能包，目标是让 AI agent 帮你做产品宣传片。你只要说一句“给我的产品做个宣传片”，agent 就会抓取你真实的页面截图，从镜头配方库里挑镜头、排分镜，再用 Remotion 以代码逐帧渲染，配上节拍和音效，最后输出可继续编辑的 MP4。\n\n它并不是文生视频工具：每一帧都由代码根据你自己的截图和文案绘制，所以画面清晰、符合品牌调性，而且完全可改。项目提供 124 张镜头配方卡、150 个镜头，分 10 个类别，可在 Gallery 中搜索、筛选并复制卡片名；还附带一个可直接套用的 Ink Press 模板。\n\n交付物除了 MP4，还可以在 Motion Workbench 浏览器编辑器里继续修改，或导出为剪映草稿，保留分镜片段、字幕轨和独立的音效/BGM 轨。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "把仓库链接交给 agent：Install this skill for me: https://github.com/Vincentwei1021/video-shotcraft",
+  "或用 skills CLI：npx skills add Vincentwei1021/video-shotcraft",
+  "或手动克隆后软链到 ~/.claude/skills/video-shotcraft（Claude Code）或 ~/.codex/skills/video-shotcraft（Codex）",
+  "对 agent 说：Use video-shotcraft to make a promo for my product.",
+  "也可指定模板：Make a launch film for this repo with the Ink Press template."
+ ],
+ "summary": "video-shotcraft 是一个给 Claude Code 和 Codex 用的技能包，用来把产品页面做成宣传片。你只需用自然语言描述需求，agent 会抓取真实页面截图，从镜头配方库中挑选镜头并排好分镜，再用 Remotion 以代码渲染成片，同时处理节拍和音效。因为画面由代码根据你自己的素材绘制，成片清晰且可继续编辑，适合需要快速产出品牌化产品视频、又不想被生成式视频限制的开发者与产品团队。",
+ "tagline": "用 Claude Code / Codex 生成可编辑的产品宣传片"
+}

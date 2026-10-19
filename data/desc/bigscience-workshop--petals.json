@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想要在本地运行或微调大语言模型但硬件资源有限的开发者、研究人员和 AI 爱好者。",
+ "date": "2026-10-19",
+ "features": [
+  "分布式推理：将大模型层分布到多个 GPU 上，实现家庭环境运行大模型",
+  "模型微调：支持使用自定义任务对分布式模型进行微调",
+  "多模型支持：包括 Llama 3.1、Mixtral、Falcon、BLOOM 等",
+  "社区网络：通过公共 swarm 共享 GPU 资源，也可搭建私有 swarm",
+  "兼容 PyTorch 和 Transformers：提供熟悉的 API 和灵活的控制"
+ ],
+ "intro": "Petals 是一个社区驱动的分布式系统，让用户可以在自己的电脑或 Google Colab 上运行和微调大型语言模型。它采用类似 BitTorrent 的方式，将模型层分布到多个志愿者的 GPU 上，用户只需加载模型的一小部分，即可通过公共网络使用完整模型。\n\n项目支持 Llama 3.1（最高 405B）、Mixtral（8x22B）、Falcon（40B+）和 BLOOM（176B）等模型，并提供与 PyTorch 和 🤗 Transformers 兼容的接口，方便进行推理和微调。单批次推理速度最高可达每秒 6 个 token（Llama 2 70B），适合聊天机器人和交互式应用。\n\n用户也可以分享自己的 GPU 来增加网络容量，或搭建私有 swarm 以处理敏感数据。项目提供详细的教程、示例和监控工具，帮助开发者快速上手。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Petals：pip install git+https://github.com/bigscience-workshop/petals",
+  "在 Python 中导入 AutoTokenizer 和 AutoDistributedModelForCausalLM",
+  "指定模型名称（如 meta-llama/Meta-Llama-3.1-405B-Instruct）并加载",
+  "使用 tokenizer 编码输入并调用 model.generate 生成文本",
+  "如需分享 GPU，运行 python -m petals.cli.run_server <model_name>"
+ ],
+ "summary": "Petals 让普通开发者也能在本地运行和微调百亿参数级大语言模型。它把模型拆分到多台志愿者 GPU 上，通过分布式网络协同推理，用户只需加载一小部分即可使用完整模型。适合硬件有限但想体验大模型推理、微调或搭建聊天机器人的场景，也支持分享 GPU 增加社区算力。",
+ "tagline": "BitTorrent 风格分布式运行大语言模型"
+}

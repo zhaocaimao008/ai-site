@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合正在准备算法/AI 岗位面试的开发者、希望系统学习大模型相关技术的学生，以及需要从零实现来加深理解的进阶学习者。",
+ "date": "2026-10-19",
+ "features": [
+  "26 个主题模块，覆盖数学基础、数据结构、机器学习、深度学习、LLM、Agent、AI-Infra 等方向",
+  "273 篇教学 Notebook，强调从零手写实现与可运行验证",
+  "提供四条推荐学习路线：算法与机器学习基础、大模型应用与训练、AI 工程与系统优化、感知与具身智能",
+  "每个模块包含高频面试题、手撕清单、易错点和自测题",
+  "代码尽量自包含、固定随机种子，并配有断言和数值对照",
+  "支持社区共建，欢迎 Issue 和 PR 补充推导、代码、图示和工程经验"
+ ],
+ "intro": "Autumn-Recruit Algo Notes 是一个以 Jupyter Notebook 为主要载体的中文学习仓库，覆盖从数学基础、数据结构与算法，到机器学习、深度学习、LLM、Agent、AI-Infra、语音、数据科学等 26 个主题模块。项目强调「理解→推导→手写→运行→验证→复盘」的学习闭环，鼓励用 NumPy 从零实现核心算法，并通过断言、数值对照和可视化验证理解。\n\n仓库目前包含 273 篇教学 Notebook，内容兼顾直觉解释与公式推导，并尽量保持代码自包含、可离线运行。每个模块通常配有高频面试题、专题笔记和教学目录，适合面试准备与系统学习。项目采用 MIT 协议，欢迎社区贡献修正、案例和反馈。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/Akun-python/autumn-recruitment.git",
+  "cd autumn-recruitment",
+  "pip install numpy matplotlib jupyter nbclient",
+  "pip install scikit-learn torch",
+  "jupyter notebook \"18-数据分析/教学/03-留存分析与同期群.ipynb\""
+ ],
+ "summary": "这是一个面向大模型时代的中文算法与AI学习仓库，用 Jupyter Notebook 把数学基础、数据结构、机器学习、深度学习、LLM、Agent、AI-Infra 等 26 个主题组织成可运行、可验证的学习路径。它适合准备面试的开发者系统复习，也适合想通过手写代码和实验加深理解的学习者。",
+ "tagline": "面向大模型时代的算法与AI学习共建仓库"
+}

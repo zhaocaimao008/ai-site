@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合语音处理领域的研究人员、开发者以及相关专业的学生使用。",
+ "date": "2026-10-19",
+ "features": [
+  "支持语音识别、说话人识别、语音增强、语音分离等多种语音处理任务",
+  "提供超过 200 个训练配方，覆盖 40 多个数据集",
+  "支持微调 Whisper、Wav2Vec2、Hubert 等预训练模型",
+  "在 HuggingFace 上提供 100 多个预训练模型，便于快速推理",
+  "统一的代码结构和 YAML 配置文件，简化实验管理",
+  "丰富的教程和文档，适合学习和研究"
+ ],
+ "intro": "SpeechBrain 是一个基于 PyTorch 的开源语音工具包，旨在加速对话式 AI 的开发，涵盖语音识别、说话人识别、语音增强、语音分离、语言建模等任务。它提供了统一的代码结构，方便研究人员和开发者快速构建和实验语音与文本处理模型。\n\n项目包含超过 200 个训练配方（recipes），覆盖 40 多个数据集和 20 种语音与文本处理任务，支持从零训练和微调预训练模型（如 Whisper、Wav2Vec2、Hubert 等）。此外，SpeechBrain 在 HuggingFace 上提供了 100 多个预训练模型，并配有简洁的推理接口。\n\nSpeechBrain 注重教育性和可复现性，提供了 30 多个教程和详细的文档，适合学术研究、快速原型开发以及教学使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 SpeechBrain：pip install speechbrain",
+  "导入库：import speechbrain as sb",
+  "使用预训练模型进行语音识别：from speechbrain.inference import EncoderDecoderASR; asr_model = EncoderDecoderASR.from_hparams(source=\"speechbrain/asr-conformer-transformerlm-librispeech\", savedir=\"pretrained_models/asr-transformer-transformerlm-librispeech\"); asr_model.transcribe_file(\"speechbrain/asr-conformer-transformerlm-librispeech/example.wav\")",
+  "运行实验：cd recipes/<dataset>/<task>/; python experiment.py params.yaml"
+ ],
+ "summary": "SpeechBrain 是一个基于 PyTorch 的开源语音工具包，旨在简化对话式 AI 的开发。它支持语音识别、说话人识别、语音增强等多种任务，提供大量训练配方和预训练模型，方便研究人员和开发者快速实验和部署。适合学术研究、快速原型开发以及教学场景。",
+ "tagline": "基于 PyTorch 的语音处理开源工具包"
+}

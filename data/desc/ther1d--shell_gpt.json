@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合经常使用命令行的开发者、系统管理员以及希望提升终端工作效率的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "生成 shell 命令并支持执行、描述或中止",
+  "生成纯代码片段，可重定向到文件",
+  "通过管道分析日志、生成提交信息等",
+  "支持聊天模式，保留对话上下文",
+  "提供 Shell 集成，使用快捷键调用",
+  "兼容多种操作系统和 Shell"
+ ],
+ "intro": "ShellGPT 是一个基于 AI 大语言模型的命令行工具，旨在帮助用户快速生成 shell 命令、代码片段和文档，减少对外部搜索的依赖。它支持 Linux、macOS、Windows 以及 PowerShell、CMD、Bash、Zsh 等主流 Shell。\n\n默认使用 OpenAI 的 API 和 GPT-4 模型，需要配置 API key。也可以搭配 Ollama 等本地 LLM 后端运行开源模型，但官方提示 ShellGPT 未针对本地模型优化，可能无法按预期工作。\n\n工具支持从命令行参数或标准输入接收提示，可通过管道处理 git diff、日志等输入，并生成相应内容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install shell-gpt",
+  "首次运行会提示输入 OpenAI API key，并保存到 ~/.config/shell_gpt/.sgptrc",
+  "基本使用：sgpt \"What is the fibonacci sequence\"",
+  "生成 shell 命令：sgpt --shell \"find all json files in current folder\"",
+  "生成代码：sgpt --code \"solve fizz buzz problem using python\""
+ ],
+ "summary": "ShellGPT 是一个命令行工具，利用 AI 大语言模型帮助用户快速生成 shell 命令、代码片段和文档，减少查资料的时间。它支持从命令行或标准输入接收提示，可通过管道处理日志、diff 等数据，并生成对应内容。适合开发者、系统管理员等经常使用终端的人群，在需要快速获取命令或代码时使用。",
+ "tagline": "AI 驱动的命令行效率工具，生成命令、代码与文档"
+}

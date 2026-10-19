@@ -1,0 +1,20 @@
+{
+ "ai_related": true,
+ "audience": "适合需要深入理解 LLM 内部实现、进行模型微调或大规模训练的研究人员和开发者，也适合希望快速实验不同开源模型的技术团队。",
+ "date": "2026-10-19",
+ "features": [
+  "20+ 主流 LLM 的从零单文件实现，无抽象层，便于调试和修改",
+  "支持预训练、微调（LoRA、QLoRA、Adapter）和部署全流程",
+  "提供优化的训练配方（YAML），可在 1 到 1000+ GPU/TPU 上扩展",
+  "集成 Flash Attention、FSDP 和 fp4/8/16/32 量化，降低显存占用",
+  "提供简洁的 Python API，可快速加载模型并生成文本"
+ ],
+ "intro": "LitGPT 是 Lightning AI 开源的大语言模型工具集，用纯 Python 从零实现了 20 多个主流 LLM，包括 Llama、Gemma、Phi、Qwen、Falcon 等系列。每个模型都是单文件实现，没有抽象层，方便阅读、调试和修改。\n\n项目提供预训练、微调（支持 LoRA、QLoRA、Adapter）和部署的完整流程，并附带经过优化的训练配方（YAML 格式）。支持 Flash Attention、FSDP 以及 fp4/8/16/32 量化，可在 1 到 1000+ GPU/TPU 上运行，兼顾低显存推理和大规模训练。\n\nLitGPT 采用 Apache 2.0 协议，允许企业无限制使用，适合需要深入理解模型内部或快速实验的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 LitGPT：pip install 'litgpt[extra]'",
+  "使用 Python API 加载模型并生成文本：from litgpt import LLM; llm = LLM.load(\"microsoft/phi-2\"); text = llm.generate(\"Fix the spelling: Every fall, the family goes to the mountains.\"); print(text)"
+ ],
+ "summary": "LitGPT 用纯 Python 从零实现了 20 多个主流大语言模型，每个模型都是单文件、无抽象层，方便开发者阅读和修改。它覆盖预训练、微调（LoRA、QLoRA、Adapter）和部署全流程，支持 Flash Attention、FSDP 和多种量化精度，可在单卡到上千 GPU/TPU 上运行。适合需要深入理解模型内部、快速实验或进行大规模训练的研究人员和开发者。",
+ "tagline": "从零实现20+大模型，支持预训练、微调与部署"
+}

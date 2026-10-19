@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频生成模型的研究者与开发者，以及希望在本地或自有 GPU 环境部署文生视频能力的工程团队。",
+ "date": "2026-10-19",
+ "features": [
+  "文本到视频（Text-to-Video）推理与预训练权重",
+  "统一图像与视频生成架构，MLLM 文本编码器与 3D VAE",
+  "多 GPU 序列并行推理，支持 FP8 量化权重以降低显存占用",
+  "提供 Gradio Web Demo，并已集成 Diffusers 与 ComfyUI",
+  "Prompt Rewrite 提示词改写模型，辅助生成更贴合意图的视频",
+  "发布 Penguin Video Benchmark 评测基准"
+ ],
+ "intro": "HunyuanVideo 是腾讯混元团队开源的大规模视频生成模型框架，仓库包含 PyTorch 模型定义、预训练权重以及推理与采样代码，对应论文《HunyuanVideo: A Systematic Framework For Large Video Generation Model》。\n\n项目采用统一的图像与视频生成架构，使用 MLLM 作为文本编码器、3D VAE 处理时空信息，并提供 Prompt Rewrite 提示词改写能力。官方已开放推理代码、模型权重、多卡序列并行推理、Gradio Web Demo、FP8 量化权重以及 Penguin Video Benchmark，并已集成到 Diffusers 与 ComfyUI。\n\n围绕主模型，社区还衍生出图像转视频、音频驱动人物动画、定制化视频生成等方向，以及多种加速与量化方案。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 HuggingFace 下载 HunyuanVideo 模型权重，并按 ckpts/README.md 放置到对应目录",
+  "参照 README 的 Linux 安装指南配置依赖环境",
+  "运行仓库提供的推理脚本生成视频",
+  "如需更快速度，可使用 xDiT 提供的多卡序列并行推理代码",
+  "也可通过 Diffusers 或 ComfyUI 的集成方式调用模型"
+ ],
+ "summary": "HunyuanVideo 是腾讯混元开源的大规模视频生成框架，提供文本到视频的模型定义、预训练权重和推理代码。它采用统一的图像与视频生成架构，配合 MLLM 文本编码器、3D VAE 和提示词改写，并支持多卡并行、FP8 量化以及 Diffusers、ComfyUI 等集成方式。适合想研究或本地部署文生视频能力的开发者与研究者。",
+ "tagline": "腾讯混元开源的大规模视频生成模型框架"
+}

@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合想在不订阅 Plus 的情况下使用 GPTs 提示词的用户，以及需要按主题查找提示词的开发者与普通用户。",
+ "date": "2026-10-19",
+ "features": [
+  "按主题分类的免费 GPTs 提示词列表",
+  "包含编程、营销、学术、求职等分类文件",
+  "单独提供 Jailbreaks 提示词页面",
+  "提供 2024 年 5 月的更新文件",
+  "README 推广 AnyClaw Android 应用（OpenClaw + Codex）"
+ ],
+ "intro": "这个仓库收集了一批无需 ChatGPT Plus 订阅即可使用的 GPTs 提示词，按用途整理成多个分类文件，包括编程、营销、学术、求职、游戏、创意、提示词工程、商业、生产力与生活方式，以及单独的 Jailbreaks 页面。\n\nREADME 顶部还推广了作者的另一款 Android 应用 AnyClaw，它把 OpenClaw 与 Codex 两个 AI 编程 agent 打包进一个 APK，无需 root，也无需 Termux。仓库本身以 Markdown 列表形式组织内容，方便按主题查找和复制提示词。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一个按主题整理的免费 GPTs 提示词合集，覆盖编程、营销、学术、求职、创意等场景，并单独列出 Jailbreaks 内容，方便用户在不订阅 Plus 的情况下查找和复制提示词。README 还推广了作者的另一款 Android 应用 AnyClaw，可在手机上运行 OpenClaw 与 Codex 两个 AI 编程 agent。",
+ "tagline": "无需 Plus 订阅即可使用的免费 GPTs 提示词与越狱合集"
+}

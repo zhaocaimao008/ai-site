@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望语音数据不出本机的 macOS 用户，以及需要频繁口述输入文字或希望用语音操作电脑的开发者与办公人群。",
+ "date": "2026-10-19",
+ "features": [
+  "本地语音识别，支持 Nemotron Speech 3.5、Parakeet、Whisper 等多种模型",
+  "Fluid Intelligence 端侧 AI 增强，提供智能格式化、上下文大小写和文本后处理",
+  "Command Mode 通过语音启动应用、运行快捷指令和触发系统操作",
+  "Write Mode 在任意应用的文本框中听写或改写文本",
+  "实时转录浮层，适配 MacBook 刘海屏，支持全局快捷键",
+  "可选音频历史记录、今日用量统计和按应用配置提示词"
+ ],
+ "intro": "FluidVoice 是一款面向 macOS 的开源语音转文字听写应用，核心特点是语音识别和 AI 文本增强都在本机完成，不需要把音频或文本上传到云端。它支持 Nemotron Speech 3.5、Parakeet Flash、Parakeet TDT v3/v2、Cohere Transcribe、Apple Speech 和 Whisper 等多种语音模型，用户可以根据语言和延迟需求自行选择。\n\n除了基础听写，它还提供 Command Mode 用语音控制 Mac 操作，以及 Write Mode 在任意应用的文本框中直接写作或改写内容。可选的 AI 增强支持 OpenAI、Groq、自定义服务商，或使用本地运行的 Fluid Intelligence 进行智能格式化、上下文大小写处理和文本后处理。\n\n项目采用 GPLv3 协议开源，但 Fluid Intelligence 是单独维护的私有本地 AI 运行时，目前不包含在开源代码中。应用当前仅支持 macOS，iOS 和 Windows 版本在规划中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Homebrew 安装：brew install --cask fluidvoice",
+  "或从 GitHub Releases 页面手动下载最新版本",
+  "首次启动后按引导选择语音引擎并设置语言",
+  "根据需要配置全局快捷键和可选的 AI 增强方式"
+ ],
+ "summary": "FluidVoice 是一款 macOS 语音听写应用，把语音识别和可选的 AI 文本增强都放在本机运行，避免音频和文字上传云端。它支持多种语音模型，并提供语音控制 Mac 的 Command Mode 和在任意文本框中写作的 Write Mode。适合重视隐私、需要频繁口述输入或想用语音操作电脑的用户。",
+ "tagline": "macOS 本地语音转文字听写工具，支持端侧 AI 增强"
+}

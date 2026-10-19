@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望研究或使用可商用指令跟随大语言模型的开发者和研究人员，以及在 Databricks 平台上进行模型微调的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "基于 Pythia-12b 微调的 120 亿参数因果语言模型",
+  "使用约 1.5 万条指令/响应对进行指令微调",
+  "覆盖头脑风暴、分类、封闭问答、生成、信息抽取、开放问答和摘要等任务",
+  "允许商业使用，模型权重发布于 Hugging Face",
+  "提供 transformers pipeline 推理示例及多 GPU 适配说明",
+  "提供在 Databricks 上训练的 notebook 和 DeepSpeed 配置"
+ ],
+ "intro": "Dolly 是 Databricks 在机器学习平台上训练的大语言模型，基于 EleutherAI 的 Pythia-12b 微调而来，采用约 1.5 万条由 Databricks 员工生成的指令/响应对（databricks-dolly-15k）进行指令微调，并允许商业使用。模型覆盖头脑风暴、分类、封闭问答、生成、信息抽取、开放问答和摘要等能力领域。\n\ndolly-v2-12b 并非最先进的模型，但在指令跟随行为上表现出超出其基座模型的质量。项目也公开了已知局限，例如在复杂语法提示、编程、数学、事实准确性、日期时间、开放式问答和幻觉等方面存在不足。\n\n模型已发布在 Hugging Face 上，可通过 transformers 库直接推理，也提供了在 Databricks 上微调的 notebook 和针对不同 GPU 的配置说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 transformers 和 torch，并准备支持 bfloat16 的 GPU（如 A100）",
+  "使用 pipeline 加载模型：from transformers import pipeline; import torch; instruct_pipeline = pipeline(model=\"databricks/dolly-v2-12b\", torch_dtype=torch.bfloat16, trust_remote_code=True, device_map=\"auto\")",
+  "调用 pipeline 回答指令：instruct_pipeline(\"Explain to me the difference between nuclear fission and fusion.\")",
+  "在 A10 GPU 上使用 12B 模型时，安装 bitsandbytes 并添加 model_kwargs={'load_in_8bit': True}",
+  "在 V100 GPU 上改用 torch_dtype=torch.float16"
+ ],
+ "summary": "Dolly 是 Databricks 基于 Pythia-12b 微调的大语言模型，使用约 1.5 万条员工生成的指令数据训练，支持头脑风暴、分类、问答、摘要等任务，并允许商业使用。它适合想研究或试用可商用指令跟随模型的开发者，也提供了在 Databricks 上微调的流程。",
+ "tagline": "Databricks 开源的可商用指令跟随大语言模型"
+}

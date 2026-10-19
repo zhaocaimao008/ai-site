@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "适合需要调用 GPT-Image-2 生成图片的开发者，以及寻找图像生成提示词写法的创作者。",
+ "date": "2026-10-19",
+ "features": [
+  "整理 GPT-Image-2 相关提示词（Prompts）",
+  "提供 GPT-Image-2 API 的接入参考",
+  "覆盖文生图与图生图场景",
+  "附带在线浏览提示词的网页入口"
+ ],
+ "intro": "这个仓库围绕 GPT-Image-2 图像生成模型，收集整理 API 使用方式和提示词（Prompts）资源，面向需要调用该模型生成图片的开发者与创作者。\n\n项目以 Python 为主要语言，主题涵盖 text-to-image、image-to-image、prompt engineering 等方向，可作为查找提示词写法、了解 API 接入方式的参考入口。仓库同时提供了在线页面链接，方便浏览提示词内容。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一个围绕 GPT-Image-2 图像生成模型的资源仓库，汇集了该模型的 API 接入参考和提示词示例，覆盖文生图、图生图等使用方向。适合想调用 GPT-Image-2 出图的开发者查阅接入方式，也适合创作者参考提示词写法，并可通过配套网页浏览内容。",
+ "tagline": "GPT-Image-2 的 API 调用与提示词合集"
+}

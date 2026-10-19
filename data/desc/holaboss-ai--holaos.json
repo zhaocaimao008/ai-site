@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "希望把 AI Agent 融入日常工具链、又在意数据留在本地的团队和开发者；也适合想在同一工作区里混用不同 Agent 与模型的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "HolaApps：在 Agent 旁边并排打开真实可交互的应用界面，支持指向任意 URL 和 MCP server",
+  "集成与 MCP：一键 OAuth 连接 Gmail、Notion、Slack、GitHub、Linear 等 50+ 服务，可安装社区 MCP server",
+  "多 Agent 共存：Claude Code、Codex 与内置 Agent 共享同一套记忆、工具、技能和应用",
+  "共享记忆：上下文、偏好和项目历史以本地纯文件形式存储，跨会话和跨 Agent 复用",
+  "模型自选：内置多种模型，也支持 BYOK 接入 OpenAI、Anthropic 或兼容端点",
+  "本地优先：数据保留在本机，聊天工具接入按工具和范围授权"
+ ],
+ "intro": "holaOS 是一个开源的 agentic workspace，用 TypeScript 编写、以 Electron 桌面应用形式运行，支持 macOS、Windows 和 Linux。它把应用、聊天工具、技能、集成、模型、Agent 和记忆放在同一个工作区里，让用户按自己的工作方式组装，而不是接受一个固定形态的产品。\n\n它的核心特点是本地优先：数据保存在本机，记忆以可读可编辑的普通文件形式存储。工作区里可以并排打开真实应用界面和 Agent，Agent 在应用内操作，用户随时可以接管；同时支持接入 Slack、飞书、钉钉、微信等聊天工具，以及 Gmail、Notion、GitHub 等集成和任意 MCP server。\n\n模型方面，内置多种前沿模型，也支持自带 API key 接入 OpenAI、Anthropic 或兼容端点。Agent 层面可以同时运行 Claude Code、Codex 和内置 Agent，共享同一套记忆、工具和技能。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "holaOS 是一个本地优先的开源 Agent 工作台，把应用界面、聊天工具、集成、技能、模型和记忆放进同一个桌面工作区，让用户按自己的流程组装，而不是套用固定产品。它适合需要让 Agent 直接操作真实应用、读取团队聊天上下文，并在 Claude Code、Codex 等不同 Agent 之间共享记忆和工具的场景。",
+ "tagline": "本地优先、可自行组装的 AI Agent 工作台"
+}

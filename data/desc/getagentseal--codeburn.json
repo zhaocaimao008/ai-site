@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Cursor、Codex 等 AI 编程工具，想了解和控制 token 花费的开发者。",
+ "date": "2026-10-19",
+ "features": [
+  "读取本地会话文件，按工具、模型、项目、任务统计 token 用量与花费",
+  "提供终端 TUI、桌面应用、菜单栏、Capacity Dock 和浏览器页面多种查看方式",
+  "支持点击数字下钻到会话和轮次，查看具体开销来源",
+  "对比两个时间段的花费，评估模型或工作流改动是否省钱",
+  "optimize 命令找出浪费 token 的配置问题，可自动应用修改并支持撤销"
+ ],
+ "intro": "CodeBurn 是一个本地运行的工具，用来统计你在各类 AI 编程工具和 agent 上的 token 用量与花费。它读取 Claude Code、Cursor、Codex、Gemini 等工具已经写在磁盘上的会话文件，为每个 token 计价，再按工具、模型、项目和任务类型给出明细，不需要注册账号。\n\n除了终端仪表盘，它还提供桌面应用、macOS 菜单栏、屏幕边缘的 Capacity Dock 和浏览器页面，这些界面读取同一批本地文件，因此数字一致。每个数字都可以点击下钻到会话和具体轮次，方便定位开销来源。\n\n项目还包含 optimize 命令，会检查会话和配置，找出反复读取的文件、闲置的 MCP server、过长的 CLAUDE.md 等不产生收益的 token 消耗，并给出修复建议和预估节省。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx codeburn",
+  "npm install -g codeburn（或 brew install codeburn，需 Node.js 22.13+）",
+  "在终端中用方向键切换时间范围，按 p 切换工具，按 q 退出",
+  "codeburn web 在浏览器中查看同样的数据",
+  "codeburn optimize 检查浪费 token 的配置，codeburn optimize --apply 应用修改，codeburn act undo --last 撤销"
+ ],
+ "summary": "CodeBurn 解决的是 AI 编程账单只给月度总额、看不出钱花在哪里的问题。它读取 Claude Code、Cursor、Codex 等工具留在本地的会话文件，为 token 计价，并按工具、模型、项目和任务拆分花费，还能下钻到具体会话。适合想弄清 AI 编程开销来源、评估改动是否省钱的开发者。",
+ "tagline": "本地统计 AI 编程工具 token 用量与花费"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合从事信息检索、RAG 应用开发的开发者和研究人员，以及需要文本嵌入和语义相似度计算的技术人员。",
+ "date": "2026-10-19",
+ "features": [
+  "提供多种预训练文本嵌入模型，支持多语言和长文本输入",
+  "包含重排序模型，提升检索结果的相关性",
+  "支持稠密、稀疏和多向量检索方法",
+  "提供详细的教程和文档，便于快速上手",
+  "模型在多个基准测试中表现优异"
+ ],
+ "intro": "BGE 是北京智源人工智能研究院（BAAI）FlagOpen 团队开发的一站式检索工具包，专注于文本嵌入、信息检索和检索增强生成（RAG）。项目提供了多种预训练嵌入模型（如 BGE-M3、bge-en-icl、bge-multilingual-gemma2）和重排序模型（如 bge-reranker-v2.5-gemma2-lightweight），支持多语言、多粒度、多功能的检索需求。\n\nBGE 模型在多个基准测试（如 MTEB、C-MTEB、MIRACL）上取得了领先成绩，并提供了丰富的教程和文档，方便开发者快速集成到搜索和 RAG 应用中。项目采用 MIT 许可证，学术和商业使用均免费。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 FlagEmbedding：pip install -U FlagEmbedding",
+  "使用嵌入模型生成文本向量：from FlagEmbedding import FlagModel; model = FlagModel('BAAI/bge-large-en-v1.5'); embeddings = model.encode(['hello world'])",
+  "使用重排序模型对检索结果进行重排：from FlagEmbedding import FlagReranker; reranker = FlagReranker('BAAI/bge-reranker-large'); scores = reranker.compute_score([['query', 'passage']])"
+ ],
+ "summary": "BGE 是智源研究院推出的检索工具包，提供文本嵌入和重排序模型，支持多语言、长文本和多粒度检索。它解决了搜索和 RAG 应用中语义表示与结果排序的问题，适合需要构建高效检索系统的开发者和研究者使用。",
+ "tagline": "BGE：一站式检索与RAG工具包"
+}

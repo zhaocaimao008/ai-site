@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "希望在个人电脑上搭建私有 RAG、对数据隐私敏感，或需要为编码 Agent 提供语义检索能力的开发者与普通用户。",
+ "date": "2026-10-19",
+ "features": [
+  "基于图的选择性重计算，按需计算 embedding，大幅降低索引存储占用",
+  "本地离线运行，数据不离开设备，无云端依赖",
+  "支持对文件、邮件、浏览器历史、聊天记录、代码库等多种个人数据做语义检索",
+  "提供与 Claude Code 兼容的 MCP 语义搜索服务",
+  "索引可在设备间低成本迁移，支持大规模个人数据"
+ ],
+ "intro": "LEANN 是一个面向个人设备的向量数据库，用于搭建本地 RAG 应用。它采用基于图的选择性重计算与高度数保留剪枝，在需要时才计算 embedding，而不是把所有向量都存下来，因此索引体积远小于传统方案。README 给出的例子是 6000 万个文本块只需 6GB，而传统方案需要 201GB。\n\n数据全程留在本机，不依赖云端服务，索引可以在设备之间迁移。项目提供文件系统、邮件、浏览器历史、微信/iMessage/ChatGPT/Claude 聊天记录、Slack、Twitter 书签等场景的示例，也提供与 Claude Code 兼容的 MCP 语义检索服务。\n\nLEANN 用 Python 实现，支持 Linux、macOS 和 Windows，可通过 PyPI 安装，也可从源码构建。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv：curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "克隆仓库：git clone https://github.com/yichuan-w/LEANN.git leann && cd leann",
+  "创建虚拟环境并安装：uv venv && source .venv/bin/activate && uv pip install leann",
+  "Linux 纯 CPU 环境安装时使用 leann[cpu] extra"
+ ],
+ "summary": "LEANN 是一个可在个人电脑上运行的向量数据库，用来搭建本地 RAG 应用。它不预先存储全部 embedding，而是在检索时按需计算，从而把索引体积压缩到传统方案的一小部分，同时保持检索质量。适合想把文件、邮件、聊天记录或代码库变成可语义搜索的私有知识库、又不愿把数据上传云端的用户。",
+ "tagline": "在个人设备上运行、节省 97% 存储的本地 RAG 向量数据库"
+}

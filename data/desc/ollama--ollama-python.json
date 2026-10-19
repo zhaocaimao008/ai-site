@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Python 项目中集成 Ollama 大语言模型的开发者，包括本地部署和云端调用场景。",
+ "date": "2026-10-19",
+ "features": [
+  "提供 chat、generate、embed 等核心 API 调用",
+  "支持同步 Client 和异步 AsyncClient",
+  "支持流式响应（stream=True）",
+  "可自定义 host 和 headers，连接本地或云端服务",
+  "提供模型管理接口：list、show、create、copy、delete、pull、push、ps",
+  "支持 System One 决策模型（choice、noul、score 问题类型）"
+ ],
+ "intro": "Ollama Python Library 是 Ollama 的官方 Python 客户端，用于在 Python 3.8+ 项目中调用本地或云端的大语言模型。它封装了 Ollama 的 REST API，提供 chat、generate、embed 等常用接口，并支持同步与异步两种调用方式。\n\n该库支持流式响应、自定义客户端（可设置 host 和 headers），以及通过 ollama.com 的 Cloud API 访问云端模型。此外还提供模型管理功能，如拉取、推送、创建、复制、删除模型，以及 System One 决策模型接口。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装并运行 Ollama，拉取模型：ollama pull gemma4",
+  "安装 Python 库：pip install ollama",
+  "调用 chat 接口：from ollama import chat; response = chat(model='gemma4', messages=[{'role': 'user', 'content': 'Why is the sky blue?'}])",
+  "打印回复：print(response['message']['content'])"
+ ],
+ "summary": "Ollama Python Library 是 Ollama 的官方 Python 客户端，让 Python 开发者能方便地调用本地或云端的大语言模型。它封装了 Ollama 的 REST API，提供 chat、generate、embed 等接口，支持同步与异步调用、流式响应，以及模型管理操作。适合需要在 Python 项目中集成 Ollama 模型进行对话、生成或嵌入计算的开发者。",
+ "tagline": "Ollama 官方 Python 客户端库"
+}

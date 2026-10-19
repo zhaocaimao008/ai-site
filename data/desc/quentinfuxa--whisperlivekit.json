@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要本地部署实时语音转写、说话人分离或同步翻译的开发者，以及希望用兼容 API 集成语音能力的应用团队。",
+ "date": "2026-10-19",
+ "features": [
+  "超低延迟流式语音转文字，基于 AlignAtt 等策略",
+  "实时说话人分离（Streaming Sortformer）",
+  "同步翻译，支持 200 种语言（基于 NLLW/NLLB）",
+  "提供 OpenAI 兼容 REST API 与 Deepgram 兼容 WebSocket",
+  "命令行工具支持转写文件、生成 SRT 字幕、模型管理",
+  "支持多种后端与可选依赖（MLX、FunASR、Voxtral、Qwen3-ASR 等）"
+ ],
+ "intro": "WhisperLiveKit（WLK）是一个自托管的实时语音转文字流水线，基于 Simul-Whisper、WhisperStreaming、Streaming Sortformer 等研究，实现超低延迟的流式转写、说话人分离与同步翻译。它解决了直接对每个音频片段运行 Whisper 会丢失上下文、切断词语的问题，通过智能缓冲和增量处理提升实时转写质量。\n\n项目提供命令行工具 wlk，可一键启动服务、转写文件、生成字幕、管理模型和基准测试。后端支持多用户并发，并暴露 OpenAI 兼容的 REST API、Deepgram 兼容的 WebSocket 以及原生 WebSocket 接口，方便集成到现有应用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install whisperlivekit",
+  "wlk --model base --language en  # 启动服务，打开 http://localhost:8000 开始说话",
+  "wlk transcribe meeting.wav  # 转写文件，无需启动服务",
+  "wlk transcribe --format srt podcast.mp3 -o podcast.srt  # 生成字幕"
+ ],
+ "summary": "WhisperLiveKit 是一个可自托管的实时语音转文字流水线，针对直接对音频片段运行 Whisper 会丢失上下文、切断词语的问题，采用智能缓冲和增量处理来提升流式转写质量。它适合需要低延迟转写、说话人分离或同步翻译的场景，并提供 OpenAI 兼容 REST API 和 Deepgram 兼容 WebSocket，方便集成到现有应用。",
+ "tagline": "超低延迟、自托管的实时语音转文字流水线"
+}

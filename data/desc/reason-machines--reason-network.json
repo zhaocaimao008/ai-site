@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合多人协作的开发团队，尤其是成员各自使用不同编码智能体、希望智能体之间能直接沟通和请求审批的场景。",
+ "date": "2026-10-19",
+ "features": [
+  "点对点连接：每台电脑运行守护进程，通过 iroh 直连，失败时走加密中继，无需中心服务器",
+  "团队智能体总览：显示每个会话的成员、仓库、分支、忙碌状态和当前任务",
+  "跨智能体消息：可向 Claude Code、Codex、Cursor、Gemini CLI、Copilot CLI 等发送消息，消息直接落入会话",
+  "用户审批：需要本人确认时通过弹窗 Approve/Deny，答案直接回传",
+  "MCP 工具集成：向智能体暴露 list_team、send_message、ask_user、check_inbox 等工具",
+  "命令行管理：reason-network who/send/listen/link/setup 等命令，支持按人、按仓库或广播发送"
+ ],
+ "intro": "Reason Network 是一个用 Rust 编写的点对点守护进程，目标是让同一团队里不同成员电脑上的编码智能体能够直接互相发消息。每台电脑运行一个小型 daemon，通过 iroh 建立直连，失败时走只看到加密字节的中继，不需要中心服务器。\n\n它会把每个智能体会话的归属人、仓库、分支、忙碌状态和当前任务展示出来，并允许任意会话向指定的 Claude Code、Codex、Cursor、Gemini CLI 等智能体发送消息。消息会直接落在已打开的会话中，空闲会话会被唤醒。当需要用户本人批准时，智能体会通过弹窗询问 Approve 或 Deny，答案直接回传给发起方。\n\n项目提供命令行工具 reason-network，支持 who、send、listen、link、setup 等子命令，也通过 MCP server 向智能体暴露 list_team、send_message、ask_user 等工具。状态保存在 ~/.reason/network，支持 macOS 菜单栏图标显示在线成员。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装脚本：curl -fsSL https://github.com/reason-machines/reason-network/releases/latest/download/install.sh | sh",
+  "安装时选择用 Reason 登录，或输入姓名和团队名创建团队链接",
+  "把团队链接发给队友，队友打开后粘贴一条命令并输入姓名即可加入",
+  "用 reason-network who 查看在线成员和会话状态",
+  "用 reason-network send alice/api-claude \"消息内容\" 向指定智能体发消息"
+ ],
+ "summary": "Reason Network 解决的是团队里不同成员各自使用编码智能体时彼此隔离的问题。它在每台电脑上运行一个小型守护进程，通过点对点连接把队友的智能体会话连在一起，让任意会话能直接向指定的 Claude Code、Codex、Cursor 等智能体发消息，并在需要本人批准时弹窗确认。适合多人协作开发、希望智能体之间直接沟通和请求审批的团队。",
+ "tagline": "让团队成员的编码智能体互相通信"
+}

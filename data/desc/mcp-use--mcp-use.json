@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 TypeScript 开发 MCP 服务器、ChatGPT 插件或 Claude 连接器的开发者，以及对构建 AI 交互式应用感兴趣的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "全类型支持：Zod schema 从工具定义流向结构化结果和视图属性",
+  "原生视图：将 React 视图直接绑定到工具，构建交互式应用",
+  "内置 Inspector：在浏览器或 CLI 中检查工具和视图",
+  "Agent 优先：通过 Agent 脚手架、调用、检查和部署",
+  "隧道测试：生成公共 URL，在 ChatGPT 和 Claude 中测试本地服务器",
+  "一键部署：支持部署到 Manufact 获取可观测性和分析"
+ ],
+ "intro": "mcp-use 是一个基于 TypeScript 的全栈 MCP 框架，用于开发 MCP 服务器、ChatGPT 插件和 Claude 连接器。它提供完整的类型支持，Zod schema 贯穿工具定义、结构化结果和视图属性，并内置 Inspector 调试工具和 Agent 优先的开发体验。\n\n框架支持将 React 视图直接绑定到工具上，无需额外扩展配置即可发布交互式应用。开发者可以通过脚手架快速创建项目，在浏览器或命令行中检查工具和视图，并利用隧道功能在部署前用 ChatGPT 和 Claude 测试本地服务器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx -y create-mcp-use-app@latest 创建项目",
+  "在生成的项目中运行 npm run dev 启动开发服务器",
+  "打开 http://localhost:3000/mcp/inspector 使用 Inspector 调试",
+  "运行 npm run build 创建生产构建",
+  "运行 npm run deploy 部署到 Manufact"
+ ],
+ "summary": "mcp-use 是一个 TypeScript 全栈框架，帮助开发者构建、测试和发布 MCP 服务器、ChatGPT 插件与 Claude 连接器。它提供类型安全的工具定义、React 视图绑定、内置 Inspector 调试和隧道测试能力，适合需要快速开发并验证 AI 应用或 Agent 工具的开发者使用。",
+ "tagline": "用 TypeScript 构建、测试和部署 MCP 服务器与 AI 应用"
+}

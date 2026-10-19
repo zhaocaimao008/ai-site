@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合想搭建本地 AI 伴侣或虚拟主播的开发者，以及对 Live2D、语音交互和离线 LLM 部署感兴趣的普通用户。",
+ "date": "2026-10-19",
+ "features": [
+  "实时语音对话，支持免提语音打断，AI 不会听到自己的声音",
+  "Live2D 虚拟形象，支持表情映射、触摸反馈和透明背景桌宠模式",
+  "视觉感知，支持摄像头、屏幕录制和截图",
+  "支持 Ollama、OpenAI 兼容 API、Gemini、Claude 等多种 LLM 后端",
+  "集成 sherpa-onnx、Faster-Whisper、Edge TTS、GPTSoVITS 等多种 ASR 与 TTS 方案",
+  "聊天记录持久化，可随时切换回之前的对话"
+ ],
+ "intro": "Open-LLM-VTuber 是一个语音交互式 AI 伴侣项目，支持实时语音对话、视觉感知和 Live2D 虚拟形象，所有功能都可以在本地电脑上离线运行。项目支持 Windows、macOS 和 Linux，提供网页版和桌面客户端两种使用方式，桌面客户端还支持透明背景的桌宠模式。\n\n后端集成了多种 LLM 推理、语音识别和语音合成方案，包括 Ollama、OpenAI 兼容 API、Gemini、Claude、DeepSeek，以及 sherpa-onnx、Faster-Whisper、Edge TTS、GPTSoVITS 等。用户可以通过修改配置文件切换各功能模块，导入自定义 Live2D 模型，并通过 Prompt 塑造角色人设。\n\n项目名称中的 VTuber 源于其最初目标：用可离线运行的开源方案复刻闭源 AI Vtuber neuro-sama。目前项目处于活跃开发阶段，v2.0 正在规划重写。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Open-LLM-VTuber 把大语言模型、语音识别、语音合成和 Live2D 虚拟形象组合成一个可语音对话的 AI 伴侣，支持离线运行，数据留在本地。它适合想在自己的电脑上搭建虚拟角色、进行实时语音互动，或研究语音交互与 Live2D 集成的开发者与爱好者。",
+ "tagline": "可离线运行的语音交互 Live2D AI 伴侣"
+}

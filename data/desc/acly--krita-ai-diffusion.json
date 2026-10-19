@@ -1,0 +1,26 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Krita 进行数字绘画、图像编辑，并希望将 AI 生成能力融入工作流的插画师和开发者。",
+ "date": "2026-10-19",
+ "features": [
+  "Inpainting：使用选区进行生成式填充、扩展、添加或移除对象",
+  "Live Painting：AI 实时解读画布，提供即时反馈",
+  "Upscaling：将图像放大并丰富细节至 4K、8K 及以上",
+  "支持多种扩散模型：Flux 2、Z-Image、Stable Diffusion 1.5、XL、Illustrious",
+  "ControlNet 控制：涂鸦、线稿、Canny 边缘、姿态、深度、法线、分割等",
+  "IP-Adapter：参考图像、风格与构图迁移、换脸",
+  "区域提示：为图层定义的图像区域分配单独的文本描述",
+  "任务队列与历史记录：排队、取消生成任务，预览和浏览历史结果"
+ ],
+ "intro": "这是一个 Krita 插件，将生成式 AI 集成到图像绘制和编辑工作流中。项目注重精确控制，允许将生成限制在选区、按强度细化内容、为区域指定文本描述，并用参考图、草图、线稿、深度图等引导生成。\n\n插件与 Krita 工作流深度整合，支持实时绘画、放大、任务队列和历史记录等功能。它支持本地运行开源模型（如 Stable Diffusion、Flux），也可连接云服务快速开始。后端使用 ComfyUI，支持 ControlNet、IP-Adapter 等控制方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Krita（版本 5.2.0 或更新）",
+  "从 GitHub Releases 下载插件 ZIP 包",
+  "在 Krita 中通过 工具 ▸ 脚本 ▸ 从文件导入 Python 插件 安装",
+  "重启 Krita，通过 设置 ‣ 停靠器 ‣ AI Image Generation 显示插件面板",
+  "在插件面板中点击“Configure”配置本地服务器或连接"
+ ],
+ "summary": "这个 Krita 插件把生成式 AI 融入绘画与编辑流程，重点在于精确控制：你可以只在选区内生成、按强度细化已有内容、为不同区域分别写提示词，并用草图、线稿、深度图等引导结果。它适合希望在 Krita 里边画边用 AI 辅助的插画师，支持本地运行开源模型，也可连接云端快速开始。",
+ "tagline": "在 Krita 中无缝集成 AI 图像生成与编辑"
+}

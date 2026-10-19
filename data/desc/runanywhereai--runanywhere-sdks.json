@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在手机、浏览器、桌面或服务器上离线运行 AI 能力的应用开发者，尤其是做移动端、跨平台或隐私敏感场景的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "LLM 对话，支持 token 流式输出、多轮历史和 LoRA 适配器",
+  "结构化 JSON 输出与本地工具调用",
+  "视觉语言模型（VLM）图像理解与照片问答",
+  "Whisper、Moonshine 语音转文字，以及 Piper、Kokoro 等神经语音合成",
+  "VAD + STT + LLM + TTS 组成的语音代理流水线",
+  "本地 RAG、Embedding 检索与 Stable Diffusion 图像生成"
+ ],
+ "intro": "RunAnywhere 是一套用于在本地运行 AI 模型的 SDK，核心用 C++ 实现，向上提供 Swift、Kotlin、Flutter、React Native、Web 等多种绑定。它把 LLM 对话、视觉理解、语音识别与合成、语音代理、RAG、Embedding 和图像生成统一在一套语义 API 之下，代码调用时由能力注册表自动选择设备上最合适的推理引擎。\n\n支持的引擎包括 Snapdragon Hexagon NPU 上的 QHexRT、Apple 芯片上的 MLX、跨平台的 llama.cpp（Metal、CUDA、WebGPU），以及用于语音和 Embedding 的 sherpa + ONNX 和用于扩散模型的 Core ML。项目强调默认隐私与离线运行，模型在首次使用时下载。README 也说明 LiteRT 和 ExecuTorch 目前只是保留的框架枚举值，尚未集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install runanywhere",
+  "在 Python 中 import runanywhere as ra 并调用 ra.initialize()",
+  "使用 ra.llm.generate 并指定模型（如 qwen2.5-0.5b）生成文本，模型首次使用时下载",
+  "或安装 CLI：curl -fsSL https://raw.githubusercontent.com/RunanywhereAI/wally/main/install.sh | sh",
+  "运行 wally run qwen3 \"Explain on-device AI in one sentence.\""
+ ],
+ "summary": "RunAnywhere 提供一套跨平台的本地 AI 运行 SDK，让开发者在手机、浏览器、桌面和服务器上直接跑 LLM、视觉、语音、RAG 和图像生成，而不依赖云端。它用统一的 API 封装多种推理引擎，并按设备能力自动选择后端，适合需要离线可用、数据不出设备的应用场景。",
+ "tagline": "一套 SDK 让 AI 模型在各类设备本地运行"
+}

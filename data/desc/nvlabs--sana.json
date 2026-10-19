@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合研究扩散模型、图像与视频生成的研究者和工程师，以及希望在自有数据上训练或微调生成模型的开发者。",
+ "date": "2026-10-19",
+ "features": [
+  "基于线性扩散 Transformer 的高分辨率图像生成",
+  "SANA-Video 系列文生视频与文本-图像到视频生成",
+  "SANA-Sprint 少步快速生成与 SANA-Streaming 实时流式视频编辑",
+  "SANA-WM 可控世界模型，支持 6-DoF 相机控制",
+  "Sol-RL 强化学习后训练，支持 NVFP4 rollout 与 BF16 训练",
+  "提供完整训练与推理管线，并集成 ComfyUI、SGLang、Cosmos-RL"
+ ],
+ "intro": "SANA 是 NVIDIA 实验室（NVlabs）开源的高效图像与视频生成代码库，核心是线性扩散 Transformer（Linear Diffusion Transformer），提供完整的训练与推理流程。仓库覆盖 SANA、SANA-1.5、SANA-Sprint、SANA-Video、SANA-Video 2.0、SANA-WM、SANA-Streaming 与 Sol-RL 等多个模型系列。\n\n除文生图外，项目还包含文生视频、文本-图像到视频、实时流式视频编辑、带 6-DoF 相机控制的世界模型，以及基于强化学习的后训练方案。代码以 Python 编写，提供 HuggingFace 权重、在线 Demo 和 ComfyUI、SGLang 等生态集成入口。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "SANA 是 NVIDIA 实验室开源的高效图像与视频生成代码库，围绕线性扩散 Transformer 构建，提供从训练到推理的完整流程。它覆盖文生图、文生视频、流式视频编辑、可控世界模型和强化学习后训练等方向，适合需要研究或部署高分辨率生成模型的开发者参考使用。",
+ "tagline": "面向高分辨率图像与视频生成的高效扩散模型代码库"
+}

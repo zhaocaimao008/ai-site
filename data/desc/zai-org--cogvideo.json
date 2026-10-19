@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合视频生成领域的研究人员、开发者以及希望在自己的应用中集成视频生成能力的工程师。",
+ "date": "2026-10-19",
+ "features": [
+  "支持文本生成视频、图像生成视频和视频续写",
+  "提供 CogVideoX-2B 和 CogVideoX-5B 两种参数规模的模型",
+  "包含基于 SAT 和 Diffusers 的推理与微调代码",
+  "提供提示词优化工具，使用 GLM-4 等大模型优化生成效果",
+  "开源 CogVLM2-Caption 模型，用于视频数据标注",
+  "支持 DDIM Inversion 和 Lora 微调等高级功能"
+ ],
+ "intro": "CogVideo 系列是智谱 AI 开源的大规模视频生成模型，包括 2022 年发布的 CogVideo（ICLR 2023）和 2024 年推出的 CogVideoX。CogVideoX 提供 2B 和 5B 参数版本，支持文本生成视频、图像生成视频以及视频续写任务。项目提供了基于 SAT 和 Diffusers 的推理代码、微调脚本以及提示词优化工具，并开源了用于视频数据标注的 CogVLM2-Caption 模型。\n\nCogVideoX-2B 可在 GTX 1080TI 等较旧 GPU 上运行，CogVideoX-5B 可在 RTX 3060 等桌面级 GPU 上运行，降低了使用门槛。项目还提供了在线体验空间和详细的用户指南，方便开发者快速上手和二次开发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Python 版本在 3.10 到 3.12 之间",
+  "安装依赖：pip install -r requirements.txt",
+  "参考 inference/cli_demo.py 运行 Diffusers 版本推理",
+  "参考 sat/README.md 运行 SAT 版本推理或微调"
+ ],
+ "summary": "CogVideo 系列是智谱 AI 开源的大规模视频生成模型，包括 CogVideo 和 CogVideoX。CogVideoX 支持文本生成视频、图像生成视频和视频续写，提供 2B 和 5B 参数版本，并包含推理、微调代码及提示词优化工具。适合研究人员和开发者探索视频生成技术或集成到应用中。",
+ "tagline": "开源文本与图像生成视频模型"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用较少代码获得本地计算机系统级自动化能力的开发者，以及需要浏览器操作、桌面自动化或移动设备控制等任务自动化的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "自进化机制：每次任务完成后自动将执行路径固化为可复用的 Skill，逐步形成个人技能树",
+  "极简架构：约 3K 行核心代码，Agent Loop 仅约 100 行，依赖轻量，无需 Playwright 或 LangChain",
+  "系统级控制：9 个原子工具覆盖浏览器、终端、文件系统、键鼠、屏幕视觉和 ADB 移动设备",
+  "真实浏览器操作：TMWebdriver 注入真实浏览器，保留登录会话，可处理验证码等场景",
+  "高兼容性与低 token 消耗：支持 Claude、Gemini、Kimi、MiniMax 等模型，上下文窗口小于 30K",
+  "多种前端：提供终端 TUI 和 Streamlit Web UI，支持多会话并发与实时流式输出"
+ ],
+ "intro": "GenericAgent 是一个极简的自进化自主智能体框架，核心代码约 3K 行，由 9 个原子工具和约 100 行的 Agent Loop 组成。它能让任意 LLM 获得对本地计算机的系统级控制能力，覆盖浏览器、终端、文件系统、键鼠输入、屏幕视觉以及通过 ADB 控制移动设备。\n\n设计理念是“不预加载技能，而是进化技能”。每当 GenericAgent 完成一个新任务，它会自动将执行路径固化为可复用的 Skill，使用越久技能积累越多，形成个人技能树。框架支持 Claude、Gemini、Kimi、MiniMax 等主流模型，上下文窗口控制在 30K 以内，相比其他智能体消耗更少的 token。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保使用 Python 3.11 或 3.12，不要使用 Python 3.14",
+  "克隆仓库并安装：git clone https://github.com/lsdefine/GenericAgent.git && cd GenericAgent",
+  "创建虚拟环境并安装依赖：uv venv && uv pip install -e \".[ui]\"",
+  "复制密钥模板并填入 LLM API key：cp mykey_template_en.py mykey.py",
+  "启动终端 UI：python frontends/tui_v3.py，或启动 Web UI：python launch.pyw"
+ ],
+ "summary": "GenericAgent 是一个用少量代码实现本地计算机系统级控制的自主智能体框架。它通过原子工具和精简的 Agent Loop 操作浏览器、终端、文件与移动设备，并在完成任务后自动将执行路径固化为可复用技能，适合需要桌面自动化、浏览器操作或跨设备任务执行的开发者与普通用户。",
+ "tagline": "极简自进化智能体框架，用技能树实现系统级控制"
+}

@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "需要统一管理 API 和 AI 代理流量的开发者、运维人员及平台团队。",
+ "date": "2026-10-19",
+ "features": [
+  "支持 REST、GraphQL、gRPC、TCP 和 MCP 等多种协议",
+  "提供 JWT、Bearer Token、Basic Auth、客户端证书等认证方式",
+  "内置限流、分析和微服务模式支持",
+  "MCP 网关：对 AI 代理的 JSON-RPC 调用进行认证、限流和审计",
+  "可从 REST API 自动生成 MCP 代理",
+  "支持 OpenAPI 规范导入，快速创建 API"
+ ],
+ "intro": "Tyk Gateway 是一个用 Go 编写的开源 API 网关，支持 REST、GraphQL、gRPC、TCP 和 MCP 协议。它提供认证、限流、分析等开箱即用的功能，无需额外付费解锁。\n\n除了传统 API 管理，Tyk 还集成了 AI 网关能力，可以代理 MCP 流量，对 AI 代理的 JSON-RPC 调用进行认证、限流和按工具访问控制。同时支持从 REST API 生成 MCP 代理，方便将现有服务暴露给 AI 代理。\n\n项目提供 Docker、Kubernetes、Ansible 等多种安装方式，并有详细的文档和快速入门指南。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker 和 Docker Compose",
+  "创建 Gateway 配置文件 tyk.conf",
+  "在 Linux 上创建 apps 文件夹用于保存 API 定义",
+  "编写 Docker Compose 文件，运行 Tyk Gateway 和 Redis",
+  "执行 docker compose up -d 启动网关",
+  "使用 curl localhost:8080/hello 验证网关运行"
+ ],
+ "summary": "Tyk Gateway 是一个开源 API 网关，支持 REST、GraphQL、gRPC、TCP 和 MCP 协议，提供认证、限流、分析等功能。它还能作为 AI 网关，对 MCP 流量进行治理，适合需要统一管理传统 API 和 AI 代理流量的团队。",
+ "tagline": "开源云原生 API 与 AI 网关，支持多协议和 MCP"
+}

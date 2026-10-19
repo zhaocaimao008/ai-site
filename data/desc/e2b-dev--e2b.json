@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要安全执行 AI 生成代码的开发者，以及构建 AI Agent、代码解释器或计算机使用应用的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "在安全隔离的云沙箱中运行 AI 生成的代码",
+  "提供 JavaScript 和 Python SDK 控制沙箱",
+  "Code Interpreter 支持直接执行代码并返回结果",
+  "Desktop SDK 提供鼠标、键盘、截图等桌面操作 API",
+  "支持自托管，可在 AWS、GCP、Azure 或 Linux 上部署"
+ ],
+ "intro": "E2B 是一个开源基础设施，用于在云端的安全隔离沙箱中运行 AI 生成的代码。它提供 JavaScript 和 Python SDK，让开发者可以轻松启动和控制沙箱，执行命令或代码。\n\nE2B 包含多个组件：基础沙箱 SDK 用于运行 shell 命令；Code Interpreter SDK 支持直接执行代码片段并获取结果；Desktop SDK 提供鼠标、键盘、截图和桌面流等 API，用于计算机使用场景。\n\n该项目支持自托管，可通过 Terraform 部署在 AWS、Google Cloud、Azure 或通用 Linux 机器上。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 SDK：npm i e2b 或 pip install e2b",
+  "在 E2B 网站注册并获取 API key，设置环境变量 E2B_API_KEY",
+  "使用 SDK 创建沙箱并运行命令，例如 sandbox.commands.run('echo \"Hello from E2B!\"')",
+  "如需执行代码，安装 Code Interpreter SDK：npm i @e2b/code-interpreter 或 pip install e2b-code-interpreter",
+  "如需桌面操作，安装 Desktop SDK：npm i @e2b/desktop 或 pip install e2b-desktop"
+ ],
+ "summary": "E2B 是一个开源基础设施，用于在云端安全隔离的沙箱中运行 AI 生成的代码。它提供 JavaScript 和 Python SDK，方便开发者启动和控制沙箱，执行命令或代码片段。项目还包含 Code Interpreter 和 Desktop SDK，分别支持代码执行和桌面操作。适合需要安全运行 AI 生成代码的开发者，以及构建 AI Agent、代码解释器或计算机使用应用的团队。",
+ "tagline": "在云端安全沙箱中运行 AI 生成的代码"
+}

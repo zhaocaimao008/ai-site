@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 24 GB 显存 NVIDIA 显卡和较大内存、希望在本地运行大模型进行编码或工具调用的开发者。需要熟悉 Linux 命令行和 C++ 项目编译。",
+ "date": "2026-10-19",
+ "features": [
+  "在单张 RTX 4090（24 GB）上运行 552B MoE 模型 DeepSeek-V4.1-Flash，解码约 26.8 tok/s",
+  "MoE 专家分层调度：热专家放 VRAM，部分放 pinned RAM，其余从 NVMe 按需读取",
+  "同时支持 GLM-5.3-Flash、Qwen3.8-Flash-Next 和 Qwen3.8-27B 三种模型",
+  "提供 OpenAI 与 Anthropic 兼容的 HTTP 服务，可对接常见客户端",
+  "DeepSeek-V4.1 支持 512K 上下文、4-bit KV cache 和投机解码",
+  "Qwen 模型支持 MTP 投机解码，解码速度可达 100 tok/s 以上"
+ ],
+ "intro": "Xolotl 是一个基于 Strata 深度扩展的本地大模型推理引擎，用 C++ 编写，目标是在一台普通游戏 PC 上运行前沿规模的 MoE 模型。它把模型专家权重分层放在 VRAM、固定内存（pinned RAM）和 NVMe 上，按 token 路由动态搬运，从而让 552B 的 DeepSeek-V4.1-Flash 在 RTX 4090 + 90 GB 内存的机器上以约 27 tok/s 解码。\n\n项目同时支持 GLM-5.3-Flash、Qwen3.8-Flash-Next 和 Qwen3.8-27B，并提供 OpenAI 与 Anthropic 兼容的 API 服务，可直接接入 Claude Code、Codex、Open WebUI 等客户端。README 给出了在 Linux + NVIDIA 环境下的编译、模型获取和启动命令，并说明了显存、内存和磁盘的最低要求。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Indras-Mirror/Xolotl.git xolotl && cd xolotl",
+  "获取 llama.cpp 依赖：bash tools/xolotl/fetch-llama.sh",
+  "配置并编译：cmake -S . -B build-xolotl -G Ninja -DCMAKE_BUILD_TYPE=Release -DSTRATA_ENABLE_CUDA=ON -DSTRATA_GGML_CUDA=ON -DSTRATA_MMQ_KQUANTS=ON -DCMAKE_CUDA_ARCHITECTURES=89 -DSTRATA_GGML_DIR=$PWD/third_party/llama.cpp -DSTRATA_DSV41_FQ_OP=ON -DSTRATA_DSV41_HC_MIX=ON && ninja -C build-xolotl",
+  "从 Hugging Face 下载 DeepSeek-V4.1-Flash 模型（IndrasMirror/DeepSeek-V4.1-Flash-GSQ-Uncensored），并修改服务配置中的模型路径",
+  "启动服务：python3 tools/v41/serve/serve_ds41.py --engine strata --config tools/v41/serve/strata-ds41.json --port 8150",
+  "将 OpenAI 或 Anthropic 兼容客户端指向 http://127.0.0.1:8150/v1"
+ ],
+ "summary": "Xolotl 是一个本地大模型推理引擎，解决在单台游戏 PC 上运行超大 MoE 模型的问题。它把专家权重分层放在显存、内存和 NVMe 上，按需搬运，使 552B 的 DeepSeek-V4.1-Flash 能在 RTX 4090 加 90 GB 内存的机器上以约 27 tok/s 运行，并同时支持 GLM 和 Qwen 系列模型。适合想在本地跑前沿模型做编码或工具调用的开发者。",
+ "tagline": "在单台游戏 PC 上运行 552B MoE 大模型的本地推理引擎"
+}

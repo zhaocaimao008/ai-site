@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 Intel 硬件上优化和部署深度学习模型推理的开发者，包括计算机视觉、语音、生成式 AI 等领域的工程师和研究人员。",
+ "date": "2026-10-19",
+ "features": [
+  "推理优化：提升计算机视觉、语音识别、生成式 AI 和 NLP 等任务的深度学习性能",
+  "灵活模型支持：转换并部署 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle、JAX/Flax 模型",
+  "广泛平台兼容：支持 CPU（x86、ARM）、Intel GPU 和 Intel NPU 推理",
+  "多语言 API：提供 C++、Python、C、NodeJS 接口",
+  "GenAI API：优化生成式模型流水线，支持 LLM 等场景",
+  "配套工具与教程：NNCF 模型压缩工具及 OpenVINO Notebooks 示例"
+ ],
+ "intro": "OpenVINO 是 Intel 主导的开源工具包，用于优化和部署深度学习模型推理。它支持将 PyTorch、TensorFlow、ONNX、PaddlePaddle、JAX/Flax 等框架训练的模型转换后运行，无需原始框架。\n\n该工具包面向计算机视觉、语音识别、生成式 AI 和自然语言处理等任务，可在 CPU（x86、ARM）、Intel 集成/独立 GPU 以及 Intel NPU 上推理。提供 C++、Python、C、NodeJS 等 API，并包含 GenAI API 用于优化生成式模型流水线。\n\nOpenVINO 还提供 Neural Network Compression Framework (NNCF) 等配套工具，以及丰富的 Notebook 教程和示例，帮助开发者从安装到部署逐步上手。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 OpenVINO：pip install -U openvino",
+  "验证安装：运行 python -c \"import openvino as ov; print(ov.__version__)\"",
+  "参考 OpenVINO Quickstart 示例了解部署第一个模型的基础",
+  "使用 OpenVINO Notebooks 中的教程优化和部署流行模型"
+ ],
+ "summary": "OpenVINO 是一个开源工具包，用于优化和部署深度学习模型推理。它支持转换 PyTorch、TensorFlow、ONNX 等框架训练的模型，并可在 CPU、Intel GPU 和 NPU 上运行，覆盖计算机视觉、语音识别、生成式 AI 和 NLP 等任务。适合需要在 Intel 硬件上高效部署模型推理的开发者。",
+ "tagline": "开源深度学习推理优化与部署工具包"
+}

@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 OS agent 与 computer use 的研究者、希望自动化桌面操作的开发者，以及想参与开源电脑智能体项目的贡献者。",
+ "date": "2026-10-19",
+ "features": [
+  "用自然语言下达任务，智能体自主观察屏幕并操作 GUI",
+  "通过鼠标点击、键盘输入与滚动完成桌面和网页应用操作",
+  "跨平台支持 macOS、Windows、Linux",
+  "兼容 OpenAI、Anthropic 及开放权重模型",
+  "提供 gui-agents Python 库，便于在本地或基准环境中调用"
+ ],
+ "intro": "Agent S 是 Simular 开源的 computer use agent 框架。用户给出自然语言任务后，它会观察屏幕，并通过鼠标点击、键盘输入和滚动，在普通桌面与网页应用中完成任务，不需要为每个应用单独做 API 集成或编写脚本。\n\n项目已迭代到第三代 Agent S3，支持 macOS、Windows 和 Linux，可搭配 OpenAI、Anthropic 及开放权重模型使用。README 称 Agent S3 是首个在 OSWorld 基准上超过人类表现的 computer use agent，得分 72.60%。\n\n除研究框架外，Simular 还提供托管版 Sai 和 Simular API，方便构建持续运行的电脑智能体。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Agent S 是一个让 AI 像人一样操作电脑的开源框架：你给出自然语言任务，它查看屏幕并通过点击、输入、滚动在普通桌面和网页应用中完成操作，无需为每个应用单独对接 API。它支持 macOS、Windows、Linux，可搭配多家模型使用，适合研究 OS agent、做桌面自动化或参与 computer use 开源项目的开发者。",
+ "tagline": "像人一样操作图形界面的开源电脑使用智能体框架"
+}

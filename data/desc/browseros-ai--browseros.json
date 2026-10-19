@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用 Claude Code、Codex 等编码 agent，并希望让它们操作需要登录状态的网页任务的开发者；也适合关注本地运行与隐私的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "从 Chrome 一键导入登录信息、书签和扩展",
+  "一键连接 Claude Code、Codex、Cursor 等本机 agent 及任意 MCP agent",
+  "多个 agent 在各自标签页中并行执行任务",
+  "新标签页仪表盘实时显示每个 agent 所在站点和进度",
+  "会话以可拖动进度条的视频形式保存在本地，并附操作时间线",
+  "数据仅存于本机 ~/.browserclaw/，不上传"
+ ],
+ "intro": "BrowserOS neo 是一个面向 AI agent 的开源浏览器，定位是 Chrome 之外的“第二浏览器”，而不是替代品。它可以从 Chrome 一键导入登录信息、书签和扩展，让 agent 直接使用你已登录的真实账号完成网页任务，而不是在空白沙箱里操作。\n\n它支持连接 Claude Code、Codex、Cursor、VS Code、OpenClaw、Hermes 等本机上的 agent，也支持任意 MCP agent。多个 agent 可以各自在独立标签页中并行工作，你既能实时观看，也能在事后像看视频一样回放整个会话。会话、截图和历史记录保存在本机 ~/.browserclaw/ 目录下，不会离开你的机器。\n\n仓库中还包含另一个产品 BrowserOS：一个内置 AI agent 的 Chromium 分支，面向人类用户自己浏览时使用，可自带 AI key 或用 Ollama 本地运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS 使用 Homebrew 安装：brew tap browseros-ai/tap && brew install --cask browseros-neo",
+  "或从官网下载 macOS、Windows、Linux（AppImage / DEB）安装包",
+  "首次启动时从 Chrome 一键导入登录信息、书签和扩展",
+  "在连接面板中一键连接本机的 Claude Code、Codex、Cursor 等 agent",
+  "在 agent 中下达任务（如“Book me the cheapest flight to London.”），在新标签页观看执行过程或事后回放"
+ ],
+ "summary": "BrowserOS neo 是一个开源的“第二浏览器”，专门给 AI agent 使用。它可以从 Chrome 导入登录状态，让 Claude Code、Codex 或任意 MCP agent 用你的真实账号完成订票、发帖、清理收件箱等网页任务，多个 agent 可并行工作，过程可实时观看或回放，数据保存在本机。适合想让现有 agent 接管需要登录的网页操作、又在意隐私的开发者。",
+ "tagline": "给 AI agent 用的第二浏览器，可导入 Chrome 登录态"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望以编程方式构建和部署 GPT/LLM 聊天机器人的开发者，尤其是熟悉 TypeScript 和 Node.js 的技术人员。",
+ "date": "2026-10-19",
+ "features": [
+  "提供 Botpress CLI 用于构建、部署和管理机器人、集成和插件",
+  "包含 @botpress/sdk 用于开发集成",
+  "提供类型安全的 @botpress/client 以调用 Botpress API",
+  "支持将集成发布到 Botpress Hub 供社区使用",
+  "包含使用 SDK 和 CLI 编写的机器人示例"
+ ],
+ "intro": "Botpress 是一个用于构建和部署由 OpenAI 驱动的下一代聊天机器人和助手的平台。该仓库包含 Botpress Hub 上的公共集成、开发工具（CLI、SDK、API 客户端）以及一些仅使用 SDK 和 CLI 编写的“代码即机器人”示例。\n\n开发者可以通过 Botpress CLI 创建、开发和部署集成，并将其发布到 Botpress Hub 供其他用户使用。仓库还提供了本地开发所需的构建步骤和工具链。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Botpress CLI：npm install -g @botpress/cli",
+  "在任意目录运行 bp init 从模板创建新集成",
+  "修改 integration.definition.ts 和 src/index.ts 文件",
+  "运行 bp deploy 将集成部署到工作区",
+  "运行 bp deploy --visibility public 将集成公开到 Botpress Hub"
+ ],
+ "summary": "Botpress 是一个开源平台，用于构建和部署基于 GPT/LLM 的聊天机器人与智能体。它提供 CLI、SDK 和 API 客户端等开发工具，支持开发者创建集成并发布到 Botpress Hub。适合希望以编程方式开发聊天机器人的开发者，尤其是熟悉 TypeScript 的技术人员。",
+ "tagline": "构建和部署 GPT/LLM 智能体的开源平台"
+}

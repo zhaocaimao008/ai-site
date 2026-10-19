@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要在本地或私有环境部署开源模型的开发者、研究人员和数据科学家，以及希望用统一 API 接入多种模型的 AI 应用团队。",
+ "date": "2026-10-19",
+ "features": [
+  "一条命令部署并服务内置或自定义的语言、语音、多模态模型",
+  "统一推理 API，兼容 OpenAI API，便于替换现有调用",
+  "支持 vLLM、SGLang、Transformers、llama.cpp、MLX 等多种后端",
+  "支持分布式推理、多副本共享 KV cache 与自动批处理",
+  "内置 embedding、TTS、OCR、图像生成等多类模型",
+  "可与 Dify、FastGPT、RAGFlow、MaxKB 等平台集成"
+ ],
+ "intro": "Xorbits Inference（简称 Xinference）是一个用 Python 编写的模型推理与服务库，目标是把语言模型、语音识别模型和多模态模型的部署统一起来。它内置了大量开源模型，也支持加载用户自己的模型，通过一条命令即可启动服务，并对外提供统一的推理 API。\n\n项目支持在云端、本地服务器或笔记本上运行，兼容 vLLM、SGLang、Transformers、llama.cpp、MLX 等多种推理后端，并提供与 OpenAI API 兼容的接口，方便已有应用迁移。除文本生成外，还覆盖 embedding、TTS、OCR、图像生成等模型类型。\n\nXinference 还提供分布式推理、多副本共享 KV cache、自动批处理等面向生产环境的特性，并可与 Dify、FastGPT、RAGFlow、MaxKB 等平台集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考官方文档的安装页面完成安装：https://inference.readthedocs.io/en/latest/getting_started/installation.html#installation",
+  "启动 Xinference 服务（具体命令见文档）",
+  "通过统一的推理 API 或 OpenAI 兼容接口调用已部署的模型"
+ ],
+ "summary": "Xinference 是一个模型推理与服务库，解决开源语言、语音和多模态模型部署分散、接口不统一的问题。它内置大量模型，支持多种推理后端，并提供兼容 OpenAI 的统一 API，可在云端、本地服务器或笔记本上运行，适合需要私有化部署模型或统一接入多种模型的开发场景。",
+ "tagline": "一条命令部署语言、语音与多模态模型的推理服务"
+}

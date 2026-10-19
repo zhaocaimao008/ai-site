@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在消费级硬件上本地部署和运行大语言模型的开发者与研究者。",
+ "date": "2026-10-19",
+ "features": [
+  "基于激活局部性的稀疏推理，区分热/冷神经元",
+  "CPU/GPU 混合计算，降低显存需求与数据传输",
+  "支持 Falcon-40B、Llama2、ProSparse Llama2、Bamboo-7B 等模型",
+  "兼容 llama.cpp 的 examples 用法，如 server 和批量生成",
+  "支持 NVIDIA GPU、AMD GPU（ROCm）以及纯 CPU 运行"
+ ],
+ "intro": "PowerInfer 是一个针对个人电脑本地部署设计的大语言模型推理引擎，核心思路是利用 LLM 推理中神经元激活的局部性：少数“热”神经元在多数输入下持续激活，而大量“冷”神经元随输入变化。它将热神经元预加载到 GPU，冷神经元交给 CPU 计算，从而降低显存占用和 CPU-GPU 数据传输。\n\n项目采用 CPU/GPU 混合推理，并集成了自适应预测器和神经元感知的稀疏算子。它支持 Falcon-40B、Llama2 系列、ProSparse Llama2 和 Bamboo-7B 等模型，可在 Linux、Windows 以及 Apple M 芯片（仅 CPU）上运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装 Python 依赖：git clone https://github.com/Tiiny-AI/PowerInfer && cd PowerInfer && pip install -r requirements.txt",
+  "使用 CMake 构建（NVIDIA GPU）：cmake -S . -B build -DLLAMA_CUBLAS=ON && cmake --build build --config Release",
+  "使用 CMake 构建（仅 CPU）：cmake -S . -B build && cmake --build build --config Release",
+  "准备 PowerInfer 格式的模型权重，然后参考 README 的 Inference 部分运行推理"
+ ],
+ "summary": "PowerInfer 是一个面向个人电脑本地部署的大语言模型推理引擎，利用神经元激活的局部性，将热神经元放在 GPU、冷神经元交给 CPU，以降低显存占用和传输开销。它适合想在消费级硬件上运行 Falcon、Llama2 等模型的开发者，支持 Linux、Windows 和 macOS（仅 CPU）。",
+ "tagline": "面向消费级 GPU 的高速本地 LLM 推理引擎"
+}

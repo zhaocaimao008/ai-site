@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望学习如何用 LLM 构建代码分析工具的开发者，以及需要快速理解陌生代码库的初学者。",
+ "date": "2026-10-19",
+ "features": [
+  "自动爬取 GitHub 仓库或本地目录的代码文件",
+  "使用 LLM 分析代码库，识别核心抽象及其交互",
+  "生成面向初学者的分步教程，支持指定输出语言",
+  "提供命令行参数控制文件过滤、大小限制和抽象数量",
+  "支持多种 LLM 提供商（如 Gemini、XAI、Ollama）",
+  "内置缓存机制，可禁用缓存以重新生成"
+ ],
+ "intro": "这个项目是一个基于 Pocket Flow 框架的教程项目，旨在展示如何构建一个 AI 代理，自动分析 GitHub 仓库或本地代码库，并生成适合初学者理解的教程。它通过爬取代码、识别核心抽象及其交互关系，将复杂代码转化为带有清晰可视化的分步讲解。\n\n项目本身是一个完整的示例，包含从代码抓取、知识库构建到教程生成的流程。生成的教程可以指定语言（如中文），并支持通过命令行参数控制文件包含/排除、最大文件大小等。它适合开发者学习如何用 LLM 构建代码分析工具，也适合需要快速理解陌生代码库的读者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/The-Pocket/PocketFlow-Tutorial-Codebase-Knowledge",
+  "安装依赖：pip install -r requirements.txt",
+  "在 .env 文件中设置 LLM 凭证（如 GEMINI_API_KEY），并运行 python utils/call_llm.py 验证配置",
+  "运行主脚本生成教程：python main.py --repo https://github.com/username/repo --include \"*.py\" \"*.js\" --exclude \"tests/*\" --max-size 50000",
+  "生成中文教程：python main.py --repo https://github.com/username/repo --language \"Chinese\""
+ ],
+ "summary": "面对陌生的代码库时，理解其结构和核心逻辑往往耗时费力。这个项目展示了一个基于 Pocket Flow 的 AI 代理，能自动爬取 GitHub 仓库或本地代码，分析核心抽象及其关系，并生成适合初学者的分步教程。它适合想学习 LLM 应用开发的开发者，也适合需要快速上手新代码库的读者。",
+ "tagline": "用 AI 将代码库自动转换为入门教程"
+}

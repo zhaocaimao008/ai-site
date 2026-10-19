@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要将 WhatsApp 消息能力接入自有系统的开发者，以及构建客服、聊天机器人或 CRM 集成方案的团队。",
+ "date": "2026-10-19",
+ "features": [
+  "支持 Baileys 版 WhatsApp Web API 与官方 WhatsApp Cloud API 两种连接方式",
+  "原生集成 Typebot、Chatwoot、Dify、OpenAI 等聊天机器人与客服平台",
+  "通过 RabbitMQ、Apache Kafka、Amazon SQS、Socket.io 等实现事件流与实时通知",
+  "使用 Prisma ORM 支持 PostgreSQL 和 MySQL 多数据库",
+  "支持本地或 S3/MinIO 媒体存储，并可选用 OpenAI 进行音频转写",
+  "提供 API key 认证、实例级 token 与 Webhook 签名校验"
+ ],
+ "intro": "Evolution API 是一个生产可用的开源 REST API，用于 WhatsApp 及多渠道消息收发。它最初聚焦 WhatsApp，现已扩展为支持多种消息渠道与集成的平台。\n\n项目同时支持基于 Baileys 的 WhatsApp Web API 和官方 WhatsApp Cloud API，并原生集成 Typebot、Chatwoot、Dify、OpenAI、RabbitMQ、Apache Kafka、Amazon SQS、Socket.io、Amazon S3 / MinIO 等工具。技术栈为 Node.js 20+、TypeScript 5+ 与 Express.js，通过 Prisma 支持 PostgreSQL 和 MySQL。\n\n它采用多提供商、事件驱动的架构，涵盖渠道接入、聊天机器人、事件流与存储集成，适合构建客服系统、聊天机器人或与 CRM 对接的消息服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone git@github.com:evolution-foundation/evolution-api.git && cd evolution-api && npm install",
+  "复制并编辑环境变量：cp .env.example .env，填入数据库、Redis 和 API key 配置",
+  "设置数据库类型并初始化：export DATABASE_PROVIDER=postgresql（或 mysql），然后运行 npm run db:generate 和 npm run db:deploy",
+  "开发模式启动：npm run dev:server；生产模式：npm run build && npm run start:prod",
+  "或使用 Docker：docker pull evoapicloud/evolution-api:latest，然后 docker run -p 8080:8080 --env-file .env evoapicloud/evolution-api:latest"
+ ],
+ "summary": "Evolution API 是一个开源 REST API，用来把 WhatsApp 消息收发能力接入自有系统。它既支持基于 Baileys 的 WhatsApp Web 连接，也支持官方 WhatsApp Cloud API，并可对接 Typebot、Chatwoot、Dify、OpenAI 以及 RabbitMQ、Kafka 等事件与存储服务。适合需要构建客服机器人、消息通知或 CRM 集成的开发者，通过统一接口管理多渠道消息。",
+ "tagline": "面向 WhatsApp 与多渠道消息的开源 REST API"
+}

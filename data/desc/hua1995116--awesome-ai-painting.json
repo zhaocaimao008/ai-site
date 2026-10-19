@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合对AI绘画感兴趣的初学者和开发者，以及需要查找AI绘画工具和教程的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "汇总国内外AI绘画平台及使用链接",
+  "提供Stable Diffusion、AnimateDiff等模型的教程",
+  "分享ComfyUI工作流和视频教程",
+  "更新AI绘画领域的最新资讯",
+  "记录作者AI产品开发历程"
+ ],
+ "intro": "这是一个由AI绘画爱好者秋风维护的资料合集仓库，旨在帮助更多人学习AI绘画。内容涵盖国内外可用的AI绘画平台、使用教程、参数教程、部署教程以及业界新闻等。\n\n仓库中包含了Stable Diffusion、AnimateDiff、Stable Cascade、SDXL Turbo等模型的介绍和教程，并提供了ComfyUI工作流和视频教程链接。此外，还记录了作者个人开发AI产品的历程和近期AI绘画领域的资讯。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库汇集了AI绘画相关的平台、教程和资讯，包括Stable Diffusion、AnimateDiff等模型的介绍与使用指南，以及ComfyUI工作流和视频教程。适合想学习AI绘画的初学者查找工具和入门资料，也适合开发者了解相关模型和部署方法。",
+ "tagline": "AI绘画资料合集，涵盖平台、教程与新闻"
+}

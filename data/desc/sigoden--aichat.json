@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合开发者、系统管理员和命令行爱好者，尤其是需要高效调用多种 LLM 或自动化终端任务的用户。",
+ "date": "2026-10-19",
+ "features": [
+  "支持超过 20 家 LLM 提供商，包括 OpenAI、Claude、Gemini、Ollama 等",
+  "Shell 助手：用自然语言描述任务，自动生成并执行 shell 命令",
+  "REPL 模式：交互式聊天，支持自动补全、多行输入和历史搜索",
+  "RAG：将外部文档集成到对话中，提升回答的准确性",
+  "函数调用与 AI 代理：连接外部工具和数据源，实现自动化任务",
+  "内置 HTTP 服务器：提供 Chat Completions、Embeddings 等 API 及 Web 界面"
+ ],
+ "intro": "AIChat 是一个用 Rust 编写的命令行工具，将多种大语言模型（LLM）的交互能力集成到终端中。它通过统一接口支持 OpenAI、Claude、Gemini、Ollama 等 20 多家提供商，让用户无需切换工具即可调用不同模型。\n\n除了基础的聊天功能，AIChat 还提供 Shell 助手（将自然语言转为 shell 命令）、REPL 交互模式、RAG（检索增强生成）、函数调用与 AI 代理等高级特性。用户可以通过角色、会话和宏来定制工作流，并利用内置的 HTTP 服务器提供兼容 OpenAI 的 API 接口。\n\n该项目适合开发者、系统管理员以及任何希望在命令行环境中高效使用 LLM 的用户，尤其适合需要自动化任务或集成多模型能力的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用包管理器安装：cargo install aichat（Rust）或 brew install aichat（Homebrew）",
+  "运行 aichat 进入 REPL 交互模式，或使用 aichat hello 直接提问",
+  "通过 aichat -f 文件路径 或管道输入（如 cat data.txt | aichat）提供上下文",
+  "使用 aichat --serve 启动本地 HTTP 服务器，访问 LLM Playground 或 Arena"
+ ],
+ "summary": "AIChat 是一个 Rust 编写的命令行工具，让用户在终端中直接调用 OpenAI、Claude、Gemini、Ollama 等多种大语言模型。它解决了多模型切换繁琐的问题，并提供 Shell 助手、REPL 交互、RAG、函数调用与 AI 代理等功能，适合开发者、运维人员等需要在命令行中高效使用 LLM 完成问答、自动化任务或集成外部工具的场景。",
+ "tagline": "一体化 LLM 命令行工具，支持多模型与智能代理"
+}

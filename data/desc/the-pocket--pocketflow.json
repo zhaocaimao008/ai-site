@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望轻量、透明地构建 LLM 应用的开发者，尤其是想避免重型框架、喜欢从底层理解 Agent 工作流的工程师。",
+ "date": "2026-10-19",
+ "features": [
+  "仅 100 行代码，零依赖，无供应商锁定",
+  "以 Graph 为核心抽象，可灵活实现 Agent、Workflow、RAG 等模式",
+  "提供聊天、结构化输出、批处理、流式输出等教程示例",
+  "支持多语言移植版本（TypeScript、Java、C++、Go、Rust、PHP）",
+  "可通过 pip 安装或直接复制源码使用"
+ ],
+ "intro": "Pocket Flow 是一个仅用 100 行代码实现的极简 LLM 框架，核心抽象是 Graph。它没有额外依赖，也不绑定特定厂商，旨在用最少的代码表达 Agent、Workflow、RAG 等常见设计模式。\n\n框架本身只提供最基础的图结构，所有应用逻辑都需要开发者自行构建。这种设计让代码保持轻量透明，同时避免了传统框架的臃肿和抽象泄漏。项目提供了从聊天、结构化输出到多智能体协作的多个教程示例，方便逐步上手。\n\n此外，Pocket Flow 还有 TypeScript、Java、C++、Go、Rust 和 PHP 等语言的移植版本，方便不同技术栈的开发者使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install pocketflow",
+  "或直接复制源码文件 pocketflow/__init__.py（仅 100 行）",
+  "参考官方文档和视频教程了解基本用法",
+  "从 cookbook 中的示例（如 Chat、Workflow、Agent）开始实践"
+ ],
+ "summary": "Pocket Flow 是一个仅 100 行的极简 LLM 框架，核心抽象是 Graph，不依赖第三方库，也不绑定特定模型厂商。它适合想用最少代码搭建 Agent、Workflow 或 RAG 应用的开发者，尤其适合希望理解底层逻辑、避免重型框架的工程师。项目提供多个教程示例，并有多语言移植版本。",
+ "tagline": "100行代码的极简LLM框架"
+}

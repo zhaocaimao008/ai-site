@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI 应用或 Agent 选择低成本模型 API 的开发者，以及想寻找免费 API 额度的普通用户。",
+ "date": "2026-10-19",
+ "features": [
+  "跨官方 API、推理服务商和中转站比较模型 API 标价，列出最便宜的选项",
+  "查找官方免费额度、试用金和中转站注册/签到等免费资源",
+  "通过 Agent Skill 在 Codex、Claude Code、Cursor 等 Agent 内查询价格并接入 API",
+  "提供匿名远程 MCP 服务器，无需注册或 API Key 即可查询价格和免费额度",
+  "接入时展示配置变更、备份文件，并支持用“undo”恢复",
+  "提供 HTTP 价格查询和免费额度查询接口，以及中转术语表"
+ ],
+ "intro": "Grandet 是一个帮助开发者在 AI Agent 中查找并接入最便宜模型 API 的工具。它汇总了 grandet.ai 上来自官方 API、推理服务商和中转站的标价，按模型和使用场景（聊天、编程、长输出）比较价格，列出最便宜的几项，并显示站点、分组、价格单位及观测时间。\n\n它提供三种使用方式：网站、远程 MCP 服务器和 Agent Skill。MCP 服务器匿名可用，无需注册或 API Key；Agent Skill 可安装到 Codex、Claude Code、Cursor 等 Agent 中，让 Agent 直接查询价格、寻找免费额度，并在用户确认后把选中的 API 接入本地配置。\n\nGrandet 只按标价排序，不评价站点质量，也不重复供应商的自我宣传。美元、人民币和现金价格分开列出，不互相比较。接入过程会备份配置文件，并支持撤销。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在已有 Agent（如 Codex、Claude Code、Cursor）中粘贴：Install Grandet Skill for me: https://grandet.ai/download.md",
+  "安装完成后打开新对话，直接提问，例如：I code in Claude Code. Find me the cheapest Claude Sonnet 4.6 API.",
+  "如需在 MCP 客户端中使用，添加远程服务器：{ \"mcpServers\": { \"grandet\": { \"url\": \"https://grandet.ai/mcp\" } } }",
+  "在 Claude Code 中也可运行：claude mcp add --transport http grandet https://grandet.ai/mcp"
+ ],
+ "summary": "Grandet 解决的是在众多官方 API、推理服务商和中转站之间比价、选型并接入模型 API 的问题。它汇总标价，按模型和使用场景列出最便宜的选项，还能查找免费额度。你可以通过网站、匿名 MCP 服务器或 Agent Skill 使用它，适合在 Codex、Claude Code 等 Agent 中快速查询价格并完成接入配置的开发者。",
+ "tagline": "为任意模型比价并接入最便宜 API 的 Agent 工具"
+}
