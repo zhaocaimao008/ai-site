@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "适合想在本机运行 Stable Diffusion 图形界面、但不想手动配置 Python 依赖和环境的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "提供 AUTOMATIC1111 WebUI 的 Docker 镜像，支持文生图、图生图等操作",
+  "提供 ComfyUI 的 Docker 镜像，支持基于节点的工作流界面",
+  "通过 Docker Compose 管理多个 UI 服务，简化启动流程",
+  "安装、使用和常见问题文档集中在 GitHub Wiki 中"
+ ],
+ "intro": "这个项目把 Stable Diffusion 的多个 WebUI 打包成 Docker 镜像，让用户不用手动配置 Python 环境和依赖，就能在本地运行图像生成界面。README 中明确列出了 AUTOMATIC1111 和 ComfyUI 两种 UI，并提供了截图和功能链接。\n\n项目本身不实现图像生成算法，而是作为容器化封装，整合了 AUTOMATIC1111、ComfyUI、InvokeAI 等上游项目。安装和使用步骤放在 GitHub Wiki 中，README 只给出入口链接，没有直接列出命令。\n\n适合想快速体验 Stable Diffusion、又不希望折腾环境配置的开发者或普通用户。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目把 Stable Diffusion 的多个 WebUI 封装成 Docker 镜像，省去手动安装 Python 依赖和环境配置的麻烦。README 中列出了 AUTOMATIC1111 和 ComfyUI 两种界面，适合想快速在本地体验图像生成、又不想折腾环境的开发者和普通用户。具体安装和使用步骤需参考项目 Wiki。",
+ "tagline": "用 Docker 轻松运行 Stable Diffusion 的多种 WebUI"
+}

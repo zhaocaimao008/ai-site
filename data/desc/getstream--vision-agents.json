@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建实时视频或语音 AI 应用的 Python 开发者，例如运动指导、健身陪练、无人机检测、远程理疗等场景的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "实时 WebRTC 视频接入，将画面直接送入模型进行视觉理解",
+  "可插拔视频处理管线，支持 YOLO、Roboflow 及自定义 PyTorch/ONNX 模型",
+  "集成多种 LLM、实时模型、STT 与 TTS 提供商",
+  "支持工具调用、MCP、RAG 与跨轮次记忆",
+  "通过 Twilio 或 Telnyx 实现电话呼入呼出与双向音频流",
+  "内置 HTTP 服务、Prometheus 指标与 Kubernetes 部署能力"
+ ],
+ "intro": "Vision Agents 是 Stream 开源的 Python 框架，用于搭建能实时处理音视频的多模态 AI Agent。它把视频流、语音识别、语音合成、大模型和视觉处理模型组合在一起，让 Agent 在通话或直播场景中边看边听边回应。\n\n框架支持接入 OpenAI、Gemini、xAI 等多种 LLM 与实时模型，也可搭配 YOLO、Roboflow 等视觉处理器，并提供 VAD、说话人分离、工具调用、MCP、RAG、记忆和电话呼入呼出等能力。借助 Stream 的边缘网络，官方称加入延迟约 500ms、音视频延迟低于 30ms，同时也可配合其他视频边缘网络使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "uv add vision-agents",
+  "uv add \"vision-agents[getstream, openai, elevenlabs, deepgram]\"",
+  "从 Stream 获取 API key",
+  "参考官方 quickstart 指南构建第一个 Agent"
+ ],
+ "summary": "Vision Agents 是一个用于构建实时音视频 AI Agent 的 Python 框架。它把视频流、语音识别与合成、大模型和视觉处理模型串联起来，让 Agent 在通话中实时看画面、听声音并作出回应。适合做运动指导、健身陪练、无人机检测、远程理疗等需要低延迟视频理解的场景，开发者可自由组合不同模型与视频服务商。",
+ "tagline": "构建可看、可听、可理解视频的实时多模态 AI Agent"
+}

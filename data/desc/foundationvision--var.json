@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究图像生成、自回归模型和缩放定律的研究人员与开发者，也适合想尝试 GPT 风格图像生成的技术爱好者。",
+ "date": "2026-10-20",
+ "features": [
+  "提出 next-scale prediction 自回归范式，从粗到细生成图像",
+  "GPT 风格自回归模型在 ImageNet 上超越扩散模型",
+  "提供 VAR-d16 至 VAR-d36 多个预训练模型及 Hugging Face 权重",
+  "支持 ImageNet 256×256 和 512×512 图像生成与训练",
+  "发现并验证了视觉自回归模型的幂律缩放定律",
+  "提供 demo notebook 和在线演示平台，方便快速体验"
+ ],
+ "intro": "VAR（Visual Autoregressive Modeling）是 NeurIPS 2024 最佳论文的官方实现，提出了一种新的自回归图像生成方法。它把图像生成从传统的“下一个 token 预测”改为“下一个尺度预测”，即从粗到细逐级生成图像，让 GPT 风格的自回归模型在图像生成任务上首次超越扩散模型。\n\n项目提供了完整的训练和推理代码，并开源了多个预训练模型（VAR-d16 到 VAR-d36），在 ImageNet 256×256 和 512×512 上取得了领先的 FID 指标。代码库简洁易用，支持加载 Hugging Face 权重进行图像生成，也支持在 ImageNet 上从头训练。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 torch>=2.0.0",
+  "运行 pip3 install -r requirements.txt 安装其他依赖",
+  "下载 vae_ch160v4096z32.pth 和所需 VAR 模型权重（如 var_d16.pth）",
+  "打开 demo_sample.ipynb 加载模型并生成图像"
+ ],
+ "summary": "VAR 是一个图像生成项目，它把 GPT 式的自回归学习从“预测下一个 token”改为“预测下一个尺度”，让模型从粗到细逐级生成图像。项目提供训练代码和多个预训练模型，适合研究自回归图像生成、缩放定律，或想用 GPT 风格模型生成图像的开发者和研究者。",
+ "tagline": "GPT 风格自回归图像生成，超越扩散模型的新范式"
+}

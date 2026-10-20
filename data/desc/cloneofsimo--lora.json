@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想快速定制 Stable Diffusion 风格或概念的开发者与创作者，尤其是希望产出小体积模型便于分享的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "用 LoRA 微调 Stable Diffusion，训练速度比 DreamBooth 快约两倍",
+  "产出的模型文件极小（1MB~6MB），方便分享和下载",
+  "兼容 diffusers 库，支持 inpainting 训练",
+  "支持合并多个 LoRA 检查点（--mode=ljl）",
+  "提供 Pivotal Tuning Inversion 和多向量 textual inversion",
+  "可将全量微调模型通过 SVD 蒸馏转换为 LoRA"
+ ],
+ "intro": "这个项目实现了用 Low-rank Adaptation（LoRA）对 Stable Diffusion 等文本到图像扩散模型进行快速微调。相比 DreamBooth 等全量微调方法，LoRA 只训练模型权重的低秩残差部分，因此训练速度更快，最终产出的模型文件只有 1MB 到 6MB，便于分享和下载。\n\n项目兼容 Huggingface 的 diffusers 库，支持 inpainting、CLIP 与 UNet 联合微调、Pivotal Tuning Inversion 等功能，还提供了合并多个 LoRA 检查点、将全量微调模型蒸馏为 LoRA 等工具。README 中包含 Disney 风格、波普艺术风格等示例，并提供了 Gradio Web 演示和 Colab 示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install git+https://github.com/cloneofsimo/lora.git",
+  "准备数据集目录，例如 ./data/data_disney",
+  "设置环境变量 MODEL_NAME=\"runwayml/stable-diffusion-v1-5\" 和 INSTANCE_DIR=\"./data/data_disney\"",
+  "运行 README 中提供的 Pivotal Tuning Inversion CLI 命令开始微调"
+ ],
+ "summary": "这个项目用 LoRA 低秩适配技术对 Stable Diffusion 等扩散模型做快速微调，解决全量微调耗时长、产出模型体积大的问题。它只训练模型权重的低秩残差，最终文件仅几 MB，便于分享。适合想定制特定风格或概念、又希望快速迭代和分发小模型的开发者与创作者。",
+ "tagline": "用LoRA低秩适配快速微调扩散模型"
+}

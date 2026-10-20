@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速生成可 3D 打印机械零件的工程师、创客，以及希望用 AI 代理自动化 Blender 建模流程的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "根据自然语言或 JSON 参数生成参数化机械零件（齿轮、外壳、支架等）",
+  "通过 headless Blender Python 管道进行确定性建模，输出干净拓扑",
+  "内置 3D 打印生产门禁，验证网格非流形边和尺寸精度",
+  "导出 glTF/STL/OBJ 等格式，并生成嵌入式 Three.js CAD 查看器",
+  "提供 AGENT_OK 执行契约和 bpy 知识库，支持 Claude Code、Codex 等 AI 代理",
+  "包含键盘和桌面机器人等实战构建示例"
+ ],
+ "intro": "DESIGN:OS 3D Blender Agent 是一个面向 Blender 5.2 的 AI 代理操作系统，通过 headless Blender Python（bpy）管道，将自然语言或 JSON 参数转化为尺寸精确的机械零件，如齿轮、外壳、无人机框架和爆炸视图装配体。项目强调确定性生成，避免扩散模型产生的非流形网格，确保输出可直接用于 3D 打印和 Web 展示。\n\n它内置 bpy 知识库、AGENT_OK 执行契约和 3D 打印生产门禁，并附带键盘和桌面机器人等实战构建示例。生成的资产可导出为 glTF/STL，并嵌入 Three.js 查看器进行交互检查。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中运行：/plugin marketplace add jangtrinh/design-os-3d-blender",
+  "然后运行：/plugin install design-os-3d-blender@design-os-3d-blender",
+  "或从终端克隆仓库：git clone https://github.com/jangtrinh/design-os-3d-blender.git",
+  "进入目录并运行自检：cd design-os-3d-blender && python3 scripts/self_check.py",
+  "在 AI 代理中用自然语言描述需求，例如生成 24 齿斜齿轮并导出 glTF + STL"
+ ],
+ "summary": "DESIGN:OS 3D Blender Agent 解决的是用 AI 生成可制造机械零件的问题。它通过 headless Blender Python 管道，将自然语言或 JSON 参数转化为尺寸精确的齿轮、外壳等零件，并经过 3D 打印门禁验证，输出可直接打印或 Web 展示的模型。适合需要快速迭代机械设计、又不想手动建模的工程师和创客。",
+ "tagline": "用 AI 代理驱动 Blender 生成可 3D 打印的机械零件"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时推进多个编码任务、希望用多个 AI 编码 agent 并行开发的开发者与团队。",
+ "date": "2026-10-20",
+ "features": [
+  "为每个任务创建独立 worker，分配 agent、模型与隔离工作区",
+  "Git 任务自动使用独立分支和 worktree，避免分支冲突",
+  "项目级 orchestrator 负责规划、拆解任务并向 worker 传递上下文",
+  "实时 Kanban 按 Working、Needs you、In review 等状态展示所有 worker",
+  "在会话内查看终端、改动文件、浏览器预览、PR、CI 与评审反馈",
+  "提供 macOS、Windows、Linux 桌面应用及 iOS、Android 移动端"
+ ],
+ "intro": "Orchestrator.inc 是一个本地桌面工作台，用于同时管理多个编码智能体。它支持 Claude Code、Codex 等 30 多种编码 agent，覆盖 macOS、Windows、Linux 桌面端，并提供 iPhone 与 Android 应用。\n\n项目把每个任务拆成一个独立的 worker：一个任务、一个编码 agent、一个隔离工作区。对于 Git 仓库，worker 会获得自己的分支和 worktree，任务对话、终端、改动文件、浏览器预览、Pull Request、CI 与评审状态都绑定在该会话上。\n\n桌面端背后运行本地 daemon，持续监听 agent 活动与源码管理状态，并通过实时 Kanban 汇总所有 worker 的进展，让并行开发不再散落在一堆终端和分支里。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载对应平台的桌面安装包并安装",
+  "打开 Orchestrator.inc，指向要管理的代码仓库",
+  "使用 New task 描述任务，选择编码 agent 与模型",
+  "在 worker 会话中通过 Chat 或原生终端与 agent 协作，并跟踪 PR、CI 与评审状态"
+ ],
+ "summary": "当项目里同时跑多个编码智能体时，如何拆分任务、分配上下文、避免分支冲突并跟踪每个改动，会变成新的管理负担。Orchestrator.inc 用本地桌面工作台解决这个问题：每个任务对应一个独立 worker 和隔离工作区，Git 任务自动分配分支与 worktree，项目级 orchestrator 负责规划与派发，实时 Kanban 汇总所有会话、PR、CI 和评审状态。适合需要并行推进多个编码任务的开发者。",
+ "tagline": "统一调度多个编码智能体的本地工作台"
+}

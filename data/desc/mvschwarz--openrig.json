@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把多个 AI 编码代理组织成稳定协作团队的开发者，尤其是已经在使用 Claude Code 或 Codex 并想统一管理多会话的人。",
+ "date": "2026-10-20",
+ "features": [
+  "用 YAML 定义代理团队的角色、席位与协作关系",
+  "一条命令启动整个团队，支持 Claude Code 与 Codex 混合编排",
+  "提供 TUI 界面，以关系图和表格展示代理运行状态与上下文",
+  "通过 lead agent 协调跨团队专家，汇总结果与待决策事项",
+  "团队的工作与上下文持久保存在固定地址，便于持续使用"
+ ],
+ "intro": "OpenRig 是一个用 TypeScript 编写的开源工具，用于把 Claude Code、Codex 等 AI 编码代理组织成持久化的多智能体团队。它通过 YAML 定义团队结构，一条命令即可启动，让多个代理在同一套系统中协同工作，而不是散落在多个终端会话里。\n\n项目提供 TUI 界面，可以查看代理关系图、各席位运行状态和上下文。用户与 lead agent 沟通目标，由它协调不同团队中的专家，并把结果和需要决策的事项反馈给用户。团队的工作和上下文会保留在固定位置，便于持续跟进。\n\n安装需要 Node.js 22 或 24 以及 tmux，支持 macOS 和 Linux，Windows 需通过 WSL2。至少需要一个可用的 Claude Code 或 Codex 账户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 22 或 24 以及 tmux（macOS 或 Linux；Windows 使用 WSL2）",
+  "运行安装脚本预演：curl -fsSL https://raw.githubusercontent.com/mvschwarz/openrig/v0.6.11/scripts/install.sh | sh -s -- --dry-run",
+  "运行安装脚本：curl -fsSL https://raw.githubusercontent.com/mvschwarz/openrig/v0.6.11/scripts/install.sh | sh",
+  "或手动安装：npm install -g @openrig/cli，然后运行 rig setup --dry-run",
+  "登录已选用的 Claude Code 或 Codex 账户，然后启动守护进程和终端：rig daemon start 与 rig terminal open saved:kernel --window"
+ ],
+ "summary": "OpenRig 解决的是多个 AI 编码代理分散在终端会话中、难以协同管理的问题。它用 YAML 定义带角色和共享上下文的持久团队，一条命令启动，让 Claude Code 和 Codex 在同一套系统中协作。用户向 lead agent 描述目标，由它协调专家并汇总结果。适合想把多代理工作流组织成稳定团队的开发者。",
+ "tagline": "用 YAML 定义并运行多智能体团队的编排工具"
+}

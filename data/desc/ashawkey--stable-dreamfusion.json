@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本/图像生成 3D 模型感兴趣的研究者和开发者，需要具备一定的深度学习基础和 GPU 环境。",
+ "date": "2026-10-20",
+ "features": [
+  "文本到 3D 生成：输入文本提示词生成 3D 模型",
+  "图像到 3D 生成：基于 Zero-1-to-3 实现图像条件生成",
+  "网格导出：训练后导出带纹理的 OBJ 网格",
+  "支持多种 Stable Diffusion 版本（1.5、2.0、2.1）及 DeepFloyd-IF",
+  "提供 Instant-NGP 和 Taichi 两种 NeRF 骨干，后者无需 CUDA",
+  "支持负向文本提示词和 Perp-Neg 缓解多面问题"
+ ],
+ "intro": "Stable-Dreamfusion 是 DreamFusion 文本生成 3D 模型的 PyTorch 实现，使用 Stable Diffusion 作为 2D 扩散模型提供监督信号。项目支持文本到 3D 和图像到 3D 生成，并能导出带纹理的网格模型。\n\n该项目采用 Instant-NGP 多分辨率网格编码器作为 NeRF 骨干，渲染速度较快，同时提供无需 CUDA 的 Taichi 后端。训练完成后可导出 360 度视频和 OBJ 网格。需要注意的是，项目仍处于开发中，生成质量与原论文存在差距，部分提示词效果不佳。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/ashawkey/stable-dreamfusion.git && cd stable-dreamfusion",
+  "安装依赖：pip install -r requirements.txt",
+  "（可选）下载预训练模型：如 Zero-1-to-3 和 Omnidata 检查点",
+  "训练文本生成 3D 模型：python main.py --text \"a hamburger\" --workspace trial -O",
+  "测试并导出网格：python main.py --workspace trial -O --test"
+ ],
+ "summary": "Stable-Dreamfusion 是一个用 PyTorch 实现的文本/图像生成 3D 模型项目，它借助 Stable Diffusion 作为 2D 扩散先验，通过 NeRF 表示 3D 场景，支持从文本或图像生成 3D 内容并导出网格。项目提供 Instant-NGP 和 Taichi 两种骨干，适合想尝试文本到 3D 生成的研究者和开发者，但需注意其生成质量尚不及原论文，部分提示词效果有限。",
+ "tagline": "基于 Stable Diffusion 的文本/图像生成 3D 模型"
+}

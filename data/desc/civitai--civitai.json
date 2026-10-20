@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自行部署或参与开发模型分享社区的开发者，以及对 Stable Diffusion 模型资源管理感兴趣的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "上传并分享 Stable Diffusion 模型、textual inversions、VAEs 等定制内容",
+  "浏览他人分享的模型，并通过评论和反馈进行协作交流",
+  "基于 Next.js + tRPC + Prisma/Postgres 的全栈架构",
+  "提供 Docker Compose 本地开发环境，含数据库、对象存储、搜索等服务",
+  "支持 devcontainer 与可选的 Nix flake 开发方式"
+ ],
+ "intro": "Civitai 是一个面向 Stable Diffusion 模型分享与协作的平台。用户可以注册账号、上传自己定制的模型（包括 textual inversions、hypernetworks、aesthetic gradients、VAEs 等），浏览他人分享的模型，并通过评论和反馈互相交流，从而改进模型、共享经验。\n\n项目采用 Next.js 同时承担前后端，API 层使用 tRPC，数据库为 Prisma + Postgres，UI 组件库为 Mantine，存储使用 Cloudflare。仓库包含完整的本地开发环境配置，数据库、Redis、MinIO、Meilisearch、ClickHouse 和邮件捕获服务均通过 Docker Compose 启动。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/civitai/civitai.git && cd civitai",
+  "nvm use && corepack enable",
+  "git submodule update --init event-engine-common",
+  "cp .env-example .env.development && docker compose -f docker-compose.base.yml up -d",
+  "pnpm install && pnpm dev",
+  "make run-migrations && make reseed"
+ ],
+ "summary": "Civitai 是一个用于分享和协作改进 Stable Diffusion 定制模型的平台，支持上传 textual inversions、hypernetworks、VAEs 等资源，并允许用户浏览、评论和反馈。项目基于 Next.js、tRPC 和 Prisma/Postgres 构建，仓库提供 Docker Compose 本地开发环境，适合想自行搭建模型分享社区或参与平台开发的开发者。",
+ "tagline": "分享与协作 Stable Diffusion 模型的开源平台"
+}

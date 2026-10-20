@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想要自建生成式 AI 图像界面、或需要将 StableStudio 接入自有后端的开发者，也适合对生成式 AI 前端交互感兴趣的普通用户。",
+ "date": "2026-10-20",
+ "features": [
+  "基于 Web 的生成式 AI 图像创建与编辑界面",
+  "插件系统可替换后端 API，支持自定义插件",
+  "默认提供 Stability API 插件，需配置 API key",
+  "移除 DreamStudio 品牌和账户计费功能，更社区友好",
+  "使用 TypeScript 开发，基于 Node.js 和 Yarn 构建"
+ ],
+ "intro": "StableStudio 是 Stability AI 官方开源的 DreamStudio 社区版本，一个基于 Web 的生成式 AI 图像创建与编辑应用。它使用 TypeScript 编写，前端界面与 DreamStudio 基本一致，但移除了品牌标识和账户计费等功能。\n\n项目最大的特点是采用插件系统替代了所有网络 API 调用，开发者可以用 TypeScript 编写自己的插件，将 StableStudio 连接到任意后端。默认提供 Stability API 插件，使用时需要准备 API key。该项目适合希望自建图像生成界面或研究生成式 AI 前端交互的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 和 Yarn",
+  "git clone https://github.com/Stability-AI/StableStudio.git",
+  "cd StableStudio",
+  "yarn",
+  "yarn dev",
+  "访问 http://localhost:3000（使用默认 Stability API 插件时需准备 API key）"
+ ],
+ "summary": "StableStudio 是 Stability AI 开源的 DreamStudio 社区版，提供一个网页端界面来创建和编辑生成式 AI 图像。它把原本固定的后端调用改成插件系统，开发者可以用 TypeScript 编写插件接入任意后端，适合想自建图像生成界面或研究生成式 AI 前端交互的场景。",
+ "tagline": "Stability AI 开源的生成式 AI 图像创作与编辑界面"
+}

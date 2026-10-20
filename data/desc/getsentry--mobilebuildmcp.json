@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编码代理进行 iOS/macOS 开发的开发者，以及希望通过命令行工具自动化构建和测试流程的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "提供 MCP 服务器，供 AI 代理调用工具进行 iOS/macOS 项目构建与测试",
+  "提供统一 CLI，支持直接终端操作，如构建模拟器应用、运行测试等",
+  "支持通过 Homebrew 或 npm 安装，兼容 macOS 14.5+ 和 Xcode 16.x+",
+  "包含可选的代理技能（Skills），指导代理使用 MCP 或 CLI",
+  "CLI 使用按工作区的守护进程处理有状态操作（如日志捕获、调试）"
+ ],
+ "intro": "MobileBuildMCP 是一个 Model Context Protocol (MCP) 服务器和命令行工具，旨在为 AI 编码代理提供操作 iOS 和 macOS 项目所需的工具。它基于 TypeScript 开发，通过 MCP 协议与 Cursor、Claude Code、Codex 等客户端集成，让代理能够执行构建、测试等任务。\n\n项目以单一包形式发布，同时提供 CLI 和 MCP 服务器两种模式。CLI 支持直接终端操作，如构建模拟器应用、准备测试产品等；MCP 服务器则供 AI 代理调用。安装方式包括 Homebrew 和 npm，要求 macOS 14.5+、Xcode 16.x+ 和 Node.js 18+（Homebrew 安装无需 Node.js）。\n\n此外，项目还包含可选的代理技能（Skills），帮助代理更好地使用 MCP 工具或 CLI。注意，设备工具需要配置代码签名，且项目会请求 xcodebuild 跳过宏验证以避免 Swift Macros 相关错误。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Homebrew 安装：brew tap getsentry/xcodebuildmcp && brew install mobilebuildmcp",
+  "或通过 npm 安装：npm install -g mobilebuildmcp@latest",
+  "验证安装：mobilebuildmcp --help",
+  "启动 MCP 服务器：mobilebuildmcp mcp",
+  "构建模拟器应用：mobilebuildmcp simulator build --scheme MyApp --project-path ./MyApp.xcodeproj"
+ ],
+ "summary": "MobileBuildMCP 是一个 MCP 服务器和 CLI，为 AI 编码代理提供操作 iOS 和 macOS 项目的工具。它让代理能执行构建、测试等任务，适合在 Cursor、Claude Code 等客户端中集成使用，也支持直接通过命令行自动化构建流程。项目要求 macOS 14.5+ 和 Xcode 16.x+，可通过 Homebrew 或 npm 安装。",
+ "tagline": "为 AI 代理提供 iOS/macOS 构建工具的 MCP 服务器与 CLI"
+}

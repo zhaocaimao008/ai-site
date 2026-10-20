@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地运行 DeepSeek 模型的俄语开发者、AI 爱好者以及需要私有化部署的技术人员。",
+ "date": "2026-10-20",
+ "features": [
+  "提供 5 分钟快速启动流程，使用 Ollama 一条命令运行 DeepSeek-R1 蒸馏模型",
+  "对比不同 DeepSeek 模型版本与硬件内存需求，帮助选择合适模型",
+  "介绍 Ollama、llama.cpp、LM Studio、Open WebUI、vLLM、SGLang 等多种本地运行工具",
+  "涵盖 API 接入、Python 调用、IDE 集成、提示词工程、RAG 与智能体构建",
+  "包含微调（fine-tuning）、性能优化、常见错误解决和 FAQ 等进阶内容"
+ ],
+ "intro": "这是一个俄语教程项目，系统讲解如何在个人电脑、Mac 和服务器上本地安装、运行和配置 DeepSeek 系列模型（包括 V4、R1 及蒸馏版本）。内容覆盖从快速上手到进阶优化的完整流程，强调免费、隐私和离线使用。\n\n指南按章节组织，涉及模型选择、硬件内存需求、Ollama、llama.cpp、LM Studio、Open WebUI、vLLM、SGLang 等工具的使用，以及 API 接入、提示词技巧、RAG、智能体、微调和常见错误排查。适合希望在自己的设备上运行 DeepSeek 的俄语开发者与爱好者参考。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Ollama：Windows/macOS 从 ollama.com/download 下载安装，Linux 运行 curl -fsSL https://ollama.com/install.sh | sh",
+  "验证安装：ollama --version",
+  "运行 DeepSeek 模型：ollama run deepseek-r1:8b",
+  "（可选）安装 Open WebUI 图形界面：docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main",
+  "打开 http://localhost:3000 创建管理员账号并选择 deepseek-r1:8b 模型开始对话"
+ ],
+ "summary": "这份俄语指南面向想在本地运行 DeepSeek 模型的用户，从零开始讲解安装与配置。内容涵盖模型选择、硬件要求，以及 Ollama、llama.cpp、LM Studio、Open WebUI、vLLM 等工具的使用，并延伸到 API 接入、RAG、智能体和微调。适合希望私有化部署、离线使用或学习本地大模型运行的开发者和爱好者。",
+ "tagline": "俄语版 DeepSeek 本地部署完整指南"
+}

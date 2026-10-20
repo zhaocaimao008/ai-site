@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要从长视频中按文字或说话人快速截取片段的创作者、剪辑人员，以及希望本地部署语音识别与字幕生成流程的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "基于 FunASR Paraformer 系列模型进行中文语音识别并预测时间戳",
+  "支持热词定制，提升特定实体词和专有名词的识别效果",
+  "集成 CAM++ 说话人识别，可按自动识别的说话人 ID 裁剪片段",
+  "支持多段自由剪辑，自动返回完整视频与目标片段的 SRT 字幕",
+  "通过 Gradio 界面交互，可本地运行或部署为浏览器访问的服务",
+  "支持 Fun-ASR-Nano、SenseVoice、MOSS 等多种模型选择"
+ ],
+ "intro": "FunClip 是一个完全开源、可本地部署的自动化视频剪辑工具。它使用阿里巴巴通义实验室开源的 FunASR Paraformer 系列模型对视频进行语音识别，并给出时间戳；用户可以在识别结果中自由选择文本片段或指定说话人，点击剪辑即可得到对应的视频片段。\n\n项目通过 Gradio 提供交互界面，安装简单，也可部署在服务器上通过浏览器访问。除 Paraformer 外，还支持 Fun-ASR-Nano、SenseVoice、MOSS 等模型路径，并集成 CAM++ 说话人识别模型，可按说话人裁剪。剪辑时可输出完整视频与目标片段的 SRT 字幕，并支持基于 LLM 的智能剪辑探索。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并创建 Python 3.12 虚拟环境：git clone https://github.com/modelscope/FunClip.git && cd FunClip && python3.12 -m venv .venv && . .venv/bin/activate",
+  "安装依赖：python -m pip install -r requirements.txt",
+  "检查依赖并查看启动参数：python -m pip check && python funclip/launch.py --help",
+  "启动本地 Gradio 服务：python funclip/launch.py",
+  "按需选择模型，例如 python funclip/launch.py -m sensevoice 或 python funclip/launch.py --model moss --moss-backend vllm"
+ ],
+ "summary": "FunClip 把语音识别和视频裁剪串成一条本地流程：先用 FunASR 模型转写视频并给出时间戳，再按文字片段或说话人选择要保留的内容，直接导出对应视频和 SRT 字幕。它提供 Gradio 界面，适合需要从访谈、课程、直播等长视频中快速截取片段的场景，也方便开发者在本地部署和二次使用。",
+ "tagline": "本地部署的语音识别与智能视频剪辑工具"
+}

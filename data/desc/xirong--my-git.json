@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合 Git 新手、普通开发者、高级开发者、技术负责人以及使用 AI 编程工具（如 Codex、Claude Code、Cursor、Cline）的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "交互式 Git 心智模型学习，通过动画和实验理解快照、对象图、引用等概念",
+  "覆盖从基础命令到团队协作、GitHub 治理的完整学习路径",
+  "专门针对 AI 编程场景的变更控制、审查、提交拆分和多 Agent 协作指南",
+  "提供 PR、Issue、Review、Hotfix、Release、AI Review 等模板",
+  "包含 Git 误操作恢复、冲突处理、secret 清理等故障处理手册",
+  "大仓库优化实践，如 partial clone、sparse checkout、Git LFS"
+ ],
+ "intro": "这是一个面向 AI Native 软件工程的 Git 学习与参考手册，旨在帮助开发者在 AI 辅助编程的背景下，理解 Git 的设计原理、验证改动并管理协作。项目强调从熟练执行转向理解、判断与验证，让 AI 成为实验、执行和验证的工具，而人负责决策。\n\n内容覆盖 Git 心智模型、日常命令、团队工作流、GitHub 工程治理、AI 编程下的变更控制、故障恢复、大仓库优化等主题，并提供交互式学习、模板和公司实践案例。适合从新手到技术负责人的广泛读者，尤其关注 AI 生成代码的审查与风险控制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读[为什么在 AI 时代学习 Git](01-getting-started/why-learn-git.md)了解学习理念",
+  "通过[交互学习](https://xirong.github.io/my-git/interactive/git-mental-model/)建立 Git 心智模型",
+  "按照[知识地图](01-getting-started/knowledge-map.md)选择适合自己当前需求的路径",
+  "参考[AI 变更控制循环](05-ai-native-development/ai-change-control-loop.md)管理 AI 生成的代码变更"
+ ],
+ "summary": "这个项目是一份面向 AI 时代的 Git 学习与参考手册，帮助开发者在 AI 辅助编程背景下理解 Git 原理、验证改动并管理协作。内容涵盖从基础命令到团队工作流、GitHub 治理、AI 变更控制、故障恢复等，适合希望建立正确 Git 心智模型或管理 AI 生成代码风险的开发者。",
+ "tagline": "AI 时代的 Git 变更控制手册"
+}

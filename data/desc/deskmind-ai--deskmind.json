@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Mac 上本地运行 computer use agent 的开发者，以及对本地小模型桌面自动化感兴趣的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "本地运行 0.8B 和 4B 模型，通过 MLX 在 Apple Silicon 上推理，无需云端",
+  "0.8B 到 4B 的路由机制：低置信度步骤自动升级到更大模型或询问用户",
+  "以选择题形式对每个操作选项打分，输出概率分布而非自由文本",
+  "提供 /v1/systemone HTTP 接口，可被其他 agent 调用",
+  "包含 Eyes 视觉定位、Brain 决策、Hands 执行和 Mac 应用等开源组件",
+  "附带 Bench 基准测试，用严格评分器检查任务最终状态"
+ ],
+ "intro": "DeskMind 是一个面向 macOS 的开源 computer use agent，它通过本地运行的小模型来观察屏幕、决定下一步并执行操作。项目包含 Eyes（视觉定位）、Brain（决策模型）、Hands（执行层）和 Mac 应用，所有组件均开源。\n\nBrain 采用 0.8B 与 4B 双模型路由：0.8B 负责快速决策，不确定时交给 4B 或询问用户。模型以选择题形式对每个选项打分，输出概率而非自由文本，从而减少猜测。所有推理都在 Apple Silicon 上通过 MLX 完成，无需云端往返。\n\n项目还提供了 Bench 基准测试，用于在沙盒桌面任务中严格评估最终状态。README 中给出了在真实桌面任务上的通过率、决策耗时和视觉定位分数，并附有样本量说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并安装 DeskMind Mac 应用（macOS 15+，Apple Silicon），首次运行会下载约 5.3 GB 模型并引导授予权限",
+  "或手动运行 4B 模型：git clone https://github.com/deskmind-ai/brain && cd brain && uv sync --extra mlx",
+  "下载模型：uv run hf download deskmind/brain-4b --revision g18b-q8 --local-dir models/brain-4b",
+  "启动服务：uv run deskmind-brain-serve --predictor mlx:models/brain-4b --port 8793 --two-stage",
+  "发送请求测试：curl -s localhost:8793/v1/systemone -H 'Content-Type: application/json' -d @examples/request.json"
+ ],
+ "summary": "DeskMind 是一个在 Mac 本地运行的 computer use agent，用 0.8B 和 4B 小模型观察屏幕、决定下一步并执行操作。它把每一步变成选择题，对选项打分输出概率，不确定时交给更大模型或直接询问用户，减少猜测。适合想在 Apple Silicon 上本地实现桌面自动化、又不想依赖云端的开发者和用户。",
+ "tagline": "在 Mac 本地运行的小模型电脑操作代理"
+}

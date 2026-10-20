@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 代理进行软件开发、希望提升多任务并行效率和项目可追溯性的开发者与团队。",
+ "date": "2026-10-20",
+ "features": [
+  "将想法转化为 PRD、史诗和可并行任务，并同步到 GitHub Issues",
+  "利用 Git worktree 支持多个 AI 代理并行执行独立任务流",
+  "通过 GitHub Issues 实现团队协作、任务交接和进度透明",
+  "提供确定性的 bash 脚本处理状态、站会、搜索和验证等操作",
+  "遵循 agentskills.io 标准，兼容多种 AI 代理工具"
+ ],
+ "intro": "CCPM 是一个面向 AI 代理的项目管理技能系统，旨在解决 AI 编码中上下文丢失、并行任务冲突和需求漂移等问题。它通过规范驱动开发（Spec-driven development）将想法转化为 PRD、史诗（Epic）、任务，并同步到 GitHub Issues，最终由多个代理并行执行。\n\nCCPM 以 GitHub Issues 作为唯一事实来源，利用 Git worktree 支持多个代理同时处理同一项目的不同任务，并保持完整的可追溯性。它遵循 agentskills.io 开放标准，可与 Claude Code、Codex、Cursor 等多种代理工具配合使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/automazeio/ccpm.git",
+  "确保已安装并认证 git 和 gh CLI（gh auth login）",
+  "将 skill/ccpm 符号链接或复制到你的代理技能目录（如 Claude Code 的 .claude/skills/ccpm）",
+  "用自然语言触发工作流，例如说“I want to build X”或“sync the X epic to GitHub”"
+ ],
+ "summary": "CCPM 是一个帮助 AI 代理管理软件开发流程的技能系统。它把想法逐步转化为 PRD、史诗和任务，并同步到 GitHub Issues，再借助 Git worktree 让多个代理并行执行独立任务。适合希望减少上下文丢失、避免并行冲突并保持需求可追溯的 AI 辅助开发场景。",
+ "tagline": "用 GitHub Issues 和 Git worktree 管理 AI 代理并行开发的项目管理技能"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合想在本地 GPU 上微调 LLM 的开发者，尤其是显存有限、不想折腾训练基础设施的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "单条命令完成微调：soup init 生成配置，soup train 启动训练",
+  "自动处理批大小、GPU 检测和量化等训练配置",
+  "支持 QLoRA 等本地训练方式，无需云端环境",
+  "可选的 layer streaming（BETA），降低训练大模型时的显存占用",
+  "提供 Web UI 和 soup doctor 配置诊断命令"
+ ],
+ "intro": "Soup 是一个用命令行微调和后训练大语言模型的工具，目标是把配置和基础设施的麻烦降到最低。你只需要一个 YAML 配置文件，运行 soup train 就能开始训练，不需要 SSH 到远程 GPU 机器，也不需要手动处理批大小、GPU 检测和量化等细节。\n\n项目支持 QLoRA 等本地训练方式，并提供了一个可选的 layer streaming 功能（stream_layers: true，目前为 BETA），它把冻结的基础模型逐层送入 GPU，从而在显存较小的设备上训练较大的模型。README 中给出了在 4 GB 笔记本 GPU 上训练 8B 模型的测量数据，并提供了 Colab notebook 供自行验证。\n\nSoup 还包含 Web UI、soup init 模板和 soup doctor 诊断命令，适合希望快速在本地或自有 GPU 上尝试 LLM 微调的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install \"soup-cli[train]\"",
+  "soup init --template chat",
+  "soup train"
+ ],
+ "summary": "Soup 是一个简化 LLM 微调流程的命令行工具，用一个 YAML 配置文件替代繁琐的训练脚本和环境配置。它自动处理批大小、GPU 检测和量化，支持 QLoRA 本地训练，并可选开启 layer streaming 来降低显存占用，让显存有限的设备也能尝试训练较大模型。适合想在自己 GPU 上快速上手微调、不愿折腾基础设施的开发者。",
+ "tagline": "一个 YAML 文件微调 LLM，低显存也能跑"
+}

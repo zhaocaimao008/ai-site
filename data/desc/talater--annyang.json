@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望为网页添加语音交互功能的 Web 开发者，以及需要无障碍访问或 hands-free 操作场景的产品团队。",
+ "date": "2026-10-20",
+ "features": [
+  "无依赖，体积仅 2 KB",
+  "通过简单对象定义语音命令和回调",
+  "支持通配符提取语音参数（如 *term）",
+  "提供 ESM、CommonJS、IIFE 多种引入方式",
+  "可搭配 Speech KITT 添加图形化控制界面"
+ ],
+ "intro": "annyang 是一个无依赖的 JavaScript 语音识别库，体积仅 2 KB，基于 MIT 协议开源。它允许开发者通过简单的 API 为网站添加语音命令控制功能，用户说出预设的短语即可触发对应的回调函数。\n\n库本身不包含语音识别引擎，而是封装浏览器提供的 SpeechRecognition 接口，因此需要浏览器支持该 API。开发者可以定义命令模板（如 'search for *term'），annyang 会解析语音输入并提取参数。\n\n项目提供 ESM、CommonJS 和 script 标签等多种引入方式，并附带完整的 API 文档和在线演示。配合 Speech KITT 还可以快速添加图形化界面，方便用户启动、停止语音识别并查看状态。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：npm install annyang",
+  "引入：import annyang from 'annyang';",
+  "检查浏览器支持：if (annyang.isSpeechRecognitionSupported()) { ... }",
+  "定义命令并添加：annyang.addCommands({ 'hello': () => { alert('Hello world!'); } });",
+  "开始监听：annyang.start();"
+ ],
+ "summary": "annyang 是一个轻量级 JavaScript 库，用于给网站添加语音命令控制。它封装浏览器的语音识别接口，开发者只需定义命令与回调，用户说出短语即可触发操作。适合需要语音交互的 Web 应用，如无障碍访问、hands-free 操作或语音搜索场景。",
+ "tagline": "轻量级 JavaScript 语音识别库，让网站支持语音命令"
+}

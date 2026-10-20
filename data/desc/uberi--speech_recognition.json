@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 Python 应用中集成语音识别功能的开发者，无论是快速原型还是生产部署，也适合对离线语音识别感兴趣的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "支持多种语音识别引擎和 API，包括在线和离线选项",
+  "提供从麦克风或音频文件进行语音识别的能力",
+  "支持后台监听麦克风输入",
+  "可校准环境噪声能量阈值以提高识别准确性",
+  "支持扩展识别结果和保存音频数据",
+  "兼容 OpenAI 兼容的自托管端点（如 vLLM、Ollama）"
+ ],
+ "intro": "SpeechRecognition 是一个 Python 语音识别库，提供统一的接口来调用多种语音识别引擎和 API，包括在线服务和离线引擎。它支持 CMU Sphinx、Google Speech Recognition、Google Cloud Speech API、Wit.ai、Microsoft Azure Speech、Houndify、IBM Speech to Text、Snowboy 热词检测、TensorFlow、Vosk、OpenAI Whisper、OpenAI Transcription API、Groq Whisper API 和 Cohere Transcribe API 等。\n\n该库既可以从麦克风获取音频，也可以处理音频文件，并支持后台监听、环境噪声校准等功能。它要求 Python 3.10+，部分引擎需要额外安装依赖，如 PyAudio、PocketSphinx、Vosk、Whisper 等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装库：pip install SpeechRecognition",
+  "如需麦克风输入，安装 PyAudio：pip install PyAudio",
+  "运行快速测试：python -m speech_recognition",
+  "参考 examples/ 目录中的示例代码进行开发"
+ ],
+ "summary": "SpeechRecognition 是一个 Python 库，为开发者提供统一的接口来调用多种语音识别引擎和 API，包括在线服务和离线引擎。它解决了在 Python 项目中集成语音识别时需适配不同后端的问题，适合需要从麦克风或音频文件转写文字的场景，如语音助手、音频转录工具等。",
+ "tagline": "Python 语音识别库，支持多种引擎和 API"
+}

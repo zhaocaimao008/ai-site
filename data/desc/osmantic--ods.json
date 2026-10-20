@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地私有环境中运行 AI 的开发者、技术爱好者和小型团队，尤其是想避免云服务订阅并重视数据隐私的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "本地模型推理：在自有硬件上运行开源模型",
+  "类 ChatGPT 的 Web 界面：通过浏览器与模型对话",
+  "统一控制面板：管理模型、服务、GPU 状态和扩展",
+  "语音、代理与工作流：构建可监听、说话、调用工具的自动化",
+  "RAG 与搜索：连接本地文档和私有检索流程",
+  "本地图像生成：无需将提示发送到托管 API"
+ ],
+ "intro": "ODS（Osmantic Deployment System）是一个开源部署工具，旨在将你的 PC、Mac 或 Linux 机器变成一台私有 AI 服务器。它自动安装并集成运行本地 AI 所需的各种组件，包括本地模型推理、类 ChatGPT 的 Web 界面、控制面板、语音与代理工作流、RAG 检索、图像生成以及隐私运维工具，无需手动组装 Ollama、Open WebUI、n8n、ComfyUI 等。\n\n项目当前处于 V3 预发布阶段，安装脚本会安装 main 分支的最新代码。ODS 默认不收集遥测数据，推理、聊天记录和文件都保留在本地，仅在下载模型、检查更新或执行网络搜索时联网。用户可以选择启用云或混合 API 模式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux 或 macOS：确保 Docker 已安装并运行，然后在终端执行：curl -fsSL https://install.osmantic.com/ods.sh | bash",
+  "Windows：打开普通 PowerShell 窗口，粘贴 README 中的 PowerShell 代码块并回答提示，安装程序会引导完成 WSL2 和 Docker 设置。",
+  "安装完成后，在浏览器打开 http://localhost:3001/pixel 访问 Portal 界面（Windows 安装程序会自动打开）。",
+  "http://localhost:3000 是 Open WebUI 的独立界面，可用于与模型对话。"
+ ],
+ "summary": "ODS 是一个开源的部署系统，帮你把个人电脑变成私有 AI 服务器。它自动安装并配置本地模型推理、聊天界面、控制面板、语音代理、RAG 检索和图像生成等组件，省去手动搭建 Ollama、Open WebUI 等工具的麻烦。适合希望在本地运行 AI、注重数据隐私的开发者与爱好者。",
+ "tagline": "将个人电脑变成私有 AI 服务器的一站式部署系统"
+}

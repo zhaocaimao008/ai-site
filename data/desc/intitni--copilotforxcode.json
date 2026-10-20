@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Xcode 进行开发的 macOS 开发者，尤其是希望在不离开 Xcode 的情况下获得 AI 代码辅助的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "代码建议：根据上下文提供代码补全建议",
+  "聊天：在 Xcode 中与 AI 对话，获取代码解释或帮助",
+  "代码修改：通过自然语言指令修改选中的代码",
+  "自定义命令：扩展聊天和修改功能，创建个性化命令",
+  "支持多种 AI 提供商：GitHub Copilot、Codeium、OpenAI 等"
+ ],
+ "intro": "Copilot for Xcode 是一个 Xcode 源代码编辑器扩展，为 Xcode 带来 GitHub Copilot、Codeium 和 ChatGPT 的代码辅助能力。它通过后台服务与这些 AI 服务交互，在 Xcode 中提供代码建议、聊天和代码修改等功能。\n\n项目支持多种 AI 提供商，包括 GitHub Copilot、Codeium 以及通过 OpenAI API 密钥访问的其他 LLM。用户可以在宿主应用中配置账户和模型，并设置快捷键来高效使用各项功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Homebrew 安装：brew install --cask copilot-for-xcode",
+  "打开应用，并在系统设置中启用 Xcode 源代码编辑器扩展",
+  "授予扩展应用辅助功能（Accessibility API）权限",
+  "在宿主应用中设置账户和模型（如 GitHub Copilot 或 Codeium）",
+  "可选：在 Xcode 设置中为命令配置快捷键"
+ ],
+ "summary": "Copilot for Xcode 是一个 Xcode 扩展，让开发者能在 Xcode 内直接使用 GitHub Copilot、Codeium 和 ChatGPT 的代码建议、聊天与代码修改功能。它适合希望在不切换编辑器的情况下获得 AI 辅助的 macOS 开发者，通过后台服务与各 AI 提供商交互，并支持自定义命令和快捷键配置。",
+ "tagline": "为 Xcode 提供 GitHub Copilot、Codeium 和 ChatGPT 支持的扩展"
+}

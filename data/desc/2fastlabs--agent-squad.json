@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要构建多智能体对话系统、希望按意图路由到不同专业代理的开发者，以及想在 Apple 设备上本地运行智能体编排的 iOS/macOS 开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "基于意图分类的智能体路由，结合上下文与智能体描述选择最佳代理",
+  "支持流式与非流式响应，并跨智能体、跨会话管理对话上下文",
+  "内置 Bedrock、Anthropic、OpenAI、Lex、Lambda 等预构建智能体",
+  "可扩展自定义智能体、分类器、存储与检索器",
+  "提供 Python、TypeScript 和 Swift 三种运行时，Swift 支持完全在设备端运行",
+  "新增 JevClassifier，用决策模型替代 LLM 进行分类路由，返回校准置信度"
+ ],
+ "intro": "Agent Squad 是一个轻量级开源框架，用于编排多个 AI 智能体并处理复杂对话。它通过分类器分析用户输入，结合对话历史与各智能体的描述，将每轮查询路由到最合适的智能体，并由编排器保存上下文，从而在多智能体之间保持连贯的会话。\n\n框架提供预构建的智能体（如 Bedrock、Anthropic、OpenAI、Lex、Lambda）、分类器和存储，同时保留清晰的扩展点，方便接入自定义组件。它支持流式与非流式响应，可在 AWS Lambda、容器或本地运行。\n\n项目提供 Python、TypeScript 和 Swift 三种运行时。Python 与 TypeScript 功能对齐；Swift 运行时面向 iOS 16+ 与 macOS 14+，支持在设备端完成分类路由、工具调用（含 MCP）、实时语音与本地聊天存储。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "TypeScript：运行 npm install agent-squad 安装依赖",
+  "Python：运行 pip install \"agent-squad[aws]\"（或 [anthropic]、[openai]、[all]）安装",
+  "Swift：在 Package.swift 中添加 .package(url: \"https://github.com/2FastLabs/agent-squad\", branch: \"main\")",
+  "创建 AgentSquad 编排器并添加智能体，调用 routeRequest / route_request / route 发起查询"
+ ],
+ "summary": "Agent Squad 解决的是多个 AI 智能体协同处理对话时的路由与上下文管理问题。它用分类器根据用户输入和对话历史，把每轮请求分发给最合适的专业智能体，并保存会话上下文，让不同智能体之间的对话保持连贯。项目提供 Python、TypeScript 和 Swift 三种运行时，适合需要构建多智能体客服、助手或设备端本地编排的开发者。",
+ "tagline": "多 AI 智能体编排框架，支持 Python、TypeScript 与 Swift"
+}

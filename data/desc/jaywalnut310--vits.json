@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究端到端语音合成的开发者、研究人员，以及希望基于预训练模型进行 TTS 实验的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "端到端并行 TTS，单阶段训练与采样",
+  "变分推断结合 normalizing flows 和对抗训练",
+  "随机时长预测器支持多样化节奏合成",
+  "提供 LJ Speech 和 VCTK 的训练配置与预处理脚本",
+  "提供预训练模型和 Colab 交互演示"
+ ],
+ "intro": "VITS 是一个基于条件变分自编码器和对抗学习的端到端文本转语音（TTS）模型，由 Jaehyeon Kim 等人提出。它采用变分推断结合 normalizing flows 和对抗训练，提升生成建模的表达能力，并引入随机时长预测器，使同一文本能合成不同节奏和音高的语音。\n\n在 LJ Speech 单说话人数据集上的主观评测显示，VITS 的 MOS 优于当时公开的 TTS 系统，接近真实录音。项目提供预训练模型和 Colab 交互演示，支持 LJ Speech 和 VCTK 多说话人数据集的训练与推理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：参考 requirements.txt，并安装 espeak（apt-get install espeak）",
+  "下载 LJ Speech 数据集，创建软链接：ln -s /path/to/LJSpeech-1.1/wavs DUMMY1",
+  "构建 Monotonic Alignment Search：cd monotonic_align && python setup.py build_ext --inplace",
+  "训练 LJ Speech 模型：python train.py -c configs/ljs_base.json -m ljs_base",
+  "推理参考 inference.ipynb"
+ ],
+ "summary": "VITS 是一个端到端文本转语音模型，旨在解决传统两阶段 TTS 系统音质不够自然的问题。它通过变分推断、normalizing flows 和对抗训练提升生成能力，并用随机时长预测器让同一文本合成不同节奏的语音。项目提供 LJ Speech 和 VCTK 数据集的训练配置、预处理脚本、预训练模型及 Colab 演示，适合研究语音合成的开发者上手实验。",
+ "tagline": "端到端文本转语音的并行生成模型"
+}

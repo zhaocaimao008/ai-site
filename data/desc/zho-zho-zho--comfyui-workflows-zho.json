@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 ComfyUI 的 AI 绘画爱好者和开发者，尤其是希望快速尝试不同模型工作流的中文用户。",
+ "date": "2026-10-20",
+ "features": [
+  "提供 54 个 ComfyUI 工作流 JSON 文件，覆盖 22 个类别",
+  "包含 Stable Cascade、FLUX.1、SD3 Medium 等图像生成模型的工作流",
+  "包含 3D 生成、视频生成（Hunyuan Video、LivePortrait Animals）等工作流",
+  "包含 LLM 与 Stable Diffusion 结合、ControlNet 应用等工作流",
+  "部分工作流附带 Colab 链接或使用说明",
+  "提供 ComfyUI Assistant GPTs 辅助使用"
+ ],
+ "intro": "这是一个由 ZHO 维护的 ComfyUI 工作流合集，收录了作者制作的 54 个 JSON 工作流文件，覆盖 22 个类别。这些工作流涉及 Stable Cascade、3D 生成、LLM 与 Stable Diffusion 结合、Differential Diffusion、YoloWorld-EfficientSAM、InstantID、PhotoMaker、SVD、I2VGenXL、APISR、SDXS、CosXL、Stable Diffusion 3 API、Phi-3-mini、SD3 Medium、FLUX.1、LivePortrait Animals 和 Hunyuan Video 等模型或技术。\n\n每个工作流都提供了截图或演示视频，部分还附带了使用说明或 Colab 链接。此外，作者还创建了一个 ComfyUI Assistant GPTs，用于辅助创建、解释自定义节点或工作流。\n\n该项目适合希望快速上手 ComfyUI 各类模型和功能的用户，可以直接下载 JSON 文件导入 ComfyUI 使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从项目仓库下载所需的工作流 JSON 文件",
+  "打开 ComfyUI 界面，将 JSON 文件拖入或通过菜单加载",
+  "根据工作流要求安装缺失的自定义节点和模型",
+  "运行工作流并调整参数"
+ ],
+ "summary": "这个项目是作者 ZHO 整理的 ComfyUI 工作流合集，提供了 54 个 JSON 文件，覆盖 Stable Cascade、FLUX.1、SD3、3D 生成、视频生成等多种 AI 模型和技术。每个工作流都配有截图或演示，部分还有使用说明。适合想用 ComfyUI 快速体验不同模型效果的用户，可以直接下载导入使用。",
+ "tagline": "作者 ZHO 的 ComfyUI 工作流合集，涵盖多种 AI 模型"
+}

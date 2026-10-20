@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Cursor、Windsurf 等 MCP 客户端的开发者，以及需要让 AI 代理获取和处理网页内容的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "网页搜索，可选同时抓取每条结果的完整页面内容",
+  "将任意 URL 抓取为 Markdown 或符合自定义 schema 的结构化 JSON",
+  "解析 PDF 和文档，爬取整站内容或仅发现站点 URL",
+  "在真实浏览器中与页面交互：点击、输入、填表、导航",
+  "运行 Agent 任务进行多来源研究并返回结构化数据",
+  "监控页面内容变化并接收通知，查询当前与历史额度用量"
+ ],
+ "intro": "Firecrawl MCP Server 是 Firecrawl 官方提供的 Model Context Protocol 服务端，让兼容 MCP 的客户端（如 Cursor、Windsurf 等）能够搜索、抓取并与实时网页交互，返回干净的 Markdown 或结构化数据。\n\n它把 Firecrawl 的多种能力封装成工具，包括网页搜索、单页抓取、PDF 与文档解析、整站爬取与 URL 发现、在真实浏览器中点击填表、运行多来源研究 Agent、监控页面变化以及查询额度用量。服务端支持自动重试与限流，可连接云端或自托管实例，也提供 SSE 方式。\n\n项目提供无需 API Key 的托管免费端点，其中 scrape、search、parse 可直接使用；完整工具集需要 OAuth 或 API Key 连接。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用托管免费端点：将客户端连接到 https://mcp.firecrawl.dev/v2/mcp，无需 API Key 即可使用 scrape、search、parse",
+  "需要完整工具集时，用 OAuth 连接 https://mcp.firecrawl.dev/v2/mcp-oauth，或在客户端配置 Authorization: Bearer <FIRECRAWL_API_KEY>",
+  "本地运行：env FIRECRAWL_API_KEY=fc-YOUR_API_KEY npx -y firecrawl-mcp",
+  "或全局安装：npm install -g firecrawl-mcp",
+  "在 Cursor 的 Features > MCP Servers 中添加 command 为 npx、args 为 [\"-y\", \"firecrawl-mcp\"] 的配置，并填入 FIRECRAWL_API_KEY"
+ ],
+ "summary": "这是一个 MCP 服务端，把 Firecrawl 的网页搜索、抓取、爬取和浏览器交互能力接入兼容 MCP 的 AI 客户端，让模型能获取干净的 Markdown 或结构化数据。适合在 Cursor 等工具中让 AI 代理检索网页、解析文档、整站采集或监控页面变化，也支持云端与自托管部署。",
+ "tagline": "把 Firecrawl 网页抓取能力接入任意 MCP 客户端"
+}

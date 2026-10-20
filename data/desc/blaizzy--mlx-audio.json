@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Apple Silicon 设备上开发语音应用的开发者，以及需要本地化语音处理的研究人员和普通用户。",
+ "date": "2026-10-20",
+ "features": [
+  "针对 Apple Silicon 优化的快速推理",
+  "支持 TTS、STT、STS 和音乐生成的多模型架构",
+  "多语言支持与声音定制/克隆",
+  "可调节的语速控制",
+  "交互式 Web 界面与 3D 音频可视化",
+  "兼容 OpenAI 的 REST API 与量化支持"
+ ],
+ "intro": "MLX-Audio 是一个构建在 Apple MLX 框架上的音频处理库，专为 Apple Silicon 芯片优化，提供快速的文本转语音（TTS）、语音转文本（STT）、语音转语音（STS）以及音乐生成能力。\n\n项目集成了多种模型架构，支持多语言、声音定制与克隆、语速调节等功能，并提供了交互式 Web 界面和兼容 OpenAI 的 REST API。此外，还支持量化（3-bit 到 8-bit）以优化性能，并提供了 Swift 包以便集成到 iOS/macOS 应用中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 pip 安装：pip install mlx-audio",
+  "通过命令行生成语音：mlx_audio.tts.generate --model mlx-community/Qwen3-TTS-12Hz-0.6B-CustomVoice-8bit --text 'Hello, world!' --voice Vivian",
+  "使用 Python API 加载模型并生成语音：from mlx_audio.tts.utils import load_model; model = load_model('mlx-community/Qwen3-TTS-12Hz-0.6B-CustomVoice-8bit'); for result in model.generate('Hello from MLX-Audio!', voice='Vivian', lang_code='English'): print(result.audio.shape)"
+ ],
+ "summary": "MLX-Audio 是一个基于 Apple MLX 框架的音频处理库，专注于在 Apple Silicon 上高效运行文本转语音、语音转文本和语音转语音任务。它集成了多种模型，支持多语言、声音克隆和语速调节，并提供 Web 界面和 API 接口。适合需要在 Mac 或 iOS 设备上本地处理语音的开发者，可用于语音合成、识别及音乐生成等场景。",
+ "tagline": "基于 Apple MLX 的语音处理库，支持 TTS、STT、STS 和音乐生成。"
+}

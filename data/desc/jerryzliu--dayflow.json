@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自动记录工作内容、减少手动记笔记的 Mac 用户，以及关注隐私、愿意自行选择本地或云端 AI 模型的开发者与知识工作者。",
+ "date": "2026-10-20",
+ "features": [
+  "自动时间线：将屏幕活动转化为按时间排列的活动卡片",
+  "上下文感知摘要：结合屏幕内容而非仅应用名称理解工作",
+  "每日站会与每周回顾：提取昨日亮点、今日任务、阻塞项及专注模式",
+  "与工作日志对话：用自然语言查询某天、某周或某年的活动",
+  "干扰追踪与时间线导出：识别分心时段，支持导出 Markdown",
+  "本地优先存储与 AI 提供方可选：支持本地模型或 Gemini、ChatGPT、Claude"
+ ],
+ "intro": "Dayflow 是一款运行在 Mac 上的自动工作日志与时间追踪工具。它通过捕获轻量的屏幕片段，结合你选择的 AI 提供方进行分析，把一天的活动整理成按时间排列的活动卡片，无需手动启动计时器或写笔记。\n\n它强调本地优先与隐私：录屏、时间线和数据库默认保存在本机，AI 分析可选用 Ollama、LM Studio 等本地模型，也可使用 Gemini、ChatGPT 或 Claude。除了自动时间线，它还提供每日站会摘要、每周回顾、干扰追踪、与工作日志对话以及 Markdown 导出等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 Dayflow.dmg，打开后拖入 Applications，并按提示授予 macOS 屏幕与系统音频录制权限",
+  "或使用 Homebrew 安装：brew install --cask dayflow",
+  "按需配置 AI 提供方：本地模型（Ollama、LM Studio）、Gemini API key，或 ChatGPT/Claude 的本地 CLI 工具",
+  "从源码构建：git clone https://github.com/JerryZLiu/Dayflow.git && cd Dayflow && open Dayflow/Dayflow.xcodeproj，在 Xcode 中选择 Dayflow scheme 运行"
+ ],
+ "summary": "Dayflow 是一款 Mac 上的自动工作日志工具，它把屏幕活动整理成按时间排列的时间线，省去手动计时和记笔记的麻烦。项目本地优先、开源，AI 分析可选用本地模型或 Gemini、ChatGPT、Claude。适合想回顾每天做了什么、准备站会更新或做每周复盘，又在意屏幕数据隐私的用户。",
+ "tagline": "Mac 上自动生成工作日志与时间线"
+}

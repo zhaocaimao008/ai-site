@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望以更灵活的方式使用 ChatGPT API 的开发者，以及需要桌面客户端或自托管网页版的普通用户。",
+ "date": "2026-10-20",
+ "features": [
+  "代理绕过 ChatGPT 区域限制",
+  "提示词库与对话文件夹管理",
+  "Token 计数与费用估算",
+  "消息编辑、重排与插入",
+  "对话导入导出及 Google Drive 同步",
+  "支持 Azure OpenAI 端点与多语言界面"
+ ],
+ "intro": "Better ChatGPT 是一个基于 OpenAI ChatGPT API 的聊天界面，提供网页版以及 Windows、macOS、Linux 桌面应用。它通过代理方式帮助用户绕过 ChatGPT 的区域限制，并支持自定义 API 端点。\n\n项目内置提示词库、对话文件夹分类、Token 计数与费用估算、消息编辑与重排、对话导入导出、Google Drive 同步等功能，还支持 Azure OpenAI 端点。用户可以使用自己的 API Key，或借助第三方免费代理服务开始使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 https://bettergpt.chat/ 使用网页版，或从 Releases 页面下载桌面应用",
+  "在 API 菜单中输入从 OpenAI API Keys 页面获取的 API Key",
+  "若所在区域无法访问 ChatGPT，可使用 ChatGPTAPIFree 提供的代理端点",
+  "如需自托管，可 Fork 仓库并通过 Vercel 一键部署，或按 GitHub Pages 步骤部署",
+  "本地运行：克隆仓库后执行 yarn 或 npm install，再运行 yarn dev 或 npm run dev"
+ ],
+ "summary": "Better ChatGPT 是一个围绕 OpenAI ChatGPT API 构建的聊天界面，提供网页版和桌面客户端。它主要解决区域访问限制和原生界面功能有限的问题，支持代理、提示词库、对话文件夹管理、Token 计数、消息编辑与导入导出等操作。适合想用自己 API Key 获得更灵活聊天体验的开发者，以及需要桌面应用或自托管网页版的用户。",
+ "tagline": "一个功能丰富的 ChatGPT 网页与桌面客户端"
+}

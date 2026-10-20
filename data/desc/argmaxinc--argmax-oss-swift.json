@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 iOS 或 macOS 应用中集成离线语音识别、说话人分离或语音合成能力的 Swift 开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "WhisperKit：基于 OpenAI Whisper 的端侧语音转文字，支持多种音频格式",
+  "SpeakerKit：基于 Pyannote 的说话人分离，可输出 RTTM 格式",
+  "TTSKit：基于 Qwen-TTS 的文字转语音，支持自定义音色与实时流式播放",
+  "提供 Swift CLI 命令行工具，可通过 Homebrew 安装 whisperkit-cli",
+  "WhisperKit 支持大文件增量加载，降低长音频转录的内存占用",
+  "WhisperKit 可构建本地 HTTP 服务器，提供 API 端点供客户端调用"
+ ],
+ "intro": "Argmax Open-Source SDK 是一组面向 Apple Silicon 的端侧语音推理框架，用 Swift 编写，包含三个独立库：WhisperKit 负责基于 OpenAI Whisper 的语音转文字，SpeakerKit 基于 Pyannote 做说话人分离，TTSKit 基于 Qwen-TTS 实现文字转语音。三者同属一个 Swift Package，可单独引入，也可通过 ArgmaxOSS 一次性导入。\n\n项目要求 macOS 14.0 或 Xcode 16.0 以上，支持 Swift Package Manager 和 Homebrew 安装。README 提供了各库的快速示例、模型选择建议、命令行工具以及 WhisperKit 的本地服务器用法，方便在 iOS/macOS 应用中集成离线语音能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Xcode 中通过 File > Add Package Dependencies 添加 https://github.com/argmaxinc/argmax-oss-swift，或使用 Homebrew 安装命令行工具：brew install whisperkit-cli",
+  "在 Package.swift 中添加依赖：.package(url: \"https://github.com/argmaxinc/argmax-oss-swift.git\", from: \"0.9.0\")",
+  "在目标依赖中选择 ArgmaxOSS 或单独的 WhisperKit、TTSKit、SpeakerKit",
+  "使用 WhisperKit 转写音频：let pipe = try? await WhisperKit(); let results = try? await pipe?.transcribe(audioPath: \"path/to/audio.wav\")"
+ ],
+ "summary": "这个项目把语音转文字、说话人分离和文字转语音三类端侧语音模型封装成 Swift 框架，让开发者能在 Apple 设备上离线运行语音 AI，而不依赖云端服务。它适合需要在 iOS 或 macOS 应用中集成语音识别、会议说话人区分或语音合成功能的场景，也提供了命令行工具和本地服务器方便调试与调用。",
+ "tagline": "Apple 设备上的端侧语音 AI 工具包"
+}

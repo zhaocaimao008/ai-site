@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合语音识别领域的研究人员和开发者，尤其是希望复现论文结果或基于端到端模型进行实验的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "提供多个研究论文的复现配方和预训练模型",
+  "支持端到端语音识别模型训练与评估",
+  "涵盖在线识别、半监督学习、自训练、无词典识别等方向",
+  "基于 C++ 和 Flashlight 框架构建",
+  "包含数据准备脚本"
+ ],
+ "intro": "wav2letter++ 是 Facebook AI Research 开发的自动语音识别（ASR）工具包，采用 C++ 编写，基于端到端深度学习模型。项目现已迁移并整合到 Flashlight 的 ASR 应用中，后续开发将在 Flashlight 进行。\n\n该仓库包含多个研究论文的复现配方（recipes）和预训练模型，涵盖在线语音识别、半监督学习、自训练、无词典识别以及基于时间深度可分离卷积的序列到序列识别等方向。所有结果复现需使用 Flashlight 0.3.2 或更低版本。\n\n要构建这些配方，需先安装 Flashlight 0.3 分支及其 ASR 应用，然后通过 CMake 编译。数据准备脚本位于 data 目录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Flashlight 0.3 分支及其 ASR 应用",
+  "创建构建目录并编译：mkdir build && cd build && cmake .. && make -j8",
+  "若 Flashlight 或 ArrayFire 安装在非标准路径，在 cmake 时传入 -Dflashlight_DIR 和 -DArrayFire_DIR 参数",
+  "参考 recipes 目录下的配方进行训练和评估",
+  "使用 data 目录中的脚本准备数据"
+ ],
+ "summary": "wav2letter++ 是 Facebook AI Research 推出的端到端语音识别工具包，用 C++ 实现。它提供了多篇研究论文的复现配方和预训练模型，覆盖在线识别、半监督学习、自训练等场景。项目已迁移至 Flashlight，适合语音识别研究人员复现实验或基于端到端模型开展开发。",
+ "tagline": "Facebook AI 研究院的端到端语音识别工具包"
+}

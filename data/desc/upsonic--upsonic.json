@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建 AI Agent 的 Python 开发者，以及希望快速上手自主 Agent 或传统 Agent 系统的技术用户。",
+ "date": "2026-10-20",
+ "features": [
+  "创建自主 AI Agent，文件与 shell 操作限制在 workspace 内",
+  "创建传统 Agent，支持通过 @tool 装饰器添加自定义工具",
+  "集成 MCP 工具，连接外部数据源和服务",
+  "提供预构建的自主 Agent，可快速运行或贡献",
+  "统一 OCR 接口，支持多种 OCR 引擎处理文档"
+ ],
+ "intro": "Upsonic 是一个 Python 框架，用于构建自主 AI Agent 和传统 Agent 系统。它提供 AutonomousAgent 类，可让 Agent 在受限的 workspace 目录内执行文件与 shell 操作，并阻止路径穿越和危险命令。\n\n除了自主 Agent，Upsonic 也支持创建传统 Agent，通过 @tool 装饰器添加自定义工具，并可集成 MCP 工具连接外部数据源。框架还提供统一的 OCR 接口，支持 EasyOCR、RapidOCR、Tesseract、PaddleOCR、DeepSeek OCR 等引擎，用于处理 PDF 等文档。\n\nUpsonic 提供预构建的自主 Agent 集合，社区可贡献自己的 Agent。项目文档包含快速入门、示例和 API 参考，适合需要快速搭建 Agent 应用的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Upsonic：uv pip install upsonic 或 pip install upsonic",
+  "创建自主 Agent：from upsonic import AutonomousAgent, Task; agent = AutonomousAgent(model=\"anthropic/claude-sonnet-4-5\", workspace=\"/path/to/logs\")",
+  "定义任务并执行：task = Task(\"Analyze server logs and detect anomaly patterns\"); agent.print_do(task)",
+  "如需 OCR 功能，安装扩展：uv pip install \"upsonic[ocr]\""
+ ],
+ "summary": "Upsonic 是一个 Python 框架，帮助开发者构建自主 AI Agent 和传统 Agent 系统。它让 Agent 在受限目录内安全执行文件与 shell 操作，支持自定义工具和 MCP 集成，并提供统一 OCR 接口处理文档。适合需要快速搭建 Agent 应用或实验自主 Agent 的开发者。",
+ "tagline": "用 Python 构建自主 AI Agent 的框架"
+}

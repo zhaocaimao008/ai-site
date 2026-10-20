@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想把电子书转为有声书来听的普通用户，以及需要批量处理 EPUB 的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "将 EPUB 电子书转换为 M4B 有声书",
+  "使用 Kokoro-82M 高质量语音合成模型",
+  "支持多种语言和发音人选择（含中文）",
+  "提供命令行和图形界面两种操作方式",
+  "可调整语速（0.5 到 2.0 倍）",
+  "支持 CUDA GPU 加速和交互式章节选择"
+ ],
+ "intro": "Audiblez 是一个 Python 命令行工具，可以把 .epub 格式的电子书转换成 .m4b 有声书文件。它使用 Kokoro-82M 文本转语音模型，该模型只有 82M 参数，支持包括中文在内的多种语言，输出语音较为自然。\n\n项目提供命令行和图形界面两种使用方式。命令行会先生成按章节划分的 WAV 文件，再合并为完整的 m4b 文件；图形界面则方便不熟悉命令行的用户操作。默认在 CPU 上运行，也可以通过 --cuda 选项使用 GPU 加速。\n\n用户可以选择不同的发音人、调整语速（0.5 到 2.0 倍），还能交互式挑选要转换的章节。在 T4 GPU 上转换约 16 万字符的书籍大约需要 5 分钟，在 M2 MacBook Pro 的 CPU 上大约需要 1 小时。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：Ubuntu/Debian 运行 sudo apt install ffmpeg espeak-ng，Mac 运行 brew install ffmpeg espeak-ng",
+  "安装 Audiblez：pip install audiblez",
+  "转换电子书：audiblez book.epub -v af_sky",
+  "如需图形界面，安装额外依赖后运行 audiblez-ui"
+ ],
+ "summary": "Audiblez 解决的是把 EPUB 电子书变成可听有声书的需求。它借助 Kokoro-82M 语音合成模型，将电子书按章节生成音频并合并为 M4B 文件，支持中文等多种语言和多个发音人。适合想把自己收藏的电子书转成有声书来听的用户，也适合需要批量处理 EPUB 的开发者。工具提供命令行和图形界面，可在 CPU 或 CUDA GPU 上运行。",
+ "tagline": "用 Kokoro TTS 把 EPUB 电子书转成有声书"
+}

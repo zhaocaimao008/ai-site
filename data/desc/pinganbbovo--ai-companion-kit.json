@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想为 QQ 机器人添加记忆和拟人化交互的开发者，以及希望让 AI 控制安卓手机的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "记忆按人存储，跨会话和群聊共享对话流",
+  "拟人化发送：模拟打字时长、自动分条、条间停顿",
+  "唤醒策略：根据 @、关键词、拍一拍等条件决定是否回复",
+  "角色卡系统：定义 AI 人设并生成 system prompt",
+  "日记功能：AI 自动撰写每日日记，支持手动添加",
+  "phone-mcp：34 个 MCP 工具，通过 adb 控制安卓手机"
+ ],
+ "intro": "AI Companion Kit 包含两个可独立使用的工具：ai-companion 和 phone-mcp。ai-companion 为 AI 提供记忆账本、角色卡、拟人化发送和唤醒策略，使其在 QQ 聊天中能记住不同的人、打字节奏更像真人，并判断何时该说话。phone-mcp 则通过 MCP 协议和 adb 控制安卓手机，支持点按、滑动、输入、截图等操作。两者结合，可以构建一个住在 QQ 里、还能操作手机的 AI 助手。项目提供一键安装脚本和从零开始的教程，适合不同技术背景的用户尝试。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "cd packages/companion && cp config.example.json config.json（填写 API key 和 QQ 号）",
+  "cp role.example.md role.md（修改角色卡）",
+  "npm run check（角色卡体检）",
+  "node examples/demo.js（离线 demo）",
+  "npm start（需要 OneBot 实现，见包内 README）"
+ ],
+ "summary": "AI Companion Kit 提供两个独立工具：ai-companion 让 QQ 聊天机器人拥有按人存储的记忆、拟人化的打字节奏和判断是否该说话的唤醒策略；phone-mcp 则通过 MCP 协议和 adb 让 AI 能够点按、滑动、输入和截图，从而操作安卓手机。两者可以分开使用，也可以组合成一个既能记住你又能帮你操作手机的 AI 助手。适合想给聊天机器人增加人味，或让 AI 控制手机的用户。",
+ "tagline": "让 AI 拥有记忆与手机操作能力的开源工具包"
+}

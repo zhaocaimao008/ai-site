@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合研究图像/视频生成与修复算法的研究人员，以及希望在 PyTorch 上快速试验 AIGC 模型的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "支持文生图与扩散模型，包括 Stable Diffusion、ControlNet、DreamBooth、GLIDE 等",
+  "覆盖图像修复、超分辨率、抠图、inpainting、上色等图像处理任务",
+  "支持视频插帧与视频超分辨率等视频编辑任务",
+  "提供 DreamBooth LoRA 微调、xFormers 加速与多帧渲染视频生成",
+  "基于 MMEngine、MMCV 统一接口，提供模型库与易用 API"
+ ],
+ "intro": "MMagic 是 OpenMMLab 项目下的开源图像与视频编辑、生成工具箱，基于 PyTorch 实现，由 MMEditing 和 MMGeneration 合并演进而来，并统一到 OpenMMLab 2.0 的 MMEngine、MMCV 框架之上。\n\n它覆盖的任务范围较广，包括文生图与扩散模型、图像修复与增强、超分辨率、抠图、inpainting、图像上色，以及视频插帧、视频超分等。README 中列出的模型有 Stable Diffusion、ControlNet、DreamBooth、Disco Diffusion、GLIDE、EG3D、NAFNet、Restormer、SwinIR、InstColorization 等，并提供模型库和较易使用的 API。\n\n对扩散模型，项目还提供 DreamBooth LoRA 微调、基于 ControlNet 的可控生成、xFormers 加速、多帧渲染视频生成，以及通过 DiffuserWrapper 调用基础模型与采样策略等支持。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "MMagic 是 OpenMMLab 体系下的图像与视频生成、编辑工具箱，把扩散模型文生图、图像修复与超分、抠图、上色、视频插帧等任务整合到统一的 PyTorch 框架中。它适合需要复现或试验 Stable Diffusion、ControlNet、DreamBooth 等模型的研究者和开发者，也提供模型库和 API 方便快速上手。",
+ "tagline": "OpenMMLab 出品的图像与视频生成、编辑 AIGC 工具箱"
+}

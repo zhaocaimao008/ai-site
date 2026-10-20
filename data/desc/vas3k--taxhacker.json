@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合自由职业者、独立开发者和小型企业，尤其是注重数据隐私、希望自托管并自动化记账的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "AI 自动识别收据、发票和 PDF，提取日期、金额、商家、行项目等数据",
+  "支持多货币自动转换，包括 170+ 法币和 14 种加密货币，基于历史汇率",
+  "可自定义分类、项目和字段，并编写自定义 AI 提示词提取特定信息",
+  "兼容 OpenAI、Google Gemini、Mistral 及本地 LLM（Ollama、LM Studio 等）",
+  "提供高级过滤、全文搜索和 CSV 导出功能，支持批量操作",
+  "Docker 自托管部署，数据完全由用户掌控"
+ ],
+ "intro": "TaxHacker 是一个自托管的 AI 记账应用，面向自由职业者、独立开发者和小型企业。它通过上传收据、发票或 PDF 照片，利用 LLM 自动识别并提取商品名称、金额、日期、商家、税费等关键信息，并存入结构化的类 Excel 数据库。\n\n应用支持自动货币转换（包括加密货币），基于交易日期获取历史汇率，覆盖 170 多种货币和 14 种加密货币。用户可以自定义分类、项目和字段，并编写自定义 AI 提示词来提取特定信息。\n\nTaxHacker 兼容 OpenAI、Google Gemini、Mistral 以及本地 LLM（如 Ollama、LM Studio 等），支持 Docker 自托管部署，确保数据隐私和完全控制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载 docker-compose.yml 文件：curl -O https://raw.githubusercontent.com/vas3k/TaxHacker/main/docker-compose.yml",
+  "启动服务：docker compose up",
+  "访问应用并配置 LLM 提供商（如 OpenAI、Gemini 或本地 LLM）",
+  "上传收据或发票图片/PDF，开始自动识别和记账"
+ ],
+ "summary": "TaxHacker 是一个自托管的 AI 记账工具，帮助自由职业者和小型企业自动从收据、发票中提取金额、日期、商家等信息，并存入结构化数据库。它支持多货币转换、自定义分类和字段，兼容多种 LLM（包括本地模型），适合注重数据隐私、希望减少手动录入的用户。",
+ "tagline": "自托管 AI 记账应用，自动识别票据并提取数据"
+}

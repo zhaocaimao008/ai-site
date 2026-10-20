@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用 Claude Code、Cursor、Codex 等 AI 编程代理，希望让代理记住项目上下文、按固定流程工作的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "Engram 持久记忆：跨会话保存项目决策，减少重复解释",
+  "ODD 工作流：按理解、风险与可恢复性区分大小任务，大任务保留功能文档",
+  "支持 17 种 AI 编程代理的原生配置，不锁定单一代理",
+  "提供精选 skills、MCP servers 与 personas 等可选项",
+  "可选的有界代码审查（bounded review）"
+ ],
+ "intro": "Gentle-AI 是一个用 Go 编写的开源工具，用来配置你已经在用的 AI 编程代理，例如 Claude Code、Cursor、OpenCode、Codex、Pi 等，README 中列出了 17 种集成，并强调不锁定单一代理。它针对的问题是：代理写完代码后就忘记上下文，对项目没有积累，也难以证明自己做了什么。\n\n项目通过几个可选组件来补足这些短板：Engram 让代理把学到的决策记录下来，下次会话先查记忆再问你；ODD（Organic Driven Development）按理解程度、风险和可恢复性给任务分级，小任务直接内联执行，大任务保留一份可恢复的功能文档；此外还提供精选 skills、MCP servers、personas 和可选的有界审查。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Gentle-AI 面向已经在用 AI 编程代理的开发者，解决代理每次会话都从零开始、不记得项目决策、工作过程难以追溯的问题。它通过持久记忆、按任务大小分级的工作流以及可选的审查环节，为 Claude Code、Cursor、Codex 等 17 种代理提供统一的配置方式，适合希望让代理持续积累上下文并按流程推进任务的场景。",
+ "tagline": "为现有 AI 编程代理提供记忆、工作流与可验证记录"
+}

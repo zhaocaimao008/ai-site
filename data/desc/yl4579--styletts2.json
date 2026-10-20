@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合语音合成方向的研究人员和开发者，以及希望基于预训练模型进行微调或训练自定义 TTS 模型的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "使用扩散模型对风格进行隐变量建模，无需参考语音即可生成合适风格",
+  "采用 WavLM 等大型语音语言模型作为判别器进行对抗训练",
+  "支持单说话人和多说话人 TTS 训练与推理",
+  "提供预训练模型，包括文本对齐器、音高提取器和 PL-BERT",
+  "包含针对新说话人的微调脚本",
+  "在 LJSpeech、VCTK 和 LibriTTS 数据集上验证了合成效果"
+ ],
+ "intro": "StyleTTS 2 是一个文本转语音（TTS）模型，通过扩散模型对风格进行隐变量建模，并结合大型语音语言模型（如 WavLM）作为判别器进行对抗训练，以提升合成语音的自然度。与前一版本不同，它无需参考语音即可为文本生成合适的风格，实现高效的隐扩散。\n\n该模型在单说话人 LJSpeech 数据集上的表现超过人类录音，在多说话人 VCTK 数据集上与人类录音相当；在 LibriTTS 数据集上训练后，其零样本说话人适应能力优于之前公开的模型。项目提供了训练和推理代码、预训练模型以及针对新说话人的微调脚本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/yl4579/StyleTTS2.git && cd StyleTTS2",
+  "安装依赖：pip install -r requirements.txt",
+  "安装 phonemizer 和 espeak（用于运行 demo）：pip install phonemizer && sudo apt-get install espeak-ng",
+  "下载并解压 LJSpeech 数据集到 data 文件夹，并上采样至 24 kHz",
+  "第一阶段训练：accelerate launch train_first.py --config_path ./Configs/config.yml",
+  "第二阶段训练：python train_second.py --config_path ./Configs/config.yml"
+ ],
+ "summary": "StyleTTS 2 是一个文本转语音模型，利用扩散模型对风格建模，并用大型语音语言模型做对抗训练，从而提升合成语音的自然度。它无需参考语音即可为文本生成合适风格，支持单说话人和多说话人场景，并提供预训练模型和微调脚本。适合语音合成研究者与开发者训练或微调 TTS 模型。",
+ "tagline": "基于风格扩散与对抗训练的文本转语音模型"
+}

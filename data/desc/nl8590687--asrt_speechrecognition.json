@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想训练或部署中文语音识别模型的开发者，以及需要以 API 方式接入语音转文字能力的应用开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "基于 DCNN、LSTM、注意力机制与 CTC 的中文语音识别模型",
+  "支持训练、评估和单条音频文件预测",
+  "提供 HTTP 与 gRPC 两种 API 服务端及对应客户端测试脚本",
+  "内置多个公开中文语音数据集配置（THCHS30、ST-CMDS、AIShell-1 等）",
+  "提供 Docker 镜像，可仅用 CPU 运行推理服务",
+  "附带多语言客户端 SDK（Windows、Python3、Golang、Java）"
+ ],
+ "intro": "ASRT 是一个用 Python 实现的中文语音识别系统，基于 TensorFlow.keras 构建，结合深度卷积神经网络、长短时记忆网络、注意力机制和 CTC 完成声学建模。语音模型输入最长 16 秒的音频，输出汉语拼音序列；语言模型再将拼音序列转换为汉字文本。\n\n项目提供训练、测试、单文件预测脚本，以及 HTTP 和 gRPC 两种 API 服务端，方便将识别能力集成到其他应用。README 中列出了 THCHS30、ST-CMDS、AIShell-1 等多个公开中文语音数据集及下载方式，并说明当前最佳模型在测试集上拼音正确率约为 85%。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/nl8590687/ASRT_SpeechRecognition.git",
+  "进入项目目录并创建数据目录，将下载的数据集解压进去：mkdir /data/speech_data && tar zxf <数据集压缩文件名> -C /data/speech_data/",
+  "下载默认数据集的拼音标签文件：python download_default_datalist.py",
+  "安装依赖：pip install -r requirements.txt",
+  "开始训练：python3 train_speech_model.py；或启动 HTTP API 服务：python3 asrserver_http.py"
+ ],
+ "summary": "ASRT 是一个基于深度学习的中文语音识别开源项目，用 TensorFlow.keras 实现声学模型与语言模型，可将中文音频转写为拼音再转为汉字。项目提供训练、评估、单文件预测脚本，以及 HTTP 和 gRPC 两种 API 服务端，并列出多个公开中文语音数据集。适合想自行训练中文语音识别模型，或通过 API 为应用接入语音转文字能力的开发者。",
+ "tagline": "基于深度学习的中文语音识别系统"
+}

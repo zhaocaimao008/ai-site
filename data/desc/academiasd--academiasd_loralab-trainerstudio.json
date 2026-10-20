@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在消费级 NVIDIA 显卡上训练图像或视频模型 LoRA 的开发者与创作者，也适合需要统一管理多个训练器、或通过 RunPod 云端训练的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "统一启动器管理多个 LoRA 训练器，一次安装共用同一 Python 环境",
+  "4-bit NF4 量化加载模型，最低 4 GB 显存即可训练部分模型",
+  "数据集管理、自动打标、实时预览、精确步数续训与一键导出 ComfyUI",
+  "支持图像 LoRA 与 edit LoRA（前后对比），覆盖角色、物体、风格",
+  "局域网远程访问，可在其他设备上传数据集、下载 LoRA",
+  "提供 RunPod 云模板，无本地高性能 GPU 时可在云端训练"
+ ],
+ "intro": "AcademiaSD LoRAlab Trainer Studio 把多个 AcademiaSD LoRAlab 训练器整合到一个安装包、一个 Python 环境和同一个启动器里。它面向消费级 NVIDIA 显卡，通过 4-bit NF4 量化加载模型，并在预缓存阶段只运行一次文本编码器和 VAE，让显存尽量用于训练。\n\n项目支持 Qwen-Image、FLUX、Krea、Z-Image、SDXL（含 Pony、Illustrious、NoobAI）、LTX 视频模型、MiniMax-H3 等多种图像与视频模型，可训练角色、物体、风格 LoRA，部分模型还支持 edit LoRA（前后对比）。每个训练器共用同一套 Web 界面，包含数据集管理、自动打标、实时预览、精确步数续训和一键导出到 ComfyUI。\n\n安装后通过批处理脚本启动，支持 Windows、Linux 和 RunPod 云端部署，也能从局域网其他设备上传数据集、下载训练结果。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在目标文件夹中执行 git clone https://github.com/AcademiaSD/AcademiaSD_LoRAlab-TrainerStudio.git，或下载 ZIP 解压",
+  "双击 Install_LoRAlab-TrainerStudio.bat 完成安装（AMD GPU 使用 Install_LoRAlab-TrainerStudio_AMD.bat，实验性）",
+  "双击 Start_LoRAlab-TrainerStudio.bat，点击要使用的训练器卡片",
+  "在界面中填写项目名称、选择数据集文件夹，可选创建 Captions，然后依次点击 Iniciar Pre-Caché、Iniciar / Reanudar、Send to Models",
+  "需要更新时双击 Update_LoRAlab-TrainerStudio.bat，保留已有模型、项目和设置"
+ ],
+ "summary": "这个项目把多个 LoRA 训练器整合到同一个安装环境和启动器中，让用户在消费级 NVIDIA 显卡上训练 Qwen-Image、FLUX、SDXL、LTX 视频模型等多种图像与视频模型的 LoRA。它通过 4-bit NF4 量化和预缓存降低显存占用，并提供统一 Web 界面管理数据集、打标、预览和续训，适合想低成本本地训练或通过 RunPod 云端训练 LoRA 的创作者与开发者。",
+ "tagline": "在消费级显卡上统一训练多种图像与视频模型的 LoRA"
+}

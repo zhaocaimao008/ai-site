@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合注重数据隐私、希望用本地模型做深度调研的研究人员、开发者，以及需要自建研究工具的技术用户。",
+ "date": "2026-10-20",
+ "features": [
+  "使用多个 LLM 和搜索引擎进行自动化的深度研究，并生成带引用的报告",
+  "支持本地模型（llama.cpp、Ollama）和云端 LLM（Google 等）",
+  "接入 arXiv、PubMed、SearXNG 等 10 多个搜索源，并可检索私有文档",
+  "数据库采用 SQLCipher 加密，数据保存在本地",
+  "提供 LangGraph Agent 等研究策略，兼顾快速查询与复杂分析",
+  "支持 Docker、Docker Compose 和 pip 多种部署方式"
+ ],
+ "intro": "Local Deep Research 是一个 AI 研究助手，可以完全在本地运行，也可以连接云端 LLM。它围绕一个复杂问题自动执行多轮搜索，把网页、学术论文和用户私有文档中的信息整合成带引用的报告。\n\n项目支持 llama.cpp、Ollama、Google 等多种 LLM 后端，以及 arXiv、PubMed、SearXNG 等 10 多个搜索引擎，数据库使用 SQLCipher 加密，强调数据隐私和可控性。README 提到在单张 RTX 3090 上运行 Qwen3.6-27B 时，SimpleQA 准确率约 95%。\n\n提供 Docker、Docker Compose 和 pip 三种安装方式，启动后通过浏览器访问 Web 界面使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Docker 方式：先运行 Ollama 容器并拉取模型：docker run -d -p 11434:11434 --name ollama ollama/ollama && docker exec ollama ollama pull gpt-oss:20b",
+  "运行 SearXNG 容器：docker run -d -p 8080:8080 --name searxng searxng/searxng",
+  "启动 Local Deep Research 容器（Linux）：docker run -d --network host --name local-deep-research --volume \"deep-research:/data\" -e LDR_DATA_DIR=/data -e LDR_SEARCH_ENGINE_WEB_SEARXNG_DEFAULT_PARAMS_INSTANCE_URL=http://localhost:8080 localdeepresearch/local-deep-research",
+  "或使用 Docker Compose：curl -O https://raw.githubusercontent.com/LearningCircuit/local-deep-research/main/docker-compose.yml && docker compose up -d",
+  "启动后约 30 秒访问 http://localhost:5000"
+ ],
+ "summary": "Local Deep Research 是一个可本地部署的 AI 研究助手，能围绕复杂问题自动进行多轮搜索，整合网页、学术论文和私有文档，输出带引用的研究报告。它支持本地与云端多种 LLM 及 10 多个搜索源，数据库加密存储，适合注重隐私、希望自建调研工具的研究者和开发者。",
+ "tagline": "本地运行、可加密的 AI 深度研究助手"
+}

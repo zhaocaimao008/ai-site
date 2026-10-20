@@ -1,0 +1,22 @@
+{
+ "ai_related": false,
+ "audience": "适合需要减少 Swift 项目中重复样板代码的 iOS/macOS 开发者，尤其是编写单元测试或维护大型代码库的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "基于 SwiftSyntax 解析 Swift 代码并生成样板代码",
+  "通过模板自定义生成逻辑，支持多种常见场景",
+  "自动生成协议 Mock 类，减少手写测试代码",
+  "支持 Equatable、Hashable、Codable 等协议的自动实现",
+  "提供命令行工具，可集成到构建流程或 pre-commit 钩子"
+ ],
+ "intro": "Sourcery 是一个基于 Apple SwiftSyntax 构建的 Swift 代码生成器，用于自动生成重复的样板代码。它通过模板机制扩展语言抽象，让开发者可以描述生成规则，从而减少手写重复代码。\n\n项目最常见的用途包括生成 Equatable/Hashable 实现、枚举 case 与计数、Lenses、Mocks 与 Stubs、LinuxMain、装饰器、持久化与高级 Codable 支持、属性级 diffing 等。Sourcery 提供命令行工具，支持通过二进制、Homebrew、CocoaPods、Mint 等方式安装，并可作为 SPM 插件或 pre-commit 钩子集成到开发流程中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Homebrew 安装：brew install sourcery",
+  "或从 release 页面下载预编译二进制并解压运行 bin/sourcery",
+  "在项目中编写模板文件，定义需要生成的代码逻辑",
+  "运行 sourcery 命令生成代码"
+ ],
+ "summary": "Sourcery 是一个 Swift 代码生成工具，用来消除项目中重复的样板代码。它基于 SwiftSyntax 解析源码，允许开发者用模板描述生成规则，自动产出 Mock、Equatable/Hashable 实现、枚举辅助代码等。适合 iOS 和 macOS 开发者在日常开发与测试中减少手写重复逻辑，保持代码一致性。",
+ "tagline": "Swift 元编程工具，自动生成样板代码"
+}

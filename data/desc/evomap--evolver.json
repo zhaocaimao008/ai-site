@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望系统化管理 Agent 经验、让 prompt 调整可复用可审计的开发者，以及需要为 Agent 接入自我进化能力的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "基于 GEP 协议，将 Agent 经验编码为 Genes 和 Capsules",
+  "每次进化生成 EvolutionEvent，提供可审计的进化轨迹",
+  "CLI 支持单次运行、review 人工确认和 loop 后台循环三种模式",
+  "自动扫描 memory 目录中的日志和信号，匹配内置资产池",
+  "可选连接 EvoMap 网络，解锁技能共享、worker 池和进化排行榜",
+  "提供 SKILL.md，支持与 Codex、Claude Code 等 Agent 运行时集成"
+ ],
+ "intro": "Evolver 是一个由 GEP 协议驱动的 AI Agent 自我进化引擎。它把原本零散的 prompt 调整转化为可审计、可复用的进化资产，用 Genes（基因）和 Capsules（胶囊）来编码 Agent 的经验，而不是依赖临时提示词或冗长的技能文档。每次运行都会在 memory 目录中写入 EvolutionEvent，形成完整的审计轨迹。\n\n项目提供 CLI 工具，安装后可在任意 git 仓库中运行，扫描日志、选择匹配的 Gene 或 Capsule，并输出 GEP prompt 供 Agent 使用。它支持单次运行、人工确认的 review 模式以及后台持续循环，也可选择连接 EvoMap 网络以使用技能共享、worker 池和进化排行榜等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：npm install -g @evomap/evolver",
+  "验证安装：evolver --help",
+  "进入任意已初始化 git 的项目目录，运行 evolver 执行单次进化",
+  "如需人工确认，运行 evolver --review；如需后台持续循环，运行 evolver --loop",
+  "可选：在当前工作目录创建 .env，配置 A2A_HUB_URL 和 A2A_NODE_ID 以连接 EvoMap 网络"
+ ],
+ "summary": "Evolver 是一个面向 AI Agent 的自我进化引擎，它把零散的 prompt 调整变成可审计、可复用的进化资产，用 Genes 和 Capsules 编码 Agent 经验。适合希望系统化管理 Agent 行为、让每次调整都有记录可追溯的开发者，也适合需要为 Agent 接入持续进化能力的团队。",
+ "tagline": "基于 GEP 协议、可审计的 AI Agent 自我进化引擎"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合经常吃麦当劳、希望自动领券比价省钱的开发者与普通用户，也适合想体验 MCP 客户端接入 AI 助手的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "可领优惠券一键全领，点餐自动比价出最低价组合，积分临期主动提醒",
+  "一句话点餐：根据预算、口味、热量等条件推荐套餐并计算价格",
+  "白嫖日历：营销活动、每日抽奖机会、限时免费主动提醒",
+  "每日巡检脚本 patrol.mjs，一次跑完积分临期、可领券、今日活动与抽奖机会",
+  "多组合权威核价比价脚本 compare.mjs，按券后价排序标出最优解",
+  "巨无霸指数脚本 bigmac-index.mjs，采集全国 8 城市中心门店实时价格"
+ ],
+ "intro": "麦门全能管家是一个基于麦当劳中国官方 MCP 开发的全能点餐助手 Skill，适配 ZCode、WorkBuddy 等支持 Streamable HTTP 的 MCP 客户端。它把领券、比价、点餐推荐、每日巡检和巨无霸指数整合成对话式工作流，用户用一句话描述需求即可获得方案。\n\n项目包含 SKILL.md 定义的三条工作流（省钱、点餐、白嫖）以及零依赖命令行工具，即使不安装 Agent 也能通过 Node 脚本调用 MCP 工具。所有涉及支付的写操作都要求用户确认，实际交易仍在麦当劳官方 App 完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开 open.mcd.cn/mcp，手机号登录后进入控制台激活并复制 MCP Token",
+  "在支持 Streamable HTTP 的 MCP 客户端中配置 mcp.mcd.cn 地址和 Bearer Token",
+  "克隆仓库并将 SKILL.md 安装到 AI 客户端 Skill 目录，或直接使用命令行",
+  "命令行方式：git clone 仓库后执行 echo \"MCD_MCP_TOKEN=<你的Token>\" > .env",
+  "运行 node scripts/mcd.mjs tools 列出全部 MCP 工具，或 node scripts/patrol.mjs 执行每日巡检"
+ ],
+ "summary": "麦门全能管家是一个基于麦当劳中国官方 MCP 的 AI 助手 Skill，帮助用户自动领取优惠券、按权威接口比价、用一句话完成点餐推荐，并提醒积分临期和每日抽奖机会。它适合经常吃麦当劳、想省去手动翻券和比价麻烦的人，也提供零依赖命令行工具供不安装 Agent 的用户直接调用。",
+ "tagline": "基于麦当劳官方 MCP 的 AI 点餐与省钱助手"
+}

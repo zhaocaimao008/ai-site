@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要多语言语音合成能力的开发者、研究人员，以及希望本地部署 TTS 的普通用户。",
+ "date": "2026-10-20",
+ "features": [
+  "支持英语（多种口音）、西班牙语、法语、中文、日语和韩语",
+  "中文发音人支持中英文混合朗读",
+  "可在 CPU 上实时推理",
+  "提供 Python API、Web UI 和 CLI 使用方式",
+  "支持在自定义数据集上训练模型"
+ ],
+ "intro": "MeloTTS 是由 MIT 与 MyShell.ai 联合开发的高质量多语言文本转语音库。它支持英语（含美式、英式、印度、澳大利亚等多种口音）、西班牙语、法语、中文、日语和韩语，其中中文发音人还支持中英文混合朗读。\n\n该项目基于 VITS、VITS2、Bert-VITS2 等开源工作实现，提供 Python API、Web UI 和 CLI 等多种使用方式，并支持在自定义数据集上训练。其推理速度足以在 CPU 上实时运行，适合需要本地部署或快速集成语音合成能力的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考 docs/quick_use.md 在线试用，无需安装",
+  "参考 docs/install.md 在本地安装并使用",
+  "通过 Python API 或 HuggingFace 模型卡片调用模型",
+  "参考 docs/training.md 在自定义数据集上训练"
+ ],
+ "summary": "MeloTTS 是一个多语言文本转语音库，支持英语多种口音以及西班牙语、法语、中文、日语和韩语，中文还能中英混读。它提供 Python API、Web UI 和 CLI，并可在 CPU 上实时推理，适合需要本地部署语音合成或快速集成多语言 TTS 能力的开发者与普通用户。",
+ "tagline": "多语言高质量文本转语音库，支持中英混读与CPU实时推理"
+}

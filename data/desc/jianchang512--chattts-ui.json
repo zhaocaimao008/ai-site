@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要本地部署语音合成服务的开发者，以及希望以图形界面使用 ChatTTS 的普通用户。",
+ "date": "2026-10-20",
+ "features": [
+  "本地网页界面，输入文字即可合成语音",
+  "支持中英文、数字和符号混杂的文本合成",
+  "提供 HTTP API 接口，方便集成到其他应用",
+  "支持 Windows 预打包版、源码部署和 Docker 容器部署",
+  "支持固定音色文件（csv 或 pt 格式）",
+  "可通过 .env 配置服务地址、端口和计算设备"
+ ],
+ "intro": "ChatTTS-ui 为 ChatTTS 语音合成模型提供了一个本地网页界面，用户可以在浏览器中输入文字，合成为语音，支持中英文、数字和符号混杂的文本。项目同时提供 HTTP API 接口，方便其他程序调用。\n\n该项目支持 Windows 预打包版、Linux/macOS/Windows 源码部署以及 Docker 容器部署。首次启动时会自动下载模型，优先从 modelscope 下载，失败则从 huggingface 下载。用户可以通过 .env 文件修改服务地址和端口，并选择 CPU、CUDA 或 MPS 设备。\n\n从 0.92 版本起，支持通过 csv 或 pt 格式的固定音色文件，将文件放入 speaker 文件夹即可使用。API 接口接受 text、voice、prompt 等参数，返回合成音频文件的路径和 URL。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 预打包版：从 Releases 下载压缩包，解压后双击 app.exe",
+  "Linux 源码部署：配置 Python 3.9-3.11 环境，克隆仓库并创建虚拟环境",
+  "安装依赖：pip3 install -r requirements.txt",
+  "安装 PyTorch：pip3 install torch==2.7.1 torchaudio==2.7.1（如需 CUDA 加速，使用对应 CUDA 版本命令）",
+  "启动服务：python3 app.py，浏览器访问 http://127.0.0.1:9966"
+ ],
+ "summary": "ChatTTS-ui 为 ChatTTS 语音合成模型提供了一个本地网页界面和 API 接口，让用户无需编写代码即可在浏览器中将文字转为语音，也方便开发者通过 HTTP 请求集成语音合成能力。适合需要本地部署、支持中英文混杂文本合成，并希望以图形界面或 API 方式使用 ChatTTS 的场景。",
+ "tagline": "ChatTTS 的本地网页界面与 API 服务"
+}

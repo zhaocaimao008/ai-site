@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想体验或二次开发多模型 AI 客户端的开发者，以及需要私有部署 AI 应用的个人或团队。",
+ "date": "2026-10-20",
+ "features": [
+  "集成主流大语言模型，支持 AI 聊天与协作",
+  "集成图像生成模型，支持文生图等场景",
+  "基于 Flutter 构建，覆盖移动端、macOS 和 Windows",
+  "客户端、服务端和 Docker 部署代码全部开源",
+  "支持自托管和私有部署"
+ ],
+ "intro": "AIdea 是一个用 Flutter 构建的跨平台应用，把主流大语言模型和图像生成模型整合到同一个客户端中。项目代码完全开源，客户端、服务端和 Docker 部署方案分别放在独立仓库，方便开发者自行搭建或二次开发。\n\n应用支持聊天、协作和图像生成等场景，覆盖 GPT、通义千问、文心一言、Stable Diffusion 等模型。README 提到默认 main 分支是正在开发的 v2 版本，如果需要自托管，应切换到 v1.x 分支。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆客户端仓库：git clone https://github.com/mylxsw/aidea.git",
+  "如需自托管，切换到 v1.x 分支：git checkout v1.x",
+  "参考 README 中的开发环境教程配置 Flutter 前端和 Golang 服务端",
+  "服务端部署可参考 aidea-server 仓库的部署文档"
+ ],
+ "summary": "AIdea 是一个用 Flutter 写的开源客户端，把多家大语言模型和图像生成模型集中到一个应用里，用户可以在同一界面完成聊天、协作和图片生成。项目同时开源了客户端、服务端和 Docker 部署方案，适合想直接体验多模型 AI 应用，或希望自行部署、二次开发的开发者。",
+ "tagline": "集成主流大语言模型与图像生成模型的 Flutter 开源应用"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要本地部署代码生成模型的开发者、研究人员，以及希望通过 IDE 插件提升编程效率的程序员。",
+ "date": "2026-10-20",
+ "features": [
+  "基于 ChatGLM2-6B 架构，经过 600B 代码数据预训练",
+  "支持 Python、C++、Java、JavaScript、Go、Rust 等多种编程语言",
+  "支持中英文输入，最大 8192 序列长度",
+  "量化后仅需 6GB 显存，支持轻量级本地化部署",
+  "提供 VS Code、JetBrains 等 IDE 插件，支持代码补全、翻译、解释等",
+  "提供 Gradio DEMO 和 FastAPI 服务示例"
+ ],
+ "intro": "CodeGeeX2 是 CodeGeeX 系列的第二代多语言代码生成模型，基于 ChatGLM2-6B 架构并加入代码预训练。它支持中英文输入，最大序列长度 8192，量化后仅需 6GB 显存即可本地部署。\n\n在 HumanEval-X 评测集的六种编程语言上，CodeGeeX2-6B 相比一代模型均有大幅提升，Python Pass@1 达到 35.9%，超过规模更大的 StarCoder-15B。模型权重对学术研究开放，商业使用需申请。\n\n配套的 CodeGeeX 插件支持 VS Code、JetBrains 等 IDE，提供代码补全、翻译、解释等功能，并支持超过 100 种编程语言。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 transformers 库：pip install transformers",
+  "使用 transformers 加载模型：from transformers import AutoTokenizer, AutoModel; tokenizer = AutoTokenizer.from_pretrained(\"THUDM/codegeex2-6b\", trust_remote_code=True); model = AutoModel.from_pretrained(\"THUDM/codegeex2-6b\", trust_remote_code=True, device='cuda').eval()",
+  "构造 prompt 并生成代码：prompt = \"# language: Python\\n# write a bubble sort function\\n\"; inputs = tokenizer.encode(prompt, return_tensors=\"pt\").to(model.device); outputs = model.generate(inputs, max_length=256, top_k=1); print(tokenizer.decode(outputs[0]))",
+  "启动 Gradio DEMO：python ./demo/run_demo.py",
+  "启动 FastAPI 服务：python ./demo/fastapicpu.py"
+ ],
+ "summary": "CodeGeeX2 是一个多语言代码生成模型，基于 ChatGLM2-6B 架构并经过代码数据预训练，支持中英文输入和多种编程语言。它适合需要本地部署代码生成能力的开发者，量化后仅需 6GB 显存即可运行。配套 IDE 插件提供代码补全、翻译和解释等功能，帮助提升编程效率。",
+ "tagline": "基于 ChatGLM2 架构的多语言代码生成模型"
+}

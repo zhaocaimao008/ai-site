@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要自托管 RAG 检索服务、构建知识库问答或复杂研究型应用的开发者与团队。",
+ "date": "2026-10-20",
+ "features": [
+  "多模态文档摄入，支持 .txt、.pdf、.json、.png、.mp3 等格式",
+  "混合搜索：语义检索与关键词检索结合，使用 reciprocal rank fusion",
+  "知识图谱：自动抽取实体与关系",
+  "Agentic RAG：推理代理与检索集成，支持带引用的 RAG 回答",
+  "Deep Research API：多步推理，从知识库或互联网获取信息",
+  "用户与访问管理：完整的认证与集合系统"
+ ],
+ "intro": "R2R 是一个面向生产环境的 AI 检索系统，核心是围绕 RESTful API 构建的 Retrieval-Augmented Generation（RAG）能力。它支持多模态内容摄入，可解析 .txt、.pdf、.json、.png、.mp3 等格式，并提供语义与关键词结合的混合搜索、知识图谱自动抽取实体与关系，以及完整的文档管理和用户权限体系。\n\n除了基础检索与 RAG，R2R 还提供 Deep Research API，通过多步推理从知识库或互联网获取信息，为复杂问题生成带上下文的回答。项目提供 Python 和 JavaScript SDK，支持轻量模式快速启动，也可用 Docker 以完整模式自托管。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install r2r",
+  "export OPENAI_API_KEY=sk-...",
+  "python -m r2r.serve",
+  "from r2r import R2RClient; client = R2RClient(base_url=\"http://localhost:7272\")",
+  "client.documents.create(file_path=\"/path/to/file\")"
+ ],
+ "summary": "R2R 是一个面向生产环境的 AI 检索系统，以 RESTful API 提供 RAG 能力。它支持多模态文档摄入、混合搜索、知识图谱和文档管理，并内置 Agentic RAG 与 Deep Research API，可从知识库或互联网多步推理生成回答。适合需要自托管检索服务、构建知识库问答或复杂研究型应用的开发者。",
+ "tagline": "带 RESTful API 的 Agentic RAG 检索系统"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地或自有应用中运行扩散模型推理、需要跨平台和低依赖部署的开发者，以及关注 C/C++ 集成与性能调优的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "纯 C/C++ 实现，基于 ggml，无外部依赖，轻量易部署",
+  "支持 SD、FLUX、Qwen Image、Z-Image、Wan、LTX 等多种图像与视频扩散模型",
+  "支持 CPU、CUDA、Vulkan、Metal、OpenCL、SYCL 后端",
+  "支持 LoRA、ControlNet、IP-Adapter、PhotoMaker、LCM 等扩展",
+  "读取 .ckpt、.safetensors、.gguf 权重，并可将权重转换为 .gguf 或 .safetensors",
+  "提供 VAE tiling、Flash Attention 等显存优化手段"
+ ],
+ "intro": "stable-diffusion.cpp 基于 ggml 用纯 C/C++ 实现扩散模型推理，工作方式与 llama.cpp 类似，不依赖外部库，体积轻量。项目支持 CPU、CUDA、Vulkan、Metal、OpenCL、SYCL 等多种后端，可在 Linux、macOS、Windows 以及通过 Termux 的 Android 上运行。\n\n模型覆盖范围较广：图像生成方面包括 SD1.x/2.x、SDXL、SD3/3.5、FLUX 系列、Qwen Image、Z-Image、Chroma、PixArt 等；图像编辑方面支持 FLUX.1-Kontext-dev、Qwen Image Edit 等；视频方面支持 Wan2.1/2.2、LTX-2.3/2.5、HunyuanVideo 1.5 等。此外还支持 LoRA、ControlNet（SD 1.5）、IP-Adapter、PhotoMaker、LCM、ESRGAN 放大和 TAESD 解码。\n\n权重可读取 .ckpt、.safetensors 和 .gguf 格式，并提供转换模式。项目仍在活跃开发中，API 和命令行选项可能频繁变动。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 releases 页面下载预编译二进制，或参考 docs/build.md 从源码构建",
+  "下载模型权重，例如：curl -L -O https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors",
+  "运行生成命令：./bin/sd-cli -m ../models/v1-5-pruned-emaonly.safetensors -p \"a lovely cat\"",
+  "更多命令行参数见 examples/cli/README.md"
+ ],
+ "summary": "stable-diffusion.cpp 用纯 C/C++ 实现扩散模型推理，基于 ggml，不依赖外部库，可在 CPU、CUDA、Vulkan、Metal 等后端上运行。它支持 SD、FLUX、Qwen Image、Wan、LTX 等图像与视频模型，适合需要在本地或自有程序中跨平台部署生成模型的开发者。",
+ "tagline": "纯 C/C++ 实现的扩散模型推理引擎"
+}

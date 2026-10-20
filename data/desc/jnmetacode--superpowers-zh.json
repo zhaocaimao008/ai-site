@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 AI 编程工具的中文开发者，尤其是希望让 AI 在写代码前先澄清需求、按方法论工作的个人或团队。",
+ "date": "2026-10-20",
+ "features": [
+  "完整汉化 superpowers 的 15 个 skills，技术术语保留英文",
+  "新增 4 个中国原创 skills，覆盖国内开发场景",
+  "支持 26 款 AI 编程工具，包括 Claude Code、Cursor、Gemini CLI、Qoder、CodeBuddy 等",
+  "npx superpowers-zh 一条命令自动识别项目中的工具并安装",
+  "适配 Gitee、Coding、极狐 GitLab、CNB 等国内 Git 平台与 CI/CD 示例",
+  "提供中文 Git 提交规范、中文文档排版规则和适配国内团队文化的代码审查风格"
+ ],
+ "intro": "superpowers-zh 是开源项目 superpowers 的中文社区版，将上游的 AI 编程 skills 框架完整翻译为中文，并新增了面向中国开发者的原创 skills。它提供一套系统化的工作方法论，让 AI 编程工具在动手写代码前先澄清需求、给出方案，而不是直接生成代码。\n\n项目共包含 21 个 skills（15 个翻译 + 4 个中国原创 + 2 个上游历史保留），支持 Claude Code、Cursor、Copilot CLI、Gemini CLI、Windsurf、Kiro、Qoder、CodeBuddy、CodeArts 等 26 款 AI 编程工具。相比英文上游按工具分别安装的方式，本项目提供 npx superpowers-zh 一条命令自动识别项目中的工具并完成安装。\n\n此外，项目还适配了 Gitee、Coding、极狐 GitLab、CNB 等国内 Git 平台，并提供中文 Git 提交规范、中文文档排版规则以及适配国内团队沟通文化的代码审查风格。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在项目目录下运行 npx superpowers-zh，自动识别项目中的 AI 编程工具并安装",
+  "如果自动识别失败，使用 npx superpowers-zh --tool <name> 显式指定工具名称",
+  "安装完成后，在对应的 AI 编程工具中调用 skills 开始使用"
+ ],
+ "summary": "superpowers-zh 是 superpowers 的中文社区版，把一套 AI 编程 skills 框架翻译成中文，并补充了面向国内开发场景的原创 skills。它解决的是 AI 编程工具拿到需求就直接写代码、缺少澄清和方案确认的问题，通过 skills 让 AI 先提问再动手。适合使用 Claude Code、Cursor、Gemini CLI 等工具的中文开发者，也适配 Gitee、Coding 等国内平台。",
+ "tagline": "superpowers 中文增强版，21 个 AI 编程 skills 覆盖 26 款工具"
+}

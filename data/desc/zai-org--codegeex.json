@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究代码生成模型的研究者、需要在本地部署代码生成能力的开发者，以及希望使用 AI 编程助手的普通程序员。",
+ "date": "2026-10-20",
+ "features": [
+  "多语言代码生成：支持 Python、C++、Java、JavaScript、Go 等主流语言",
+  "跨语言代码翻译：一键将代码片段转换为目标语言",
+  "IDE 编程助手：提供 VS Code 和 JetBrains 扩展，支持代码补全、解释、摘要",
+  "开源模型权重：代码和权重公开，支持昇腾和 NVIDIA 平台推理",
+  "HumanEval-X 基准：820 道多语言编程题，含测试与解答"
+ ],
+ "intro": "CodeGeeX 是一个拥有 130 亿参数的多语言代码生成模型，在超过 20 种编程语言的大规模代码语料上预训练。它最初基于 Mindspore 实现并在昇腾 910 上训练，同时提供了基于 Megatron-LM 的 PyTorch 兼容版本，方便在 GPU 平台上使用。\n\n模型支持多语言代码生成、跨语言代码翻译，并可作为 VS Code 和 JetBrains 等 IDE 的编程助手，提供代码补全、解释、摘要等功能。项目还发布了 HumanEval-X 基准，包含 5 种编程语言的 820 道人工编写题目，用于评估多语言代码生成与翻译。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：Python 3.7+ / CUDA 11+ / PyTorch 1.10+ / DeepSpeed 0.6+",
+  "克隆仓库并安装：git clone git@github.com:THUDM/CodeGeeX.git && cd CodeGeeX && pip install -e .",
+  "或使用 Docker：docker pull codegeex/codegeex:latest",
+  "申请并下载模型权重（约 26GB），可使用 aria2c 下载",
+  "在 GPU 上运行推理，或安装 VS Code / JetBrains 扩展使用"
+ ],
+ "summary": "CodeGeeX 是一个多语言代码生成模型，能根据上下文生成 Python、C++、Java 等语言的代码，并支持跨语言代码翻译。它提供 VS Code 和 JetBrains 扩展，可作为编程助手完成补全、解释和摘要。项目开源了模型权重和推理代码，适合研究代码生成的研究者或希望本地部署代码辅助工具的开发者。",
+ "tagline": "支持20+编程语言的开源代码生成模型"
+}

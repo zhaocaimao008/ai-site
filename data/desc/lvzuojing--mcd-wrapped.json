@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合正在对接麦当劳 MCP 的开发者，以及希望查看个人消费数据或麦当劳公共数据的普通用户。",
+ "date": "2026-10-20",
+ "features": [
+  "一键探测麦当劳 MCP 全部 35 个 tool 的真实返回，自动串联参数",
+  "生成个人年度消费年报，包含订单、消费、积分、奖品等统计",
+  "生成麦当劳数据全景报告，涵盖 158 个餐品营养、营销日历、抽奖池等",
+  "抽奖 EV 精算器，基于真实奖池和消耗进行蒙特卡洛模拟",
+  "支持粤语、闽南语、普通话等方言语音播报报告",
+  "严格只读，不调用任何写操作工具，保障账户安全"
+ ],
+ "intro": "M-CODE WRAPPED 是基于麦当劳 MCP 开放能力的工具箱，包含四个模块：MCP 能力探测器、个人年度消费年报、麦当劳数据全景报告和抽奖 EV 精算器。项目还支持粤语、闽南语等方言语音播报报告。\n\n探测器可一键调用全部只读 tool，记录真实返回形态，并自动串联参数；年报和全景报告分别生成 HTML 页面，展示消费统计和公共数据；抽奖精算器用蒙特卡洛模拟估算期望值。项目只读官方数据，不调用任何写操作工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "export MCD_MCP_TOKEN=你的token",
+  "python3 scripts/explore.py  # 探测 MCP 能力，输出 out/mcp-explorer.md",
+  "python3 scripts/collect.py && python3 scripts/build_report.py  # 生成个人年报",
+  "python3 scripts/public_data.py && python3 scripts/build_panorama.py  # 生成全景报告",
+  "python3 scripts/lottery_ev.py  # 运行抽奖 EV 精算"
+ ],
+ "summary": "M-CODE WRAPPED 是一个围绕麦当劳 MCP 开放接口构建的工具箱，主要解决开发者在对接时不清楚接口实际返回内容的问题，同时把获取到的数据整理成个人年度消费年报和麦当劳公共数据全景报告。项目还提供抽奖期望值模拟和方言语音播报功能，适合需要调试麦当劳 MCP 的开发者，以及想查看自己消费统计或餐品营养信息的普通用户。",
+ "tagline": "麦当劳 MCP 工具箱：探测接口、生成年报与全景报告"
+}

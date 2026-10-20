@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要本地化、隐私优先的创意工作者、设计师和开发者，以及希望替代 Canva 进行 AI 辅助内容创作的个人或团队。",
+ "date": "2026-10-20",
+ "features": [
+  "一键生成图像和视频，支持 GPT-4o、Midjourney、VEO3、Kling 等模型",
+  "Magic Canvas 和 Magic Video：无需提示词，通过草图或箭头指示让 AI 生成内容",
+  "无限画布和视觉故事板，支持实时协作",
+  "智能 AI Agent 系统，可通过聊天插入对象、转移风格、控制逻辑",
+  "支持本地 ComfyUI 和云端模型，可完全离线或混合部署",
+  "内置媒体和提示词库，跨平台支持 Windows 和 macOS"
+ ],
+ "intro": "Jaaz 是一个开源的多模态创意助手，定位为 Canva 和 Manus 的替代品，强调隐私保护并支持本地运行。它提供无限画布和视频创作界面，用户可以通过简单的草图、箭头指示或自然语言描述，让 AI 理解并生成图像或视频。项目支持多种模型，包括 GPT-4o、Midjourney、VEO3、Kling 等，并可与本地 ComfyUI 或云端 API 配合使用。\n\nJaaz 的核心功能包括一键生成图像和视频、Magic Canvas 和 Magic Video 的无提示词创作、无限画布视觉故事板、智能 AI Agent 系统以及灵活的部署选项。它支持完全离线或混合模式（Ollama + APIs），内置媒体和提示词库，并可在 Windows 和 macOS 上运行。项目注重隐私安全，数据保留在本地，适合需要商业用途的个人或团队。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 https://jaaz.app/ 下载应用，或从 GitHub Releases 页面获取安装包",
+  "对于 Linux 或本地构建，确保 Python 版本 >=3.12",
+  "克隆仓库：git clone https://github.com/11cafe/localart",
+  "进入 react 目录：cd react，然后运行 npm install --force 和 npx vite build",
+  "进入 server 目录：cd ../server，运行 pip install -r requirements.txt，然后 python main.py"
+ ],
+ "summary": "Jaaz 是一个开源的多模态创意助手，旨在替代 Canva 和 Manus，注重隐私并支持本地运行。它通过无限画布和 AI 代理，让用户用草图、箭头或自然语言生成图像和视频，无需编写复杂提示词。适合需要离线或混合部署的创意工作者和开发者，支持多种模型和跨平台使用。",
+ "tagline": "开源多模态创意助手，本地可用的 Canva 替代品"
+}

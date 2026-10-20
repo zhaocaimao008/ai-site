@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Mac 上本地、离线运行 Stable Diffusion 或 FLUX.2 Klein 进行图像生成的用户，尤其是 Apple Silicon Mac 用户。",
+ "date": "2026-10-20",
+ "features": [
+  "完全离线本地生成图像，不上传任何数据",
+  "支持 Core ML Stable Diffusion 模型，可利用 Neural Engine 加速",
+  "支持 FLUX.2 Klein 模型，通过 Metal GPU 原生加速",
+  "生成的 PNG 图像内嵌生成参数，兼容 AUTOMATIC1111 工具和 Civitai",
+  "内置图库，支持导入、保存和同步",
+  "使用 SwiftUI 构建的原生 macOS 界面"
+ ],
+ "intro": "Mochi Diffusion 是一款原生 macOS 应用，用于在本地生成图像。它基于 Apple 的 Core ML Stable Diffusion 实现，并借助 Iris 管线在 Metal GPU 上运行 FLUX.2 Klein 模型，以提升性能并降低内存占用。\n\n应用完全离线运行，不收集任何数据或遥测。生成的图像以 PNG 格式保存，并附带生成参数，可被 AUTOMATIC1111 兼容工具和 Civitai 读取。内置图库支持导入、保存和同步。\n\n使用前需要准备 Core ML 格式的 Stable Diffusion 模型或 FLUX.2 Klein 模型，并放入指定的模型文件夹。Stable Diffusion 模型需转换为 Core ML 格式，首次使用时 Neural Engine 可能需要编译缓存。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并安装 Mochi Diffusion 最新版本",
+  "准备模型：下载或转换 Core ML Stable Diffusion 模型，或下载 FLUX.2 Klein 模型",
+  "将模型放入默认模型文件夹（位于用户主目录下的 MochiDiffusion/models/），可在设置中自定义位置",
+  "在模型文件夹内为每个模型创建子文件夹，并按 README 中的目录结构放置模型文件",
+  "启动应用，选择模型即可开始生成图像"
+ ],
+ "summary": "Mochi Diffusion 是一个在 Mac 上本地运行 Stable Diffusion 和 FLUX.2 Klein 的图像生成应用。它利用 Apple 的 Core ML 和 Metal 加速，让用户无需联网即可在 Apple Silicon Mac 上生成图片，适合注重隐私、希望离线使用 AI 绘图的用户。",
+ "tagline": "在 Mac 上原生运行 Stable Diffusion 与 FLUX.2 Klein"
+}

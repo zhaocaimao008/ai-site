@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合 Blender 用户、3D 艺术家和设计师，希望在创作流程中直接使用 AI 生成纹理和图像。",
+ "date": "2026-10-20",
+ "features": [
+  "通过文本提示生成纹理、概念艺术和背景资产",
+  "使用“Seamless”选项创建无缝平铺纹理",
+  "使用“Project Dream Texture”和深度图对整个场景进行纹理投影",
+  "使用 Cycles 渲染通道对动画进行重风格化",
+  "在本地机器上运行模型，无需依赖网络服务",
+  "支持 AI 放大，将低分辨率生成结果放大 4 倍"
+ ],
+ "intro": "Dream Textures 是一个 Blender 插件，将 Stable Diffusion 集成到 Blender 中，让用户可以直接在 Blender 内使用文本提示生成纹理、概念艺术和背景资产。它支持无缝纹理生成、基于深度的场景纹理投影、动画重风格化等功能，并且可以在本地机器上运行模型，避免网络延迟。\n\n该插件兼容 CUDA 和 Apple Silicon GPU，建议使用超过 4GB 的显存。如果硬件不支持，还可以通过 DreamStudio 进行云端处理。安装方式简单，下载最新发布版本并按照说明操作即可。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载最新发布版本：https://github.com/carson-katri/dream-textures/releases/latest",
+  "按照发布页面中的说明进行安装",
+  "在 Blender 中启用插件，并根据需要配置模型和设置",
+  "使用文本提示生成图像或纹理，或参考 wiki 中的使用指南"
+ ],
+ "summary": "Dream Textures 是一个 Blender 插件，将 Stable Diffusion 集成到 Blender 中，让用户可以直接在 Blender 内通过文本提示生成纹理、概念艺术和背景资产。它支持无缝纹理、深度投影和动画重风格化，适合 3D 艺术家和设计师在创作流程中快速迭代。",
+ "tagline": "在 Blender 中内置 Stable Diffusion 的插件"
+}

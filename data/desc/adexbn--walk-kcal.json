@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在楼下纠结“这顿吃什么”的普通用户，以及想通过 MCP 或 Skill 集成热量决策能力的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "根据步行距离动态计算卡路里额度",
+  "列出附近餐厅及推荐菜，并标注是否在预算内",
+  "内置麦当劳官方营养数据（158 条）和高德地图周边餐厅",
+  "支持 Skill、Bot、MCP 三种接入形式",
+  "中餐热量分层估算，并披露误差范围或“算不出”",
+  "数据源可插拔，可接入自定义门店或菜品数据"
+ ],
+ "intro": "walk-kcal 是一个把步行距离换算成卡路里预算的吃饭决策工具。你设定一个热量额度，它根据你愿意走多远增加额度（每走 80 米约多 4 kcal），然后列出附近餐厅和推荐菜，并标注每道菜是否在你的预算内。\n\n项目内置麦当劳官方营养数据和高德地图周边餐厅数据，支持 Skill、Bot、MCP 三种接入形式，输出一张竖屏长图。中餐热量采用分层估算，并明确标注误差范围或“算不出”，而不是强行给出一个数字。\n\n数据源可插拔，可以只启用麦当劳、只启用周边餐厅，或接入自己的数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/adexbn/walk-kcal && cd walk-kcal",
+  "python walkkcal/render.py  # 出图（内置场景，无需 Key）",
+  "start demo\\explore.html  # Windows 打开离线可交互 demo（macOS 用 open demo/explore.html）",
+  "python entry/mcp_server.py  # 以 MCP Server 方式运行（stdio 传输）"
+ ],
+ "summary": "walk-kcal 把“愿意走多远”变成“这顿还能吃多少卡”，帮你在楼下选餐厅时快速判断哪道菜在热量预算内。它结合麦当劳官方营养数据与高德地图周边餐厅，用步行距离动态调整额度，并标注每道菜是否吃得下。适合日常吃饭决策，也适合开发者通过 MCP 或 Skill 集成类似能力。",
+ "tagline": "用步行距离换算卡路里额度的吃饭决策工具"
+}

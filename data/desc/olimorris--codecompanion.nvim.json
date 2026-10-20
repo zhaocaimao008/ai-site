@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合习惯 Neovim、希望在编辑器内直接使用 LLM 和 AI Agent 辅助编码的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "在 Neovim 中与多家 LLM 服务对话，支持自定义 adapter",
+  "通过 ACP 和 MCP 接入 Claude Code、Codex 等 AI Agent",
+  "内联代码变换、代码创建与重构",
+  "代码审查，可对 Agent 生成的代码评论并批准或拒绝",
+  "斜杠命令、Agents/Tools、Workflows 与内置提示词库",
+  "支持多会话并行、图片和 PDF 输入，异步执行"
+ ],
+ "intro": "CodeCompanion.nvim 是一个 Neovim 插件，把大语言模型和 AI Agent 接入编辑器，让用户在 Vim 的操作习惯下完成对话、代码生成与重构。它内置对 Anthropic、OpenAI、Gemini、GitHub Copilot、DeepSeek、Ollama、OpenRouter 等多家模型服务的支持，也可以通过自定义 adapter 接入其他服务。\n\n除了聊天缓冲区，插件还支持 Agent Client Protocol 与 Model Context Protocol，可对接 Claude Code、Codex、Gemini CLI、Goose、OpenCode 等命令行 Agent，并提供代码审查、内联变换、斜杠命令、Agents/Tools、Workflows、提示词库、多会话并行以及图片和 PDF 输入等能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装插件及其依赖 nvim-lua/plenary.nvim 和 nvim-treesitter/nvim-treesitter",
+  "在配置中设置插件 opts，并按需配置模型 adapter 与 API 凭证",
+  "运行 :checkhealth codecompanion 检查依赖是否安装正确",
+  "查阅官方文档了解聊天缓冲区、内联变换等具体用法"
+ ],
+ "summary": "CodeCompanion.nvim 是一个 Neovim 插件，目标是把大语言模型和 AI Agent 直接带进 Vim 式编辑流程。它支持多家模型服务，也能通过 ACP、MCP 对接 Claude Code、Codex 等命令行 Agent，并提供聊天、内联改写、代码审查、提示词库等能力。适合不想离开 Neovim、又希望用 AI 辅助写代码和重构的开发者。",
+ "tagline": "在 Neovim 里用 LLM 和 AI Agent 写代码"
+}

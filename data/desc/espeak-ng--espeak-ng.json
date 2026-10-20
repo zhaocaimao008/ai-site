@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在资源受限环境或多语言场景下集成语音合成功能的开发者，以及使用屏幕阅读器等辅助工具的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "支持超过 100 种语言和口音，提供多种可调整特征的语音",
+  "采用共振峰合成，程序与数据总体积仅数 MB",
+  "支持将文本输出为 WAV 文件，并支持部分 SSML 和 HTML",
+  "可作为 MBROLA 双音素语音的后端前端，或将文本转为音素代码",
+  "提供命令行、共享库和 Windows SAPI5 等多种集成方式",
+  "与 eSpeak 命令行选项及 C API 保持兼容"
+ ],
+ "intro": "eSpeak NG 是一个紧凑的开源文本转语音合成器，支持 Linux、Windows、Android 等平台，覆盖超过 100 种语言和口音。它基于 Jonathan Duddington 创建的 eSpeak 引擎，采用共振峰合成方法，因此程序和数据体积很小，语音清晰且适合高速朗读，但自然度不如基于录音的合成器。\n\n项目提供命令行程序、共享库、Windows SAPI5 版本等多种使用形式，支持输出 WAV 文件、部分 SSML 和 HTML，也可作为 MBROLA 后端的前端，或将文本转换为音素代码。它用 C 编写，与 eSpeak 命令行选项和 C API 保持兼容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从源码构建：参考 docs/building.md 中的编译说明",
+  "命令行朗读文件或标准输入中的文本：espeak-ng \"Hello, world\"",
+  "将文本合成为 WAV 文件：espeak-ng -w output.wav \"Hello\"",
+  "在程序中通过共享库调用，参考 docs/integration.md"
+ ],
+ "summary": "eSpeak NG 是一个体积小巧的开源文本转语音引擎，支持超过一百种语言和口音，可在 Linux、Windows、Android 等平台运行。它采用共振峰合成，语音清晰且适合高速朗读，但自然度不及基于录音的合成器。项目提供命令行、共享库和 SAPI5 等使用方式，适合需要多语言、低资源占用的语音合成集成场景。",
+ "tagline": "支持超百种语言的开源语音合成引擎"
+}

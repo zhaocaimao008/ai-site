@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在浏览网页时直接调用本地 AI 模型、注重隐私且不想依赖云端服务的开发者和普通用户。",
+ "date": "2026-10-20",
+ "features": [
+  "在任意网页打开侧边栏，与本地 AI 模型对话",
+  "提供类似 ChatGPT 的 Web UI，在独立标签页中交互",
+  "与当前网页内容对话，针对页面提问",
+  "支持 Ollama、Chrome AI（Gemini Nano）和 OpenAI API 兼容端点",
+  "提供键盘快捷键，可快速打开侧边栏或 Web UI",
+  "数据本地存储，不收集个人数据"
+ ],
+ "intro": "Page Assist 是一个开源的浏览器扩展，为本地运行的 AI 模型提供侧边栏和 Web UI。安装后可以在任意网页打开侧边栏，直接与模型对话，也可以像使用 ChatGPT 网页版一样在独立标签页中交互。\n\n它支持与当前网页内容对话，针对页面内容提问。本地 AI 提供方包括 Ollama、Chrome AI（Gemini Nano）以及兼容 OpenAI API 的端点（如 LM Studio、llamafile 等）。扩展支持 Chrome、Brave、Edge、Firefox 等 Chromium 和 Firefox 系浏览器。\n\n所有数据存储在浏览器本地，扩展不会收集个人数据，仅在用户使用分享功能时与服务器通信，且该功能可在设置中关闭。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Bun 和 Ollama（或其他兼容 OpenAI API 的本地端点）",
+  "克隆仓库：git clone https://github.com/n4ze3m/page-assist.git && cd page-assist",
+  "安装依赖：bun install",
+  "构建扩展：bun run build",
+  "在 Chrome 中打开 chrome://extensions，启用开发者模式，点击“加载已解压的扩展程序”并选择 build 目录"
+ ],
+ "summary": "Page Assist 是一个浏览器扩展，让你在浏览网页时直接调用本地运行的 AI 模型。它提供侧边栏和独立 Web UI 两种交互方式，还能针对当前网页内容提问。支持 Ollama、Chrome AI 及兼容 OpenAI API 的本地端点，数据保存在浏览器本地，适合注重隐私、希望离线使用 AI 辅助阅读和问答的用户。",
+ "tagline": "用本地 AI 模型辅助网页浏览的浏览器扩展"
+}

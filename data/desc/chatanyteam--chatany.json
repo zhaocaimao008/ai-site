@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自建一个同时提供 AI 对话和 AI 绘画网页服务的开发者或团队，尤其是需要 Midjourney 和 StabilityAI 图像生成能力的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "包含 ChatGPT-Next-Web 的全部对话功能",
+  "接入 StabilityAI，支持 Stable Image Ultra、Core 和 Stable Diffusion 3",
+  "接入 Midjourney（非官方），支持 Imagine、Upscale、Variation、Zoom、Pan、Reroll、Describe、Blend 等操作",
+  "支持 Midjourney 区域重绘（Vary Region）和参考图片",
+  "提供 Docker、Vercel、Railway、Sealos 和手动部署方式",
+  "可通过 CODE 环境变量设置页面访问密码"
+ ],
+ "intro": "ChatAny 是一个基于 ChatGPT-Next-Web 开发的聚合式 AI 网页服务，目标是让用户通过一次部署同时获得对话和绘画能力。项目已停止维护，README 推荐转向同团队的新项目 AQBot。\n\n它保留了 ChatGPT-Next-Web 的全部功能，并额外接入 StabilityAI 和 Midjourney（非官方）两类图像生成服务。StabilityAI 支持 Stable Image Ultra、Stable Image Core 和 Stable Diffusion 3；Midjourney 支持 Imagine、Upscale、Variation、Zoom、Pan、Reroll、Describe、Blend 等操作，以及区域重绘和参考图片。\n\n部署方式包括 Docker、Vercel、Railway、Sealos 和手动构建。使用 Midjourney 功能前需要自行搭建 midjourney-proxy 服务或使用第三方中转 API，并通过 MJ_PROXY_URL 和 MJ_PROXY_KEY 配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Docker 运行：docker run -d -p 3000:3000 -e OPENAI_API_KEY=\"sk-xxx\" -e BASE_URL=\"https://api.openai.com\" -e MJ_PROXY_URL=\"\" -e MJ_PROXY_KEY=\"\" licoy/chatany:latest",
+  "或手动部署：clone 项目后执行 npm install",
+  "执行 npm run build 构建项目",
+  "执行 npm run start 启动服务（开发模式可用 npm run dev）",
+  "部署后点击左上方的绘画，选择需要使用的绘画模型"
+ ],
+ "summary": "ChatAny 是一个可自建的 AI 聚合网页服务，在 ChatGPT-Next-Web 的对话功能基础上，增加了 StabilityAI 和 Midjourney 图像生成能力。它适合想用一个站点同时提供 AI 对话和 AI 绘画的开发者或团队，支持 Docker、Vercel 等方式部署。使用 Midjourney 功能前需要自行准备 midjourney-proxy 服务或第三方中转 API。项目已停止维护，README 推荐转向新项目 AQBot。",
+ "tagline": "一键部署 ChatGPT 与多种 AI 绘画服务的聚合网页"
+}

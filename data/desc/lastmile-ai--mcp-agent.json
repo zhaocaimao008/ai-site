@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望基于 MCP 构建 AI Agent 的 Python 开发者，以及需要将 Agent 工作流投入生产环境、要求持久化和可恢复执行的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "完整实现 MCP 协议，自动管理 MCP 服务器连接生命周期",
+  "内置多种可组合的 Agent 工作流模式（map-reduce、orchestrator、evaluator-optimizer、router 等）",
+  "通过 Temporal 支持持久化执行，可暂停、恢复和故障恢复",
+  "提供 FastMCP 兼容 API 创建 MCP 服务器，支持将 Agent 暴露为 MCP 服务器",
+  "支持 OAuth、Sampling、Elicitation、Roots 等 MCP 高级特性",
+  "提供 CLI 工具，支持项目脚手架和部署"
+ ],
+ "intro": "mcp-agent 是一个 Python 框架，用于基于 Model Context Protocol（MCP）构建 AI Agent。它完整实现了 MCP 协议，并负责管理 MCP 服务器连接的生命周期，让开发者专注于 Agent 逻辑。\n\n框架内置了 Anthropic《Building Effective Agents》中描述的可组合工作流模式，如 map-reduce、orchestrator、evaluator-optimizer、router 等，支持将这些模式串联使用。同时，它可以通过 Temporal 实现持久化执行，在不修改 API 的情况下让 Agent 支持暂停、恢复和故障恢复。\n\n此外，mcp-agent 还提供 FastMCP 兼容的 API 来创建 MCP 服务器，甚至可以将 Agent 本身暴露为 MCP 服务器，并支持部署到云端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 uvx mcp-agent init 脚手架创建项目",
+  "在 mcp_agent.secrets.yaml 中配置 LLM API key，或通过环境变量设置",
+  "编写 Agent 代码，连接 MCP 服务器并附加 LLM（如 OpenAIAugmentedLLM）",
+  "运行 Agent 进行测试",
+  "使用 uvx mcp-agent deploy my-agent 部署"
+ ],
+ "summary": "mcp-agent 是一个 Python 框架，帮助开发者基于 Model Context Protocol 构建 AI Agent。它完整实现 MCP 协议并管理服务器连接，内置多种可组合的工作流模式，还能借助 Temporal 实现持久化执行。适合需要将 Agent 工作流投入生产、要求可恢复和可扩展的开发者。",
+ "tagline": "基于 MCP 的可组合 Agent 构建框架"
+}

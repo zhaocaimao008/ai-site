@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在自有环境中部署多智能体系统、并对审批和审计有要求的开发团队，也适合希望接入本地或国内模型的 TypeScript 开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "三种运行模式：单智能体 runAgent()、显式流水线 runTasks()、目标驱动的团队规划 runTeam()",
+  "持久化人工审批：在计划、任务或工具调用前暂停，重启后可从审核点继续",
+  "可验证运行日志：记录模型输入、工具调用与结果，verifyRun() 离线校验一致性",
+  "治理角色声明：定义必需角色与执行顺序，并单独检查 governanceConclusion",
+  "多模型接入：内置 Anthropic、OpenAI、Gemini、DeepSeek 等适配器，支持 Ollama、vLLM 等本地服务",
+  "自托管与出网策略：无遥测、无托管控制平面，可配置 offline 或 allowlist 出网策略"
+ ],
+ "intro": "OMA（Open Multi-Agent）是一个用 TypeScript 编写的自托管智能体运行时，用于协调多个智能体、在关键步骤插入人工审批，并在事后离线检查运行记录。它不依赖托管控制平面，也不发送遥测数据，密钥和模型都由使用者自己掌握。\n\n项目提供三种运行方式：runAgent() 运行单个智能体，runTasks() 执行显式任务流水线，runTeam() 则根据目标在运行时自动规划任务图。内置 Anthropic、OpenAI、Azure OpenAI、Bedrock、Gemini 等云端适配器，也支持 DeepSeek、豆包、混元、MiniMax 等国内模型，并可通过 baseURL 接入 Ollama、vLLM、llama-server 等本地服务。\n\n在治理方面，OMA 支持持久化审批：在计划执行、任务分派或工具调用前暂停等待人工确认，重启后可从已审核内容继续。运行日志可记录模型输入、工具调用和结果，verifyRun() 能离线校验记录的一致性；还可以声明必需角色及其执行顺序，并单独检查治理结论是否满足。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Node.js 20 或更高版本（生产环境建议使用当前维护的 LTS 版本）",
+  "运行 npm create oma-app@latest my-oma 脚手架，交互式选择模板和运行时，并执行无需 API key 的本地演示",
+  "或在现有后端安装：npm install @open-multi-agent/core",
+  "设置 OPENAI_API_KEY 后，用 OpenMultiAgent 创建团队并调用 runTeam() 运行示例"
+ ],
+ "summary": "OMA 是一个自托管的 TypeScript 多智能体运行时，解决的是智能体协作过程中缺乏人工把关和运行记录难以核查的问题。它支持单智能体、显式流水线和目标驱动的团队规划三种模式，可在计划或工具调用前暂停等待审批，并记录运行日志供离线校验。适合需要在自有环境中部署多智能体、并接入云端或本地模型的开发团队。",
+ "tagline": "可自托管、带审批与审计的 TypeScript 多智能体运行时"
+}

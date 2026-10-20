@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 LLM API 构建应用、希望降低调用成本并提升响应速度的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "支持精确匹配缓存，相同问题直接返回缓存结果",
+  "支持相似搜索缓存，语义相近的问题也能命中缓存",
+  "提供 OpenAI API 适配器，可无缝替换原有调用",
+  "集成 LangChain 和 llama_index",
+  "提供 Docker 服务端，支持多语言使用",
+  "可通过 temperature 参数控制是否跳过缓存"
+ ],
+ "intro": "GPTCache 是一个用于存储 LLM 响应的语义缓存库。当应用流量增长时，重复或相似的查询会带来可观的 API 调用费用和较慢的响应速度，GPTCache 通过缓存机制减少对 LLM 的直接请求。\n\n它支持精确匹配和相似匹配两种缓存方式，可集成 OpenAI、LangChain、llama_index 等，并提供 Docker 服务端以便其他语言使用。项目默认只安装基础依赖，需要额外功能时会自动安装相关库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 GPTCache：pip install gptcache",
+  "设置 OpenAI API Key 环境变量：export OPENAI_API_KEY=YOUR_API_KEY",
+  "初始化缓存：from gptcache import cache; cache.init(); cache.set_openai_key()",
+  "使用 gptcache.adapter.openai 替换原有 openai 调用即可启用缓存"
+ ],
+ "summary": "GPTCache 是一个为 LLM 查询设计的语义缓存库，旨在解决高频调用大模型 API 带来的高成本和慢响应问题。它通过缓存相同或语义相似的查询结果，减少对 LLM 的直接请求，适合聊天机器人、问答系统等需要处理大量重复或相近问题的应用场景。项目提供 OpenAI 适配器，并可与 LangChain、llama_index 集成，也支持通过 Docker 服务端供其他语言使用。",
+ "tagline": "为 LLM 查询构建语义缓存，降低 API 成本并加速响应"
+}

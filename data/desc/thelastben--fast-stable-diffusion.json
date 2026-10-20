@@ -1,0 +1,20 @@
+{
+ "ai_related": true,
+ "audience": "适合想在云端免费或低成本体验 Stable Diffusion、ComfyUI 和 DreamBooth 的开发者与爱好者。",
+ "date": "2026-10-20",
+ "features": [
+  "提供 Colab-ComfyUI Notebook，在 Colab 中启动 ComfyUI",
+  "提供 Colab-AUTOMATIC1111 Notebook，在 Colab 中运行 A1111 WebUI",
+  "提供 Colab-Dreambooth Notebook，用于 DreamBooth 训练",
+  "基于 Google Colab 环境，无需本地 GPU"
+ ],
+ "intro": "这个项目提供一组 Google Colab Notebook，让用户无需本地显卡即可运行 Stable Diffusion 相关工具。仓库包含三个主要入口：Colab-ComfyUI、Colab-AUTOMATIC1111 和 Colab-Dreambooth，分别对应 ComfyUI 界面、AUTOMATIC1111 WebUI 以及 DreamBooth 模型微调。\n\n项目以 Python 编写，采用 MIT 协议，README 中链接了 DreamBooth 论文和 XavierXiao 的 SD 实现作为参考。作者还提到可通过 X 联系获取更高级的 flux 和 SDXL 训练器（付费），但这部分不在开源仓库范围内。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开 README 中的 Colab-ComfyUI 链接，在 Google Colab 中运行 Notebook",
+  "或打开 Colab-AUTOMATIC1111 链接，按 Notebook 单元格依次执行",
+  "如需训练自定义模型，打开 Colab-Dreambooth 链接并运行 Notebook"
+ ],
+ "summary": "这个项目把 Stable Diffusion 的常用工具打包成 Google Colab Notebook，包括 ComfyUI 界面、AUTOMATIC1111 WebUI 和 DreamBooth 训练流程。用户不需要本地显卡，打开对应 Notebook 就能在云端启动这些工具，适合想快速体验文生图或微调模型的开发者与爱好者。",
+ "tagline": "在 Colab 上快速运行 Stable Diffusion、ComfyUI 与 DreamBooth 的 Notebook 集合"
+}

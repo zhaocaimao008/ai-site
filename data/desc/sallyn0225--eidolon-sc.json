@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合《偶像大师 闪耀色彩》的粉丝、对 AI 角色对话和实时语音交互感兴趣的开发者，以及希望自建 AI 陪伴服务的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "实时语音通话：基于 WebRTC 的全双工通话，支持中文和日语，可随时插话打断。",
+  "日语原声与中文字幕：偶像用日语回答并保留口癖，每句附中文字幕。",
+  "剧情回忆与跨角色共享记忆：导入剧情库后，偶像只回忆自己出场过的正式经历；对一位偶像说过的事，其他偶像也会知道。",
+  "会动的立绘与照片：通话时叠加 Spine 立绘，随情绪换表情；可要求偶像发送符合情境的照片。",
+  "好感度与礼物系统：对话影响好感度，每天抽奖获得礼物赠送，偶像会做出回应。",
+  "一键部署与自带密钥：Docker Compose 生产配置，支持 Google/GitHub 登录，用户可自带 API 密钥。"
+ ],
+ "intro": "Eidolon-SC 是一个让玩家以 283 事务所制作人身份，与《偶像大师 闪耀色彩》中 28 位偶像进行实时语音或文字对话的 AI 项目。偶像用日语原声回答并附中文字幕，能回忆原作剧情，还会跨角色共享记忆。\n\n项目基于 FastAPI 和 Pipecat 构建后端，前端使用 Next.js 和 React，支持 WebRTC 全双工通话、Spine 立绘动画、好感度与礼物系统。用户可通过 Google 或 GitHub 登录，并自带 LLM、语音合成等服务的 API 密钥。\n\n部署方面提供 Docker Compose 一键配置，包含 Caddy 自动 HTTPS 和 coturn TURN 中继，适合自建服务。剧情数据不随仓库分发，需要自行准备。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Sallyn0225/eidolon-sc.git && cd eidolon-sc",
+  "复制环境变量文件：cp .env.example .env，填写 CHAT_LLM_BASE_URL、CHAT_LLM_API_KEY、CHAT_LLM_MODEL，并添加 EIDOLON_DEV_LOGIN=1",
+  "启动服务：docker compose up --build",
+  "打开 http://localhost:3000，点击右上角「登录」，选择「开发登录」，输入名字并同意条款后进入对话列表。"
+ ],
+ "summary": "Eidolon-SC 是一个让玩家以制作人身份与《偶像大师 闪耀色彩》28 位偶像实时对话的 AI 项目。它支持语音和文字聊天，偶像用日语原声回答并附中文字幕，能回忆原作剧情，还会跨角色共享记忆。项目提供 Docker Compose 一键部署，适合粉丝自建 AI 陪伴服务，也适合开发者研究实时语音对话与角色扮演系统。",
+ "tagline": "与《偶像大师 闪耀色彩》偶像实时语音/文字对话的 AI 分身"
+}

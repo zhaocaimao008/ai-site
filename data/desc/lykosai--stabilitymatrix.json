@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要管理多个 Stable Diffusion 包、希望简化安装和模型共享的开发者与普通用户。",
+ "date": "2026-10-20",
+ "features": [
+  "一键安装和更新多种 Stable Diffusion WebUI 包，如 Automatic1111、ComfyUI、Fooocus 等",
+  "管理插件和扩展，轻松安装或更新 Python 依赖",
+  "内置推理界面，支持自动补全、语法高亮和可保存的工作区",
+  "检查点管理器，共享模型目录，支持从 CivitAI 和 HuggingFace 导入模型",
+  "启动器带语法高亮终端，可编辑启动参数和环境变量",
+  "完全便携，数据目录可移动到新驱动器或电脑"
+ ],
+ "intro": "Stability Matrix 是一个用 C# 开发的多平台包管理器，主要面向 Stable Diffusion 生态。它提供一键安装和更新多种 Stable Diffusion WebUI 包的功能，包括 Automatic1111、ComfyUI、Fooocus、InvokeAI 等，并管理插件和 Python 依赖。软件内置 Git 和 Python，无需全局安装，且完全便携，数据目录可随时迁移。\n\n除了包管理，它还包含一个内置的推理界面，支持自动补全和语法高亮，工作区可保存为 .smproj 项目文件。此外，它提供检查点管理器、模型浏览器（可从 CivitAI 和 HuggingFace 导入模型）以及共享模型目录，方便所有包共用模型。启动器带有语法高亮的终端模拟器，可配置启动参数和环境变量。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载对应平台的安装包（Windows、Linux 或 macOS）",
+  "运行安装程序或解压后启动 Stability Matrix",
+  "在包管理界面选择需要的 Stable Diffusion WebUI 包进行一键安装",
+  "安装完成后，通过启动器运行包，或使用内置推理界面开始生成图像"
+ ],
+ "summary": "Stability Matrix 是一个多平台包管理器，帮助用户一键安装和更新多种 Stable Diffusion WebUI 包，如 Automatic1111、ComfyUI、Fooocus 等，并统一管理插件和 Python 依赖。它内置推理界面和模型浏览器，支持从 CivitAI 和 HuggingFace 导入模型，所有包共享模型目录。适合需要同时使用多个 Stable Diffusion 工具、希望简化安装和模型管理的开发者和普通用户。",
+ "tagline": "多平台 Stable Diffusion 包管理器与推理界面"
+}

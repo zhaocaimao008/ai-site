@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 代理自动化 Figma 设计操作的设计师和开发者，尤其是使用 Cursor 或 Claude Code 的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "读取 Figma 文档信息、当前选区及节点详情",
+  "创建矩形、框架、文本等元素并设置样式与自动布局",
+  "批量替换文本内容，支持大设计文件的分块扫描",
+  "管理组件实例，提取并传播覆盖属性",
+  "导出节点为 PNG、JPG、SVG 或 PDF 图片",
+  "提供设计策略、文本替换等辅助提示词"
+ ],
+ "intro": "Talk to Figma MCP 是一个基于 Model Context Protocol 的集成项目，在 AI 代理（如 Cursor、Claude Code）与 Figma 之间建立通信通道。它由 TypeScript MCP 服务器、Figma 插件和 WebSocket 服务器三部分组成，使 AI 代理能够以编程方式读取设计内容并修改 Figma 文件。\n\n项目提供了丰富的 MCP 工具，涵盖文档与选区查询、创建矩形/框架/文本、批量替换文本、设置自动布局与样式、管理组件实例、导出节点为图片等操作。此外还包含若干辅助提示词，引导 AI 完成设计策略、文本替换、标注转换等复杂任务。\n\n使用前需安装 Bun，运行 setup 脚本并启动 WebSocket 服务器，然后在 Figma 中安装对应插件并加入频道，即可通过 Cursor 等工具调用 MCP 工具与 Figma 交互。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Bun：curl -fsSL https://bun.sh/install | bash",
+  "运行初始化脚本：bun setup",
+  "启动 WebSocket 服务器：bun socket",
+  "从 Figma 社区页面安装插件，或在 Figma 中链接 src/cursor_mcp_plugin/manifest.json",
+  "在 Cursor 的 MCP 配置中添加 TalkToFigma 服务器，并在 Figma 插件中通过 join_channel 加入频道"
+ ],
+ "summary": "Talk to Figma MCP 解决的是 AI 代理无法直接操作 Figma 设计文件的问题。它通过 MCP 协议连接 Cursor、Claude Code 等 AI 工具与 Figma，让代理能够读取设计结构、批量修改文本、调整布局样式、管理组件实例，适合需要自动化处理 Figma 设计任务的开发者和设计师。",
+ "tagline": "让 AI 代理通过 MCP 读写 Figma 设计文件"
+}

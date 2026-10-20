@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望系统学习 AI Agent 的中文开发者、学生和知识工作者，无论是否具备编程基础，都能找到对应的起点和路线。",
+ "date": "2026-10-20",
+ "features": [
+  "提供 Stage 0 到 Stage 8 的渐进式学习阶段，覆盖从基础到生产部署的完整路径",
+  "设计 Track A（CLI Agent 使用）和 Track B（Agent 开发）两条主线，满足不同学习目标",
+  "每个阶段包含可执行的 Python 练习脚本（starter.py）和明确的完成条件",
+  "整理 240+ 精选资源，包括官方文档、课程、Cookbook 和工具指南",
+  "提供针对研究人员、开发者、教师、知识工作者和日常使用者的分支路线",
+  "支持繁体中文、简体中文和英文三语阅读，并有在线文档站"
+ ],
+ "intro": "这是一个面向中文读者的 AI Agent 学习路线图，提供繁体中文、简体中文和英文三种语言版本。项目将学习路径划分为从 Stage 0 到 Stage 8 的多个阶段，并针对不同目标设计了 Track A（使用 CLI Agent 完成工作）和 Track B（从零构建 Agent）两条主线。\n\n内容涵盖 LLM 基础、Prompt 设计、工具调用、Agent Loop、Workflow Graph、Memory 与 RAG、生产环境工程以及 Agent 操作接口等主题。每个阶段都配有核心概念说明、动手练习和精选资源，练习以可执行的 Python 脚本形式提供。\n\n项目还整理了 240 多个外部资源链接，并针对研究人员、开发者、教师、知识工作者和日常使用者提供了分支路线指南。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库到本地：git clone https://github.com/WenyuChiou/awesome-agentic-ai-zh.git",
+  "进入项目目录：cd awesome-agentic-ai-zh",
+  "打开 stages/00-foundations.md 开始 Stage 0 学习，或根据自身情况选择 Track A 或 Track B 的入口"
+ ],
+ "summary": "这个项目是一份面向中文读者的 AI Agent 学习路线图，帮助读者从了解 LLM 基础逐步过渡到能构建可靠的多步骤 Agent 系统。它把学习内容按阶段组织，并区分了使用现成 CLI Agent 和自行开发 Agent 两条路径，适合希望系统入门或查漏补缺的开发者与学习者。",
+ "tagline": "三语 AI Agent 学习路线图，含 240+ 资源与可执行练习"
+}

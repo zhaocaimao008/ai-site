@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本到图像生成感兴趣的研究人员和开发者，尤其是希望用 PyTorch 复现或实验 Imagen 架构的人。",
+ "date": "2026-10-20",
+ "features": [
+  "实现 Imagen 的级联 DDPM 架构，包含基础 UNet 和超分辨率 UNet",
+  "使用预训练 T5 模型提取文本嵌入作为条件",
+  "支持动态裁剪以改进无分类器引导",
+  "提供内存高效的 UNet 设计",
+  "支持直接传入文本字符串或预计算文本嵌入进行训练",
+  "ImagenTrainer 封装类自动处理指数移动平均和梯度累积"
+ ],
+ "intro": "这是 Google 文本到图像神经网络 Imagen 的 PyTorch 实现。Imagen 采用级联 DDPM 架构，以大型预训练 T5 模型提取的文本嵌入作为条件，并包含动态裁剪、噪声水平条件以及内存高效的 UNet 设计。\n\n项目提供了 Unet、Imagen 和 ImagenTrainer 等类，支持训练和采样。你可以直接传入文本字符串或预计算的文本嵌入进行训练，ImagenTrainer 封装类会自动处理级联中所有 UNet 的指数移动平均。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install imagen-pytorch",
+  "导入模块：from imagen_pytorch import Unet, Imagen",
+  "定义基础 UNet 和超分辨率 UNet",
+  "创建 Imagen 实例，传入 UNet 元组、图像尺寸和时间步数",
+  "使用 imagen.sample(texts=[...], cond_scale=3.) 生成图像"
+ ],
+ "summary": "该项目用 PyTorch 实现了 Google 的文本到图像模型 Imagen，核心是级联 DDPM 架构，以预训练 T5 的文本嵌入为条件，并包含动态裁剪和内存高效 UNet 等设计。适合想复现或实验 Imagen 架构的研究者与开发者，可用于文本到图像生成任务的训练与采样。",
+ "tagline": "Imagen 的 PyTorch 实现：基于级联 DDPM 的文本到图像生成"
+}

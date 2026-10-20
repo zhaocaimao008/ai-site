@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本转语音技术感兴趣、希望了解 VITS2 与 BERT 结合方案的研究者或开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "采用 VITS2 作为骨干网络",
+  "融合多语言 BERT 提升语音合成表现",
+  "提供 webui_preprocess.py 作为简易教程入口",
+  "核心思路参考 MassTTS 项目"
+ ],
+ "intro": "Bert-VITS2 是一个文本转语音（TTS）项目，其骨干网络采用 VITS2，并融合多语言 BERT 来增强语音合成效果。项目核心思路来源于 MassTTS，代码中引用了 VITS、vits2_pytorch 等开源工作。\n\n根据 README，项目提供了简易教程（webui_preprocess.py），但作者已声明短期内不再维护，并推荐使用同团队的新项目 Fish-Speech 作为替代。README 还列出了使用限制，禁止用于违反中国法律法规及政治相关用途。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考 README 中提到的 webui_preprocess.py 文件获取简易教程"
+ ],
+ "summary": "Bert-VITS2 是一个文本转语音项目，它把 VITS2 骨干网络与多语言 BERT 结合，用于语音合成。项目核心思路来自 MassTTS，适合想研究或复现该技术路线的开发者。不过作者已表示短期内不再维护，并推荐改用 Fish-Speech，因此更适合作为学习参考而非长期依赖的生产工具。",
+ "tagline": "基于 VITS2 与多语言 BERT 的文本转语音项目"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想动手搭建个性化中文智能音箱的 Maker、Hacker 和开发者，也适合需要语音交互与智能家居联动的树莓派等设备用户。",
+ "date": "2026-10-20",
+ "features": [
+  "模块化设计，语音识别、语音合成、对话机器人和技能插件均可替换扩展",
+  "集成多家中文 ASR 与 TTS 服务，包括百度、讯飞、阿里、腾讯、OpenAI Whisper、微软 Edge、VITS 等",
+  "支持本地 AnyQ 对话机器人，也可接入图灵机器人、ChatGPT 等在线对话服务",
+  "支持 Porcupine、snowboy 离线唤醒，以及 Muse 脑机唤醒等其他唤醒方式",
+  "可与小爱音箱、Siri、mqtt、HomeAssistant 等智能家居协议联动",
+  "自带后台管理端，支持远程对话、修改配置和查看日志，并开放 Restful API"
+ ],
+ "intro": "wukong-robot 是一个用 Python 编写的中文语音对话机器人项目，目标是让 Maker 和 Hacker 快速打造个性化的智能音箱。它把语音识别、语音合成、对话机器人和技能插件都做了模块化设计，方便替换和扩展。\n\n项目集成了百度、科大讯飞、阿里、腾讯、OpenAI Whisper、微软 Edge、VITS 声音克隆等多种中文语音技术，对话部分支持本地 AnyQ 以及图灵机器人、ChatGPT 等在线服务。唤醒方式包括 Porcupine、snowboy 离线唤醒，也支持 Muse 脑机唤醒和行空板摇一摇。\n\n它还能与小爱音箱、Siri、mqtt、HomeAssistant 等智能家居协议联动，并自带后台管理端，可远程对话、修改配置和查看日志。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认设备满足要求：Python >= 3.7 且 < 3.10，支持树莓派、64bit Ubuntu、Intel Mac 或装有 WSL 的 Windows 等",
+  "参考官方安装教程完成依赖安装：https://wukong.hahack.com/#/install",
+  "运行 python3 wukong.py 启动，首次启动按提示输入 y 创建配置文件",
+  "通过唤醒词 “snowboy” 唤醒机器人进行交互（唤醒词可自定义）",
+  "访问 http://localhost:5001 进入后台管理端，默认用户名 wukong、密码 wukong@2019，建议修改"
+ ],
+ "summary": "wukong-robot 是一个面向中文场景的开源语音对话机器人与智能音箱项目，用 Python 编写，把语音识别、语音合成、对话机器人和技能插件拆成可替换的模块。它适合想用树莓派等设备自制智能音箱的开发者，可以接入多家中文语音服务和 ChatGPT 等对话后端，并支持离线唤醒、智能家居联动与后台管理。",
+ "tagline": "中文语音对话机器人/智能音箱开源项目"
+}

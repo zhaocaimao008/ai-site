@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想自建 AI 搜索或研究生成式 UI 的开发者，以及需要可定制搜索问答工具的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "AI 搜索并给出带引用来源的答案",
+  "生成式 UI：从流式 JSON 规格实时渲染图片、网格、标题等富组件",
+  "Quick 与 Adaptive 两种搜索模式",
+  "模型选择器，动态检测 OpenAI、Anthropic、Google、Ollama 等提供商",
+  "支持 Tavily、SearXNG、Brave、Exa 多种搜索后端",
+  "聊天历史存储、结果分享链接、文件上传与用户认证"
+ ],
+ "intro": "Morphic 是一个开源的 AI 搜索引擎，用生成式 UI 呈现搜索结果。它基于 TypeScript 和 Next.js 构建，答案会附带引用来源，并以流式 JSON 规格实时渲染图片、网格、标题等富组件，而不只是纯 Markdown 文本。\n\n项目支持 Quick 和 Adaptive 两种搜索模式，内置模型选择器，可动态识别 OpenAI、Anthropic、Google、Ollama、Vercel AI Gateway 以及 OpenAI 兼容的提供商。搜索后端可选 Tavily、SearXNG、Brave 和 Exa。此外还提供聊天历史（PostgreSQL）、结果分享链接、文件上传、账户认证与访客模式，并支持 Docker 部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入目录：git clone https://github.com/miurla/morphic.git && cd morphic",
+  "复制环境变量文件：cp .env.local.example .env.local",
+  "在 .env.local 中至少设置一个 AI 提供商密钥，例如 OPENAI_API_KEY=your_openai_key",
+  "使用 Docker Compose 启动全部服务：docker compose up -d",
+  "访问 http://localhost:3000 并在模型选择器中选择模型"
+ ],
+ "summary": "Morphic 是一个开源的 AI 搜索引擎，用生成式 UI 把搜索结果渲染成带引用来源的富组件答案，而不只是文字列表。它支持多种模型提供商和搜索后端，提供聊天历史、分享链接、文件上传与访客模式，适合想自建 AI 搜索问答服务或研究生成式 UI 实现的开发者。",
+ "tagline": "带生成式 UI 的 AI 搜索引擎"
+}

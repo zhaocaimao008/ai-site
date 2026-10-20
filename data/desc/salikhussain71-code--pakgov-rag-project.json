@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对乌尔都语 NLP、低资源语言检索增强生成感兴趣的研究者，以及需要查询巴基斯坦宪法或政府文件的双语用户。",
+ "date": "2026-10-20",
+ "features": [
+  "支持英语、乌尔都语及混合语言的问答",
+  "混合检索：BM25 + 稠密向量，使用 RRF 融合",
+  "答案仅基于检索到的段落生成，并附页码引用",
+  "证据不足时返回 insufficient evidence，避免幻觉",
+  "提供 50 题评测集及三种检索器的对比结果",
+  "包含 Streamlit 演示界面和评测复现脚本"
+ ],
+ "intro": "PAKGOV-RAG 是一个研究型项目，用检索增强生成（RAG）回答关于巴基斯坦宪法的问题，支持英语、乌尔都语及混合语言提问。系统从 PDF 中提取文本并分块，用 BM25 和稠密向量检索，再通过 Reciprocal Rank Fusion 融合结果，生成带页码引用的答案；当检索证据不足时，会明确返回 insufficient evidence 而不是猜测。\n\n项目还公开了在 50 道人工标注问题上的评测结果，对比了 BM25、稠密检索和混合检索的 Recall 与 MRR，并记录了失败案例。此外，仓库包含一个 Streamlit 演示界面和复现评测的脚本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install streamlit sentence-transformers faiss-cpu rank_bm25",
+  "启动演示：python -m streamlit run app/demo/app.py --server.port 8501",
+  "在浏览器打开 http://localhost:8501 并输入问题",
+  "复现评测结果：python app/eval/final_table.py"
+ ],
+ "summary": "PAKGOV-RAG 是一个面向巴基斯坦宪法与政府文件的双语检索增强生成项目，支持英语、乌尔都语及混合语言提问。它通过混合检索（BM25 与稠密向量经 RRF 融合）找到相关段落，生成带页码引用的答案，并在证据不足时明确拒绝回答。项目还公开了 50 题评测结果和失败分析，适合研究低资源语言检索与法律文档问答的开发者参考。",
+ "tagline": "面向巴基斯坦宪法与政府文件的双语 RAG 检索系统"
+}

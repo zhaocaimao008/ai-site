@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合构建 LLM/RAG 应用的开发者，以及需要管理多模态数据集并训练深度学习模型的研究与工程人员。",
+ "date": "2026-10-20",
+ "features": [
+  "支持 S3、GCP、Azure、本地及内存等多种存储后端，使用统一 API 上传、下载和流式读取数据集",
+  "以原生压缩格式存储图像、音频和视频，支持类似 NumPy 的惰性索引与切片",
+  "内置 PyTorch 和 TensorFlow dataloader，便于直接训练模型",
+  "可作为 LangChain、LlamaIndex 的向量存储，用于构建 LLM 应用",
+  "提供数据版本管理与血缘追踪，并集成 Weights & Biases",
+  "在 Deep Lake App 中可视化数据集，支持边界框、掩码和标注"
+ ],
+ "intro": "Deep Lake 是 Activeloop 推出的 AI 数据库，底层采用为深度学习优化的存储格式。它既能存储和检索向量以构建 LLM 应用，也能管理训练深度学习模型所需的数据集。\n\n它支持存储 embeddings、音频、文本、视频、图像、DICOM、PDF、标注等多种数据类型，并提供查询、向量搜索、训练时数据流式读取、数据版本管理与血缘追踪。Deep Lake 是 serverless 的，数据可存放在用户自己的云存储（S3、GCP、Azure 等）中。\n\n项目提供 PyTorch 和 TensorFlow 的 dataloader，并与 LangChain、LlamaIndex、Weights & Biases 等工具集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 pip 安装：pip install deeplake",
+  "在 Deep Lake App 注册账号以使用全部功能",
+  "参考官方文档的 Vector Store Quickstart 或 Deep Learning Quickstart 开始使用"
+ ],
+ "summary": "Deep Lake 是一个面向 AI 的数据库，底层使用为深度学习优化的存储格式。它同时服务于两类场景：为 LLM 应用存储和检索向量，以及为深度学习训练管理多模态数据集。项目支持将数据存放在自己的云存储中，提供数据流式读取、版本管理和与 LangChain、PyTorch 等工具的集成，适合需要统一管理 AI 数据的开发者。",
+ "tagline": "面向 AI 的多模态数据湖与向量数据库"
+}

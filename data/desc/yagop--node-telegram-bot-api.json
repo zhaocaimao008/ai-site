@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "适合需要在 Node.js、Bun、Deno 或 serverless 环境中开发 Telegram 机器人的 JavaScript/TypeScript 开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "提供 Bot 类与 Api 客户端，Api 方法与 Telegram Bot API 一一对应",
+  "支持 koa 风格中间件，可注册命令、正则和更新类型处理器",
+  "内置 InlineKeyboardBuilder、ReplyKeyboardBuilder、EntityBuilder 等构建器",
+  "支持流式文件上传，并提供 InputFile、MediaGroupBuilder 等工具",
+  "提供 webhookCallback，适配 Cloudflare Workers、Deno Deploy 等 serverless 运行时",
+  "支持轮询（startPolling）和托管运行器（run）两种启动方式"
+ ],
+ "intro": "node-telegram-bot-api 是一个用 TypeScript 编写的 Telegram Bot API 封装库，当前 v2 版本为从零重写，不兼容 v1。它提供 Bot 类、Api 客户端、中间件机制以及键盘、富文本、上传等构建器，帮助开发者用 JavaScript/TypeScript 调用 Telegram Bot API。\n\n该库支持 Bun、现代 Node.js、Deno、Cloudflare Workers 和 Vercel Functions 等运行时，并提供轮询与 Webhook 两种更新接收方式。上传功能支持流式传输，避免大文件占用过多内存。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：npm install node-telegram-bot-api",
+  "创建 Bot 实例：const bot = new Bot(process.env.BOT_TOKEN!)",
+  "注册命令或消息处理器：bot.command(\"start\", (ctx) => ctx.reply(\"Hi!\"))",
+  "启动轮询：await run(bot) 或 await bot.startPolling()"
+ ],
+ "summary": "这个项目是 Telegram Bot API 的 Node.js/TypeScript 封装库，帮助开发者在 JavaScript 生态中调用 Telegram 机器人接口。它提供中间件、键盘与富文本构建器、流式上传和 Webhook 回调，可运行在 Node.js、Bun、Deno 及 serverless 平台，适合需要快速搭建 Telegram 机器人的开发者。",
+ "tagline": "面向 Node.js 的 Telegram Bot API 客户端库"
+}

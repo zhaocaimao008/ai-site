@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要部署全模态、TTS、扩散生成或机器人策略模型的开发者与推理服务运维人员。",
+ "date": "2026-10-20",
+ "features": [
+  "支持文本、图像、音频、视频和动作的全模态数据处理",
+  "将 vLLM 的 AR 支持扩展到 DiT 等非自回归生成架构",
+  "流水线阶段重叠执行与基于 OmniConnector 的完全分离式部署",
+  "张量、流水线、数据和专家并行，支持分布式推理",
+  "流式输出与 OpenAI 兼容 API server",
+  "支持全双工实时语音输入输出服务"
+ ],
+ "intro": "vLLM-Omni 是 vLLM 社区推出的推理与服务框架，把原本面向文本自回归生成的 vLLM 扩展到全模态模型。它支持文本、图像、音频、视频和动作数据的处理，并把 vLLM 的 AR 支持延伸到 Diffusion Transformer（DiT）等非自回归生成架构，输出也不再局限于文本。\n\n在性能上，它复用 vLLM 的 KV cache 管理，通过流水线阶段重叠执行提升吞吐，并基于 OmniConnector 做阶段间完全分离与动态资源分配。使用上提供异构流水线抽象、张量/流水线/数据/专家并行、流式输出和 OpenAI 兼容 API server，还支持全双工实时语音输入输出服务。\n\n框架已适配 Hugging Face 上多类开源模型，包括 Qwen3-Omni、MiniCPM-o 4.5 等全模态模型，Qwen3-TTS、CosyVoice3 等 TTS 模型，MiniMax H3、Wan2.2 等图像/视频/音频生成模型，以及 π0、GR00T 等机器人策略模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "查阅官方文档的 Installation 页面完成安装",
+  "参考 Quickstart 页面启动服务",
+  "使用 Nightly CUDA Docker 镜像（vllm/vllm-omni）快速试用",
+  "在 Supported Models 列表中确认目标模型，并按 Deployment Recipes 部署"
+ ],
+ "summary": "vLLM-Omni 把 vLLM 的推理能力从纯文本扩展到全模态场景，既能处理文本、图像、音频、视频和动作输入输出，也支持 DiT 等非自回归生成架构。它适合需要统一部署全模态模型、TTS、图像视频生成或机器人策略模型的场景，提供并行推理、流式输出和 OpenAI 兼容接口。",
+ "tagline": "面向全模态模型的推理与服务框架"
+}

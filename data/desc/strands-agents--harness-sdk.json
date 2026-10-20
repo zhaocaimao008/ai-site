@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在 Python 或 TypeScript 项目中自行搭建可控 AI Agent 的开发者，以及希望从手写 agent loop 迁移到成熟框架的团队。",
+ "date": "2026-10-20",
+ "features": [
+  "提供 Python 与 TypeScript 双语言 SDK，内置 agent loop",
+  "生命周期控制：轮次上限、token 预算、取消与停止原因",
+  "工具调用、结构化输出、MCP 与多 Agent 模式",
+  "记忆、会话管理、流式输出与模型可移植性",
+  "guardrails、tracing 与 evals 等安全与可观测能力",
+  "harness 一键装配完整 Agent，并提供终端 CLI"
+ ],
+ "intro": "Strands Agents 是一个用于构建和运行 AI Agent 的开源 SDK，同时提供 Python 与 TypeScript 版本。它运行在开发者自己的进程内，不需要托管控制平面，适合那些原本打算手写 agent loop、又希望获得更完整能力的场景。\n\nSDK 内置了生命周期控制（轮次上限、token 预算、取消、停止原因）、工具调用与结构化输出、MCP、多 Agent 模式、记忆与会话管理、模型可移植性、流式输出、guardrails、tracing 和 evals 等能力。模型方面支持 Amazon Bedrock、Anthropic、OpenAI、Gemini 以及更多提供方。\n\n仓库采用 monorepo 结构，除两个 SDK 外还包含 harness（通过 create_harness() / createHarness() 一键装配完整 Agent）、strands CLI、面向编码 Agent 的 MCP server，以及文档站点源码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Python：执行 pip install strands-harness",
+  "Python：从 strands_harness 导入 create_harness 并创建 agent",
+  "TypeScript：执行 npm install @strands-agents/harness",
+  "TypeScript：从 @strands-agents/harness 导入 createHarness 并调用 agent.invoke"
+ ],
+ "summary": "Strands Agents 是一个 Python 与 TypeScript 双语言的 AI Agent 开发 SDK，解决的是开发者自己手写 agent loop 后不断补功能的问题。它运行在本地进程中，把生命周期控制、工具调用、MCP、多 Agent、记忆、流式输出和可观测性等能力打包在一起，并支持多种模型提供方。适合需要在自有项目中构建可控 Agent 的开发者。",
+ "tagline": "用 Python 和 TypeScript 构建可控 AI Agent 的开源 SDK"
+}

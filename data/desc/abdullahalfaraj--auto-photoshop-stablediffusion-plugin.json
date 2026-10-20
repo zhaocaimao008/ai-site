@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合熟悉 Photoshop 并希望集成 AI 图像生成的数字艺术家、设计师和开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "在 Photoshop 内直接调用 Stable Diffusion 生成图像",
+  "支持 Automatic1111 和 ComfyUI 后端",
+  "提供一键安装、解压安装和 UXP 开发者安装方式",
+  "包含常见问题解答和故障排除指南",
+  "支持无 GPU 选项，如 Stable Horde 和 Colab"
+ ],
+ "intro": "Auto-Photoshop-StableDiffusion-Plugin 是一个 Photoshop 插件，让用户无需切换程序即可在 Photoshop 内使用 Stable Diffusion 生成图像。它支持 Automatic1111 和 ComfyUI 作为后端，将 AI 图像生成能力集成到熟悉的 Photoshop 环境中。\n\n用户可以在插件中生成图像，然后利用 Photoshop 的工具进行编辑和保存，提升创作效率。项目提供多种安装方式，包括一键安装、解压安装和面向开发者的 UXP 方法，并包含常见问题解答。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载插件文件",
+  "运行一键安装程序或手动解压到 Photoshop 插件目录",
+  "启动 Photoshop 并打开插件面板",
+  "配置 Stable Diffusion 后端（Automatic1111 或 ComfyUI）",
+  "开始生成图像"
+ ],
+ "summary": "Auto-Photoshop-StableDiffusion-Plugin 是一个 Photoshop 插件，让用户无需离开 Photoshop 就能使用 Stable Diffusion 生成图像。它支持 Automatic1111 和 ComfyUI 后端，适合数字艺术家和设计师在熟悉的环境中快速进行 AI 辅助创作，生成后可直接用 Photoshop 工具编辑。",
+ "tagline": "在 Photoshop 中直接使用 Stable Diffusion 生成图像"
+}

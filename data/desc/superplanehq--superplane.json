@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 代理自动化常规开发工作流的工程团队，以及需要自托管、可定制集成方案的开发者。",
+ "date": "2026-10-20",
+ "features": [
+  "将 backlog 问题自动转化为可审查的 pull request",
+  "协调编码代理、源码控制、CI、审查和审批流程",
+  "持续评估问题是否适合代理处理，保留人工判断环节",
+  "提供 Factory、Work order、Line、Automation、Run 等资源管理任务",
+  "集成 AI 代理、源码控制、云服务、可观测性、事件管理和通信工具",
+  "保留事件历史、执行状态和产物，支持失败重试与恢复"
+ ],
+ "intro": "SuperPlane 是一个开源平台，用于将高置信度的 backlog 问题自动转化为经过验证、可审查的 pull request。它协调编码代理、源码控制、CI、审查、审批和反馈，使工程师不必手动管理每个步骤。\n\n工厂持续评估哪些问题可由代理高置信度处理，并对每次运行应用统一的工作流护栏，检查结果并将失败连同可操作上下文返回给代理。模糊或需要人工判断的工作仍留给团队。\n\nSuperPlane 基于 Apache 2.0 开源引擎构建，支持自选模型、云端或本地部署，并围绕现有技术栈和成本约束构建工厂。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读贡献指南（CONTRIBUTING.md）",
+  "查看问题跟踪流程（docs/contributing/issue-tracking.md）",
+  "在 GitHub 上查找开放 issue 或 bounty",
+  "加入 Discord 社区与维护者讨论方案",
+  "按照 AGENTS.md 和 CONTRIBUTING.md 中的开发部分进行基于 Docker 的环境搭建"
+ ],
+ "summary": "SuperPlane 是一个开源平台，旨在把高置信度的 backlog 问题自动变成经过验证、可审查的 pull request。它协调编码代理、源码控制、CI 和审批等环节，让工程师专注于需要判断的工作。适合希望用 AI 代理自动化常规开发流程、并需要自托管和灵活集成的工程团队。",
+ "tagline": "开源工程自动化工厂，让 AI 代理处理常规开发任务"
+}

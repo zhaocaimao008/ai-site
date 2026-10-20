@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要本地或自托管 AI 图像/视频生成工具的开发者和创作者，尤其是使用不同硬件平台（如 AMD、Intel、Apple Silicon）的用户。",
+ "date": "2026-10-20",
+ "features": [
+  "支持文生图、图生图、文生视频和图生视频",
+  "提供局部重绘、外绘、细节修复和高清放大等编辑功能",
+  "集成 LoRA、ControlNet、IP-Adapters 和提示词增强",
+  "支持图像打标、放大、插帧、上色和滤镜处理",
+  "兼容 NVIDIA、AMD、Intel、Apple Silicon 和 CPU 等多种硬件",
+  "内置安装器管理依赖和更新，支持多主题和多语言界面"
+ ],
+ "intro": "SD.Next 是一个开源的 Web 界面，用于使用扩散模型生成和编辑图像与视频。它支持文本生成图像、图像生成图像、文本生成视频、图像生成视频，以及局部重绘、外绘、细节修复和高清放大等编辑操作。\n\n项目兼容多种硬件平台，包括 NVIDIA、AMD、Intel、Apple Silicon 和纯 CPU 环境，并提供 Docker 容器方案。用户可以通过 LoRA、ControlNet、IP-Adapters 等工具引导生成，还能进行打标、放大、插帧、上色等后期处理。内置安装器负责管理依赖和更新，界面支持多主题和多语言。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考官方安装指南完成环境准备：https://vladmandic.github.io/sdnext-docs/Installation/",
+  "根据硬件平台选择对应安装说明（如 NVIDIA CUDA、AMD ROCm、Intel Arc XPU 等）",
+  "运行安装脚本或 Docker 容器启动 WebUI",
+  "首次启动可能需要较长时间加载依赖和模型"
+ ],
+ "summary": "SD.Next 是一个开源的 Web 界面，用于使用扩散模型生成和编辑图像与视频。它支持文生图、图生图、文生视频、图生视频，以及局部重绘、外绘、细节修复等编辑操作，并可通过 LoRA、ControlNet 等工具引导生成。项目兼容 NVIDIA、AMD、Intel、Apple Silicon 和 CPU 等多种硬件平台，适合需要本地部署 AI 生成工具的开发者与创作者。",
+ "tagline": "一体化 AI 图像与视频生成 WebUI"
+}

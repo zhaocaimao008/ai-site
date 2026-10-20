@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用少量个人图像微调 Stable Diffusion 模型、生成个性化图像的开发者和研究者。",
+ "date": "2026-10-20",
+ "features": [
+  "基于 Stable Diffusion 实现 Dreambooth 微调",
+  "支持使用少量图像微调整个扩散模型",
+  "提供正则化图像生成和训练脚本",
+  "默认使用 sks 作为占位标识符",
+  "训练过程保存中间和最终检查点"
+ ],
+ "intro": "该项目是 Google Dreambooth 论文在 Stable Diffusion 上的实现。由于 Imagen 模型和权重未公开，作者基于 Textual Inversion 代码库进行最小修改，将 Dreambooth 的微调思路迁移到 Stable Diffusion 上。与 Textual Inversion 只优化词嵌入不同，Dreambooth 会微调整个扩散模型。\n\n项目提供了完整的训练和生成脚本，需要准备预训练的 Stable Diffusion 权重以及一组正则化图像。训练默认使用 800 步，在 500 步和最终步保存检查点，作者使用两张 A6000 GPU 训练约 15 分钟。生成时通过占位词 sks 和类别词组合提示词来获得个性化图像。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "按照 Textual Inversion 或 Stable Diffusion 仓库说明配置 ldm 环境",
+  "下载预训练 Stable Diffusion 权重（如 sd-v1-4-full-ema.ckpt）",
+  "使用 scripts/stable_txt2img.py 生成正则化图像，提示词为 \"a photo of a <class>\"",
+  "运行 main.py 并指定配置文件、权重、训练图像、正则化图像和类别词进行训练",
+  "训练完成后使用 scripts/stable_txt2img.py 加载检查点，以 \"photo of a sks <class>\" 为提示词生成图像"
+ ],
+ "summary": "这个项目把 Google Dreambooth 的微调方法实现在 Stable Diffusion 上，让用户能用少量示例图像训练出个性化文生图模型。它基于 Textual Inversion 代码库修改，需要准备预训练权重和正则化图像，适合想定制 Stable Diffusion 生成特定对象或风格的开发者。",
+ "tagline": "在 Stable Diffusion 上实现 Dreambooth 微调"
+}
