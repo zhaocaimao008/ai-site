@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 生成艺术感兴趣的开发者、创作者，以及希望用 Stable Diffusion 制作变形视频的 Python 用户。",
+ "date": "2026-10-21",
+ "features": [
+  "在多个文本提示和种子之间进行潜空间插值，生成变形视频",
+  "支持为视频添加音频，并根据节拍调整插值速率",
+  "提供 Gradio 界面，方便交互式生成",
+  "可配置分辨率、引导系数、推理步数等参数",
+  "提供 Colab 笔记本，可直接在线试用"
+ ],
+ "intro": "stable-diffusion-videos 是一个基于 Stable Diffusion 的 Python 库，用于在潜空间中探索并生成视频。它通过在不同文本提示和随机种子之间进行插值，让画面从一种描述平滑过渡到另一种描述，例如从“蓝莓意面”变形为“草莓意面”。\n\n项目提供 StableDiffusionWalkPipeline 类，调用 walk 方法即可指定提示词、种子、插值步数、分辨率等参数，输出图像序列并合成视频。还支持传入音频文件，让插值节奏跟随音乐节拍，并可启动 Gradio 界面进行交互操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装库：pip install stable_diffusion_videos",
+  "导入 StableDiffusionWalkPipeline 并加载模型：pipeline = StableDiffusionWalkPipeline.from_pretrained(\"CompVis/stable-diffusion-v1-4\", torch_dtype=torch.float16).to(\"cuda\")",
+  "调用 pipeline.walk 传入 prompts、seeds、num_interpolation_steps 等参数生成视频",
+  "如需音乐视频，在 walk 中提供 audio_filepath 和 audio_start_sec 等参数",
+  "如需界面，创建 Interface(pipeline) 并调用 launch()"
+ ],
+ "summary": "这个项目让 Stable Diffusion 在潜空间里做插值，把两个文本提示之间的画面变化连成一段视频，比如从“蓝莓意面”渐变到“草莓意面”。它适合想用 AI 生成变形动画的创作者和开发者，支持加入音频让画面跟着节拍变化，也提供网页界面和 Colab 笔记本方便上手。",
+ "tagline": "在 Stable Diffusion 潜空间中插值，生成文本提示间的变形视频"
+}

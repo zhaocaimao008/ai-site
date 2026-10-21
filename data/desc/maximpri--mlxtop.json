@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在 macOS、Linux 或 Windows 上跑本地大模型的开发者和爱好者，尤其是想排查推理变慢原因、观察内存与 GPU 状态的人。",
+ "date": "2026-10-21",
+ "features": [
+  "并排展示内存压力、压缩、换页与 GPU 指标，以及运行时上报的推理速度、prefill 进度和队列",
+  "自动检测 oMLX、Splash、mlx-serve、vLLM、SGLang、llama.cpp、Ollama 等 13 种本地运行时",
+  "用一行结论给出健康状态或指出可能的瓶颈，如换页、CPU 卸载、显卡满载或降频",
+  "提供 Overview、Processes、Journal、Settings 四个视图，支持图表缩放、暂停采样和按 GPU 切换",
+  "本地只读运行，无遥测，诊断日志不包含 prompt、模型输出或 API key"
+ ],
+ "intro": "mlxtop 是一个用 Rust 编写的终端监控工具，定位类似系统里的 top，但面向本地大模型推理。当模型变慢时，它把内存压力、压缩、换页、GPU 占用等系统指标，与运行时自身给出的 tokens/s、prefill 进度、排队请求和缓存复用等数据并排展示，帮助判断瓶颈在机器还是模型。\n\n它支持 oMLX、Splash、mlx-serve、vLLM、SGLang、llama.cpp、Ollama、LM Studio、KoboldCpp 等 13 种运行时，并自动检测。界面分为 Overview、Processes、Journal、Settings 四个视图，顶部用一行结论提示健康状态或指出问题，例如大量换页、模型部分跑在 CPU 上、显卡满载或过热降频。\n\n工具只读取系统计数器和运行时的本地 API，不需要 sudo 和账号，也不会上传数据或修改模型与运行时设置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Homebrew 安装：brew install maximpri/tap/mlxtop",
+  "或运行安装脚本：curl -fsSL https://raw.githubusercontent.com/maximpri/mlxtop/main/scripts/install.sh | sh",
+  "运行 mlxtop 打开仪表盘，或用 mlxtop --once 输出文本报告",
+  "运行 mlxtop doctor 检查运行时连接和可用的读数",
+  "启动本地运行时并发送 prompt，在 Overview 视图观察生成过程"
+ ],
+ "summary": "mlxtop 是一个面向本地大模型推理的终端监控工具，把内存压力、换页、GPU 占用等系统指标与运行时上报的 tokens/s、prefill 进度、排队和缓存复用放在一起展示，帮助判断模型变慢是机器资源还是推理服务本身的问题。它自动识别 oMLX、vLLM、llama.cpp、Ollama 等多种运行时，适合在本地跑模型时排查性能瓶颈。",
+ "tagline": "本地 LLM 运行监控终端工具"
+}

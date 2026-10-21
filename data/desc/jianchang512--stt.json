@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将音视频转为文字或字幕的开发者、内容创作者，以及希望本地部署语音识别服务的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "离线运行，无需联网，保护隐私",
+  "支持输出 JSON、SRT 字幕和纯文字格式",
+  "内置 tiny 模型，可自行下载更大模型提升准确率",
+  "提供本地 HTTP API，兼容 OpenAI 语音转文字接口",
+  "支持 NVIDIA GPU CUDA 加速（需配置环境）",
+  "提供预编译 Windows 版本，解压即用"
+ ],
+ "intro": "这是一个基于 faster-whisper 模型的离线语音识别转文字工具，可将视频或音频中的人声识别为文字，并输出 JSON、SRT 字幕或纯文本格式。项目内置 tiny 模型，也支持自行下载 base、small、medium、large-v3 等模型以提升识别效果。\n\n工具提供预编译的 Windows 版本，解压后双击即可使用；也支持在 Linux、Mac 和 Windows 上通过源码部署。识别结果可通过本地 API 接口调用，并兼容 OpenAI 的语音转文字接口格式。如果机器配有 NVIDIA GPU 并配置好 CUDA 环境，可启用 CUDA 加速。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 用户：从 Releases 页面下载预编译包，解压后双击 start.exe，浏览器自动打开后上传文件并选择语言、格式和模型，点击“立即开始识别”",
+  "源码部署：要求 Python 3.9~3.11，创建空目录并执行 git clone git@github.com:jianchang512/stt.git .",
+  "创建并激活虚拟环境：python -m venv venv，Windows 执行 %cd%/venv/scripts/activate，Linux/Mac 执行 source ./venv/bin/activate",
+  "安装依赖：pip install -r requirements.txt（若版本冲突可加 --no-deps），如需 CUDA 加速则卸载 torch 并安装 cu121 版本",
+  "将 ffmpeg 放入项目目录，下载模型压缩包解压到 models 文件夹，执行 python start.py 启动"
+ ],
+ "summary": "这个项目解决的是将音视频中的人声离线转成文字或字幕的需求，基于 faster-whisper 模型，输出 JSON、SRT 或纯文本。适合需要本地处理敏感音视频、不想依赖云端接口的开发者，也可部署后替代 OpenAI 或百度语音识别接口。工具提供 Windows 预编译包和源码部署方式，支持多语言识别和 CUDA 加速。",
+ "tagline": "离线运行的本地音视频转字幕工具"
+}

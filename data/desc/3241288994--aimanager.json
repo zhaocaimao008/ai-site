@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时使用多个 AI 模型进行开发、科研或写作的开发者与研究人员，尤其是希望让网页版 AI 访问本地项目、或让命令行 Agent 与 API 模型协同工作的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "通过 MCP 插件让 ChatGPT 网页版读取本机或服务器项目文件，支持路径直读和长期工作区",
+  "在现有 Agent 中调用 Codex CLI、Claude Code 与 API 模型进行多模型协作和交叉审阅",
+  "统一管理 Codex、Claude Code、Antigravity 的账号登录、额度、用量和 CLI 会话恢复",
+  "提供可复用的协作配方，记录任务分工与验证步骤",
+  "支持本地、服务器和混合三种部署模式，组件按需部署",
+  "提供连接中心，检查并修复 Router、Provider、SSH 与 Tunnel 状态"
+ ],
+ "intro": "AImanager 是一个用 Rust 开发的自托管工具，旨在把 ChatGPT 网页版、命令行 Agent（如 Codex CLI、Claude Code）和 API 模型连接起来。它通过 MCP 插件让网页版 AI 按需读取本机或服务器上的项目文件，无需反复上传；同时提供 ai-collab 工具，让不同模型在现有 Agent 中交换分析结果、交叉审阅代码与方案。\n\n此外，项目还提供一个统一界面，用于管理多个 AI 平台的账号登录、额度查询、用量分析和 CLI 会话恢复。支持本地、服务器和混合三种工作区模式，适合需要跨设备、多模型协作的开发者与研究人员。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将仓库地址和安装模式（local/server/hybrid）等信息交给编码 Agent，按 INSTALL.md 完成部署",
+  "已有环境可运行 python3 scripts/install-ai-collab.py 安装协作工具",
+  "运行 ai-collab init 初始化配置，再运行 ai-collab doctor 检查环境",
+  "按协作文档配置模型别名与账号，确保 ~/.local/bin 在 PATH 中",
+  "使用 ai-collab run --model <别名> --workspace <路径> --prompt \"...\" 发起协作任务"
+ ],
+ "summary": "AImanager 解决的是多个 AI 工具之间上下文割裂、协作困难的问题。它让 ChatGPT 网页版通过 MCP 插件直接读取本地或服务器上的项目文件，同时提供命令行工具，让 Codex CLI、Claude Code 和 API 模型在现有 Agent 中交换分析结果、交叉审阅代码与方案。此外，它还统一管理各平台的账号登录、额度查询和 CLI 会话恢复。适合需要跨设备、多模型配合完成开发、科研或写作任务的用户。",
+ "tagline": "统一管理 AI 账号、额度与会话，支持多模型协作与项目上下文接入"
+}

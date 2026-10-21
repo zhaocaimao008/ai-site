@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合在单机多 GPU 或单卡环境下同时运行多个本地 AI 服务、ComfyUI 工作流和游戏的开发者和自托管用户。",
+ "date": "2026-10-21",
+ "features": [
+  "多个引擎按优先级轮流租用 GPU，避免同时加载导致显存不足",
+  "等待持有者完成当前回复或图像任务后再卸载并交接",
+  "支持 foreground、interactive、batch、hold 优先级和最短占用时间",
+  "可管理 Docker/Podman 容器内的引擎，并在守护进程重启后重新接管",
+  "提供 OpenAI 兼容 gateway，统一接入聊天与 ComfyUI 工作流",
+  "支持从 Hugging Face 和 CivitAI 下载模型并校验文件"
+ ],
+ "intro": "Berth 是一个用 Go 编写的 GPU 调度守护进程，解决同一台机器上多个 AI 程序同时抢显存、互相触发 OOM 崩溃的问题。聊天模型、图像管线、语音引擎和游戏通过 berth run、gateway、ComfyUI API 或游戏声明来申请显卡，由 berthd 按优先级排队，等当前持有者完成回复或任务后卸载它，确认驱动显示显存释放后再把卡交给下一个。\n\n它支持 foreground、interactive、batch、hold 等优先级，可以设置最短占用时间，也能管理 Docker/Podman 容器内的引擎。v0.3 加入了将模型权重暂存到内存的 park 机制，以及 berth stop、resume、reclaim 等手动干预命令。此外还提供 OpenAI 兼容的 gateway 和 Hugging Face、CivitAI 模型下载功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "berth daemon &",
+  "berth run --as llama -- llama-server -m model.gguf",
+  "berth status"
+ ],
+ "summary": "Berth 解决的是同一块显卡上多个 AI 程序争抢显存、互相导致崩溃的问题。它让聊天模型、图像管线、语音引擎和游戏通过统一入口申请显卡，按优先级排队，等当前任务结束后再交接。适合在本地同时跑多个推理服务和 ComfyUI 工作流、又不想手动管理显存的开发者与自托管用户。",
+ "tagline": "让多个 AI 引擎轮流占用同一块 GPU，避免显存冲突"
+}

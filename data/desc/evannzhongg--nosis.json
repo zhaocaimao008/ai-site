@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地运行个人 AI Agent、需要沙箱隔离和人工审批的开发者，以及偏好终端或图形界面的进阶用户。",
+ "date": "2026-10-21",
+ "features": [
+  "受控本地执行：三种权限预设，Shell 按范围进入沙箱或宿主环境，文件工具限制在工作区",
+  "桌面自动化：主 Agent 可通过 computer_screenshot 和 computer_action 观察并操作桌面",
+  "完整的 Agent 循环：流式响应、工具批处理、上下文压缩、计划、取消和后台任务",
+  "可恢复会话：对话与执行事件写入追加式 JSONL 日志，TUI 和 GUI 共享会话",
+  "长期记忆与定时任务：全局和工作区级记忆，支持一次性、间隔和 cron 任务",
+  "扩展系统：独立 Skill、Plugin 提供的 Skill/Agent/MCP 组件，以及独立 MCP 服务器"
+ ],
+ "intro": "Nosis 是一个开源的个人 Agent 应用，提供本地工作区操作、人工审批、会话持久化、上下文管理、长期记忆、计划、子 Agent 和定时任务，并支持 Skill / Plugin / MCP 扩展。它同时提供 TUI 和 GUI 两种前端，两者通过 Bridge 协议共享执行状态和交互语义。\n\n架构上分为 agent_core（与前端无关的 Agent 机制）、agent_runtime（读取配置并组装可运行实例）和 Bridge（前端驱动 Runtime 的唯一通道）。会话和执行事件以追加式 JSONL 日志持久化，TUI 和 GUI 可读取同一类会话。\n\n项目强调受控的本地执行：会话支持三种权限预设，Shell 根据范围进入工作区沙箱或宿主环境，文件工具始终限制在当前工作区。模型接入方面，OpenAI 兼容端点使用原生 OpenAI SDK，其他路由和图像生成使用 LiteLLM，并可为不同角色独立路由 Provider。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：Python >= 3.11、Node.js >= 22 和 uv",
+  "克隆仓库并构建前端：git clone https://github.com/EvannZhongg/Nosis.git && cd Nosis && npm install && npm run build",
+  "安装 CLI：uv tool install --editable \".[gui]\"",
+  "首次启动 TUI 初始化配置：nosis",
+  "创建 ~/.nosis/.env 并填入 OPENAI_KEY=your-api-key，然后重启 nosis 或运行 nosis-gui 启动图形界面"
+ ],
+ "summary": "Nosis 是一个轻量级个人 AI Agent 运行时，重点解决在本地安全运行 Agent 的问题：通过会话级权限预设和 OS 级沙箱限制 Shell 与文件操作范围，并支持人工审批。它内置完整工具集、长期记忆、计划和定时任务，可通过 Skill、Plugin 和 MCP 扩展，TUI 与 GUI 共享同一套执行状态和持久化会话。适合需要本地可控 Agent 的开发者与进阶用户。",
+ "tagline": "轻量级个人 AI Agent 运行时，支持本地沙箱与双前端"
+}

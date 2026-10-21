@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望让 AI agent 安全地读写网站内容的开发者，以及需要把网站操作自动化、又不想直接暴露账号凭据的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "根据网站 URL 和意图自动生成带类型的 CLI 子命令与 MCP 工具",
+  "三个 AI worker 分别分析文档、前端 bundle 与浏览器网络流量",
+  "读操作可直接执行，写操作默认关闭、按站点显式开启",
+  "复用真实浏览器登录会话，cookie 不传给 LLM",
+  "内置本地 dashboard，可查看动作与结构化结果",
+  "支持 REST/OpenAPI、GraphQL、HTML/JS 页面和表单等多种接口"
+ ],
+ "intro": "Hycli 是一个用 Rust 编写的本地工具，目标是把任意网站转换成带类型的 CLI 子命令和 MCP 工具，供 AI agent 调用。你只需给出网站 URL 和想完成的任务，它会通过三个 AI worker 分析站点文档、前端 bundle 和真实浏览器网络流量，生成覆盖读取与写入的操作集合。\n\n整个准备过程不会改动你的账号，写操作默认关闭，需要按站点显式开启后才会执行。它使用你真实的浏览器登录状态，并声称不会把 cookie 泄露给 LLM，同时内置反爬能力。项目提供本地 dashboard（http://127.0.0.1:4318），可查看已准备的动作和结构化结果，支持 20 种语言。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "hycli prepare https://your-website.example --intent \"Search posts, save drafts, and publish articles\"",
+  "hycli describe your-website",
+  "hycli your-website search-posts --query \"release notes\"",
+  "hycli writes your-website allow",
+  "hycli your-website create-draft --title \"Hello from Hycli\" --body \"Automated from my terminal.\""
+ ],
+ "summary": "Hycli 解决的是让 AI agent 安全操作真实网站的问题：它把网站转换成带类型的 CLI 命令和 MCP 工具，供 Claude Code、Cursor 等助手调用。准备阶段只做分析、不改动账号，写操作默认关闭、需按站点开启，并复用浏览器登录状态而不把 cookie 交给模型。适合需要让 AI 读写网站内容、又在意账号安全的开发者。",
+ "tagline": "把网站变成 AI 可调用的 CLI 与 MCP 工具"
+}

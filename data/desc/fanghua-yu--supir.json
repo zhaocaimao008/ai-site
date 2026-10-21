@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究图像修复、超分辨率的研究人员，以及希望在实际应用中提升图像质量的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "基于 SDXL 和 LLaVA 的扩散模型图像修复",
+  "支持真实世界图像的超分辨率与恢复",
+  "提供 SUPIR-v0Q 和 SUPIR-v0F 两个预训练模型",
+  "命令行推理脚本 test.py 和 Gradio 交互演示",
+  "可调节采样步数、引导尺度等参数以平衡质量与保真度",
+  "支持多 GPU 推理和低显存模式"
+ ],
+ "intro": "SUPIR 是 CVPR 2024 提出的图像修复方法，目标是在真实场景下实现照片级逼真的图像恢复。它结合了多模态大语言模型 LLaVA 与 Stable Diffusion XL（SDXL），通过模型规模扩展来提升修复效果。项目提供了推理代码和预训练模型，支持图像超分辨率、去模糊、去噪等任务。\n\n项目包含两个主要模型：SUPIR-v0Q 在默认训练设置下具有高泛化性，适用于大多数情况；SUPIR-v0F 在轻度退化设置下训练，能保留更多细节。用户可以通过命令行脚本或 Gradio 交互界面进行推理，并调整采样步数、引导尺度等参数来控制质量与保真度。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Fanghua-Yu/SUPIR.git",
+  "创建 conda 环境并安装依赖：conda create -n SUPIR python=3.8 -y && conda activate SUPIR && pip install -r requirements.txt",
+  "下载预训练模型（SUPIR-v0Q 或 SUPIR-v0F）及依赖模型（SDXL、LLaVA 等）",
+  "编辑 CKPT_PTH.py 和 options/SUPIR_v0.yaml 中的模型路径",
+  "运行推理：python test.py --img_dir [输入目录] --save_dir [输出目录] --SUPIR_sign Q --upscale 2"
+ ],
+ "summary": "SUPIR 是一个面向真实场景的图像修复与超分辨率项目，利用扩散模型和大型语言模型提升修复效果。它适合需要恢复低质量照片、进行图像超分的开发者和研究人员，提供了预训练模型和命令行、Gradio 两种使用方式，并允许通过参数调节在视觉质量与保真度之间取得平衡。",
+ "tagline": "基于扩散模型的真实世界图像修复与超分"
+}

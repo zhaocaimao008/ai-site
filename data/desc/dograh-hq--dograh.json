@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要自托管语音智能体、关注数据主权和源码可定制性的开发者与团队，也适合想快速验证语音 AI 场景的产品人员。",
+ "date": "2026-10-21",
+ "features": [
+  "可视化工作流编辑器，通过节点搭建入站和出站语音智能体",
+  "支持 Speech-to-Speech 或 LLM/STT/TTS 组合，可自带任意供应商的 API Key",
+  "浏览器内测试：用 Test Audio 语音对话，或用 Test Chat 以文本快速迭代",
+  "MCP 原生支持，AI 编程助手可协助设计和编辑工作流",
+  "电话通信集成，支持 Twilio、Vonage、Telnyx 等服务商",
+  "一条 Docker 命令完成自托管部署"
+ ],
+ "intro": "Dograh 是一个开源的语音 AI 平台，定位为 Vapi 和 Retell 的自托管替代方案。它提供可视化工作流编辑器，让用户通过拖拽节点的方式设计入站或出站语音智能体，并在浏览器中直接测试对话效果。\n\n平台支持 Speech-to-Speech 以及 LLM/STT/TTS 组合两种语音链路，允许接入任意供应商的模型和语音服务，也自带一套可用的默认栈。项目原生支持 MCP，AI 编程助手可以参与智能体的设计与编辑；同时提供电话通信集成，可对接 Twilio、Vonage、Telnyx 等服务商。\n\n由于代码完全开放且可部署在自己的基础设施上，Dograh 适合对数据驻留、供应商锁定和源码级定制有要求的团队。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "执行 README 中的命令下载 docker-compose.yaml 和启动脚本并运行：curl -o docker-compose.yaml https://raw.githubusercontent.com/dograh-hq/dograh/main/docker-compose.yaml && curl -o start_docker.sh https://raw.githubusercontent.com/dograh-hq/dograh/main/scripts/start_docker.sh && chmod +x start_docker.sh && ./start_docker.sh",
+  "等待首次启动下载镜像（约 2-3 分钟），然后打开 http://localhost:3010",
+  "选择 Inbound 或 Outbound，为机器人命名并用 5-10 个词描述使用场景",
+  "点击 Test Agent，用 Test Audio 进行语音对话，或用 Test Chat 以文本方式快速迭代",
+  "如需关闭注册，在 .env 中设置 ENABLE_SIGNUP=false 并重新运行 ./start_docker.sh"
+ ],
+ "summary": "Dograh 是一个开源的语音 AI 平台，可作为 Vapi、Retell 的自托管替代品。它用可视化工作流编辑器搭建入站和出站语音智能体，支持 Speech-to-Speech 或 LLM/STT/TTS 组合，并允许接入自己的模型与电话服务商。适合希望把语音智能体部署在自己基础设施上、需要源码级定制和避免供应商锁定的团队。",
+ "tagline": "可自托管的开源语音 AI 平台，可视化搭建语音智能体"
+}

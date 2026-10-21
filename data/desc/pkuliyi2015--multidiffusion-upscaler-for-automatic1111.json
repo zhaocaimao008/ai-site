@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Stable Diffusion WebUI 且显存有限（≤6GB）但希望生成或放大高分辨率图像的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "Tiled VAE：分块处理 VAE 编解码，降低显存占用",
+  "Tiled Diffusion 文生图：生成超大图像",
+  "Tiled Diffusion 图生图：放大图像并增强细节",
+  "区域提示词控制：为图像不同区域指定不同提示词",
+  "Tiled Noise Inversion：原创的噪声反演方法",
+  "支持 ControlNet、StableSR、SDXL（实验性）和 Demofusion"
+ ],
+ "intro": "这是一个为 Stable Diffusion WebUI 开发的扩展，目标是在显存有限（≤6GB）的条件下生成或放大超大图像（≥2K）。它集成了多种分块扩散方法，包括 Mixture of Diffusers、MultiDiffusion 和 Demofusion，并提供了作者原创的 Tiled VAE 与 Tiled Noise Inversion 技术。\n\n该扩展支持文生图生成超宽幅图像、图生图放大增强细节，还提供区域提示词控制、ControlNet 支持、StableSR 支持、SDXL 支持（实验性）以及 Demofusion 支持。项目采用 CC BY-NC-SA 4.0 许可证，自 2023.3.28 后的版本禁止用于商业贩售，但衍生的艺术创作内容不受限制。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个扩展面向显存有限的 Stable Diffusion WebUI 用户，帮助在低显存条件下生成或放大 2K 以上的大图。它通过分块扩散和分块 VAE 等技术降低显存占用，并支持区域提示词控制、ControlNet 等进阶功能，适合需要制作超宽幅图像或对现有图片进行高清放大的场景。",
+ "tagline": "低显存生成或放大超大图像的 Stable Diffusion WebUI 扩展"
+}

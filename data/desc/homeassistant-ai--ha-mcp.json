@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用自然语言控制 Home Assistant 的智能家居用户和开发者，尤其是已使用 Claude 等 AI 客户端的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "提供 87 个工具，覆盖设备控制、状态查询、服务执行和自动化管理",
+  "支持通过 HACS 安装自定义组件，在 Home Assistant 进程内运行",
+  "提供 Home Assistant 应用（附加组件）安装方式",
+  "支持远程访问（Webhook URL）和本地网络访问",
+  "可选启用文件与 YAML 编辑工具（默认关闭）",
+  "内置管理面板，可管理工具、功能标志、备份和主题"
+ ],
+ "intro": "ha-mcp 是一个基于 Model Context Protocol（MCP）的服务器，让 AI 助手能够与 Home Assistant 交互。通过自然语言，用户可以控制智能家居设备、查询状态、执行服务以及管理自动化。项目提供 87 个工具，基于 FastMCP 构建，使用 Python 编写。\n\n推荐通过 HACS 安装自定义组件，在 Home Assistant 进程内运行完整服务器，支持所有安装类型（OS、Supervised、Container、Core），功能完全一致。也提供 Home Assistant 应用（附加组件）方式，适合 OS 和 Supervised 安装。\n\n安装后，AI 客户端通过 Webhook URL 或本地网络地址连接，即可用自然语言操作 Home Assistant。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 HACS 添加自定义仓库 https://github.com/homeassistant-ai/ha-mcp-integration（类别：Integration）并下载",
+  "重启 Home Assistant",
+  "创建长期访问令牌或专用管理员账户",
+  "在设置 → 设备与服务中添加集成，搜索 HA-MCP Custom Component 并选择 HA-MCP Server，粘贴令牌或输入账户密码，选择连接方式",
+  "从配置屏幕复制连接 URL，粘贴到 AI 客户端中"
+ ],
+ "summary": "ha-mcp 是一个 MCP 服务器，让 AI 助手能用自然语言操作 Home Assistant，比如控制设备、查询状态、执行服务和管理自动化。它提供 HACS 自定义组件、应用（附加组件）等多种安装方式，适合希望用对话方式管理智能家居的用户。",
+ "tagline": "让 AI 助手通过自然语言控制 Home Assistant 的 MCP 服务器"
+}

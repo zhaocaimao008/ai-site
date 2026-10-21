@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "适合需要分析、转换或生成 Java 代码的开发者，以及构建静态分析工具、IDE 插件或代码生成器的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "解析 Java 1.0 至 Java 25 源代码，生成抽象语法树（AST）",
+  "JavaSymbolSolver 分析 AST，关联元素与声明（如变量类型和位置）",
+  "支持将 AST 序列化为 JSON（需 javaparser-core-serialization 模块）",
+  "提供 Maven 和 Gradle 依赖配置，方便集成到构建系统",
+  "包含代码生成器，可在修改 AST 节点后自动更新相关代码"
+ ],
+ "intro": "JavaParser 是一组 Java 库，用于解析 Java 1.0 到 Java 25 的源代码并生成抽象语法树（AST），同时提供高级分析功能。项目自 3.5.10 版本起包含 JavaSymbolSolver，可分析 AST 并建立元素与其声明之间的关联，例如解析变量名对应的参数类型和位置。自 3.6.17 版本起支持将 AST 序列化为 JSON。\n\n项目通过 Maven Central 分发，提供 javaparser-core、javaparser-symbol-solver-core 和 javaparser-core-serialization 等模块，用户可按需引入。构建项目可使用 Maven 包装器执行 ./mvnw clean install 或 ./mvnw package。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Maven 项目中添加依赖：<dependency><groupId>com.github.javaparser</groupId><artifactId>javaparser-symbol-solver-core</artifactId><version>3.28.2</version></dependency>",
+  "或在 Gradle 项目中添加：implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.28.2'",
+  "若只需核心解析功能，可仅引入 javaparser-core 依赖",
+  "从源码构建项目：./mvnw clean install",
+  "生成打包 jar：./mvnw package"
+ ],
+ "summary": "JavaParser 是一个用于解析 Java 源代码并生成抽象语法树的库，支持 Java 1.0 到 Java 25。它附带 JavaSymbolSolver，能分析 AST 并建立元素与声明之间的关联，适合开发代码分析工具、IDE 插件或代码生成器。项目通过 Maven Central 分发，提供多个模块，可按需引入。",
+ "tagline": "解析 Java 1-25 源码并生成抽象语法树"
+}

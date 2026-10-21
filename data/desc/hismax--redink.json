@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速制作小红书图文内容的创作者、运营人员，以及想了解 AI 图文生成流程的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "输入一句话主题，自动生成多页图文大纲",
+  "为封面和内页批量生成风格一致的配图",
+  "支持编辑每页内容、调整顺序和自定义描述",
+  "可单独重新生成不满意的页面",
+  "通过 Web UI 或 YAML 文件配置文本与图像 API",
+  "支持 Docker 部署和本地开发两种方式"
+ ],
+ "intro": "RedInk 是一个基于 AI 的小红书图文生成工具。用户输入一句话主题，系统会先生成内容大纲，再调用图像生成模型为封面和内页配图，最终输出风格统一、文字准确的图文帖子。项目后端使用 Python 3.11+ 和 Flask，前端使用 Vue 3 + TypeScript，文本生成支持 Gemini 和 OpenAI 兼容接口，图像生成支持 Nano Banana Pro 等模型。\n\n部署方式灵活，推荐使用 Docker 一键启动，也支持本地开发。生成过程支持并发处理，但需注意 API 配额限制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Docker 启动：docker run -d -p 12398:12398 -v ./history:/app/history -v ./output:/app/output histonemax/redink:latest",
+  "访问 http://localhost:12398，在设置页面配置 API Key",
+  "或本地开发：克隆仓库后复制 text_providers.yaml.example 和 image_providers.yaml.example 并填入 API Key",
+  "安装后端依赖：uv sync；安装前端依赖：cd frontend && pnpm install",
+  "运行启动脚本（如 ./start.sh 或 start.bat）自动打开 http://localhost:5173"
+ ],
+ "summary": "RedInk 是一个 AI 驱动的小红书图文生成工具，用户只需输入一句话主题，它就能自动生成内容大纲，并调用图像模型为封面和内页配图，输出风格统一、文字准确的图文帖子。项目支持编辑每页内容、调整顺序和单独重绘，适合需要快速制作社交媒体内容的创作者和运营人员，也适合想了解 AI 图文生成流程的开发者。",
+ "tagline": "一句话生成小红书图文，AI 自动配图排版"
+}

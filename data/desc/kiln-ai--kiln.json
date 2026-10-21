@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要系统化评测和优化 AI 产品的开发者与数据科学家，也适合不写代码、但需要参与打分和标注的产品经理与领域专家。",
+ "date": "2026-10-21",
+ "features": [
+  "Eval Builder：自动生成评测集与 judge，快速对齐偏好",
+  "Auto-Optimize：自动搜索提示词、模型、工具与参数组合",
+  "RAG：拖入 PDF、图片、音视频等文档构建检索，并自动生成评测",
+  "合成数据生成与零代码微调，支持 60+ 模型及无服务器部署",
+  "多 agent 层级编排，每个子 agent 拥有独立上下文窗口",
+  "桌面应用与 Python 库共用同一任务，支持 Git 协作同步"
+ ],
+ "intro": "Kiln 是一个面向 AI 开发全流程的工作台，把评测（evals）、提示词优化、RAG、微调、合成数据、agent 与工具调用放在同一套工具里。它提供 Mac、Windows、Linux 桌面应用，也提供 MIT 协议的 Python 库，应用里构建的任务可以直接部署到生产环境。\n\n项目强调本地优先：数据留在本机，可以自带 API key，也可以用 Ollama 完全离线运行。团队协作通过 Git 同步实现，不写代码的成员也能在应用里给输出打分、补充数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 kiln.tech/download 下载并安装 Kiln Desktop（macOS / Windows / Linux）",
+  "按照官方 5 分钟 quickstart 运行第一个任务",
+  "如需在代码中集成，参考 Python library quickstart 使用 kiln-ai 库"
+ ],
+ "summary": "Kiln 把 AI 开发中分散的评测、提示词优化、RAG、微调、合成数据和 agent 编排整合到一个本地运行的工作台里。同一份任务和数据集可以在各环节复用，结果逐步累积。桌面应用让非工程成员也能参与打分和标注，Python 库则负责把任务部署到生产，适合希望系统迭代 AI 产品、又在意数据留在本地的团队。",
+ "tagline": "本地优先的 AI 开发工作台，覆盖评测、优化与部署"
+}

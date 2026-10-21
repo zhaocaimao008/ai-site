@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI 代理可靠操作浏览器或桌面的开发者，以及使用 Codex、Claude Code 等 MCP 宿主进行自动化任务的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "通过 CDP 读取 DOM/无障碍树，生成带稳定元素引用的快照，默认仅返回差异",
+  "使用 CDP 发送可信输入事件，避免合成 DOM 事件被网站拒绝",
+  "提供类型化错误（如 REF_NOT_FOUND、STALE_STATE）及重试提示",
+  "零 npm 依赖，仅需 Node.js 22+ 和 Chromium 系浏览器",
+  "支持 Codex、Claude Code、OpenCode、Antigravity 等 MCP 宿主",
+  "可通过插件机制扩展 CAPTCHA 求解等能力"
+ ],
+ "intro": "axuse 是一个基于 MCP 协议的服务器，让 AI 代理通过 Chrome DevTools Protocol（CDP）直接操作浏览器和计算机，而不是依赖截图循环。它通过注入序列化器读取 DOM 和无障碍树，生成带稳定元素引用的快照，并默认只返回差异内容，从而减少传输数据量和 token 消耗。\n\n该项目零 npm 依赖，要求 Node.js 22+，可接入 Codex、Claude Code、OpenCode、Antigravity 等支持 MCP 的宿主。输入事件通过 CDP 的 Input.dispatch* 发送，被网站视为可信操作；错误以类型化形式返回，并附带重试提示。Windows 桌面驱动已验证，macOS 桌面控制需显式启用并授予系统权限。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并检查环境：git clone https://github.com/ctoldigital/axuse.git && cd axuse && node src/cli.js doctor",
+  "运行引导式桥接设置：node src/cli.js setup --browser chrome --harness codex",
+  "在浏览器扩展页面点击“Load unpacked”加载指定文件夹，然后验证连接：node src/cli.js bridge verify",
+  "将 axuse 添加到你的 MCP 宿主，例如 Codex：codex mcp add axuse -- node /abs/path/axuse/src/cli.js mcp",
+  "在代理中提出浏览器任务，例如：打开 https://example.com，找到“More information”链接并告诉我它指向哪里"
+ ],
+ "summary": "axuse 是一个让 AI 代理通过无障碍树和 CDP 操作浏览器与计算机的 MCP 服务器，旨在替代截图循环。它生成带稳定元素引用的快照并默认返回差异，减少 token 消耗；输入事件通过 CDP 发送，被网站视为可信操作。适合需要让代理可靠完成网页自动化任务的开发者和团队，可接入 Codex、Claude Code 等 MCP 宿主。",
+ "tagline": "面向 AI 代理的无障碍优先浏览器与计算机操作 MCP 服务器"
+}

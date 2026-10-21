@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 AI 对话中直接查询行情、做技术分析和策略回测的开发者、交易研究者与普通用户。",
+ "date": "2026-10-21",
+ "features": [
+  "提供 39 个工具，覆盖行情筛选、技术指标、回测和情绪分析",
+  "支持股票、加密货币、外汇和期货等多类市场",
+  "支持多周期技术分析，例如从周线到 15 分钟线的趋势判断",
+  "可在对话中直接运行策略回测，例如对 BTC 日线做 RSI 策略回测",
+  "兼容 Claude、ChatGPT、Cursor、Copilot 等任意 MCP 客户端",
+  "无需 TradingView 账号或 API Key，数据来自公开接口"
+ ],
+ "intro": "这是一个基于 Model Context Protocol 的服务器，让 Claude、ChatGPT、Cursor、Copilot 等 MCP 客户端可以直接获取股票、加密货币、外汇和期货的市场数据与技术分析结果。项目提供 39 个工具，覆盖行情筛选、多周期技术指标、回测和情绪分析。\n\n服务器从公开接口获取数据，不需要登录或使用 TradingView 账号，也不通过浏览器自动化操作 TradingView 桌面端。你可以自行部署，也可以使用官方托管版本 TradingMCP。项目声明与 TradingView Inc. 无关联，输出内容不构成投资建议。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 MCP 客户端中配置该服务器，或使用托管版 TradingMCP 的连接 URL",
+  "也可以按 README 说明通过 pip 安装后自行启动服务器",
+  "在对话中直接提问，例如：Show today's top crypto gainers on Binance",
+  "尝试多周期分析：What's the multi-timeframe read on gold?",
+  "运行回测：Backtest an RSI strategy on BTC on the daily timeframe"
+ ],
+ "summary": "这个项目把行情数据和技术分析能力接入 AI 助手，让用户不必切换平台，就能在对话中查询股票、加密货币、外汇和期货的行情，做多周期指标分析、筛选和策略回测。它适合想用自然语言快速了解市场、验证交易想法的人，也适合需要把市场数据接入自有 AI 工作流的开发者。",
+ "tagline": "为 AI 助手提供行情数据与技术分析的 MCP 服务器"
+}

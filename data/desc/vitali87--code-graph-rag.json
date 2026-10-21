@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在大型或多语言 monorepo 中快速定位代码、理解调用关系的开发者，以及希望用 AI 辅助代码检索与修改的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "用 Tree-sitter 解析多语言代码库，构建函数、类、模块及其关系的知识图谱",
+  "用自然语言提问，由 AI 生成 Cypher 查询并在图谱上检索答案",
+  "按名称或意图取回函数、类、方法的实际源码",
+  "通过 agent 进行 AST 级代码修改，改动前提供 diff 预览",
+  "从入口点沿调用和引用边查找死代码",
+  "支持 ast-grep 结构化搜索与重写，并可将运行时追踪结果合并进图谱"
+ ],
+ "intro": "Code-Graph-RAG 是一个面向 monorepo 的代码检索增强生成工具。它用 Tree-sitter 解析多语言代码库，提取函数、类、方法和模块及其相互关系，构建成一张统一 schema 的知识图谱，默认存储在嵌入式 SQLite 文件中，无需额外启动数据库服务。\n\n图谱建好后，你可以用自然语言向代码库提问，答案基于真实的代码结构；也可以按名称或意图取回具体函数、类、方法的源码。它还支持通过 agent 做基于 AST 的精确修改，并在改动前展示 diff 预览，以及查找死代码、按 AST 模式搜索和重写代码。\n\n项目支持 Python、TypeScript、JavaScript、Rust、Go、Java、C/C++、C#、PHP 等语言，并可选接入 Memgraph、Neo4j 作为图后端，或通过动态追踪把运行时实际发生的调用合并进图谱。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 uv 安装：uv tool install \"code-graph-rag[treesitter-full,ast-grep,semantic]\"",
+  "或使用 pipx 安装：pipx install \"code-graph-rag[treesitter-full,ast-grep,semantic]\"",
+  "在仓库中运行 cgr start --update-graph，将代码解析并写入知识图谱",
+  "运行 cgr start，用自然语言提问或让 agent 修改代码"
+ ],
+ "summary": "Code-Graph-RAG 面向多语言 monorepo，先用 Tree-sitter 解析源码，把函数、类、模块及调用关系整理成知识图谱，再让 AI 基于这张图回答问题、取回源码并修改代码。它适合需要跨语言理解代码结构、查找死代码或用自然语言定位实现的开发者，图谱默认存在本地 SQLite 文件中，无需单独部署数据库服务。",
+ "tagline": "用知识图谱和 AI 查询、理解并编辑多语言代码库"
+}

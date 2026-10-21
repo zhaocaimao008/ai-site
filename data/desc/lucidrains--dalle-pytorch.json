@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本到图像生成感兴趣的研究者和开发者，尤其是希望基于 PyTorch 复现或微调 DALL-E 的深度学习从业者。",
+ "date": "2026-10-21",
+ "features": [
+  "实现 DiscreteVAE，支持训练图像离散码本",
+  "实现 DALL-E Transformer，支持文本到图像生成",
+  "支持加载 OpenAI 预训练的 DiscreteVAE",
+  "支持使用 Taming Transformers 的预训练 VQGAN VAE",
+  "提供图像生成和文本生成的示例代码",
+  "社区贡献了多个训练成果和 Colab 示例"
+ ],
+ "intro": "该项目是 OpenAI 的 DALL-E 模型在 PyTorch 中的实现与复现，包含离散 VAE（DiscreteVAE）和 DALL-E Transformer 两部分。用户可以先训练 VAE 学习图像码本，再基于 VAE 训练 DALL-E 进行文本到图像的生成。项目也支持直接加载 OpenAI 预训练的 VAE 或 Taming Transformers 的 VQGAN VAE，避免从头训练 VAE。\n\nREADME 中提供了训练 VAE、训练 DALL-E 以及生成图像的示例代码，并展示了社区成员在不同数据集上的训练成果。项目还计划包含 CLIP 用于对生成结果进行排序。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install dalle-pytorch",
+  "训练 DiscreteVAE：使用示例代码定义 VAE 并调用 loss.backward() 进行训练",
+  "训练 DALL-E：基于训练好的 VAE 定义 DALLE 模型并计算损失",
+  "生成图像：调用 dalle.generate_images(text) 生成图像",
+  "可选：使用 OpenAIDiscreteVAE() 加载 OpenAI 预训练 VAE 跳过 VAE 训练"
+ ],
+ "summary": "这个项目用 PyTorch 复现了 OpenAI 的 DALL-E 文本到图像 Transformer，包含离散 VAE 和 DALL-E 模型两部分。它适合想在自己的数据集上训练文本生成图像模型的研究者，也支持直接加载 OpenAI 预训练 VAE 或 VQGAN VAE 来减少训练成本。README 提供了训练和生成图像的代码示例，方便快速上手实验。",
+ "tagline": "PyTorch 实现的 DALL-E 文本到图像 Transformer"
+}

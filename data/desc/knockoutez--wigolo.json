@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程代理并需要为其提供网页搜索与抓取能力的开发者，以及希望自托管、注重隐私和成本控制的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "多引擎网页搜索，支持 18 个直接适配器与排名融合",
+  "网页抓取、爬取与内容提取，结果附带逐字摘录和引用 ID",
+  "本地缓存与相似内容查找，失败引擎和过期缓存会被标记",
+  "research 和 agent 工具支持自主收集循环，可选用 LLM 生成带引用的答案",
+  "通过 MCP 协议与 Claude Code、Cursor、Codex 等代理集成，也支持 REST 和 SDK",
+  "核心功能无需 API 密钥，数据保留在本地 ~/.wigolo/ 目录"
+ ],
+ "intro": "wigolo 是一个面向 AI 代理的本地优先网页智能工具，通过 MCP 协议为 Claude Code、Cursor、Codex 等编程代理提供搜索、抓取、爬取、提取、缓存、相似查找和研究等能力。核心工具无需 API 密钥，所有数据保留在本地 ~/.wigolo/ 目录，不会产生按查询计费的费用。\n\n项目以 MCP 服务器形式运行，也可作为 REST 端点或 SDK 嵌入自有应用。搜索结果附带逐字摘录、引用 ID 和可检查的评分，方便代理引用和验证。research 和 agent 等需要 LLM 合成答案的功能可选用 Gemini、Anthropic、OpenAI 等提供商，或使用本地 Ollama 保持完全离线。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx wigolo init  # 初始化本地引擎，下载浏览器引擎和本地模型",
+  "npx wigolo init --agents=claude-code,cursor  # 同时配置指定代理的 MCP 设置",
+  "npx wigolo doctor  # 检查安装健康状态",
+  "export WIGOLO_LLM_PROVIDER=gemini && export GEMINI_API_KEY=<free-key>  # 可选：为 research 和 agent 配置 LLM"
+ ],
+ "summary": "wigolo 为 AI 编程代理提供一个本地优先的网页工具层，解决代理在搜索、抓取和爬取网页时依赖云端 API、产生费用或泄露数据的问题。它通过 MCP 协议接入 Claude Code、Cursor 等代理，核心功能无需密钥，数据留在本地，适合需要让代理自主获取网页信息又希望控制成本和隐私的开发者。",
+ "tagline": "为 AI 编程代理提供本地优先的网页搜索与抓取工具"
+}

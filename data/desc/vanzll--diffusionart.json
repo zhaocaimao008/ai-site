@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究扩散模型强化学习后训练的研究者与工程师，以及需要在 T2I、T2V、I2V 任务上做奖励微调并复现论文实验的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "实现 DiffusionART 算法：协方差 guidance 加两段式不相交 minibatch 更新",
+  "支持 text-to-image、text-to-video、image-to-video 三类生成任务",
+  "提供 DiffusionART-Pairwise 变体，支持成对偏好反馈",
+  "同一框架内集成六个基线算法，便于对比实验",
+  "附带论文训练配置（configs/paper/）与 Hugging Face 模型",
+  "无需可微奖励模型，对较小的 rollout 组保持稳定"
+ ],
+ "intro": "DiffusionART 是论文《DiffusionART: Efficient, Stable and Scalable Reinforcement of Diffusion Models》的官方实现。它提出一种 on-policy 的扩散强化学习算法，核心是 Aggregation-First Reward Tilting with Adaptive Restoration：先用 ODE 求解器为每个 prompt 采样 K 条轨迹，计算奖励与终点的协方差作为 guidance，再分两个互不重叠的 minibatch 做更新。作者称该设计结合了前向与反向过程强化学习的优点，无需可微奖励模型，超参数调节少，并且在小 rollout 组下依然稳定。\n\n仓库提供了一套完整的视觉生成模型微调框架，覆盖 text-to-image、text-to-video 和 image-to-video 三类任务，并集成了常用的开源基础模型、奖励模型以及多种基线算法。此外还包含 DiffusionART-Pairwise 变体，用 1/0/0.5 的偏好标签替代标量奖励，以支持成对反馈。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读 README 中的 Method 部分，了解协方差 guidance 与两段式更新的原理",
+  "查看 docs/README.md 获取完整文档，并参考 docs/faq.md 解决常见问题",
+  "从 Hugging Face 模型集合下载所需基础模型与奖励模型",
+  "使用 configs/paper/ 下的训练配置复现论文实验"
+ ],
+ "summary": "DiffusionART 是一个用于扩散模型强化学习后训练的开源框架，提出以奖励协方差作为 guidance、配合自适应恢复的两段式更新方法，用于 text-to-image、text-to-video 和 image-to-video 模型的微调。它不需要可微奖励模型，也支持成对偏好反馈，适合想复现论文或在视觉生成任务上做奖励微调的研究者。",
+ "tagline": "面向扩散模型的强化学习微调框架"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已有明确编码规范、希望 AI 生成代码可直接用于生产环境的开发团队，以及需要审批控制和质量保障的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "上下文感知：代理在生成代码前加载项目预定义的编码模式，减少风格不一致",
+  "审批门控：代理始终先提出计划，经用户批准后再执行，保持人工控制",
+  "可编辑代理：代理行为由 Markdown 文件定义，可直接修改，无需编译",
+  "多语言与多模型支持：覆盖 TypeScript、Python、Go、Rust 等语言，兼容 Claude、GPT、Gemini 和本地模型",
+  "团队协作：编码模式可提交到仓库，供团队成员共享，新成员自动继承",
+  "Claude Code 插件（Beta）：提供 6 阶段工作流、7 个专用子代理和 9 个工作流技能"
+ ],
+ "intro": "OpenAgentsControl（OAC）是一个基于 OpenCode 的 AI 代理框架，旨在解决 AI 生成代码不符合项目规范、需要大量返工的问题。它通过上下文系统让代理在生成代码前加载你预先定义的编码模式、架构和安全要求，从而产出与项目风格一致的代码。\n\nOAC 强调“计划优先”和“审批执行”：代理会先提出计划，经你批准后再逐步执行并验证，过程中可调用专门代理处理不同任务。代理行为通过 Markdown 文件定义，可直接编辑，无需编译。框架支持 TypeScript、Python、Go、Rust 等多种语言，并兼容 Claude、GPT、Gemini 及本地模型。\n\n此外，OAC 提供 Claude Code 插件（Beta），包含多阶段工作流和专用子代理，方便在 Claude Code 环境中使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 OpenCode CLI（免费开源），并确保 Bash 3.2+ 和 Git 可用",
+  "运行一键安装命令：curl -fsSL https://raw.githubusercontent.com/darrenhinde/OpenAgentsControl/main/install.sh | bash -s developer",
+  "启动代理：opencode --agent OpenAgent",
+  "输入需求，例如：\"Create a user authentication system\"",
+  "审阅代理提出的计划并批准，代理将逐步执行并验证"
+ ],
+ "summary": "OpenAgentsControl 是一个基于 OpenCode 的 AI 代理框架，解决 AI 生成代码不符合项目规范、需要反复修改的问题。它让代理在写代码前加载你定义的编码模式，并先提出计划、经你批准后再执行，适合已有明确规范、希望产出可直接使用代码的团队。",
+ "tagline": "让 AI 按你的编码模式生成可重复的代码"
+}

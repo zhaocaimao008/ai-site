@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速生成深度研究报告的研究人员、开发者，以及希望将深度研究能力集成到自有 AI 应用中的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "快速生成深度研究报告，约 2 分钟完成",
+  "支持多种主流 LLM，包括 Gemini、OpenAI、Anthropic、Deepseek、Grok、Ollama 等",
+  "集成 Searxng、Tavily、Firecrawl 等搜索引擎，为不支持搜索的模型提供联网能力",
+  "支持上传文本、Office、PDF 文件构建本地知识库",
+  "提供 SSE API 和 MCP 服务器，可作为 SaaS 或集成到其他 AI 服务",
+  "支持 PWA、多语言、研究历史保存和知识图谱生成"
+ ],
+ "intro": "Deep Research 是一个基于 Next.js 15 和 Shadcn UI 构建的开源项目，利用多种大语言模型在几分钟内生成深度研究报告。它结合“思考”模型和“任务”模型，并支持联网搜索，以提供快速且富有洞察力的分析。所有数据在浏览器本地处理和存储，注重隐私。\n\n项目支持 Gemini、OpenAI、Anthropic、Deepseek、Grok、Mistral、Azure OpenAI、Ollama 等多种主流 LLM，并可通过 Searxng、Tavily、Firecrawl 等搜索引擎为不支持搜索的模型提供联网能力。用户可以在研究过程中调整内容、重新研究，并生成知识图谱。\n\n此外，Deep Research 提供 SSE API 和 MCP 服务器，可作为深度研究服务集成到其他 AI 应用中，并支持 PWA、多语言和本地知识库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "获取 Gemini API Key（推荐）或其他 LLM API Key",
+  "一键部署到 Vercel 或 Cloudflare，或使用 Docker 运行",
+  "设置 LLM API Key 和可选的 API Base URL",
+  "开始使用"
+ ],
+ "summary": "Deep Research 是一个开源工具，能利用多种大语言模型在几分钟内生成深度研究报告。它支持 Gemini、OpenAI、Anthropic 等主流模型，并可通过搜索引擎为不支持联网的模型补充实时信息。所有数据在浏览器本地处理，适合需要快速调研、整理资料的研究人员和开发者，也可通过 API 或 MCP 集成到其他 AI 应用中。",
+ "tagline": "多模型驱动的快速深度研究报告生成工具"
+}

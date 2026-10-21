@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "拥有 AMD Strix Halo 平台（如 Ryzen AI Max+ 395）并希望在本地运行 Qwen3.8-Flash-Next 的开发者与爱好者。",
+ "date": "2026-10-21",
+ "features": [
+  "针对 AMD Strix Halo（gfx1151）统一内存架构优化，Linux 与 Windows 通用",
+  "支持 Qwen3.8-Flash-Next 的 hgn v2 与部分 GGUF 量化权重",
+  "提供 OpenAI 兼容 API、Anthropic Messages API（流式、工具调用、图片输入）和网页控制台",
+  "投机解码默认开启，结合 ngram 起草与 MTP 草稿头",
+  "分页 KV 页池与两级 prompt 缓存，减少重复 prefill",
+  "通过 service.conf 和环境变量配置上下文长度、并发数等参数"
+ ],
+ "intro": "Qwenox 是一个专门为 AMD Strix Halo（Ryzen AI Max+ 395，gfx1151）这类 128 GB 统一内存 APU 编写的本地推理引擎，用于运行 Qwen3.8-Flash-Next（177B MoE）模型。项目用 C++ 实现，Linux 和 Windows 共用同一份源码、模型目录和配置文件，对外提供 OpenAI 兼容 API、Anthropic Messages API 以及网页控制台。\n\n为了在有限内存里放下大模型，它把路由专家做 4-bit 量化并由 GPU kernel 直接读取，PLE n-gram 表留在磁盘按需读取；同时使用 ngram 起草加 MTP 草稿头的投机解码，以及分页 KV 页池和两级 prompt 缓存来避免重复 prefill。README 给出了在 GMK EVO-X2 上的实测性能数据。\n\n项目声明仅供学习和参考使用，支持 hgn v2 和部分 GGUF 权重，需要自行下载模型并编译。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Hugging Face CLI：pip install -U huggingface_hub",
+  "下载 hgn v2 权重：hf download peonist-ai/halogen-qwen3.8-flash-next --local-dir ./models --include qwen38-flash-next-v2.hgn qwen38-flash-next-ngram.hgn qwen38-flash-next-mtp.hgn qwen38-flash-next-vision.hgn \"tokenizer/*\"",
+  "在 service.conf 中填写 MODEL_FILE、NGRAM_FILE 等权重路径",
+  "Linux 下运行 bash build.sh 编译，再运行 bash start_hgn.sh 启动；Windows 下在 Git Bash 运行 bash build_win.sh 编译，双击 start_win.exe 启动",
+  "启动后访问 http://<主机>:8731/v1 使用 API，浏览器打开 http://<主机>:8731/ 进入控制台"
+ ],
+ "summary": "Qwenox 面向 AMD Strix Halo 这类大统一内存 APU，解决在本地运行 177B MoE 大模型时显存和内存不够的问题。它通过 4-bit 路由专家、磁盘按需读取的 n-gram 表、投机解码和 prompt 缓存，让 Qwen3.8-Flash-Next 能在 Linux 和 Windows 上跑起来，并提供 OpenAI 兼容接口和网页控制台，适合想在该硬件上本地部署该模型的开发者参考学习。",
+ "tagline": "为 AMD Strix Halo 定制的 Qwen3.8-Flash-Next 本地推理引擎"
+}

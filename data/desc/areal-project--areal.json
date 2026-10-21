@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要训练或微调 LLM agent 与推理模型的研究者和工程师，也适合希望以较低改造成本为现有 agent 应用接入 RL 训练的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "完全异步的 RL 训练范式，面向大规模推理与 agentic 模型",
+  "黑盒 agent 应用只需替换 base_url 即可接入在线 RL 训练",
+  "AReaL-lite 轻量版本，算法优先的 API 设计，便于快速原型开发",
+  "2.0 微服务架构，训练、推理、agent、权重更新服务相互独立",
+  "提供数学、代码、搜索、客服、SWE 等 agent 训练示例",
+  "支持 KPop、IcePop 等 token masking 配置"
+ ],
+ "intro": "AReaL 是一个强化学习基础设施，目标是把基础模型训练与现代 agent 应用连接起来，最初由清华大学 IIIS 与蚂蚁集团 AReaL 团队的研究者和工程师开发。它基于完全异步的 RL 训练范式，面向大规模推理模型与 agentic 模型的训练场景。\n\n项目强调灵活性与可扩展性：对于黑盒 agent 应用，只需替换 base_url 即可接入在线 RL 训练；同时提供 AReaL-lite 轻量版本，采用算法优先的 API 设计，便于研究者快速原型开发。2.0 版本重构为微服务架构，将训练、推理、agent 与权重更新拆分为独立服务。\n\nREADME 中列出了数学、代码、搜索、客服等方向的 agent 示例，以及 SWE 端到端 RL 训练示例，并提供论文、文档与中文文档入口。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/areal-project/AReaL",
+  "进入目录：cd AReaL",
+  "参考官方文档与中文文档完成安装与后续配置"
+ ],
+ "summary": "AReaL 是一套面向 LLM agent 应用的异步强化学习训练系统，解决的是把基础模型训练与 agent 应用衔接起来的问题。它支持黑盒 agent 通过替换 base_url 接入在线 RL 训练，并提供轻量版 AReaL-lite 方便算法原型开发。适合需要训练推理模型、agentic 模型或为现有 agent 应用加入 RL 训练的研究者与开发者。",
+ "tagline": "面向 LLM Agent 应用的大规模异步强化学习系统"
+}

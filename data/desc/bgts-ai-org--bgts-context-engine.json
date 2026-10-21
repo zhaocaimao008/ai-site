@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要让 AI 编程代理在大型或不熟悉仓库中快速定位相关代码的开发者与团队，也适合关注检索可复现性的工程人员。",
+ "date": "2026-10-21",
+ "features": [
+  "将仓库索引为包含符号、调用、引用、类型层级、HTTP 路由和跨语言桥接的代码图",
+  "基于图遍历的确定性检索，同一任务与 commit 返回相同排序",
+  "提供 MCP 与 REST 两种接口，可直接接入 Cursor、VS Code 等代理",
+  "可选 context selector 概率步骤，按任务筛选实际会修改的文件",
+  "支持多语言仓库索引，README 示例覆盖 Python、JavaScript、TypeScript、Java、C#、Go"
+ ],
+ "intro": "BGTS Context Engine 是一个面向 AI 编程代理的代码图上下文引擎。它把仓库索引成符号、调用、引用、类型层级、HTTP 路由和跨语言桥接构成的图，检索时通过遍历图来回答“改这个行为会牵动哪些代码”，而不是依赖向量相似度返回“读起来像问题”的文本。嵌入只用于在任务描述没有可识别名称时寻找入口点，不参与排序。\n\n同一段任务文本、同一个 commit，返回的排序完全一致，检索路径中没有 LLM、时钟或随机性，因此代理做出错误改动时可以复现它当时拿到的上下文。引擎基于 PostgreSQL、Apache AGE 和 pgvector，提供 MCP 与 REST 接口，并可选启用一个明确标记的概率性 context selector 来进一步压缩交给代理的文件内容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "docker compose -f deploy/docker-compose.yml up -d",
+  "pip install bgts-context-engine && cp .env.example .env && bce migrate",
+  "bce index --repo /path/to/your/repo --name my-service",
+  "bce context --task \"fix the login timeout in the meeting webhook\"",
+  "bce serve 或 bce serve-mcp 启动 REST / MCP 服务"
+ ],
+ "summary": "BGTS Context Engine 解决的是 AI 编程代理在陌生仓库里“先读什么”的问题：常见向量检索会返回提到关键词的文件，而不是真正参与该行为的代码。它把仓库索引成符号与调用关系图，用图遍历给出确定、可复现的相关代码排序，并通过 MCP 或 REST 交给代理。适合希望减少代理反复搜索、并让检索结果可回放的开发场景。",
+ "tagline": "为 AI 编程代理提供确定性代码图上下文"
+}

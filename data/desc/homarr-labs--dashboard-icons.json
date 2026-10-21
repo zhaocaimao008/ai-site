@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合搭建 Homarr、Homepage、Dashy 等自托管仪表盘的用户，以及希望让 AI 编码助手自动补全服务图标的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "3400+ 个风格统一的仪表盘图标与 logo",
+  "提供 SVG、PNG、WEBP 三种格式及明暗主题变体",
+  "通过 jsDelivr 或 GitHub 直链免费引用图标",
+  "MCP server 支持 AI 客户端检索图标并返回 CDN 链接",
+  "可批量匹配 docker-compose.yml 中的服务图标",
+  "官网表单提交缺失图标或更新申请"
+ ],
+ "intro": "Dashboard Icons 收录了 3400 多个面向服务、应用和工具的图标与 logo，主要用于自托管仪表盘和应用目录。图标风格统一，提供 SVG、PNG、WEBP 三种格式，并区分适配浅色与深色主题的变体。\n\n除了直接浏览网站下载，项目还提供免费 CDN 直链，可按固定路径规则在网页中引用图标。同时它提供 MCP server，让 Claude Code、Codex、ChatGPT、Cursor 等 AI 客户端能够检索图标并返回 CDN 链接，甚至一次性为 docker-compose.yml 中的服务匹配图标。\n\n图标可通过官网提交表单申请新增或更新，项目也接受文档、网站和仓库维护方面的贡献。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 dashboardicons.com 搜索并下载所需图标，或复制直链",
+  "按 `<Base URL>/<Format>/<Icon Name>.<Format>` 规则拼接 CDN 地址，例如 `https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/plex.svg`",
+  "用 curl 下载图标：`curl -O https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud.svg`",
+  "在 Claude Code 中添加 MCP server：`claude mcp add --transport http dashboard-icons https://dashboardicons.com/api/mcp`",
+  "向 AI 助手提出需求，例如“为我的 docker-compose.yml 中每个服务添加图标”"
+ ],
+ "summary": "Dashboard Icons 是一个面向自托管仪表盘和应用目录的图标资源库，收录大量服务与工具的 logo，提供统一风格和多种格式，并可通过 CDN 直接引用。它还提供 MCP server，让 AI 编码助手能检索图标、返回链接，或为 docker-compose.yml 中的服务批量匹配图标，适合搭建 Homarr、Homepage、Dashy 等面板的用户。",
+ "tagline": "3400+ 仪表盘图标库，支持 CDN 与 MCP"
+}

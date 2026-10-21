@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望训练 Stable Diffusion LoRA 或 Dreambooth 模型，并偏好图形界面或一键脚本的开发者与创作者。",
+ "date": "2026-10-21",
+ "features": [
+  "基于 kohya-ss/sd-scripts 的 LoRA 与 Dreambooth 训练脚本",
+  "提供 WebUI 图形界面，集成训练、TensorBoard、WD 1.4 Tagger 和标签编辑器",
+  "一键安装脚本自动创建虚拟环境并安装依赖",
+  "支持 Windows 和 Linux 平台",
+  "保留手动运行 train.ps1 / train.sh 的传统训练方式",
+  "提供中国大陆网络环境专用的 install-cn.ps1 安装脚本"
+ ],
+ "intro": "SD-Trainer 是围绕 kohya-ss/sd-scripts 构建的 Stable Diffusion 训练工具，提供 LoRA 和 Dreambooth 的训练脚本、预设参数以及一键配置的训练环境。项目包含一个 WebUI，将训练、TensorBoard 监控、WD 1.4 Tagger 打标和标签编辑整合在同一界面中。\n\n用户可以通过安装脚本自动创建 Python 虚拟环境并安装依赖，然后在 Windows 或 Linux 上启动 GUI 进行训练。项目也保留了手动编辑 train.ps1 或 train.sh 的传统训练方式，适合需要更细粒度控制的用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 3.10 和 Git",
+  "克隆仓库并包含子模块：git clone --recurse-submodules https://github.com/Akegarasu/lora-scripts",
+  "Windows 运行 install.ps1（中国大陆可用 install-cn.ps1），Linux 运行 install.bash 安装依赖",
+  "Windows 运行 run_gui.ps1，Linux 运行 bash run_gui.sh 启动 WebUI",
+  "浏览器访问 http://127.0.0.1:28000 开始训练"
+ ],
+ "summary": "SD-Trainer 是一个面向 Stable Diffusion 的 LoRA 与 Dreambooth 训练工具，封装了 kohya-ss/sd-scripts 的训练流程，并提供图形化 WebUI。它把训练、TensorBoard 监控、WD 1.4 Tagger 打标和标签编辑集中在一个界面里，同时附带一键安装脚本，帮助用户快速搭建训练环境。适合想训练自定义 LoRA 模型、又不想手动配置复杂命令行的开发者和创作者。",
+ "tagline": "为 Stable Diffusion 提供 LoRA 与 Dreambooth 训练的一键脚本和 WebUI"
+}

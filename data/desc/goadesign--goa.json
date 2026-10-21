@@ -1,0 +1,24 @@
+{
+ "ai_related": false,
+ "audience": "适合需要同时提供多种 API 协议（HTTP/gRPC/JSON-RPC）并希望保持代码与文档同步的 Go 开发者，也适合使用编码代理辅助开发的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "从单一 Go DSL 契约生成 HTTP、gRPC、JSON-RPC 服务端与客户端代码",
+  "自动生成 OpenAPI 规范和 Protocol Buffer 定义，保持文档与代码一致",
+  "生成 CLI 客户端，支持通过命令行调用服务",
+  "内置请求校验、错误处理和流式方法（WebSocket/SSE）支持",
+  "提供结果视图（views）机制，按需选择响应形状",
+  "支持插件扩展生成逻辑，并提供安全方案和拦截器"
+ ],
+ "intro": "Goa 是一个设计优先的 Go 框架。你使用 Go 语言编写 DSL 来描述类型、操作和校验规则，Goa 会据此生成服务端与客户端代码、CLI 客户端，以及 OpenAPI 和 Protocol Buffer 规范。这样，代码与文档始终同步，避免手动维护多个表示。\n\n它支持从同一份契约生成 HTTP、gRPC 和 JSON-RPC 三种传输方式，并包含请求校验、流式方法（WebSocket/SSE）和结果视图等特性。生成的代码放在 gen/ 目录，业务逻辑由你实现，结构清晰，便于协作和迭代。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Go 1.26 或更高版本，创建项目目录并初始化模块：mkdir hello && cd hello && go mod init hello",
+  "获取 Goa 依赖：go get goa.design/goa/v3@latest",
+  "创建 design 目录并编写 design/design.go 文件（参考 README 中的示例）",
+  "生成代码和示例应用：go run goa.design/goa/v3/cmd/goa gen hello/design && go run goa.design/goa/v3/cmd/goa example hello/design",
+  "实现业务逻辑后运行服务：go run ./cmd/hello --http-port=8000，并通过 curl http://localhost:8000/hello/Alice 测试"
+ ],
+ "summary": "Goa 是一个设计优先的 Go 框架，解决多协议 API 开发中代码与文档容易脱节的问题。你只需用 Go DSL 定义一次契约，就能生成 HTTP、gRPC 和 JSON-RPC 的服务端、客户端、CLI 及 OpenAPI/Protobuf 规范。适合需要同时提供多种 API 并保持一致性、希望减少重复代码的 Go 项目。",
+ "tagline": "用 Go DSL 定义 API，自动生成 HTTP/gRPC/JSON-RPC 代码与文档"
+}

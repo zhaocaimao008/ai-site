@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Cursor、Claude Code 等 AI 编程工具的前端开发者，尤其是需要快速查找或生成 React/Tailwind UI 组件的人。",
+ "date": "2026-10-21",
+ "features": [
+  "搜索 10,000+ React/Tailwind 组件、主题和模板",
+  "在 AI 访问启用时生成和迭代 UI 代码",
+  "兼容旧版 Magic MCP 工具名和配置",
+  "支持 Cursor、Claude Code、Windsurf、VS Code、Codex 等客户端",
+  "可作为插件安装，提供 MCP 服务器和 UI 技能",
+  "提供书签、团队库和个人资料管理等工具"
+ ],
+ "intro": "21st MCP（原 Magic MCP）是一个 Model Context Protocol 服务器，让 Cursor、Claude Code、Windsurf 等编辑器中的 AI 代理直接访问 21st.dev 的 UI 组件资源。它可以搜索超过 10,000 个 React/Tailwind 组件，在 AI 访问启用时生成新的 UI 代码，并支持发布自己的组件。\n\n该仓库目前作为兼容代理存在：旧的 @21st-dev/magic 配置仍可工作，但推荐通过 21st CLI 安装统一的 21st MCP。服务器还提供组件目录搜索、付费代码获取、书签、团队库、带变体的 UI 生成等工具，具体可用工具取决于账户权限。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx @21st-dev/cli@latest init --client cursor（或 claude、vscode、windsurf、codex）安装 21st MCP",
+  "在 21st.dev/mcp 获取 API key",
+  "手动配置时，在 mcp.json 中添加 HTTP 服务器 https://21st.dev/api/mcp，并在 headers 中设置 x-api-key",
+  "旧配置可继续使用 npx -y @21st-dev/magic@latest API_KEY=\"...\"，它会转发到 21st MCP 服务器"
+ ],
+ "summary": "21st MCP（原 Magic MCP）是一个 MCP 服务器，让 Cursor、Claude Code 等编辑器中的 AI 代理直接搜索 21st.dev 上的 React/Tailwind 组件，并在 AI 访问启用时生成新的 UI 代码。它适合前端开发者快速查找组件或借助 AI 生成界面，旧版 Magic 配置仍可通过兼容代理继续使用。",
+ "tagline": "在编辑器中搜索、生成和发布 React/Tailwind UI 组件的 MCP 服务"
+}

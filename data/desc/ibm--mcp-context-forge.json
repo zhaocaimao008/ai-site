@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要统一管理多个 AI 工具、代理和 API 的开发者与平台团队，尤其是使用 MCP 协议构建 AI 应用的场景。",
+ "date": "2026-10-21",
+ "features": [
+  "联邦 MCP、A2A 和 REST/gRPC API 到统一端点",
+  "REST 到 MCP 工具适配与 gRPC 到 MCP 翻译",
+  "内置认证、重试、限流和反向代理",
+  "40+ 插件扩展传输、协议和集成",
+  "OpenTelemetry 可观测性，支持 Phoenix、Jaeger、Zipkin 等后端",
+  "Admin UI 和独立 Web UI 用于实时管理与日志监控"
+ ],
+ "intro": "ContextForge 是一个开源注册中心和代理，用于将 MCP 服务器、A2A 代理以及 REST/gRPC API 联邦到统一的端点，为 AI 客户端提供集中治理、发现和可观测性。它支持工具网关、代理网关和 API 网关，并可通过插件扩展协议与集成。\n\n项目提供 REST 到 MCP 的工具适配、gRPC 到 MCP 的翻译、虚拟化旧版 API 为 MCP 兼容工具，以及基于 OpenTelemetry 的分布式追踪。它可作为完全兼容的 MCP 服务器运行，支持 PyPI 或 Docker 部署，并能在 Kubernetes 多集群环境中通过 Redis 实现联邦与缓存。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 PyPI 安装：pip install mcp-contextforge-gateway",
+  "设置必需的环境变量 JWT_SECRET_KEY 和 AUTH_ENCRYPTION_SECRET",
+  "启动网关服务（具体命令请参考 README 的 Running 部分）"
+ ],
+ "summary": "ContextForge 解决的是 AI 客户端面对多个 MCP 服务器、A2A 代理和 REST/gRPC API 时接入分散、缺乏统一治理的问题。它把这些后端联邦到一个端点，提供集中发现、认证、限流和可观测性，并支持将旧版 API 虚拟化为 MCP 工具。适合需要统一管理 AI 工具与代理调用、并希望获得追踪和插件扩展能力的开发与运维场景。",
+ "tagline": "统一网关与注册中心，联邦 MCP、A2A 和 REST/gRPC API"
+}

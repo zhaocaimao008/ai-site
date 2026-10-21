@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合构建和运维 AI Agent 的开发者、团队，以及需要监控 LLM 调用成本与执行流程的工程师。",
+ "date": "2026-10-21",
+ "features": [
+  "会话回放与调试：提供逐步的 Agent 执行图谱和聊天查看器",
+  "LLM 成本管理：追踪各基础模型提供商的调用开销",
+  "框架集成：原生支持 CrewAI、AG2、Agno、LangGraph 等",
+  "自托管：可在自有云环境运行完整应用",
+  "装饰器追踪：通过 @session、@agent、@operation 等装饰器为代码添加可观测性"
+ ],
+ "intro": "AgentOps 是一个面向 AI Agent 的 Python SDK 与可观测性平台，帮助开发者从原型到生产阶段构建、评估和监控智能体。它通过简单的代码接入，自动记录所有 LLM 调用，并提供会话回放、执行图谱和成本追踪等功能。\n\n项目支持与 CrewAI、Agno、OpenAI Agents SDK、LangChain、AutoGen、AG2、CamelAI 等主流框架和 LLM 提供商集成，同时提供自托管方案，允许在自有云环境中运行完整应用（仪表盘 + API 后端）。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 SDK：pip install agentops",
+  "在程序开头初始化：agentops.init(<你的 API KEY>)",
+  "在程序结尾结束会话：agentops.end_session('Success')",
+  "在 AgentOps 仪表盘查看会话记录"
+ ],
+ "summary": "AgentOps 是一个 Python SDK 与可观测性平台，用于监控、调试和评估 AI Agent。它自动记录 LLM 调用，提供会话回放、执行图谱和成本追踪，并支持 CrewAI、LangChain、AutoGen 等主流框架。适合需要从原型到生产阶段管理 Agent 行为与开销的开发者。",
+ "tagline": "AI Agent 可观测性与开发工具平台"
+}

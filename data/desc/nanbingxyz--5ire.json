@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在桌面端统一调用多种大模型、使用 MCP 工具扩展 AI 能力，或希望在本地构建知识库进行检索增强生成的开发者和普通用户。",
+ "date": "2026-10-21",
+ "features": [
+  "通过 MCP 服务器支持工具调用，可访问文件系统、数据库和远程数据",
+  "本地知识库：使用 bge-m3 嵌入模型，支持多种文档格式的解析与向量化，实现本地 RAG",
+  "兼容 OpenAI、Azure、Anthropic、Google、Mistral、Doubao、Grok、DeepSeek、Ollama 等服务商",
+  "API 用量与花费分析，帮助优化服务使用",
+  "支持变量的提示词库，方便创建和组织常用提示词",
+  "对话书签与全局关键词搜索，快速定位历史信息"
+ ],
+ "intro": "5ire 是一个跨平台的桌面 AI 助手，同时也是一个 MCP（Model Context Protocol）客户端。它兼容 OpenAI、Azure、Anthropic、Google、Mistral、Doubao、Grok、DeepSeek、Ollama 等主流服务商，让用户可以在一个界面中调用不同的大模型。\n\n通过 MCP 服务器，5ire 支持工具调用，可以访问文件系统、获取系统信息、与数据库交互、访问远程数据等，而不仅仅是进行对话。项目还内置了基于 bge-m3 的本地知识库，支持对 docx、xlsx、pptx、pdf、txt、csv 文档进行解析和向量化，在本地实现检索增强生成（RAG）。\n\n此外，5ire 提供 API 用量分析、支持变量的提示词库、对话书签和全局关键词搜索等功能，帮助用户更高效地管理和使用 AI 对话。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载并安装对应平台的 5ire 桌面客户端",
+  "如需使用工具功能，请先安装 Python、Node.js 和 uv（Python 包管理器），作为 MCP 服务器的运行环境",
+  "启动 5ire，配置所使用的大模型服务商 API 密钥",
+  "在设置中添加或从 MCP 服务器市场安装所需的 MCP 服务器，即可开始使用工具"
+ ],
+ "summary": "5ire 是一个跨平台桌面 AI 助手兼 MCP 客户端，解决在单一界面中调用多家大模型并使用外部工具的问题。它兼容 OpenAI、Anthropic、Google、Ollama 等服务商，通过 MCP 服务器让 AI 能访问文件系统、数据库等资源，还内置基于 bge-m3 的本地知识库，支持多种文档的检索增强生成。适合需要统一管理多模型、扩展 AI 工具能力或在本地构建知识库的用户。",
+ "tagline": "跨平台桌面 AI 助手与 MCP 客户端"
+}

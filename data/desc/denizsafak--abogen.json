@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要制作有声书、视频配音或带字幕音频的开发者与内容创作者。",
+ "date": "2026-10-21",
+ "features": [
+  "将 ePub、PDF、文本、Markdown、字幕文件转换为语音",
+  "生成与音频同步的字幕文件",
+  "提供 PyQt6 桌面 GUI 和 Flask Web UI 两种界面",
+  "基于 Kokoro-82M 模型进行语音合成",
+  "支持 NVIDIA、AMD GPU 及 Apple Silicon 的安装配置"
+ ],
+ "intro": "abogen 是一个基于 Kokoro-82M 模型的文本转语音工具，可以把 ePub、PDF、纯文本、Markdown 或字幕文件转换成音频，并生成与语音同步的字幕。它提供 PyQt6 桌面界面和 Flask Web 界面，支持 Windows、macOS 和 Linux，并针对 NVIDIA、AMD GPU 以及 Apple Silicon 做了安装适配。\n\n项目面向有声书制作、短视频配音等需要自然语音和字幕的场景。安装时需要先准备 espeak-ng，再通过 uv 或 pip 安装 abogen；README 中给出了各平台的具体命令。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 espeak-ng（Windows 下载 msi，macOS 用 brew install espeak-ng，Linux 用包管理器安装）",
+  "安装 uv，然后执行 uv tool install --python 3.12 abogen（NVIDIA GPU 可加 [cuda] 等额外参数）",
+  "运行 abogen 启动桌面 GUI，或运行 abogen-web 启动 Web 界面",
+  "导入 ePub、PDF 或文本文件，生成音频与同步字幕"
+ ],
+ "summary": "abogen 解决的是把电子书和文档批量转成有声内容时，语音与字幕难以对齐的问题。它读取 ePub、PDF、文本等文件，用 Kokoro-82M 合成语音并输出同步字幕，适合制作有声书、短视频配音等场景。项目提供桌面和网页两种界面，并针对不同操作系统和显卡给出安装方式。",
+ "tagline": "把 EPUB、PDF 和文本转成带同步字幕的语音"
+}

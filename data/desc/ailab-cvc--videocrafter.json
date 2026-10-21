@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对视频生成感兴趣的研究者、开发者，以及希望快速体验文本/图像生成视频功能的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "文本生成视频：根据文本描述生成视频内容",
+  "图像生成视频：基于输入图像生成动态视频",
+  "提供多种分辨率的预训练模型，最高支持 640x1024",
+  "支持通过命令行脚本快速推理",
+  "提供本地 Gradio 演示界面，方便交互测试"
+ ],
+ "intro": "VideoCrafter 是一个开源的视频生成与编辑工具箱，目前包含文本生成视频（Text2Video）和图像生成视频（Image2Video）两类模型。VideoCrafter2 是该项目的最新版本，在有限数据条件下提升了生成视频的运动质量和概念组合能力。\n\n项目提供了多个预训练模型，包括 VideoCrafter2 的 320x512 文本生成视频模型，以及 VideoCrafter1 的 576x1024 文本生成视频模型和 640x1024 图像生成视频模型。用户可以通过命令行脚本运行推理，也可以使用本地 Gradio 演示界面。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建并激活 conda 环境：conda create -n videocrafter python=3.8.5 && conda activate videocrafter",
+  "安装依赖：pip install -r requirements.txt",
+  "下载预训练模型（如 VideoCrafter2 T2V 模型）并放入 checkpoints/base_512_v2/model.ckpt",
+  "运行文本生成视频脚本：sh scripts/run_text2video.sh",
+  "或启动本地 Gradio 演示：python gradio_app.py"
+ ],
+ "summary": "VideoCrafter 是一个开源视频生成工具箱，提供文本生成视频和图像生成视频两类模型。VideoCrafter2 版本在有限数据条件下提升了视频的运动质量和概念组合能力。项目包含多个预训练模型，支持命令行推理和本地 Gradio 演示，适合研究者与开发者快速体验和测试视频生成功能。",
+ "tagline": "开源视频生成工具箱，支持文本和图像生成视频"
+}

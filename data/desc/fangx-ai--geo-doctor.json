@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望提升 AI 推荐率的产品团队、独立开发者、SEO 从业者，以及想要了解 GEO 的普通用户。",
+ "date": "2026-10-21",
+ "features": [
+  "一句话安装到 AI 助手，通过对话完成 GEO 诊断和优化",
+  "八步流程：从体检网站到复查推荐率，每步都有交付物",
+  "支持国内外主流 AI 助手，中英双语",
+  "命令行工具支持自动采样、批量写稿和发布",
+  "网页工作台提供可视化管理和审核",
+  "开源免费，无需服务器，数据本地存储"
+ ],
+ "intro": "GEO 医生是一个开源的 GEO（生成式引擎优化）技能，可以一句话安装到 Claude Code、Codex、Kimi Code、WorkBuddy 等支持技能的 AI 助手中。它帮助用户诊断为什么 AI 助手不推荐自己的产品，并给出改进方案。\n\n项目通过八个步骤完成：问诊、体检、整理事实卡、生成问题集、采样 AI 回答、诊断竞品缺口、批量写稿、批量发布和复查。它支持国内外的多个 AI 助手，包括豆包、DeepSeek、ChatGPT、Claude 等，并提供命令行工具进行自动采样和发布。\n\n此外，项目还提供网页工作台，方便用户管理事实、审核稿件和分发内容。所有功能均基于用户提供的真实事实，拒绝编造和刷量行为。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在支持技能的 AI 助手中发送：帮我安装这个 skill：https://github.com/Fangx-AI/geo-doctor/tree/master/skills/geo-doctor",
+  "安装后对 AI 说“帮我做 GEO”，按提示回答问题",
+  "或者不安装 skill，直接运行命令检查网站：npx github:Fangx-AI/geo-doctor https://你的网站/重要页面 --phrase \"页面里的一句关键正文\"",
+  "运行工作台：npx -p github:Fangx-AI/geo-doctor geo-studio，然后浏览器打开 http://127.0.0.1:4173"
+ ],
+ "summary": "GEO 医生是一个开源技能，帮助用户诊断为什么豆包、DeepSeek、ChatGPT 等 AI 助手不推荐自己的产品。它通过体检网站、分析竞品、生成内容并复查推荐率，提供一套完整的 GEO 优化流程。适合产品团队、开发者或普通用户，在支持技能的 AI 助手中一句话安装使用，无需服务器，数据本地存储。",
+ "tagline": "让豆包、DeepSeek、ChatGPT 等 AI 助手愿意推荐你的产品"
+}

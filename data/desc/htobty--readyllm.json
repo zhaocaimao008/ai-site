@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地或局域网机器上部署和调优大模型推理服务的开发者，以及需要可视化监控和图像/视频生成能力的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "统一管理本地或远程（SSH）目标机器，自动检测硬件并推荐适配模型",
+  "一键启动/停止 llama.cpp、vLLM 推理服务，支持缺失引擎自动安装",
+  "通过 WebSocket 实时推送 GPU 利用率、显存、吞吐和延迟曲线",
+  "自动调参与 AI Agent 调参，两阶段参数搜索并回填基准测试结果",
+  "内置 GGUF 模型目录，支持多源下载与完整性校验",
+  "基于 ComfyUI 的文生视频、分镜生成、长视频拼接和 AI 放大"
+ ],
+ "intro": "ReadyLLM 是一个通过可视化界面管理本地大语言模型推理的工具。它针对 ollama 等默认配置下模型大量跑在 CPU 上、GPU 利用率低的问题，通过自动调参和 AI Agent 调参寻找适合当前硬件的参数，并实时监控 GPU、显存、吞吐和延迟。\n\n项目支持本地或局域网远程机器（SSH），可一键部署 llama.cpp 和 vLLM 推理服务，内置 GGUF 模型目录并支持从 HuggingFace、ModelScope 等源下载模型。此外还集成了 ComfyUI，提供文生视频、分镜生成、长视频拼接和 AI 放大等图像/视频生成功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "启动后端：cd backend && pip install -r requirements.txt && uvicorn app.main:app --host 127.0.0.1 --port 8000",
+  "启动前端：cd frontend && npm install && npm run dev",
+  "打开 http://localhost:3000，添加目标机器并选择模型",
+  "点击 Tune 开始调优"
+ ],
+ "summary": "ReadyLLM 解决本地大模型推理时硬件利用不充分、参数配置繁琐的问题。它提供可视化界面，可管理本地或局域网远程机器，一键部署 llama.cpp 和 vLLM 服务，自动搜索适配硬件的推理参数，并实时监控 GPU、显存、吞吐与延迟。还集成 ComfyUI 支持图像和视频生成，适合需要自托管模型并优化推理性能的开发者。",
+ "tagline": "可视化部署、监控与调优本地大模型，并支持 ComfyUI 图像/视频生成"
+}

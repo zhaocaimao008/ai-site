@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "需要桌面端文本转语音工具的普通用户，以及想学习 Electron + Vue 桌面应用开发的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "调用微软语音合成服务，将文本转换为语音",
+  "基于 Electron 的跨平台桌面应用界面",
+  "使用 Vue、ElementPlus 与 Vite 构建前端",
+  "提供独立的文档站点，包含安装、功能与常见问题说明",
+  "后续推出基于 Tauri 的轻量化版本 TTS-Vue-Next"
+ ],
+ "intro": "TTS-Vue 是一个使用 Electron + Vue + ElementPlus + Vite 构建的桌面端文本转语音工具，调用微软语音合成服务，把文字转换成语音。项目用 TypeScript 编写，采用 MIT 协议开源。\n\nREADME 中说明该软件及代码仅供个人学习测试使用，不得用于商业用途，并提醒用户软件本身不收费，谨防付费获取源码或安装包的骗局。作者同时发布了基于 Microsoft Edge TTS 服务、采用 Vue 3 + Vuetify + Tauri 的新项目 TTS-Vue-Next。\n\n安装、功能介绍、常见问题和更新日志等内容放在独立文档站点上，README 本身没有给出具体的安装命令。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "TTS-Vue 是一个桌面端文本转语音工具，借助微软语音合成服务把文字读出来，界面用 Electron 和 Vue 搭建。适合想在电脑上把文稿转成语音的普通用户，也适合参考其技术栈学习桌面应用开发的开发者。README 提示仅供个人学习测试，具体安装步骤需查看其文档站点。",
+ "tagline": "基于微软语音服务的桌面文本转语音工具"
+}

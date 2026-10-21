@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合语音识别领域的研究者、开发者以及需要将 ASR 落地到生产环境的工程团队。",
+ "date": "2026-10-21",
+ "features": [
+  "提供端到端语音识别全栈生产方案，涵盖训练与部署",
+  "支持 Conformer、Transformer 等模型，在公开数据集上达到 SOTA",
+  "提供 Python 包，可通过 pip 安装并快速调用预训练模型",
+  "支持命令行和 Python API 进行语音转写，默认 CPU 运行，可指定 GPU",
+  "包含运行时（runtime）支持 x86 等平台部署，并可集成语言模型",
+  "支持 Ascend NPU 等硬件，提供相应的安装和版本说明"
+ ],
+ "intro": "WeNet 是一个以生产可用为核心设计原则的端到端语音识别工具包，提供从训练到部署的全栈解决方案。它基于 PyTorch 实现，支持 Conformer、Transformer 等模型结构，并在多个公开语音数据集上取得 SOTA 结果。\n\n项目包含 Python 包和运行时（runtime），方便快速安装和使用。用户可以通过命令行或 Python API 直接调用预训练模型进行语音转文字，也支持自定义训练和部署。WeNet 强调轻量、易用和文档完善，适合研究者和开发者构建语音识别应用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 包：pip install git+https://github.com/wenet-e2e/wenet.git",
+  "命令行转写：wenet -m paraformer audio.wav（中文可选 paraformer、firered、wenetspeech；英文可选 whisper-large-v3 或 whisper-large-v3-turbo）",
+  "Python API 调用：import wenet; model = wenet.load_model('paraformer'); result = model.transcribe('audio.wav'); print(result.text)",
+  "如需 GPU 加速，安装时确认 torch.cuda.is_available() 为 True，并在命令行加 --device cuda 或在 Python API 中指定 device='cuda'",
+  "训练与部署：克隆仓库后按 README 创建 Conda 环境、安装 CUDA 和 torch，再安装 requirements.txt 并构建 runtime"
+ ],
+ "summary": "WeNet 是一个面向生产环境的端到端语音识别工具包，基于 PyTorch 实现，提供从模型训练到部署的完整方案。它支持 Conformer、Transformer 等结构，并在多个公开数据集上取得 SOTA 结果。项目提供 Python 包，可通过命令行或 API 快速调用预训练模型进行语音转写，也支持自定义训练和运行时部署，适合需要将语音识别落地到实际应用的开发者和团队。",
+ "tagline": "面向生产的端到端语音识别工具包"
+}

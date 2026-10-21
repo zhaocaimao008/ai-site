@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合正在使用或准备引入 Claude Code 的开发者、技术负责人，以及需要评估团队级落地与安全边界的工程组织。",
+ "date": "2026-10-21",
+ "features": [
+  "Claude Code 安装、认证与首个任务的快速上手章节",
+  "agent harness、循环与图工程、上下文工程等系统设计内容",
+  "安全加固、沙箱隔离与企业治理、可观测性指南",
+  "可直接复用的 CLAUDE.md 模板与示例文件",
+  "知识测验、速查表、术语表等学习资源",
+  "提供可通过 npx 使用的指南 MCP server"
+ ],
+ "intro": "这是一份围绕 Claude Code 的综合性指南，作者把产品文档之外的内容整理成可操作的工程实践：上下文里该放什么、什么时候用 agent 而不是 skill、如何验证生成结果，以及使用范围超出单个开发者后需要哪些控制手段。\n\n仓库本身是 Markdown 源文件、可复用模板和机器可读索引的集合，主要阅读入口是配套网站。内容按 Start、Build、Scale、Resources 等意图组织，覆盖架构与工具参考、agent harness 与循环/图工程、方法论与工作流、安全加固与沙箱隔离，以及企业治理、可观测性、成本等规模化话题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Claude Code：npm install -g @anthropic-ai/claude-code",
+  "验证安装并登录：claude --version、claude doctor、claude auth login",
+  "进入项目目录后运行 claude 启动",
+  "先给出不改文件的只读任务，例如让 Claude 说明项目如何运行测试",
+  "在项目根目录添加 CLAUDE.md，写明测试、lint 命令和禁止修改的范围"
+ ],
+ "summary": "这份指南针对 Claude Code 在实际工程中的使用问题，把产品行为与工程决策连接起来：上下文如何组织、agent 与 skill 如何取舍、生成结果如何验证，以及团队规模化后需要哪些安全与治理控制。内容以 Markdown 源文件和模板形式提供，配合网站阅读，适合想系统上手 Claude Code 或推动团队落地的开发者参考。",
+ "tagline": "面向 Claude Code 的工程化实践指南与模板库"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望为 AI 代理或聊天客户端增加联网搜索与网页读取能力的开发者，以及使用 Claude、ChatGPT、Cursor 等支持 MCP 工具的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "web_search_exa：搜索任意主题并返回可直接使用的干净内容",
+  "web_fetch_exa：将一个或多个 URL 的网页正文读取为 Markdown",
+  "可选工具 web_search_advanced_exa：支持域名、日期、高亮、摘要和子页面抓取等高级过滤",
+  "可选工具 agent_run：运行 Exa Agent 完成多步骤研究、列表构建和结构化输出",
+  "提供 Agent Plugin 与 Agent Skills，可集成到 Claude、Codex/ChatGPT、Cursor、VS Code 等客户端",
+  "支持匿名访问、OAuth 登录和 API key 三种认证方式"
+ ],
+ "intro": "Exa MCP Server 是 Exa 提供的 Model Context Protocol 服务，让 AI 代理能够进行网页搜索、读取网页内容以及多步骤研究。项目以 TypeScript 编写，采用 MIT 协议，并提供托管在 mcp.exa.ai 的远程 MCP 端点，客户端无需本地部署即可连接。\n\n默认提供 web_search_exa 和 web_fetch_exa 两个工具，分别用于搜索任意主题并返回干净内容、将网页正文读取为 Markdown。通过 URL 的 tools 参数还可以启用高级搜索（支持域名、日期、摘要、子页面抓取等过滤）和 Exa Agent（多步骤研究、列表构建、结构化输出）。\n\n项目同时提供 Agent Plugin 和 Agent Skills，可安装到 Claude、Codex/ChatGPT、Cursor、VS Code 等支持 MCP 的客户端。托管服务允许匿名使用但有速率限制，登录 OAuth 或提供 API key 可获得更高额度并访问 Exa Agent。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在支持 MCP 的客户端中连接托管服务：https://mcp.exa.ai/mcp",
+  "Claude 用户可运行：claude plugin install exa@claude-plugins-official",
+  "Codex/ChatGPT 用户可运行：codex mcp add exa --url https://mcp.exa.ai/mcp",
+  "其他客户端可在 mcpServers 配置中添加 type 为 streamable-http、url 为 https://mcp.exa.ai/mcp 的服务",
+  "如需启用可选工具，在 URL 后追加 ?tools=web_search_advanced_exa 或 ?tools=web_search_exa,web_fetch_exa,agent_run"
+ ],
+ "summary": "Exa MCP Server 把 Exa 的网页搜索和网页抓取能力封装成 MCP 服务，让 AI 代理可以直接联网检索信息、读取网页正文，并可选执行多步骤研究。它适合需要给聊天客户端或编码助手补充实时网络信息的场景，支持 Claude、ChatGPT、Cursor 等多种客户端，通过托管地址即可接入。",
+ "tagline": "为 AI 代理接入 Exa 的网页搜索与抓取 MCP 服务"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": false,
+ "audience": "适合对 JSON 序列化性能有较高要求的 Go 开发者，尤其是在高并发或大数据量场景下需要优化序列化开销的项目。",
+ "date": "2026-10-21",
+ "features": [
+  "通过代码生成避免反射，显著提升 JSON 序列化性能",
+  "支持为整个文件或指定结构体生成 Marshal/Unmarshal 方法",
+  "提供 snake_case、omitempty、nocopy、intern 等定制选项",
+  "生成兼容标准库 json.Marshaler/Unmarshaler 接口的方法",
+  "内置缓冲区池和字符串驻留（interning）机制以减少内存分配"
+ ],
+ "intro": "easyjson 是一个为 Go 语言设计的 JSON 序列化/反序列化代码生成工具。它通过为结构体生成静态的 Marshal/Unmarshal 方法，避免使用反射，从而在性能测试中比标准库 encoding/json 快 4-5 倍，比其他 JSON 库快 2-3 倍。\n\n除了性能优势，easyjson 还提供了标准库没有的定制选项，例如默认生成 snake_case 字段名、默认启用 omitempty 行为、支持 nocopy 和 intern 等标签选项来优化内存使用。生成的代码保持简单，便于阅读和修改。\n\n使用 easyjson 需要先安装命令行工具，然后对目标 Go 文件运行 easyjson -all 命令，生成对应的 _easyjson.go 文件。之后即可通过 easyjson.Marshal 和 easyjson.Unmarshal 进行序列化操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 easyjson 命令行工具：go get github.com/mailru/easyjson && go install github.com/mailru/easyjson/...@latest（Go 1.17+）",
+  "对目标 Go 文件运行代码生成：easyjson -all <file>.go",
+  "在代码中使用 easyjson.Marshal 和 easyjson.Unmarshal 进行序列化/反序列化"
+ ],
+ "summary": "easyjson 是一个 Go 语言的 JSON 序列化代码生成工具，它通过为结构体生成静态的序列化方法，避免运行时反射，从而提升 JSON 编解码性能。项目适合需要处理大量 JSON 数据、对序列化速度敏感的后端服务或工具开发场景。除了性能，它还提供 snake_case 命名、omitempty 默认启用、字符串驻留等定制选项，帮助开发者在保持代码简洁的同时优化内存使用。",
+ "tagline": "Go 结构体快速 JSON 序列化代码生成工具"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要把英文或日文视频翻译成中文并配音的内容创作者、搬运与本地化团队，以及希望自行替换模型或扩展处理流程的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "三种输出模式：原声加字幕、配音（可保留背景音）、字幕加配音",
+  "逐句原声克隆，每句译文使用对应原文音频片段作为参考",
+  "支持 YouTube、Shorts、B 站及 b23.tv 单视频链接和本地视频文件导入",
+  "任务库管理：查看进度、错误与产物，支持取消、重试、重新生成、播放和下载",
+  "基于 Cordis 的插件架构，可替换 ASR、翻译、TTS 提供者或注册新 workflow",
+  "字幕按标点拆分显示，合并过短片段并隐藏末尾分隔标点"
+ ],
+ "intro": "YouDub WebUI 是一个开源的视频本地化工作台，把导入的视频经过语音识别、字幕翻译、逐句声音克隆和音频混合，输出带目标语言字幕或配音的成片。它支持 YouTube、Shorts、B 站及 b23.tv 单视频链接导入，也接受本地 mp4、mov、mkv、webm 文件。\n\n默认流程使用 Whisper 做语音识别，用 NLTK Punkt 整理英文完整句子，翻译走 OpenAI 兼容 API，配音由 VoxCPM2 生成，人声分离用 Demucs，字幕对齐可选 Qwen3 Forced Aligner。每句译文以对应原文句子的音频作为参考，保留句子与参考音频的一一对应关系。\n\n项目采用 Cordis 插件架构，任务引擎、workflow、模型提供者和前端页面都以插件实现，替换 ASR、翻译或 TTS 时提供符合契约的插件即可。提供 Windows EXE 和 macOS DMG 安装包，也可从源码运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Node.js 22（至少 22.13.0）和 Git，克隆仓库：git clone --branch main --recurse-submodules https://github.com/liuzhao1225/YouDub-webui.git",
+  "安装依赖：npm ci --registry=https://registry.npmmirror.com 和 npm --prefix apps/web ci --registry=https://registry.npmmirror.com",
+  "创建本地配置：cp .env.example .env 并执行 ln .env env.txt",
+  "在仓库根目录运行 npm run build:plugins 和 npm start",
+  "另开终端运行 npm --prefix apps/web run dev -- --hostname 127.0.0.1 --port 3000，打开 http://127.0.0.1:3000"
+ ],
+ "summary": "YouDub WebUI 面向需要把外语视频转成中文成片的场景，把语音识别、字幕翻译、逐句声音克隆和音视频合成串成一条流程，可导入 YouTube、B 站链接或本地视频，输出带字幕或配音的结果。项目采用插件化架构，方便替换识别、翻译和配音模型，适合内容本地化与二次开发。",
+ "tagline": "开源 AI 视频翻译配音工作台，逐句克隆原声"
+}

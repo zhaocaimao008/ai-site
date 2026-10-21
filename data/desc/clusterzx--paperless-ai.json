@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Paperless-ngx 管理文档，并希望通过 AI 自动分类、标签或语义搜索提升效率的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "自动检测 Paperless-ngx 中的新文档，并使用 AI 分配标题、标签、文档类型和 correspondent",
+  "支持多种 AI 后端，包括 Ollama、OpenAI、DeepSeek.ai、OpenRouter.ai、Perplexity.ai、Together.ai、LiteLLM、VLLM、Fastchat、Gemini 等",
+  "基于 RAG 的 AI 聊天，支持自然语言语义搜索和文档问答",
+  "提供 Web 界面进行手动 AI 标签处理，适用于敏感文档审核",
+  "可定义规则来限制处理文档范围，并自动应用标签",
+  "提供 Docker 支持，包括健康监控和自动重启"
+ ],
+ "intro": "Paperless-AI 是 Paperless-ngx 的 AI 扩展，能够自动检测新文档，并利用 OpenAI 兼容 API 或 Ollama 等后端分析文档内容，自动分配标题、标签、文档类型和 correspondent。它支持多种 AI 服务，包括 Ollama（Mistral、Llama、Phi-3、Gemma-2）、OpenAI、DeepSeek.ai、OpenRouter.ai、Perplexity.ai、Together.ai、LiteLLM、VLLM、Fastchat、Gemini 等。\n\n除了自动处理，它还提供基于 RAG 的 AI 聊天功能，允许用户用自然语言在文档库中语义搜索和问答，例如查询合同签署时间或账单金额。用户也可以通过 Web 界面手动触发 AI 标签，并定义规则来限制处理范围或自动应用标签。\n\n项目提供 Docker 支持，便于部署。需要注意的是，作者目前未维护此仓库，正在重写代码库，且 Paperless-ngx 官方即将集成 AI 功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Docker 部署 Paperless-AI 容器",
+  "完成初始设置（API 密钥、偏好设置）",
+  "首次安装后重启容器以构建 RAG 索引",
+  "访问 Web 界面使用自动处理、手动标签或 RAG 聊天功能"
+ ],
+ "summary": "Paperless-AI 是一个为 Paperless-ngx 文档管理系统提供 AI 增强的工具，能自动分析新文档并分配标题、标签、类型和 correspondent，还支持基于 RAG 的自然语言语义搜索与问答。它兼容 OpenAI API、Ollama 等多种 AI 后端，适合希望用 AI 自动化文档整理、提升检索效率的 Paperless-ngx 用户。",
+ "tagline": "为 Paperless-ngx 提供 AI 自动分类、标签与语义搜索"
+}

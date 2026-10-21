@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程代理的开发者，以及希望为代理提供高效代码检索能力的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "自然语言代码搜索，返回相关代码片段而非整文件",
+  "CPU 运行，无需 API key、GPU 或外部服务",
+  "支持 MCP server、CLI 和专用子代理多种集成方式",
+  "支持本地路径、git URL 及多仓库联合搜索",
+  "自动读取 .gitignore 和 .sembleignore 控制索引范围",
+  "提供 semble savings 统计 token 节省情况"
+ ],
+ "intro": "Semble 是一个为 AI 编程代理设计的代码搜索库，用自然语言查询即可返回精确的代码片段，避免代理用 grep 加读取文件的方式消耗大量 token。据项目说明，相比 grep+read 可减少约 99% 的 token 用量。\n\n它完全在 CPU 上运行，无需 API key、GPU 或外部服务，索引和搜索大多数仓库可在 1 秒内完成。支持本地路径、git URL 或多个仓库联合搜索，索引在首次运行时构建并缓存，文件变更后自动失效。\n\nSemble 可作为 MCP server、CLI 工具或专用子代理接入 Claude Code、Cursor、Codex、OpenCode 等代理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv：参考 https://docs.astral.sh/uv/getting-started/installation/",
+  "安装 Semble：uv tool install semble",
+  "运行交互式安装：semble install，选择要启用的集成（MCP server、Instructions、Sub-agent）",
+  "使用 CLI 搜索：semble search \"authentication flow\" ./my-project",
+  "撤销安装：semble uninstall"
+ ],
+ "summary": "Semble 是一个面向 AI 编程代理的代码搜索库，解决代理在代码库中检索时消耗大量 token 的问题。它用自然语言查询直接返回相关代码片段，据称比 grep+read 少用约 99% 的 token，且完全在 CPU 上运行，无需 API key 或外部服务。适合希望让 Claude Code、Cursor 等代理快速定位代码的开发者，可作为 MCP server、CLI 或子代理接入。",
+ "tagline": "面向 AI 编程代理的快速代码搜索库"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管个人 AI 助手、构建私有知识库问答或自动化工作流的开发者和技术用户。",
+ "date": "2026-10-21",
+ "features": [
+  "支持 30+ 模型提供商，可在对话中切换",
+  "自主智能体循环：浏览器操作、网页搜索、Shell 执行、Office 自动化",
+  "RAG 知识库：上传文档自动分块、嵌入并支持语义搜索",
+  "MCP 集成：接入任意 MCP 兼容服务器并暴露其工具",
+  "可视化工作流构建器，支持条件分支、并行执行和定时调度",
+  "单二进制分发，无需安装，跨平台运行"
+ ],
+ "intro": "OpenAgent 是一个开源的个人 AI 助手平台，将大语言模型、个人知识库和自主智能体循环整合在一起，支持自托管。它允许用户连接多种模型提供商，基于文档构建 RAG 知识库，并让智能体代替用户浏览网页、执行代码、调用 MCP 兼容工具。\n\n项目以单个二进制文件分发，无需安装，支持 Linux、macOS 和 Windows（含原生 Windows 运行）。功能涵盖浏览器操作、网页搜索与抓取、Shell 命令执行、Office 文件读写，以及通过 MCP 集成外部工具。此外还提供可视化工作流构建器、任务调度和用量分析等平台能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS/Linux/WSL 运行：curl -fsSL https://raw.githubusercontent.com/the-open-agent/openagent/master/scripts/install.sh | bash",
+  "Windows PowerShell 运行：irm https://raw.githubusercontent.com/the-open-agent/openagent/master/scripts/install.ps1 | iex",
+  "打开 http://localhost:14000 开始使用",
+  "或使用 Docker：docker-compose up 后访问 http://localhost:14000"
+ ],
+ "summary": "OpenAgent 是一个可自托管的开源个人 AI 助手，把大语言模型、个人知识库和自主智能体循环整合到一个平台中。它适合需要私有化部署 AI 助手、基于文档构建 RAG 问答，或让智能体自动完成网页浏览、代码执行和工具调用的场景。项目以单二进制形式分发，支持多模型提供商和 MCP 工具集成。",
+ "tagline": "开源个人 AI 助手，集成 LLM、RAG 与自主智能体循环"
+}

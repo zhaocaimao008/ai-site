@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合医疗 AI 开发者、数据隐私工程师以及需要在本地或边缘设备上处理临床文本的机构。",
+ "date": "2026-10-21",
+ "features": [
+  "临床命名实体识别（NER），可提取疾病、药物等实体",
+  "PII 去标识化，支持 35 种语言，可针对 HIPAA 安全港的 18 类标识符进行配置",
+  "多平台运行时：Python、Swift（Apple MLX）、Android（ONNX Runtime Mobile）、浏览器（Transformers.js）",
+  "提供 2,200+ 医疗模型清单，涵盖多种临床任务",
+  "支持本地部署，核心处理在设备上完成，减少数据外传"
+ ],
+ "intro": "OpenMed 是一个本地优先的医疗 AI 工具包，核心功能是在用户控制的硬件上对临床文本进行命名实体识别（NER）和 PII 去标识化。它提供 Python SDK，并支持 Swift、Android、浏览器等多种运行时，方便在不同环境中部署。\n\n项目包含超过 2,200 个医疗模型条目，覆盖 35 种语言的 PII 检测，并遵循 Apache-2.0 协议。通过本地运行时，数据无需离开设备即可完成处理，适合对隐私要求较高的医疗场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 包：pip install openmed",
+  "使用 analyze_text 函数进行临床实体识别，例如：from openmed import analyze_text; result = analyze_text(\"Patient started on imatinib for chronic myeloid leukemia.\", model_name=\"disease_detection_superclinical\")",
+  "运行示例脚本体验临床简报生成：python examples/v30_clinical_brief.py"
+ ],
+ "summary": "OpenMed 是一个本地优先的医疗 AI 工具包，专注于临床文本的命名实体识别和 PII 去标识化。它让开发者在自己的硬件上处理敏感医疗数据，避免数据外传，并提供 Python、Swift、Android 和浏览器等多种运行时。适合需要隐私保护的医疗 NLP 应用场景。",
+ "tagline": "本地优先的医疗 AI：临床 NER 与 PII 去标识化"
+}

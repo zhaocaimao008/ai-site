@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想寻找 AI 编程工具免费额度或中转站福利的开发者，以及需要了解各站点注册与签到活动的普通用户。",
+ "date": "2026-10-21",
+ "features": [
+  "汇总 Claude Code、Codex、Cursor 等 AI 编程中转站与公益站",
+  "展示各站点的注册福利、邀请码、签到活动和推荐指数",
+  "提供可视化看板页面 ai_relay_dashboard.html",
+  "包含 Python 数据采集与页面生成工具",
+  "附带使用建议与风险提示，提醒核对活动有效性"
+ ],
+ "intro": "这个项目是一个面向 AI 编程用户的中转站与公益站导航页面，汇总了 Claude Code、Codex、Cursor 等工具相关的站点信息。页面以推荐榜单形式列出各站点的注册福利、邀请码、签到活动和编辑评测记录，并附有使用注意事项。\n\n项目包含一个可视化看板 HTML 页面和 Python 数据采集工具，数据持久化在 JSON 文件中，可通过命令重新生成页面。README 中明确说明赠额和活动为公开资料口径，可能过期或存在冲突，不保证到账，并提醒用户不要向未知中转站提交敏感信息。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入项目目录",
+  "运行 python main.py 从本地 JSON 重新生成页面",
+  "打开 ai_relay_dashboard.html 查看导航看板",
+  "运行 python -m unittest discover -s tests -p \"test_*.py\" -v 执行测试"
+ ],
+ "summary": "这个项目把 Claude Code、Codex、Cursor 等 AI 编程工具相关的中转站和公益站整理成一个导航页面，集中展示各站的注册福利、邀请码、签到活动和编辑评测记录。适合想寻找免费额度或对比不同站点福利的开发者参考，但页面内容为公开资料整理，可能过期或存在冲突，使用前需自行核对实际到账情况。",
+ "tagline": "汇总 AI 编程中转站福利与免费额度的导航站"
+}

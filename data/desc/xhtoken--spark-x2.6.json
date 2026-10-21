@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或端侧部署语言模型的开发者，以及关注 Agent、编码和长上下文任务的应用团队。",
+ "date": "2026-10-21",
+ "features": [
+  "4B 参数端侧通用语言模型，覆盖编码、Agent、长上下文、多语言与推理任务",
+  "支持 none、low、high 三档可控思考预算，平衡质量、延迟与成本",
+  "提供 Transformers、SGLang 推理示例，SGLang 可启动 OpenAI 兼容 API 服务",
+  "已在 Hugging Face、ModelScope、Ollama 发布，国内用户可从 ModelScope 下载",
+  "llama.cpp 已加入 Spark-X2.5/X2.6 原生架构支持"
+ ],
+ "intro": "Spark-X2.6 是 XHToken 推出的开源模型系列，当前版本 Spark-X2.6-4B 是一个面向端侧部署的紧凑型通用语言模型。它沿用 Spark-X2.5-4B 的架构，主要通过改进后训练来提升能力，在编码、Agent、长上下文、多语言和推理等方向都有增强。\n\n模型支持 none、low、high 三档可配置的思考预算，应用可以据此在推理质量、延迟和推理成本之间做取舍。官方称其在同尺寸开源模型中表现领先，部分基准上可匹配或超过约 9B 参数的模型。\n\n模型已在 Hugging Face、ModelScope 和 Ollama 发布，llama.cpp 也加入了原生架构支持，并提供 Transformers 与 SGLang 的推理示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install transformers==4.57.1",
+  "使用 AutoModelForCausalLM 和 AutoTokenizer 加载 XHToken/Spark-X2.6-4B，并设置 trust_remote_code=True",
+  "通过 apply_chat_template 构造对话输入，可设置 enable_thinking=True 开启思考",
+  "调用 model.generate 生成回复并解码输出",
+  "如需 API 服务，可用 SGLang 镜像启动 launch_server，指定模型路径和 chat template"
+ ],
+ "summary": "Spark-X2.6-4B 是一个面向端侧部署的 4B 通用语言模型，重点提升编码、Agent 工具调用、多步规划和长上下文等实际任务能力。它提供三档思考预算，方便应用在推理质量与延迟之间取舍，适合在本地或资源受限环境中运行语言模型、构建 Agent 应用的开发者参考使用。",
+ "tagline": "面向端侧部署的 4B 通用语言模型系列"
+}

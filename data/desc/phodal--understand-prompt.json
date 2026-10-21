@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 绘画、AI 写作和 AI 编程感兴趣，希望了解如何通过 Prompt 更好地使用这些工具的开发者与普通用户。",
+ "date": "2026-10-21",
+ "features": [
+  "结合 Stable Diffusion 讲解图像生成中的 Prompt 演进与精准控图",
+  "演示用 ChatGPT 围绕主题构建上下文和框架来写文章",
+  "介绍 GitHub Copilot 在代码生成和 Prompt 编程中的应用",
+  "提供 Jupyter Notebook 练习：中文翻译英文、代码自动生成",
+  "讨论 Prompt 编程与低代码、AIGC 利用策略等话题"
+ ],
+ "intro": "这个项目是作者结合自身在编程、写作和绘画方面的经验，对 AI 使用方式所做的探索与总结。内容围绕 Prompt 展开，说明如何通过优化文本输入来更好地使用 AI 模型。\n\n项目涵盖三个方向：用 Stable Diffusion 展示从文本描述到图像生成的演进过程，包括 ControlNet 精准控图和 DreamBooth 个人模型；用 ChatGPT 演示如何围绕特定主题构建上下文和框架来写文章；以及结合 GitHub Copilot 介绍代码生成和 Prompt 编程。\n\nREADME 以长文形式组织，包含目录和示例，并提供了 Jupyter Notebook 练习文件，如中文翻译英文和代码自动生成。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目是作者基于编程、绘画和写作经验整理的 AI 探索笔记，核心是说明 Prompt 如何影响 AI 输出。内容覆盖用 Stable Diffusion 生成和优化图像、用 ChatGPT 围绕主题写文章、用 GitHub Copilot 辅助编程，并附有 Jupyter 练习。适合想了解如何通过优化提示词来使用这些 AI 工具的读者。",
+ "tagline": "基于编程、绘画、写作的 AI 探索与 Prompt 总结"
+}

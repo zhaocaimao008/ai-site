@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合逆向工程师、安全研究人员以及希望用 AI 辅助分析二进制文件的开发者使用。",
+ "date": "2026-10-21",
+ "features": [
+  "提供 209 个 MCP 工具，支持重命名、类型设置、注释、结构创建、脚本执行、P-code 模拟和实时调试等操作",
+  "支持 GUI 插件和 headless 服务器两种运行模式，可配合 Docker 用于 CI/CD 流水线",
+  "内置命名约定强制机制，分为自动修复、警告和拒绝三个层级，确保输出一致性",
+  "支持跨二进制文档传输，通过 SHA-256 函数哈希匹配在不同版本间传播文档",
+  "集成 Ghidra Server，支持仓库管理、版本控制和多用户协作",
+  "提供批量操作以减少 API 调用次数，并支持可配置超时和错误处理"
+ ],
+ "intro": "Ghidra MCP Server 是一个基于 Model Context Protocol 的服务器，用于将 Ghidra 的逆向工程能力与 AI 工具和自动化框架连接起来。项目提供 209 个 MCP 工具，涵盖读写操作、P-code 模拟、实时调试和批量处理等功能。\n\n它包含 Ghidra GUI 插件和 headless 服务器两种模式，支持 Docker 部署和 Ghidra Server 集成。项目还内置了命名约定强制机制，通过自动修复、警告和拒绝三个层级来保证 AI 代理和工程师输出的一致性。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Ghidra 12.1.4、Java 21 和 uv",
+  "在 Ghidra 中通过 File > Install Extensions 安装 GhidraMCP-<version>.zip 并重启",
+  "在项目窗口中启用 GhidraMCPPlugin，并用 curl http://127.0.0.1:8089/check_connection 验证",
+  "使用 uv tool install 安装 bridge wheel 包",
+  "在 MCP 客户端配置中指向 bridge-mcp-ghidra 的绝对路径"
+ ],
+ "summary": "Ghidra MCP Server 是一个将 Ghidra 逆向工程能力接入 AI 工具的 MCP 服务器，提供 209 个工具，覆盖读写、P-code 模拟和实时调试。它支持 GUI 插件与 headless 模式，内置命名约定强制和跨二进制文档传输，适合逆向工程师和安全研究人员用 AI 辅助分析二进制文件。",
+ "tagline": "连接 Ghidra 与 AI 的 MCP 服务器，提供 209 个逆向工程工具"
+}

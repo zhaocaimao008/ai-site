@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在设备端实现语音唤醒功能的嵌入式开发者、移动应用开发者以及物联网产品团队。",
+ "date": "2026-10-21",
+ "features": [
+  "基于深度神经网络的高精度唤醒词检测",
+  "轻量级、计算高效，适合 IoT 和嵌入式设备",
+  "跨平台支持：微控制器、树莓派、移动端、浏览器和桌面系统",
+  "可同时检测多个唤醒词，不增加运行时开销",
+  "支持通过 Picovoice Console 自助训练自定义唤醒词模型",
+  "提供多种编程语言的 SDK 和演示程序"
+ ],
+ "intro": "Porcupine 是一个高精度、轻量级的唤醒词引擎，基于在真实环境中训练的深度神经网络，能够在设备本地实现始终在线的语音唤醒功能。它专为物联网和嵌入式场景设计，计算效率高，适合资源受限的设备。\n\n该项目支持跨平台部署，覆盖 Arm Cortex-M、STM32、Arduino、树莓派、Android、iOS、主流浏览器以及 Linux、macOS 和 Windows 桌面系统。开发者可以通过 Picovoice Console 自助训练自定义唤醒词模型，并支持同时检测多个唤醒词而不会增加运行时开销。\n\nPorcupine 支持包括中文（普通话）在内的多种语言，并提供 Python、.NET、Java、Flutter、React Native、Web、Node.js、C 等语言的 SDK 和演示程序，方便快速集成到各类应用中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 演示包：sudo pip3 install pvporcupinedemo",
+  "连接麦克风后运行：porcupine_demo_mic --access_key ${ACCESS_KEY} --keywords porcupine",
+  "引擎将实时处理麦克风输入，检测到唤醒词时在终端输出"
+ ],
+ "summary": "Porcupine 是一个运行在设备本地的唤醒词检测引擎，利用深度神经网络在真实环境中训练，能够在不上传音频的前提下识别预设的语音指令。它适合需要始终在线语音唤醒的物联网设备、移动应用和嵌入式项目，支持多种硬件平台和编程语言，并允许开发者训练自定义唤醒词模型。",
+ "tagline": "基于深度学习的设备端唤醒词检测引擎"
+}

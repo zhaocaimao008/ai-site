@@ -1,0 +1,26 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 macOS 进行 AI 辅助编程、希望终端开箱即用又保留深度定制能力的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "预置 JetBrains Mono 字体、自动明暗主题、选中即复制和 Mac 快捷键",
+  "标签页与分屏管理，支持 Tab Navigator 和窗口/工作目录恢复",
+  "AI 助手：命令失败修复建议、自然语言转命令、聊天面板与 AI 工具配置",
+  "右上角显示 AI agent 工作状态，Claude Code 需要时发送通知",
+  "右键菜单和 Cmd + Click 打开链接/文件路径",
+  "kaku remote 支持从其他电脑的浏览器访问本机终端",
+  "内置 zsh 补全、语法高亮、目录跳转，以及 Lazygit/Yazi 快捷入口",
+  "基于 WezTerm 的 Lua 配置系统，可自定义字体、主题、快捷键"
+ ],
+ "intro": "Kaku 是一个基于 WezTerm 的 macOS 终端，预置了字体、主题、shell 集成和 Mac 快捷键，安装后即可直接使用，同时保留完整的 Lua 配置能力。\n\n它针对 AI 辅助编程场景做了优化：右上角可显示当前运行的 AI agent 及其任务，Claude Code 需要你时能收到通知；内置助手支持命令失败后给出修复建议、用自然语言生成命令，以及通过 Cmd + L 打开聊天面板。\n\n此外还提供标签页与分屏、右键菜单、可点击链接、kaku remote 浏览器远程访问、zsh 补全与语法高亮等 shell 工具，以及 Lazygit 和 Yazi 的快捷入口。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载 Kaku DMG 并拖入 Applications，或执行 brew install --cask kaku",
+  "打开 Kaku 完成 shell 集成设置",
+  "运行 kaku init 安装缺失的可选工具",
+  "运行 kaku --version 检查版本",
+  "运行 kaku ai 配置自己的 AI 服务"
+ ],
+ "summary": "Kaku 是一个面向 macOS 的终端应用，基于 WezTerm 构建，预置了字体、主题、shell 集成和常用快捷键，安装后无需额外配置即可使用。它针对 AI 辅助编程做了增强，能显示 AI agent 的工作状态、在 Claude Code 需要时提醒你，并提供命令修复建议和自然语言生成命令等助手功能。适合希望终端开箱即用、同时保留 Lua 定制能力的 Mac 开发者。",
+ "tagline": "开箱即用的 AI 友好型 Mac 终端"
+}

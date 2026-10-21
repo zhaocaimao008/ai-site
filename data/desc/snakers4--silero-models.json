@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速集成文本转语音功能的开发者，以及对小语种语音合成有需求的研究人员或应用开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "完全端到端的 TTS 模型，无需复杂预处理",
+  "支持多种语言和大量发音人，包括小语种",
+  "一行代码即可调用，兼容 PyTorch Hub 和 pip",
+  "在 CPU 和 GPU 上均有较快的推理速度",
+  "支持 SSML 标记和多种采样率（如 8000、24000、48000 Hz）",
+  "针对俄语提供自动重音和同形词消歧"
+ ],
+ "intro": "Silero Models 提供了一套预训练的文本转语音（TTS）模型，强调端到端、自然语音和极简使用。模型支持多种语言，包括俄语、英语以及突厥语系和高加索语系下的众多小语种，并为俄语提供自动重音和同形词处理。\n\n用户可以通过 PyTorch Hub 或 pip 包两种方式调用模型，模型按需下载，无需手动管理。项目还支持 SSML 标记和多种采样率，方便集成到不同应用中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 PyTorch Hub 加载：torch.hub.load('snakers4/silero-models', 'silero_tts', language='ru', speaker='v5_ru')",
+  "或安装 pip 包：pip install silero",
+  "使用 pip 包调用：from silero import silero_tts; model, example_text = silero_tts(language='ru', speaker='v5_ru'); audio = model.apply_tts(text=example_text)"
+ ],
+ "summary": "Silero Models 是一个预训练文本转语音模型库，旨在让 TTS 的使用变得极其简单。它提供端到端模型，支持俄语、英语及多种突厥语系和高加索语系语言，并针对俄语处理重音和同形词。用户可通过 PyTorch Hub 或 pip 一行代码调用，模型按需下载，适合需要快速集成语音合成功能的开发者和研究小语种 TTS 的场景。",
+ "tagline": "预训练多语言文本转语音模型，一行代码即可使用"
+}

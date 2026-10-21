@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在资源受限环境（如 CPU、浏览器）中部署英语语音合成的开发者，以及对模型蒸馏和轻量 TTS 感兴趣的研究者。",
+ "date": "2026-10-21",
+ "features": [
+  "8M 参数单音色英语 TTS，int8 ONNX 文件仅 8.5 MB",
+  "单 CPU 线程约 62 倍实时速度，无需 GPU",
+  "UTMOS 4.39，接近教师模型 Kokoro-82M 的 4.52",
+  "支持 Python 包和 ONNX 直接调用，也可在浏览器中运行",
+  "提供完整蒸馏训练代码，可在单台笔记本上复现"
+ ],
+ "intro": "Paradee 是一个小型英语文本转语音模型，参数量 7.88M，从 Kokoro-82M 蒸馏而来，只保留 Kokoro 的 af_heart 音色。它的 int8 ONNX 文件仅 8.5 MB，而 Kokoro 为 325 MB。\n\n模型在单 CPU 线程上约 62 倍实时速度运行，无需 GPU。在 200 句留出测试集上，UTMOS 得分为 4.39（Kokoro 为 4.52），词错误率与 Kokoro 相差不到零点几个百分点。1.1 版本引入新的解码器头，速度提升三倍以上，并减少浊音中的杂音。\n\nParadee 也支持浏览器运行，是 Chickadee Chrome 扩展中的轻量语音。项目包含完整训练代码，可在单台笔记本电脑上运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install git+https://github.com/sahilmahendrakar/paradee",
+  "python -m paradee \"Paradee is a small voice that runs anywhere.\" -o hello.wav",
+  "或从 Python 调用：from paradee import Paradee, SAMPLE_RATE; tts = Paradee(); audio = tts(\"Paradee is a small voice that runs anywhere.\")"
+ ],
+ "summary": "Paradee 是一个从 Kokoro-82M 蒸馏得到的 8M 参数英语语音合成模型，只保留一个音色。它把模型压缩到 8.5 MB 的 ONNX 文件，在单 CPU 线程上就能快速运行，适合在浏览器、嵌入式设备或没有 GPU 的环境中生成英语语音。如果你需要轻量、离线可用的 TTS，又不想牺牲太多自然度，可以尝试这个项目。",
+ "tagline": "从 Kokoro-82M 蒸馏的 8M 参数英语语音合成模型"
+}

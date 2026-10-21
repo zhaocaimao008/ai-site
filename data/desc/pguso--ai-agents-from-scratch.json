@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想深入理解 AI Agent 底层原理、希望摆脱黑盒框架的开发者，以及具备 JavaScript 基础、对本地 LLM 感兴趣的学习者。",
+ "date": "2026-10-21",
+ "features": [
+  "使用本地 LLM 和 node-llama-cpp 运行示例，无需云端 API",
+  "从基础 LLM 交互到完整 Agent 的渐进式学习路径",
+  "覆盖函数调用、记忆、ReAct、AoT、Tree of Thought 等核心模式",
+  "每个示例包含代码、代码解释和概念文档",
+  "提供错误处理与容错机制的实践示例",
+  "配套网站辅助理解概念与学习路径"
+ ],
+ "intro": "这个项目通过一系列可运行的 JavaScript 示例，教你使用本地 LLM 和 node-llama-cpp 从第一性原理构建 AI Agent，而不依赖现成框架。内容从基础 LLM 调用开始，逐步覆盖系统提示、推理、批处理、流式输出、函数调用、记忆、ReAct 模式、AoT 规划、错误处理和 Tree of Thought 等主题。\n\n每个示例都配有代码、代码解释和概念说明，帮助你在动手实践中理解 Agent 的组成与设计取舍。项目还提供了配套网站，用于解释每个示例存在的理由并可视化学习路径。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Node.js 18+ 和至少 8GB 内存（推荐 16GB）",
+  "按照 DOWNLOAD.md 下载模型并放入 ./models/ 文件夹",
+  "运行 npm install 安装依赖",
+  "运行 node intro/intro.js 开始第一个示例",
+  "按学习路径依次运行 node simple-agent/simple-agent.js 和 node react-agent/react-agent.js 等示例"
+ ],
+ "summary": "这个项目用 JavaScript 和本地 LLM 带你从零实现 AI Agent，不依赖框架，而是通过可运行示例逐步讲解函数调用、记忆、ReAct 等机制。适合想真正理解 Agent 工作原理、愿意动手实践的开发者，也适合作为学习现代 Agent 框架前的底层铺垫。",
+ "tagline": "从零构建本地 AI Agent，理解底层原理"
+}

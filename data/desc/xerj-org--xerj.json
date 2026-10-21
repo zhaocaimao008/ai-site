@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程助手、希望减少 token 消耗并让 agent 检索本地代码与文档的开发者，也适合需要本地搜索服务的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "单个 Rust 二进制，无需 JVM，本地运行",
+  "BM25 全文、向量与混合检索",
+  "代码搜索与 go-to-definition（xerj def）",
+  "MCP 原生，可接入 Claude Code、Cursor 等客户端",
+  "兼容 Elasticsearch 的 API",
+  "agent memory 与 RAG 支持"
+ ],
+ "intro": "XERJ 是一个用 Rust 编写的本地优先搜索引擎，同时也是一个 MCP server。它用单个二进制文件索引代码、文档、日志、JSONL/CSV 和 PDF，提供 BM25 全文检索、向量检索与混合检索，并对外暴露兼容 Elasticsearch 的 API。\n\n项目面向 AI 编程场景：让 Claude Code、Cursor 等 MCP 客户端不再逐个读取文件，而是直接检索到需要的代码片段和 file:line 位置。它还提供 /_memory 命名空间用于 agent 记忆，以及 Corpus Hub 分发参考语料。默认 embedder 为离线词法方案，神经 embedder 需额外下载。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "curl -fsSL https://xerj.org/get | sh",
+  "xerj --insecure --data-dir ~/xerj-data &",
+  "xerj init",
+  "xerj autoindex ~/my-project",
+  "xerj search \"how do we rotate the WAL segment\""
+ ],
+ "summary": "XERJ 是一个本地优先的搜索引擎和 MCP server，用单个 Rust 二进制索引代码、文档、日志和 PDF，提供全文、向量与混合检索。它主要服务于 AI 编程场景：让 Claude Code、Cursor 等 agent 直接检索到所需代码片段，而不是逐个读取文件，同时支持 agent 记忆和 RAG。",
+ "tagline": "本地优先的 AI 搜索与 MCP 服务器"
+}

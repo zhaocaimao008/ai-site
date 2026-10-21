@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望使用 Stable Diffusion 进行图像生成的初学者和高级用户，尤其是需要兼顾易用界面与底层工作流控制的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "模块化设计，强调高性能和可扩展性",
+  "Generate 标签页提供便捷的图像生成界面，适合初学者",
+  "Comfy Workflow 标签页提供原始工作流图，适合高级用户",
+  "内置图像编辑器、自动工作流生成和 Grid Generator 等工具",
+  "支持 Windows、Linux 和 Mac（M1/M2）平台安装",
+  "提供 Google Colab 和 Runpod 在线尝试方式"
+ ],
+ "intro": "StableSwarmUI 是一个基于 C# 开发的模块化 Stable Diffusion Web 用户界面，旨在让高级工具易于使用，同时保持高性能和可扩展性。项目目前处于 Beta 阶段，提供 Generate 标签页和 Comfy Workflow 标签页两种主要操作方式。\n\nGenerate 标签页面向初学者和普通用户，集成了多种强大功能，方便快速生成图像；Comfy Workflow 标签页则面向高级用户，提供无限制的原始工作流图，同时仍可借助 Generate 标签页中的图像编辑器、自动工作流生成和 Grid Generator 等便利工具。\n\n需要注意的是，自 2024 年 6 月 21 日起，Stability AI 不再维护此项目，原作者已转为维护独立版本 mcmonkeyprojects/SwarmUI，并提供了迁移指南。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows：下载 Install-Windows.bat 并运行，按页面指引完成安装",
+  "Linux：下载 install-linux.sh，运行 chmod +x install-linux.sh 和 ./install-linux.sh",
+  "Mac（M1/M2）：安装 dotnet 和 python@3.10 后，克隆仓库并运行 ./launch-macos.sh",
+  "安装完成后，在浏览器打开 http://localhost:7801 使用"
+ ],
+ "summary": "StableSwarmUI 是一个 Stable Diffusion 的 Web 界面，用模块化方式把常用生成工具和高级工作流整合在一起。它既为新手提供直观的 Generate 标签页，也为进阶用户保留 Comfy Workflow 原始图编辑，并附带图像编辑、自动工作流和网格生成等辅助功能。适合想在本地或云端快速搭建图像生成环境，又希望兼顾易用性与灵活控制的用户。",
+ "tagline": "模块化 Stable Diffusion Web 界面，兼顾易用与高性能"
+}

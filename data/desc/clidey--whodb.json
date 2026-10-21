@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要轻量数据库客户端的开发者、需要协作查看数据的团队，以及希望用自然语言查询数据库的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "以表格形式浏览、筛选、分页并内联编辑数据",
+  "用交互式关系图查看表与表之间的结构",
+  "带多单元格、自动补全和历史记录的查询草稿本",
+  "支持数据导入导出与模拟数据生成",
+  "可选接入本地或托管 AI 服务，用自然语言提问",
+  "提供 CLI 终端界面和 MCP server"
+ ],
+ "intro": "WhoDB 是一个轻量、可自托管的数据库工作台，用 Go 和 TypeScript 编写。它运行在浏览器中，也提供桌面应用和终端 CLI，让你在一个地方浏览数据库、编辑数据、执行查询并理解表结构之间的关系。\n\n它支持 PostgreSQL、MySQL、SQLite、MongoDB、Redis、ClickHouse 等多种数据库，具体能力因数据库而异。AI 功能是可选的：你可以接入 Ollama、OpenAI、Anthropic、LM Studio 或其他 OpenAI 兼容服务，用自然语言提问。\n\n适合想快速查看本地数据库、帮同事熟悉陌生数据，或不想安装重型数据库客户端的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "用 Docker 启动：docker run --rm -it -p 8080:8080 clidey/whodb",
+  "打开 http://localhost:8080 并填写数据库连接信息",
+  "如需保留加密登录会话，先用 openssl rand -hex 32 生成密钥，再挂载 /data 并设置 WHODB_ENCRYPTION_KEY 启动容器",
+  "安装 CLI：npm install -g @clidey/whodb，运行 whodb 打开终端界面，或运行 whodb mcp serve 启动 MCP server"
+ ],
+ "summary": "WhoDB 是一个可自托管的数据库工作台，把浏览数据、编辑表格、执行查询和查看表关系集中在一个界面里，支持多种关系型与非关系型数据库。它提供浏览器、桌面和终端三种使用方式，AI 问答功能可选接入本地或托管模型。适合需要轻量数据库客户端、想快速查看陌生数据或与同事协作探索数据库的开发者。",
+ "tagline": "轻量、可自托管的数据库工作台"
+}

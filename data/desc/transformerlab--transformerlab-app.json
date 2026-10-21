@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合 AI 研究人员、机器学习工程师以及需要在本地或集群上训练、微调和评估模型的研究实验室。",
+ "date": "2026-10-21",
+ "features": [
+  "支持多种基础模型（Llama 3、DeepSeek、Mistral、Qwen、Phi 等）的下载与运行，兼容 MLX、vLLM、Ollama 和 HuggingFace Transformers 推理引擎。",
+  "提供全量微调、LoRA/QLoRA、RLHF（DPO、ORPO、SIMPO）和奖励建模等训练方法，并支持 YAML 定义超参数网格搜索。",
+  "集成 Stable Diffusion 和 Flux 进行文生图、图生图、内补及 ControlNet/IP-Adapter 控制，支持训练自定义 LoRA。",
+  "内置 LLM-as-a-Judge 评估、EleutherAI LM Evaluation Harness 基准测试（MMLU、HellaSwag、GSM8K 等）和红队安全测试。",
+  "提供 Python 插件系统和 Lab SDK（import lab），可集成现有训练脚本并自动记录日志与制品。",
+  "团队版支持从统一界面提交任务到 Slurm 集群或 SkyPilot 云，并提供 Jupyter、VSCode、SSH 交互式会话。"
+ ],
+ "intro": "Transformer Lab 是一个开源的机器学习平台，旨在将分散的 AI 工具整合到一个界面中。它提供个人版和团队版：个人版适合在单机上进行模型训练、微调、对话和评估，数据保留在本地；团队版则面向需要跨 GPU 集群扩展的研究实验室，支持将任务提交到 Slurm 集群或 SkyPilot 云（AWS、GCP、Azure），并提供集中的实验跟踪、模型注册和制品管理。\n\n平台支持 Llama 3、DeepSeek、Mistral、Qwen、Phi 等基础模型，兼容 MLX、vLLM、Ollama 和 HuggingFace Transformers 等推理引擎。训练方面涵盖全量微调、LoRA/QLoRA、RLHF（DPO、ORPO、SIMPO）和奖励建模，并针对 Apple Silicon、NVIDIA CUDA 和 AMD ROCm 做了优化。此外还提供扩散模型图像生成、TTS 音频生成、LLM-as-a-Judge 评估、基准测试和红队测试等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装脚本：curl https://lab.cloud/install.sh | bash",
+  "进入安装目录：cd ~/.transformerlab/src",
+  "启动应用：./run.sh",
+  "在浏览器中打开 http://localhost:8338 访问界面"
+ ],
+ "summary": "Transformer Lab 是一个开源机器学习平台，把模型训练、微调、对话、评估和图像/音频生成整合到统一界面。个人版可在本地单机运行，保护数据隐私；团队版支持将任务提交到 Slurm 集群或 SkyPilot 云，并提供实验跟踪和远程交互式开发。适合 AI 研究人员和实验室在本地或集群上开展模型实验。",
+ "tagline": "开源 AI 研究平台，统一训练、评估与扩展模型"
+}

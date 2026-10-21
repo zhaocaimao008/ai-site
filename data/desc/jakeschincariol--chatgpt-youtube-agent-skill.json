@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合自己运营 YouTube 频道、希望用 ChatGPT 辅助脚本、包装、剪辑和数据分析的创作者。",
+ "date": "2026-10-21",
+ "features": [
+  "yt-script 基于 21 种 hook 公式写脚本并给 hook 打分",
+  "yt-package 把标题和缩略图作为一组来检查",
+  "yt-retention 读取留存导出，定位观众离开的具体秒数",
+  "yt-edit 把转录稿转成剪辑决策清单并标出空白段",
+  "yt-viral 按频道相对提升排名，找出所在领域表现好的内容",
+  "yt-shorts 从长视频中找出可剪成 Shorts 的片段"
+ ],
+ "intro": "这个项目提供十一个 ChatGPT 技能（skill），覆盖 YouTube 频道运营的多个环节：写脚本并给 hook 打分、把标题和缩略图作为一组来检查、分析观众留存导出数据、把转录稿转成剪辑决策清单、从长视频里找 Shorts 素材、按频道相对表现排名找选题等。\n\n所有技能只负责生成内容，不会自动发布，上传仍由用户自己完成。项目附带六个无依赖的 Python 脚本，无需安装额外包。使用前可先填写 voice.md 描述自己的表达风格，各技能都会读取它。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 ChatGPT 中粘贴仓库链接并说 install skill",
+  "或执行 git clone https://github.com/Jakeschincariol/chatgpt-youtube-agent-skill",
+  "执行 cp -r chatgpt-youtube-agent-skill/skills/yt-* ~/.codex/skills/",
+  "重启应用后技能即可使用",
+  "复制 templates/voice.md 到 ~/.codex/youtube/voice.md 并填写自己的表达风格"
+ ],
+ "summary": "这是一组运行在 ChatGPT 上的 YouTube 运营技能，覆盖写脚本、检查标题与缩略图、分析留存数据、生成剪辑清单、寻找 Shorts 素材等环节。所有产出都需要用户自己上传发布，适合想借助 AI 提高频道内容制作效率的创作者。",
+ "tagline": "十一个 ChatGPT 技能，辅助运营 YouTube 频道"
+}

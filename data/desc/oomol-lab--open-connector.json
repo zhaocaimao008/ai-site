@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要让 AI Agent 安全访问用户已有 SaaS 账号的开发者与团队，以及希望自托管或托管部署连接器网关的产品方。",
+ "date": "2026-10-21",
+ "features": [
+  "覆盖 GitHub、Gmail、Notion、Slack、BigQuery 等服务商的连接器目录与预置 Action",
+  "支持 API Key、OAuth2、自定义凭据和无认证等多种凭据类型",
+  "可检查的 Action 契约：请求/响应 schema、所需 scope 和懒加载执行器源码",
+  "运行时控制：连接身份、scope、runtime token、Action 允许/阻止策略、脱敏运行日志",
+  "通过 SDK、oo CLI、MCP（/mcp）和 HTTP/OpenAPI 接入 Agent 与应用",
+  "自带本地 Dashboard，可浏览连接器、配置凭据、创建 token 并查看用量"
+ ],
+ "intro": "OpenConnector 是一个面向 AI Agent 的开源连接器网关，定位为 Pipedream/Composio 的替代方案。用户只需连接一次应用账号，网关就会把 1000+ 服务商和 10000+ 预置 Action 以统一目录的形式暴露给 Agent 和应用。\n\n它把凭据、OAuth、schema、策略和运行日志都收在可检查的运行时边界内，Agent 进程拿不到服务商的原始密钥，只获得元数据、安全的账号标签和执行结果。项目提供 Connector SDK、oo CLI、MCP、HTTP/OpenAPI 等多种接入方式，并附带本地 Dashboard 用于浏览连接器、配置凭据和查看调用情况。\n\n部署上既支持本地 Docker 或 Node.js 自托管（SQLite/PostgreSQL 状态存储），也支持 OOMOL 托管运行时和 Cloudflare 等平台。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 OOMOL 托管运行时或本地 Docker/Node.js 中部署 OpenConnector",
+  "通过 Web Console 浏览连接器目录并配置所需服务的凭据",
+  "创建 runtime token，并设置 Action 允许/阻止策略",
+  "在应用中使用 Connector SDK，或通过 MCP 端点 http://localhost:3000/mcp 接入 Agent",
+  "也可直接调用 /v1/actions/* 接口，或查看 /openapi.json 了解接口定义"
+ ],
+ "summary": "OpenConnector 解决的是 AI Agent 访问用户已有 SaaS 工具时的账号授权与凭据安全问题。它把 1000+ 服务商和大量预置 Action 统一成可检查的目录，Agent 通过 SDK、CLI、MCP 或 HTTP 调用，而密钥留在网关内部。适合需要让 Agent 稳定操作 GitHub、Slack、Notion 等应用的开发者和团队，可自托管或使用托管运行时。",
+ "tagline": "为 AI Agent 提供 SaaS 账号连接与凭据管理的开源网关"
+}

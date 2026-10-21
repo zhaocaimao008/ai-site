@@ -1,0 +1,17 @@
+{
+ "ai_related": false,
+ "audience": "适合需要处理 TypeScript/JavaScript 代码的开发者，尤其是进行静态分析、代码重构或自动化代码生成的场景。",
+ "date": "2026-10-21",
+ "features": [
+  "提供对 TypeScript 和 JavaScript 代码的编程式导航与修改",
+  "封装 TypeScript Compiler API，降低使用复杂度",
+  "支持静态分析和代码生成",
+  "包含 @ts-morph/bootstrap 包，便于快速初始化编译器 API",
+  "附带 TypeScript AST Viewer 在线工具，方便查看语法树"
+ ],
+ "intro": "ts-morph 是一个对 TypeScript Compiler API 的封装库，旨在让开发者更轻松地以编程方式导航和操作 TypeScript 与 JavaScript 代码。它简化了编译器 API 的复杂细节，提供了更直观的接口来进行静态分析和代码生成。\n\n该项目包含两个主要包：ts-morph 提供核心的代码操作功能，@ts-morph/bootstrap 则用于快速设置编译器 API 环境。ts-morph 适用于需要自动化代码重构、分析或生成的场景，是 TypeScript 生态中处理 AST 的实用工具。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "ts-morph 是一个对 TypeScript Compiler API 的封装库，帮助开发者以编程方式分析和修改 TypeScript 与 JavaScript 代码。它简化了编译器 API 的复杂细节，提供更易用的接口，适合需要自动化代码重构、静态分析或代码生成的场景。项目还包含 @ts-morph/bootstrap 包，便于快速设置编译器环境。",
+ "tagline": "TypeScript 编译器 API 的封装库，用于静态分析和代码修改"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究音频驱动人物动画的开发者，以及希望用参考图和音频生成半身说话视频的创作者。",
+ "date": "2026-10-21",
+ "features": [
+  "根据参考图像与驱动音频生成半身人物说话视频",
+  "提供 GradioUI 界面与 ComfyUI 集成",
+  "提供加速推理脚本，README 称在 A100 上 120 帧生成约 50 秒",
+  "模型权重发布于 HuggingFace 与 ModelScope",
+  "提供参考图-姿态对齐的 demo notebook",
+  "发布 EMTD 数据集列表与处理脚本"
+ ],
+ "intro": "EchoMimicV2 是蚂蚁集团支付宝终端技术部提出的音频驱动半身人物动画生成项目，论文被 CVPR 2025 接收。它根据一张参考图像和一段驱动音频，生成人物说话、做动作的视频，覆盖头部与半身范围。\n\n项目提供推理代码与模型权重，模型发布在 HuggingFace 和 ModelScope 上，并附带 GradioUI 与 ComfyUI 集成方式。仓库还包含加速推理脚本，README 称在 A100 GPU 上可将 120 帧的生成时间从约 7 分钟缩短到约 50 秒。\n\n同一系列还有 EchoMimicV1（肖像动画）和 EchoMimicV3（统一多模态多任务人物动画），可按需求选择不同版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 HuggingFace 或 ModelScope 下载 EchoMimicV2 模型权重",
+  "参考 README 的 Installation 部分配置 Python 环境与依赖",
+  "运行 app.py 启动 GradioUI，或运行 infer_acc.py 使用加速推理",
+  "在 demo.ipynb 中体验参考图与姿态对齐后生成视频的流程"
+ ],
+ "summary": "EchoMimicV2 解决的是用音频驱动人物半身动画生成的问题：输入一张参考图像和一段音频，即可生成人物说话与动作的视频。项目由蚂蚁集团团队提出，论文被 CVPR 2025 接收，提供推理代码、模型权重、GradioUI 和加速推理脚本，适合研究音频驱动人物动画的开发者上手尝试。",
+ "tagline": "音频驱动半身人物动画生成模型"
+}

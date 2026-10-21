@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想体验网页版 Terraria 的玩家，以及对 AI 辅助大型项目开发、Web 游戏引擎实现感兴趣的开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "完整重写 Terraria 1.4.5.8 的网页版本，无需安装客户端",
+  "Canvas 2D + WebGL2 混合渲染，支持最高 120fps",
+  "支持导入原版 *.wld 世界存档和 *.plr 角色存档",
+  "支持移植 mod 和材质包，提供 mod 开发脚手架与校验构建工具",
+  "世界生成包含 9 个彩蛋种子和 37 个秘密种子",
+  "附带 2600+ 测试用例和逐日开发日志"
+ ],
+ "intro": "Open Terraria 是《Terraria》1.4.5.8 的 Web 重写实现，不依赖任何游戏引擎，完全基于浏览器原生技术构建。项目采用 Canvas 2D + WebGL2 混合渲染管线，部分模块使用 Web Worker 并行化或编译为 WebAssembly，最高支持 120fps。\n\n整个项目由人类发送指令、AI 代理编写代码完成，作者记录了 7827 条指令、124 个会话和 36815 次工具调用，代码量约 150 万行 TypeScript，并附有逐日开发日志。游戏支持导入原版 *.wld 世界存档和 *.plr 角色存档，也支持移植 mod 与材质包。\n\n目前多人模式服务端仍在开发中，代码仍在积极迭代，可能存在 Bug 和性能待优化项。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install",
+  "npm run dev  # 启动开发服务器 http://localhost:5199",
+  "npm test  # 运行 vitest 全量测试（2600+ 用例）",
+  "npm run build  # 构建产物到 dist/"
+ ],
+ "summary": "Open Terraria 把《Terraria》1.4.5.8 重写成了纯网页游戏，不依赖游戏引擎，用 Canvas 2D 与 WebGL2 渲染，并支持导入原版世界和角色存档、移植 mod 与材质包。项目由人类发指令、AI 代理写代码完成，仓库保留了完整开发日志。适合想直接在浏览器里玩泰拉瑞亚的玩家，也适合研究 AI 协作开发大型 Web 游戏的开发者参考。",
+ "tagline": "用 AI 指令驱动的 Terraria 1.4.5.8 网页重写版"
+}

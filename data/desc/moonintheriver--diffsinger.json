@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合语音合成、歌声合成方向的研究人员和开发者，以及希望复现 AAAI 2022 论文或基于扩散模型进行二次开发的技术人员。",
+ "date": "2026-10-21",
+ "features": [
+  "实现 DiffSinger 歌声合成与 DiffSpeech 文本转语音",
+  "采用浅层扩散机制提升生成质量与推理速度",
+  "支持歌词+真实 F0、歌词+MIDI 等多种输入模式",
+  "集成 NSF-HiFiGAN 声码器完成波形生成",
+  "提供 PopCS 和 OpenCpop 数据集的训练与推理配置",
+  "支持 PNDM 插件加速扩散采样"
+ ],
+ "intro": "DiffSinger 是 AAAI 2022 论文的官方 PyTorch 实现，提出 DiffSinger（歌声合成）和 DiffSpeech（文本转语音）两种模型。核心是浅层扩散机制，在扩散过程中从浅层开始去噪，以提升生成质量并加速推理。\n项目提供完整的训练与推理流程，支持多种输入形式：歌词加真实 F0、歌词加 MIDI 等，并集成 NSF-HiFiGAN 声码器。仓库包含 PopCS 和 OpenCpop 数据集的实验配置，以及 PNDM 加速插件。\n文档区分 TTS 和 SVS 两条路线，并给出从原始输入直接推理的简易方式，方便开发者复现和二次开发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建 conda 环境：conda create -n your_env_name python=3.8",
+  "激活环境：source activate your_env_name",
+  "安装依赖（根据 GPU 选择）：pip install -r requirements_2080.txt 或 pip install -r requirements_3090.txt",
+  "参考 docs/README-TTS.md 运行 DiffSpeech，或 docs/README-SVS.md 运行 DiffSinger"
+ ],
+ "summary": "DiffSinger 是 AAAI 2022 论文的官方代码，用浅层扩散机制同时实现歌声合成与文本转语音。项目提供从歌词、MIDI 或 F0 到波形的完整流程，并集成 NSF-HiFiGAN 声码器，支持 PopCS 和 OpenCpop 数据集。适合研究扩散模型在语音领域的应用，或需要复现和二次开发歌声合成系统的开发者。",
+ "tagline": "基于浅层扩散机制的歌声合成与语音合成官方实现"
+}

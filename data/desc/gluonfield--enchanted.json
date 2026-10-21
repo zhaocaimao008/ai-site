@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Apple 设备上使用自托管语言模型、注重隐私并已部署 Ollama 服务的开发者和普通用户。",
+ "date": "2026-10-21",
+ "features": [
+  "连接自托管 Ollama 服务器，与 Llama 2、Mistral、Vicuna 等模型对话",
+  "支持文本转语音（朗读）、语音提示和图片附件输入",
+  "对话历史保存在设备本地，并包含在 API 调用中",
+  "支持 Markdown 渲染，可显示表格、列表和代码块",
+  "可自定义系统提示词，编辑消息内容或切换模型重新提交",
+  "提供 macOS Spotlight 面板（Ctrl+⌘+K），所有功能可离线使用"
+ ],
+ "intro": "Enchanted 是一个开源的 iOS、macOS 和 visionOS 应用，用于与通过 Ollama 自托管的私有语言模型（如 Llama 2、Mistral、Vicuna、Starling 等）进行对话。它的界面类似 ChatGPT 应用，但连接的是你自己的模型服务器，目标是在 Apple 生态设备上提供私密、安全且多模态的聊天体验。\n\n使用前需要自行运行 Ollama 服务器（v0.1.14 或更高版本），并在应用设置中填写服务器地址。如果 Ollama 运行在本地电脑上，可以通过 ngrok 将服务转发到公网，以便移动设备访问。应用支持文本转语音、语音输入、图片附件、Markdown 渲染、对话历史存储在本机，以及自定义系统提示词等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 App Store 下载 Enchanted 应用",
+  "启动 Ollama 服务器并下载所需模型（要求 Ollama v0.1.14 或更高版本）",
+  "若 Ollama 运行在本地电脑，安装 ngrok 并执行：ngrok http 11434 --host-header=\"localhost:11434\"",
+  "复制 ngrok 生成的转发 URL（如 https://b377-82-132-216-51.ngrok-free.app）",
+  "在 Enchanted 应用设置中填写该服务器端点，即可开始对话"
+ ],
+ "summary": "Enchanted 是一个面向 Apple 设备的开源聊天应用，让你通过 Ollama 连接自己托管的 Llama 2、Mistral 等语言模型。它提供类似 ChatGPT 的界面，支持语音、图片和 Markdown，对话记录保存在本机。适合已部署 Ollama 服务、希望在 iPhone、Mac 或 Vision Pro 上私密使用模型并注重数据安全的用户。",
+ "tagline": "连接自托管 Ollama 的 iOS/macOS 聊天应用"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将音频转写为文本并区分不同说话人的开发者、研究人员，以及处理会议记录、访谈等场景的普通用户。",
+ "date": "2026-10-21",
+ "features": [
+  "结合 Whisper ASR 与说话人分离，为转写句子标注说话人",
+  "使用 Demucs 提取人声，提升说话人嵌入准确度",
+  "通过 ctc-forced-aligner 校正时间戳，减少分离误差",
+  "利用 MarbleNet 进行 VAD 和分段，TitaNet 提取说话人嵌入",
+  "提供并行版本 diarize_parallel.py，在显存足够时加速处理",
+  "支持命令行参数调整 Whisper 模型、设备、语言等"
+ ],
+ "intro": "该项目将 OpenAI Whisper 的语音识别能力与说话人分离（diarization）技术结合，为音频转写结果中的每个句子标注说话人。它首先从音频中提取人声以提高说话人嵌入的准确性，然后使用 Whisper 生成转写，并通过 ctc-forced-aligner 校正时间戳。接着，音频经过 MarbleNet 进行语音活动检测（VAD）和分段以排除静音，再用 TitaNet 提取说话人嵌入，从而识别每个片段的说话人。最终结果与时间戳关联，并利用标点模型进行微调对齐。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Python >= 3.10，安装 FFMPEG 和 Cython",
+  "安装依赖：pip install -c constraints.txt -r requirements.txt",
+  "运行：python diarize.py -a AUDIO_FILE_NAME",
+  "若显存 >=10GB，可尝试并行版本：python diarize_parallel.py -a AUDIO_FILE_NAME"
+ ],
+ "summary": "这个项目把 OpenAI Whisper 的语音识别和说话人分离技术结合起来，能为转写出的每个句子标注是谁说的。它先提取人声、用 Whisper 转写并校正时间戳，再通过语音活动检测和说话人嵌入识别每段话的说话人。适合需要处理会议录音、访谈等多人对话音频，并希望得到带说话人标签文本的场景。",
+ "tagline": "基于 Whisper 的语音识别与说话人分离工具"
+}

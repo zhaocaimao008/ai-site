@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要在本地调试或开发 Kubernetes 微服务的后端开发者，以及希望让 AI 编码工具直接对接真实集群服务进行验证的团队。",
+ "date": "2026-10-21",
+ "features": [
+  "将本地进程接入集群目标 Pod，镜像其入站流量并转发出站流量",
+  "同步目标 Pod 的文件读写与环境变量",
+  "提供 VS Code 扩展、IntelliJ 插件和 CLI 三种入口",
+  "支持与 Claude Code、Cursor、Codex CLI、Gemini CLI 等 AI 编码工具配合使用",
+  "可通过配置禁用部分 Linux capabilities 以适配受限环境"
+ ],
+ "intro": "mirrord 让开发者本机上的进程接入一个正在运行的 Kubernetes 集群：代码仍在本地运行，但它的网络流量、文件读写和环境变量都通过集群中的目标 Pod 转发。这样无需部署就能拿到真实的集群上下文，几秒内得到接近部署后的反馈，也不会影响集群里其他人的使用。\n\n它提供 VS Code 扩展、IntelliJ 插件和 CLI 三种使用方式，访问集群时使用本机默认的 kubeconfig。README 还说明了它与 Claude Code、Cursor、Codex CLI、Gemini CLI 等 AI 编码工具的配合方式，让这些工具在生成代码后直接对着真实集群服务运行和验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：brew install metalbear-co/mirrord/mirrord，或执行 curl -fsSL https://raw.githubusercontent.com/metalbear-co/mirrord/main/scripts/install.sh | bash",
+  "确认本机 kubeconfig 可访问目标集群",
+  "运行 mirrord exec node app.js --target pod/my-pod，将本地进程接入指定 Pod",
+  "如需自定义配置，使用 mirrord exec -f mirrord.json node app.js --target pod/my-pod"
+ ],
+ "summary": "mirrord 解决的是本地开发代码难以对接真实 Kubernetes 环境的问题。它让本机进程借用集群中某个 Pod 的网络、文件和环境变量，从而在不部署的情况下用真实服务与数据调试代码，并支持在 VS Code、IntelliJ 和命令行中使用，也适用于让 AI 编码工具直接验证生成的代码。",
+ "tagline": "让本地进程像集群里的 Pod 一样运行"
+}

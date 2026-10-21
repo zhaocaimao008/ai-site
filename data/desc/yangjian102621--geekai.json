@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速搭建自有 AI 创作平台的开发者、内容创作者和企业团队，也适合需要运营管理后台的二次开发场景。",
+ "date": "2026-10-21",
+ "features": [
+  "集成 ChatGPT、Claude 等多款模型，支持角色扮演与流式对话",
+  "接入 MidJourney、DALL-E 等绘画引擎，支持文生图创作",
+  "支持 Suno 音乐生成以及 Luma、可灵等文本到视频能力",
+  "提供 AI 辅助思维导图，将复杂想法可视化",
+  "自带用户系统、积分充值、计费模式与管理后台",
+  "支持 Docker 部署和多种云存储对接"
+ ],
+ "intro": "GeekAI 是一套完整的 AI 创作平台开源方案，后端采用 Go + Gin + MySQL + Redis，前端使用 Vue3 + Element Plus + Vant，桌面和移动端均可适配。项目自带运营管理后台，支持注册登录、权限管理、积分充值和按次或包月计费等商业化功能。\n\n平台集成了对话、绘画、音乐、视频和思维导图等多种创作能力，可对接 ChatGPT、Claude、MidJourney、DALL-E、Suno、Luma 等模型与服务，并支持七牛云、阿里云 OSS、腾讯云 OSS、Minio 等云存储。部署方面提供 Docker 容器化方式，也支持私有化部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker 和 docker-compose",
+  "在项目根目录执行 docker-compose up -d 启动服务",
+  "参考官方文档完成后续配置与使用"
+ ],
+ "summary": "GeekAI 提供一套完整的 AI 创作平台开源方案，把对话、绘画、音乐、视频和思维导图等能力整合到同一套系统中，并附带用户管理、积分计费和运营后台。它适合想快速搭建自有 AI 创作工作台的开发者或团队，可通过 Docker 部署，也支持私有化部署和二次开发。",
+ "tagline": "开箱即用的 AI 多模态创作与运营平台"
+}

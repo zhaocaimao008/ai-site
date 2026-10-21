@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Zotero 管理文献、并希望在 Claude、ChatGPT、Cursor 等 AI 工具中直接检索和阅读论文的研究者与开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "按标题、作者、标签、合集、全文或语义检索文献",
+  "读取元数据、BibTeX、PDF 全文与页面范围，支持页面图像",
+  "在 PDF 上添加高亮、区域框和笔记，并提取已有标注",
+  "通过 DOI、URL、ISBN、BibTeX 或文件添加条目，管理合集与标签",
+  "支持本地 zotero.sqlite 读取与 Zotero Web API 写入",
+  "可选 Scite 引用统计与撤稿提醒"
+ ],
+ "intro": "Zotero MCP 通过 Model Context Protocol 把 Zotero 文献库连接到 Claude、ChatGPT、Cursor 等 AI 助手，让用户直接在对话中检索文献、阅读 PDF、做标注和整理条目。项目以 zotero-mcp-server 一个包提供三种接入方式：面向 MCP 客户端的 MCP server、面向有 shell 的 agent 的 zotero-cli 加 agent skill，以及 Zotero 内部的 Zotero Agent 聊天面板。\n\n基础安装覆盖检索、阅读、标注和写入；语义检索、PDF 页面图像、Scite 引用统计等较重功能以可选 extra 形式安装。本地模式下读取直接来自 zotero.sqlite，写入则通过运行中的 Zotero 或 Web API 完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：uv tool install zotero-mcp-server（或 pip install zotero-mcp-server）",
+  "在 Zotero 7+ 的 Settings → Advanced 中勾选允许其他应用与 Zotero 通信",
+  "运行 zotero-mcp setup 自动配置 Claude Desktop，或手动添加 mcpServers 配置",
+  "有 shell 的 agent 可运行 zotero-mcp install-skill 教它调用 zotero-cli",
+  "如需写入，在 Zotero 10+ 运行 zotero-mcp authorize-local 并选择 Always Allow"
+ ],
+ "summary": "Zotero MCP 解决的是文献管理工具与 AI 助手彼此割裂的问题：它把 Zotero 文献库通过 MCP 接入 Claude、ChatGPT、Cursor 等工具，让用户用对话完成检索、阅读 PDF、标注和整理条目。项目同时提供 MCP server、命令行加 agent skill、Zotero 内聊天面板三种用法，适合在写作或调研时希望边读论文边让 AI 协助的研究者。",
+ "tagline": "把 Zotero 文献库接入 Claude、ChatGPT 等 AI 助手"
+}

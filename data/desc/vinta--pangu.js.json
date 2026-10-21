@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合关注中文排版、希望改善网页或文本可读性的开发者与普通用户。",
+ "date": "2026-10-21",
+ "features": [
+  "自动在中日韩文字与半角英文、数字、符号之间插入空格",
+  "提供 JavaScript 库，支持浏览器和 Node.js 环境",
+  "提供命令行工具，可处理文本、文件或标准输入",
+  "Chrome 扩展可自动为浏览的网页添加空格",
+  "AI Spacing 功能使用设备端 Gemini Nano 模型进行语义判断"
+ ],
+ "intro": "pangu.js 是一个用于在中日韩文字（CJK）与半角英文、数字、符号之间自动插入空格的工具。它提供 JavaScript 库、命令行工具和 Chrome 扩展，帮助改善中文排版的可读性。\n\nChrome 扩展还包含 AI Spacing 功能，利用 Chrome 内置的 Prompt API 在设备端运行 Gemini Nano 模型，根据上下文语义判断符号的用法，从而更准确地决定是否添加空格。整个过程离线完成，数据不会离开本地。\n\n开发者可以通过 npm 安装库，在浏览器或 Node.js 环境中调用 spaceText、spaceNode 等方法处理文本或 DOM 节点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装库：npm install pangu --save-exact",
+  "在浏览器中导入：import pangu from 'pangu/browser';",
+  "使用 spaceText 处理文本：pangu.spaceText('當你凝視著bug，bug也凝視著你')",
+  "使用 spaceNode 处理 DOM 节点：pangu.spaceNode(document.getElementById('main'))",
+  "使用 CLI：pangu \"不能信任那些Terminal或Editor用白底的人\""
+ ],
+ "summary": "pangu.js 解决中文与英文、数字、符号混排时缺少空格导致的阅读不适。它提供 JavaScript 库、命令行工具和 Chrome 扩展，可自动在网页或文本中插入空格。Chrome 扩展还利用设备端 Gemini Nano 模型进行语义判断，处理如“18+”等歧义符号。适合关注中文排版质量的开发者和普通用户。",
+ "tagline": "在中英文之间自动插入空格的工具，支持浏览器扩展和 JavaScript 库。"
+}

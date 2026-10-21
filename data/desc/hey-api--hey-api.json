@@ -1,0 +1,18 @@
+{
+ "ai_related": false,
+ "audience": "需要从 OpenAPI 规范自动生成客户端 SDK 或验证代码的 TypeScript 和 Python 开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "将 OpenAPI 规范转换为 TypeScript 或 Python 代码",
+  "提供 20+ 插件，支持生成 SDK、Zod 模式、TanStack Query hooks、Pydantic 模型等",
+  "支持多种 HTTP 客户端，如 Fetch API、Axios、Angular、Next.js、Nuxt、HTTPX",
+  "生成的代码生产可用且可直接编译",
+  "可在任何 Node.js 22+ 环境中运行",
+  "高度可定制，通过插件扩展功能"
+ ],
+ "intro": "Hey API 是一个开源生态系统，用于将 API 规范（如 OpenAPI）自动转换为生产可用的代码。它包含多个包，核心是 TypeScript 代码生成器 openapi-ts 和 Python 代码生成器 openapi-python。\n\nopenapi-ts 支持 20 多个插件，可以生成 SDK、Zod 模式、TanStack Query hooks 等，并适配 Fetch API、Axios、Angular、Next.js、Nuxt 等多种 HTTP 客户端。openapi-python 则用于生成 Python SDK 和 Pydantic 模型。项目强调生成的代码可直接编译，并可在任何 Node.js 22+ 环境中运行。\n\n该项目适合需要从 API 规范自动生成客户端代码、减少手动编写样板代码的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Hey API 是一个代码生成工具，能把 OpenAPI 规范自动转换成 TypeScript 或 Python 的 SDK、验证器和数据模型。它通过插件系统支持多种 HTTP 客户端和常用库，适合希望减少手动编写 API 调用代码、保持前后端类型一致的开发者。",
+ "tagline": "将 OpenAPI 规范转换为生产级 SDK 和验证器的代码生成工具"
+}

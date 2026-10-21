@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速部署文本转语音服务的开发者，以及希望以 OpenAI 兼容接口集成 TTS 功能的应用。",
+ "date": "2026-10-21",
+ "features": [
+  "OpenAI 兼容的语音端点，支持多语言",
+  "多说话人混合与 SSML 支持",
+  "逐词或逐块时间戳字幕生成",
+  "音素端点：文本转音素或音素转音频",
+  "预构建多平台 Docker 镜像（CPU、NVIDIA、AMD）",
+  "可选集成 WebUI，支持长文本朗读"
+ ],
+ "intro": "Kokoro-FastAPI 是一个将 Kokoro-82M 文本转语音模型封装为 FastAPI 服务的项目，提供与 OpenAI 兼容的语音生成接口。它支持多语言（包括英语、西班牙语、法语、印地语、意大利语、日语、巴西葡萄牙语和中文），并可在 CPU、NVIDIA GPU、AMD GPU 以及 Apple Silicon 上运行。\n\n项目内置多说话人混合、SSML 支持、逐词或逐块时间戳字幕生成、音素端点以及可选的朗读 WebUI。用户可以通过 Docker 快速启动预构建镜像，或使用 uv 直接运行。此外，还支持通过 Inno Clone-Tuner 自定义语音包。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "CPU 运行：docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:latest",
+  "NVIDIA GPU 运行：docker run --gpus all -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-gpu:latest",
+  "AMD GPU 运行：docker run --device=/dev/kfd --device=/dev/dri -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-rocm:latest",
+  "使用 Docker Compose：git clone https://github.com/remsky/Kokoro-FastAPI.git && cd Kokoro-FastAPI/docker/gpu && docker compose up --build",
+  "直接运行（uv）：./start-cpu.sh 或 ./start-gpu.sh"
+ ],
+ "summary": "Kokoro-FastAPI 将 Kokoro-82M 文本转语音模型封装成兼容 OpenAI 接口的 FastAPI 服务，方便开发者快速集成语音生成能力。它支持多语言、多说话人、SSML 和时间戳字幕，并提供 CPU、NVIDIA、AMD 及 Apple Silicon 的预构建镜像。适合需要自建 TTS 服务或为应用添加语音功能的场景。",
+ "tagline": "基于 Kokoro-82M 的 Docker 化 TTS 服务，兼容 OpenAI 接口"
+}

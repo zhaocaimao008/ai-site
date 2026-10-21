@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要高效语音识别能力的开发者，尤其是使用 TPU 或 GPU 进行大规模音频转录的研究人员和工程师。",
+ "date": "2026-10-21",
+ "features": [
+  "在 TPU 上相比 PyTorch 实现提速超过 70 倍",
+  "支持 CPU、GPU 和 TPU 运行",
+  "提供 FlaxWhisperPipline 高级管道，简化使用",
+  "支持半精度（float16/bfloat16）推理以进一步加速",
+  "支持批处理（batching）将长音频分块并行转录",
+  "支持时间戳预测和语音翻译任务"
+ ],
+ "intro": "Whisper JAX 是 OpenAI Whisper 语音识别模型的 JAX 优化实现，基于 Hugging Face Transformers 的 Whisper 构建。相比 OpenAI 的 PyTorch 代码，它在 TPU 上运行速度可提升超过 70 倍，是目前最快的 Whisper 实现之一。\n\n该项目兼容 CPU、GPU 和 TPU，既可以独立运行，也可以作为推理端点部署。它提供了 FlaxWhisperPipline 高级接口，封装了预处理、后处理以及跨设备的数据并行，方便用户快速进行语音转文本任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 JAX（参考官方指南：https://github.com/google/jax#installation）",
+  "通过 pip 安装 Whisper JAX：pip install git+https://github.com/sanchit-gandhi/whisper-jax.git",
+  "导入并实例化管道：from whisper_jax import FlaxWhisperPipline; pipeline = FlaxWhisperPipline(\"openai/whisper-large-v2\")",
+  "首次调用管道进行转录（会触发 JIT 编译）：text = pipeline(\"audio.mp3\")",
+  "后续调用将使用缓存，速度大幅提升"
+ ],
+ "summary": "Whisper JAX 是 OpenAI Whisper 语音识别模型的 JAX 优化版本，旨在解决原始 PyTorch 实现在 TPU 上运行速度较慢的问题。它兼容 CPU、GPU 和 TPU，提供高级管道接口，支持半精度推理和批处理，适合需要快速转录大量音频的开发者，例如在云端 TPU 上处理长音频或构建实时语音转文本服务。",
+ "tagline": "基于 JAX 的 Whisper 语音识别加速实现"
+}

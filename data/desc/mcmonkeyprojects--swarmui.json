@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用统一 Web 界面进行 AI 图像、视频生成的普通用户，以及需要深入 ComfyUI 工作流的高级开发者。",
+ "date": "2026-10-21",
+ "features": [
+  "支持 Stable Diffusion、Flux 等 AI 图像模型生成",
+  "支持 Wan、LTX-2 等 AI 视频模型及部分音频模型",
+  "提供 Generate 标签页，内置图像编辑器、自动工作流生成和 Grid Generator",
+  "提供 Comfy Workflow 标签页，可访问原始 ComfyUI 工作流图",
+  "支持 Windows 和 Linux 安装，并提供 Google Colab、Runpod、Vast.ai 云端运行方式"
+ ],
+ "intro": "SwarmUI 是一个模块化的 AI 生成 Web 用户界面，原名 StableSwarmUI，使用 C# 开发。它支持 Stable Diffusion、Flux 等图像模型，以及 Wan、LTX-2 等视频模型和部分音频模型，并计划持续加入新模型。项目强调让高级工具易于使用，同时保持高性能和可扩展性。\n\n界面分为面向初学者的 Generate 标签页和面向高级用户的 Comfy Workflow 标签页。前者提供图像编辑器、自动工作流生成和 Grid Generator 等便捷功能，后者可直接操作 ComfyUI 原始工作流图。项目目前处于 Beta 阶段，官方推荐作为多数用户（包括新手和专家）的理想 UI。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows：下载 install-windows.bat 并运行，按页面提示完成安装",
+  "Linux：下载 install-linux.sh，执行 chmod +x install-linux.sh 后运行 ./install-linux.sh",
+  "手动安装：git clone https://github.com/mcmonkeyprojects/SwarmUI 并进入目录",
+  "Windows 手动启动：运行 launch-windows.bat；Linux 手动启动：运行 ./launch-linux.sh",
+  "浏览器打开 http://localhost:7801/Install 并按页面指引完成配置"
+ ],
+ "summary": "SwarmUI 是一个模块化的 AI 生成 Web 界面，把 Stable Diffusion、Flux 等图像模型和 Wan、LTX-2 等视频模型整合到同一套操作界面中。它既为新手提供简洁的 Generate 标签页，也为高级用户保留 ComfyUI 原始工作流入口，适合需要统一管理和调用多种生成模型的场景。",
+ "tagline": "模块化 AI 图像与视频生成 Web 界面"
+}

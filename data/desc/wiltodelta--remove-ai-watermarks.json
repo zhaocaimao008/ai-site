@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要处理自己生成的 AI 图像/视频、希望移除其中水印或元数据的开发者与普通用户。使用前请确保符合当地法律法规。",
+ "date": "2026-10-21",
+ "features": [
+  "识别图像和视频中的溯源信号与水印",
+  "移除已知的可见 AI 标记（如 Gemini 闪光水印、厂商文字标记）",
+  "通过扩散重生成或局部格式破坏干扰不可见像素水印",
+  "清除图像和视频中的 C2PA、EXIF、XMP、IPTC 等 AI 元数据",
+  "支持视频文件的溯源识别、元数据清理和可见标记移除",
+  "提供 Python 库、CLI 和 agent skill 多种使用方式"
+ ],
+ "intro": "该项目是一个 Python 库和命令行工具，用于移除自己生成的 AI 图像和视频中的溯源标记。它可以处理已知的可见标签（如 Google Gemini 的闪光水印和厂商文字标记）、通过局部格式破坏或扩散重生成来干扰不可见像素水印，以及清除 C2PA、EXIF、XMP、IPTC 等 AI 元数据。\n\n视频支持包括溯源识别、完整的可见标记与元数据清理、目录批处理，以及针对 Sora、Veo、Seedance、Doubao 等平台可见标记的移除。项目还提供 agent skill，可集成到 Claude Code、Codex、Cursor 等智能体中。\n\n注意：这是一个关于 AI 溯源信号的研究项目，仅限在您拥有的内容上合法使用。部分司法管辖区（包括中国）限制移除 AI 标签或提供此类工具，使用前请查阅相关法律说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装默认 CLI：uv tool install remove-ai-watermarks",
+  "检查图像溯源信息：remove-ai-watermarks identify image.png",
+  "安装可见水印移除依赖：uv tool install --force \"remove-ai-watermarks[visible]\"",
+  "移除可见标记和 AI 元数据：remove-ai-watermarks visible image.png -o clean.png",
+  "仅清除元数据：remove-ai-watermarks metadata image.png --remove -o clean.png"
+ ],
+ "summary": "这个项目提供了一套工具，用于移除自己生成的 AI 图像和视频中的可见水印、不可见像素水印以及 C2PA、EXIF 等溯源元数据。它支持 Gemini、Sora、Veo 等常见生成平台的标记，并以 Python 库、命令行和 agent skill 的形式提供。适合需要清理自有 AI 内容标记的开发者，但使用时需注意当地法律对移除 AI 标签的限制。",
+ "tagline": "移除AI生成内容中的可见与不可见水印及溯源元数据"
+}

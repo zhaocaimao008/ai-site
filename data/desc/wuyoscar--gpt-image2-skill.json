@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 GPT Image 生成或编辑图片的开发者、设计师，以及希望在 Claude Code、Codex 等 agent 中集成图像能力的用户。",
+ "date": "2026-10-21",
+ "features": [
+  "163 条编号提示词，覆盖 31 个分类，附示例图",
+  "两个 Agent Skill：图像生成/编辑与从图片提取提示词",
+  "Python CLI，支持通过 -i 附加参考图进行生成或编辑",
+  "支持 GPT Image 2 与 2.5 模型，含 2K 高分辨率示例",
+  "中英文双语文档"
+ ],
+ "intro": "这个仓库围绕 OpenAI 的 GPT Image 2 和 2.5 图像模型，收集了 163 条编号提示词，分布在 31 个分类中，并附有部分生成示例图。提示词覆盖技术插画、等距场景、研究配图等方向，可以直接参考或改写。\n\n除了提示词画廊，项目还提供两个 Agent Skill：一个负责图像生成与编辑，另一个负责从参考图中反推提示词，可在 Claude Code、Codex 等支持 skill 的 agent 运行时中使用。同时附带一个 Python CLI，用于调用图像生成和编辑接口。\n\nREADME 建议的工作方式是尽量精简提示词、提供清晰的参考图，例如把 PDF 页面导出为 PNG 后用 -i 参数附加。文档提供英文和中文两个版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认 Python ≥ 3.11 环境",
+  "参考 README 的 Install 章节安装 CLI",
+  "准备参考图：可将 PDF 页面导出为 PNG、WebP 或 JPG",
+  "使用 CLI 并通过 -i 参数附加参考图进行生成或编辑"
+ ],
+ "summary": "这个项目面向使用 GPT Image 2/2.5 生成或编辑图片的人，提供一套分类整理的提示词画廊，并附带两个 Agent Skill 和一个 Python CLI。你可以从中找到技术插画、等距场景等方向的提示词参考，也可以在 Claude Code、Codex 等 agent 中直接调用图像生成、编辑和从参考图反推提示词的能力，适合需要稳定产出图像或搭建图像工作流的开发者与设计人员。",
+ "tagline": "GPT Image 2/2.5 提示词库、Agent Skill 与命令行工具"
+}
