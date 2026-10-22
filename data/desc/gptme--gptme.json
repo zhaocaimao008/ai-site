@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合习惯在终端工作的开发者，以及希望自托管、可定制个人 AI 智能体的技术用户。",
+ "date": "2026-10-22",
+ "features": [
+  "终端内运行的 AI 智能体，支持交互式 CLI 与 Textual TUI",
+  "内置 shell、Python、网页浏览、视觉等本地工具",
+  "支持 Anthropic、OpenAI、Google、DeepSeek、OpenRouter 及本地 Ollama 等多种模型来源",
+  "通过插件、技能和 Lessons 系统扩展能力",
+  "支持 MCP 与 ACP 集成，可构建持续运行的自主智能体",
+  "提供 Docker、Wasmtime 等沙箱执行与防护机制"
+ ],
+ "intro": "gptme 是一个运行在终端中的个人 AI 智能体，只要有终端就能使用，包括本地笔记本、ssh 会话、tmux、无头服务器和 CI 流水线。它不绑定单一模型提供商，支持 Anthropic、OpenAI、Google、DeepSeek、OpenRouter 等，也可以通过 Ollama 或任意 OpenAI 兼容服务在本地运行。\n\n项目自带 shell、Python、网页浏览、视觉等工具，既能作为编码助手，也适用于各类知识工作。它提供插件、技能与 Lessons 扩展机制，并支持 MCP 与 ACP 集成，还可以基于模板搭建持续运行的自主智能体。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 gptme：pipx install gptme",
+  "如需终端界面，安装 TUI 扩展：pipx install 'gptme[tui]'",
+  "配置所选模型提供商的 API Key 或本地 Ollama 服务",
+  "在终端运行 gptme 开始对话"
+ ],
+ "summary": "gptme 是一个在终端中运行的个人 AI 智能体，能调用 shell、Python、网页浏览等本地工具完成编码和知识工作任务。它不绑定模型提供商，既可用云端 API，也可通过 Ollama 本地运行，并支持插件、MCP 集成和自主智能体模板，适合习惯命令行、希望自托管和定制智能体的开发者。",
+ "tagline": "运行在终端里的个人 AI 智能体，可写代码、操作终端、浏览网页"
+}

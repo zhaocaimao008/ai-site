@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时运行多个 AI 编码代理、希望会话持久化并能远程或移动端查看的开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "以 tmux 会话运行代理，关闭终端或断开 SSH 后仍持续运行",
+  "支持 Claude Code、OpenCode、Codex CLI、Gemini CLI 等多种代理工具",
+  "提供 TUI、Web 仪表盘、CLI 和 HTTP API 多种操作界面",
+  "支持 git worktree 与多仓库工作区，可在不同分支并行运行代理",
+  "支持 Docker、Podman 和 Apple Containers 沙箱隔离",
+  "包含代理状态检测、通知、diff 审查和自定义代理命令"
+ ],
+ "intro": "Agent of Empires（简称 AoE）是一个面向 AI 编码代理的会话管理器，支持 Linux 和 macOS。它把每个代理放进独立的 tmux 会话中运行，因此关闭 TUI、断开 SSH 或终端崩溃后，代理仍会在后台继续工作，重新打开 aoe 即可回到原来的状态。\n\n它支持 Claude Code、OpenCode、Codex CLI、Gemini CLI、Mistral Vibe、Copilot CLI、Factory Droid 等多种代理工具，并可在不同分支上并行运行多个会话。除了 TUI 和 CLI，它还提供 Web 仪表盘和 HTTP API，方便在手机浏览器中查看和操作。\n\n项目还提供 git worktree 与多仓库工作区管理、Docker/Podman/Apple Containers 沙箱隔离、状态检测与通知、diff 审查等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 tmux（Linux 或 macOS 必需）",
+  "brew install aoe 或 curl -fsSL https://raw.githubusercontent.com/agent-of-empires/agent-of-empires/main/scripts/install.sh | bash",
+  "运行 aoe 启动 TUI（按 ? 查看帮助）",
+  "运行 aoe add --cmd claude 创建运行 Claude Code 的会话",
+  "运行 aoe serve 启动 Web 仪表盘"
+ ],
+ "summary": "这个项目解决的是多个 AI 编码代理同时运行时的管理问题：每个代理放在独立的 tmux 会话里，关掉终端或断开 SSH 也不会中断，重新打开就能继续。它适合需要在不同分支上并行跑 Claude Code、Codex CLI 等代理，并希望通过 TUI、浏览器或手机查看进度和审查改动的开发者。",
+ "tagline": "在 tmux 会话中并行管理多个 AI 编码代理"
+}

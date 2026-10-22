@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想用 AI 编程助手动手学习 Python、并希望获得客观验证反馈的开发者与学习者；也适合需要任务模板和验证流程的工程团队。",
+ "date": "2026-10-22",
+ "features": [
+  "挑战课程：每个课程有 TASK.md 任务契约，用 verify.py 逐项检查并输出 claim code",
+  "AI 助手驱动：支持 Claude Code、Codex、Cursor、GitHub Copilot 等能执行命令的编程助手",
+  "学习路径：将课程组织成徽章路线，覆盖基础、Web/API、自动化、AI agents",
+  "可运行示例：提供带失败 starter 和已验证 solution 的本地项目",
+  "模板与指南：包含任务契约、计划、评审、IDE 规则和验证记录模板",
+  "审核资料目录：维护者审核的官方文档、标准和项目来源，附级别与风险说明"
+ ],
+ "intro": "FlyPython 是一个双语 Python 学习仓库，把 AI 编程助手作为工具，让学习者在真实项目中练习 Python。每个课程文件夹包含 TASK.md 任务契约和 verify.py 验证脚本，你只需让助手写代码，由 verify.py 判断是否完成。\n\n仓库提供挑战课程、学习路径、可运行示例、任务模板和经过审核的官方资料目录，覆盖 Python 基础、Web 与 API、自动化、AI agents 等方向。它强调从“助手写了代码”推进到“用户结果被验证”，适合希望用 AI 辅助动手实践并得到客观反馈的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备一个能运行命令并访问网络的编程助手（如 Claude Code、Codex、Cursor、GitHub Copilot）",
+  "在助手中安装 FlyPython Skill：https://flypython.com/skills/flypython/SKILL.md",
+  "对助手说：Read https://flypython.com/skills/flypython/SKILL.md and start the FlyPython course `da-eda`",
+  "在课程文件夹中运行 python verify.py 检查进度，完成反思题后运行 python verify.py --attest l01"
+ ],
+ "summary": "FlyPython 是一个面向 Python 学习者的开源课程仓库，核心思路是让 AI 编程助手负责写代码，由 verify.py 客观判定任务是否完成。每个课程包含任务契约和验证脚本，适合想通过真实项目练习 Python、并希望得到明确反馈的开发者。仓库还提供学习路径、可运行示例、任务模板和审核过的资料目录，覆盖基础、Web/API、自动化和 AI agents 等方向。",
+ "tagline": "用 AI 编程助手完成可验证的 Python 挑战课程"
+}

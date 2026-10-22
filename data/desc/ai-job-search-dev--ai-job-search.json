@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合正在求职、希望用 AI 辅助批量评估职位并定制申请材料的开发者或技术从业者，尤其是愿意使用 Claude Code 和 LaTeX 的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "通过 /setup 从文档或对话中建立个人资料",
+  "通过 /scrape 搜索多个职位门户并按匹配度排序",
+  "通过 /apply 评估职位、定制 CV 和求职信，并由审阅代理提出修改意见",
+  "使用 LaTeX 生成 CV 和求职信，支持 ATS 可解析性检查",
+  "提供 /interview 面试准备流程",
+  "支持通过 /add-portal 扩展新的职位门户"
+ ],
+ "intro": "这是一个构建在 Claude Code 之上的求职申请框架。Fork 仓库并填写个人资料后，Claude 可以评估职位匹配度、定制 CV、撰写求职信，并帮助准备面试。核心工作流（自我画像、匹配评估、起草-审阅流水线）不依赖特定语言和国家，但内置的职位门户搜索技能主要面向丹麦市场。\n\n项目将求职过程拆分为 /setup、/scrape、/apply、/interview 等命令，每个命令对应一个阶段。CV 使用 LaTeX 编译，求职信同样通过 LaTeX 生成，并包含 ATS 可解析性检查。作者本人用这套流程完成了求职并入职 AI 工程师岗位。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Fork 并克隆仓库：gh repo fork MadsLorentzen/ai-job-search --clone && cd ai-job-search",
+  "安装职位搜索工具：python3 tools/install_portal_clis.py",
+  "启动 Claude Code 并运行 /setup 填写个人资料",
+  "运行 /scrape 搜索匹配职位",
+  "运行 /apply <职位URL> 生成定制申请材料"
+ ],
+ "summary": "这个项目把 Claude Code 变成一个求职申请助手，用命令式工作流完成从建立个人资料、搜索职位、评估匹配度，到定制 CV 和求职信、准备面试的完整流程。它适合希望系统化处理大量职位申请的技术求职者，尤其适合愿意使用 LaTeX 和 Claude Code 的用户。内置职位门户主要面向丹麦市场，但核心流程可适配其他地区。",
+ "tagline": "基于 Claude Code 的求职申请工作流框架"
+}

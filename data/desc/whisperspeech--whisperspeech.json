@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本转语音感兴趣的开发者和研究者，以及需要开源、可修改 TTS 系统的项目。",
+ "date": "2026-10-22",
+ "features": [
+  "基于 Whisper 逆向工程的文本转语音系统",
+  "两阶段 token 流水线：语义 token 和声学 token",
+  "支持语音克隆，可克隆特定说话人声音",
+  "多语言支持（英语、波兰语、法语等）",
+  "在消费级 GPU 上实现 12 倍实时生成速度",
+  "提供 Colab 笔记本快速体验"
+ ],
+ "intro": "WhisperSpeech 是一个开源的文本转语音（TTS）系统，通过“逆向”OpenAI Whisper 构建。其目标是成为语音领域的 Stable Diffusion——强大、可修改且商业安全。所有代码采用 Apache-2.0 / MIT 许可，模型仅使用 properly licensed 数据训练。当前版本为英语（LibreLight），多语言版本即将推出。\n\n项目采用两阶段、基于 token 的流水线：语义阶段使用 Whisper 将文本转换为语义 token，声学阶段使用 EnCodec 对波形进行 token 化（1.5 kbps），声码器使用 Vocos 生成高保真音频。社区基准测试显示，在 RTX 4090 上使用 torch.compile 和 KV-caching 可实现 12 倍实时速度。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开 Colab 笔记本在线体验：https://colab.research.google.com/drive/1xxGlTbwBmaY6GKA24strRixTXGBOlyiw",
+  "或本地运行 notebook",
+  "从 Hugging Face 下载预训练模型：https://huggingface.co/collabora/whisperspeech",
+  "从 Hugging Face 下载转换后的数据集：https://huggingface.co/datasets/collabora/whisperspeech"
+ ],
+ "summary": "WhisperSpeech 是一个开源的文本转语音系统，通过逆向 OpenAI Whisper 构建，旨在提供强大、可修改且商业安全的语音合成方案。它采用基于 token 的两阶段流水线，支持语音克隆和多语言，适合需要自定义 TTS 的开发者与研究场景。",
+ "tagline": "开源文本转语音系统，基于Whisper逆向工程"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用多个 AI 编码代理、希望统一管理会话并让代理协作的开发者，也适合需要自托管或移动端访问的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "统一界面运行十九种内置 AI 编码代理，并支持任意 ACP 代理接入",
+  "导入、搜索和恢复各代理的本地会话历史，并可在代理之间转交",
+  "通过 @ 在代理之间委派任务，或将待办排队到独立 worktree 中自动执行",
+  "提供桌面应用、自托管服务器和 Docker 部署方式",
+  "支持 iOS、Android 移动端，并可接入 Telegram、Lark、微信"
+ ],
+ "intro": "Codeg 是一个多代理 AI 编码工作区。它把 Claude Code、Codex、OpenCode、Pi、Grok Build 等代理的会话聚合到同一个界面里，以结构化的对话形式呈现，而不是终端输出。项目内置十九种代理，也支持任何 ACP 代理接入。\n\n除了统一界面，Codeg 还能导入、搜索并恢复各代理保存在磁盘上的历史会话，并把会话交给另一个代理继续。代理之间可以通过 @ 委派任务，也可以把待办排入队列，让它们在各自的 worktree 中无人值守地运行。\n\nCodeg 提供桌面应用、自托管服务器和 Docker 三种部署方式，同时覆盖 iPhone、iPad 和 Android，并可接入 Telegram、Lark 或微信。项目用 Rust 编写，采用 Apache-2.0 协议。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载并安装 Codeg 桌面应用",
+  "或参考文档 docs.codeg.app 使用自托管服务器或 Docker 方式部署",
+  "在界面中接入已有的 AI 编码代理，导入其本地会话历史",
+  "用 @ 委派任务给其他代理，或将待办排入队列在独立 worktree 中运行"
+ ],
+ "summary": "Codeg 解决的是多个 AI 编码代理各自为战、会话分散的问题。它把 Claude Code、Codex、OpenCode 等代理的会话汇总到同一界面，支持导入和恢复历史记录，并能在代理之间转交任务、通过 @ 委派或排队让代理在独立 worktree 中自动执行。适合同时使用多种编码代理、需要统一管理和协作的开发者。",
+ "tagline": "把多个 AI 编码代理放进同一个协作工作区"
+}

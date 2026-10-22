@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频生成的研究人员、开发者，以及希望利用文本到图像模型快速生成或编辑视频的创作者。",
+ "date": "2026-10-22",
+ "features": [
+  "零样本文本到视频生成，无需额外训练",
+  "支持姿态、边缘、深度等条件控制视频生成",
+  "Video Instruct-Pix2Pix 指令引导视频编辑",
+  "可加载任意 Stable Diffusion 基础模型或 DreamBooth 模型",
+  "集成 Token Merging，最低 7GB 显存即可运行",
+  "生成视频长度可调，支持任意长度"
+ ],
+ "intro": "Text2Video-Zero 是 ICCV 2023 Oral 论文的官方实现，提出一种无需额外训练即可利用预训练文本到图像扩散模型生成视频的方法。项目通过运动场和跨帧注意力等机制，让生成的视频在时间上保持连贯，并支持文本、姿态、边缘等多种条件控制。\n\n该仓库提供完整的推理代码，支持文本到视频生成、基于姿态或边缘控制的视频生成，以及 Video Instruct-Pix2Pix 指令引导的视频编辑。用户可以通过 Python API 调用，并选择不同的 Stable Diffusion 基础模型或 DreamBooth 模型。项目还集成了 Token Merging 以降低显存需求，最低可在 7GB 显存下运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Picsart-AI-Research/Text2Video-Zero.git && cd Text2Video-Zero/",
+  "创建虚拟环境并安装依赖：virtualenv --system-site-packages -p python3.9 venv && source venv/bin/activate && pip install -r requirements.txt",
+  "创建模型实例：import torch; from model import Model; model = Model(device=\"cuda\", dtype=torch.float16)",
+  "运行文本到视频生成：prompt = \"A horse galloping on a street\"; params = {\"t0\": 44, \"t1\": 47, \"motion_field_strength_x\": 12, \"motion_field_strength_y\": 12, \"video_length\": 8}; out_path, fps = f\"./text2video_{prompt.replace(' ','_')}.mp4\", 4; model.process_text2video(prompt, fps=fps, path=out_path, **params)"
+ ],
+ "summary": "Text2Video-Zero 是一个基于预训练文本到图像扩散模型的零样本视频生成项目。它无需额外训练，就能根据文本提示生成时间连贯的视频，并支持姿态、边缘等条件控制以及指令引导的视频编辑。适合研究视频生成的研究者或想快速体验文本生成视频的开发者。",
+ "tagline": "零样本视频生成：用文本到图像扩散模型生成视频"
+}

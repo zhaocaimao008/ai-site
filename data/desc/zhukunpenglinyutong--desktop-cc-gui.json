@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用 Claude Code、Codex CLI 等命令行 AI 编码工具，但希望获得图形界面、统一管理多个引擎的开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "在一个 GUI 中切换 Claude Code、Codex CLI、Kimi CLI、DeepSeek Harness 等多个 AI 编码引擎",
+  "实时展示流式输出、思考轨迹和工具调用，并显示 token 用量与上下文窗口",
+  "支持会话历史与恢复、中断、消息队列、图片附件和模型选择",
+  "提供权限模式（auto、manual、plan、bypass 等，因引擎而异）与供应商/通道切换",
+  "支持 `/` 斜杠命令与 skills、`@` 文件提及，以及 `/new`、`/clear`、`/compact` 等原生命令",
+  "跨平台运行于 macOS、Windows 和 Linux，设置与状态本地持久化"
+ ],
+ "intro": "ccgui 是一个开源的多引擎 AI 编码桌面客户端，用 Tauri 2 + React 18 + TypeScript + Rust 构建，支持 macOS、Windows 和 Linux。它把 Claude Code、Codex CLI、Kimi CLI、Grok CLI、Pi CLI、OMP CLI、DeepSeek Harness、Antigravity、OpenCode、Qoder、MiniMax Code 等命令行 AI 编码运行时统一到一个图形界面里，让用户不必再面对终端。\n\n每个引擎都通过 Rust 后端中独立的协议适配器接入，流式事件、会话历史和供应商通道均为原生处理，而不是从终端屏幕抓取。界面中可以实时查看流式输出、思考过程和工具调用，引擎上报时也会显示 token 用量。设置与状态保存在本地，发送给 AI 供应商的内容遵循为该 CLI 配置的通道边界。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "ccgui 是一个桌面客户端，把 Claude Code、Codex CLI、Kimi CLI、DeepSeek Harness 等多个命令行 AI 编码引擎集中到同一个图形界面中。它适合不想在终端里操作、又需要在不同 AI 编码工具之间切换的开发者，可以在界面里查看流式输出、思考过程和工具调用，并管理会话与权限模式。",
+ "tagline": "把多个命令行 AI 编码引擎整合进一个桌面图形界面"
+}

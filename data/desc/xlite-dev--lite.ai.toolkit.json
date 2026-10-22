@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 C++ 项目中集成视觉 AI 模型的开发者，以及希望用轻量推理后端部署模型的工程人员。",
+ "date": "2026-10-22",
+ "features": [
+  "支持 100+ AI 模型，涵盖检测、分割、人脸、抠图等任务",
+  "默认仅依赖 OpenCV 和 ONNXRuntime，依赖少",
+  "统一 API 风格，如 lite::cv::Type::Class",
+  "支持 MNN、TNN、NCNN、TensorRT 等多种推理后端",
+  "提供预编译库和模型下载，附带 C++ 示例代码"
+ ],
+ "intro": "Lite.Ai.ToolKit 是一个用 C++ 编写的轻量级 AI 工具包，集成了 100 多个常用 AI 模型，覆盖目标检测、人脸检测与识别、图像分割、抠图、Stable-Diffusion、Face-Fusion 等任务。项目默认只依赖 OpenCV 和 ONNXRuntime，也支持 MNN、TNN、NCNN 和 TensorRT 等推理后端。\n\n代码风格统一，调用方式类似 lite::cv::Type::Class，便于快速集成到现有 C++ 工程。项目提供预编译库和模型仓库，并给出 YOLOv5 等示例代码，帮助开发者在 Linux 环境下完成构建和测试。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone --depth=1 https://github.com/xlite-dev/lite.ai.toolkit.git",
+  "进入目录并构建：cd lite.ai.toolkit && sh ./build.sh",
+  "下载预编译库和测试资源（可选）：wget ${LITE_AI_TAG_URL}/lite-ort1.17.1+ocv4.9.0+ffmpeg4.2.2-linux-x86_64.tgz",
+  "下载 YOLOv5 模型和测试图片：wget ${LITE_AI_TAG_URL}/yolov5s.onnx && wget ${LITE_AI_TAG_URL}/test_yolov5.jpg",
+  "参考示例代码，使用 lite::cv::detection::YoloV5 进行目标检测"
+ ],
+ "summary": "Lite.Ai.ToolKit 是一个 C++ 轻量级 AI 工具包，把目标检测、人脸识别、图像分割、抠图等 100 多个模型封装成统一接口，默认只依赖 OpenCV 和 ONNXRuntime，也支持 MNN、TensorRT 等后端。适合需要在 C++ 工程中快速集成视觉模型、或希望用轻量推理框架部署模型的开发者。",
+ "tagline": "轻量 C++ AI 工具包，集成 100+ 模型"
+}

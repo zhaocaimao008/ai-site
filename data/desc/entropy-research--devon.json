@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 辅助编码的开发者，尤其是 Python 项目开发者；也适合愿意参与开源社区共建的技术爱好者。",
+ "date": "2026-10-22",
+ "features": [
+  "多文件编辑：在一次任务中修改多个文件",
+  "代码库探索：帮助理解项目结构和代码关系",
+  "编写测试与修复 bug：自动生成测试用例并定位问题",
+  "支持多种模型：Claude 3.5 Sonnet、GPT-4o、Groq llama3-70b 等",
+  "提供图形界面和终端界面两种交互方式",
+  "实验性本地模型支持（通过 Ollama 运行 deepseek-coder）"
+ ],
+ "intro": "Devon 是一个开源的 AI 结对编程助手，旨在帮助开发者更高效地编写和修改代码。它通过连接大语言模型（如 Claude、GPT-4o、Groq llama3 等），在项目目录中执行多文件编辑、代码库探索、编写测试和修复 bug 等任务。\n\nDevon 提供两种使用界面：基于 Electron 的图形界面（通过 npx devon-ui 启动）和终端界面（devon-tui）。它支持 Anthropic、OpenAI 和 Groq 的 API，也实验性地支持通过 Ollama 运行本地模型（如 deepseek-coder），但本地模式目前尚不成熟。\n\n项目仍处于早期阶段，主要针对 Python 语言优化，对其他语言的支持有限。它适合希望借助 AI 提升编码效率的开发者，尤其是那些愿意尝试新工具并参与社区共建的用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 pipx 并确保其应用目录在 PATH 中：pipx ensurepath",
+  "安装后端：pipx install devon_agent",
+  "安装并启动图形界面：npx devon-ui",
+  "或安装终端界面：npm install -g devon-tui，然后设置 API 密钥（如 export ANTHROPIC_API_KEY=sk-xxx），在项目目录运行 devon-tui"
+ ],
+ "summary": "Devon 是一个开源的 AI 结对编程助手，能连接 Claude、GPT-4o 等大模型，在项目目录中执行多文件编辑、代码库探索、写测试和修 bug 等任务。它提供图形界面和终端界面，适合 Python 开发者用来提升编码效率，也适合想尝试 AI 编程工具的技术爱好者。项目仍处早期，本地模型支持尚不成熟。",
+ "tagline": "开源 AI 结对编程助手，支持多文件编辑与代码库探索"
+}

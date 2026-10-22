@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望不写后端就为数据库暴露 API 的开发者，以及需要让 AI 客户端安全读取数据库数据的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "在 PostgreSQL 和 MySQL 上即时生成 REST CRUD 接口",
+  "支持自定义 SQL 查询路由",
+  "内置认证与 ACL 访问控制",
+  "提供只读 MCP 端点，供 AI 客户端访问数据库",
+  "单实例可服务多个数据库（注册表模式或 allowed_databases）",
+  "查询模板支持 sqlVal、sqlList、ident 参数绑定"
+ ],
+ "intro": "pRESTd 是一个用 Go 编写的生产级 API 服务，可以直接在已有的或新建的 SQL 数据库上生成 REST 接口和 MCP（Model Context Protocol）接口，无需手写后端。默认支持 PostgreSQL 9.5+，从 v2.5.0 起原生支持 MySQL 8.0.19+，通过 engine = \"mysql\" 切换。\n\n它提供 CRUD 路由、自定义 SQL 查询路由、认证与 ACL 控制，以及只读的 MCP 端点，可用于让 Cursor、Claude 等 AI 客户端访问数据库。项目还支持在一个实例中服务多个数据库，可通过注册表模式或 allowed_databases 配置。\n\n在自定义查询中，pRESTd 提供 sqlVal、sqlList、ident 等模板辅助函数，把参数以绑定方式传给数据库，避免拼接 SQL 带来的注入风险。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考官方文档 Get pREST 页面，用 Docker、Homebrew 或 Go 安装并运行 pREST",
+  "配置数据库连接，例如设置 PREST_PG_URL 或 pg.* / DATABASE_URL",
+  "调用 GET /{database}/{schema}/{table} 访问表数据",
+  "使用 MySQL 时设置 engine = \"mysql\" 和 mysql:// 连接 URL，或导出 PREST_ENGINE=mysql 与 PREST_DB_URL"
+ ],
+ "summary": "pRESTd 面向已有或新建的 PostgreSQL、MySQL 数据库，自动生成 REST 接口和只读 MCP 接口，省去手写后端的工作。它覆盖增删改查、自定义 SQL 路由、认证与 ACL，并支持一个实例服务多个数据库，适合想快速给数据库加 API 或让 AI 客户端读取数据的场景。",
+ "tagline": "为现有 SQL 数据库即时生成 REST 与 MCP API"
+}

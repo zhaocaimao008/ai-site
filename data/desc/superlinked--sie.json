@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在自有云环境中统一部署多种开源模型推理服务的开发者与 MLOps 团队，尤其是构建 RAG、语义搜索或 Agent 应用的场景。",
+ "date": "2026-10-22",
+ "features": [
+  "OpenAI 兼容 API，支持 /v1/embeddings、/v1/chat/completions、/v1/completions、/v1/responses 等端点",
+  "预配置模型目录，覆盖嵌入、检索、重排序、OCR、结构化输出、分类、内容安全、翻译、视觉和语音等任务",
+  "支持多模型同时服务，按需加载并采用 LRU 淘汰策略",
+  "提供 Kubernetes 和 Helm 部署配置，含负载均衡网关、KEDA 自动扩缩容和 Grafana 仪表盘",
+  "可与 LangChain、LlamaIndex、Haystack、DSPy、CrewAI 及主流向量数据库集成"
+ ],
+ "intro": "SIE（Superlinked Inference Engine）是一个开源的推理服务器与生产集群，目标是用一套系统承载 Agent 所需的各类模型推理，包括搜索检索、文档转 Markdown、结构化输出、内容安全、Agent 循环、翻译、语音转写和视觉理解等任务。它提供 OpenAI 兼容的 API 端点，支持按需加载模型并同时服务多个模型，内置预配置的模型目录，覆盖 Stella、SPLADE、Qwen3、GLiNER、SigLIP 等 100 多个模型。\n\n项目附带 Kubernetes 与 Helm 部署配置，包含负载均衡网关、KEDA 自动扩缩容和 Grafana 仪表盘，并可与 LangChain、LlamaIndex、Haystack、DSPy、CrewAI 以及 Chroma、Qdrant、Weaviate、LanceDB 等向量数据库集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS（Apple Silicon）或 Linux 原生安装：pip install \"sie-server[local]\" && sie-server serve",
+  "Linux NVIDIA GPU 使用 Docker：docker run --gpus all -p 8080:8080 -v sie-hf-cache:/app/.cache/huggingface ghcr.io/superlinked/sie-server:latest-cuda12-default",
+  "Linux CPU 使用 Docker：docker run -p 8080:8080 -v sie-hf-cache:/app/.cache/huggingface ghcr.io/superlinked/sie-server:latest-cpu",
+  "通过 SDK 传入模型名（即模型配置中的 sie_id）调用对应任务接口"
+ ],
+ "summary": "SIE 是一个开源的推理引擎，把 Agent 常用的搜索检索、文档解析、结构化输出、内容安全、翻译、语音和视觉等模型推理集中到一个自托管集群中，通过 OpenAI 兼容 API 对外提供服务。它适合需要在自有云环境里统一部署多种开源模型、避免为每个任务单独维护模型服务的开发者和团队。",
+ "tagline": "自托管推理引擎，一个集群服务所有开源模型"
+}

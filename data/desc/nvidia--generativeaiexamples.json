@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望利用 NVIDIA 加速基础设施和微服务构建生成式 AI 应用的开发者，尤其是对 RAG、智能体工作流和模型微调感兴趣的工程师。",
+ "date": "2026-10-22",
+ "features": [
+  "提供 RAG 管道的参考实现，包括基础 RAG 和知识图谱 RAG",
+  "展示 Data Flywheel 工作流，涵盖工具调用微调、推理、评估和防护",
+  "集成 LangChain、LlamaIndex、Haystack 等开发框架的 Notebook 示例",
+  "包含 Vision NIM 工作流，如视觉语言模型监控、图像搜索和文本提取",
+  "使用 NeMo 微服务进行模型定制、评估和防护",
+  "支持通过 Docker Compose 快速部署示例应用"
+ ],
+ "intro": "该项目是 NVIDIA 提供的生成式 AI 参考工作流集合，面向希望集成 NVIDIA 软件生态的开发者，帮助加速生成式 AI 系统的开发。内容涵盖 RAG 管道、智能体工作流、模型微调等场景，并提供了与 LangChain、LlamaIndex、Haystack 等流行框架的集成示例。\n\n仓库包含大量 Jupyter Notebook 和示例应用，展示了如何使用 NVIDIA NIM 微服务、NeMo 微服务、TensorRT 等组件构建和优化 AI 应用。例如，Data Flywheel 教程演示了工具调用微调与评估，RAG 部分提供了基础 RAG 管道和知识图谱 RAG 的实现。\n\n通过 Docker Compose 可以快速启动一个基础的 RAG 管道示例，适合开发者学习和实验。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "获取 NVIDIA API key：访问 NVIDIA API Catalog，选择模型并点击 Get API Key，然后运行 export NVIDIA_API_KEY=nvapi-...",
+  "克隆仓库：git clone https://github.com/nvidia/GenerativeAIExamples.git",
+  "构建并运行基础 RAG 管道：cd GenerativeAIExamples/RAG/examples/basic_rag/langchain/ && docker compose up -d --build",
+  "访问 https://localhost:8090/ 在示例 RAG Playground 中提交查询",
+  "停止容器：docker compose down"
+ ],
+ "summary": "这个项目是 NVIDIA 官方提供的生成式 AI 参考工作流集合，帮助开发者将 NVIDIA 的加速计算和微服务架构集成到自己的 AI 系统中。它包含 RAG 管道、智能体工作流、模型微调等示例，并提供了与 LangChain 等框架的集成代码。适合想要快速上手 NVIDIA AI 生态、构建或优化生成式 AI 应用的开发者参考学习。",
+ "tagline": "NVIDIA 生成式 AI 参考工作流与微服务示例"
+}

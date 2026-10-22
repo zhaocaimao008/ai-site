@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文本转语音的开发者、需要语音克隆功能的应用开发者，以及希望本地部署或微调 TTS 模型的技术人员。",
+ "date": "2026-10-22",
+ "features": [
+  "支持英语情感语音合成，具有自然的节奏和语调",
+  "零样本声音克隆：仅需 30 秒参考音频即可克隆美式或英式口音",
+  "支持微调进行跨语言声音克隆，少量数据即可适应新说话人",
+  "可合成任意长度的文本",
+  "提供本地推理、Web UI、API 服务器和 Colab 演示等多种使用方式",
+  "支持 KV 缓存和批处理优化，推理速度快于实时"
+ ],
+ "intro": "MetaVoice-1B 是一个 12 亿参数的基础文本转语音（TTS）模型，基于 10 万小时语音数据训练。它注重英语的情感节奏和语调，支持美式和英式口音，并能在仅提供 30 秒参考音频的情况下进行零样本声音克隆。此外，通过微调，它还能实现跨语言的声音克隆，例如用 1 分钟数据训练印度英语说话人。模型采用 Apache 2.0 许可证，可自由使用。\n\n该项目提供了完整的推理、微调和服务部署方案，包括本地推理脚本、Web UI、API 服务器以及 Hugging Face 集成。架构上，它使用因果 GPT 预测 EnCodec 令牌，再通过非因果 Transformer 和扩散模型生成波形，最后用 DeepFilterNet 清理音频。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 GPU 显存 >=12GB，Python 版本 >=3.10 且 <3.12，并安装 pipx",
+  "安装 ffmpeg 和 rust（如未安装）",
+  "使用 poetry 安装依赖：pipx install poetry && poetry install && poetry run pip install torch==2.2.1 torchaudio==2.2.1",
+  "运行本地推理：poetry run python -i fam/llm/fast_inference.py",
+  "在交互式会话中调用：tts.synthesise(text=\"...\", spk_ref_path=\"assets/bria.mp3\")"
+ ],
+ "summary": "MetaVoice-1B 是一个开源的文本转语音基础模型，专注于生成富有情感和语调的英语语音，并支持零样本声音克隆。它适合需要高质量语音合成、声音克隆或跨语言语音适配的开发者，可用于本地推理、云服务部署或进一步微调。项目提供了完整的安装和使用流程，以及 Web UI 和 API 服务器等部署选项。",
+ "tagline": "12亿参数的开源文本转语音基础模型"
+}

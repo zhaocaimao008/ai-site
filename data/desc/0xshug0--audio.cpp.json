@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地或服务器上部署音频模型、又不想维护 Python 环境的 C++ 开发者和音频应用工程师，也适合需要统一运行时来对比和测试多种音频模型的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "支持 TTS、ASR、VAD、语音转换、音乐生成等多种音频任务",
+  "基于 ggml 的纯 C++ 实现，无需 Python 依赖",
+  "提供统一的 CLI、服务端 API 和 WebUI 入口",
+  "支持 CUDA、HIP/ROCm、Vulkan、Metal 和 CPU 后端",
+  "内置降噪、增强、重采样、STFT/ISTFT 等音频工具",
+  "实验性 JSON pipeline，支持多步骤工作流编排"
+ ],
+ "intro": "audio.cpp 是一个基于 ggml 构建的高性能 C++ 音频推理框架，目标是在本地运行各类现代音频模型，不依赖 Python 环境。它支持 Windows、Linux 和 macOS，可运行在 NVIDIA、AMD、Apple Silicon 以及纯 CPU 机器上。\n\n框架覆盖 TTS、语音克隆、语音转换、ASR、说话人分离、VAD、音源分离、对齐和编解码类模型，并通过统一的 CLI、服务端 API 和 WebUI 提供端到端推理能力，而不是只做单模型演示。项目还提供内置降噪、增强、重采样和 STFT/ISTFT 等音频工具。\n\nREADME 提到已支持 110+ 音频模型家族、190+ 变体，并配有与 Python 参考实现对齐的测试工具、JSON pipeline 多步工作流支持，以及 CUDA、HIP/ROCm、Vulkan、Metal 和 CPU 后端。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "audio.cpp 是一个用纯 C++ 编写的音频模型推理框架，基于 ggml 构建，目的是让 TTS、语音识别、语音转换、音乐生成等音频模型能在本地直接运行，而不必为每个模型单独配置 Python 环境。它支持多种 GPU 和 CPU 后端，提供统一的命令行、服务端接口和 WebUI，适合需要本地部署音频能力或统一管理多种音频模型的开发者。",
+ "tagline": "基于 ggml 的纯 C++ 音频模型推理引擎"
+}

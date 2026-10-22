@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要日常排查 Kubernetes 问题的开发者与运维人员，以及希望让 AI agent 接入集群上下文进行诊断的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "拓扑视图展示资源之间的关系与依赖",
+  "事件时间线与资源视图，用于定位故障和变更",
+  "集成 Helm、GitOps（ArgoCD、FluxCD）、流量、成本、审计、升级影响等视图",
+  "内置 MCP server，供 AI agent 检查和操作集群",
+  "可作为 kubectl 插件在本机运行，也可用 Helm 部署到集群内共享使用",
+  "通过 informers 监听集群变化，并用 SSE 向浏览器推送实时更新"
+ ],
+ "intro": "Radar 是一个开源的 Kubernetes UI，以单个 Go 二进制形式分发，无需在集群中安装任何组件，直接通过本机 kubeconfig 与 Kubernetes API 通信。它提供拓扑视图、资源列表、事件时间线、Helm、GitOps、实时服务流量、集群审计、升级影响分析等视图，帮助定位集群中哪里出了问题、原因是什么、最近发生了什么变化。\n\n除图形界面外，Radar 内置 MCP server，让 AI agent 能够通过它检查、排查和操作集群。它也可以作为 kubectl 插件运行，或用 Helm 部署到集群内供团队共享访问，并通过 RBAC 控制权限。数据默认留在本机，适合在受限或隔离环境中使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "curl -fsSL https://get.radarhq.io | sh && kubectl radar",
+  "brew install kubectl-radar",
+  "kubectl krew install radar",
+  "helm repo add skyhook https://skyhook-io.github.io/helm-charts && helm install radar skyhook/radar -n radar --create-namespace"
+ ],
+ "summary": "Radar 是一个开源的 Kubernetes 可视化工具，以单个 Go 二进制运行在本机，直接连接集群 API，不需要在集群里安装 agent。它把拓扑、资源、事件时间线、Helm、GitOps、流量和审计等信息集中到一个界面，方便排查故障和查看变更。内置的 MCP server 还能让 AI agent 读取集群上下文并执行操作，适合日常运维和 AI 辅助诊断场景。",
+ "tagline": "单二进制 Kubernetes 可视化界面，内置 MCP 服务器"
+}

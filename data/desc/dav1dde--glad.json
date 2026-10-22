@@ -1,0 +1,22 @@
+{
+ "ai_related": false,
+ "audience": "适合需要调用 OpenGL、Vulkan 等图形 API 的 C/C++ 开发者，尤其是希望简化函数加载流程的图形编程人员。",
+ "date": "2026-10-22",
+ "features": [
+  "支持 Vulkan、GL、GLES、EGL、GLX、WGL 多种图形 API",
+  "基于官方规范生成加载器代码，确保准确性",
+  "提供在线生成服务，方便快速获取所需文件",
+  "支持 C/C++ 等多种编程语言，并有社区插件扩展",
+  "生成的代码采用宽松许可证，可自由使用"
+ ],
+ "intro": "glad 是一个代码生成工具，它根据 Khronos 官方发布的 Vulkan、OpenGL、OpenGL ES、EGL、GLX 和 WGL 规范，生成用于加载这些图形 API 函数指针的源代码。开发者无需手动编写繁琐的加载代码，即可在 C/C++ 等语言中调用 OpenGL 或 Vulkan 函数。\n\n该项目提供在线生成服务，也支持本地运行生成器。生成的代码可自由使用（Public Domain、WTFPL 或 CC0）。glad 2.0 分支改进了功能并调整了 API，部分语言仅支持 glad1 生成器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 https://glad.sh 在线生成所需 API 的加载器代码",
+  "下载生成的压缩包并解压到项目目录",
+  "在代码中包含 glad 头文件，例如 #include <glad/gl.h>",
+  "在创建图形上下文后调用 gladLoadGL 等加载函数初始化"
+ ],
+ "summary": "glad 是一个代码生成工具，它根据 Khronos 官方规范生成用于加载 OpenGL、Vulkan 等图形 API 函数指针的源代码。开发者无需手动编写加载逻辑，即可在 C/C++ 项目中调用这些图形接口。项目提供在线生成服务，适合需要简化图形 API 初始化流程的开发者。",
+ "tagline": "基于官方规范的多语言 Vulkan/GL 加载器生成器"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或 CPU 环境部署语音合成能力的开发者，以及希望快速体验多语言 TTS 和声音克隆的普通用户。",
+ "date": "2026-10-22",
+ "features": [
+  "0.1B 参数轻量模型，支持 CPU 实时流式推理",
+  "原生 48 kHz 双声道音频输出",
+  "支持中文、英文等多语言语音合成",
+  "提供声音克隆功能，长文本自动分块处理",
+  "提供 ONNX CPU 推理版本，推理时不依赖 PyTorch",
+  "附带本地 Web Demo、CLI 命令和微调代码"
+ ],
+ "intro": "MOSS-TTS-Nano 是 MOSI.AI 与 OpenMOSS 团队开源的轻量级多语言语音生成模型，参数量仅 0.1B，采用 Audio Tokenizer + LLM 的纯自回归架构。它面向实时语音合成场景，无需 GPU 即可在 CPU 上运行，并支持流式推理以降低首包延迟。\n\n模型原生输出 48 kHz 双声道音频，支持中文、英文等多种语言，并提供声音克隆能力，长文本输入时可自动分块处理。项目提供 Python 推理脚本、本地 Web 演示、ONNX CPU 推理版本以及命令行工具，方便本地演示、Web 服务和轻量产品集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Conda 创建并激活环境（参考 README 的 Environment Setup 部分）",
+  "运行 python infer.py 进行声音克隆推理",
+  "运行 python app.py 启动本地 Web 演示",
+  "如需 ONNX CPU 推理，参考 README 的 ONNX CPU Inference 部分"
+ ],
+ "summary": "MOSS-TTS-Nano 是一个面向实时语音合成的轻量级多语言 TTS 模型，参数量仅 0.1B，无需 GPU 即可在 CPU 上流式生成 48 kHz 双声道音频。它支持中文、英文等语言和声音克隆，适合本地演示、Web 服务以及轻量产品集成等对部署成本和延迟敏感的场景。",
+ "tagline": "0.1B 参数多语言 TTS 模型，支持 CPU 实时推理与声音克隆"
+}

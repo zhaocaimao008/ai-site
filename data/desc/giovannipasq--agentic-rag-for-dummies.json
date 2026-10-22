@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想学习 Agentic RAG 的开发者，以及需要搭建可扩展 RAG 应用、并希望灵活切换 LLM 提供商的技术人员。",
+ "date": "2026-10-22",
+ "features": [
+  "分层索引：小 chunk 检索，大 Parent chunk 提供上下文",
+  "对话记忆：维护滚动摘要和近期历史，保持多轮对话连贯",
+  "查询澄清：改写模糊查询，必要时暂停等待用户补充信息",
+  "多 Agent Map-Reduce：将复杂问题拆成并行子查询分别检索",
+  "自我纠正与上下文压缩：结果不足时自动重查，避免重复获取",
+  "可观测与评估：集成 Langfuse 追踪，并用 RAGAS 指标评估效果"
+ ],
+ "intro": "这个项目演示如何用 LangGraph 以较少的代码构建一个 Agentic RAG（检索增强生成）系统。它提供了两种使用方式：一是交互式 Notebook 教程，适合逐步理解核心概念；二是模块化项目架构，方便替换 LLM 提供商、嵌入模型、PDF 转换器和 Agent 工作流。\n\n系统采用分层索引，先用小 chunk 精确检索，再取回大 Parent chunk 补充上下文。查询处理包含对话摘要、查询改写与澄清、多 Agent 并行检索与聚合等阶段，并支持对话记忆、自我纠正、上下文压缩、Langfuse 可观测性和 RAGAS 评估。默认使用 Ollama 本地模型，也给出了 OpenAI、Anthropic 和 Google 的接入示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Ollama 并拉取模型：ollama pull granite4.1:8b",
+  "在 Notebook 中初始化 LLM：from langchain_ollama import ChatOllama; llm = ChatOllama(model=\"granite4.1:8b\", temperature=0, seed=42)",
+  "若使用云端模型，安装对应包并设置 API Key，例如 pip install -qU langchain-openai",
+  "参考 notebooks/agentic_rag.ipynb 逐步运行，或按项目模块化结构搭建应用"
+ ],
+ "summary": "这个项目用 LangGraph 实现了一个模块化的 Agentic RAG 系统，解决普通 RAG 教程缺少可扩展架构的问题。它通过分层索引、查询澄清、多 Agent 并行检索和自我纠正来提升检索与回答质量，并支持对话记忆和多种 LLM 提供商。适合想学习 Agentic RAG 或搭建可定制 RAG 应用的开发者。",
+ "tagline": "用 LangGraph 构建模块化 Agentic RAG 系统"
+}

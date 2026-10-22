@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想了解或实践 Adaptive RAG、多智能体工作流和电商客服场景的开发者，也适合需要可评测、可观测 RAG 系统的技术团队参考。",
+ "date": "2026-10-22",
+ "features": [
+  "按问题复杂度自动路由到 DIRECT、SINGLE、MULTI、AGENT 或 REFUSE 五条处理路径",
+  "混合检索：BM25 稀疏检索、稠密向量检索、RRF 融合与 Cross-Encoder 精排，回答可带引用",
+  "多跳检索与自纠错：复合问题拆分检索，答案经过忠实度检查",
+  "工具调用与人工确认：查单、退改等操作受权限约束，高风险写操作先返回 pending_action 再执行",
+  "Web 对话工作台：流式显示、引用展示、本地会话搜索、深色模式与确认卡片",
+  "离线评测与可观测性：内置评测脚本、回归测试、结构化日志和 Prometheus 指标"
+ ],
+ "intro": "Adaptive RAG 是一个基于 FastAPI 和 LangGraph 构建的电商客服智能体系统。它针对传统 FAQ 客服长尾问题命中率低、常规 RAG 多跳推理弱和幻觉严重的问题，设计了按问题复杂度动态路由的处理策略：简单问候直接回答，单一政策问题走混合检索，多条件跨条款问题触发多跳检索与自纠错，查单退改等操作通过工具调用完成，高风险写操作需人工确认。\n\n系统内置 BM25 与稠密向量的混合检索、RRF 融合与精排，回答可附带引用；同时提供离线评测、回归测试、结构化日志和 Prometheus 指标，便于追踪效果与运行状态。项目默认使用 SQLite 和内存检索组件，无需额外部署 Redis 或 Qdrant 即可启动。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone https://github.com/JEen-wang/Adaptive-rag.git && cd Adaptive-rag && python3 -m venv .venv && source .venv/bin/activate && pip install -e \".[dev]\"",
+  "复制环境变量文件：cp .env.example .env（DEEPSEEK_API_KEY 可留空进入离线演示模式）",
+  "启动 API：uvicorn app.asgi:app --reload --port 8000",
+  "发送测试请求：curl -s http://127.0.0.1:8000/api/v1/chat -H 'content-type: application/json' -d '{\"message\":\"定制马克杯过了七天，但有质量问题还能退吗？\",\"user_id\":\"u_demo\"}'",
+  "启动 Web 工作台：cd frontend && npm ci && npm run dev，访问 http://127.0.0.1:5173"
+ ],
+ "summary": "这个项目解决电商客服中问题复杂度差异大的痛点：简单问候直接回答，政策问题走混合检索并附引用，多条件问题触发多跳检索与自纠错，查单退改通过工具调用完成且高风险操作需人工确认。适合想实践 Adaptive RAG、多智能体工作流和可评测客服系统的开发者参考。",
+ "tagline": "按问题复杂度自动分流的电商客服 Agent"
+}

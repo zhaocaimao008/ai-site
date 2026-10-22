@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地运行 AI 智能体、注重数据隐私的开发者，以及需要将智能体能力嵌入自有应用的技术团队。",
+ "date": "2026-10-22",
+ "features": [
+  "本地优先：控制循环和状态保存在本机，通过 llama.cpp 运行量化模型",
+  "多模型支持：可单独使用本地模型、云端模型，或在 Fusion 模式下混合使用",
+  "跨应用操作：浏览网页、读写文件、执行批准的命令、检查文档",
+  "跨会话记忆与任务调度：记住上下文并安排后续任务",
+  "MCP 集成：通过 MCP 调用外部工具",
+  "可嵌入：通过 HTTP 或 Tauri sidecar 集成到自己的应用中"
+ ],
+ "intro": "Atomic Agent 是一个本地优先的 AI 智能体，控制循环和所有状态都运行在你自己的机器上。它通过 llama.cpp 运行开放权重模型，也支持云端模型，甚至可以在 Fusion 模式下让一个模型规划、一组工作模型执行。\n\n它能操作浏览器、读写文件、执行经批准的命令、检查文档、跨会话记忆上下文、安排后续任务，并通过 MCP 调用外部工具。你可以通过 HTTP 或 Tauri sidecar 将它嵌入自己的应用。项目使用 TypeScript 编写，提供 CLI 和 TUI 界面，安装后即可用 atomic-agent 或别名 atag 启动。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS / Linux 安装：curl -fsSL https://atomicagent.io/install | sh",
+  "Windows (PowerShell) 安装：irm https://atomicagent.io/install.ps1 | iex",
+  "启动：atomic-agent 或 atag",
+  "更新：atomic-agent update（或 atag update）"
+ ],
+ "summary": "Atomic Agent 是一个本地优先的 AI 智能体，控制循环和状态都留在你的机器上，通过 llama.cpp 运行开放权重模型，也支持云端模型或两者混合。它能操作浏览器、读写文件、执行批准的命令、跨会话记忆，并通过 MCP 调用外部工具。适合注重数据隐私、希望在本地运行智能体或将其嵌入自有应用的开发者。",
+ "tagline": "本地优先的 AI 智能体，支持本地或云端模型"
+}

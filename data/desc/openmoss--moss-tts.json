@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要语音合成、语音克隆、多人对话配音或音效生成的开发者与内容创作者，也适合研究语音生成模型的研究人员。",
+ "date": "2026-10-22",
+ "features": [
+  "长文本稳定语音合成与多语言旁白",
+  "多说话人对话、播客与配音合成",
+  "零样本语音克隆与音色/角色设计",
+  "文本生成环境音效，支持 48 kHz 立体声",
+  "实时流式 TTS 输出",
+  "支持 vLLM-Omni、SGLang-Omni、llama.cpp 等推理后端"
+ ],
+ "intro": "MOSS-TTS Family 是 MOSI.AI 与 OpenMOSS 团队开源的语音和声音生成模型家族，面向高保真、高表现力的真实场景，覆盖长文本语音合成、多说话人对话、音色与角色设计、环境音效以及实时流式 TTS。\n\n家族按任务拆分为多个模型：MOSS-TTS-Nano 可在 CPU 或浏览器上做语音克隆；MOSS-TTS-v1.5 与 Local Transformer v1.5 面向多语言长文本旁白与克隆；MOSS-TTSD 用于多人对话、播客和配音；MOSS-TTS-Realtime 面向实时流式语音；MOSS-SoundEffect v2 与 MOSS-VoiceGenerator 分别负责音效生成和音色设计。\n\n项目提供 Hugging Face 与 ModelScope 权重，并已获得 vLLM-Omni、SGLang-Omni、llama.cpp、mlx-audio 等推理后端支持，README 中另有微调与加速推理相关教程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "根据任务在 README 的模型选择表中选择对应模型（如 MOSS-TTS-v1.5、MOSS-TTSD、MOSS-TTS-Realtime）",
+  "从 Hugging Face 或 ModelScope 的 MOSS-TTS 集合下载对应模型权重",
+  "参考 README 的 Quickstart 章节与各子模型目录下的说明完成安装和推理",
+  "如需加速推理，可参考 README 中 vLLM-Omni、SGLang-Omni 或 llama.cpp 的部署说明"
+ ],
+ "summary": "MOSS-TTS Family 是一组开源的语音与声音生成模型，覆盖长文本朗读、多人对话配音、音色设计、环境音效和实时流式合成等场景。它把不同需求拆成多个专用模型，并提供公开权重和多种推理后端支持，适合需要把语音合成能力集成进应用的开发者，以及想研究语音生成模型的研究者按任务选型上手。",
+ "tagline": "开源语音与音效生成模型家族"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要实时语音转写能力的开发者，以及希望本地部署 Whisper 服务的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "实时麦克风与音频文件转写",
+  "支持 faster_whisper、TensorRT、OpenVINO 三种后端",
+  "词级时间戳与自定义热词",
+  "说话人分离与批量推理",
+  "支持原始 PCM 输入和浏览器扩展",
+  "提供 Docker 部署方案"
+ ],
+ "intro": "WhisperLive 是一个基于 OpenAI Whisper 模型的实时语音转文字应用，支持麦克风实时输入和预录音频文件转写。项目采用客户端-服务器架构，服务器端支持 faster_whisper、TensorRT 和 OpenVINO 三种推理后端，可分别面向通用 GPU、NVIDIA 加速和 Intel 硬件优化。\n\n客户端通过 WebSocket 连接服务器，可指定语言、模型大小、是否启用语音活动检测（VAD）等参数。项目还提供词级时间戳、自定义词汇/热词、说话人分离、批量推理和原始 PCM 输入等高级功能，并附带浏览器扩展和 Docker 部署方案。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装系统依赖 PortAudio：bash scripts/setup.sh",
+  "创建 Python 3.12 虚拟环境并激活：python3.12 -m venv whisper_env && source whisper_env/bin/activate",
+  "安装 whisper-live：pip install whisper-live",
+  "启动服务器：python3 run_server.py --port 9090 --backend faster_whisper --max_clients 4 --max_connection_time 600",
+  "运行客户端转写音频文件：python3 run_client.py --files <audio-file-name>"
+ ],
+ "summary": "WhisperLive 把 OpenAI Whisper 封装成可实时转写的客户端-服务器应用，解决麦克风或音频文件需要低延迟转文字的问题。服务器支持 faster_whisper、TensorRT 和 OpenVINO 后端，可按硬件选择；客户端可指定语言、模型大小和 VAD。适合需要本地部署实时语音识别服务的开发者，也提供词级时间戳、热词和说话人分离等进阶能力。",
+ "tagline": "基于 OpenAI Whisper 的实时语音转写服务"
+}

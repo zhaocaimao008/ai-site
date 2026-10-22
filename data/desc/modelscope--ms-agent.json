@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望基于开源框架构建复杂任务 Agent 的 Python 开发者，以及需要研究、代码生成或业务流程自动化能力的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "模块化组合模型、工具、技能与子 Agent，构建定制化生产力助手",
+  "harness 统一管理规划、上下文、权限与执行反馈",
+  "同一 Python SDK 支撑 CLI、TUI 和 WebUI 多种交互形态",
+  "内置 DeepResearch、FinResearch、代码生成、视频生成等项目实践",
+  "支持 Agent Skills、上下文压缩、多模态输入与 MCP",
+  "提供项目记忆与自主调度，支持长任务持续推进"
+ ],
+ "intro": "MS-Agent 是 ModelScope 推出的模块化、可扩展开源 Agent 框架，面向复杂且运行时间较长的任务。它把模型、工具、技能和子 Agent 组合在可定制的 harness 中，由 harness 负责规划、上下文、权限和执行反馈，并借助项目记忆与自主调度推动任务持续推进。\n\n框架提供统一的 Python SDK，为 CLI、TUI 和 WebUI 提供执行与管理能力，使 Agent 逻辑和扩展可以复用到终端、浏览器工作区以及业务应用中，减少集成与维护成本。项目还包含 DeepResearch、FinResearch、Code Genesis、Singularity Cinema 等具体应用方向，并支持 Agent Skills、上下文压缩、多模态输入和 MCP 等能力。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "MS-Agent 是一个面向复杂长任务的模块化 Agent 框架，把模型、工具、技能和子 Agent 组合起来，由 harness 管理规划、上下文与执行反馈。它提供统一的 Python SDK，可复用到 CLI、TUI 和 WebUI，并附带深度研究、金融研究、代码生成等实践项目，适合想搭建定制化 Agent 的开发者。",
+ "tagline": "模块化可扩展的开源 Agent 框架，支持复杂长任务"
+}

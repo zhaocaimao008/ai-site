@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 音乐生成感兴趣的开发者和研究者，以及希望本地部署或集成音频生成功能的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "扩散管道支持提示词插值与图像条件结合",
+  "频谱图图像与音频片段之间的相互转换",
+  "命令行接口用于常见任务",
+  "基于 streamlit 的交互式应用",
+  "Flask 服务器提供 API 推理",
+  "支持 CPU、CUDA 和 MPS 后端"
+ ],
+ "intro": "Riffusion 是一个利用 stable diffusion 进行实时音乐和音频生成的 Python 库。它通过扩散管道对提示词进行插值并结合图像条件，实现音频生成。项目包含频谱图与音频片段之间的转换、命令行接口、基于 streamlit 的交互式应用、提供 API 推理的 Flask 服务器以及多种第三方集成。\n\n该仓库是 riffusion 图像和音频处理的核心代码，相关 Web 应用和模型检查点分别位于其他仓库。项目已不再积极维护，但代码仍可供参考和使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建并激活 conda 环境：conda create --name riffusion python=3.9 && conda activate riffusion",
+  "安装依赖：python -m pip install -r requirements.txt",
+  "（可选）安装 ffmpeg 以支持非 WAV 音频格式",
+  "运行 streamlit 应用：python -m riffusion.streamlit.playground",
+  "或启动 Flask 服务器：python -m riffusion.server --host 127.0.0.1 --port 3013"
+ ],
+ "summary": "Riffusion 是一个基于 stable diffusion 的实时音乐与音频生成库，核心功能包括扩散管道、频谱图与音频转换、命令行工具、交互式应用和 API 服务器。它适合需要本地生成音乐或集成音频生成能力的开发者，但项目已不再积极维护。",
+ "tagline": "基于 Stable Diffusion 的实时音乐与音频生成库"
+}

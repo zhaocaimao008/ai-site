@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合希望通过视频学习外语的用户，尤其是需要双语字幕、实时翻译和查词功能的学习者。",
+ "date": "2026-10-22",
+ "features": [
+  "双语字幕：同时显示两条字幕，支持文本和位图字幕。",
+  "AI 生成字幕（ASR）：基于 OpenAI Whisper，支持 whisper.cpp 和 faster-whisper 引擎。",
+  "实时翻译：支持 Google、DeepL、Ollama、LM Studio、OpenAI 等多种引擎，并可利用 LLM 进行上下文感知翻译。",
+  "实时 OCR 字幕：使用 Tesseract OCR 或 Microsoft OCR 将位图字幕转为文本。",
+  "字幕侧边栏与即时查词：支持文本和位图字幕，可跳转和查词，并支持增量搜索。",
+  "在线视频播放：集成 yt-dlp，可实时播放在线视频并生成 AI 字幕。"
+ ],
+ "intro": "LLPlayer 是一款面向语言学习者的视频播放器，基于 C#/WPF 开发，专注于字幕相关功能。它支持同时显示两条字幕（文本或位图格式），并可通过 OpenAI Whisper 实时生成字幕（ASR），支持 whisper.cpp 和 faster-whisper 两种引擎。\n\n播放器还提供实时翻译功能，可接入 Google、DeepL、Ollama、LM Studio、OpenAI 等多种翻译引擎，并利用 LLM 实现上下文感知翻译。此外，它支持实时 OCR 将位图字幕转为文本，内置字幕侧边栏、即时查词、自定义浏览器搜索，并可通过 yt-dlp 播放在线视频。\n\nLLPlayer 目前处于 Beta 阶段，需要 Windows 10/11 x64 系统，并依赖 .NET Desktop Runtime 10 和 Visual C++ Redistributable。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 release 页面下载构建版本。",
+  "运行 LLPlayer.exe 启动播放器。",
+  "按 CTRL+. 或点击进度条上的设置图标打开设置窗口。",
+  "在 Subtitles > ASR 部分下载 Whisper 模型（或选择 faster-whisper 引擎）。",
+  "在 Subtitles > Translate 部分设置目标语言（默认翻译引擎为 GoogleV1）。",
+  "拖放视频或按 CTRL+V 粘贴在线视频 URL 开始播放，使用进度条上的两个 CC 按钮设置主副字幕。"
+ ],
+ "summary": "LLPlayer 是一款专为语言学习设计的视频播放器，解决观看外语视频时字幕辅助和即时翻译的需求。它支持双语字幕、AI 实时生成字幕、实时翻译、OCR 字幕转换和查词等功能，适合希望通过视频学习外语的用户。",
+ "tagline": "专为语言学习设计的视频播放器，支持双语字幕、AI 字幕生成和实时翻译。"
+}

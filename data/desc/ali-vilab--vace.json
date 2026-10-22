@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合视频生成与编辑方向的研究人员、开发者，以及希望尝试 AI 视频创作的技术用户。",
+ "date": "2026-10-22",
+ "features": [
+  "支持参考图生视频（R2V）、视频到视频编辑（V2V）和带掩码的视频编辑（MV2V）",
+  "可自由组合不同任务，实现 Move-Anything、Swap-Anything 等效果",
+  "提供基于 Wan2.1 和 LTX-Video 的多个预训练模型",
+  "包含端到端推理脚本和预处理工具",
+  "提供 Gradio 演示和 VACE-Benchmark 评测数据"
+ ],
+ "intro": "VACE 是阿里巴巴通义实验室提出的视频创作与编辑模型，论文被 ICCV 2025 接收。它将参考图生视频（R2V）、视频到视频编辑（V2V）和带掩码的视频编辑（MV2V）等多种任务统一在一个模型中，用户可自由组合这些任务。\n\n项目提供基于 Wan2.1 和 LTX-Video 的多个预训练模型，支持 Move-Anything、Swap-Anything、Reference-Anything 等能力。代码包含模型推理、预处理工具和 Gradio 演示，并提供了 VACE-Benchmark 评测数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone https://github.com/ali-vilab/VACE.git && cd VACE",
+  "安装 PyTorch 和 requirements：pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu124 && pip install -r requirements.txt",
+  "如需使用 Wan2.1 模型，安装：pip install wan@git+https://github.com/Wan-Video/Wan2.1",
+  "下载所需模型到 <repo-root>/models/ 目录",
+  "运行端到端示例：python vace/vace_pipeline.py --base wan --task depth --video assets/videos/test.mp4 --prompt 'xxx'"
+ ],
+ "summary": "VACE 是一个统一视频生成与编辑模型，把参考图生视频、视频到视频编辑和掩码视频编辑等任务整合在一起，用户可自由组合。项目提供基于 Wan2.1 和 LTX-Video 的预训练模型、推理代码和预处理工具，适合研究人员和开发者探索 AI 视频创作与编辑。",
+ "tagline": "一站式视频生成与编辑模型"
+}

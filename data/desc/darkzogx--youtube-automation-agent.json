@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自动化运营 YouTube 频道的内容创作者、开发者和小型团队，尤其是注重内容控制权和数据隐私的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "自动研究主题并制定内容策略",
+  "生成脚本、旁白和视觉素材，组装成 MP4 视频",
+  "优化 SEO 元数据（标题、描述、标签）",
+  "发布前人工审核与批准流程",
+  "基于分析数据和评论的学习循环",
+  "支持多种 AI 提供商（文本和视频）"
+ ],
+ "intro": "YouTube Automation Agent 是一个开源的 AI 代理，旨在帮助用户端到端地运营 YouTube 频道。它能够自动研究主题、撰写脚本、生成旁白和视觉素材、组装成真实的 MP4 视频，并优化标题、描述和标签。所有视频在发布前都需要经过用户的审核批准，确保内容质量和合规性。\n\n该项目完全自托管，用户使用自己的 API 密钥，所有数据和频道信息都保留在本地。它支持多种 AI 提供商，包括 Gemini、OpenAI、OpenRouter、DeepSeek 等，用户可以根据需要选择文本和视频生成服务。代理还会从分析数据和观众评论中学习，提出改进建议，但所有学习成果都需要用户批准后才会应用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/darkzOGx/youtube-automation-agent.git",
+  "进入目录并安装依赖：cd youtube-automation-agent && npm install",
+  "安装 Playwright 浏览器：npx playwright install chromium",
+  "运行引导设置：npm run walkthrough",
+  "启动应用：npm start，然后访问 http://localhost:3456"
+ ],
+ "summary": "YouTube Automation Agent 是一个自托管的 AI 代理，能自动完成 YouTube 视频从选题、脚本、制作到发布的全流程，但每个视频都需人工审核批准。它适合想自动化运营频道又希望保留控制权的创作者，支持多种 AI 提供商，并能从分析数据中学习优化。",
+ "tagline": "自托管 AI 代理，端到端运营 YouTube 频道"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在资源受限环境中集成语音识别功能的开发者，以及研究语音识别算法的学生和研究人员。",
+ "date": "2026-10-22",
+ "features": [
+  "大词汇量、非特定人连续语音识别",
+  "提供 C 库和 Python 模块，便于集成",
+  "命令行工具支持 single、live、align 等模式",
+  "支持词级、音素级和状态级强制对齐",
+  "输出 JSON 格式结果，便于后续处理"
+ ],
+ "intro": "PocketSphinx 是卡内基梅隆大学开源的大词汇量、非特定人连续语音识别引擎。其算法和模型可追溯至 1970 年代，但凭借紧凑和高效的特点，至今仍适用于许多应用场景。\n\n项目使用 CMake 构建，支持 Linux 和 Windows，不再依赖 SphinxBase。提供 C 库和 Python 模块，并附带命令行工具，可对单声道 16 位 PCM 音频进行识别、对齐等操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖（Debian/Ubuntu）：sudo apt install ffmpeg libasound2-dev libportaudio2 libportaudiocpp0 libpulse-dev libsox-fmt-all portaudio19-dev sox",
+  "安装 Python 模块：python3 -m venv ~/ve_pocketsphinx && . ~/ve_pocketsphinx/bin/activate && pip install .",
+  "构建 C 库：cmake -S . -B build && cmake --build build && cmake --build build --target install",
+  "识别单声道 WAV 文件：pocketsphinx single speech.wav",
+  "实时识别：sox -d $(pocketsphinx soxflags) | pocketsphinx -"
+ ],
+ "summary": "PocketSphinx 是一个紧凑高效的开源连续语音识别引擎，适合在资源有限的设备或应用中集成语音识别能力。它提供 C 库和 Python 模块，并附带命令行工具，可对音频文件或实时音频流进行识别、强制对齐等操作，输出 JSON 格式结果，方便开发者进一步处理。",
+ "tagline": "紧凑高效的开源连续语音识别引擎"
+}

@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 LLM 代理工具调用轨迹与 harness 条件影响的开发者，以及对 DeepSeek Harness 预设机制感兴趣的高级用户。",
+ "date": "2026-10-22",
+ "features": [
+  "两阶段会话：先以 Minimal 工具对锚定轨迹，再提升到常驻工具目录",
+  "提供多种变体模式，如零锚定、whoami 锚定、预制轨迹、永久 Minimal 等",
+  "通过 dev_tool_search、skill_search、skill_load 等发现工具按需解锁重型工具",
+  "阶段状态由持久化事件推导，支持会话恢复与重载",
+  "每个模式目录自包含，可复制到任意 id 下单独安装"
+ ],
+ "intro": "这是一个面向 DeepSeek Harness 的实验性代理预设集合，核心思路是两阶段会话：首个请求只暴露 Minimal 条件的两个工具（bash 与 str_replace_editor），不自动注入上下文，以此锚定模型的初始推理轨迹；当会话出现首个持久化事件（tool/call 或 assistant/message）后，再提升到常驻工具目录，按需解锁更重的 Standard 工具。\n\n项目包含基础模式以及多个变体，例如零锚定、whoami 锚定、预制轨迹、永久 Minimal、wire think-execute 和组合锚定等，每个模式目录自包含，可单独安装。README 说明项目已于 2026-09-10 冻结，不再接受新 issue 和 PR，原因是其针对的 V4 Pro 模型即将退役。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目提供一组实验性的 DeepSeek Harness 代理预设，用来控制会话首轮的工具暴露与上下文注入，从而影响模型的推理轨迹。它先以 Minimal 工具对启动会话，待出现持久化事件后再提升到更完整的工具目录，并按需解锁重型工具。适合想研究代理工具调用行为、或需要定制 harness 启动条件的开发者参考。",
+ "tagline": "实验性 DeepSeek Harness 两阶段代理预设"
+}

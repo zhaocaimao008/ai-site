@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在隐私敏感环境中使用 Claude Code 的开发者，尤其是拥有 Apple Silicon Mac 并希望完全离线运行 AI 编码助手的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "本地 MLX 服务器以 Anthropic API 格式响应 Claude Code，无需云端",
+  "支持多种开源模型（如 Gemma 4、Qwen、DeepSeek 等），自动适配内存",
+  "将不同模型的工具调用格式统一转换为 Claude Code 工具调用",
+  "复用 prompt 缓存，减少长会话中的重复计算",
+  "提供 keep going 功能，在 Claude 用量耗尽后继续用本地或免费云端模型",
+  "包含安装脚本、测试脚本和桌面启动器，简化部署"
+ ],
+ "intro": "这个项目让你在 Mac 上完全离线运行 Claude Code。它包含一个用 Apple MLX 框架编写的 Python 服务器，直接以 Anthropic API 格式响应 Claude Code 的请求，因此不需要云端模型或 API key。服务器负责流式输出、将不同模型的工具调用格式转换为 Claude Code 可识别的格式，并复用 prompt 缓存以加速长会话。\n\n项目还提供了安装脚本、测试工具、一个轻量终端编码代理，以及“keep going”功能，可在 Claude 用量耗尽后继续用本地或免费云端模型接续对话。适合需要在 NDA、法律、医疗等隐私敏感场景下使用 AI 编码助手的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装命令：curl -fsSL https://raw.githubusercontent.com/nicedreamzapp/claude-code-local/main/install.sh | bash",
+  "安装脚本会检查 Mac 配置、选择合适的模型并完成设置",
+  "启动后即可在 Claude Code 中使用本地模型，无需 API key"
+ ],
+ "summary": "这个项目让 Claude Code 完全在 Apple Silicon Mac 上本地运行，通过一个 MLX 原生服务器直接以 Anthropic API 格式响应请求，无需云端或 API key。它解决了在隐私敏感场景（如 NDA、法律、医疗）下使用 AI 编码助手时的数据外泄顾虑，适合希望离线使用 Claude Code 的开发者。",
+ "tagline": "在 Apple Silicon Mac 上本地运行 Claude Code，无需云端或 API key"
+}

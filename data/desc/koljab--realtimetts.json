@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要低延迟语音合成的开发者，尤其是构建对话式 AI、实时语音助手或需要流式 TTS 的应用。",
+ "date": "2026-10-22",
+ "features": [
+  "将文本、生成器或 LLM token 流实时转换为音频",
+  "支持本地播放、流式传输和 WAV 文件输出",
+  "多引擎支持，包括系统语音、云 API 和本地神经模型",
+  "QwenEngine 提供 GPU/CPU 低延迟语音合成与语音克隆",
+  "支持引擎回退机制，提高稳定性",
+  "提供 OpenAI 兼容的 HTTP API 服务器"
+ ],
+ "intro": "RealtimeTTS 是一个 Python 文本转语音库，面向需要将字符串、生成器或 LLM token 流实时转换为音频的应用。它支持本地播放、流式传输到其他进程、写入 WAV 文件，并能在多个引擎之间自动回退。\n\n项目支持多种引擎，包括本地系统语音、云 API、免费服务封装、本地神经模型和语音克隆方案。推荐使用 QwenEngine（GPU 或 CPU），提供多语言语音合成、语音克隆和低延迟流式输出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装系统引擎：pip install \"realtimetts[system]\"",
+  "Linux 需先安装 PortAudio：sudo apt-get install python3-dev portaudio19-dev",
+  "macOS 需先安装 PortAudio：brew install portaudio",
+  "使用 Qwen GPU 服务器：pip install \"realtimetts[qwen-server]\" 然后运行 realtimets-qwen-server --device gpu --clone-mode speaker_only --demo-voice",
+  "使用 Qwen CPU 服务器：pip install \"realtimetts[qwen-cpu-server]\" 然后运行 realtimets-qwen-server --device cpu --cpu-threads 6 --cpu-codec-threads 6 --cpu-core-split --cpu-stream-frames 1 --cpu-fused-attention --startup-buffer-ms 80 --onset-silence-profile qwen3_tts_12hz_0_6b_base_q8_v1 --demo-voice"
+ ],
+ "summary": "RealtimeTTS 是一个 Python 文本转语音库，专注于低延迟实时合成，能将字符串、生成器或 LLM token 流直接转为音频。它支持本地播放、流式传输和 WAV 输出，并集成多种引擎（系统语音、云 API、本地神经模型等），可在引擎间回退。适合构建实时语音助手、对话式 AI 等需要流式 TTS 的场景。",
+ "tagline": "低延迟实时文本转语音 Python 库"
+}

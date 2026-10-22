@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在英文语音识别场景中降低推理成本、提升速度的开发者，以及内存受限的端侧或移动应用开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "提供多个蒸馏检查点，覆盖不同参数量与性能需求",
+  "相比 Whisper large-v3 推理速度提升约 6 倍，模型缩小约 49%",
+  "在分布外评估集上词错误率与 Whisper 差距在 1% 以内",
+  "兼容 Hugging Face Transformers 的自动语音识别 pipeline",
+  "支持短音频（<30 秒）和基于滑动窗口的长音频转录"
+ ],
+ "intro": "Distil-Whisper 是 OpenAI Whisper 的蒸馏版本，专为英文语音识别设计。它通过知识蒸馏在保持识别准确率的同时大幅降低模型规模和推理延迟，官方数据显示其速度约为 Whisper large-v3 的 6 倍，模型参数减少约 49%，在分布外评估集上的词错误率（WER）差距在 1% 以内。\n\n项目提供了多个规模的检查点，包括 distil-large-v3、distil-large-v2、distil-medium.en 和 distil-small.en。其中 distil-large-v3 性能最强且兼容所有 Whisper 库，适合大多数应用；distil-small.en 仅 166M 参数，适合内存受限的端侧或移动场景。需要注意的是，Distil-Whisper 目前仅支持英文识别，多语言场景建议使用 Whisper Turbo。\n\n该项目已集成到 Hugging Face Transformers（4.35 及以上版本），可通过 AutoModelForSpeechSeq2Seq 和 pipeline 快速调用，支持短音频和长音频转录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install --upgrade pip && pip install --upgrade transformers accelerate datasets[audio]",
+  "加载模型和处理器：使用 AutoModelForSpeechSeq2Seq.from_pretrained(\"distil-whisper/distil-large-v3\") 和 AutoProcessor.from_pretrained(\"distil-whisper/distil-large-v3\")",
+  "构建 pipeline：pipeline(\"automatic-speech-recognition\", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor, ...)",
+  "转录音频：调用 pipe(sample) 或 pipe(\"audio.mp3\") 并打印 result[\"text\"]"
+ ],
+ "summary": "Distil-Whisper 是 Whisper 的蒸馏版本，面向英文语音识别场景，在保持识别准确率接近原版的前提下，显著降低模型体积和推理延迟。它适合需要快速部署英文转录服务的开发者，也适合内存有限的端侧或移动应用。项目提供多个规模的检查点，并已集成到 Hugging Face Transformers，可通过 pipeline 快速调用。",
+ "tagline": "Whisper 的蒸馏版，英文语音识别快 6 倍、小 49%"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 .NET 应用中本地集成大语言模型的开发者，以及对 C# 生态和跨平台部署有需求的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "基于 llama.cpp，在 CPU 和 GPU 上高效运行 LLaMA 等模型",
+  "提供 NuGet 后端包，覆盖 Windows、Linux、Mac 的 CPU、CUDA、Vulkan 等",
+  "支持 GGUF 格式模型文件，可从 Huggingface 获取或自行转换",
+  "提供高层 API 和 RAG 支持，便于在 .NET 应用中部署 LLM",
+  "包含控制台聊天示例及 Unity、Blazor、ASP.NET 等集成示例"
+ ],
+ "intro": "LLamaSharp 是一个基于 llama.cpp 的 C#/.NET 跨平台库，用于在本地设备上高效运行 LLaMA 及其他大语言模型。它同时支持 CPU 和 GPU 推理，并提供更高层的 API 与 RAG 支持，方便将大模型集成到 .NET 应用中。\n\n项目通过 NuGet 包分发，提供 CPU、CUDA、Vulkan 等后端包，无需自行编译 C++ 代码即可使用。模型需使用 GGUF 格式，可从 Huggingface 下载或自行转换。README 中包含控制台聊天示例，并列出 BotSharp、Langchain 等集成以及 Unity、Blazor、ASP.NET 等示例项目。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 NuGet 安装 LLamaSharp 包：Install-Package LLamaSharp",
+  "安装至少一个后端包，例如 LLamaSharp.Backend.Cpu 或 LLamaSharp.Backend.Cuda12",
+  "准备 GGUF 格式的模型文件，可从 Huggingface 搜索下载或自行转换",
+  "参考 README 中的示例代码，使用 LLamaWeights.LoadFromFile 加载模型并创建上下文进行对话"
+ ],
+ "summary": "LLamaSharp 是一个基于 llama.cpp 的 C#/.NET 库，让开发者能在本地设备上运行 LLaMA 等大语言模型，支持 CPU 和 GPU 推理。它通过 NuGet 提供后端包，简化了在 .NET 应用中集成大模型的过程，适合需要本地部署聊天机器人、文本生成等功能的场景。",
+ "tagline": "在 .NET 应用中本地运行 LLaMA 等大模型的跨平台库"
+}

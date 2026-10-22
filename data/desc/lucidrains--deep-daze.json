@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本生成图像感兴趣、拥有一定 GPU 资源的开发者和研究者，以及希望通过命令行快速实验 CLIP+Siren 技术的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "根据文本提示生成图像，支持调整网络层数、学习率、批量大小等参数",
+  "支持 --deeper 标志使用 32 层 Siren 网络以获得更高质量",
+  "支持 Priming 技术，用起始图像引导生成过程",
+  "支持以图像作为优化目标，而非仅文本",
+  "可保存生成过程的 GIF 动画和中间进度图像",
+  "提供 create_story 模式，通过滑动窗口处理长文本生成故事序列"
+ ],
+ "intro": "Deep Daze 是一个基于 OpenAI CLIP 和 Siren 隐式神经网络实现的文本到图像生成命令行工具。用户只需输入一段英文描述，程序便会通过优化 Siren 网络来生成与文本语义匹配的图像。该项目由 lucidrains 开发，技术思路源自 Ryan Murdock 的发现。\n\n它需要 Nvidia 或 AMD GPU 运行，推荐 16GB 显存，最低可在 4GB 显存下使用低参数设置。除了基础文本生成，还支持通过 --deeper 或 --num-layers 增加网络层数提升质量，以及使用起始图像进行引导生成（Priming）和以图像为优化目标。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install deep-daze",
+  "运行基础生成：imagine \"a house in the forest\"",
+  "使用更深网络提升质量：imagine \"shattered plates on the ground\" --deeper",
+  "调整网络层数：imagine \"stranger in strange lands\" --num-layers 32"
+ ],
+ "summary": "Deep Daze 是一个命令行工具，利用 OpenAI CLIP 和 Siren 隐式神经网络，将文本描述转化为图像。它适合想在本地 GPU 上快速实验文本生成图像技术的开发者，通过简单命令即可生成图像，并支持调整网络深度、用起始图像引导生成等进阶操作。",
+ "tagline": "用CLIP和Siren从文本生成图像的命令行工具"
+}

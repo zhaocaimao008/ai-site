@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想把电子书转成有声书、又希望数据留在本地的用户，以及愿意用命令行或自建服务处理书籍的开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "将 FB2、EPUB、DOCX、PDF、TXT 电子书转为带章节的 .m4b / .mp3 有声书",
+  "本地运行 CosyVoice 3 克隆声音，免费且离线，文本不上传",
+  "可选接入 ElevenLabs、OpenAI、Gemini、Cartesia、Fish Audio 等在线引擎",
+  "支持从录音、上传样本、视频或文本描述生成旁白声音",
+  "提供网页 studio（49 种界面语言）和命令行两种使用方式",
+  "安装脚本自动配置 uv、ffmpeg、PyTorch 并下载模型"
+ ],
+ "intro": "Folivox 是一个把整本电子书转成有声书的工具，支持 FB2、EPUB、DOCX、PDF、TXT 格式，输出带章节、封面和元数据的 .m4b 或 .mp3 文件。默认使用本地运行的 CosyVoice 3 模型，从短样本克隆声音，全程离线，不需要账号或按字符付费。\n\n除了本地引擎，也可以接入 ElevenLabs、OpenAI、Gemini、Cartesia 或 Fish Audio 等在线服务，使用自己的 API key。提供网页版 studio（folivox ui）和命令行两种操作方式，流程和结果一致。项目还包含文本清理、质量检查、崩溃安全日志等环节。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS/Linux 运行：curl -fsSL https://raw.githubusercontent.com/vatavale/folivox/main/scripts/install.sh | bash",
+  "Windows PowerShell 运行：irm https://raw.githubusercontent.com/vatavale/folivox/main/scripts/install.ps1 | iex",
+  "新开终端运行 folivox ui 打开 studio，拖入书籍、选择声音并点击 Render audiobook",
+  "或使用命令行：folivox render book.fb2",
+  "更新版本：folivox update"
+ ],
+ "summary": "Folivox 解决的是把整本电子书制作成有声书的问题。它支持多种电子书格式，默认用本地 CosyVoice 3 模型克隆声音并离线朗读，文本不会上传；也可以按需接入在线语音服务。适合想把藏书转成有声书、又在意隐私或成本的用户，提供网页界面和命令行两种操作方式。",
+ "tagline": "本地把电子书转成有声书，支持声音克隆"
+}

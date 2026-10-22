@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Cursor、Codex 等 AI 编码工具的开发者，以及需要为 AI 应用添加上下文控制和审计能力的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "多种文件读取模式（full、map、signatures、diff 等），支持按需展开",
+  "压缩 git、npm、cargo、docker 等 85+ 种 shell 输出模式",
+  "基于 Tree-sitter 的 27 种语言结构化理解",
+  "通过 MCP、hooks 和代理路径集成现有 AI 编码工具",
+  "配置路径权限、内容过滤和上下文预算",
+  "记录本地任务、决策和上下文使用证据，支持审计"
+ ],
+ "intro": "LeanCTX 是一个位于 AI 工具与信息源之间的上下文网关。它从文件、仓库、工具结果等来源中筛选与任务相关的上下文，在交付给 AI 应用或代理之前应用访问控制和内容过滤，并记录可观察的上下文操作与交付证据。\n\n开源引擎 LeanCTX Engine 以 Rust 编写，可通过 CLI、MCP、hooks 和代理路径在本地运行，支持 Claude Code、Cursor、Codex 等编码工具。它提供多种文件读取模式、shell 输出压缩、基于 Tree-sitter 的结构化理解，以及跨会话的本地任务记录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 LeanCTX Engine（支持 crates.io、npm、AUR 等渠道）",
+  "运行 lean-ctx setup 配置支持的集成",
+  "在 Claude Code、Cursor 或 Codex 中开始使用"
+ ],
+ "summary": "LeanCTX 是一个上下文网关，放在 AI 工具与文件、仓库、工具结果之间，帮助筛选任务相关上下文、应用访问与内容控制，并记录可观察的交付证据。它适合使用 Claude Code、Cursor 等编码工具的开发者，通过 CLI、MCP、hooks 和代理路径集成，在本地运行，不改变原有模型调用和应用流程。",
+ "tagline": "为 AI 系统提供上下文网关，控制模型可见信息"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 Claude 等 AI 代理协助处理 LinkedIn 资料查询、公司调研、职位搜索和消息管理的开发者与用户。",
+ "date": "2026-10-22",
+ "features": [
+  "读取个人资料，包括经历、教育、技能、项目和帖子等部分",
+  "读取公司信息、公司帖子、员工列表，并支持按关键词搜索公司",
+  "按关键词和地点搜索职位，并获取职位 ID 以查看详情",
+  "列出收件箱会话、读取会话消息、按关键词搜索会话",
+  "发送连接请求（可附备注）或接受收到的请求",
+  "发送消息前需要确认"
+ ],
+ "intro": "这是一个开源的 MCP（Model Context Protocol）服务器，让 Claude 等兼容 MCP 的 AI 代理通过你自己的浏览器会话访问 LinkedIn。它可以读取个人资料、公司信息、职位和消息，并支持发送连接请求、管理会话等操作。\n\n项目用 Python 编写，提供 uvx、Claude Desktop MCP Bundle、Codex/Claude Code/Cursor 插件以及 Docker 等多种安装方式。README 中列出了 get_person_profile、search_jobs、get_inbox、send_message 等具体工具，覆盖个人资料、公司、职位搜索和消息管理。\n\n该项目是独立开源项目，与 LinkedIn 或 Microsoft 没有关联。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 uvx 快速安装（推荐方式）",
+  "或安装 Claude Desktop MCP Bundle（原 DXT）",
+  "或使用 Codex、Claude Code、Cursor 插件",
+  "或通过 Docker 部署通用 MCP 服务器"
+ ],
+ "summary": "这个项目提供一个 MCP 服务器，让 Claude 等兼容 MCP 的 AI 代理通过你自己的浏览器会话访问 LinkedIn。它适合需要让 AI 协助读取个人资料、调研公司、搜索职位或管理消息与连接请求的场景，并支持 uvx、桌面扩展、编辑器插件和 Docker 等多种接入方式。",
+ "tagline": "让 AI 代理通过浏览器会话访问 LinkedIn 的 MCP 服务器"
+}

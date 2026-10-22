@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想在本地或 Colab 中快速运行 DALL·E Mini 文本生成图像的开发者，以及对轻量级 PyTorch 推理实现感兴趣的读者。",
+ "date": "2026-10-22",
+ "features": [
+  "将 DALL·E Mini（mega 权重）移植为 PyTorch 推理代码，依赖极少",
+  "支持文本生成图像，可指定网格大小、随机种子、温度、top_k 等参数",
+  "支持流式渐进输出，适合在 notebook 中交互查看生成过程",
+  "可生成单张图像或返回 FloatTensor 以便后续处理",
+  "提供命令行脚本 image_from_text.py 直接根据文本生成图片"
+ ],
+ "intro": "min(DALL·E) 是 Boris Dayma 的 DALL·E Mini（使用 mega 权重）的快速精简移植版本，已剥离训练代码并转换为 PyTorch，仅用于推理。项目只依赖 numpy、requests、pillow 和 torch，安装后即可在本地或 Colab 中根据文本生成图像。\n\n它支持一次性生成 3x3 或自定义网格的图像，也支持流式渐进输出，方便在 notebook 中交互使用。README 给出了在 T4、P100、A10G 等 GPU 上的生成耗时参考，并说明可通过 dtype、device 等参数控制显存占用与运行设备。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install min-dalle",
+  "在 Python 中导入并初始化模型：from min_dalle import MinDalle; model = MinDalle(models_root='./pretrained', dtype=torch.float32, device='cuda', is_mega=True, is_reusable=True)",
+  "调用 model.generate_image(text='Nuclear explosion broccoli', ...) 生成图像并显示",
+  "或使用命令行：python image_from_text.py --text='artificial intelligence' --no-mega"
+ ],
+ "summary": "min(DALL·E) 把 DALL·E Mini 的 mega 权重模型精简并移植到 PyTorch，只保留推理功能，依赖仅 numpy、requests、pillow 和 torch。它适合想在本地或 Colab 中根据文字快速生成图片的开发者，支持自定义网格、随机种子和流式输出，也提供命令行调用方式。",
+ "tagline": "DALL·E Mini 的轻量 PyTorch 推理移植版"
+}

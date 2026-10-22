@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管 AI Agent 平台、构建 AI 客服或需要可控执行边界的开发者与团队。",
+ "date": "2026-10-22",
+ "features": [
+  "Agent 配置与执行：支持配置、发布、回滚，通过异步 LangGraph ReAct 循环进行推理和工具调用",
+  "知识与检索：管理文档、分块、索引和发布版本，支持关键词检索和可选 Milvus 向量索引",
+  "Agent 记忆：可配置读写、抽取与审核模式、注入上限，并查看客户级记忆",
+  "模型网关：管理 Chat、Embedding、Rerank、OCR、语音模型的连接和版本化配置",
+  "人工协作与工单：支持会话接管、工单草稿和人工确认后创建工单",
+  "可观测与评估：查看执行记录、模型与工具调用、评估结果和操作审计"
+ ],
+ "intro": "NexusDesk 是一个开源、可自托管、可扩展的通用 Agent 平台，目标是把 AI 从能力演示推进到稳定、可度量的业务服务。它围绕 ReAct 与 Harness 工程构建，首个完整的参考应用是 AI 客服，用于在真实工作流中验证平台能力。\n\n平台分为核心平台、扩展契约、业务能力和应用四层。共享执行循环为：请求 → 检索上下文 → 决策 → 调用工具 → 人工确认 → 执行 → 记录 → 评估。Harness 负责权限、执行边界、记忆、人工转接和审计，是 Agent 执行循环之外的工程控制层。\n\n默认部署只需要 PostgreSQL，同时承担数据存储、任务队列和跨进程消息传递；Redis、专用消息队列、Kubernetes 等可按需追加。项目提供快速体验和生产部署两种方式，并内置九个行业案例集。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Docker 和 Docker Compose v2（Docker Desktop 使用 Linux 容器）",
+  "Linux / macOS 运行：sh nexusdesk quickstart；Windows PowerShell 运行：.\\nexusdesk.ps1 quickstart",
+  "或使用已发布镜像：NEXUSDESK_IMAGE_REGISTRY=docker.io/groundedcore/ NEXUSDESK_VERSION=latest docker compose -f deploy/quickstart/compose.yaml up -d",
+  "打开 https://localhost:8080，选择 sample-support 会话，输入“发货需要多久？”体验知识问答，或输入“帮我创建工单”体验工单草稿与人工确认"
+ ],
+ "summary": "NexusDesk 是一个开源、可自托管的通用 Agent 平台，重点解决 AI 从演示走向稳定业务服务时的工程化问题。它用 ReAct 循环让 Agent 根据工具结果动态决策，同时由 Harness 控制权限、执行边界、记忆和人工确认。首个完整参考应用是 AI 客服，适合想自建客服系统或需要可控 Agent 执行环境的团队。",
+ "tagline": "开源可自托管的通用 Agent 平台，首个参考应用是 AI 客服"
+}

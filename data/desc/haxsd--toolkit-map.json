@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Windows 上使用 AI 编程助手（如 Cursor、Claude Code、Codex）的开发者，尤其是项目需要特定工具版本、本机存在多个副本的场景。",
+ "date": "2026-10-22",
+ "features": [
+  "读取项目版本声明（mise.toml、.tool-versions、.nvmrc、Node engines 等）",
+  "扫描 PATH、工具仓库、mise 安装目录和手工登记位置，发现本机工具副本",
+  "返回满足项目要求的绝对路径、版本和验证状态，不满足时返回 version_mismatch",
+  "提供只读 MCP 工具（toolkit_find、toolkit_status、toolkit_doctor），支持 Cursor、Claude Code、Codex 等客户端",
+  "支持将工具发现规则写入项目 AGENTS.md，供 AI 助手遵循",
+  "安装为独立显式动作，支持 -WhatIf 预览，不自动修改环境"
+ ],
+ "intro": "toolkit-map 是一个面向 Windows 的工具发现与版本选择工具，主要解决 AI 编程助手直接使用 PATH 中的工具时，可能遇到版本不匹配或不知道本机有哪些副本的问题。它会在调用前读取项目中的版本声明（如 mise.toml、.tool-versions、.nvmrc 等），扫描本机已安装的工具副本，并返回满足项目要求的绝对路径、版本和验证状态。\n\n该工具默认只读，不安装工具、不修改 PATH，安装是独立的显式操作。它支持通过 MCP 接入 Cursor、Claude Code、Codex 等客户端，也支持将规则写入项目的 AGENTS.md 文件，让助手在调用工具前先查询地图。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在项目目录打开 PowerShell，克隆仓库：git clone --branch v1.1.1 --depth 1 https://github.com/haxsd/toolkit-map $installDir",
+  "定义 toolkit 函数：function toolkit { & $ps -NoProfile -ExecutionPolicy Bypass -File $map @args }",
+  "预览接入：toolkit setup -Project $project -WhatIf -Json",
+  "执行接入：toolkit setup -Project $project",
+  "验证：toolkit doctor -Project $project -Json 和 toolkit find git -Project $project"
+ ],
+ "summary": "toolkit-map 是一个 Windows 上的工具发现与版本选择工具，帮助 AI 编程助手在调用 node、python、git 等命令前，先读取项目中的版本声明，再扫描本机已安装的副本，返回满足要求的绝对路径和验证状态。它适合项目需要特定工具版本、本机存在多个副本的场景，可接入 Cursor、Claude Code 等助手，避免因 PATH 版本不符导致的构建失败或反复试错。",
+ "tagline": "让 AI 编程助手按项目要求选对工具版本并返回可验证路径"
+}

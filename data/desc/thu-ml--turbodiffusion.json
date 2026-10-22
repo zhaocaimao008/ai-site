@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速生成视频的研究者与开发者，尤其是使用 Wan 系列扩散模型、希望在单卡上大幅缩短推理时间的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "端到端视频扩散生成加速 100～200 倍（单卡 RTX 5090）",
+  "集成 SageAttention 与 SLA 进行注意力加速",
+  "使用 rCM 进行时间步蒸馏，支持 1–4 步采样",
+  "提供 Wan2.1 T2V 和 Wan2.2 I2V 的 Turbo 模型 checkpoint",
+  "支持 480p 与 720p 分辨率输出",
+  "提供量化与非量化 checkpoint，适配不同显存 GPU"
+ ],
+ "intro": "TurboDiffusion 是 thu-ml 开源的视频生成加速框架，官方实现，目标是在单张 RTX 5090 上把端到端扩散生成速度提升 100～200 倍，同时保持视频质量。它主要组合了 SageAttention、SLA（Sparse-Linear Attention）做注意力加速，以及 rCM 做时间步蒸馏。\n\n项目提供基于 Wan2.1 和 Wan2.2 的多个 Turbo 模型 checkpoint，覆盖文生视频（T2V）和图生视频（I2V），支持 480p 与 720p 输出。README 中给出一个 5 秒视频从 184 秒缩短到 1.9 秒的示例。\n\n注意：当前模型只在长英文 prompt 上训练，使用其他类型 prompt 时建议先做增强；checkpoint 和论文尚未最终定稿，后续会更新以提升质量。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建并激活 conda 环境：conda create -n turbodiffusion python=3.12 && conda activate turbodiffusion",
+  "安装 TurboDiffusion：pip install turbodiffusion --no-build-isolation",
+  "下载 VAE 和 umT5 文本编码器 checkpoint 到 checkpoints 目录",
+  "根据 GPU 显存选择下载量化或非量化模型 checkpoint",
+  "运行 T2V 推理脚本：python turbodiffusion/inference/wan2.1_t2v_infer.py --model Wan2.1-1.3B --dit_path checkpoints/TurboWan2.1-T2V-1.3B-480P-quant.pth --resolution 480p --prompt \"...\" --num_steps 4 --quant_linear --attention_type sagesla --sla_topk 0.1"
+ ],
+ "summary": "TurboDiffusion 是一个视频扩散模型加速框架，通过 SageAttention、SLA 注意力加速和 rCM 时间步蒸馏，在单张 RTX 5090 上把端到端生成速度提升 100～200 倍。它提供基于 Wan2.1 和 Wan2.2 的 Turbo 模型，支持文生视频和图生视频，适合需要快速产出视频的研究与开发场景。",
+ "tagline": "单卡加速视频扩散模型 100–200 倍"
+}

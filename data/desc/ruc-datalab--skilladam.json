@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用 Codex、Claude Code、Cursor Agent 或 GitHub Copilot，并希望系统性地改进自己 agent skill 的开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "在 Codex、Claude Code、Cursor Agent、GitHub Copilot 中安装为插件",
+  "对现有 SKILL.md 做任务测试、提出修改并验证后更新",
+  "利用历史修订反馈指导下一轮改进",
+  "自适应调整每轮修改的幅度",
+  "支持人工逐条审阅和选择要应用的编辑",
+  "支持中断后从同一 run 目录继续优化"
+ ],
+ "intro": "SkillAdam 是一个面向 AI Agent 技能文件（SKILL.md）的自动优化工具。你给它一个已有的 skill 和想改进的目标，它会在相关任务上测试当前 skill，根据结果提出修改，并在验证通过后才更新文件。\n\n它支持 Codex、Claude Code、Cursor Agent 和 GitHub Copilot，以插件形式安装到这些 agent 中，不需要本地 GPU、Docker 或单独的模型 API key，直接复用你已有的 agent 登录和配额。\n\n每次优化会参考上一轮修改的反馈，并自适应调整改动幅度；默认自动挑选改动，也可以要求先展示候选编辑、由你逐条接受或拒绝。目前一次只能优化一个 SKILL.md。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/ruc-datalab/SkillAdam.git && cd SkillAdam",
+  "按平台运行安装脚本，例如 Claude Code：./integrations/claude-code/install.sh（Windows 用 .\\integrations\\claude-code\\install.ps1）",
+  "重启 agent（VS Code 中执行 Developer: Reload Window）",
+  "在包含 skill 的工作区中调用 skilladam-optimize，给出 SKILL.md 路径和改进目标"
+ ],
+ "summary": "SkillAdam 用来改进 AI Agent 的 SKILL.md 技能文件：你说明想提升的方向，它会在相关任务上测试当前 skill，根据结果提出修改，并只在验证通过后写回文件。它可作为插件安装在 Codex、Claude Code、Cursor Agent 和 GitHub Copilot 中，复用现有登录与配额，适合希望用任务反馈而不是手工试错来迭代 agent 技能的开发者。",
+ "tagline": "在常用 AI Agent 里自动测试并迭代优化 SKILL.md"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地硬件上尝试 AI 电影制作的开发者、影视创作者和技术爱好者。",
+ "date": "2026-10-22",
+ "features": [
+  "支持文本生成图片（Qwen-Image-2.1、FLUX3-K、MOSS-Image）",
+  "支持文本生成带声音的视频（MiniMax H3 / FastH3）",
+  "集成 Fish Audio Drama 3 语音合成与 MiniMax Music 3 音乐生成",
+  "提供类似剧组规划的 Slate 工作流",
+  "一键安装脚本适配 Mac 与 DGX Spark，自动检测硬件"
+ ],
+ "intro": "Imagination Studio 是一个可在本地运行的 AI 电影制作工具，由 Keys 与 Sam Wasserman 合作开发，基于 TensorFold 引擎。它把电影制作流程拆解为类似剧组的规划与渲染步骤，用户可以在自己的机器上完成从图片生成到视频合成的全过程。\n\n项目支持 Apple Silicon Mac 和 NVIDIA DGX Spark 等硬件，集成了 Qwen-Image、FLUX3-K、MiniMax H3 等模型，能够生成带声音的视频、配音和音乐。安装脚本会检查硬件资源并自动配置所需环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Mac 上运行 `brew install python@3.11 uv ffmpeg` 安装依赖",
+  "执行 `bash oneshot-setup.sh --all --app` 安装全部功能及可双击应用",
+  "在 DGX Spark 上运行 `bash oneshot-setup.sh` 安装核心功能（图片和 FastH3 视频）",
+  "使用 `bash scripts/app.sh` 启动 Web 应用（需设置 PREFIX 等环境变量）"
+ ],
+ "summary": "Imagination Studio 是一个本地 AI 电影工作室，让用户在 Mac 或 NVIDIA DGX Spark 上完成从图片生成到带声音视频制作的全流程。它集成了多种图像、视频、语音和音乐模型，并提供类似剧组规划的 Slate 工作流，适合想要在本地硬件上探索 AI 电影制作的创作者和开发者。",
+ "tagline": "本地运行的 AI 电影工作室，支持 Mac 与 DGX Spark"
+}

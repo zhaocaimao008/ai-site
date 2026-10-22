@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合想系统了解 Prompt 工程与大模型论文的开发者、学生和研究者，也适合需要查找开源模型、数据集与框架资源的从业者。",
+ "date": "2026-10-22",
+ "features": [
+  "按主题汇总开源模型、评测榜单、框架、数据集与 AIGC 应用资源",
+  "「解密 Prompt」系列博客逐篇解读 Prompt 与 LLM 论文，附原文链接",
+  "覆盖 Prompt 微调、Instruction Tuning、RLHF、COT、Agent、RAG 等方向",
+  "提供 Prompt 教程、经典博客与 AI 会议访谈的索引",
+  "记录 AI 工具实践过程，如 opencode、browser-use、Claude Code 等"
+ ],
+ "intro": "DecryptPrompt 是一个围绕 Prompt 工程与大语言模型的学习资源汇总仓库。主目录按主题整理了开源模型与评测榜单、推理/微调/Agent/RAG/Prompt 框架、SFT/RLHF/Pretrain 数据集、AIGC 各领域应用、Prompt 教程与会议访谈，以及推荐工具合集，方便按需查找。\n\n仓库的核心内容是「解密 Prompt」系列博客，以系列文章形式逐篇解读 Prompt 与 LLM 相关论文，覆盖 Tunning-Free Prompt、Prefix-tuning、Instruction Tuning、RLHF、思维链 COT、LLM Agent、RAG、多模态等方向，每篇对应腾讯云开发者社区的一篇文章链接。此外还有「和 AI 一起搞事情」的实践记录。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库把 Prompt 与大模型相关的学习材料集中到一处：一边按主题列出开源模型、评测榜单、微调与 Agent 框架、训练数据集和 AIGC 应用，一边用「解密 Prompt」系列博客逐篇讲解相关论文。适合想系统补课或按主题查找资源的开发者与研究者，直接浏览目录和文章链接即可使用。",
+ "tagline": "汇总 Prompt 与 LLM 论文、开源资源与 AIGC 应用的导航仓库"
+}

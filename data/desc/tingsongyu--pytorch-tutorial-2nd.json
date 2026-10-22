@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合 AI 自学者、在校学生、AI 产品经理及跨领域开发者，从零基础入门到进阶工程化部署均可使用。",
+ "date": "2026-10-22",
+ "features": [
+  "上篇：PyTorch 基础入门，涵盖环境搭建、核心模块与自定义代码结构",
+  "中篇：CV 八大任务、NLP 五大任务及 LLM 部署与行业应用案例",
+  "下篇：ONNX 与 TensorRT 推理部署，含 PTQ 和 QAT 量化实战",
+  "提供在线阅读与配套 Jupyter Notebook 代码，开源免费",
+  "结构清晰，理论与实践结合，适合系统性学习"
+ ],
+ "intro": "《PyTorch实用教程》（第二版）是一本开源免费的中文深度学习教程，内容分为上、中、下三篇。上篇面向零基础读者，介绍 PyTorch 开发环境搭建、数据、模型、优化、可视化等核心模块，并引导构建自己的代码结构。中篇聚焦产业应用，覆盖计算机视觉（图像分类、分割、检测、跟踪、GAN、Diffusion、图像描述与检索）、自然语言处理（RNN、LSTM、Transformer、BERT、GPT 及文本分类、机器翻译、NER、QA、文章生成）和大语言模型（Qwen、ChatGLM、Baichuan、Yi 的部署与代码分析，以及 GPT Academic 应用）。下篇讲解推理部署，包括 ONNX 和 TensorRT 的原理与使用，以及 PTQ、QAT 量化实战。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一本开源免费的中文 PyTorch 教程，旨在帮助读者从零基础逐步掌握深度学习开发与落地。内容覆盖 PyTorch 基础、计算机视觉与自然语言处理实战、大语言模型部署，以及 ONNX/TensorRT 推理加速与量化。适合自学者、学生和跨领域开发者系统学习，也可作为项目实践的参考。",
+ "tagline": "《PyTorch实用教程》第二版，涵盖基础、CV/NLP/LLM应用与推理部署。"
+}

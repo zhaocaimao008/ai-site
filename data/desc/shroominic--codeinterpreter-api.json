@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自建代码解释器能力的 Python 开发者、数据科学工作者，以及需要将 LLM 代码执行集成到应用中的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "数据集分析与可视化，如绘制比特币年度走势图",
+  "支持互联网访问和自动安装 Python 包",
+  "接受文本和文件输入，返回文本和文件输出",
+  "具备对话记忆，能基于历史输入回复",
+  "除 OpenAI API 外可全部本地运行",
+  "可通过 CodeBox API 进行生产环境扩展"
+ ],
+ "intro": "Code Interpreter API 是一个用 LangChain 实现 ChatGPT Code Interpreter 的开源项目，后端使用 CodeBox 提供沙箱化的 Python 代码执行环境。它允许开发者通过 OpenAI API Key 在本地运行除 LLM 之外的所有组件，实现代码生成与执行。\n\n项目支持数据集分析、股票图表绘制、图像处理等任务，具备互联网访问和自动安装 Python 包的能力，并能处理文本与文件的输入输出。会话记忆功能让模型可以基于之前的对话上下文进行回复。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "获取 OpenAI API Key 并设置环境变量：export OPENAI_API_KEY=sk-**********",
+  "安装包：pip install \"codeinterpreterapi[all]\"",
+  "在 Python 中导入 CodeInterpreterSession 和 settings",
+  "使用 with CodeInterpreterSession() as session: 创建会话",
+  "调用 session.generate_response(\"Plot the bitcoin chart of year 2023\") 并 response.show() 查看结果"
+ ],
+ "summary": "Code Interpreter API 是一个基于 LangChain 的开源项目，复现了 ChatGPT Code Interpreter 的能力。它通过 CodeBox 沙箱执行 Python 代码，让开发者用 OpenAI API Key 在本地运行除 LLM 外的全部组件。适合需要让模型分析数据集、绘制图表或处理文件的场景，也支持对话记忆和文件输入输出。",
+ "tagline": "基于 LangChain 的开源 ChatGPT Code Interpreter 实现"
+}

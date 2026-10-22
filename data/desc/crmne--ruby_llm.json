@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合 Ruby 和 Rails 开发者，以及希望在 Ruby 应用中集成 AI 能力的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "统一 API 接入 23 个模型提供商，支持托管与本地模型切换",
+  "内置 Agent、工具调用、结构化输出、流式响应与成本追踪",
+  "支持视觉、音频、文档、OCR、图像与视频生成等多模态能力",
+  "与 Rails 深度集成，提供 Active Record 持久化、Hotwire 流式传输和生成器",
+  "支持代码沙箱执行、MCP 连接、技能加载与评估框架",
+  "提供提示模板、工作流、异步并发与模型注册表等运行时特性"
+ ],
+ "intro": "RubyLLM 是一个面向 Ruby 开发者的 AI 框架，提供统一 API 来调用 OpenAI、Anthropic、Gemini、Ollama 等 23 个模型提供商，让应用无需重写即可在托管与本地模型间切换。\n\n它不仅封装了对话、视觉、音频、文档、嵌入、图像生成等能力，还内置了 Agent、工具调用、结构化输出、流式响应、成本追踪等运行时特性，并与 Rails 深度集成，支持 Active Record 持久化、Hotwire 流式传输和生成器。\n\n项目强调“用 Ruby 的方式构建 AI 功能”，将模型、工具、Agent、代码沙箱、评估等组件设计为协同工作，适合在 Ruby 或 Rails 应用中快速落地 AI 特性。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Rails 集成：bin/rails generate ruby_llm:install",
+  "执行数据库迁移：bin/rails db:migrate",
+  "加载模型注册表：bin/rails ruby_llm:load_models",
+  "可选添加聊天界面：bin/rails generate ruby_llm:chat_ui",
+  "启动 Rails 服务并访问 http://localhost:3000/chats 试用"
+ ],
+ "summary": "RubyLLM 是一个 Ruby 生态的 AI 框架，解决在 Ruby 或 Rails 应用中接入多种大模型时接口不统一、集成成本高的问题。它提供统一 API 调用 23 个提供商，并内置 Agent、工具调用、结构化输出、多模态处理等能力，与 Rails 的 Active Record 和 Hotwire 深度整合。适合希望用 Ruby 方式快速构建 AI 功能的开发者和团队。",
+ "tagline": "Ruby 生态的统一 AI 框架，支持多模型与 Rails 集成"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Zotero 管理文献、希望借助大语言模型提升阅读和分析效率的研究人员、学生和开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "与当前 PDF、选中文本、图表或上传文档进行对话，回答附带可跳转的引用",
+  "一键生成论文摘要，或对选中段落进行解释",
+  "比较多个论文或添加外部文件作为额外上下文",
+  "将回答、对话和研究笔记保存到 Zotero 笔记或本地 Markdown 文件夹",
+  "Agent 模式支持库级别的阅读、搜索、标记、元数据编辑和整理工作流",
+  "支持多种模型后端：API 密钥、本地模型、ChatGPT WebChat、Codex App Server、Claude Code"
+ ],
+ "intro": "llm-for-zotero 是一个开源的 Zotero 插件，把大语言模型集成到 Zotero 的 PDF 阅读器中。你可以在不离开文献库的情况下，对当前论文提问、生成摘要、查看图表、比较多个文献，并把回答保存为笔记。\n\n它支持多种后端，包括标准 API 提供商、本地 OpenAI 兼容模型、WebChat、Codex App-Server 和 Claude Code。插件还提供 Agent 模式，用于库级别的搜索、标记、元数据整理和笔记编辑等操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载最新的 .xpi 文件",
+  "在 Zotero 中打开 工具 -> 插件 -> 齿轮图标 -> 从文件安装插件，选择 .xpi 文件",
+  "重启 Zotero",
+  "打开 首选项 -> llm-for-zotero，选择提供商，输入 Base URL、密钥和模型，点击 Test Connection",
+  "在 Zotero 中打开 PDF，点击右侧工具栏的 LLM Assistant 图标"
+ ],
+ "summary": "llm-for-zotero 是一个 Zotero 插件，将大语言模型接入 PDF 阅读器，让用户可以直接对论文提问、生成摘要、查看图表和比较文献，并将结果保存为笔记。它支持多种模型后端和 Agent 模式，适合需要高效阅读和分析文献的研究人员。",
+ "tagline": "在 Zotero 中直接与论文对话的 AI 研究助手"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 JavaScript/TypeScript 项目中集成 Ollama 模型的开发者，包括前端和后端工程师。",
+ "date": "2026-10-22",
+ "features": [
+  "提供 chat 和 generate 接口，支持对话与文本生成",
+  "支持流式响应，通过 AsyncGenerator 逐段返回结果",
+  "可在 Node.js 或浏览器中导入使用",
+  "支持图片输入、工具调用、JSON 格式输出等高级参数",
+  "支持本地 Ollama 和云端模型（通过 API key）",
+  "提供模型管理方法：pull、push、create、delete 等"
+ ],
+ "intro": "Ollama JavaScript Library 是 Ollama 的官方 JavaScript 客户端，让开发者能在 JavaScript 或 TypeScript 项目中方便地调用 Ollama 的本地或云端模型。它封装了 Ollama 的 REST API，提供 chat、generate、pull、push、create、delete 等方法。\n\n该库支持流式响应、多模态消息（图片）、工具调用、JSON 格式输出等特性，并可在 Node.js 或浏览器中使用。通过简单的配置，还能连接到 Ollama 云端运行更大的模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：npm i ollama",
+  "在代码中导入：import ollama from 'ollama'",
+  "调用 chat 方法：await ollama.chat({ model: 'llama3.1', messages: [{ role: 'user', content: 'Why is the sky blue?' }] })",
+  "如需流式响应，设置 stream: true 并遍历 AsyncGenerator"
+ ],
+ "summary": "Ollama JavaScript Library 是 Ollama 的 JavaScript 客户端，用于在 JS/TS 项目中调用本地或云端的大语言模型。它封装了 Ollama 的 REST API，提供对话、生成、模型管理等方法，支持流式响应和图片输入，适合需要快速集成模型能力的开发者。",
+ "tagline": "Ollama 的 JavaScript 客户端库"
+}

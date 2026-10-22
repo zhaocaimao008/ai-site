@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Linux 桌面环境中使用 ChatGPT 官方桌面应用，并且偏好通过系统包管理器安装的开发者与普通用户。",
+ "date": "2026-10-22",
+ "features": [
+  "基于 OpenAI 官方签名的 Linux .deb 包重新打包，保留官方 Electron 运行时和内置工具",
+  "提供 deb、RPM、pacman、AppImage 和 Nix 等多种安装格式",
+  "支持 Debian/Ubuntu、Fedora/openSUSE、Arch、NixOS 等主流 Linux 发行版",
+  "支持 Wayland 和 X11 显示协议",
+  "提供图形化引导安装器，可选择功能并查看构建进度",
+  "可选功能默认关闭，用户可自行启用"
+ ],
+ "intro": "codex-desktop 是一个社区维护的非官方发行版，用于在 Linux 上安装和运行 OpenAI 官方的 ChatGPT 桌面应用。它从 OpenAI 签名的 Linux .deb 包中提取官方 Electron 运行时、原生模块、内置的 codex 和 rg 等组件，仅对 resources/app.asar 应用必要的兼容性补丁，并重新打包为 deb、RPM、pacman、AppImage 和 Nix 等多种格式。\n\n该应用在桌面菜单中显示为 ChatGPT Community，使用带蓝色 C 标记的图标，包名和命令为 codex-desktop，安装根目录为 /opt/codex-desktop，便于与 OpenAI 官方的 ChatGPT 包区分。项目支持 Wayland 和 X11，并提供默认关闭的可选 Linux 功能，用户可按需启用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/ilysenko/codex-desktop-linux.git && cd codex-desktop-linux",
+  "推荐安装方式：make bootstrap-native（自动安装依赖、构建并安装当前发行版的原生包）",
+  "若依赖已安装，可使用：make install-native",
+  "图形化安装：./install-community",
+  "Nix 系统可直接运行：nix run github:ilysenko/codex-desktop-linux"
+ ],
+ "summary": "这个项目把 OpenAI 官方的 Linux ChatGPT 桌面应用重新打包，让 Debian、Fedora、Arch、NixOS 等发行版的用户能通过系统包管理器安装使用。它保留官方运行时和内置工具，只做必要的兼容性修改，并提供 deb、RPM、pacman、AppImage 和 Nix 等多种格式。适合想在 Linux 桌面上使用 ChatGPT 官方客户端、又希望安装方式与系统习惯一致的用户。",
+ "tagline": "在 Linux 上打包运行 OpenAI 官方 ChatGPT 桌面应用"
+}

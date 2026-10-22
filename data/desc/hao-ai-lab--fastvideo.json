@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要微调或加速视频生成模型的研究者与开发者，以及希望在本地或服务器部署实时视频生成应用的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "支持全参数微调和 LoRA 微调视频 DiT 模型",
+  "提供 DMD2 步进蒸馏与稀疏蒸馏，实现去噪加速",
+  "集成 Video Sparse Attention 稀疏注意力",
+  "支持 FSDP2、序列并行和选择性激活检查点的大规模训练",
+  "提供序列并行、多种注意力后端的推理优化",
+  "包含 Dreamverse 实时视频生成与编辑应用"
+ ],
+ "intro": "FastVideo 是一个面向视频生成模型的统一后训练与实时推理框架。它支持对双向和自回归视频扩散模型进行全参数微调、LoRA 微调，并提供数据预处理、DMD2 步进蒸馏、稀疏注意力与稀疏蒸馏等后训练能力，以提升生成速度。\n\n在推理侧，FastVideo 提供序列并行、多种注意力后端以及命令行和 Python API，并支持 H100、A100、4090 等 GPU 以及 Linux、Windows、macOS 系统。项目还包含 Dreamverse 应用，用于实时视频生成与编辑。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 uv 创建并激活 Python 3.12 环境：uv venv --python 3.12 --seed && source .venv/bin/activate",
+  "在 NVIDIA CUDA 12 环境安装：UV_TORCH_BACKEND=cu126 uv pip install fastvideo",
+  "CUDA 13 环境改用：UV_TORCH_BACKEND=cu130 uv pip install fastvideo",
+  "Apple Silicon 用户参考 MLX 安装指南，DGX Spark 用户参考对应安装指南"
+ ],
+ "summary": "FastVideo 是一个视频生成模型的加速框架，同时覆盖后训练与推理两个环节。它支持对主流视频扩散模型做全参数或 LoRA 微调，并通过蒸馏、稀疏注意力等技术缩短去噪步数；推理侧提供序列并行和多种注意力后端，可在常见 GPU 与多系统上运行。适合需要微调视频模型或部署实时视频生成应用的开发者。",
+ "tagline": "加速视频生成的统一推理与后训练框架"
+}

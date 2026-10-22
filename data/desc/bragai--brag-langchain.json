@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想系统学习并动手实现 RAG 应用的开发者，以及需要快速获得可改造 RAG 模板的工程师。",
+ "date": "2026-10-22",
+ "features": [
+  "从环境配置到基础 RAG 管线的入门 notebook",
+  "多查询（multi-query）检索与结果对比分析",
+  "逻辑路由、语义路由与结构化查询构造",
+  "多表示索引、RAPTOR 与 ColBERT 检索示例",
+  "RAG-Fusion、RRF 重排序与 Cohere 重排序",
+  "提供 full_basic_rag.ipynb 作为可定制聊天机器人模板"
+ ],
+ "intro": "这个仓库用一系列 Jupyter Notebook 系统讲解检索增强生成（RAG）的实现方式，从基础环境配置、文档加载、embedding 生成、向量库搭建，到多查询、路由、索引与重排序等进阶技巧。每个 notebook 都配有可运行的代码和说明，适合边看边动手实验。\n\n项目还提供了一个 full_basic_rag.ipynb 作为可直接改用的 RAG 聊天机器人模板。内容覆盖 ChromaDB/Pinecone、RAG-Fusion、RRF、ColBERT、CRAG 与 Self-RAG 等主题，但以引导和示例为主，需要读者自行准备 API key 和依赖环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 3.11.11（macOS 可用 brew install python@3.11）",
+  "git clone https://github.com/bRAGAI/bRAG-langchain.git && cd bRAG-langchain",
+  "python3.11 -m venv venv 并激活虚拟环境",
+  "pip install -r requirements.txt",
+  "复制 .env.example 为 .env 并配置所需 API key，然后从 [1]_rag_setup_overview.ipynb 开始运行"
+ ],
+ "summary": "这个项目用一组 Jupyter Notebook 带读者从零实现检索增强生成（RAG）应用，内容从环境配置、文档加载、embedding 与向量库搭建，逐步扩展到多查询、路由、多表示索引、重排序等进阶方法。适合想系统理解 RAG 原理并动手实验的开发者，也提供了可直接改用的基础聊天机器人模板。",
+ "tagline": "从零搭建 RAG 应用的系列 Jupyter Notebook 教程"
+}

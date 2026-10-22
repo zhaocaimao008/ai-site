@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究人体图像动画的开发者、研究人员，以及希望快速体验可控人体动画生成的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "基于 SMPL 3D 参数化模型生成深度、DWPose、法线、语义图等引导信号",
+  "支持从参考图像和引导动作生成一致的人体动画视频",
+  "提供预训练模型和示例动作数据，便于快速测试",
+  "包含推理和训练代码，支持自定义动作数据与模型微调",
+  "提供 SMPL 渲染脚本，可生成自定义引导动作",
+  "社区提供 ComfyUI 封装和 Replicate 演示"
+ ],
+ "intro": "Champ 是复旦大学等机构在 ECCV 2024 上提出的可控且一致的人体图像动画方法。它利用 3D 参数化模型（SMPL）生成深度、DWPose、法线、语义图等引导信号，驱动参考人物图像生成与目标动作一致的动画视频。\n\n项目提供了完整的推理和训练代码，支持 Ubuntu 20.04 和 Windows 11 系统，需要 CUDA 12.1 环境。用户可以从 HuggingFace 下载预训练模型和示例动作数据，通过修改配置文件运行推理脚本，生成结果保存在 results 文件夹。\n\n此外，项目还提供了 SMPL 渲染脚本和训练数据示例，方便用户自定义动作数据或重新训练模型。社区贡献了 ComfyUI 封装和 Replicate 演示，降低了使用门槛。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建 conda 环境：conda create -n champ python=3.10 && conda activate champ",
+  "安装依赖：pip install -r requirements.txt（Windows 推荐使用 poetry install --no-root）",
+  "下载预训练模型：git lfs install && git clone https://huggingface.co/fudan-generative-ai/champ pretrained_models",
+  "下载示例动作数据：git lfs install && git clone https://huggingface.co/datasets/fudan-generative-ai/champ_motions_example example_data",
+  "运行推理：python inference.py --config configs/inference/inference.yaml"
+ ],
+ "summary": "Champ 是一个基于 3D 参数化引导的人体图像动画生成项目，它通过 SMPL 模型生成深度、姿态等引导信号，驱动参考人物图像生成动作一致的视频。适合需要可控人体动画的研究者和开发者，可用于舞蹈视频生成、虚拟角色动画等场景。项目提供预训练模型和示例数据，支持快速推理和自定义训练。",
+ "tagline": "基于3D参数化引导的人体图像动画生成"
+}

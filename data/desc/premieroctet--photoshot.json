@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想了解或自建 AI 头像生成服务的开发者，以及需要参考 Next.js 全栈 AI 应用实现的技术人员。",
+ "date": "2026-10-22",
+ "features": [
+  "基于 Dreambooth 训练个性化 AI 模型",
+  "使用 Flux 文本到图像模型生成头像",
+  "通过 Replicate 在云端运行机器学习模型",
+  "集成 Stripe 处理支付",
+  "使用 Prisma 管理数据库",
+  "提供 Docker 本地开发环境"
+ ],
+ "intro": "Photoshot 是一个开源的 AI 头像生成 Web 应用，用户上传照片后，可基于 Dreambooth 训练个性化模型并生成风格化头像。项目使用 Next.js 和 Chakra UI 构建前端，Prisma 管理数据库，通过 Replicate 在云端运行机器学习模型，并集成 Stripe 处理支付。\n\n代码采用 TypeScript 编写，遵循 MIT 协议，适合想学习 AI 头像生成产品完整实现或自建类似服务的开发者参考。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：yarn install",
+  "使用 Docker 启动本地 PostgreSQL 和 maildev：docker-compose up -d",
+  "复制环境变量文件：cp .env.example .env.local，并按表格填写 DATABASE_URL、REPLICATE_API_TOKEN、STRIPE_SECRET_KEY 等变量",
+  "运行数据库迁移：yarn prisma:migrate:dev",
+  "启动开发服务器：yarn dev，然后访问 http://localhost:3000"
+ ],
+ "summary": "Photoshot 是一个开源的 AI 头像生成 Web 应用，用户上传照片后，可基于 Dreambooth 训练个性化模型并生成风格化头像。项目使用 Next.js、Chakra UI、Prisma 构建，通过 Replicate 在云端运行模型，并集成 Stripe 支付。适合想学习或自建 AI 头像生成服务的开发者参考。",
+ "tagline": "开源 AI 头像生成 Web 应用"
+}

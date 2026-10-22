@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在有限显存下运行扩散模型的开发者，以及使用 ComfyUI 进行 AI 图像生成的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "基于 SVDQuant 的 4-bit 量化推理，降低显存占用并加速扩散模型",
+  "支持 FLUX、Qwen-Image、Z-Image 等多种扩散模型",
+  "提供 Python 后端和 ComfyUI 节点，方便集成到现有工作流",
+  "支持 LoRA、ControlNet、异步 offloading 等特性",
+  "提供 4-bit 量化模型权重，可从 Hugging Face 或 ModelScope 下载"
+ ],
+ "intro": "Nunchaku 是一个针对 4-bit 神经网络的高性能推理引擎，基于论文 SVDQuant 实现。它通过低秩分量吸收离群值，让扩散模型在 4-bit 量化下保持生成质量，同时显著降低显存占用并提升推理速度。\n\n项目支持 FLUX、Qwen-Image、Z-Image 等扩散模型，提供 Python 后端和 ComfyUI 节点，并包含 LoRA、ControlNet、异步 offloading 等特性。模型权重可从 Hugging Face 或 ModelScope 下载。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Hugging Face 或 ModelScope 下载对应的 4-bit 量化模型权重",
+  "参考 examples 目录下的示例脚本（如 examples/v1/z-image-turbo.py）运行推理",
+  "如需在 ComfyUI 中使用，安装 ComfyUI-nunchaku 插件并加载量化模型"
+ ],
+ "summary": "Nunchaku 是一个基于 SVDQuant 的 4-bit 扩散模型推理引擎，旨在解决大模型显存占用高、推理慢的问题。它通过低秩分量吸收离群值，在量化到 4-bit 后仍保持生成质量，并支持 FLUX、Qwen-Image 等模型。适合显存有限的开发者或 ComfyUI 用户快速部署和运行扩散模型。",
+ "tagline": "面向扩散模型的 4-bit 量化推理引擎"
+}

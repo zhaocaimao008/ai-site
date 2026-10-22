@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已经使用 Claude Code、希望在关键任务上获得多模型交叉验证的开发者，以及需要对抗性审查或多 LLM 工作流的研究与工程团队。",
+ "date": "2026-10-22",
+ "features": [
+  "支持十二个外部 AI 提供商集成，包括 Codex、Copilot、Qwen、Ollama 等",
+  "共识门控在交付前标记模型之间的分歧",
+  "提供 31 个专用角色、54 个命令和 63 个技能",
+  "Dark Factory 模式可根据规格自主运行完整流水线",
+  "集成 claude-mem、agentmemory 等实现跨会话记忆",
+  "支持并行工作包和可靠的提供商回退路由"
+ ],
+ "intro": "Claude Octopus 是一个 Claude Code 插件，用于在同一个研究、设计或编码任务上调用多个 AI 模型，并通过共识门控在交付前暴露模型之间的分歧。它支持十二个外部提供商集成，包括 Codex、Copilot、Qwen、Ollama、Perplexity 等，同时保留 Claude Code 作为宿主。\n\n项目默认不激活，只有显式运行 `/octo:*` 命令时才进入多模型工作流。它提供 31 个专用角色、54 个命令和 63 个技能，覆盖研究、构建、审查和交付等阶段。用户可以从零个外部提供商开始，按需逐个添加。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Claude Code v2.1.14 或更高版本",
+  "安装 Claude Octopus 插件（具体安装命令请参考 README 后续部分）",
+  "运行 `/octo:model-config` 查看或覆盖默认模型配置",
+  "按需逐个添加外部提供商，每个提供商在检测到后自动可用",
+  "显式运行 `/octo:*` 命令（如 `/octo:council`）启动多模型工作流"
+ ],
+ "summary": "Claude Octopus 是一个 Claude Code 插件，解决单一 AI 模型可能存在盲点的问题。它允许你在同一个研究、设计或编码任务上调用多个外部 AI 模型，并通过共识门控在交付前标记分歧。适合已经使用 Claude Code、希望在关键决策上获得多模型交叉验证的开发者，也适合需要对抗性审查或多 LLM 工作流的团队。",
+ "tagline": "多模型协作与对抗审查的 Claude Code 插件"
+}

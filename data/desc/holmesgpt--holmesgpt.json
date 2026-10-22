@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合 SRE、DevOps 工程师和运维团队，用于自动化事故调查与根因分析；也适合希望引入 AI 辅助运维的开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "代理循环查询多个可观测性数据源，自动定位事故根因",
+  "内置 Prometheus、Grafana、Datadog、Kubernetes 等丰富数据源集成",
+  "支持 AlertManager、PagerDuty、OpsGenie、Jira 等双向告警集成",
+  "兼容 OpenAI、Anthropic、Azure、Bedrock、Gemini 等多种 LLM 提供商",
+  "Operator 模式支持后台持续健康检查与主动告警",
+  "处理 PB 级数据时采用服务端过滤、内存安全执行等优化"
+ ],
+ "intro": "HolmesGPT 是一个开源的 AI 代理，专注于调查生产环境事故并定位根因。它通过代理循环查询来自多个可观测性数据源的实时数据，支持 Kubernetes、虚拟机、云服务和数据库等任意技术栈，无需强制依赖 Kubernetes。\n\n项目最初由 Robusta.Dev 创建，现为 CNCF 沙箱项目，并获得 Microsoft 的重要贡献。它集成了 Prometheus、Grafana、Datadog、Kubernetes 等众多数据源，支持双向告警集成，并兼容 OpenAI、Anthropic、Azure、Bedrock、Gemini 等多种 LLM 提供商。\n\n此外，HolmesGPT 提供 Operator 模式，可在后台 24/7 运行，主动发现问题并通过 Slack 通知，甚至可连接 GitHub 集成自动创建修复 PR。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "HolmesGPT 是一个开源的 AI 代理，用于调查生产事故并定位根因。它通过代理循环查询 Prometheus、Grafana、Kubernetes 等数据源的实时数据，支持任意技术栈，并兼容多种 LLM 提供商。适合 SRE 和运维团队在事故响应中快速获取洞察，也可通过 Operator 模式在后台持续监控并主动告警。",
+ "tagline": "CNCF 沙箱项目：用 AI 代理自动排查生产事故根因"
+}

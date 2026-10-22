@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在本地运行大模型、生成多媒体内容，或让外部 AI Agent 控制浏览器的开发者和技术用户。",
+ "date": "2026-10-22",
+ "features": [
+  "GPU 感知的 llama.cpp 运行时，按显存推荐模型并自动选择卸载方式",
+  "内置聊天与 Agent，支持浏览、读页、文件工具和知识库检索",
+  "本地图像、视频、音乐、语音识别与合成生成",
+  "MCP 服务器，让 Claude Code、Codex、Cline 等驱动浏览器",
+  "WebDriver 与 CDP 接口，可接入 Selenium、Puppeteer、Playwright",
+  "可选的 OpenAI 与 Anthropic 兼容本地 API"
+ ],
+ "intro": "LumaBrowser 是一个基于 Chromium 的桌面浏览器，把本地 AI 工具链整合进同一个应用。它内置 GPU 感知的 llama.cpp 运行时，支持 CPU、CUDA、Vulkan 和 Apple Silicon 的 MLX，能根据显存自动选择模型量化与卸载策略，也兼容 LM Studio、Ollama 等 OpenAI 兼容端点。\n\n除了聊天和 Agent，它还提供本地图像、视频、音乐和语音生成，以及一个可选的 OpenAI/Anthropic 兼容本地 API。通过 MCP 服务器，Claude Code、Codex、Cline 等外部 Agent 可以驱动浏览器完成搜索、读页等操作，而自动化客户端只能看到自己创建的标签页。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台安装包，或运行 npx lumabrowser start",
+  "打开 Models 页面，根据硬件适配标识选择并下载模型",
+  "在聊天中提出需要联网的任务，Agent 会打开独立标签页完成搜索和阅读",
+  "如需外部 Agent 接入，在 Settings 中写入 MCP 配置或手动配置 mcp-server.js"
+ ],
+ "summary": "LumaBrowser 把本地模型服务、聊天界面、图像视频生成、语音工具和供 Agent 使用的浏览器整合到一个桌面应用里。它会检测显卡并提示模型是否适配，支持 llama.cpp 多种运行时和 OpenAI 兼容接口。适合想在本地跑 AI、又需要让 Claude Code 等外部 Agent 操作浏览器的开发者。",
+ "tagline": "集本地大模型、图像视频生成与浏览器自动化于一体的桌面应用"
+}

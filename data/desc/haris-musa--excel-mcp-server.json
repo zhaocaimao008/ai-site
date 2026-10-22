@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI 助手直接处理 Excel 文件的开发者和办公用户，例如通过 Claude、Cursor 或 VS Code Copilot 自动生成报表、图表和数据透视表。",
+ "date": "2026-10-22",
+ "features": [
+  "创建和编辑 Excel 图表，包括柱状图、折线图、饼图、散点图以及瀑布图、直方图等 Excel 2016 图表类型",
+  "创建真实的数据透视表，支持分组、计算字段、布局、筛选，以及切片器和日程表",
+  "内置公式计算引擎，无需 Excel 即可计算公式，支持动态数组和公式追踪",
+  "读写单元格、表格、条件格式、数据验证，支持排序、筛选、查找替换等操作",
+  "流式读取大文件并分页返回，编辑时只解析涉及的行，适合处理数十万行的工作表",
+  "可选文件夹访问限制、公式安全检查、只读模式和原子保存"
+ ],
+ "intro": "Excel MCP Server 是一个基于 Model Context Protocol 的开源服务器，让 Claude、Cursor、VS Code Copilot、Codex 等 AI 客户端能够创建、读取和编辑 Excel 文件。它基于 openpyxl 实现，不需要安装 Microsoft Excel，可在 Windows、macOS 和 Linux 上运行。\n\n项目支持图表、数据透视表、切片器、公式、表格、条件格式、数据验证等 Excel 功能，并内置公式计算引擎，无需 Excel 即可计算公式结果。对于大文件，读取采用流式分页，编辑时只解析涉及的行，以控制内存占用。\n\n服务器提供文件夹访问限制、公式安全检查、只读模式和原子保存等安全机制，支持 .xlsx、.xlsm、.xltx 和 .xltm 文件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv（Python 包管理工具）",
+  "Claude Code 用户运行：claude mcp add excel --scope user -- uvx excel-mcp-server stdio --allow-dir /path/to/workbooks",
+  "Cursor 用户在 ~/.cursor/mcp.json 中添加 mcpServers 配置，command 为 uvx，args 为 [\"excel-mcp-server\", \"stdio\", \"--allow-dir\", \"/path/to/workbooks\"]",
+  "VS Code 用户在 .vscode/mcp.json 的 servers 键下添加相同配置",
+  "如需远程使用，运行：uvx excel-mcp-server streamable-http --allow-dir /srv/workbooks"
+ ],
+ "summary": "Excel MCP Server 是一个 MCP 服务器，让 Claude、Cursor、VS Code Copilot 等 AI 客户端直接创建、读取和编辑 Excel 文件，无需安装 Microsoft Excel。它支持图表、数据透视表、公式计算、条件格式等常见功能，并针对大文件做了流式读取和局部编辑优化。适合需要让 AI 自动生成报表、图表或处理表格数据的开发者和办公场景。",
+ "tagline": "让 AI 客户端直接创建和编辑 Excel 文件的 MCP 服务器"
+}

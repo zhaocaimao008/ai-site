@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合语音合成方向的研究人员、需要快速部署 TTS 模型的开发者，以及希望在不同语言上微调 TTS 模型的工程师。",
+ "date": "2026-10-22",
+ "features": [
+  "集成 Tacotron-2、FastSpeech、FastSpeech2 等多种声学模型",
+  "提供 MelGAN、Multiband-MelGAN、Parallel WaveGAN、HiFi-GAN 等声码器",
+  "支持中文、英文、法文、韩文、德文等多语言语音合成",
+  "支持 TFLite 转换、Android 和 C++ 推理部署",
+  "支持混合精度训练、多 GPU 梯度累积和模型剪枝量化",
+  "提供预训练模型和 Colab 示例，便于快速上手和微调"
+ ],
+ "intro": "TensorFlowTTS 是一个基于 TensorFlow 2 的实时语音合成开源项目，集成了 Tacotron-2、FastSpeech、FastSpeech2、MelGAN、Multiband-MelGAN、Parallel WaveGAN、HiFi-GAN 等多种主流声学模型和声码器。项目利用 TensorFlow 2 的特性加速训练和推理，并支持量化感知训练和剪枝，使模型能够实时运行并部署到移动端或嵌入式设备。\n\n该项目支持中文、英文、法文、韩文、德文等多种语言，并提供预训练模型和 Colab 示例，方便用户快速体验和微调。此外，项目还提供 TFLite 转换、Android 示例、C++ 推理以及从 PyTorch 转换权重的工具，适合研究和产品部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 TensorFlowTTS：pip install TensorFlowTTS",
+  "或从源码安装：git clone https://github.com/TensorSpeech/TensorFlowTTS.git && cd TensorFlowTTS && pip install .",
+  "参考官方 Colab 示例（如中文 TTS）快速体验预训练模型",
+  "使用提供的训练脚本在自己的数据集上微调模型"
+ ],
+ "summary": "TensorFlowTTS 是一个基于 TensorFlow 2 的实时语音合成框架，集成了 Tacotron-2、FastSpeech2、MelGAN 等多种模型，支持中英法韩德等语言。它利用 TensorFlow 2 加速训练和推理，并支持 TFLite 转换、移动端部署和 C++ 推理，适合需要快速实现高质量语音合成的开发者和研究人员。",
+ "tagline": "基于 TensorFlow 2 的实时语音合成框架"
+}

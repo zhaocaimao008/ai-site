@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究代码生成的研究人员、对 LLM 编程能力感兴趣的开发者，以及希望复现论文结果或尝试迭代式代码生成流程的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "实现多阶段、基于测试的迭代式代码生成流程",
+  "支持在 CodeContests 数据集上运行和评估",
+  "可解决单个问题或整个数据集分割",
+  "支持自定义问题（CodeContest 格式）",
+  "提供配置选项以调整流程各阶段",
+  "记录详细日志以便理解流程各阶段"
+ ],
+ "intro": "AlphaCodium 是论文《Code Generation with AlphaCodium: From Prompt Engineering to Flow Engineering》的官方实现。它提出一种面向代码生成的迭代流程，不同于常见的单次提示，而是通过多阶段、基于测试的迭代来提升 LLM 在编程问题上的表现。\n\n该项目在 CodeContests 数据集上验证了该方法，该数据集包含 Codeforces 等平台的竞赛编程问题。README 显示，在验证集上，GPT-4 的 pass@5 准确率从单次精心设计提示的 19% 提升到使用 AlphaCodium 流程的 44%。流程本身与编程语言无关，但示例以 Python 为主。\n\n代码库提供了完整的运行脚本，支持解决单个问题、整个数据集分割以及自定义问题，并包含评估脚本。用户需要配置 OpenAI API key 并下载处理后的数据集。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建虚拟环境并安装依赖：python3 -m venv venv && source ./venv/bin/activate && pip install -r requirements.txt",
+  "复制 alpha_codium/settings/.secrets_template.toml 为 .secrets.toml，并填入 OpenAI API key",
+  "从 Hugging Face 下载处理后的 CodeContest 数据集，解压到项目根目录",
+  "运行单个问题：python -m alpha_codium.solve_problem --dataset_name /path/to/dataset --split_name test --problem_number 0"
+ ],
+ "summary": "AlphaCodium 是一个面向代码生成的开源项目，它实现了一种基于测试的多阶段迭代流程，旨在提升大语言模型解决编程问题的能力。该项目适合研究代码生成的研究者或开发者，可用于在 CodeContests 等竞赛编程数据集上运行和评估模型表现，也支持解决自定义问题。",
+ "tagline": "基于测试的多阶段迭代式代码生成流程"
+}

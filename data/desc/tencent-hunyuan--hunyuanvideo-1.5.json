@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合视频生成领域的研究者、开发者以及希望在本地或消费级 GPU 上运行视频生成模型的创作者。",
+ "date": "2026-10-22",
+ "features": [
+  "支持文生视频（T2V）和图生视频（I2V）",
+  "8.3B 参数轻量模型，可在消费级 GPU 运行",
+  "提供训练代码与 LoRA 微调脚本，支持分布式训练",
+  "支持 Diffusers、ComfyUI、LightX2V 等社区集成",
+  "提供 step-distilled 模型和缓存推理加速方案"
+ ],
+ "intro": "HunyuanVideo-1.5 是腾讯混元开源的视频生成模型，参数量为 8.3B，主打轻量化，可在消费级 GPU 上运行。模型支持文生视频（T2V）和图生视频（I2V）两种任务，并提供推理代码与模型权重。\n\n项目提供了完整的训练代码和 LoRA 微调脚本，支持分布式训练、FSDP、上下文并行等技术，并采用 Muon 优化器。此外，还支持 Diffusers 集成、ComfyUI 节点、LightX2V 等社区工具，以及 step-distilled 模型和缓存推理等加速方案，方便开发者快速集成和部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5.git",
+  "安装依赖：pip install -r requirements.txt",
+  "从 Hugging Face 下载预训练模型权重",
+  "运行推理脚本：python generate.py --enable_step_distill（启用 step-distilled 模型加速）"
+ ],
+ "summary": "HunyuanVideo-1.5 是一个轻量级视频生成模型，参数量 8.3B，可在消费级 GPU 上运行，支持文生视频和图生视频。项目提供推理代码、模型权重、训练代码和 LoRA 微调脚本，并集成 Diffusers、ComfyUI 等工具，适合开发者本地部署和二次开发。",
+ "tagline": "轻量级视频生成模型，支持文生视频与图生视频"
+}

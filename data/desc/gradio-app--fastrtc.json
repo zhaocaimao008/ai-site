@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为语音或视频 AI 应用快速搭建实时通信链路的 Python 开发者，以及想用少量代码试验语音对话、实时转写等场景的人。",
+ "date": "2026-10-22",
+ "features": [
+  "内置语音活动检测与轮次切换，只需编写响应逻辑",
+  "通过 .ui.launch() 启动基于 Gradio 的内置 WebRTC 界面",
+  "通过 .mount(app) 将流挂载到 FastAPI，提供 WebRTC 和 WebSocket 端点",
+  "通过 .fastphone() 获取免费临时电话号码接入通话",
+  "后端可完全自定义，便于集成到生产应用"
+ ],
+ "intro": "FastRTC 是一个面向 Python 的实时通信库，目标是把任意 Python 函数变成通过 WebRTC 或 WebSocket 传输的实时音频、视频流。它内置语音活动检测与轮次切换（ReplyOnPause），开发者只需关注如何回应用户，不必自己处理音频采集、传输和断句逻辑。\n\n项目提供多种接入方式：用 .ui.launch() 启动基于 Gradio 的内置界面，用 .mount(app) 把流挂载到 FastAPI 应用并暴露 WebRTC 或 WebSocket 端点，或用 .fastphone() 获取临时电话号码接入通话。README 中的示例覆盖 Gemini、OpenAI 实时语音、Whisper 实时转写、Yolov10 目标检测、Kyutai Moshi 等场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装基础库：pip install fastrtc",
+  "如需暂停检测和文本转语音，安装扩展：pip install \"fastrtc[vad, tts]\"",
+  "编写处理函数并用 ReplyOnPause 包装，创建 Stream(handler=..., modality=\"audio\", mode=\"send-receive\")",
+  "调用 .ui.launch() 启动内置界面测试，或用 .mount(app) 挂载到 FastAPI 应用"
+ ],
+ "summary": "FastRTC 让 Python 开发者用几行代码把函数接入实时音频、视频通信。它内置语音检测与轮次切换，省去处理音频采集和断句的麻烦，并支持 Gradio 界面、FastAPI 挂载、WebSocket 和临时电话接入。适合构建语音对话、实时转写、摄像头推理等需要低延迟交互的应用。",
+ "tagline": "把 Python 函数变成实时音视频流的通信库"
+}

@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合想系统了解生成式 AI 生态、查找工具与学习资料的开发者、研究者及普通用户。",
+ "date": "2026-10-22",
+ "features": [
+  "按主题分节整理生成式 AI 相关资源链接",
+  "覆盖文本、图像、视频、音频、语音、多模态等方向",
+  "细分 LLM、Prompt Engineering、RAG、Agent 等子类",
+  "收录论文、课程、教程、工具与作品等来源",
+  "各小节内按时间倒序排列，便于查看较新内容",
+  "接受 Pull Request 贡献新资源"
+ ],
+ "intro": "这是一个围绕生成式 AI 的 Awesome 清单，收录工具、模型、作品与参考资料。内容按主题分节，覆盖生成式 AI 的历史与定义、伦理讨论、课程与论文、在线工具，以及代码生成、文本、图像、视频、音频、语音、游戏、多模态、数据集等方向。\n\n在文本部分，清单细分出 LLM、Prompt Engineering、RAG、Embeddings 与语义搜索、自主 Agent、LLM 评估、LLMOps、LangChain、ChatGPT 等子类；图像部分则包含 Stable Diffusion 相关工具、ControlNet、Textual Inversion、DreamBooth 等条目。每个小节内的链接按时间倒序排列，较新的资源排在前面。\n\n仓库本身不提供代码或安装方式，定位是导航与索引，并接受通过 Pull Request 补充资源。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一份生成式 AI 资源的导航清单，把工具、模型、论文、课程和作品按主题归类，方便读者按方向查找。内容涵盖文本生成、图像合成、视频、音频、语音和多模态等，并对 LLM、Prompt Engineering、RAG、Agent 等细分领域单独列出条目。适合想快速了解生态全貌或寻找具体工具与学习材料的开发者与普通用户。",
+ "tagline": "生成式 AI 工具、模型与资料的精选清单"
+}

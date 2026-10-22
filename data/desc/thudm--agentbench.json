@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究大语言模型智能体能力的研究人员、开发者，以及希望评估或训练 LLM 在复杂环境中自主执行任务能力的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "包含 8 个不同领域的交互环境，全面评估 LLM 作为智能体的能力",
+  "提供函数调用风格的提示和基于 AgentRL 的强化学习集成",
+  "支持 Docker Compose 一键部署多个任务环境",
+  "提供 Dev 和 Test 两种数据划分，支持多轮交互评估",
+  "公开排行榜，展示多种模型在测试集上的结果"
+ ],
+ "intro": "AgentBench 是一个用于评估大语言模型（LLM）作为自主智能体（Agent）能力的基准测试框架。它包含 8 个不同的交互环境，覆盖操作系统、数据库、知识图谱、数字卡牌游戏、横向思维谜题，以及基于 ALFWorld、WebShop 和 Mind2Web 重构的居家、网购和网页浏览任务。\n\n当前仓库提供基于函数调用（Function Calling）风格的版本，并集成了 AgentRL 强化学习框架，支持 alfworld、dbbench、knowledgegraph、os_interaction 和 webshop 等任务的完全容器化部署。项目还提供了排行榜，展示不同模型在测试集上的表现。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：conda create -n agent-bench python=3.9 && conda activate agent-bench && pip install -r requirements.txt",
+  "确保 Docker 已安装并运行：docker ps",
+  "构建所需镜像：docker pull mysql && docker pull ubuntu && docker build -f data/os_interaction/res/dockerfiles/default data/os_interaction/res/dockerfiles --tag local-os/default && docker build -f data/os_interaction/res/dockerfiles/packages data/os_interaction/res/dockerfiles --tag local-os/packages && docker build -f data/os_interaction/res/dockerfiles/ubuntu data/os_interaction/res/dockerfiles --tag local-os/ubuntu",
+  "在 configs/agents/openai-chat.yaml 中填入 OpenAI API Key，并运行 python -m src.client.agent_test 检查配置",
+  "启动任务服务器（具体步骤参考 README 后续内容）"
+ ],
+ "summary": "AgentBench 是一个评估大语言模型作为自主智能体能力的基准测试框架，涵盖操作系统、数据库、知识图谱、卡牌游戏、谜题及居家、网购、网页浏览等 8 类交互环境。它适合研究人员和开发者系统性地测试 LLM 在多场景下的任务执行表现，当前版本还支持函数调用风格和容器化部署，便于快速搭建评测环境。",
+ "tagline": "评估大语言模型作为智能体能力的综合基准"
+}

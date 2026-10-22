@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望把多个 AI 模型和编程代理集中管理、注重数据本地化的开发者；也适合不想折腾终端、想直接使用 AI 助手的普通用户。",
+ "date": "2026-10-22",
+ "features": [
+  "统一接入 Claude Code、Codex、Copilot、Gemini、Ollama 及多家 API 提供商，聊天中可切换模型",
+  "支持桌面端、网页、手机和 Telegram 等多端访问，数据保存在本机",
+  "按需连接日历等外部服务，无需预先配置",
+  "可用自然语言让 Conch 生成并检查小型应用，隔离运行",
+  "自动监测并修复缺失程序、残留进程和登录失效等问题",
+  "支持技能更新、长任务等待和批量脚本处理"
+ ],
+ "intro": "Conch 是一个自托管的 AI 助手应用，把用户已经付费的多种模型和编程代理集中到一个界面里，包括 Claude Code、Codex、GitHub Copilot、Gemini CLI、Grok，以及 OpenRouter、Anthropic、OpenAI、Google、Mistral、DeepSeek 等 API Key，也支持 Ollama、LM Studio 本地模型。\n\n它提供 macOS、Windows、Linux 桌面端，也能通过网页、手机和 Telegram 等聊天应用访问。聊天记录、记忆和设置保存在本机 ~/.conch 目录，无需注册账号，也不收集遥测数据。\n\n项目还强调自配置和自修复：缺少某个连接时会在回复下方给出卡片，点击即可接入；运行出错时会尝试自行修复，并给出每日备份和可回滚的签名更新。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 macOS、Windows 或 Linux 安装包并打开",
+  "macOS/Linux 可运行：curl -fsSL https://conchagent.com/install.sh | sh",
+  "Windows PowerShell 可运行：irm https://conchagent.com/install.ps1 | iex",
+  "从源码运行需 Node 24+：corepack enable && pnpm install && pnpm start",
+  "启动后访问 http://localhost:4317，用已有订阅登录或粘贴 API Key"
+ ],
+ "summary": "Conch 是一个自托管的 AI 助手，把 Claude Code、Codex、Copilot、Gemini、Ollama 以及多家 API 提供商统一到一个应用里，支持桌面、网页、手机和 Telegram 访问。它适合想集中管理多个模型、又希望聊天和设置留在本机的用户，也照顾不熟悉终端的普通使用者。",
+ "tagline": "自托管的多模型 AI 助手，桌面、手机、Telegram 都能用"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要统一管理多个 LLM 供应商的开发者、团队，以及希望简化多模型调用的 AI 应用构建者。",
+ "date": "2026-10-22",
+ "features": [
+  "统一端点：支持 OpenAI Chat Completions、OpenAI Responses、Anthropic Messages 和 Gemini generateContent 客户端调用任意模型，并转换工具、图像和推理内容。",
+  "多模态支持：涵盖实时语音（OpenAI Realtime ⇄ Gemini Live）、图像、语音、转录、嵌入和视频任务。",
+  "路由与弹性：支持命名路由、通配符、provider/model 格式、回退、重试、对冲竞争，以及选择最便宜或最快的供应商。",
+  "MCP 集成：代理 MCP 服务器，并可在聊天请求中运行其工具，即使客户端不了解 MCP。",
+  "可观测性：提供实时请求日志和 Web UI，按调用计价，并将追踪发送到 Respan。",
+  "插件化架构：所有功能都是基于公共 Rust API 的插件，便于自定义扩展。"
+ ],
+ "intro": "Respan Gateway 是一个用 Rust 编写的 LLM 网关，旨在为所有 LLM 供应商提供单一端点。它允许任何官方 SDK 指向网关并指定任意模型，网关会自动将请求路由到正确的供应商，并在 OpenAI、Anthropic 和 Gemini API 之间进行转换。\n\n除了聊天，它还支持实时语音、图像、语音、转录、嵌入和视频任务，并提供路由、回退、重试、MCP 集成和可观测性等功能。所有功能都基于一个公共 Rust API 以插件形式构建，易于扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "设置环境变量：export OPENAI_API_KEY=sk-... ANTHROPIC_API_KEY=sk-ant-... GEMINI_API_KEY=...",
+  "启动网关：respan-gateway",
+  "使用 curl 测试：curl localhost:8080/v1/chat/completions -d '{\"model\":\"claude-haiku-5-5\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}'",
+  "在 SDK 中设置 base_url 为 http://localhost:8080/v1 并指定任意模型名。"
+ ],
+ "summary": "Respan Gateway 是一个 Rust 编写的 LLM 网关，解决多供应商 API 不统一的问题。它提供单一端点，让任何官方 SDK 都能调用任意模型，并自动在 OpenAI、Anthropic 和 Gemini 格式间转换。适合需要同时使用多个 LLM 供应商、希望简化调用和路由的开发者，也支持实时语音、图像等多媒体任务和 MCP 工具集成。",
+ "tagline": "一个 Rust 二进制，统一接入所有 LLM 供应商"
+}

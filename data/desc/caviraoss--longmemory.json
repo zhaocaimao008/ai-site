@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 LLM 应用或智能体增加长期记忆的开发者，以及希望本地自托管、对记忆做时间与权限治理的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "基于 SQLite 的本地优先持久化存储，无需外部数据库即可使用",
+  "支持 strict、historical、associative、world_grounded 等多种召回模式",
+  "时间推理：区分记录时间与有效时间，支持事实取代和过期证据控制",
+  "治理能力：按项目、租户、用户、团队、角色等范围强制执行权限",
+  "多语言记忆：脚本检测、语码转换、音译和跨语言嵌入",
+  "提供 npm 库、CLI、HTTP 服务、MCP、Dashboard 和 VS Code 插件等多种使用方式"
+ ],
+ "intro": "LongMemory 是一个面向 LLM 应用和自主智能体的认知记忆引擎，用 SQLite 做本地优先的持久化存储，让模型保持无状态的同时，应用不再“失忆”。它不只是向量检索，而是把时间有效性、内容不可变、来源溯源、权限治理和生命周期都建模进记忆系统。\n\n它提供 strict、historical、associative、world_grounded 等多种召回模式，支持多语言记忆、项目记忆、Chat Memory、Skills、LLM-Wiki 和 CodeGraph 等受治理资产，并可通过 npm 库、CLI、HTTP 服务、MCP、Dashboard 和 VS Code 插件使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装库：npm install longmemory",
+  "在代码中创建记忆并写入：const memory = await createMemory(); await memory.ingest({ user_id: 'alice', text: 'I prefer TypeScript for backend services' });",
+  "召回记忆：const result = await memory.recall({ text: 'What language does Alice prefer?', mode: 'strict' });",
+  "持久化到 SQLite：const memory = await createMemory({ store: 'sqlite', db_path: './longmemory.db', tenant_id: 'acme', user_id: 'alice' });",
+  "安装 CLI 并初始化：npm install --global longmemory && longmemory init"
+ ],
+ "summary": "LongMemory 是一个为 LLM 应用和智能体设计的本地持久化记忆引擎，解决模型无状态导致应用“失忆”的问题。它用 SQLite 存储记忆，并直接建模时间有效性、内容不可变、来源溯源和权限治理，提供多种召回模式。适合需要长期记忆、且希望本地自托管和精细控制记忆生命周期的开发者与团队。",
+ "tagline": "为 LLM 应用和智能体提供本地持久化记忆引擎"
+}

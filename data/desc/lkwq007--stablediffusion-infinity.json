@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想尝试 AI 图像外绘、扩展画面内容的开发者和创作者，需要一定的 Stable Diffusion 使用经验。",
+ "date": "2026-10-22",
+ "features": [
+  "基于 Stable Diffusion inpainting 模型进行图像外绘",
+  "在无限画布上选择区域并扩展图像",
+  "提供 Web 应用界面（PyScript + Gradio）",
+  "支持光度校正以抑制拼接接缝（需安装 fpie）",
+  "提供 Colab 笔记本和 Hugging Face Spaces 在线体验"
+ ],
+ "intro": "stablediffusion-infinity 是一个基于 Stable Diffusion inpainting 模型的图像外绘（outpainting）工具，它把生成过程放在一个可无限扩展的画布上。用户可以在画布上选择区域，让模型在空白或遮罩区域生成与已有内容衔接的图像，从而不断扩展画面。项目目前以 PyScript 和 Gradio 构建的 Web 应用形式运行，也提供 Colab 和 Hugging Face Spaces 入口。\n\n项目说明指出，生成质量并不总是有保证，可能需要调整提示词、选区大小或缩小外绘区域来获得更好结果。此外，项目加入了光度校正功能来抑制接缝，但需要额外安装 fpie（仅限 Linux/MacOS）。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考 docs/setup_guide.md 在 Windows、Linux 或 MacOS 上完成本地环境配置",
+  "或使用 Docker 运行（Windows/Linux + NVIDIA GPU），见 docs/run_with_docker.md",
+  "启动应用：python app.py（如遇黑图或 fp16 问题可尝试 python app.py --fp32 --lowvram）",
+  "如需光度校正，先安装 fpie：pip install fpie（仅 Linux/MacOS）"
+ ],
+ "summary": "stablediffusion-infinity 是一个用 Stable Diffusion inpainting 模型做图像外绘的工具，它把生成过程放在一个可无限扩展的画布上，让用户在空白或遮罩区域生成与已有画面衔接的内容，从而不断扩展图像。项目以 Web 应用形式运行，适合想尝试 AI 外绘、扩展画面或进行创意图像编辑的开发者与创作者。",
+ "tagline": "在无限画布上用 Stable Diffusion 进行外绘"
+}

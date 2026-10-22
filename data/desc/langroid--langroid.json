@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 Python 构建 LLM 应用、多 Agent 协作或 RAG 系统的开发者，也适合想避开 Langchain 等框架、追求轻量上手体验的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "Agent 与 Task 抽象：为 Agent 配置 LLM、向量库和工具，通过消息协作完成任务",
+  "支持多种 LLM，包括 OpenAI 兼容 API 和本地模型",
+  "内置 function-calling/工具调用与结构化信息抽取",
+  "提供 DocChatAgent（RAG）和 SQLChatAgent 等专用 Agent",
+  "通过 MCP 工具适配器把 MCP Server 的工具转换为 ToolMessage",
+  "附带 Claude Code 插件，提供内置模式与最佳实践"
+ ],
+ "intro": "Langroid 是一个轻量、可扩展的 Python 框架，用于构建 LLM 驱动的应用。它的核心思路是把 LLM 封装成 Agent，为 Agent 配置可选的 LLM、向量库和工具/函数，再给它们分配任务，让多个 Agent 通过互相发消息协作解决问题。这一多 Agent 范式受 Actor 框架启发，但使用者无需了解 Actor 模型。\n\n项目不依赖 Langchain 或其他 LLM 框架，支持几乎所有 LLM，包括通过 OpenAI 兼容 API 访问的模型以及本地模型。README 中展示了直接调用 LLM、在 Agent 中使用 LLM、用 Task 包裹 Agent 运行交互循环，以及 Teacher/Student 双 Agent 对话的示例。框架还提供 function-calling/工具、结构化信息抽取、DocChatAgent（RAG）、SQLChatAgent 等能力，并支持通过 MCP 工具适配器让 Agent 使用 MCP Server 的工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Langroid：pip install langroid",
+  "配置 LLM：使用 lm.OpenAIGPTConfig 指定 chat_model，例如 GPT4o 或 ollama/mistral",
+  "直接调用 LLM：mdl = lm.OpenAIGPT(llm_cfg)，再调用 mdl.chat(...)",
+  "用 Agent 维护对话：创建 lr.ChatAgent(agent_cfg)，调用 agent.llm_response(...)",
+  "用 Task 运行交互循环：task = lr.Task(agent, name=\"Bot\", system_message=\"...\")，再 task.run(\"Hello\")"
+ ],
+ "summary": "Langroid 是一个 Python 框架，把 LLM 封装为可配置的 Agent，再通过 Task 让多个 Agent 互相发消息协作完成任务。它不依赖 Langchain，支持 OpenAI 兼容 API 和本地模型，并提供工具调用、RAG、SQL 查询等组件。适合需要构建多 Agent 应用、文档问答或结构化信息抽取的开发者参考使用。",
+ "tagline": "用多 Agent 编程驾驭 LLM 的 Python 框架"
+}

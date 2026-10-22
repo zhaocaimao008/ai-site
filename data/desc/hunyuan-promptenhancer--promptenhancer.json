@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用文生图或图像编辑模型、希望提升生成效果的开发者与研究者，以及需要批量优化提示词的普通用户。",
+ "date": "2026-10-22",
+ "features": [
+  "将文生图提示词改写为更清晰、结构化的版本，并保留原始意图",
+  "支持图像编辑指令改写，可结合输入图像作为视觉上下文",
+  "提供 7B、32B 全精度模型及多种 GGUF 量化版本，适配不同显存",
+  "内置多级回退解析机制，提升输出可靠性",
+  "附带 T2I-Keypoints-Eval 评测数据集与评测脚本"
+ ],
+ "intro": "PromptEnhancer 是腾讯混元团队开源的提示词改写工具，来自 CVPR 2026 论文。它把用户输入的简短或口语化提示词重写为更清晰、结构化的版本，同时保留主体、动作、风格、布局等关键要素，供下游图像生成模型使用。\n\n项目同时支持文生图提示词增强和图像编辑指令改写两种模式，后者可结合输入图像作为视觉上下文。提供 7B 与 32B 全精度模型、GGUF 量化版本以及 Img2Img 编辑模型，并带有稳健的多级解析回退机制。\n\n代码为 Python 实现，通过 Hugging Face 下载模型权重，可直接在 Python 中调用推理接口。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -r requirements.txt（或使用 GGUF 安装脚本）",
+  "下载模型：huggingface-cli download tencent/HunyuanImage-2.1/reprompt --local-dir ./models/promptenhancer-7b",
+  "在 Python 中导入 HunyuanPromptEnhancer 并加载模型路径",
+  "调用 enhancer.predict 传入提示词，获取改写后的提示词"
+ ],
+ "summary": "PromptEnhancer 解决的是提示词质量参差不齐导致图像生成效果不稳定的问题。它把用户输入的口语化描述重写为结构清晰、要素完整的提示词，并保留原意，同时支持文生图和图像编辑两种场景。适合希望提升出图质量、又不想手工反复打磨提示词的开发者和普通用户，提供多种参数规模与量化版本以适配不同硬件。",
+ "tagline": "腾讯混元开源的提示词改写工具，优化文生图与图像编辑指令"
+}

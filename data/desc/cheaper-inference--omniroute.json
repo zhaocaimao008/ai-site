@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用多个 AI 提供商、希望统一接入并利用免费额度的开发者，以及使用 Claude Code、Cursor 等编码工具的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "一个端点接入 375 家提供商、1400 多个模型",
+  "配额感知的自动回退与 20 种路由策略",
+  "RTK + Caveman 叠加压缩节省 token",
+  "兼容 Claude Code、Codex、Cursor、Cline、Copilot 等工具",
+  "支持 MCP/A2A，提供桌面端与 PWA",
+  "仪表盘展示免费额度与配额遥测"
+ ],
+ "intro": "OmniRoute 是一个用 TypeScript 编写的 AI 网关，把 375 家提供商、1400 多个模型（包括 Kimi、Claude、GPT、Gemini、GLM、DeepSeek、MiniMax 等）统一到一个端点后面，其中 150 多家提供免费额度。它兼容 Claude Code、Codex、Cursor、OpenCode、Cline 和 Copilot 等工具，并支持 MCP/A2A。\n\n项目提供配额感知的自动回退、20 种路由策略，以及 RTK 与 Caveman 叠加压缩来减少 token 消耗。README 还说明它会汇总第三方免费额度，并在仪表盘展示已用和剩余额度，同时提示各提供商自行控制限额与条款。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 npm 安装：npm install -g omniroute",
+  "或使用 Docker 镜像 diegosouzapw/omniroute 启动",
+  "首次运行后连接自己的提供商账号与凭据",
+  "在仪表盘 /dashboard/free-tiers 查看免费额度与配额"
+ ],
+ "summary": "OmniRoute 是一个 AI 网关，把多家提供商的模型统一到一个端点，方便在 Claude Code、Cursor、Cline 等工具中切换使用，并自动处理配额回退。它适合需要同时接入多个模型、想利用第三方免费额度并减少 token 消耗的开发者。",
+ "tagline": "统一接入 375 家 AI 提供商的免费网关"
+}

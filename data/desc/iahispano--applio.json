@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要语音转换功能的开发者、研究人员和艺术家，尤其是希望快速上手并定制流程的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "高质量的语音转换",
+  "基于 Gradio 的网页界面",
+  "支持插件和配置定制",
+  "提供 TensorBoard 监控训练",
+  "跨平台安装脚本（Windows/Linux/macOS）"
+ ],
+ "intro": "Applio 是一个基于 Python 的语音转换工具，专注于易用性、质量和性能。它提供了 Gradio 界面，用户可以通过浏览器操作，完成语音转换任务。项目支持通过插件和配置进行定制，适合艺术家、开发者和研究人员使用。\n\nApplio 采用 MIT 许可证，允许修改、再分发和商业使用。但使用官方版本时，还需遵守其使用条款，确保合法合规。项目目前处于稳定成熟阶段，更新频率降低，主要集中于安全补丁和依赖更新。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows: 双击 run-install.bat；Linux/macOS: 运行 ./run-install.sh",
+  "Windows: 双击 run-applio.bat；Linux/macOS: 运行 ./run-applio.sh",
+  "浏览器打开 Gradio 界面进行操作",
+  "可选：运行 run-tensorboard.bat 或 ./run-tensorboard.sh 监控训练"
+ ],
+ "summary": "Applio 是一个开源的语音转换工具，旨在提供简单、高质量且高效的语音转换体验。它通过 Gradio 界面降低使用门槛，适合艺术家、开发者和研究人员进行语音变换项目。项目支持插件定制，并提供了跨平台的安装和运行脚本，方便不同系统的用户快速上手。",
+ "tagline": "简单易用的高质量语音转换工具"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、OpenCode、Codex 等 AI 编码代理的开发者，尤其是需要向代理直观展示界面问题或操作流程的人。",
+ "date": "2026-10-22",
+ "features": [
+  "快捷键 ⌥⇧S 一键开始/结束屏幕、语音与标记录制",
+  "生成包含关键帧、转录时间线和 JSON 清单的 bundle",
+  "提供 scrawl zoom、frames、inspect 等命令供代理细看画面",
+  "支持将 bundle 发送到 OpenCode 会话或复制到剪贴板",
+  "可导出带标记和音频的 .mp4 分享视频",
+  "支持录制有线连接的 iPhone 屏幕"
+ ],
+ "intro": "Scrawl 是一个面向 AI 编码代理的屏幕录制与问题描述工具。按下 ⌥⇧S 开始录屏，边说话边点击、在画面上做标记，再按一次结束，Scrawl 会把屏幕画面、语音和标记打包成一个紧凑的 bundle。\n\nbundle 中包含带标注关键帧的 contact-sheet.png、全分辨率关键帧、时间对齐的转录与交互时间线 summary.md，以及结构化清单 scrawl.json。代理读取这些材料后，可以定位到你说到的具体时刻，用 scrawl zoom、scrawl frames 等命令查看更细的画面。\n\n项目用 Rust 编写，提供 macOS 菜单栏应用和 GPUI 预览窗口，也支持从命令行录制、导入、导出和检查 bundle。Windows 版本目前为预览状态。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "brew install --cask kitlangton/tap/scrawl",
+  "bunx skills add kitlangton/scrawl",
+  "按 ⌥⇧S 开始录制，操作并口述问题，再按 ⌥⇧S 结束",
+  "用 scrawl inspect <bundle> 查看摘要，或用 scrawl zoom <bundle> --at 0:12 细看某一时刻"
+ ],
+ "summary": "Scrawl 解决的是向 AI 编码代理描述界面问题时说不清楚、截图又不够用的情况。它把屏幕录制、语音讲解和画面标记合成一个 bundle，其中包含关键帧、转录时间线和结构化清单，代理可以据此定位到具体时刻并查看细节。适合需要向 Claude Code、OpenCode 等代理演示操作流程或复现界面问题的开发者。",
+ "tagline": "录屏、标注、口述，把问题打包给 AI 编码代理"
+}

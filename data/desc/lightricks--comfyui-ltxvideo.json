@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已安装 ComfyUI 并希望使用 LTX-2 模型进行视频生成、编辑或音频生成的开发者和创作者。",
+ "date": "2026-10-22",
+ "features": [
+  "提供 LTX-2 文生视频、图生视频的完整与蒸馏模型工作流",
+  "支持 IC-LoRA 控制，包括深度、边缘、人体姿态和运动跟踪",
+  "包含 HDR IC-LoRA，可将 SDR 视频升级为 ACEScct HDR 并导出 EXR",
+  "提供 Dub-It IC-LoRA，用于视频配音、多语言翻译和同语言改写",
+  "包含 Pixel Spatial Upscaler IC-LoRA，支持 2 倍和 4 倍生成式放大",
+  "支持文生音频（T2A），通过 LTXVAudioOnlyModel 节点实现纯音频生成"
+ ],
+ "intro": "ComfyUI-LTXVideo 是一个为 ComfyUI 提供 LTX-2 视频生成模型支持的自定义节点集合。LTX-2 已内置于 ComfyUI 核心，本仓库则提供了额外的节点和示例工作流，帮助用户使用 LTX-2 的高级功能。\n\n项目包含多种示例工作流，覆盖文生视频、图生视频、视频到视频细节增强、IC-LoRA 控制（深度、边缘、人体姿态）、HDR 升级、配音（Dub-It）、像素空间放大以及文生音频等场景。此外还提供了 Union IC-LoRA、HDR IC-LoRA、Dub-It IC-LoRA 和 Pixel Spatial Upscaler IC-LoRA 等模型。\n\n使用前需要安装 ComfyUI，并准备至少 32GB 显存的 CUDA 兼容 GPU 以及 100GB 以上的磁盘空间。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 ComfyUI（从 https://www.comfy.org/download 下载）",
+  "打开 ComfyUI，点击 Manager 按钮（或按 Ctrl+M）",
+  "选择 Install Custom Nodes，搜索 “LTXVideo” 并点击 Install",
+  "等待安装完成后重启 ComfyUI",
+  "在节点菜单的 “LTXVideo” 分类下使用节点，首次使用时会自动下载所需模型"
+ ],
+ "summary": "ComfyUI-LTXVideo 为 ComfyUI 用户提供 LTX-2 视频生成模型的扩展节点和示例工作流。它覆盖文生视频、图生视频、视频细节增强、IC-LoRA 控制、HDR 升级、配音、像素放大和文生音频等场景，适合希望在 ComfyUI 中直接使用 LTX-2 高级功能的开发者与创作者。",
+ "tagline": "为 ComfyUI 提供 LTX-2 视频生成模型的扩展节点与工作流"
+}

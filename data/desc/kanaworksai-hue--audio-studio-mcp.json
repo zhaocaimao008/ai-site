@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合游戏开发者、视频编辑者以及任何需要通过 MCP 客户端快速生成定制音频内容的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "用一句话生成 BGM、乐器循环或音效，每次调用可生成 1-4 个候选",
+  "支持重新风格化、按时间范围重新生成或延长音轨",
+  "提供无缝循环、淡入淡出、响度（LUFS）归一化等后期处理",
+  "输出 48 kHz WAV、OGG 或 FLAC，并附带记录提示词和种子的 JSON 文件",
+  "内置 Stable Audio 3 提示词格式指导，帮助客户端将自然语言转换为有效提示词",
+  "完全本地运行，无需上传数据或 API 密钥"
+ ],
+ "intro": "Audio Studio MCP 是一个本地运行的 AI 音频生成服务器，为 Claude Code、Claude Desktop、Cursor 等 MCP 客户端提供音乐和音效生成能力。它基于 Stable Audio 3 模型，在 Apple Silicon 上使用 MLX，在 Windows NVIDIA GPU 上使用 PyTorch，无需云端服务和 API 密钥。\n\n用户可以用自然语言描述需求，模型会生成背景音乐、乐器循环或音效，并支持无缝循环、响度归一化、淡入淡出等后期处理，输出 48 kHz 的 WAV、OGG 或 FLAC 文件。每个生成文件都附带包含提示词、种子和设置的 JSON 文件，便于复现。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS (Apple Silicon): 运行 ./install.sh 安装依赖、克隆 Stable Audio 3 运行时并下载模型",
+  "Windows (NVIDIA GPU): 运行 powershell -ExecutionPolicy Bypass -File install.ps1 安装 PyTorch 和模型",
+  "安装完成后，按照终端提示使用 claude mcp add 命令注册服务器",
+  "在 MCP 客户端中用自然语言请求生成音乐或音效"
+ ],
+ "summary": "Audio Studio MCP 是一个本地 AI 音频生成服务器，让 Claude Code 等 MCP 客户端能通过自然语言生成背景音乐和音效。它基于 Stable Audio 3 模型，在 Mac 和 Windows 上本地运行，无需云端或 API 密钥，适合游戏开发、视频制作等需要快速定制音频的场景。",
+ "tagline": "本地 AI 音乐与音效生成，支持 MCP 客户端"
+}

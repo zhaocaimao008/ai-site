@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Unity 开发游戏、希望借助 AI 智能体加速编码、测试与调试的开发者；也适合想在已编译游戏中集成 LLM 的团队。",
+ "date": "2026-10-22",
+ "features": [
+  "通过 MCP 将 Claude、Cursor、Copilot、Gemini 等 AI 客户端接入 Unity",
+  "提供默认 MCP Tools，用于在 Unity Editor 中执行操作",
+  "根据系统、Unity 版本与项目插件自动生成 AI Skills",
+  "支持 Runtime（游戏内）调用 LLM，用于 NPC 行为或调试",
+  "一行代码即可把任意 C# 方法注册为自定义工具",
+  "支持本地 stdio 与远程 http 部署，并提供 CLI 快速安装"
+ ],
+ "intro": "Unity-MCP 是一个面向 Unity 引擎的 MCP 服务器与插件，让 Claude、Cursor、GitHub Copilot、Gemini 等支持 MCP 的 AI 客户端连接 Unity，在编辑器内操作项目、生成代码、编写并测试游戏机制。项目同时支持 Editor 与 Runtime，插件可运行在已编译的游戏内，用于实时 AI 调试或 NPC 行为。\n\n它提供一批默认 MCP Tools，并可根据操作系统、Unity 版本和项目插件生成 Skills；在项目代码中写一行即可把任意 C# 方法变成工具。部署上支持本地 stdio 与远程 http 两种方式，并提供 CLI 与 .unitypackage 安装包简化配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install -g unity-mcp-cli",
+  "unity-mcp-cli install-plugin ./MyUnityProject",
+  "unity-mcp-cli login",
+  "unity-mcp-cli open ./MyUnityProject",
+  "在 Unity 中打开 Window/AI Game Developer，点击 Auto-generate skills 或 Configure 完成 AI 客户端配置"
+ ],
+ "summary": "Unity-MCP 把支持 MCP 的 AI 客户端接入 Unity，让 AI 能在编辑器里操作项目、生成代码、编写并测试游戏机制。它同时支持运行时，可在已编译的游戏内调用 LLM，用于 NPC 行为或实时调试。适合希望用 AI 辅助 Unity 开发、或想在游戏中集成大模型的开发者。",
+ "tagline": "把 AI 智能体接入 Unity 编辑器与运行时的 MCP 插件"
+}

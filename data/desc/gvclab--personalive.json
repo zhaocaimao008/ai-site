@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究人像动画、说话头视频生成的开发者与研究人员，以及希望在本地部署直播人像动画演示的用户。",
+ "date": "2026-10-22",
+ "features": [
+  "实时、可流式的扩散框架，支持生成无限长度的人像动画",
+  "离线推理支持流式生成策略，可在 12GB 显存上生成长视频",
+  "提供 WebUI 在线推理，支持替换参考图并启动动画",
+  "可选 TensorRT 加速，README 称推理约提速 2 倍",
+  "已开源推理代码、配置、预训练权重与训练代码",
+  "社区提供 ComfyUI-PersonaLive 节点支持"
+ ],
+ "intro": "PersonaLive 是一个实时、可流式生成的扩散框架，用于把静态人像图片驱动成连续的人像动画视频，论文被 CVPR 2026 接收。项目由澳门大学、Dzine.ai 与 GVC Lab 等机构合作完成，官方定位是服务于直播场景的表现力人像动画。\n\n项目提供离线推理与在线 WebUI 两种使用方式。离线推理支持流式生成策略，可在 12GB 显存上生成长视频；在线模式通过浏览器界面完成上传图片、融合参考图、启动动画的流程。此外还提供 TensorRT 加速脚本，以及社区维护的 ComfyUI 节点。\n\n仓库已开源推理代码、配置、预训练权重和训练代码，模型权重可从 Hugging Face、ModelScope、Google Drive 或百度网盘获取。作者声明该项目仅用于学术研究。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并创建 conda 环境：git clone https://github.com/GVCLab/PersonaLive && conda create -n personalive python=3.10 && conda activate personalive",
+  "安装依赖：pip install -r requirements_base.txt",
+  "下载预训练权重：python tools/download_weights.py，并按 README 的目录结构放入 pretrained_weights",
+  "运行离线推理：python inference_offline.py；RTX 50 系列需加 --use_xformers False",
+  "启动 WebUI：source web_start.sh 后运行 python inference_online.py --acceleration none，浏览器打开 http://localhost:7860"
+ ],
+ "summary": "PersonaLive 是一个面向直播场景的人像动画生成框架，能把一张静态人像图片驱动成连续的人像视频。它采用实时、可流式的扩散方案，支持生成长视频，并提供离线推理和浏览器 WebUI 两种使用方式，还附带 TensorRT 加速选项。适合研究说话头视频生成的开发者，以及想本地搭建人像动画演示的用户。",
+ "tagline": "面向直播场景的实时人像动画扩散框架"
+}

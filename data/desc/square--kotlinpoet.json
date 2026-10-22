@@ -1,0 +1,16 @@
+{
+ "ai_related": false,
+ "audience": "需要在构建或运行阶段自动生成 Kotlin 代码的开发者，以及编写注解处理器、代码生成工具的工程师。",
+ "date": "2026-10-22",
+ "features": [
+  "提供 Kotlin 与 Java 两套 API 生成 .kt 源文件",
+  "以对象模型描述类、函数、属性等代码结构",
+  "输出格式化的 Kotlin 源码文本",
+  "适用于注解处理、代码生成等场景"
+ ],
+ "intro": "KotlinPoet 是 Square 开源的一个 Kotlin 和 Java API，用于生成 .kt 源文件。它面向需要在程序运行时或构建阶段自动产出 Kotlin 代码的场景，把类、函数、属性等代码结构抽象成可组合的对象，再输出为格式化的源码文本。\n\n项目以 Kotlin 编写，同时提供 Java 调用方式，适合注解处理器、编译器插件、代码生成工具等需要动态构造 Kotlin 代码的工程使用。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "KotlinPoet 是 Square 开源的代码生成库，提供 Kotlin 和 Java API，用来在程序中构造并输出 .kt 源文件。它把类、函数、属性等代码元素抽象为可组合对象，适合注解处理器、编译器插件或构建工具等需要自动生成 Kotlin 代码的场景。",
+ "tagline": "用 Kotlin/Java API 生成 .kt 源码文件"
+}

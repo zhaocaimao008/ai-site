@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Apple Silicon Mac 上本地运行大模型、并希望把编码 agent 接到本地推理服务的开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "兼容 OpenAI 与 Anthropic Messages 的本地 API 接口",
+  "面向编码 agent 的 tool calling，含 27 个解析模块与自动检测",
+  "continuous batching 与 radix 前缀缓存、量化 KV cache",
+  "同权重下解码速度最高为 mlx-lm 的 4 倍（README 实测）",
+  "rapid-mlx launch 一键接入 Codex、Claude Code 等 agent"
+ ],
+ "intro": "Rapid-MLX 是一个基于 MLX 的开源 LLM 推理服务器，运行在 Apple Silicon Mac 上，对外提供与 OpenAI（/v1/chat/completions、/v1/responses）和 Anthropic Messages（/v1/messages）兼容的本地 API。项目重点在于为编码类 agent 提供可靠的 tool calling，内置 27 个工具调用解析模块，并带有自动检测兜底。\n\n性能方面，README 给出的同权重对比显示，其解码速度最高可达 Apple 官方 mlx-lm 的 4 倍，典型任务约 1.5 倍；在 Qwen3.5-9B、Qwen3.8-27B、Qwen3.6-35B 上与 oMLX、LM Studio 的实测对比也有列出。服务端支持 continuous batching、内存中的 radix 前缀缓存（关闭时落盘、启动时恢复）以及量化 KV cache。\n\n使用上可以通过安装脚本或 Homebrew 安装，再用 rapid-mlx launch <agent> 一条命令把 Codex、Claude Code、OpenCode 等编码 agent 接到本地模型上。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装脚本：curl -fsSL https://rapidmlx.com/install.sh | bash",
+  "重启终端，或执行 export PATH=\"$HOME/.local/bin:$PATH\"",
+  "安装你使用的编码 agent，然后运行 rapid-mlx launch codex（或其他 agent）",
+  "如需移除 Rapid 创建的私有配置，运行 rapid-mlx launch codex --remove"
+ ],
+ "summary": "Rapid-MLX 是一个跑在 Apple Silicon Mac 上的本地 LLM 推理服务器，基于 MLX 构建，对外提供 OpenAI 和 Anthropic 兼容接口，并针对编码 agent 的工具调用做了专门处理。它适合想在本地用 Codex、Claude Code 等 agent 搭配自选模型的开发者，也提供 continuous batching、前缀缓存等提升吞吐的机制。",
+ "tagline": "面向 Apple Silicon 的本地 LLM 推理服务器，兼容 OpenAI 与 Anthropic 接口"
+}

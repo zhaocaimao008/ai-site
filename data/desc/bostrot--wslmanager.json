@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 WSL 的 Windows 开发者、需要图形化工具管理 Linux 环境的用户，以及在 macOS 上运行 Linux 虚拟机的开发者。",
+ "date": "2026-10-22",
+ "features": [
+  "从内置目录或自定义 rootfs 安装 WSL 发行版，支持复制、重命名、移动、备份和删除实例",
+  "将 Docker 镜像用作发行版，或将配置好的发行版打包为可移植的 .wsl 文件",
+  "图形化编辑 systemd、默认用户、.wslconfig 等配置，无需手动修改文件",
+  "通过 SSH 管理远程 Windows 机器上的 WSL，并在网络内同步发行版",
+  "内置 AI 助手和 MCP 服务器，让 AI 代理调用工具管理 WSL 或虚拟机",
+  "在 macOS 上通过 Apple Virtualization 框架创建和管理 Linux/macOS 虚拟机（beta）"
+ ],
+ "intro": "WSL Manager 是一个开源 GUI 工具，用于管理 Windows Subsystem for Linux（WSL）发行版，并在 macOS 上通过 Apple Virtualization 框架管理原生 Linux 和 macOS 虚拟机。它让用户无需记忆 wsl.exe 命令即可完成安装、复制、重命名、移动、备份和删除等操作。\n\n除了基础管理，它还提供模板、命令片段、磁盘挂载、.wslconfig 编辑、SSH 远程 WSL 管理等功能。内置 AI 助手和 MCP 服务器，允许 AI 代理通过工具驱动 WSL 环境或虚拟机。在 macOS 上，同一应用可创建、启动、克隆和导出虚拟机，并通过自动配置的 SSH 执行命令。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "WSL Manager 是一个图形化工具，帮助 Windows 用户免命令行管理 WSL 发行版，完成安装、备份、迁移和配置等操作。它内置 AI 助手和 MCP 服务器，可让 AI 代理调用工具管理环境；在 macOS 上还能通过 Apple Virtualization 框架管理 Linux 和 macOS 虚拟机。适合希望简化 WSL 日常管理或需要远程、跨机操作 WSL 的开发者。",
+ "tagline": "WSL 与 macOS 虚拟机的图形化管理工具"
+}

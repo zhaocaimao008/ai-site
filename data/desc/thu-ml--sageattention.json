@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要加速 Transformer 推理的开发者，尤其是使用语言、图像或视频生成模型并希望在不损失精度的情况下提升注意力计算速度的研究与工程人员。",
+ "date": "2026-10-22",
+ "features": [
+  "针对 Ampere、Ada 和 Hopper GPU 优化的注意力内核",
+  "QK^T 使用 INT8 量化与平滑，支持不同粒度",
+  "PV 使用 FP8 量化，并支持 FP16 累加器",
+  "提供 sageattn、sageattn_varlen 等多个 API，自动选择最优内核",
+  "支持 torch.compile（非 cudagraphs 模式）和分布式推理",
+  "可即插即用替换 scaled_dot_product_attention"
+ ],
+ "intro": "SageAttention 是清华大学机器学习组提出的量化注意力实现，包含 SageAttention、SageAttention2 和 SageAttention2++ 等版本。它通过对注意力计算中的 QK^T 和 PV 进行 INT8/FP8 量化，在 Ampere、Ada、Hopper 等 GPU 上实现相比 FlashAttention 的加速，同时保持端到端指标不下降。项目提供 CUDA 和 Triton 后端，支持 torch.compile 和分布式推理，可以即插即用地替换 scaled_dot_product_attention。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保环境满足 python>=3.9、torch>=2.3.0、triton>=3.0.0 及对应 CUDA 版本",
+  "使用 pip 安装：pip install sageattention==2.2.0 --no-build-isolation",
+  "或从源码编译：git clone https://github.com/thu-ml/SageAttention.git && cd SageAttention && python setup.py install",
+  "在代码中导入并使用：from sageattention import sageattn; attn_output = sageattn(q, k, v, tensor_layout=\"HND\", is_causal=False)"
+ ],
+ "summary": "SageAttention 是一个面向推理加速的量化注意力实现，通过 INT8/FP8 量化降低注意力计算开销，在多种 GPU 上获得相比 FlashAttention 的加速，同时保持模型端到端指标。它提供即插即用的 API，可替换 PyTorch 的 scaled_dot_product_attention，适合语言、图像和视频生成等 Transformer 模型的推理部署场景。",
+ "tagline": "即插即用的量化注意力加速库，兼容多种GPU"
+}

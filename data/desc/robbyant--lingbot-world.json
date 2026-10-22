@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究世界模型、视频生成和实时交互模拟的研究者与开发者，以及内容创作、游戏和机器人学习领域的从业者。",
+ "date": "2026-10-22",
+ "features": [
+  "高保真且多样化的环境模拟，覆盖写实、科学、卡通等风格",
+  "长时程记忆与上下文一致性，支持分钟级时间跨度",
+  "实时交互，16 FPS 下延迟低于 1 秒",
+  "提供 Base（相机/动作控制）和 Fast 模型权重",
+  "支持 480P 与 720P 分辨率推理",
+  "开源代码与模型，提供在线 Demo"
+ ],
+ "intro": "LingBot-World 是 Robbyant 团队开源的世界模型项目，基于视频生成技术构建。它支持高保真、多样化的环境模拟，涵盖写实、科学场景和卡通风格等，并具备分钟级的长时程记忆与上下文一致性。项目还强调实时交互能力，在 16 FPS 下延迟低于 1 秒。\n\n该仓库提供 LingBot-World-Base（Cam/Act）和 LingBot-World-Fast 等模型权重与推理脚本，代码基于 Wan2.2 构建。需要注意的是，此仓库已不再积极维护，后续更新将发布在 lingbot-world-v2（LingBot-World-Infinity）中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/robbyant/lingbot-world.git && cd lingbot-world",
+  "安装依赖：pip install -r requirements.txt（确保 torch >= 2.4.0）",
+  "安装 flash_attn：pip install flash-attn --no-build-isolation",
+  "下载模型：huggingface-cli download robbyant/lingbot-world-base-cam --local-dir ./lingbot-world-base-cam",
+  "运行推理：torchrun --nproc_per_node=8 generate.py --task i2v-A14B --size 480*832 --ckpt_dir lingbot-world-base-cam --image examples/00/image.jpg --action_path examples/00 --dit_fsdp --t5_fsdp --ulysses_size 8 --frame_num 161 --prompt \"...\""
+ ],
+ "summary": "LingBot-World 是一个开源的世界模型项目，基于视频生成技术模拟多样化环境，支持长时程一致性和实时交互。它适合需要高保真环境模拟的研究与开发场景，如内容创作、游戏和机器人学习。项目提供模型权重和推理脚本，但当前仓库已停止维护，建议使用其后续版本。",
+ "tagline": "开源世界模型，从视频生成到实时交互模拟"
+}

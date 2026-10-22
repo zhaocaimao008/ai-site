@@ -1,0 +1,21 @@
+{
+ "ai_related": false,
+ "audience": "适合需要动态生成机器码的 C++ 开发者，尤其是从事 JIT 编译、高性能计算或嵌入式开发的工程师。",
+ "date": "2026-10-22",
+ "features": [
+  "支持 x86、x64 和 AArch64 架构的机器码生成",
+  "提供汇编器（Assembler）和编译器（Compiler）两种 API",
+  "包含通用 JIT API（ujit）",
+  "附带指令数据库和测试工具",
+  "低延迟的代码生成性能"
+ ],
+ "intro": "AsmJit 是一个用 C++ 编写的低延迟机器码生成库，支持 x86、x64 和 AArch64 架构。它提供了汇编器和编译器两种 API，允许开发者在运行时动态生成机器码，适用于 JIT 编译、代码生成等场景。\n\n项目结构清晰，包含核心 API、架构特定后端（x86、arm、a64）以及通用 JIT API（ujit）。此外，还提供了指令数据库和测试工具，方便开发者使用和扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/asmjit/asmjit.git",
+  "使用 CMake 配置项目：cmake -B build -DASMJIT_TEST=OFF",
+  "构建库：cmake --build build"
+ ],
+ "summary": "AsmJit 是一个 C++ 库，用于在运行时低延迟地生成机器码，支持 x86、x64 和 AArch64 架构。它提供汇编器和编译器 API，适合需要 JIT 编译或动态代码生成的场景，如高性能计算、嵌入式开发等。",
+ "tagline": "低延迟机器码生成的 C++ 库"
+}
