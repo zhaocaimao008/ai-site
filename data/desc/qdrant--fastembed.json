@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要为检索、RAG 或向量搜索生成嵌入的 Python 开发者，以及希望在无服务器环境或 CPU 上运行嵌入模型的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "基于 ONNX Runtime，轻量且无需 GPU 即可运行",
+  "支持稠密、稀疏、晚期交互等多种文本嵌入模型",
+  "支持图像嵌入和多模态模型（ColPali）",
+  "提供交叉编码器重排序功能",
+  "可添加自定义模型，支持从 Hugging Face 加载",
+  "可与 Qdrant 向量数据库集成使用"
+ ],
+ "intro": "FastEmbed 是一个用于生成嵌入向量的 Python 库，基于 ONNX Runtime 实现，不依赖 PyTorch，也不需要 GPU 即可运行，因此适合部署在 AWS Lambda 等无服务器环境。\n\n它支持多种模型和任务：稠密文本嵌入、稀疏文本嵌入（如 SPLADE++）、ColBERT 式晚期交互模型、图像嵌入、多模态模型（ColPali）以及交叉编码器重排序。默认文本嵌入模型为 Flag Embedding，并支持 query 和 passage 前缀。\n\nFastEmbed 由 Qdrant 维护，可与 Qdrant 向量数据库配合使用，也支持通过 pip 安装 GPU 版本以启用 CUDA 加速。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装库：pip install fastembed（GPU 版本使用 pip install fastembed-gpu）",
+  "导入 TextEmbedding：from fastembed import TextEmbedding",
+  "初始化模型：embedding_model = TextEmbedding()",
+  "生成嵌入：embeddings_list = list(embedding_model.embed(documents))"
+ ],
+ "summary": "FastEmbed 是一个轻量快速的 Python 嵌入生成库，解决在无 GPU 环境下高效生成文本、图像和多模态嵌入的问题。它基于 ONNX Runtime，不依赖 PyTorch，适合部署在 AWS Lambda 等无服务器环境，也适用于检索增强生成（RAG）、向量搜索和重排序等场景。",
+ "tagline": "轻量快速的 Python 嵌入生成库"
+}

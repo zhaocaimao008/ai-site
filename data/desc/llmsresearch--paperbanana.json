@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为论文或研究报告制作示意图和统计图的科研人员、AI 工程师，以及希望把图表生成接入自动化流程的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "两阶段多智能体流水线，支持迭代优化与自动精修",
+  "支持 OpenAI、Azure OpenAI / Foundry、Gemini、Atlas Cloud 等多种模型服务",
+  "提供 CLI、Python API 和 MCP server，可集成到 IDE 工作流",
+  "从 YAML/JSON 清单批量生成示意图和统计图",
+  "可读取 PDF 方法章节作为生成上下文，并支持按页选择",
+  "内置 Gradio 本地界面 PaperBanana Studio，覆盖生成、评估与批量任务"
+ ],
+ "intro": "PaperBanana 是 Google Research 论文《PaperBanana: Automating Academic Illustration for AI Scientists》的社区开源实现，用多智能体流程把方法描述和图表标题转成出版级学术示意图和统计图。项目采用两阶段多智能体流水线并支持迭代优化，可接入 OpenAI、Azure OpenAI / Foundry、Google Gemini 和 Atlas Cloud 等模型服务。\n\n除单张生成外，它还提供 CLI、Python API 和 MCP server，支持从 YAML/JSON 清单批量生成图表、读取 PDF 方法章节作为上下文，以及通过本地 Gradio 界面 PaperBanana Studio 操作。项目声明与原作者及 Google Research 无隶属关系，实现基于公开论文，可能与原系统存在差异。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install paperbanana",
+  "复制 .env.example 为 .env，填入 OPENAI_API_KEY 或 GOOGLE_API_KEY",
+  "运行 paperbanana generate --input examples/sample_inputs/transformer_method.txt --caption \"Overview of our encoder-decoder architecture with sparse routing\"",
+  "可选：加上 --optimize --auto 启用输入优化与自动精修"
+ ],
+ "summary": "PaperBanana 面向需要为论文制作示意图和统计图的研究者，把方法文字描述与图表标题交给多智能体流水线，自动生成出版级学术插图。它支持多种模型服务，提供命令行、Python API、MCP server 和本地网页界面，还能按清单批量生成，适合论文写作和科研图表自动化场景。",
+ "tagline": "从文字描述自动生成学术论文插图与统计图表"
+}

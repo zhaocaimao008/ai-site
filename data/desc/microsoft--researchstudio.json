@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 辅助科研选题、论文写作与成果传播的研究者、学生和开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "IdeaSpark：从模糊研究方向生成可辩护的研究想法卡片",
+  "将论文 PDF 转为可编辑海报、带旁白讲解视频、双语博客和交互式 reel",
+  "提供 pptx2video，把 PowerPoint 幻灯片转为带动画和字幕的旁白视频",
+  "支持 Claude Code 与 Codex 两种运行环境",
+  "提供 install.sh 与 npx 两种安装方式"
+ ],
+ "intro": "ResearchStudio 是微软开源的一组科研技能（skills），覆盖从研究问题到论文发表后的完整流程，运行在 Claude Code 和 Codex 上。项目分为两部分：Idea 负责论文之前的阶段，把尚不明确的研究方向转化为可辩护、可实现的研究想法；Reel 负责论文之后的阶段，把已完成的论文 PDF 转成海报、讲解视频、博客文章和交互式 reel。\n\nIdea 部分基于从 ICLR、ICML、NeurIPS 投稿中归纳出的经验分类体系；Reel 部分则面向论文发表后的传播材料制作。README 建议配合 claude-opus-4.6 或 gpt-5.5 及以上版本的模型使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "conda create -n researchstudio \"python>=3.10\" -y && conda activate researchstudio",
+  "git clone https://github.com/microsoft/ResearchStudio.git && cd ResearchStudio",
+  "bash install.sh",
+  "或使用交互式安装：npx github:microsoft/ResearchStudio",
+  "参考 ResearchStudio-Idea 和 ResearchStudio-Reel 的 Usage 文档开始使用"
+ ],
+ "summary": "ResearchStudio 把科研工作拆成前后两段：Idea 帮助把模糊的研究方向整理成经得起审稿人推敲的想法，Reel 则把完成的论文转成海报、讲解视频、博客和交互式展示页。它作为技能集运行在 Claude Code 和 Codex 上，适合需要从选题到成果传播全流程辅助的研究者使用。",
+ "tagline": "覆盖科研全流程的 AI 协作技能集"
+}

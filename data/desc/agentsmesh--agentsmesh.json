@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要同时运行和管理多个 AI 编码代理的开发者、团队或自托管用户。",
+ "date": "2026-10-23",
+ "features": [
+  "Runner 集群：在任意数量自托管机器上安装 Runner，按容量调度 AgentPod",
+  "工作区隔离：每个代理拥有独立 Git worktree 沙箱、私有凭证和分支",
+  "统一控制台：Web、Desktop、iOS 客户端共享 Rust 核心，实时终端流式输出",
+  "Autopilot：控制代理监控空闲 Pod 并自动发送下一条指令，支持人工接管",
+  "Mesh & Channels：将 Pod 绑定为协作拓扑，通过频道和 @mentions 通信",
+  "工单看板：将任务绑定到 Pod，跟踪进度和 MR/PR"
+ ],
+ "intro": "AgentsMesh 是一个 AI Agent 工作力平台，目标是在你自己的机器上运行上百个 AI 编码代理，并通过一个控制台统一调度、隔离和操控它们。它解决的是单机无法承载大量代理、终端难以同时监控、代理之间状态互相干扰等问题。\n\n平台由 Go 编写的后端、Relay 和自托管 Runner 组成，Runner 通过 gRPC+mTLS 连接后端并启动隔离的 AgentPod。每个 Pod 拥有独立的 Git worktree 沙箱和私有凭证，并发代理互不干扰。客户端包括 Web、Desktop 和 iOS，共享同一套 Rust 核心逻辑。\n\nAgentsMesh 还提供 Autopilot 自动巡航、Mesh & Channels 代理协作以及 Kanban 工单等能力，适合需要同时运行多个 AI 编码代理并保持可控性的团队或个人开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Runner：curl -fsSL https://agentsmesh.ai/install.sh | sh",
+  "登录：agentsmesh-runner login（无头环境使用 --headless）",
+  "启动 Runner：agentsmesh-runner run",
+  "或安装为系统服务：agentsmesh-runner service install && agentsmesh-runner service start",
+  "本地全栈启动：git clone https://github.com/AgentsMesh/AgentsMesh.git && cd AgentsMesh/deploy/dev && ./dev.sh"
+ ],
+ "summary": "AgentsMesh 是一个自托管的 AI 代理工作力平台，帮助你在多台自有机器上运行大量 AI 编码代理，并从统一控制台进行调度、隔离和操控。它适合需要同时管理多个编码代理、又希望代码不离开自有基础设施的开发者或团队，提供 Runner 集群、独立工作区、自动巡航和代理协作等能力。",
+ "tagline": "在自有机器上调度、隔离并统一管理大量 AI 编码代理"
+}

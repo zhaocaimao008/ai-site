@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 TensorFlow 进行序列模型研究和开发的机器学习工程师与研究人员。",
+ "date": "2026-10-23",
+ "features": [
+  "提供序列模型（如 seq2seq）的构建与训练框架",
+  "内置多个任务模型：MNIST、机器翻译、语言模型、语音识别等",
+  "支持分布式训练和 GPU 计算",
+  "提供 pip 安装和源码编译两种使用方式",
+  "包含 Docker 配置和 codelab 教程"
+ ],
+ "intro": "Lingvo 是 TensorFlow 生态下的神经网络构建框架，尤其擅长序列模型。它提供了训练、评估和部署模型的基础设施，并内置了多个任务（如语音识别、机器翻译、语言建模、图像分类）的参考实现。\n\n项目包含 MNIST 图像模型、机器翻译模型、GShard 巨型语言模型以及 3D 目标检测等示例，方便开发者快速上手和复现。Lingvo 支持分布式训练和 GPU 计算，适合研究者和工程师构建自定义序列模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip3 install lingvo",
+  "mkdir -p /tmp/mnist && python3 -m lingvo.tools.keras2ckpt --dataset=mnist",
+  "cd /tmp/mnist && curl -O https://raw.githubusercontent.com/tensorflow/lingvo/master/lingvo/tasks/image/params/mnist.py",
+  "python3 -m lingvo.trainer --run_locally=cpu --mode=sync --model=mnist.LeNet5 --logdir=/tmp/mnist/log"
+ ],
+ "summary": "Lingvo 是一个基于 TensorFlow 的神经网络框架，专注于序列模型，如语音识别、机器翻译和语言建模。它提供了训练和评估模型的基础设施，并包含多个任务的参考实现，适合需要快速构建和实验序列模型的开发者与研究者。",
+ "tagline": "基于 TensorFlow 的序列模型神经网络框架"
+}

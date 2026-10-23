@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要将语音识别能力集成到应用中的开发者，以及希望快速搭建本地或私有 ASR 服务的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "支持 OpenAI Whisper、Faster Whisper、WhisperX 三种 ASR 引擎",
+  "提供 REST API 与 Swagger 文档，便于集成和调试",
+  "输出格式包括 text、JSON、VTT、SRT、TSV",
+  "支持词级时间戳、VAD 过滤和说话人分离（WhisperX）",
+  "集成 FFmpeg，支持多种音视频格式",
+  "支持 GPU 加速与模型加载/卸载超时配置"
+ ],
+ "intro": "Whisper ASR Box 是一个通用语音识别工具包，将 OpenAI Whisper 等模型封装为 Web 服务。它支持 openai/whisper、faster-whisper 和 whisperX 三种引擎，可进行多语言语音识别、语音翻译和语种识别。\n\n项目提供 REST API 和 Swagger 文档，支持文本、JSON、VTT、SRT、TSV 等多种输出格式，并具备词级时间戳、VAD 过滤、说话人分离（WhisperX）等功能。通过 FFmpeg 集成，可处理多种音视频格式，并支持 GPU 加速。\n\n用户可通过 Docker 快速部署 CPU 或 GPU 版本，也可使用 Poetry 从源码运行。环境变量可配置引擎、模型、设备及模型空闲超时等参数。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "CPU 部署：docker run -d -p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper onerahmet/openai-whisper-asr-webservice:latest",
+  "GPU 部署：docker run -d --gpus all -p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper onerahmet/openai-whisper-asr-webservice:latest-gpu",
+  "可选：挂载缓存目录减少启动下载时间，添加 -v $PWD/cache:/root/.cache/",
+  "启动后访问 http://localhost:9000 查看 Swagger UI 并调用 API"
+ ],
+ "summary": "Whisper ASR Box 把 OpenAI Whisper 等语音识别模型封装成可直接调用的 Web 服务，解决开发者自行部署 ASR 模型时环境配置繁琐的问题。它支持多种引擎、输出格式和 GPU 加速，适合需要快速搭建私有语音转文字接口、或为应用添加多语言识别与翻译能力的场景。",
+ "tagline": "基于 Whisper 的语音识别 Web 服务，支持多引擎与 REST API"
+}

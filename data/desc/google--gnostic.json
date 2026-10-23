@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "需要以类型安全方式处理 OpenAPI 描述的开发者，尤其是使用 Go 或 Dart 等强类型语言的工程师。",
+ "date": "2026-10-23",
+ "features": [
+  "将 OpenAPI 描述转换为 Protocol Buffer 二进制格式",
+  "支持从 URL 编译 OpenAPI 文件",
+  "提供插件接口，可扩展代码生成等任务",
+  "可将 Protocol Buffer 描述重新导出为 JSON 或 YAML",
+  "包含示例应用 apps/report 用于读取二进制编码"
+ ],
+ "intro": "gnostic 是一个 Go 命令行工具，用于在 JSON/YAML 格式的 OpenAPI 描述与等价的 Protocol Buffer 表示之间进行转换。它读取 OpenAPI 描述到生成的数据结构中，报告错误、解析内部依赖，并输出二进制形式，供任何支持 Protocol Buffer 的语言使用。\n\n该项目还提供了插件接口，便于与不同语言编写的 API 工具集成，并可将 Protocol Buffer 形式的 OpenAPI 描述重新导出为 JSON 或 YAML。gnostic 的编译代码和 OpenAPI Protocol Buffer 模型由 OpenAPI JSON Schema 自动生成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/google/gnostic && cd gnostic",
+  "确保已安装 protoc",
+  "make",
+  "make test",
+  "gnostic --pb-out=. examples/v2.0/json/petstore.json"
+ ],
+ "summary": "gnostic 是一个 Go 命令行工具，用于将 JSON 或 YAML 格式的 OpenAPI 描述转换为 Protocol Buffer 表示，并支持反向导出。它适合需要在强类型语言中以类型安全方式处理 OpenAPI 描述的开发者，也提供插件接口以便集成到各类 API 工具中。",
+ "tagline": "将 OpenAPI 描述转换为 Protocol Buffer 的 Go 编译器"
+}

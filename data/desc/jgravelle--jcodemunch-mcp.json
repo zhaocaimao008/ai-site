@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程代理、希望减少上下文窗口消耗的开发者，以及需要让代理理解大型代码库结构的技术团队。",
+ "date": "2026-10-23",
+ "features": [
+  "用 tree-sitter 解析源码并建立本地符号索引",
+  "按符号搜索并精确取回函数、类、方法等实现",
+  "提供模块大纲、导入关系、影响范围等结构化查询",
+  "支持 Claude Code、Cursor、VS Code、Codex CLI 等 MCP 客户端",
+  "README 称相比 grep 加读文件可减少约 96% 的 token 消耗"
+ ],
+ "intro": "jCodeMunch MCP 是一个基于 tree-sitter AST 解析的 MCP 服务器，让 AI 代理按符号而非按文件检索源码。它先对代码库建立一次索引，保存函数、类、方法、常量等符号的签名、类型、限定名和字节偏移等元数据，之后代理只需查询并取回具体实现，不必反复打开整个文件。\n\n项目提供 search_symbols、get_symbol_source 等查询方式，也支持获取模块大纲、导入关系和影响范围等结构化信息。README 中的基准测试显示，相比 grep 加读取文件的常规做法，单次查询可减少约 96% 的 token 消耗。它可与 Claude Code、Cursor、VS Code、Codex CLI、Windsurf 等 MCP 兼容客户端配合使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 VS Code 中通过一键链接安装 jCodeMunch MCP",
+  "或使用 uvx 运行：uvx jcodemunch-mcp",
+  "在 MCP 客户端中配置该服务器",
+  "对代码库建立索引后，使用 search_symbols 和 get_symbol_source 查询符号"
+ ],
+ "summary": "jCodeMunch MCP 面向使用 AI 编程代理的开发者，解决代理阅读代码时动辄打开整个文件、浪费上下文窗口的问题。它用 tree-sitter 为代码库建立符号索引，让代理直接按函数、类等符号检索并取回精确实现，还能查询导入关系和影响范围。适合在 Claude Code、Cursor 等 MCP 客户端中处理较大代码库时使用。",
+ "tagline": "按符号检索代码的 MCP 服务器，为 AI 代理节省 token"
+}

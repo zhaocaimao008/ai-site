@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要本地处理音频转写和字幕制作的开发者、内容创作者及隐私敏感用户。",
+ "date": "2026-10-23",
+ "features": [
+  "将音频、视频等媒体文件或 URL 转写为文本",
+  "支持导出 TXT、JSON、VTT、SRT 格式或复制原始文本",
+  "基于 LibreTranslate 将转写文本翻译为多种语言",
+  "内置字幕编辑器，支持高亮、CPS 警告、片段拆分与插入",
+  "100% 本地运行，可离线使用，支持 CPU 与 NVIDIA GPU 加速",
+  "使用 FasterWhisper 作为 Whisper 后端，提升 CPU 转写速度"
+ ],
+ "intro": "Whishper 是一个开源、100% 本地运行的音频转写与字幕制作套件，提供完整的 Web 界面。它基于 FasterWhisper 后端，可以将音频、视频等媒体文件转写为文本，并支持从 URL 直接转写（依赖 yt-dlp）。转写结果可导出为 TXT、JSON、VTT、SRT 等格式，或直接复制到剪贴板。\n\n除了转写，Whishper 还集成了基于 LibreTranslate 的翻译功能，可将转写文本翻译成多种语言。内置的字幕编辑器支持基于媒体位置的转写高亮、CPS（每秒字符数）警告、片段拆分与插入、字幕语言选择等操作，让用户无需离开界面即可完成字幕校对与调整。\n\n项目采用前后端分离架构，包含 Transcription-API、Whishper-Backend 和 Whishper-Frontend 三个主要部分，并依赖 MongoDB、Nginx 和 LibreTranslate 容器。它支持 CPU 和 NVIDIA GPU 加速，可完全离线使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考官方自托管指南：https://whishper-docs.pages.dev/guides/install",
+  "使用快速启动脚本或按文档步骤配置 Docker 环境",
+  "启动服务后通过 Web 界面上传文件或输入 URL 进行转写"
+ ],
+ "summary": "Whishper 是一个完全本地运行的音频转写与字幕编辑工具，解决在不上传数据到云端的前提下将音视频转为文本并制作字幕的需求。它基于 FasterWhisper 提供转写能力，支持从文件或 URL 导入媒体，并可将结果导出为多种字幕格式。内置翻译和字幕编辑器让用户能直接校对、调整时间轴和翻译内容，适合注重隐私、需要离线处理或频繁制作字幕的场景。",
+ "tagline": "本地运行的音频转写与字幕编辑套件"
+}

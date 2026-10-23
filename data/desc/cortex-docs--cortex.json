@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要从 API 规范自动生成文档、SDK 和 AI 代理上下文的开发者与团队。",
+ "date": "2026-10-23",
+ "features": [
+  "从 OpenAPI、AsyncAPI、GraphQL、gRPC、OpenRPC 和 Markdown 生成交互式文档",
+  "为 TypeScript、Python、Go、Java、Kotlin、Ruby、PHP、C#、Rust、C++ 和 C 生成带类型的 SDK",
+  "生成包含规范、SDK 指南和项目文档的 MCP 服务器",
+  "支持在一个 SDK 中合并多个规范文件",
+  "通过 Eta 模板覆盖自定义生成输出",
+  "发布生成的包和 MCP 服务器到语言注册表和 GitHub 仓库"
+ ],
+ "intro": "Cortex 是一个基于 TypeScript 的工具，能把 OpenAPI、AsyncAPI、GraphQL、gRPC、OpenRPC 和 Markdown 等多种 API 规范与文档源，统一转换为交互式文档、带类型的 SDK 以及供 AI 代理使用的 MCP 服务器。所有输出都通过一个项目配置文件（cortex.config.yml）声明和生成。\n\n它支持为 TypeScript、Python、Go、Java、Kotlin、Ruby、PHP、C#、Rust、C++ 和 C 生成 SDK，并能合并多个规范文件到同一个 SDK 中。文档部分会生成静态 HTML 页面，包含可交互的 API 参考。MCP 服务器则内置规范、SDK 指南和项目文档，方便 AI 客户端获取项目上下文。\n\nCortex 还提供模板覆盖机制，允许通过 Eta 模板自定义生成结果，并支持将生成的包和 MCP 服务器发布到语言注册表和 GitHub 仓库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "mkdir petstore && cd petstore",
+  "npm install --global @cortex-docs/cli",
+  "cortex init petstore",
+  "cortex docs serve",
+  "打开 http://localhost:3012 查看文档"
+ ],
+ "summary": "Cortex 解决的是 API 规范到文档、SDK 和 AI 代理上下文之间需要多套工具链的问题。它把 OpenAPI、AsyncAPI、GraphQL、gRPC、OpenRPC 和 Markdown 等来源统一到一个配置文件，一次生成交互式文档、多语言带类型 SDK 以及 MCP 服务器。适合希望减少工具切换、让文档和 SDK 保持同步，并让 AI 代理直接获取项目上下文的开发团队。",
+ "tagline": "从 API 规范生成文档、SDK 和 MCP 服务器"
+}

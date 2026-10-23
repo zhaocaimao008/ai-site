@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Android 手机上离线运行大模型，或统一管理多个远程模型 API 的开发者和普通用户。",
+ "date": "2026-10-23",
+ "features": [
+  "通过 llama.cpp 在设备本地运行 GGUF 模型，无需联网",
+  "使用自有 API key 连接 Anthropic、DeepSeek、Mistral、Ollama、OpenAI 等远程提供商",
+  "从应用内浏览并一键下载 Hugging Face 上的精选模型",
+  "加载本地存储中的任意 GGUF 模型文件",
+  "对话的创建、重命名、删除以及 JSON 导入导出",
+  "按会话调整 temperature、top-p、top-k、上下文长度等生成参数"
+ ],
+ "intro": "Maid 是一个免费开源的 Android 应用，用于与各类大语言模型对话。它基于 React Native 构建，既可以通过 llama.cpp 在设备本地运行 GGUF 模型，也可以使用自己的 API key 连接 Anthropic、DeepSeek、Mistral、Ollama、OpenAI 等远程服务，或接入自托管的 LiteLLM 代理。\n\n应用支持从 Hugging Face 一键下载精选模型，也能加载本地存储中的任意 GGUF 文件。对话可以创建、重命名、删除，并以 JSON 格式导入导出；每次会话可调整 temperature、top-p、top-k、上下文长度等生成参数，还能设置全局系统提示词和助手人设。配合 Maise 应用可实现语音输出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Mobile-Artificial-Intelligence/maid.git",
+  "安装依赖：yarn install",
+  "运行测试：yarn test",
+  "构建 Android 应用：yarn build-android，APK 输出在 android/app/build/outputs/apk/release 目录"
+ ],
+ "summary": "Maid 是一个 Android 端的大模型聊天客户端，解决在手机上便捷使用本地或远程模型的问题。它通过 llama.cpp 支持完全离线的 GGUF 模型推理，也能用 API key 接入 Anthropic、DeepSeek、Ollama、OpenAI 等服务。适合想在移动设备上离线对话、或统一管理多个模型接口的用户。",
+ "tagline": "在 Android 上本地或远程运行大模型的聊天应用"
+}

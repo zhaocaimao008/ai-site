@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "适合需要快速构建数据驱动业务应用的 .NET 和前端开发者，尤其是使用 ASP.NET Core 与 TypeScript 的团队。",
+ "date": "2026-10-23",
+ "features": [
+  "基于 ASP.NET Core 和 TypeScript 的全栈开发框架",
+  "代码生成以减少重复的 CRUD 样板代码",
+  "内置数据网格、表单等业务应用常用组件",
+  "提供 Serene 项目模板，可通过 dotnet new 快速创建应用",
+  "配套 Chrome 开发者工具，用于调试 Serenity 组件"
+ ],
+ "intro": "Serenity 是一个基于 ASP.NET Core 和 TypeScript 的应用平台，旨在简化和缩短以数据为中心的业务应用开发。它采用基于服务的架构，通过避免样板代码、减少重复任务来降低维护成本。\n\n平台提供代码生成、CRUD 操作、数据网格等常见业务应用所需的基础设施，并遵循良好的软件设计实践。项目包含开源模板 Serene，可快速创建新应用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Serene.Templates 包：dotnet new install Serene.Templates",
+  "创建新项目：dotnet new serene -n MySereneApp",
+  "进入项目目录：cd MySereneApp/MySereneApp.Web",
+  "安装 NPM 包：npm i",
+  "构建并运行：dotnet run，然后访问 http://localhost:5000"
+ ],
+ "summary": "Serenity 是一个基于 ASP.NET Core 和 TypeScript 的业务应用开发平台，主要解决数据驱动型应用开发中重复编写 CRUD 代码、维护成本高的问题。它通过代码生成和内置组件减少样板工作，适合需要快速搭建管理后台或业务系统的 .NET 开发者。项目提供 Serene 模板，可用 dotnet new 命令创建项目并运行。",
+ "tagline": "基于 ASP.NET Core 与 TypeScript 的数据驱动业务应用开发平台"
+}

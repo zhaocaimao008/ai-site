@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合AI研究者、开发者以及对多模态交互和图像编辑感兴趣的用户体验和二次开发。",
+ "date": "2026-10-23",
+ "features": [
+  "支持点击、拖拽、绘制等指向性交互方式与ChatGPT对话",
+  "集成DragGAN，实现交互式图像编辑",
+  "集成ImageBind，支持音频、图像、文本跨模态生成",
+  "支持多模态对话、视觉问答、图像分割与OCR",
+  "提供交互式图像编辑、修复、生成功能",
+  "包含Husky视觉语言模型，用于高质量多模态对话"
+ ],
+ "intro": "InternGPT（iGPT）是一个开源的视觉交互系统，允许用户通过点击、拖拽和绘制等指向性操作与ChatGPT进行交互，而不仅依赖纯语言指令。项目集成了DragGAN、ImageBind、SAM、Husky等多种模型，支持多模态对话、图像编辑与生成、视觉问答等任务。\n\n该系统旨在提升用户与聊天机器人之间的沟通效率，并增强视觉中心任务的准确性。它提供了一个在线演示平台，也支持在本地GPU环境部署运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/OpenGVLab/InternGPT.git",
+  "参考INSTALL.md安装依赖并配置环境",
+  "运行本地服务，具体命令请查阅README中的Get Started部分"
+ ],
+ "summary": "InternGPT是一个开源的视觉交互演示平台，让用户通过点击、拖拽和绘制等指向性操作与ChatGPT交互，而不仅依赖文字指令。它集成了DragGAN、ImageBind、SAM等模型，支持多模态对话、图像编辑与生成、视觉问答等任务，适合需要直观操作AI模型的研究者和开发者本地部署体验。",
+ "tagline": "支持点击拖拽交互的多模态AI演示平台"
+}

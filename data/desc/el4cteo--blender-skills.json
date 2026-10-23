@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程助手辅助 Blender 3D 制作的开发者、技术美术和游戏资产创作者。",
+ "date": "2026-10-23",
+ "features": [
+  "22 个技能覆盖完整 3D 管线：建模、UV、PBR、烘焙、绑定、动画、优化、导出、渲染、模拟和 QA",
+  "支持 Claude Code、Codex、OpenCode、Gemini CLI、GitHub Copilot 和 Cursor 等 AI 编程助手",
+  "提供安装脚本，可安装到默认目录或指定项目目录，支持卸载",
+  "包含 Blender 核心技能，负责运行代码、路由任务和 5.x API 规则",
+  "提供资产 QA 技能，可检测 z-fighting、悬浮部件、法线和权重问题",
+  "附带开发工具，用于验证技能规范和运行无头 Blender 测试"
+ ],
+ "intro": "Blender Agent Skills 将 Blender 的 3D 制作流程封装成 Agent Skills，供 Claude Code、Codex、Gemini CLI、GitHub Copilot 和 Cursor 等 AI 编程助手调用。项目包含 22 个技能，覆盖建模、UV、PBR 材质、烘焙、绑定、动画、优化、导出、渲染、模拟和 QA 等环节，基于 Blender 5.2 LTS+ 构建，每个脚本都在真实 Blender 中测试过。\n\n安装后，AI 助手可以按技能执行具体任务，例如为 Unreal 制作带烘焙法线和 LOD 的游戏资产，或用 Rigify 绑定角色并导出到 Unity。没有 MCP 服务器时，助手会在后台运行 Blender；有 MCP 服务器时，则可在已打开的 Blender 中操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code 用户：运行 /plugin marketplace add EL4CTEO/blender-skills",
+  "Claude Code 用户：运行 /plugin install blender-agent-skills@blender-agent-skills",
+  "其他助手：克隆仓库 git clone https://github.com/EL4CTEO/blender-skills",
+  "运行安装脚本：macOS/Linux 执行 ./blender-skills/install/install.sh，Windows 执行 .\\blender-skills\\install\\install.ps1",
+  "确保已安装 Blender 5.2+；可选配置 Blender MCP 服务器以在打开的 Blender 中工作"
+ ],
+ "summary": "Blender Agent Skills 把 Blender 的 3D 制作流程拆成 22 个可被 AI 编程助手调用的技能，覆盖建模、UV、材质、绑定、动画、导出和检查等环节。它适合用 Claude Code、Codex 等助手辅助制作游戏资产或进行 Blender 自动化的开发者，让助手按既定流程执行具体任务，而不是自由发挥。",
+ "tagline": "为 AI 编程助手提供 Blender 3D 工作流技能包"
+}

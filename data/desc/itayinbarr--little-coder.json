@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地用较小模型跑编码智能体的开发者，以及需要终端内 AI 编程助手、关注上下文开销与可预测行为的使用者。",
+ "date": "2026-10-23",
+ "features": [
+  "针对小型本地模型调优的编码智能体，冷启动上下文约 7k tokens",
+  "支持 llama.cpp、Ollama、LM Studio 等本地模型及 Anthropic、OpenAI 云端模型",
+  "Plan Mode：先调研并提问，生成计划后再执行实现",
+  "Deep Research 与只读子智能体 dispatch，可并行调研",
+  "后台任务 ShellStart，长命令不阻塞对话",
+  "可通过扩展目录或环境变量加载自定义扩展"
+ ],
+ "intro": "little-coder 是一个运行在终端里的编码智能体，专门针对参数量较小的本地模型做了调优。它构建在 pi 之上，把 pi 作为普通依赖，自身由约 30 个扩展、30 个技能 markdown 文件和一个 Python 基准测试工具组成，启动时以 --no-extensions 方式只加载随包附带的扩展，从而把冷启动上下文控制在约 7k tokens。\n\n它既支持本地 llama.cpp、Ollama、LM Studio 提供的模型，也能调用 Anthropic、OpenAI 等云端模型，工作目录就是你启动它的项目目录。交互上提供 Plan Mode、Deep Research、子智能体 dispatch、后台任务和按阶段切换模型等能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 22.19+，执行 curl -fsSL https://raw.githubusercontent.com/itayinbarr/little-coder/main/install.sh | bash",
+  "或使用 npm install -g little-coder / bun add -g little-coder 安装",
+  "进入项目目录后运行 little-coder 启动默认模型",
+  "用 little-coder --model llamacpp/qwen3.6-35b-a3b 指定模型，或 --list-models 查看可用模型"
+ ],
+ "summary": "little-coder 是一个终端编码智能体，针对参数量较小的本地模型做了专门调优，解决小模型在编码任务中上下文占用高、行为不稳定的问题。它基于 pi 构建，只加载随包附带的扩展以控制冷启动开销，支持 llama.cpp、Ollama、LM Studio 等本地服务以及云端模型。适合想在本地用较小模型完成代码读写、调研和计划执行的开发者。",
+ "tagline": "为小型本地模型优化的终端编码智能体"
+}

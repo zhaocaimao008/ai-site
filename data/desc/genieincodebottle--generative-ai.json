@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合希望系统学习生成式 AI 的开发者、准备 AI 相关面试的求职者，以及需要查阅 GenAI 工程参考资料的技术人员。",
+ "date": "2026-10-23",
+ "features": [
+  "GenAI 与 AI/ML 学习路线图",
+  "向量嵌入、Prompt Engineering、AI 设计模式等核心概念文档",
+  "RAG 决策流程与 GenAI 项目生命周期指南",
+  "AWS、Azure、Vertex AI 云平台实施资料",
+  "GenAI、LLM、Agentic AI、ML 系统设计等面试问答"
+ ],
+ "intro": "这是一个围绕生成式 AI 的综合性学习资源仓库，内容以 Jupyter Notebook 和 PDF 文档为主，覆盖从入门路线到工程实践的多个环节。仓库整理了 GenAI 与 AI/ML 学习路线图、向量嵌入、Prompt Engineering、AI 设计模式、RAG 决策流程、GenAI 项目生命周期等核心概念材料，并附有 AWS、Azure、Vertex AI 等云平台的实施指南。\n\n除文档外，仓库还包含面试准备资料，涉及 GenAI 与 Transformer、RAG 与提示工程、LLM、Agentic AI、ML 系统设计等主题，部分以 PDF 形式提供。README 同时指向作者维护的 AI-ML Companion 交互式学习平台，作为这些内容的持续更新版本。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库把生成式 AI 的学习路线、核心概念文档、云平台实施指南和面试题库集中在一起，方便开发者按路径查阅。它适合想系统入门 GenAI、了解 RAG 与 Agent 相关工程实践，或准备 AI 面试的人作为参考资料使用。",
+ "tagline": "生成式 AI 学习路线、文档与实战项目合集"
+}

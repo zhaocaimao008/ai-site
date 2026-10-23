@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时管理 iOS 和 Android 应用商店的开发者、产品经理或运营人员，尤其是希望借助 AI 助手简化跨商店操作的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "同时连接 App Store Connect 和 Google Play，支持跨商店查询与对比",
+  "提供 41 个预置工具，覆盖应用管理、订阅、财务报告等常见操作",
+  "支持完整 API 访问，可执行约 1,440 个操作",
+  "密钥存储在本地钥匙串，不经过中间服务器，保障安全",
+  "可通过 AI 助手自动安装配置，或使用手动向导",
+  "支持 Claude Code、Cursor、Antigravity 等多种 MCP 客户端"
+ ],
+ "intro": "magaza-mcp 是一个基于 Model Context Protocol 的服务器，让 AI 助手能够同时访问 App Store Connect 和 Google Play 两个应用商店的 API。它运行在用户本地机器上，直接与 Apple 和 Google 通信，密钥保存在系统钥匙串中，不会经过第三方服务器。\n\n与只支持单一商店的 MCP 服务器不同，magaza-mcp 可以在一次调用中查询两个商店的数据，方便进行价格对比、发布状态核对、用户支付问题排查等需要跨商店信息的操作。项目提供了 41 个工具，并支持通过完整 API 访问执行更多操作。\n\n安装和配置可以通过 AI 助手自动完成，也提供了手动向导。支持 Claude Code、Cursor、Antigravity 等多种客户端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将以下内容发送给 AI 助手（如 Claude Code、Cursor）：https://github.com/tunaarikaya/magaza-mcp — install this, read AGENTS.md",
+  "按照助手提示提供 App Store Connect 的 Key ID、Issuer ID 和 .p8 文件路径，以及 Google Play 服务账号 JSON 路径",
+  "助手会自动验证密钥并保存到钥匙串，并注册到所选客户端",
+  "重启客户端后，即可向助手提问，例如“列出我在两个商店的所有应用”",
+  "如果不使用助手，可运行手动向导：npx magaza-mcp kur"
+ ],
+ "summary": "magaza-mcp 是一个 MCP 服务器，让 AI 助手能同时查询和管理 App Store Connect 与 Google Play。它解决了以往需要安装两个独立服务器、手动对比数据的麻烦，适合需要跨商店比价、排查支付问题或统一查看发布状态的开发者。项目在本地运行，密钥保存在钥匙串，支持多种客户端。",
+ "tagline": "一个 MCP 服务器同时管理 App Store Connect 和 Google Play"
+}

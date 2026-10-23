@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频生成、人体动作驱动的研究人员和开发者，以及希望基于参考图像和动作视频生成高质量人体动画的创作者。",
+ "date": "2026-10-23",
+ "features": [
+  "基于置信度感知的姿态引导，提升时间平滑性和鲁棒性",
+  "采用区域损失放大策略，减少图像失真",
+  "渐进式潜在融合策略，支持生成任意长度视频",
+  "提供预训练权重和推理脚本，支持 72 帧、576x1024 分辨率视频生成",
+  "支持在有限显存下运行，可调整帧数或使用 CPU 运行 VAE 解码器"
+ ],
+ "intro": "MimicMotion 是腾讯与上海交通大学提出的可控视频生成框架，论文被 ICML 2025 接收。它能够根据任意动作引导生成高质量、任意长度的人体动作视频，在细节丰富度、时间平滑性和视频长度方面具有优势。\n\n该方法采用置信度感知的姿态引导来增强时间平滑性和模型鲁棒性，并通过基于姿态置信度的区域损失放大来缓解图像失真。为了生成长而平滑的视频，还提出了渐进式潜在融合策略，从而在可接受的资源消耗下生成任意长度的视频。\n\n项目提供了推理代码和预训练权重，支持在 576x1024 分辨率下生成最多 72 帧的视频。用户需要准备参考图像和动作引导视频，通过配置文件运行推理脚本即可生成结果。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "conda env create -f environment.yaml",
+  "conda activate mimicmotion",
+  "mkdir -p models/DWPose && wget https://huggingface.co/yzd-v/DWPose/resolve/main/yolox_l.onnx?download=true -O models/DWPose/yolox_l.onnx",
+  "wget https://huggingface.co/yzd-v/DWPose/resolve/main/dw-ll_ucoco_384.onnx?download=true -O models/DWPose/dw-ll_ucoco_384.onnx",
+  "wget -P models/ https://huggingface.co/tencent/MimicMotion/resolve/main/MimicMotion_1-1.pth",
+  "python inference.py --inference_config configs/test.yaml"
+ ],
+ "summary": "MimicMotion 是一个可控视频生成框架，能根据任意动作引导生成高质量、任意长度的人体动作视频。它通过置信度感知的姿态引导和渐进式潜在融合策略，在细节、时间平滑性和视频长度上取得改进。适合需要基于参考图像和动作视频生成人体动画的研究者与开发者，项目提供推理代码和预训练权重，可在有限显存下运行。",
+ "tagline": "基于姿态引导的高质量人体动作视频生成框架"
+}

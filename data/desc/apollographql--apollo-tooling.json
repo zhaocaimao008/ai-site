@@ -1,0 +1,22 @@
+{
+ "ai_related": false,
+ "audience": "适合仍在使用旧版 Apollo 工具链、需要维护既有 GraphQL 客户端项目的开发者；新项目建议使用 Rover 或 graphql-code-generator。",
+ "date": "2026-10-23",
+ "features": [
+  "校验客户端项目与已推送服务的 schema 兼容性",
+  "为 GraphQL 查询生成 TypeScript、Flow、Swift 静态类型",
+  "下载或提取 GraphQL schema",
+  "管理 Apollo 服务（推送、检查、列出、删除）",
+  "支持插件扩展命令"
+ ],
+ "intro": "Apollo CLI 是 Apollo 官方推出的命令行工具，用于连接 GraphQL 客户端与服务端。它提供 schema 校验、操作兼容性检查以及为客户端生成静态类型等功能，帮助提升客户端类型安全。\n\n该项目主要包含 client 和 service 两类命令，支持从 Apollo registry 或本地下载 schema，并针对 TypeScript、Flow、Swift 等语言生成类型。不过，README 中明确说明该仓库已进入弃用流程，大部分功能被新项目替代，代码生成部分推荐使用 graphql-code-generator，service 命令也已于 2023 年 4 月停止服务。\n\n因此，它更适合维护旧有 Apollo 项目的开发者参考，新项目不建议采用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "全局安装：npm install -g apollo",
+  "查看帮助：apollo --help",
+  "生成客户端类型：apollo client:codegen [OUTPUT]",
+  "检查客户端项目：apollo client:check"
+ ],
+ "summary": "Apollo CLI 是一个 GraphQL 客户端命令行工具，主要用来校验客户端查询与服务端 schema 的兼容性，并为 TypeScript、Flow、Swift 等语言生成静态类型，从而提升客户端类型安全。它适合维护旧版 Apollo 项目的开发者参考，但项目已进入弃用流程，代码生成推荐改用 graphql-code-generator，新项目建议使用 Rover。",
+ "tagline": "Apollo GraphQL 客户端命令行工具，已逐步被 Rover 取代"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望让 AI 助手直接查询 A 股实时行情与 Level-2 数据的开发者、量化研究者和普通投资者。",
+ "date": "2026-10-23",
+ "features": [
+  "为 Codex、Claude Code 提供插件入口，通过 MCP 连接本机 FQGate",
+  "提供 A 股实时行情、K 线、Level-2 逐笔成交与委托、资讯查询",
+  "包含四个证券研究 Skill，覆盖实时行情、条件选股、盘口成交与事件研究",
+  "提供 MCP Apps 界面源码，可展示 K 线、行情、资讯和 Level-2 成交信息",
+  "本机服务默认仅监听 127.0.0.1:17281，一个实例服务多个 AI 工具"
+ ],
+ "intro": "FQGate Agent 是 FQGate 的开源 AI 接入层，为 Codex、Claude Code 等 AI 工具提供本机 A 股实时行情、K 线、Level-2、资讯等数据能力。它维护插件入口、四个证券研究 Skill 和 MCP Apps 界面源码，行情由本机运行的 FQGate 主程序通过 MCP 连接返回。\n\nFQGate 默认只监听 127.0.0.1:17281，一个实例可同时服务多个 AI 工具。支持 MCP Apps 的软件可以显示 K 线、盘口和逐笔成交信息，实际可用范围取决于连接状态、账号权限和数据来源。项目明确不提供持仓查询、证券买卖或撤单等交易操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 FQGate Agent Releases 按操作系统和处理器下载正式包，并用同名 SHA-256 文件核对完整性",
+  "Windows 完整解压 windows-x64.zip 后运行 FQGate.exe；macOS 解压后将 FQGate.app 移入“应用程序”",
+  "启动 FQGate，在“行情数据”中确认连接可用",
+  "Codex 执行：codex plugin marketplace add fqgate/FQGate-agent --json 与 codex plugin add fqgate-agent@fqgate-official --json",
+  "Claude Code 执行：claude plugin marketplace add fqgate/FQGate-agent --scope user 与 claude plugin install fqgate-agent@tonghuasun-agent --scope user，然后重新打开 AI 会话验证 fqgate 连接"
+ ],
+ "summary": "FQGate Agent 是一个开源接入层，把本机运行的 FQGate 行情网关通过 MCP 接到 Codex、Claude Code 等 AI 工具上，让 AI 能查询 A 股实时行情、K 线、Level-2 逐笔数据和资讯，而不是依赖模型记忆。适合想让 AI 助手直接读取本机行情数据、做盘口与事件研究的开发者与投资者。项目不涉及持仓查询和证券交易操作。",
+ "tagline": "让 AI 工具接入本机 A 股行情与 Level-2 数据的开源插件"
+}

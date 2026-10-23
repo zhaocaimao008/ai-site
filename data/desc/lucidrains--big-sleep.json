@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 GPU 并希望快速尝试文本生成图像的开发者与爱好者。",
+ "date": "2026-10-23",
+ "features": [
+  "通过命令行用自然语言生成图像",
+  "支持在 Python 代码中调用 Imagine 类进行更灵活的控制",
+  "可使用“|”分隔符同时训练多个短语",
+  "可对特定提示词进行惩罚（text_min）",
+  "支持保存训练过程中的图像进度和最佳图像",
+  "可选用更大的视觉模型或限制 GAN 类别数"
+ ],
+ "intro": "Big Sleep 是一个命令行工具，将 OpenAI 的 CLIP 模型与 BigGAN 生成器结合，让用户通过自然语言描述生成图像。该项目封装了 Ryan Murdock 的技术，使拥有 GPU 的用户能轻松使用。\n\n安装后，只需在终端输入一行命令即可让 GAN 根据文本“梦想”出图像。除了命令行，也支持在 Python 代码中调用 Imagine 类，并提供了多个参数来控制生成过程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install big-sleep",
+  "命令行生成：dream \"a pyramid made of ice\"",
+  "代码调用：from big_sleep import Imagine; dream = Imagine(text=\"fire in the sky\"); dream()"
+ ],
+ "summary": "Big Sleep 是一个基于 CLIP 和 BigGAN 的文本生成图像工具，用户通过命令行或 Python 代码输入自然语言描述，即可让 GAN 生成对应图像。它适合拥有 GPU、想快速体验文本到图像生成的开发者，也支持多短语训练和提示词惩罚等进阶控制。",
+ "tagline": "用自然语言命令行生成图像的CLIP+BigGAN工具"
+}

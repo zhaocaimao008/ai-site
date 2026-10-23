@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在一个桌面工作区中并行管理多个 AI 编码会话、并需要代码与文档混合编辑的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "AI agent 实时将编辑内容写入打开的编辑器",
+  "支持代码、Markdown、表格、图表等多种编辑器",
+  "通过 Git worktree 隔离并行运行多个 AI 编码会话",
+  "采用 Markdown、JSON、CSV 等开放格式的本地优先文件模型",
+  "基于 Electron 构建的桌面应用"
+ ],
+ "intro": "Crystal 是一个已弃用的桌面应用，原本用于管理多个 AI 编码会话。根据 README，该项目已被 Nimbalyst 取代，并于 2026 年 2 月停止维护。\n\nREADME 建议用户迁移到 Nimbalyst。Nimbalyst 是一个面向人与 AI 协作的 AI 原生工作区，支持 AI agent 将编辑内容实时写入打开的编辑器，并提供代码、Markdown、表格、图表等多种编辑器环境。它还通过 Git worktree 隔离，让多个 AI 编码会话可以并行运行。\n\n当前仓库主要作为迁移说明保留，不再提供新功能更新。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载 Nimbalyst：https://nimbalyst.com/",
+  "查阅文档：https://docs.nimbalyst.com/",
+  "访问新仓库：https://github.com/Nimbalyst/nimbalyst"
+ ],
+ "summary": "Crystal 原本是一个管理多个 AI 编码会话的桌面工具，现已弃用并由 Nimbalyst 接替。Nimbalyst 提供人与 AI 协作的工作区，支持 AI agent 实时写入编辑器、多类型文件编辑，以及用 Git worktree 隔离并行 AI 会话。适合需要在本地并行开展 AI 辅助开发、同时编辑代码和文档的开发者迁移使用。",
+ "tagline": "Crystal 已弃用，由 Nimbalyst 接替"
+}

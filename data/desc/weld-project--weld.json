@@ -1,0 +1,22 @@
+{
+ "ai_related": false,
+ "audience": "适合需要优化多库组合的数据分析工作流性能的开发者，以及希望了解跨库优化技术的 Rust/Python 用户。",
+ "date": "2026-10-23",
+ "features": [
+  "跨库和函数的统一中间表示与优化",
+  "惰性构建计算图，按需优化和求值",
+  "提供 C API 和 Python 绑定",
+  "包含 Grizzly（Pandas on Weld）子项目",
+  "附带交互式 REPL 等命令行工具"
+ ],
+ "intro": "Weld 是一个用于提升数据密集型应用性能的语言和运行时。它通过将不同库和框架中的核心计算表达为统一的中间表示，并对整个工作流进行跨库优化，来解决现代分析应用中因数据在函数间频繁移动而导致的性能瓶颈。Weld 采用惰性构建计算图的方式，仅在需要结果时进行优化和求值。\n\n项目使用 Rust 编写，依赖 LLVM 6.0 进行代码生成，提供 C API 和 Python 绑定。此外，Weld 还包含 Grizzly 子项目，它是 Pandas 的一个子集，集成了 Weld 的优化能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Rust 最新稳定版和 LLVM/Clang++ 6.0",
+  "克隆仓库并设置环境变量：git clone https://www.github.com/weld-project/weld && cd weld/ && export WELD_HOME=`pwd`",
+  "构建 Weld：cargo build --release",
+  "运行测试：cargo test"
+ ],
+ "summary": "Weld 是一个用 Rust 编写的高性能运行时，旨在解决数据分析应用中多个库组合时因数据移动导致的性能下降问题。它通过统一的中间表示对整个工作流进行跨库优化，并惰性求值。项目提供 C API 和 Python 绑定，还包含 Grizzly 子项目，适合需要优化多库工作流性能的开发者。",
+ "tagline": "跨库优化数据密集型应用的高性能运行时"
+}

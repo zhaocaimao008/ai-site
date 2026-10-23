@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Ableton Live 的音乐制作人、作曲者，以及希望将 LLM 接入数字音频工作站进行生成式音乐探索的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "双向通信：通过 socket 服务器连接 Claude AI 与 Ableton Live",
+  "轨道操作：创建、修改和操控 MIDI 与音频轨道",
+  "乐器与效果选择：从 Ableton 库中加载合适的乐器、效果和声音",
+  "片段创建：创建并编辑带音符的 MIDI 片段",
+  "编曲视图作曲：在 Arrangement View 中自动构建完整歌曲结构",
+  "会话控制：控制播放、触发片段以及传输控制"
+ ],
+ "intro": "Ableton MCP 是一个连接 Ableton Live 与大型语言模型（如 Claude）的桥接工具。它由两部分组成：一个运行在 Ableton Live 中的 Remote Script，负责创建 socket 服务器接收指令；以及一个实现 Model Context Protocol 的 Python 服务器，将 LLM 的请求转发给 Ableton。\n\n借助这个项目，用户可以用自然语言提示让 AI 创建和修改 MIDI/音频轨道、加载乐器与效果、编写 MIDI 片段，甚至在 Arrangement View 中自动构建包含前奏、铺垫、高潮等段落的完整歌曲。它适合希望用 AI 辅助音乐制作、快速生成编曲草稿或探索生成式音乐工作流的制作人和开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv 包管理器（macOS 可运行 brew install uv）",
+  "在 MCP 客户端（如 Claude Desktop 或 Cursor）中添加 ableton-mcp 服务器配置",
+  "运行 uvx --from ableton-mcp ableton-mcp-install-script 安装 Ableton Remote Script",
+  "启动 Ableton Live，在设置中选择 AbletonMCP 作为控制表面，Input 和 Output 设为 None",
+  "在 Claude 中提出音乐制作请求，开始与 Ableton 交互"
+ ],
+ "summary": "Ableton MCP 是一个让大型语言模型直接控制 Ableton Live 的开源工具。它通过 MCP 协议把 AI 的指令转发给 Live 中的 Remote Script，从而用自然语言完成创建轨道、编写 MIDI 片段、加载乐器效果乃至在编曲视图里搭建完整歌曲结构等操作。适合想用 AI 辅助音乐制作、快速生成编曲草稿或探索生成式音乐工作流的制作人和开发者。",
+ "tagline": "通过 MCP 让 LLM 控制 Ableton Live 制作音乐"
+}

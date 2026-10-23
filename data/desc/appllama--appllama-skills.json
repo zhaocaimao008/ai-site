@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Cursor、Codex 等 AI 编码 Agent 开发移动应用的开发者与设计师，尤其是用 Expo / React Native 做 iOS 风格界面的人。",
+ "date": "2026-10-23",
+ "features": [
+  "appllama-usage：通过 Appllama MCP 研究头部应用的设计模式与流程",
+  "appllama-app-design-skill：按 Apple HIG 构建 Expo / React Native 原生质感界面",
+  "导航与动效规范：push/replace、sheet、返回限制、弹簧动画与线程要求",
+  "模拟器全流程录制与逐帧检查，而非只看截图",
+  "一条命令安装，兼容 Claude Code、Cursor、Codex 等 70+ Agent"
+ ],
+ "intro": "Appllama Skills 是一组面向 AI 编码 Agent 的技能（skills），目标是让 Agent 不只是做调研，而是真正能构建出接近原生质感的移动端界面。它基于 Appllama 对头部畅销应用真实界面、流程和 UI 模式的研究，把“先研究再动手”的方法固化给 Agent。\n\n技能分为两个：appllama-usage 负责研究，指导 Agent 通过 Appllama MCP 检索竞品屏幕、流程与元素；appllama-app-design-skill 负责构建，约束 Expo / React Native 界面遵循 Apple HIG、语义色、原生控件、导航行为与动效标准，并要求在模拟器中逐帧验证。两者可配合使用，设计技能也可单独安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在项目根目录运行：npx skills@latest add appllama/appllama-skills",
+  "如需指定 Agent：npx skills@latest add appllama/appllama-skills -a claude-code -a cursor -y",
+  "只安装设计技能：npx skills@latest add appllama/appllama-skills --skill appllama-app-design-skill",
+  "在 MCP 客户端中添加 https://mcp.appllama.io/mcp 并用 Appllama 账号授权（Pro 功能）",
+  "向 Agent 提出需求，例如“先研究头部习惯类应用，再构建一个习惯追踪器”"
+ ],
+ "summary": "Appllama Skills 为 AI 编码 Agent 提供一套移动端界面构建方法：先用 Appllama MCP 研究头部畅销应用的真实屏幕与流程，再按 Apple HIG 和原生控件规范写出 Expo / React Native 界面，并在模拟器中逐帧验证。适合用 Claude Code、Cursor 等 Agent 开发移动应用、希望界面接近原生质感的开发者。",
+ "tagline": "让 AI Agent 做出原生质感移动端界面的技能包"
+}

@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 GraphRAG 或 RAG 方向的研究者、需要为领域应用选型的算法工程师，以及想快速了解该领域脉络的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "按综述框架分类整理 GraphRAG 研究论文",
+  "覆盖知识组织、检索、集成三个环节",
+  "收录相关综述论文与评测基准",
+  "汇总 GraphRAG 开源项目",
+  "跟踪领域最新论文与项目动态"
+ ],
+ "intro": "这个仓库是围绕图检索增强生成（GraphRAG）的资源合集，按论文《A Survey of Graph Retrieval-Augmented Generation for Customized Large Language Models》的分类体系组织，并持续更新。\n\n内容覆盖知识组织、知识检索、知识集成三个环节：知识组织下分图作为知识索引、图作为知识载体（从语料构建知识图谱、使用已有 KG）、混合 GraphRAG；检索部分按语义相似度、逻辑推理、LLM、GNN、多轮、后检索、混合等类型划分；集成部分则包括不同粒度知识的微调与上下文学习。此外还收录相关综述、基准和开源项目。\n\nREADME 用图示对比了传统 RAG、基于知识的 GraphRAG 和基于索引的 GraphRAG 三种流程，并说明 GraphRAG 通过图结构知识表示、图感知检索和结构引导搜索来弥补传统 RAG 的不足。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一个按综述分类体系整理的 GraphRAG 资源清单，把图检索增强生成相关的论文、综述、基准和开源项目分门别类地汇总在一起。适合想系统了解 GraphRAG 研究脉络、查找特定方向工作或为项目选型参考的读者，也可以作为跟踪该领域新进展的入口。",
+ "tagline": "按综述框架整理的 GraphRAG 论文、基准与开源项目清单"
+}

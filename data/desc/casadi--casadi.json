@@ -1,0 +1,17 @@
+{
+ "ai_related": false,
+ "audience": "适合需要求解数值优化问题、进行自动微分或代码生成的科研人员和工程师。",
+ "date": "2026-10-23",
+ "features": [
+  "前向和反向模式的自动微分",
+  "稀疏矩阵值计算图",
+  "自包含 C 代码生成",
+  "与 SUNDIALS、IPOPT 等求解器接口",
+  "多语言支持：C++、Python、Matlab/Octave、Julia、Javascript"
+ ],
+ "intro": "CasADi 是一个开源的符号框架，主要用于数值优化问题。它基于稀疏矩阵值计算图实现前向和反向模式的自动微分，并支持生成自包含的 C 代码。\n\n该项目提供了 C++、Python、Matlab/Octave、Julia 和 Javascript 的接口，并能与 SUNDIALS、IPOPT 等先进求解器集成。它适用于需要高效计算导数和求解优化问题的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "CasADi 是一个用于数值优化的符号框架，核心功能是在稀疏矩阵计算图上实现自动微分，并支持生成 C 代码。它提供了 C++、Python、Matlab/Octave、Julia 和 Javascript 接口，并能与 IPOPT 等求解器集成。适合需要高效计算导数、求解非线性优化或最优控制问题的开发者与研究人员。",
+ "tagline": "用于数值优化的符号框架，支持自动微分与代码生成"
+}

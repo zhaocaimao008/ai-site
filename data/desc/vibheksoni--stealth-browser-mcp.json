@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要让 AI 代理在受反爬保护的网站上执行自动化任务的开发者，以及希望集成浏览器控制能力到 MCP 客户端的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "反机器人检测：在测试中通过 Cloudflare 和 Queue-It 类挑战",
+  "101 个工具覆盖导航、网络检查、CDP 执行等 11 个类别",
+  "模块化加载：支持完整 101 工具或最小 21 工具核心集",
+  "像素级元素克隆：通过 CDP 提取完整元素及 CSS、DOM、事件和资源",
+  "动态钩子系统：用受限 Python 脚本拦截、修改或重定向请求/响应",
+  "跨平台支持：Windows、macOS、Linux、Docker 和 CI 环境"
+ ],
+ "intro": "Stealth Browser MCP 是一个基于 MCP 协议的浏览器自动化服务器，专为 AI 代理设计。它通过 nodriver 和 Chrome DevTools Protocol 驱动真实的 Chrome 系浏览器，帮助代理应对 Cloudflare 挑战、反爬检测和登录墙。项目提供 101 个工具，涵盖导航、网络拦截、DOM 提取和像素级 UI 克隆等。\n\n该服务器支持模块化加载，可运行完整工具集或仅 21 个核心工具。它包含动态钩子系统，允许用受限 Python 脚本拦截、修改或重定向网络请求。通过标准 MCP 客户端即可集成，无需额外代理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone https://github.com/vibheksoni/stealth-browser-mcp.git && cd stealth-browser-mcp && python -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+  "将服务器添加到 MCP 客户端（以 Claude Code CLI 为例）：claude mcp add-json stealth-browser-mcp '{\"type\":\"stdio\",\"command\":\"/path/to/venv/bin/python\",\"args\":[\"/path/to/src/server.py\"]}'",
+  "重启 MCP 客户端，并向代理发出指令：Use stealth-browser to navigate to https://example.com and take a screenshot."
+ ],
+ "summary": "Stealth Browser MCP 是一个面向 AI 代理的浏览器自动化服务器，通过 MCP 协议和 Chrome DevTools Protocol 控制真实浏览器，帮助代理应对 Cloudflare 挑战、反爬检测和登录墙。它提供导航、网络拦截、DOM 提取和像素级 UI 克隆等工具，适合需要让 AI 在受保护网站上执行自动化任务的开发者。",
+ "tagline": "为 AI 代理提供反检测浏览器自动化能力的 MCP 服务器"
+}

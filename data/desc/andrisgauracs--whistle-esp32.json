@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合嵌入式开发者、语音识别爱好者以及想要在微控制器上实践边缘 AI 的创客。",
+ "date": "2026-10-23",
+ "features": [
+  "完全离线运行，无需网络连接",
+  "支持七种语言的语音命令识别",
+  "可识别颜色及闪烁/常亮指令",
+  "提供麦克风测试和串口监视工具",
+  "模型裁剪工具适配有限闪存"
+ ],
+ "intro": "该项目在 ESP32-S3 微控制器上实现了完全离线的语音识别，无需网络或云端。用户按住按钮说出颜色指令（如“flash the light blue”），板载 LED 就会执行相应动作。语音识别模型基于 Cactus Compute 的 Whistle，但项目提供了独立的 C99 实现，不依赖官方引擎。\n\n硬件需要 ESP32-S3 N16R8 开发板、INMP441 麦克风和按钮。模型经过裁剪以适应闪存，支持英语、法语、西班牙语等七种语言的自动检测。识别准确率因语言而异，英语、西班牙语和法语表现较好。项目包含详细的接线说明、固件构建步骤和测试工具，适合嵌入式开发者和语音识别爱好者尝试边缘 AI 应用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 ESP-IDF v5.5+、Python 3 和 CMake",
+  "创建 Python 虚拟环境并安装依赖：python3 -m venv .venv && .venv/bin/pip install numpy rich pyserial huggingface_hub",
+  "下载并裁剪 Whistle 模型：.venv/bin/python -c \"from huggingface_hub import hf_hub_download; import shutil; shutil.copy(hf_hub_download('Cactus-Compute/whistle','whistle.cact'), 'model/whistle/whistle.cact')\" 然后运行 .venv/bin/python tools/whistle_strip.py model/whistle/whistle.cact 4 model/whistle/whistle_d4.cact",
+  "构建并烧录固件：cd esp32/whistle_demo && idf.py set-target esp32s3 && idf.py build && idf.py -p /dev/cu.usbmodemXXXX flash",
+  "烧录模型到闪存：esptool.py --chip esp32s3 -p /dev/cu.usbmodemXXXX -b 921600 write_flash 0x210000 model/whistle/whistle_d4.cact"
+ ],
+ "summary": "这个项目在 ESP32-S3 微控制器上实现了完全离线的语音识别，用户按住按钮说出颜色指令，板载 LED 就会执行相应动作。它适合想要在低成本硬件上体验边缘 AI 的开发者，无需网络或云端，支持七种语言自动检测。项目提供了完整的硬件接线、固件构建和模型裁剪步骤，方便快速上手。",
+ "tagline": "在 ESP32-S3 上离线运行语音识别，用语音控制 LED 颜色。"
+}

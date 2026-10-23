@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Mac 上本地运行大模型、并接入编码助手或自建 API 客户端的开发者与进阶用户。",
+ "date": "2026-10-23",
+ "features": [
+  "基于模型原生 MTP 头的投机解码，带精确拒绝采样与残差修正",
+  "支持 Qwen 3.8 Flash Next、Qwen 3.8 27B、Ternary Bonsai 2 27B 等模型",
+  "提供兼容 OpenAI 和 Anthropic API 的本地服务器",
+  "Mac 应用可检测硬件、推荐并下载适配内存的模型、自动配置引擎",
+  "按机器内存给出模型推荐策略，16 GB Mac 可运行 27B 模型",
+  "支持图像输入，Flash Next 上下文窗口达 262,144 token"
+ ],
+ "intro": "MTPLX 是一个面向 Apple Silicon Mac 的本地大模型推理工具，提供 Mac 应用和命令行两种使用方式。它利用模型自带的多 token 预测（MTP）头做投机解码：模型先自行草拟若干 token，再用一次批量前向计算验证，并通过带残差修正的精确拒绝采样提交结果，因此采样仍按模型原生温度进行，不依赖第二个草稿模型，也不走贪心捷径。\n\n它支持 Qwen 3.8 Flash Next（125B MoE）、Qwen 3.8 27B、Ternary Bonsai 2 27B，以及 Qwen 3.6、Qwen 3.5 和 Gemma 4 等模型。启动后提供兼容 OpenAI 与 Anthropic API 的本地服务，可接入 OpenCode、Claude Code、Cline、Cursor 等客户端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Homebrew 安装：brew install youssofal/mtplx/mtplx",
+  "启动服务：mtplx start",
+  "或使用 pip 安装：python3 -m pip install mtplx",
+  "指定模型启动服务：mtplx serve --model Youssofal/Qwen3.8-Flash-Next-MTPLX-Optimized-Speed",
+  "将 OpenCode、Claude Code 等客户端指向 http://127.0.0.1:8000"
+ ],
+ "summary": "MTPLX 让 Apple Silicon Mac 在本地运行 Qwen 3.8 Flash Next、Qwen 3.8 27B 等大模型，并借助模型自带的 MTP 头做投机解码来提升生成速度，同时保持采样精确。它提供 Mac 应用和命令行，启动后暴露兼容 OpenAI 与 Anthropic 的本地接口，适合把本地模型接入编码助手或自建应用。",
+ "tagline": "在 Apple Silicon Mac 上本地高速运行大模型"
+}

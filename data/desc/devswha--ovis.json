@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 herdr 管理 AI 编程助手、希望远程查看和回复会话的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "聊天与实时终端一键切换，支持 Claude Code、Codex 等多种 agent",
+  "在浏览器中还原 herdr 的工作区、标签和分屏布局",
+  "agent 需要输入或完成时发送应用内提醒和推送通知",
+  "支持通过卡片审批请求、回答问题或选择计划",
+  "手机端可上传截图并插入路径，供 agent 读取",
+  "可从手机新建 worktree 并启动另一个 agent"
+ ],
+ "intro": "Ovis 是 herdr 的浏览器和手机客户端，让你在桌面或手机上读取并回复电脑上运行的 AI 编程助手会话。它支持 Claude Code、Codex 等多种 agent，提供聊天和实时终端两种视图，可一键切换。\n\nOvis 能展示 herdr 的工作区、标签和分屏布局，并显示每个 agent 的状态。当 agent 需要输入或完成任务时，你会收到应用内提醒或推送通知。你还可以通过手机上传截图、新建 worktree 来启动第二个 agent。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Ovis 是 herdr 的浏览器和手机客户端，用于远程访问电脑上运行的 AI 编程助手会话。它支持 Claude Code、Codex 等 agent，提供聊天和实时终端两种视图，并能在 agent 需要输入或完成任务时推送提醒。适合需要离开电脑后仍能查看进度、回复消息或审批请求的开发者。",
+ "tagline": "在手机或浏览器上远程使用 herdr 的 AI 编程助手"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究身份保持图像生成的开发者，以及希望在 FLUX 生态中做个性化人像生成的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "基于 FLUX.1-dev 的 DiT 身份保持图像生成",
+  "InfuseNet 通过残差连接注入身份特征",
+  "提供 aes_stage2 与 sim_stage1 两个模型变体",
+  "支持 CPU offload 与 8-bit 量化降低显存",
+  "提供官方 ComfyUI 节点与 Hugging Face Demo",
+  "可通过参数调节身份条件强度与引导起始步"
+ ],
+ "intro": "InfiniteYou 是字节跳动智能创作团队提出的身份保持图像生成框架，论文被 ICCV 2025 接收为 Highlight。它基于 FLUX.1-dev 这类 Diffusion Transformer 模型，目标是在生成新照片时保留输入人脸的身份特征，同时改善现有方法常见的身份相似度不足、文本图像对齐差、生成质量与美感偏低等问题。\n\n核心组件 InfuseNet 通过残差连接把身份特征注入 DiT 基础模型，在提升身份相似度的同时维持原有生成能力；配合多阶段训练策略（预训练与合成单人多样本数据的监督微调），进一步改善文本对齐、画质并缓解人脸复制粘贴感。项目提供两个模型变体：aes_stage2 默认用于更好的文本对齐与美感，sim_stage1 则提供更高的身份相似度。\n\n项目以 Python 实现，提供本地推理脚本、Hugging Face 模型与在线 Demo，并有官方 ComfyUI 节点；同时支持 CPU offload 与 8-bit 量化以降低显存占用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -r requirements.txt",
+  "运行本地推理：python test.py --id_image ./assets/examples/man.jpg --prompt \"A man, portrait, cinematic\" --out_results_dir ./results",
+  "显存不足时可加 --cpu_offload 或 --quantize_8bit 参数降低峰值显存"
+ ],
+ "summary": "InfiniteYou 解决的是在生成新照片时保留人物身份特征的问题，尤其针对 FLUX 这类 DiT 模型。它通过 InfuseNet 注入身份特征，并提供侧重美感与侧重相似度的两个模型版本，适合需要个性化人像生成或相关研究的场景。",
+ "tagline": "基于 DiT 的身份保持图像生成框架"
+}

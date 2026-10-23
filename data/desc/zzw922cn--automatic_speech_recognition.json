@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究语音识别的学生和开发者，以及希望基于 TensorFlow 实现端到端语音识别系统的工程师。",
+ "date": "2026-10-23",
+ "features": [
+  "支持端到端语音识别，涵盖中文和英文",
+  "实现了多种模型，包括 DeepSpeech2、Layer Normalization RNN 和 Capsule Network",
+  "支持 TIMIT、LibriSpeech 和 WSJ 数据集的预处理和训练",
+  "提供命令行接口，可配置模型、训练参数和运行模式",
+  "包含简单的 n-gram 语言模型模块",
+  "支持动态 RNN 的 dropout 和自动评估"
+ ],
+ "intro": "该项目是一个用 TensorFlow 实现的端到端自动语音识别系统，支持中文普通话和英文。它提供了从数据预处理、特征提取到模型训练和评估的完整流程，并包含了多种模型结构，如 DeepSpeech2、Layer Normalization RNN 和 Capsule Network 等。\n\n项目支持 TIMIT、LibriSpeech 和 WSJ 等常见语音数据集，并提供了相应的预处理脚本。用户可以通过命令行参数灵活配置训练过程，包括选择模型、RNN 单元、优化器、学习率等。此外，项目还包含一个简单的 n-gram 语言模型模块。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：sudo pip3 install -r requirements.txt",
+  "安装项目：sudo python3 setup.py install",
+  "运行训练脚本：python main/timit_train.py [参数]",
+  "或使用 shell 脚本：main/run.sh"
+ ],
+ "summary": "该项目是一个基于 TensorFlow 的端到端语音识别系统，支持中文和英文，提供了从数据预处理到模型训练和评估的完整流程。它实现了多种模型结构，如 DeepSpeech2 和 Layer Normalization RNN，并支持 TIMIT、LibriSpeech 等数据集。适合研究语音识别的开发者和学生使用。",
+ "tagline": "基于 TensorFlow 的端到端语音识别系统"
+}

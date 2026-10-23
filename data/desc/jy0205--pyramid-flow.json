@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合视频生成方向的研究人员和开发者，以及希望本地部署或微调视频生成模型的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "基于 Flow Matching 的自回归视频生成，支持文本生视频和图生视频",
+  "生成 768p 分辨率、24 FPS 的高质量视频，最长可达 10 秒",
+  "提供 miniFLUX 和 SD3 两种模型变体，适配不同分辨率需求",
+  "支持多 GPU 推理和 CPU offloading，可在低于 8GB 显存的 GPU 上运行",
+  "包含 Gradio 演示界面，方便本地快速体验",
+  "提供 VAE 训练和 DiT 微调代码"
+ ],
+ "intro": "Pyramid Flow 是一个基于 Flow Matching 的自回归视频生成方法，其核心思路是在不同分辨率和噪声水平的 latent 之间进行插值，从而在生成过程中同时完成视觉内容的生成与解压，提升计算效率。整个框架使用单个 DiT 进行端到端优化。\n\n该项目仅使用开源数据集训练，即可生成 768p 分辨率、24 FPS 的高质量 10 秒视频，并原生支持图生视频。项目提供了 miniFLUX 和 SD3 两种模型变体，miniFLUX 支持 1024p 图像、384p 和 768p 视频生成，SD3 支持 768p 和 384p 视频生成。\n\n仓库包含推理代码、Gradio 演示、多 GPU 推理与 CPU offloading 支持，以及 VAE 训练和 DiT 微调代码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并创建 conda 环境：git clone https://github.com/jy0205/Pyramid-Flow && cd Pyramid-Flow && conda create -n pyramid python==3.8.10 && conda activate pyramid && pip install -r requirements.txt",
+  "从 Hugging Face 下载模型权重，例如 miniFLUX：snapshot_download(\"rain1011/pyramid-flow-miniflux\", local_dir=model_path, local_dir_use_symlinks=False, repo_type='model')",
+  "在 app.py 中设置模型路径，然后运行 Gradio 演示：python app.py",
+  "或参考 video_generation_demo.ipynb 使用推理代码进行文本生视频"
+ ],
+ "summary": "Pyramid Flow 是一个基于 Flow Matching 的视频生成项目，通过在不同分辨率和噪声水平的 latent 之间插值，在生成过程中同步完成解压，从而提升计算效率。它仅用开源数据集训练，即可生成 768p、24 FPS 的 10 秒视频，并支持图生视频。项目提供 miniFLUX 和 SD3 两种模型变体，以及 Gradio 演示、多 GPU 推理和微调代码，适合想本地部署或研究视频生成模型的开发者。",
+ "tagline": "基于 Flow Matching 的高效视频生成模型"
+}

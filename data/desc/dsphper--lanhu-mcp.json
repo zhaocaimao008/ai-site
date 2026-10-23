@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用蓝湖进行设计交付和需求管理的开发、测试团队，以及希望让 AI 编程助手直接读取蓝湖内容的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "提取 Axure 需求页面、文字与注释，支持开发、测试、探索三种分析视角",
+  "批量下载蓝湖设计稿，自动识别并导出切图与图标资源",
+  "分析设计图尺寸、间距、颜色、字体等参数，并生成 HTML+CSS 参考代码",
+  "团队留言板：让不同 AI 助手共享需求分析结果与知识沉淀",
+  "基于文档版本号的智能缓存与增量更新，支持并发处理",
+  "支持 HTTP 与 stdio 两种传输方式，可接入多种 MCP 客户端"
+ ],
+ "intro": "Lanhu MCP Server 是一个基于 Model Context Protocol 的服务器，用于让 AI 编程助手读取蓝湖平台上的设计交付与需求文档。它提供需求页提取、设计稿下载、切图导出和设计参数分析等能力，并支持开发、测试、探索三种分析视角。\n\n项目还包含团队留言板功能，让不同开发者的 AI 助手共享需求分析结果和踩坑经验，减少重复工作。服务支持 HTTP 和 stdio 两种运行方式，可接入 Cursor、Claude Code、Windsurf 等支持 MCP 的客户端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆项目：git clone https://github.com/dsphper/lanhu-mcp.git && cd lanhu-mcp",
+  "复制配置文件：cp .env.example .env，并将 LANHU_COOKIE 改为自己的蓝湖 Cookie",
+  "Docker 部署：docker compose up -d --build",
+  "或源码运行：bash easy-install.sh 安装依赖，然后执行 ./venv/bin/lanhu-mcp --transport http",
+  "在 AI 客户端中配置 MCP 地址：http://localhost:8000/mcp?role=Developer&name=YourName"
+ ],
+ "summary": "Lanhu MCP Server 是一个 MCP 服务器，让 Cursor、Claude Code 等 AI 编程助手能够读取蓝湖平台上的需求文档和设计稿。它可提取 Axure 页面内容、下载设计图与切图、分析设计参数，并提供团队留言板让不同开发者的 AI 共享分析结果。适合使用蓝湖协作的开发与测试团队。",
+ "tagline": "连接蓝湖设计稿与需求文档的 MCP 服务器"
+}

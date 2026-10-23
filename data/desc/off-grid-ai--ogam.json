@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望在无网络环境下使用 AI 的普通用户，以及想在移动端或 Mac 上试验本地模型推理的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "本地运行 GGUF 大模型，支持流式输出、思考模式和 markdown 渲染",
+  "设备端 Stable Diffusion 图像生成，支持 NPU 与 Core ML 加速",
+  "Whisper 离线语音转文字，支持点按、自动和免提模式",
+  "视觉模型看图问答，可分析文档、描述场景、读取票据",
+  "内置工具调用：网页搜索、计算器、日期时间、设备信息和知识库检索",
+  "项目知识库：上传 PDF 和文本，在设备端分块、嵌入并检索"
+ ],
+ "intro": "Off Grid AI 是一个在 Android、iOS 和 macOS 上本地运行 AI 模型的应用，基于 React Native 与 TypeScript 开发。它把文本生成、图像生成、视觉问答、语音转写、工具调用和文档分析整合在一起，模型推理全部在设备本地完成，不需要账号或 API key，数据不会离开设备。\n\n文本生成支持 Qwen 3、Llama 3.2、Gemma 3、Phi-4 等任意 GGUF 模型，并可利用 Adreno GPU、Apple Metal 或实验性的 Hexagon NPU 加速；也能连接局域网内 OpenAI 兼容的 Ollama、LM Studio、LocalAI 服务。图像生成使用设备端 Stable Diffusion，语音输入使用 Whisper，视觉模型包括 SmolVLM、Qwen3-VL、Gemma 3n。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Google Play、App Store 下载安装，或在 Mac 上使用 Off Grid AI Desktop",
+  "在应用内模型列表中选择并下载 GGUF 模型，支持 GPU/NPU 的模型会带有标记",
+  "在设置中选择推理后端（CPU、GPU 或实验性 NPU）",
+  "开始对话、生成图像或使用语音输入；也可在设置中连接局域网内 OpenAI 兼容服务器"
+ ],
+ "summary": "Off Grid AI 把大语言模型、图像生成、视觉识别、语音转写和工具调用打包成一个完全离线的应用，运行在手机或 Mac 的本地硬件上，不需要账号和 API key，数据不出设备。它适合在无网络或对隐私敏感的场景中使用，也方便开发者在移动端试验 GGUF 模型与本地推理加速。",
+ "tagline": "完全离线的手机与 Mac 端 AI 工具箱"
+}

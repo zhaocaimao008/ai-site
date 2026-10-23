@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要本地或云端运行多种语音合成与音频生成模型的开发者、研究人员和音频爱好者。",
+ "date": "2026-10-23",
+ "features": [
+  "集成多种文本转语音模型，如 Bark、Tortoise、StyleTTS2、XTTSv2 等",
+  "支持音频与音乐生成模型，如 MusicGen、Stable Audio、MAGNeT",
+  "包含音频转换与处理工具，如 RVC、Demucs、Vocos、Whisper",
+  "提供 Gradio 和 React 两种 Web 界面",
+  "支持通过扩展添加新模型，如 ACE-Step、Kimi Audio 等",
+  "提供安装器、Docker 和 Colab 等多种部署方式"
+ ],
+ "intro": "TTS WebUI 是一个基于 Gradio 和 React 的 Web 界面，集成了大量文本转语音、音频/音乐生成以及音频转换工具。项目支持 Bark、Tortoise、StyleTTS2、XTTSv2、OpenVoice、CosyVoice、GPT-SoVITS 等 TTS 模型，也包含 MusicGen、Stable Audio 等音乐生成模型，以及 RVC、Demucs、Vocos 等音频处理工具。\n\n用户可以通过统一的界面调用不同模型，进行语音合成、音乐生成、声音转换等操作。项目提供安装器、Docker 部署和 Colab 笔记本等多种使用方式，并支持扩展机制，方便集成更多模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载安装器：从 GitHub Releases 页面获取 tts-webui-installer.zip 并运行",
+  "或使用 Docker 部署：参考 README 中的 Docker Setup 部分",
+  "或使用 Google Colab：打开提供的 Colab 笔记本直接运行"
+ ],
+ "summary": "TTS WebUI 是一个集成了多种文本转语音、音乐生成和音频处理模型的 Web 界面。它让用户无需分别配置各个模型，就能在一个界面中调用 Bark、XTTSv2、MusicGen、RVC 等工具，完成语音合成、音乐创作或声音转换。适合需要快速实验不同音频 AI 模型的研究者、开发者或音频爱好者。",
+ "tagline": "集成多种 TTS 与音频生成模型的 WebUI"
+}

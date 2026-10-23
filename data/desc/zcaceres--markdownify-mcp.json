@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将多种格式内容统一转换为 Markdown 的开发者，以及使用支持 MCP 的桌面应用并希望扩展其文档处理能力的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "将 PDF、图片、音频、DOCX、XLSX、PPTX 等文件转换为 Markdown",
+  "将 YouTube 视频转录、Bing 搜索结果和普通网页转换为 Markdown",
+  "提供音频转录和图片元数据提取功能",
+  "支持通过环境变量限制可访问的文件路径",
+  "提供 Docker 镜像，便于容器化部署",
+  "可集成到支持 MCP 的桌面应用中"
+ ],
+ "intro": "Markdownify 是一个基于 Model Context Protocol (MCP) 的服务器，用于将各种文件类型和网页内容转换为 Markdown 格式。它提供了一系列工具，能够处理 PDF、图片、音频、DOCX、XLSX、PPTX 等文件，以及 YouTube 视频转录、Bing 搜索结果和普通网页。\n\n该项目使用 TypeScript 编写，依赖 Bun 进行构建和运行，并借助 Python 的 markitdown 库实现核心转换功能。通过 MCP 协议，它可以集成到支持该协议的桌面应用中，方便用户将不同来源的内容统一转换为易读、易分享的 Markdown 文本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/zcaceres/markdownify-mcp.git",
+  "安装依赖：bun install",
+  "构建项目：bun run build",
+  "启动服务器：bun start",
+  "在桌面应用配置中添加 MCP 服务器，指定 node 和 dist/index.js 的绝对路径"
+ ],
+ "summary": "Markdownify 是一个 MCP 服务器，旨在解决将多种格式内容统一转换为 Markdown 的问题。它支持 PDF、图片、音频、Office 文档以及网页、YouTube 视频等来源，适合需要整理文档、提取网页内容或集成到支持 MCP 的桌面应用中的场景。",
+ "tagline": "将多种文件与网页内容转换为 Markdown 的 MCP 服务器"
+}

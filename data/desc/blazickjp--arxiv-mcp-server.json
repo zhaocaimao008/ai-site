@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 代理进行文献调研的研究人员、开发者，以及需要本地化论文管理工具的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "按章节读取论文的原始 LaTeX 内容",
+  "从 arXiv 元数据生成 BibTeX 引用",
+  "在本地磁盘维护主题关注列表",
+  "论文文件保存在本地，搜索可选",
+  "支持多种 MCP 客户端（Claude Code、Codex、VS Code 等）"
+ ],
+ "intro": "arxiv-mcp-server 是一个基于 Model Context Protocol 的本地服务器，专为 AI 代理处理学术文献而设计。它不只是一个搜索包装器，而是将文献工作流保留在本地：按章节读取作者提交的原始 LaTeX、从 arXiv 元数据导出 BibTeX，并维护主题关注列表。论文文件保存在磁盘上，搜索功能是可选的。\n\n该服务器默认通过 stdio 在本地运行，支持 Claude Code、OpenAI Codex、VS Code、Kiro 等多种 MCP 客户端。安装方式简单，使用 uvx 即可快速启动，无需克隆仓库或配置 Python 环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv（提供 uvx 命令）",
+  "运行 uvx arxiv-mcp-server 启动服务器",
+  "在 MCP 客户端配置中添加 stdio 服务器，命令为 uvx，参数为 arxiv-mcp-server",
+  "可选：通过 --storage-path 指定论文存储目录"
+ ],
+ "summary": "arxiv-mcp-server 是一个本地 MCP 服务器，帮助 AI 代理高效处理 arXiv 论文。它支持按章节读取原始 LaTeX、从元数据生成 BibTeX，并维护主题关注列表，论文文件保存在本地磁盘。适合研究人员和开发者在使用 AI 代理进行文献调研时，获得更精准的论文阅读与引用管理体验。",
+ "tagline": "本地 MCP 服务器，让 AI 代理高效阅读 arXiv 论文"
+}

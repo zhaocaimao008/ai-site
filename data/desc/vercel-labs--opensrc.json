@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程代理、需要查阅依赖包源码的开发者，以及希望让代理获得更深上下文的工具构建者。",
+ "date": "2026-10-23",
+ "features": [
+  "从 npm、PyPI、crates.io 和 GitHub 获取包源码",
+  "首次拉取后缓存，后续通过 `opensrc path` 即时返回本地路径",
+  "可与 rg、cat、find 等命令行工具组合检索源码",
+  "提供 npm 全局安装的 CLI，核心用 Rust 实现",
+  "配套 Next.js 文档站点"
+ ],
+ "intro": "opensrc 是 Vercel Labs 的实验性项目，目标是让 AI 编程代理能够访问任意包的源代码，从而获得更深入的上下文。它提供一个命令行工具，可以从 npm、PyPI、crates.io 和 GitHub 拉取源码，并在首次使用后缓存到本地。\n\n使用时通过 `opensrc path` 获取某个包的源码路径，再配合 rg、cat、find 等常规命令直接检索或阅读文件。由于返回的是本地缓存路径，重复调用几乎即时完成，适合在代理工作流中频繁查询依赖实现细节。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install -g opensrc",
+  "运行 `opensrc path zod` 获取 zod 源码路径",
+  "用 `rg \"parse\" $(opensrc path zod)` 在源码中搜索",
+  "用 `cat $(opensrc path zod)/src/types.ts` 读取具体文件",
+  "其他注册表可用 `opensrc path pypi:requests` 形式获取"
+ ],
+ "summary": "opensrc 解决的是 AI 编程代理只能看到依赖包类型声明、看不到实现细节的问题。它通过命令行从 npm、PyPI、crates.io 和 GitHub 拉取包源码并缓存到本地，返回路径后可直接用 rg、cat 等工具检索阅读，适合需要深入理解依赖实现或在代理工作流中查询源码的场景。",
+ "tagline": "为 AI 编程代理获取 npm 等包源码的 CLI 工具"
+}

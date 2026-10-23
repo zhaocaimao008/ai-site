@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地运行 AI 模型、注重隐私、不想折腾命令行和 Docker 的开发者与普通用户。",
+ "date": "2026-10-23",
+ "features": [
+  "本地聊天：与本地运行的 LLM 对话，支持角色卡和群聊",
+  "图像与视频生成：在同一个窗口内创建图像和视频",
+  "编程助手：Code 和 Agent 模式，可先展示代码差异再应用",
+  "插件系统：例如 REA 插件可分析应用和文件",
+  "跨平台：提供 Windows、Linux、macOS 和 Android 安装包"
+ ],
+ "intro": "Locally Uncensored 是一个桌面端本地 AI 应用，把聊天、图像生成、视频生成和编程助手整合在同一个界面里。它支持 Windows、Linux，也有 macOS 和 Android 版本。在本地模式下，所有计算都在你自己的机器上完成，不需要 Docker、终端或配置文件。\n\n应用内置模型选择器，安装后挑选模型即可开始使用。除了本地运行，它也提供 LU Cloud 云端模型选项。项目采用 TypeScript 开发，基于 Tauri 构建，代码开源。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载对应平台的安装包（Windows 选 .exe 或 .msi，Linux 选 .AppImage/.deb/.rpm）",
+  "安装并启动应用",
+  "在应用内选择一个模型",
+  "开始聊天、生成图像或使用编程助手"
+ ],
+ "summary": "Locally Uncensored 是一个桌面端本地 AI 工作室，把聊天、图像生成、视频生成和编程助手整合在一个应用里。它解决的是本地运行多种 AI 模型需要分别配置环境、依赖命令行和 Docker 的问题。安装后选择模型即可使用，适合注重隐私、希望离线使用 AI 能力的开发者和普通用户。",
+ "tagline": "一站式本地 AI 工作室：聊天、图像、视频与编程助手"
+}

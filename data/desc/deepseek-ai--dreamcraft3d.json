@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合从事 3D 生成研究或开发的 AI 研究人员和工程师，以及希望从单张图像创建高质量 3D 模型的技术用户。",
+ "date": "2026-10-23",
+ "features": [
+  "从单张参考图像生成高保真 3D 物体",
+  "分层生成流程：几何雕刻与纹理增强分阶段进行",
+  "使用视图依赖扩散模型进行分数蒸馏采样",
+  "Bootstrapped Score Distillation 提升纹理一致性",
+  "提供图像预处理脚本，自动去除背景并估计深度与法线",
+  "支持可选的 DreamBooth LoRA 训练以缓解 Janus 问题"
+ ],
+ "intro": "DreamCraft3D 是 ICLR 2024 论文的官方实现，提出一种分层式 3D 内容生成方法，能够从单张参考图像生成高保真且连贯的 3D 物体。该方法利用 2D 参考图像引导几何雕刻和纹理增强两个阶段，核心是解决现有工作中存在的一致性难题。\n\n项目通过视图依赖的扩散模型进行分数蒸馏采样来雕刻几何，并引入 Bootstrapped Score Distillation 技术，在场景的增强渲染上训练个性化的 DreamBooth 扩散模型，从而为纹理增强提供视图一致的引导。通过扩散先验与 3D 场景表示的交替优化，实现相互促进的提升。\n\n代码基于 threestudio 框架，需要 NVIDIA 显卡（至少 20GB 显存）和 CUDA 环境，支持从图像预处理到多阶段训练的完整流程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：确保 NVIDIA 显卡（≥20GB 显存）和 CUDA，安装 Python ≥3.8、PyTorch ≥1.12，然后运行 pip install -r requirements.txt",
+  "下载预训练模型：将 stable-zero123.ckpt 放入 load/zero123/，并下载 Omnidata 的深度和法线模型到 load/omnidata/",
+  "预处理输入图像：python preprocess_image.py /path/to/image.png --recenter",
+  "运行多阶段训练：依次执行 Stage 1（NeRF & NeuS）、Stage 2（几何细化）、Stage 3（纹理细化）的 launch.py 命令，具体命令见 README"
+ ],
+ "summary": "DreamCraft3D 是一个从单张参考图像生成高保真 3D 物体的开源项目，通过分层扩散先验和交替优化策略提升几何与纹理的一致性。它适合需要快速创建连贯 3D 内容的研究者和开发者，尤其适用于对生成质量要求较高的场景。项目提供了完整的训练流程和预处理工具，但需要较强的 GPU 资源。",
+ "tagline": "基于分层扩散先验的高保真3D内容生成"
+}

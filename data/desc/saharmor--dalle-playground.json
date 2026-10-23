@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想体验文本生成图像、学习 Stable Diffusion 部署的开发者，以及对 AI 绘画感兴趣的技术爱好者。",
+ "date": "2026-10-23",
+ "features": [
+  "使用 Stable Diffusion V2 根据文本提示生成图像",
+  "提供 GitHub Pages 托管的前端界面，无需本地部署前端",
+  "支持通过 Google Colab 快速启动后端服务",
+  "支持本地开发：Python 后端 + React 前端",
+  "提供 Docker Compose 部署方式",
+  "包含 Windows WSL2 环境下的 GPU 配置指南"
+ ],
+ "intro": "这是一个用于文本生成图像的实验性项目，前端界面托管在 GitHub Pages，后端通过 Google Colab 或本地环境运行 Stable Diffusion V2 模型。用户输入任意文本提示词，即可生成对应的图像。项目早期使用 DALL-E Mini，2022 年 11 月后迁移至 Stable Diffusion V2。\n\n项目提供多种运行方式：快速体验可借助 Colab 启动后端并连接在线前端；本地开发需分别启动 Python 后端和 React 前端；也支持 Docker Compose 一键部署。README 还包含 Windows WSL2 下的 GPU 配置说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Google Colab 中打开并运行后端 notebook，等待输出 'Your url is:' 后的 URL",
+  "等待约 2 分钟，直到出现 '--> Image generation server is up and running!'",
+  "访问 https://saharmor.github.io/dalle-playground/?backendUrl=你的后端URL 即可使用"
+ ],
+ "summary": "这个项目提供一个文本生成图像的在线实验环境，用户输入文字提示即可用 Stable Diffusion V2 生成图片。前端已托管在 GitHub Pages，后端可通过 Google Colab 快速启动，也支持本地或 Docker 部署。适合想体验 AI 绘画、学习模型部署的开发者。",
+ "tagline": "基于 Stable Diffusion V2 的文本生成图像实验场"
+}

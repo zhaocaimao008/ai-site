@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在不迁移数据的前提下统一搜索多个企业应用、并构建带引用 RAG 答案的开发者和团队。",
+ "date": "2026-10-23",
+ "features": [
+  "跨 100+ 连接器的联邦搜索与 RAG，数据无需移动",
+  "使用自己的 OpenAI key 进行实时 RAG 并生成带引用的答案",
+  "基于余弦向量相似度（spaCy 大模型 + NLTK）的重排序、重复检测与结果混合",
+  "可扩展的 Processor 管道架构，用于转换查询、响应和结果",
+  "通过 REST API 支持同步或异步联邦查询",
+  "结果存入 SQLite 或 Postgres，便于后处理与分析"
+ ],
+ "intro": "SWIRL Community 是一个开源（Apache 2.0）的联邦 AI 搜索与 RAG 平台。它不要求先把数据复制进向量数据库，而是直接对 100 多个连接器所指向的数据源进行实时查询，再对结果排序，并可选地调用你自己的 LLM 生成带引用的答案。数据始终留在原处，权限也在源头执行。\n\n项目提供 Galaxy UI 界面、基于 spaCy 和 NLTK 的余弦相似度重排序、重复检测与结果混合器，以及可扩展的 Processor 管道架构。结果可存入 SQLite 或 Postgres 供后续分析，并通过 REST API 支持同步或异步联邦查询。\n\n官方还提供功能更完整的 SWIRL 5 Enterprise 版本，包含三阶段重排序、规范答案、MCP 服务器等能力，README 中给出了两者的对比。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装并启动 Docker",
+  "下载 compose 文件：curl https://raw.githubusercontent.com/swirlai/swirl-search/main/docker-compose.yaml -o docker-compose.yaml",
+  "可选：设置 OPENAI_API_KEY 等环境变量以启用实时 RAG",
+  "启动服务：docker-compose pull && docker-compose up",
+  "打开 http://localhost:8000/galaxy，用 admin / password 登录并开始搜索"
+ ],
+ "summary": "SWIRL Community 解决的是企业跨应用搜索时数据需要复制和搬运的问题。它直接对 SharePoint、Confluence、GitHub 等 100 多个数据源做实时联邦查询，排序后可选调用自己的 LLM 生成带引用的答案，数据不离开原系统。适合想快速搭建统一搜索或 RAG 应用、又不想维护向量库和 ETL 管道的团队。",
+ "tagline": "不搬数据，跨应用联邦搜索与 RAG"
+}

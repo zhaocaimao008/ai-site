@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速制作拼贴风格解说或广告视频的内容创作者，以及使用 Claude Code、Codex 等编码代理的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "从一行主题自动生成完整的 Vox 风格拼贴视频",
+  "支持 A-roll 口播视频重风格化和 C-roll 单张照片嵌入",
+  "提供数字主持人模式，可生成带唇形同步的主持人画面",
+  "内置风格试选和节拍图审批两个人工确认环节",
+  "使用 Atlas Cloud 的多种模型完成图像、视频、语音和音乐生成",
+  "通过 ffmpeg 自动完成拼接、混音、字幕和水印"
+ ],
+ "intro": "Vox Director 是一个面向 AI 编码代理的技能，能把一个主题自动制作成 Vox 风格的纸拼贴解说或广告视频。它通过 Atlas Cloud 的多个生成模型完成脚本、拼贴关键帧、动态、配音、音乐和字幕，并用本地 ffmpeg 合成最终 mp4。\n\n整个流程由每个项目的 beats.json 驱动，包含节拍图、风格试选、关键帧、动画、语音与音乐、组装等阶段。除了从零生成，还支持已有口播视频的 A-roll 重风格化、单张照片的 C-roll 嵌入，以及数字主持人模式。\n\n项目提供两个人工确认环节：批准节拍图和挑选视觉风格，其余步骤自动执行。它适合需要快速制作拼贴风格短视频的创作者和开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库到 Claude 技能目录：git clone https://github.com/Alisa0808/vox-director.git ~/.claude/skills/vox-director",
+  "设置 Atlas Cloud API 密钥：export ATLASCLOUD_API_KEY=\"sk-...\"",
+  "确保已安装 ffmpeg、ffprobe 和 Python 3 的 Pillow",
+  "向编码代理提出需求，例如：“Make me a Vox-style collage video introducing Mexican street food — English, 16:9, 15 seconds.”",
+  "代理会生成节拍图供你批准，运行风格试选供你挑选，然后自动生成并组装出 out/<project>/final.mp4"
+ ],
+ "summary": "Vox Director 是一个 AI 代理技能，能把一个主题自动变成 Vox 风格的纸拼贴解说或广告视频。它通过 Atlas Cloud 的生成模型和本地 ffmpeg，完成脚本、关键帧、动画、配音、音乐和字幕的全流程，并保留两个人工确认点。适合需要快速产出拼贴风格短视频的创作者，也支持已有口播视频或单张照片的再创作。",
+ "tagline": "一句话生成 Vox 风格拼贴解说视频的 AI 代理技能"
+}

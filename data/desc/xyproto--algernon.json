@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速搭建轻量级 Web 应用或原型的开发者，尤其是熟悉 Lua 或 Go 生态、需要内置多种模板和数据库支持的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "内置 Lua 和 Teal 解释器，可直接用脚本处理 HTTP 请求",
+  "支持 Markdown、Pongo2、Amber、Sass、JSX、TypeScript 等多种模板和预处理语言",
+  "支持 HTTP/2 和 HTTP/3（QUIC），可配置 SSL/TLS",
+  "集成 SQLite、PostgreSQL、MySQL、Redis 等多种数据库后端",
+  "提供用户权限管理、限流和插件系统",
+  "支持自动刷新和实时编辑预览，提升开发效率"
+ ],
+ "intro": "Algernon 是一个用 Go 编写的自包含 Web 服务器，编译后为单个可执行文件，无需额外依赖即可运行。它内置了对 Lua、Teal、Markdown、Pongo2、Amber、Sass、JSX、TypeScript 等多种语言和模板的支持，并能直接连接 SQLite、PostgreSQL、MySQL、Redis 等数据库。\n\n服务器默认支持 HTTP/2 和 HTTP/3（QUIC），提供用户权限管理、限流、插件机制和自动刷新等功能。通过简单的文件命名约定（如 index.lua、index.md），即可快速构建动态网站或 API，适合需要轻量级、快速原型开发的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Go 1.26 或更高版本",
+  "运行 go install github.com/xyproto/algernon@latest 安装",
+  "创建目录并添加 index.md 文件，例如：mkdir localhost && echo 'hi!' > localhost/index.md",
+  "启动服务器：./algernon（或使用 Docker 命令）",
+  "在浏览器中访问 http://localhost:4000"
+ ],
+ "summary": "Algernon 是一个纯 Go 编写的自包含 Web 服务器，编译为单个可执行文件，内置 Lua、Teal、Markdown、Pongo2、Sass、JSX、TypeScript 等多种语言和模板支持，并可直接连接 SQLite、PostgreSQL、MySQL、Redis 等数据库。它默认支持 HTTP/2 和 HTTP/3，提供用户权限、限流和插件机制，适合需要快速搭建动态网站或 API 原型的开发者，尤其适合熟悉 Lua 或 Go 生态、希望减少外部依赖的用户。",
+ "tagline": "内置多种语言与数据库支持的纯 Go Web 服务器"
+}

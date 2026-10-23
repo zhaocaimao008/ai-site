@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对虚拟人视频生成感兴趣的研究者、开发者，以及希望利用 Stable Diffusion 生态进行视频创作的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "支持无限长度视频生成，采用视觉条件并行去噪方案",
+  "提供 Image2Video、Text2Image2Video、Video2Video 多种生成模式",
+  "兼容 Stable Diffusion 生态，包括 base_model、LoRA、ControlNet 等",
+  "支持多参考图技术：IPAdapter、ReferenceOnly、ReferenceNet、IPAdapterFaceID",
+  "提供预训练的虚拟人视频生成 checkpoint",
+  "提供 Gradio 演示界面，可在 GUI 中生成视频"
+ ],
+ "intro": "MuseV 是腾讯音乐娱乐 Lyra Lab 开源的虚拟人视频生成框架，基于扩散模型实现无限长度、高保真的视频生成。其核心是视觉条件并行去噪方案，支持 Image2Video、Text2Image2Video 和 Video2Video 三种生成模式。\n\n项目兼容 Stable Diffusion 生态，可使用 base_model、LoRA、ControlNet 等组件，并支持 IPAdapter、ReferenceOnly、ReferenceNet、IPAdapterFaceID 等多参考图技术。官方提供了在人类数据集上训练的虚拟人视频生成 checkpoint，并已发布 Gradio 演示空间方便在 GUI 中生成视频。\n\nMuseV 与同团队的 MuseTalk（实时唇形同步）和 MusePose（姿态控制）可组合成完整的虚拟人生成方案。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/TMElyralab/MuseV.git",
+  "安装依赖（参考 README 中的环境配置说明）",
+  "下载预训练模型 musev 和 muse_referencenet",
+  "运行示例任务：python infer.py --task example"
+ ],
+ "summary": "MuseV 是一个基于扩散模型的虚拟人视频生成框架，重点解决长视频生成中的连贯性问题，支持无限长度输出。它提供 Image2Video、Text2Image2Video 和 Video2Video 三种模式，并兼容 Stable Diffusion 生态，可结合 LoRA、ControlNet 等组件使用。适合需要从图片或文本生成虚拟人视频的研究者与开发者，也可与 MuseTalk、MusePose 组合构建完整虚拟人方案。",
+ "tagline": "基于扩散模型的无限长度虚拟人视频生成框架"
+}

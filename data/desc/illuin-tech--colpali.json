@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合从事文档检索、信息检索研究或需要处理视觉丰富文档的开发者与研究人员。",
+ "date": "2026-10-23",
+ "features": [
+  "利用视觉语言模型生成文档的多向量嵌入，无需 OCR 或布局识别",
+  "支持 ColPali、ColQwen2、ColSmol 等多种 ColVision 模型",
+  "提供训练和推理代码，基于 ColBERT 架构",
+  "在 ViDoRe 基准上评估模型性能",
+  "可通过 Sentence Transformers v6 的 MultiVectorEncoder 使用"
+ ],
+ "intro": "ColPali 是一个利用视觉语言模型（VLM）进行文档检索的项目，它通过将文档页面视为图像，直接生成多向量嵌入，从而避免了传统 OCR 和布局识别流程的复杂性。该项目基于 ColBERT 架构和 PaliGemma 模型，训练模型最大化查询与文档嵌入之间的相似度。\n\n仓库包含训练和推理代码，支持 ColPali、ColQwen2、ColSmol 等 ColVision 系列模型。这些模型在 ViDoRe 基准上评估，适用于需要处理包含文本、图表、布局等视觉元素的文档检索场景。\n\n注意：colpali-engine 包已弃用，建议新项目使用 Sentence Transformers v6 的 MultiVectorEncoder 进行集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装支持图像功能的 Sentence Transformers：pip install -U \"sentence-transformers[image]>=6.0.0\"",
+  "使用 MultiVectorEncoder 加载模型：from sentence_transformers import MultiVectorEncoder; model = MultiVectorEncoder(\"vidore/colqwen2.5-v0.2\")",
+  "编码查询和文档图像：query_embeddings = model.encode_query(queries); document_embeddings = model.encode_document(images)",
+  "计算相似度得分：scores = model.similarity(query_embeddings, document_embeddings)"
+ ],
+ "summary": "ColPali 项目利用视觉语言模型直接对文档图像生成多向量嵌入，实现无需 OCR 和布局分析的文档检索。它基于 ColBERT 架构，支持 ColPali、ColQwen2 等模型，适合处理包含图表、布局等视觉元素的文档检索场景。新项目建议通过 Sentence Transformers 的 MultiVectorEncoder 使用。",
+ "tagline": "基于视觉语言模型的高效文档检索工具"
+}

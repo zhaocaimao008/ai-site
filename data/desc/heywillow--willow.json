@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自建隐私友好语音助手的开发者、智能家居爱好者，以及想替代商业语音助手的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "开源、本地且可自托管的语音助手",
+  "基于 ESP32 硬件平台，使用 C 语言开发",
+  "支持语音识别（STT）和语音合成（TTS）",
+  "提供 Willow Inference Server 用于本地语言推理",
+  "可与 Home Assistant 等智能家居系统集成",
+  "注重隐私，数据在本地处理"
+ ],
+ "intro": "Willow 是一个开源、本地运行且可自托管的语音助手项目，目标是作为 Amazon Echo 和 Google Home 的替代方案。项目基于 ESP32 硬件平台，使用 C 语言开发，并集成了语音识别、语音合成等 AI 能力。\n\nWillow 强调隐私和本地化处理，用户可以将语音推理任务放在自己的服务器上运行。项目还提供了 Willow Inference Server，支持 STT、TTS、LLM 等语言推理任务，并可与 Home Assistant 等智能家居系统配合使用。\n\n官方文档位于 heywillow.io，社区讨论集中在 GitHub Discussions 和 Issues 中。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Willow 是一个开源的本地语音助手项目，旨在替代 Amazon Echo 和 Google Home。它基于 ESP32 硬件，支持语音识别与合成，并可通过自托管的 Willow Inference Server 在本地完成 STT、TTS、LLM 等推理任务。适合注重隐私、希望自行掌控语音数据的开发者和智能家居用户，也可与 Home Assistant 等系统配合使用。",
+ "tagline": "开源自托管的本地语音助手，替代 Amazon Echo/Google Home"
+}

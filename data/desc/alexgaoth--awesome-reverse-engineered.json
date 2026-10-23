@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要与闭源系统交互的开发者、逆向工程爱好者，以及希望让 AI 代理自动寻找可用工具的 AI 应用构建者。",
+ "date": "2026-10-23",
+ "features": [
+  "收录 16,844 个逆向工程开源项目，涵盖 20 个类别",
+  "提供网站搜索，可按产品、厂商或协议查找",
+  "支持安装为 AI 代理技能，通过 npx 命令使用",
+  "每晚自动刷新项目数据，标注活跃状态和许可证",
+  "包含 Claude Code 插件和 MCP 服务器等多种集成方式"
+ ],
+ "intro": "这是一个收录了超过 16,000 个开源项目的索引，这些项目都是通过逆向工程闭源应用、API、设备、协议、文件格式、游戏或 AI 产品而构建的。项目按类别组织，包括 AI 工具、游戏反编译、IoT 设备、非官方 API 客户端等，并提供搜索网站和 AI 代理技能，方便开发者快速找到可复用的逆向工程成果。\n\n该索引每晚刷新，每个项目都标注了活跃度、语言和许可证信息。除了网站搜索，还可以通过 npx 命令将整个索引安装为 AI 代理技能，让代理在需要与没有官方 API 的对象交互时自动搜索并选择合适的工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问搜索网站 https://alexgaoth.github.io/awesome-reverse-engineered/ 查找项目",
+  "或运行 npx skills add alexgaoth/awesome-reverse-engineered 将索引安装为 AI 代理技能",
+  "在 Claude Code 中通过 /plugin install reverse-engineered --marketplace alexgaoth/awesome-reverse-engineered 安装插件"
+ ],
+ "summary": "这个项目是一个逆向工程开源工具的索引库，收集了超过 16,000 个由社区逆向闭源应用、设备、协议等构建的项目，并按类别整理。它适合开发者在动手逆向之前先搜索是否已有现成实现，也适合作为 AI 代理的技能库，让代理在需要与没有官方 API 的对象交互时自动查找可用工具。",
+ "tagline": "收录 16,000+ 个通过逆向工程构建的开源工具索引"
+}

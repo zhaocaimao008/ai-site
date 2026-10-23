@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Zotero 管理文献、需要跨论文检索与综述的研究人员、研究生和开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "全库搜索：对整个 Zotero 文库进行自然语言问答，支持万篇以上规模",
+  "多 PDF 对话与对比：选中多篇论文或整个集合，对比方法、结果与争议",
+  "Literature Radar：订阅研究主题，自动监控 arXiv、PubMed 等来源并生成每日摘要",
+  "AutoPilot：设定研究问题后批量阅读整个集合，提取结构化信息保存为 Zotero 笔记",
+  "可验证引用：每条回答附带精确引用，点击可跳转到原文",
+  "Zotero MCP Server：将本地文库接入 Claude Desktop、Cursor 等 MCP 兼容客户端"
+ ],
+ "intro": "PapersGPT 是 Zotero 的 AI 研究插件，面向深度文献调研场景。它能在本地解析并索引整个 Zotero 文库，让用户用自然语言跨所有论文提问，而不仅限于当前打开的 PDF。\n\n核心功能包括全库搜索、多 PDF 对比对话、Literature Radar 追踪新论文，以及 AutoPilot 批量阅读集合并将结果保存为 Zotero 笔记。回答附带可点击跳转的引用，方便核实来源。\n\n支持 30+ 云端 LLM、内置本地模型、Ollama 和自定义 OpenAI 兼容接口。解析、索引与搜索均在本地完成，本地模型可完全离线运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载最新 PapersGPT 的 .xpi 文件",
+  "在 Zotero 中安装该插件",
+  "打开 PDF 后点击工具栏按钮或按 Command/Ctrl + Enter 开始对话",
+  "在主窗口选中多个文件或集合进行多 PDF 对话，或勾选“Search entire library”进行全库搜索",
+  "选择云端模型（内置试用无需 API key）或本地模型，然后提问并保存结果到 Zotero 笔记"
+ ],
+ "summary": "PapersGPT 是 Zotero 的 AI 研究插件，解决跨论文检索与批量阅读的问题。它能本地索引整个文库，支持全库问答、多 PDF 对比、Literature Radar 追踪新论文，以及 AutoPilot 批量阅读并保存笔记。适合需要深度文献调研的研究人员，支持云端与本地模型，解析和搜索均在本地完成。",
+ "tagline": "Zotero 的 AI 研究助手，支持全库检索与多 PDF 对话"
+}

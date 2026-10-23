@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地环境运行文本生成图像的开发者、研究人员和 AI 艺术爱好者，需要基本的 Python 环境和命令行操作经验。",
+ "date": "2026-10-23",
+ "features": [
+  "根据文本提示生成图像，支持多提示词和权重调整",
+  "支持图像提示，可结合文本和参考图像生成",
+  "故事模式：通过插入符号分隔多组提示词连续生成",
+  "风格迁移：使用输入图像和风格文本进行低迭代生成",
+  "反馈循环：通过缩放和旋转生成图像再输入，产生动态效果",
+  "支持 CPU 和 AMD 显卡（ROCm）运行"
+ ],
+ "intro": "VQGAN-CLIP 是一个在本地运行 VQGAN+CLIP 文本生成图像的开源项目，源自 Katherine Crowson 的 Colab notebook，旨在让用户无需依赖云端环境即可生成图像。项目使用 Python 编写，基于 PyTorch，支持 Nvidia GPU 加速，也提供 CPU 和 AMD 显卡的配置说明。\n\n通过命令行指定文本提示，即可生成对应图像，并支持多提示词加权、图像提示、故事模式、风格迁移和反馈循环等进阶功能。项目提供了详细的安装步骤和示例命令，适合有一定 Python 环境管理经验的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建并激活 conda 环境：conda create --name vqgan python=3.9 && conda activate vqgan",
+  "安装 PyTorch：pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html",
+  "安装依赖：pip install ftfy regex tqdm omegaconf pytorch-lightning IPython kornia imageio imageio-ffmpeg einops torch_optimizer setuptools==59.5.0",
+  "克隆仓库和依赖：git clone https://github.com/nerdyrodent/VQGAN-CLIP && cd VQGAN-CLIP && git clone https://github.com/openai/CLIP && git clone https://github.com/CompVis/taming-transformers",
+  "下载预训练模型到 checkpoints 目录（参考 README 中的 curl 命令）",
+  "运行生成：python generate.py -p \"A painting of an apple in a fruit bowl\""
+ ],
+ "summary": "VQGAN-CLIP 让你在本地电脑上运行文本生成图像模型，无需依赖 Colab 等云端环境。它基于 VQGAN 和 CLIP，通过命令行输入文字描述即可生成图片，并支持多提示词、图像参考、风格迁移和故事模式等玩法。适合想自己动手实验 AI 绘画、需要本地部署的开发者与爱好者。",
+ "tagline": "本地运行 VQGAN+CLIP 文本生成图像"
+}

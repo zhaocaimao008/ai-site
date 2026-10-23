@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在多台机器之间切换的开发者，以及希望让 AI 代理安全访问和操作自有机器的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "在任意机器上运行 Claude Code、Codex、OpenCode、Gemini CLI 等代理会话，关闭应用后会话继续运行",
+  "实时查看 Linux 机器桌面，并在机器之间复制文件和剪贴板",
+  "集中管理 GitHub 收件箱、仓库、issue 和 PR，一键把 issue 交给指定机器上的代理",
+  "管理自托管 runner 的安装、启动、停止、日志和移除，并查看运行状态",
+  "监控各机器的 CPU、内存、磁盘和在线状态，离线时给出明确原因",
+  "提供 MCP 服务器和可脚本化的 `--json` 命令，供 AI 代理调用"
+ ],
+ "intro": "Muxin 是一个用 Rust 编写的跨平台桌面应用，把 Mac、Linux 和 Windows 机器集中到一个界面里管理。你可以查看每台机器的 CPU、内存、磁盘和运行状态，在任意机器上打开终端运行 Claude Code、Codex、Gemini CLI 等 AI 代理会话，还能远程查看 Linux 桌面、在机器间复制文件和剪贴板。\n\n它强调“代理优先”：所有能力都通过 MCP 服务器（`muxin mcp`）和带 `--json` 的命令行暴露，AI 代理可以检查机器、解释问题并执行修复。机器连接复用系统 `ssh` 和 `~/.ssh/config`，GitHub 访问复用 `gh` 登录，也支持通过 Tailscale 跨网络连接。\n\n应用基于 GPUI 构建，提供 macOS、Linux 和 Windows 安装包，也支持从源码编译，以及无 GUI 的 headless 构建用于服务器和 CI 环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的安装包并安装，或使用 `brew install --cask lumarylabsllc/tap/muxin`",
+  "运行 `muxin --demo` 先体验模拟机器，不会触碰真实环境",
+  "运行 `muxin` 启动应用，默认包含本机",
+  "运行 `muxin add-machine --name \"Mac Studio\" --host ci@mac-studio.local` 添加远程机器",
+  "运行 `muxin status` 查看机器状态"
+ ],
+ "summary": "Muxin 把多台 Mac、Linux 和 Windows 机器收进一个应用，方便你集中查看状态、打开终端、传文件和远程看桌面。它同时面向 AI 代理：所有能力都通过 MCP 服务器和命令行暴露，代理可以检查机器并执行修复。适合需要在多机之间切换的开发者，以及想让 AI 代理操作自有机器的场景。",
+ "tagline": "统一管理多台机器，供你或 AI 代理使用"
+}

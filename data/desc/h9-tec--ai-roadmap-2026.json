@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望系统入门 AI 工程、按路线逐步实践的初学者和转岗开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "五层递进路线：Foundations、LLM Engineering、Agents、Evaluation、Production",
+  "每层结束配一个 mini-project，如 LLM proxy API、带引用的文档问答、研究 agent",
+  "提供约 25 周的节奏参考和 12 周示例计划",
+  "汇总经过链接检查的免费资源清单",
+  "说明各层对应的岗位方向"
+ ],
+ "intro": "AI Roadmap 2026 是一份面向初学者的 AI 工程学习路线，把学习内容分为 Foundations、LLM Engineering、Agents、Evaluation、Production（LLMOps）五层，每层都配有一个可展示的 mini-project。按每周约 10 小时计算，五层走完大约需要 25 周。\n\n路线强调 2026 年 AI 工程的重心已从训练模型转向在现有模型之上构建可靠的 agentic 系统，并把 RAG、Agents、Evals 三项技能作为贯穿各层的主线。README 还建议如果只学一件事，优先学评估工程，可从第 4 层 Evaluation 开始。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读 00-start-here.md 了解起点",
+  "选择逐层学习：完成一层的 mini-project 后再进入下一层",
+  "或按 00-start-here.md 中的 12-week sample plan 安排进度",
+  "参考 resources.md 获取各层资源清单"
+ ],
+ "summary": "这是一份面向初学者的 AI 工程学习路线，把内容拆成基础、LLM 工程、Agent、评估、生产五层，每层都要求完成一个可展示的小项目，并给出约 25 周的时间参考。适合想系统入门 AI 应用开发、按部就班动手实践的人，也适合需要规划学习节奏的转岗开发者。",
+ "tagline": "五层学习路线，从零到 AI 工程师"
+}

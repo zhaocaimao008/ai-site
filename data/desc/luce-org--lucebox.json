@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在消费级 GPU 或异构硬件上部署和加速本地 LLM 推理的开发者与研究者。",
+ "date": "2026-10-23",
+ "features": [
+  "投机解码与投机预填充，针对每个模型和硬件目标调优 kernel",
+  "支持异构执行，可组合 R9700、Strix Halo 等多类设备",
+  "Paged attention 与 continuous batching，支持多客户端并发",
+  "Megakernel 优化，降低小模型推理开销",
+  "覆盖图像生成与视觉（图像输入）推理场景",
+  "提供配套 Hugging Face 权重与 drafter 权重"
+ ],
+ "intro": "Lucebox 是一个用 C++ 编写的 LLM 投机推理服务端，目标是在异构硬件和消费级 GPU 上提升大模型推理速度。项目针对不同模型和硬件目标定制 kernel，并结合投机预填充（speculative prefill）与投机解码（speculative decoding）来加速生成。\n\nREADME 中列出了多项优化及其在具体硬件上的实测结果，例如在单张 R9700 上运行 Qwen 3.8 27B 的 DFlash2 解码、在 Strix Halo 上运行 DeepSeek V4 的 DSpark、在 RTX 3090 上用 PFlash + KVFlash 加速 256K 长上下文预填充，以及 R9700 与 Strix Halo 组合的异构执行。项目同时支持 paged attention、continuous batching、Megakernel，并覆盖图像生成与视觉输入场景。\n\n项目提供 Hugging Face 上的模型权重与 drafter 权重链接，以及博客和教程资源，方便按对应硬件配置复现。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Lucebox 是一个 C++ 编写的 LLM 推理服务端，通过定制 kernel、投机解码和投机预填充，在消费级 GPU 与异构硬件组合上加速大模型推理。它针对具体模型和硬件做调优，并支持长上下文预填充、并发批处理、图像生成与视觉输入等场景，适合想在本地说法硬件上部署模型的开发者参考复现。",
+ "tagline": "面向异构硬件与消费级 GPU 的投机推理服务"
+}

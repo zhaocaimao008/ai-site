@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把 AI 编码代理用于复杂、重复性开发流程的开发者，以及需要多代理协作和自动化编排的团队。",
+ "date": "2026-10-23",
+ "features": [
+  "将 AI 编码代理编排为可重复的工作流",
+  "支持多代理协作与代理间通信",
+  "支持并行执行多个代理任务",
+  "支持长时间运行的工作流并处理持久化",
+  "集中管理提示词与动态上下文",
+  "通过 CLI 调用 Claude Code、Codex、Cursor 等引擎的 headless 模式"
+ ],
+ "intro": "CodeMachine 是一个开源编排工具，用于把 AI 编码代理组织成结构化、可重复执行的工作流。它通过各 AI 编码引擎提供的 headless 脚本模式（如 Claude Code、Codex、Cursor 等）启动代理，并负责传递参数、管理上下文和协调多个代理。\n\n项目强调“定义一次，反复运行”：你可以把修 bug、做功能等流程固化下来，避免每次从头向代理解释步骤。它支持多代理协作、并行执行、长时间运行以及集中管理提示词和上下文，工作流可以从完全交互到完全自主。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "全局安装：npm i -g codemachine",
+  "参考官方文档的快速开始页面：https://docs.codemachine.co/getting-started/quickstart",
+  "从默认的 Ali Workflow Builder 工作流开始，交互式创建第一个工作流"
+ ],
+ "summary": "CodeMachine 解决的是 AI 编码代理使用中流程难以复用的问题：每次让代理修 bug 或做功能，都要重新解释步骤、管理上下文。它把这些流程固化为可重复运行的工作流，通过 CLI 调用 Claude Code、Codex、Cursor 等引擎，支持多代理协作、并行执行和长时间运行，适合需要自动化编排复杂开发任务的开发者。",
+ "tagline": "把 AI 编码代理编排成可重复的长时工作流"
+}

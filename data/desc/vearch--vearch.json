@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI 应用（如 RAG、视觉搜索）构建向量检索能力的开发者和团队。",
+ "date": "2026-10-23",
+ "features": [
+  "混合搜索：同时支持向量搜索和标量过滤",
+  "高性能检索：毫秒级从数百万对象中搜索",
+  "可扩展与可靠：支持副本和弹性伸缩",
+  "多语言 SDK：提供 Python、Go、Java、Rust 客户端",
+  "AI 框架集成：可与 Langchain、LlamaIndex 等配合使用",
+  "多种部署方式：支持 Kubernetes、Docker Compose 等"
+ ],
+ "intro": "Vearch 是一个云原生分布式向量数据库，用于在 AI 应用中高效搜索嵌入向量。它支持向量搜索与标量过滤结合的混合搜索，能在毫秒级从数百万对象中检索结果，并通过副本和弹性扩展保证可扩展性与可靠性。\n\n架构上包含 Master、Router 和 PartitionServer 三个组件：Master 负责模式管理和集群元数据，Router 提供 RESTful API 并路由请求，PartitionServer 基于 faiss 实现向量存储与检索，并借助 raft 进行副本复制。\n\nVearch 提供 Python、Go、Java、Rust 等 SDK，并可与 Langchain、LlamaIndex 等 AI 框架集成，作为记忆后端或知识库的向量存储。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Helm 部署：helm repo add vearch https://vearch.github.io/vearch-helm && helm repo update && helm install my-release vearch/vearch",
+  "或使用 Docker Compose 单机模式：cd cloud && cp ../config/config.toml . && docker-compose --profile standalone up -d",
+  "或使用 Docker Compose 集群模式：cd cloud && cp ../config/config_cluster.toml . && docker-compose --profile cluster up -d",
+  "参考 RESTful API 教程或 SDK 文档开始使用"
+ ],
+ "summary": "Vearch 是一个面向 AI 应用的云原生分布式向量数据库，主要解决嵌入向量的高效相似性搜索问题。它支持向量搜索与标量过滤结合的混合搜索，并具备副本和弹性扩展能力，适合为 RAG、视觉搜索等场景提供向量存储与检索后端，也可作为 Langchain、LlamaIndex 等框架的向量存储组件。",
+ "tagline": "云原生分布式向量数据库，支持混合搜索"
+}

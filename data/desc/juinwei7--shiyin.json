@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要频繁记录会议、注重隐私且使用 Apple Silicon Mac 的开发者、团队和普通用户。",
+ "date": "2026-10-23",
+ "features": [
+  "录制麦克风或电脑音频，支持 Zoom、Meet、Teams 等线上会议，实时显示转录文本",
+  "本地转录使用 whisper.cpp + Breeze ASR 25，支持术语表提示和长录音分段处理",
+  "自动识别说话人，支持声纹记忆、手动合并或修正说话人标签",
+  "使用 Claude Code、Codex CLI 或多种 API 生成摘要、决策、行动项和待确认问题",
+  "笔记和转录可导出为 Markdown、PDF、Word、字幕或 .shiyin 会议包",
+  "支持跨会议全文搜索和自然语言提问，答案附带时间戳"
+ ],
+ "intro": "Shiyin 拾音是一款面向 macOS 的会议笔记应用，支持录制线上或线下会议，并实时生成转录文本。录制结束后，应用会在本地完成转录和说话人识别，再调用 Claude、Codex 或 API 生成带时间戳的会议笔记。\n\n所有录音、转录和说话人识别均在本地进行，录音不会上传。应用提供英文和繁体中文界面，支持英语、中文和日语会议，需要 Apple Silicon 和 macOS 26。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载 DMG 安装包并安装 Shiyin（需 Apple Silicon 和 macOS 26）",
+  "点击工具栏的 Record（⌘R）开始录制；线上会议请将音源设为“Microphone + computer audio”",
+  "录制中可查看实时转录，按 ⌘B 或 ⌃⌥⌘B 添加书签",
+  "停止后 Shiyin 自动转录并识别说话人，可点击“Speaker 1”重命名",
+  "在笔记界面查看摘要、决策和行动项，或导出为 Markdown、PDF、Word 等格式"
+ ],
+ "summary": "Shiyin 拾音是一款 macOS 会议笔记工具，可录制线上或线下会议并实时转录，结束后在本地完成说话人识别，再借助 Claude、Codex 或 API 生成带时间戳的笔记。适合注重隐私、需要整理会议记录的用户，尤其适合使用 Apple Silicon Mac 的团队和个人。",
+ "tagline": "本地优先的 macOS 会议记录与 AI 笔记应用"
+}

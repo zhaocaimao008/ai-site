@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要分析 Android APK、进行逆向工程或静态安全审查的开发者与安全研究人员，尤其是已经在使用 JADX 并希望借助 LLM 辅助分析的人。",
+ "date": "2026-10-23",
+ "features": [
+  "JADX 插件与 MCP server 配合，将反编译环境接入 LLM 客户端",
+  "通过 MCP 工具调用让 LLM 获取 JADX 中的代码与数据",
+  "支持在 JADX GUI 中执行操作并返回结果给 LLM",
+  "面向 Android APK 的逆向工程与静态代码分析",
+  "可与 Claude 等支持 MCP 的 LLM 客户端配合使用"
+ ],
+ "intro": "JADX-AI-MCP 是 JADX 反编译器的插件，通过 Model Context Protocol（MCP）把 JADX 与 Claude 等 LLM 客户端连接起来。它由 JADX 插件和配套的 MCP server 组成，插件在 JADX 内接收 HTTP 请求并操作 GUI 或读取数据，MCP server 负责在 LLM 客户端与插件之间转发工具调用。\n\n整体流程可以概括为“反编译 → 上下文相关的代码审查 → AI 建议”，目标是让 LLM 在逆向工程过程中直接获取 JADX 中的代码与信息，用于分析 Android APK、查找漏洞等静态分析任务。项目使用 Java 11+ 和 Python 3.10+，采用 Apache-2.0 协议。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "JADX-AI-MCP 把 JADX 反编译器接入 MCP，让 Claude 等 LLM 客户端能够调用 JADX 中的代码与数据，在反编译过程中获得上下文相关的代码审查和 AI 建议。它适合分析 Android APK、做逆向工程和静态安全审查的开发者与研究人员，把反编译、查看代码和 AI 辅助分析放在同一工作流里完成。",
+ "tagline": "为 JADX 反编译工具接入 MCP，让 LLM 实时分析 Android APK"
+}

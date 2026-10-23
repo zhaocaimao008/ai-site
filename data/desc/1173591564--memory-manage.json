@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 coding agent 构建长期记忆、并关注记忆机制评估的开发者与研究者。",
+ "date": "2026-10-23",
+ "features": [
+  "事件日志写入与纯正则符号抽取，写入侧零 LLM",
+  "基于 SQLite/FTS5 的 schema 与全文检索",
+  "任务划分、git 扫描与 supersedes 边维护",
+  "五个查询接口及遥测",
+  "通过 MCP 暴露工具面，支持 OpenCode 与 Devin 日志导入",
+  "切点快照、完整原文与模型工具循环的三臂评估"
+ ],
+ "intro": "memory-manage 是一个面向 LLM agent 的长期记忆层，用 TypeScript 实现，底层使用 SQLite/FTS5，并通过 MCP 暴露工具接口。它把连续、可能互相矛盾的项目交互日志蒸馏成有界、可自更新的记忆库，写入侧不调用 LLM，符号抽取采用纯正则方式。\n\n项目包含事件写入、任务划分与 supersedes 边、五个查询接口、向量检索与秩融合，以及切点快照和三臂评估等机制。README 说明已导入 Devin 的 12 个真实会话、23,424 条去重事件，并完成首个真实三臂评估，但该任务上记忆未展示收益（n=1）。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库后执行 npm install 安装依赖",
+  "运行 scripts/make-demo.ts 生成含一次 revert 的演示 git 仓库与事件日志",
+  "通过 src/cli.ts 进行本地验证与运维",
+  "按 README 中的 MCP 接入配置将工具面接入 agent"
+ ],
+ "summary": "这个项目为 LLM agent 提供长期记忆层，把连续且可能互相矛盾的项目交互日志整理成有界、可自更新的记忆库。写入侧不调用 LLM，使用 SQLite/FTS5 存储，并通过 MCP 提供查询工具。适合需要让 coding agent 跨任务保留项目上下文、并希望评估记忆机制实际效果的开发者。",
+ "tagline": "为 LLM agent 提供有界、可自纠错的长期记忆层"
+}

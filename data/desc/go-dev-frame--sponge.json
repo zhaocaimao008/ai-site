@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速搭建标准化 Go 后端服务的开发者与团队，也适合希望统一项目结构、减少重复搭建工作的 Go 初学者。",
+ "date": "2026-10-23",
+ "features": [
+  "解析 SQL、Protobuf、JSON 配置自动生成模块化代码",
+  "支持构建 RESTful API、gRPC、HTTP+gRPC、gRPC Gateway 等服务",
+  "提供代码生成 UI，可在浏览器中操作生成完整项目",
+  "集成 Gin、GORM、Redis、Kafka、Etcd、Prometheus 等 30+ 组件，按需加载",
+  "支持自定义模板，可扩展生成前端、测试脚本等任意代码",
+  "AI 助手根据项目上下文辅助生成业务逻辑代码"
+ ],
+ "intro": "Sponge 是一个 Go 开发框架，核心思路是“定义即代码”：解析 SQL、Protobuf 或 JSON 配置文件，自动生成模块化的后端服务代码。它整合了代码生成引擎、Gin Web 框架和 gRPC 微服务框架，覆盖从项目生成、开发、测试到 API 文档和部署的流程。\n\n框架支持以 LEGO 式拼装方式组合代码模块，可快速构建单体应用、微服务集群和网关服务，包括 RESTful API、gRPC、HTTP+gRPC、gRPC Gateway 等形式。内置 30 多个 Go 生态组件，按需加载，涵盖数据库、缓存、消息队列和服务治理等。\n\nSponge 还提供 AI 辅助开发：框架负责生成标准化的基础设施代码，AI 助手则根据项目上下文补全核心业务逻辑。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Sponge，支持 Windows、macOS、Linux 和 Docker 环境",
+  "执行 sponge run 启动代码生成 UI",
+  "在浏览器访问 http://localhost:24631 生成代码",
+  "在项目根目录执行 make docs 生成 Swagger 文档",
+  "执行 make run 启动服务，访问 http://localhost:8080/swagger/index.html 测试接口"
+ ],
+ "summary": "Sponge 是一个 Go 后端开发框架，通过解析 SQL、Protobuf 或 JSON 配置自动生成模块化服务代码，减少搭建底层框架和编写 CRUD 的重复工作。它支持构建 RESTful API、gRPC 及网关服务，适合需要快速交付标准化后端项目的开发者和团队，也可借助 AI 助手补全业务逻辑。",
+ "tagline": "低代码生成 Go 后端服务的开发框架"
+}

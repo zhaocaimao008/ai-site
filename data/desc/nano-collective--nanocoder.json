@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望在终端内使用 AI 编程助手、又在意代码去向和模型选择自由的开发者，尤其是使用本地模型或自选 API 的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "支持 Ollama 本地模型与 OpenRouter、Anthropic、Google 等 OpenAI 兼容 API，可自由切换 provider 和 model",
+  "提供 normal、auto-accept、yolo、plan、architect 等多种开发模式",
+  "nanocoder review 可审查分支或 PR 的 diff，检查 bug、安全问题和风格问题",
+  "nanocoder worktree 在独立 worktree 中检出 PR 并启动交互式编码会话",
+  "全屏与 inline 两种终端渲染模式，inline 模式保留原生滚动回看",
+  "通过 npm 全局安装，也支持 Homebrew 和 Nix Flakes"
+ ],
+ "intro": "Nanocoder 是一个运行在终端里的开源编程 agent，由社区组织 Nano Collective 而非公司开发。它把 agentic coding 能力接到你选择的模型上：既可以通过 Ollama 使用本地模型，也可以接入 OpenRouter、Requesty、Anthropic、Google 等任意 OpenAI 兼容 API，由你决定代码交给哪个服务商运行。\n\n项目强调隐私与本地优先，没有闭源功能，也没有用付费档位锁住实用部分。除交互式对话外，它提供非交互的 run 命令、多种开发模式（normal、auto-accept、yolo、plan、architect），以及 review 分支或 PR、在独立 worktree 中打开 PR 进行编码会话等命令。终端渲染支持全屏和 inline 两种模式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "全局安装：npm install -g @nanocollective/nanocoder",
+  "启动交互界面：nanocoder",
+  "指定 provider 和 model 运行：nanocoder --provider ollama --model llama3.1",
+  "非交互执行任务：nanocoder --provider openrouter --model google/gemini-3.1-flash run \"analyze src/app.ts\"",
+  "审查分支或 PR：nanocoder review main"
+ ],
+ "summary": "Nanocoder 是一个终端内的开源 AI 编程 agent，解决的是使用 AI 编码工具时模型和数据被单一厂商绑定的问题。它允许用户自带模型，既可用 Ollama 跑本地模型，也可接 OpenRouter、Anthropic 等 OpenAI 兼容 API，代码和数据去向由用户决定。适合在终端里工作、重视隐私和模型选择自由的开发者，也提供 review、worktree 等面向日常开发流程的命令。",
+ "tagline": "终端里的开源 AI 编程助手，模型自选、代码留在本地"
+}

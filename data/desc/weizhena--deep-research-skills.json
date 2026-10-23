@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、OpenCode 或 Codex 进行学术调研、技术选型、市场分析或尽职调查的开发者与研究人员。",
+ "date": "2026-10-23",
+ "features": [
+  "两阶段研究流程：先生成研究大纲，再进行逐项深度调查",
+  "支持人工介入，可在研究过程中添加研究条目或字段定义",
+  "提供 /research、/research-deep、/research-report 等命令驱动工作流",
+  "使用并行 agent 对每个研究条目执行网络搜索",
+  "最终将 JSON 结果整理为带目录的 Markdown 报告",
+  "同时提供英文和中文版本的 skills 文件"
+ ],
+ "intro": "这是一个面向 Claude Code、OpenCode 和 Codex 的研究技能包，把深度研究拆成两个阶段：先生成可扩展的研究大纲，再逐项进行深入调查。整个过程保留人工介入环节，用户可以在每个阶段检查、补充或调整研究内容。\n\n项目提供 /research、/research-add-items、/research-add-fields、/research-deep 和 /research-report 等命令，覆盖从大纲生成、条目与字段扩展、并行深度搜索到最终生成 Markdown 报告的完整流程。安装时需要复制 skills 和 agents 文件，并安装 Python 依赖 pyyaml。\n\n它适用于学术调研、技术选型、市场与竞品分析、尽职调查等需要系统化收集和整理信息的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/Weizhena/deep-research-skills.git && cd deep-research-skills",
+  "pip install pyyaml",
+  "Claude Code：cp -r skills/research-en/* ~/.claude/skills/，并复制 agents/web-search-agent.md 和 agents/web-search-modules 到 ~/.claude/agents/",
+  "OpenCode：设置 export OPENCODE_ENABLE_EXA=1，并复制 agents/web-search-opencode.md 和 agents/web-search-modules 到 ~/.config/opencode/agents/",
+  "在对应工具中使用 /research 生成大纲，再用 /research-deep 深度研究，最后用 /research-report 生成报告"
+ ],
+ "summary": "这个项目为 Claude Code、OpenCode 和 Codex 提供一套结构化的深度研究技能，把研究过程拆成生成大纲和逐项深入调查两个阶段，并允许用户在中途补充研究条目或字段。它适合需要系统梳理信息的场景，比如学术调研、技术选型、市场竞品分析和尽职调查，最终可将结果整理成 Markdown 报告。",
+ "tagline": "为 Claude Code、OpenCode 和 Codex 提供结构化深度研究工作流"
+}

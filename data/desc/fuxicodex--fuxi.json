@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合习惯在终端工作的开发者，以及希望用 AI 辅助完成代码修改、命令执行等日常任务的工程人员。",
+ "date": "2026-10-23",
+ "features": [
+  "在终端 TUI 中读取代码、编辑文件、运行命令并驱动工具",
+  "跨 LLM 提供商的成本感知路由与自动故障转移",
+  "支持自带 API key 或使用 FuXi 托管模型",
+  "敏感工具调用需审批，可切换权限模式",
+  "作为 MCP 客户端连接外部工具",
+  "单静态二进制，支持自更新"
+ ],
+ "intro": "FuXi 是一个运行在终端里的 AI 编程代理，用 Go 编写并以单个静态二进制分发，无需额外运行时依赖。它通过 TUI 界面读取代码、编辑文件、执行命令并调用工具，支持在多个 LLM 提供商之间进行成本感知的路由和自动故障转移。\n\n使用需要 FuXi 账号，登录后可直接使用托管模型，也可以通过环境变量或配置文件接入自己的 API key。项目提供权限控制、会话与记忆、MCP 客户端、自更新等能力，代码和会话默认保留在本地。\n\n需要注意的是，产品源码为专有软件，本仓库主要托管文档、安装脚本和问题追踪。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS / Linux 安装：curl -fsSL https://downloads.fuxicode.com/bootstrap.sh | bash",
+  "Windows PowerShell 安装：irm https://downloads.fuxicode.com/bootstrap.ps1 | iex",
+  "验证安装：fuxi --version",
+  "运行环境检查：fuxi doctor",
+  "登录账号：fuxi login，然后启动会话：fuxi"
+ ],
+ "summary": "FuXi 是一个终端里的 AI 编程代理，能读取代码、修改文件、执行命令并调用工具，适合习惯命令行工作的开发者。它支持在多个 LLM 提供商之间按成本路由并自动故障转移，可以自带 API key 或使用托管模型，代码和会话默认保留在本地。",
+ "tagline": "终端里的 AI 编程助手，能读代码、改文件、跑命令"
+}

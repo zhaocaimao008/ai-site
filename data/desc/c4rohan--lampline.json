@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要自托管电话语音智能体、希望从 Dialogflow CX 迁移或控制通话成本的开发者与团队。",
+ "date": "2026-10-23",
+ "features": [
+  "从 Dialogflow CX 和 CX Agent Studio 导入智能体，也可导出回 Google 工具",
+  "拖拽式构建器，混合 LLM 步骤与脚本化页面",
+  "Evals 功能：AI Test Caller 拨打真实电话并按检查项评分",
+  "支持 Twilio、Telnyx 及任意 SIP trunk 接入电话",
+  "智能体以 YAML/Markdown 文件夹保存，可用 vk CLI 管理",
+  "支持多家模型提供商及本地 Ollama"
+ ],
+ "intro": "Lampline 是一个可自托管的开源语音智能体平台，用一条命令就能在自己的电脑或服务器上搭建、测试和运行电话语音智能体，无需云账号。它支持从 Dialogflow CX 和 CX Agent Studio 导入已有的 flows、pages、playbooks、表单和工具，也提供拖拽式构建器，让 LLM 步骤与脚本化页面混合在同一个智能体中。\n\n平台内置测试控制台，可逐步展示通话流程；支持 HTTP 与 MCP 工具、录音和文档检索，并可通过 Twilio、Telnyx 或任意 SIP trunk（经 jambonz）接入真实电话。底层基于 Pipecat，模型可选 Claude、OpenAI、Gemini、Ollama 等多种提供商。每个智能体以 YAML 和 Markdown 文件夹形式保存，便于用 git 管理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub 仓库获取项目并在本地启动（README 提供一条命令启动方式）",
+  "在 New agent → Import 中导入 Dialogflow CX 导出的 .zip，或新建智能体",
+  "在构建器中编辑 flows、pages 和 LLM 步骤",
+  "使用 Evals 标签页让 AI Test Caller 拨打并评分",
+  "也可在终端使用 vk import auto export.zip 和 vk export dfcx|ces agents/<name>"
+ ],
+ "summary": "Lampline 让你在自己的电脑或服务器上搭建和运行电话语音智能体，无需依赖云平台。它可以把 Dialogflow CX 和 CX Agent Studio 的智能体导入后继续编辑，并提供拖拽构建器和逐步展示通话流程的测试控制台。内置的 Evals 能用 AI 模拟来电者拨打真实电话并逐项评分，适合想自托管语音客服、控制通话成本或迁移现有 Google 语音智能体的开发者。",
+ "tagline": "自托管的开源语音电话智能体平台"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或服务器上部署图像、视频生成模型的开发者，以及希望快速试用多种生成模型的研究与工程人员。",
+ "date": "2026-10-23",
+ "features": [
+  "统一支持文生视频、图生视频、文生图和图像编辑等任务",
+  "适配 Wan、Qwen-Image、MiniMax-H3、LingBot-Video 等多种生成模型",
+  "提供蒸馏 LoRA、NVFP4 量化、稀疏注意力等推理加速方案",
+  "支持分离式部署与多硬件平台部署",
+  "提供中英文文档、Docker 镜像和 MacBook 本地推理应用"
+ ],
+ "intro": "LightX2V 是一个轻量化的图像与视频生成推理框架，把多种生成技术整合到统一平台中。它支持文生视频（T2V）、图生视频（I2V）、文生图（T2I）和图像编辑（I2I）等任务，项目名中的 X2V 指把文本、图像等不同输入模态转换为视觉输出。\n\n框架持续跟进并适配多种主流生成模型，例如 Wan 系列、Qwen-Image、MiniMax-H3、LingBot-Video 等，同时提供蒸馏 LoRA、量化、稀疏注意力等加速方案，并支持在 RTX 5090、H100/H200 等硬件以及部分国产加速卡上部署。项目提供中英文文档、Docker 镜像和 MacBook 本地推理应用，方便开发者快速试用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装代码格式检查工具：pip install ruff pre-commit",
+  "运行格式检查：pre-commit run --all-files",
+  "参考官方文档的 Developer Quick Start Guide 完成首次生成"
+ ],
+ "summary": "LightX2V 是一个轻量化的图像与视频生成推理框架，把文生视频、图生视频、文生图和图像编辑等任务统一到同一平台，并适配 Wan、Qwen-Image、MiniMax-H3 等多种生成模型。它提供蒸馏 LoRA、量化和稀疏注意力等加速手段，适合需要在本地或服务器上部署生成模型、追求推理效率的开发者与研究人员。",
+ "tagline": "轻量级图像与视频生成推理框架"
+}

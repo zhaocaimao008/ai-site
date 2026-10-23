@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究多模态智能体、计算机使用智能体（Computer-Use Agents）的研究人员与开发者，以及需要评测智能体在真实桌面环境中任务完成能力的团队。",
+ "date": "2026-10-23",
+ "features": [
+  "提供真实计算机环境（Ubuntu/Windows）供智能体执行开放式任务",
+  "包含多样化的评测任务数据集，覆盖图形界面操作场景",
+  "支持 VMware、VirtualBox、Docker、AWS、Modal、Daytona 等多种虚拟化与云平台",
+  "提供并行化评测能力，可显著缩短评测时间",
+  "开源环境配置与评测代码，便于复现和扩展"
+ ],
+ "intro": "OSWorld 是一个用于评测多模态智能体在真实计算机环境中执行开放式任务的基准测试平台，论文发表于 NeurIPS 2024。它提供了一套完整的虚拟桌面环境，支持 Ubuntu 和 Windows 系统，让智能体通过图形界面操作完成各类任务。\n\n项目包含环境配置、任务数据集和评测脚本，支持 VMware、VirtualBox、Docker、AWS、Modal、Daytona 等多种运行方式。用户可以通过命令行快速启动实验，并利用并行化加速评测过程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone https://github.com/xlang-ai/OSWorld && cd OSWorld && pip install -r requirements.txt",
+  "安装并配置 VMware Workstation Pro（或 VirtualBox），确保 vmrun 命令可用",
+  "运行快速开始脚本：python quickstart.py",
+  "如需使用 Docker，在初始化 DesktopEnv 时设置 provider_name='docker' 和 os_type='Ubuntu' 或 'Windows'"
+ ],
+ "summary": "OSWorld 是一个面向多模态智能体的基准测试平台，旨在评估智能体在真实计算机环境中完成开放式任务的能力。它提供虚拟桌面环境（支持 Ubuntu 和 Windows），并包含配套的任务数据集与评测工具。项目支持多种运行方式，包括本地虚拟化、Docker 和云平台，适合研究人员和开发者测试智能体在图形界面操作场景下的表现。",
+ "tagline": "在真实计算机环境中评测多模态智能体的基准平台"
+}

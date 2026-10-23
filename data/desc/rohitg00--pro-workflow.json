@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合频繁使用 Claude Code 或其他 AI 编程助手、希望减少重复纠正并沉淀项目知识的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "自我纠正记忆：将纠正保存为规则，FTS5 可搜索，会话启动时自动加载",
+  "持久化知识库：在磁盘上建立 FTS5 索引的 wiki，支持自动研究循环扩充",
+  "质量门禁：LLM 驱动的 hooks、git/secret 守卫、成本追踪",
+  "多 agent 支持：通过 skills add 安装到 Cursor、Codex、Gemini CLI 等 32+ agent",
+  "并行 worktree 与 agent 团队协作",
+  "内置 41 个技能、23 个斜杠命令和 33 个 hook 脚本"
+ ],
+ "intro": "Pro Workflow 是一个面向 Claude Code 等 AI 编程助手的插件，核心是解决「每次会话都要重复纠正、上下文压缩后经验丢失」的问题。它用一个 SQLite 存储把纠正记录、研究 wiki 和质量门禁统一管理起来。\n\n每次你纠正 Claude，都可以通过 /learn-rule 把纠正保存为规则，之后每次会话启动时自动加载；同时支持建立持久化的 FTS5 全文索引 wiki，用于沉淀研究资料，并可选地通过自动研究循环扩充内容。项目还提供并行 worktree、agent 团队协作和 17 个经过验证的技能。\n\n安装方式有两种：Claude Code 原生插件市场，或通过 skills add 安装到 Cursor、Codex、Gemini CLI 等 30 多个 agent。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code 原生安装：/plugin marketplace add rohitg00/pro-workflow",
+  "然后执行：/plugin install pro-workflow@pro-workflow",
+  "其他 agent 安装：npx skills add rohitg00/pro-workflow",
+  "安装后运行 skills sync 注册技能",
+  "首次运行 /doctor 检查 SQLite 存储、hooks 和技能是否加载正常"
+ ],
+ "summary": "Pro Workflow 解决的是 AI 编程助手每次会话都要重复纠正、经验无法积累的问题。它把纠正记录、研究 wiki 和质量门禁统一存到一个 SQLite 存储里，让 Claude Code 在后续会话中自动加载规则和知识。适合经常使用 Claude Code 等工具、希望减少重复沟通并沉淀项目知识的开发者。",
+ "tagline": "让 Claude Code 从纠正中学习，跨会话积累记忆与知识"
+}

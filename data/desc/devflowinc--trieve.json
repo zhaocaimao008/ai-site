@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "需要为应用添加搜索、推荐或 RAG 功能的开发者，以及希望自托管搜索平台的技术团队。",
+ "date": "2026-10-23",
+ "features": [
+  "语义稠密向量搜索，集成 OpenAI 或 Jina 嵌入模型与 Qdrant",
+  "容错全文/神经搜索，使用 SPLADE 模型实现拼写容错",
+  "子句高亮，在搜索结果中加粗匹配词句",
+  "推荐 API，查找相似块或文件",
+  "便捷的 RAG API 路由，集成 OpenRouter 访问任意 LLM",
+  "支持混合搜索与交叉编码器重排序，可自带模型"
+ ],
+ "intro": "Trieve 是一个用 Rust 编写的开源平台，通过 API 提供搜索、推荐、RAG（检索增强生成）和分析能力。它支持语义稠密向量搜索、容错全文/神经搜索、子句高亮、混合搜索与交叉编码器重排序，并允许自带嵌入模型、SPLADE 模型和 LLM。\n\n平台提供便捷的 RAG API 路由，可集成 OpenRouter 访问任意 LLM，并支持基于主题的记忆管理或自选上下文的 RAG。此外，还支持推荐相似内容、基于点击等信号的调优、日期范围/标签/数值过滤以及文件级分组。\n\nTrieve 可以自托管在 VPC 或本地，提供 AWS、GCP、Kubernetes 和 Docker Compose 的部署指南，适合需要构建搜索、推荐或 RAG 功能的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装系统依赖（Linux 或 MacOS 按 README 命令）",
+  "安装 NodeJS 和 Yarn：nvm install --lts && npm install -g yarn",
+  "创建临时目录：mkdir server/tmp",
+  "安装 Rust：curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",
+  "复制环境变量文件并设置 LLM_API_KEY 和 OPENAI_API_KEY",
+  "启动 Docker 服务：cat .env.chat .env.search .env.server .env.docker-compose > .env && ./convenience.sh -l"
+ ],
+ "summary": "Trieve 是一个用 Rust 构建的开源平台，通过 API 提供搜索、推荐和 RAG 能力。它支持语义向量搜索、容错全文搜索、混合搜索与重排序，并允许自带嵌入模型和 LLM。适合需要为应用快速添加智能搜索、内容推荐或检索增强生成功能的开发者，也支持自托管部署。",
+ "tagline": "集搜索、推荐、RAG 与分析于一体的 API 平台"
+}

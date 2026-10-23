@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文本到图像生成的开发者、需要多语言图像生成能力的研究人员，以及想要尝试图像编辑（修复、融合）的创作者。",
+ "date": "2026-10-23",
+ "features": [
+  "多语言文本到图像生成，支持中文、俄文等语言提示",
+  "图像融合：混合多张图像和文本提示生成新图像",
+  "图像修复（Inpainting）：根据掩码和文本提示填充图像缺失部分",
+  "图像外绘（Outpainting）：扩展图像边界",
+  "ControlNet 支持（2.2 版本）：通过深度图等条件控制生成过程",
+  "提供 LoRA 微调示例和 Colab 笔记本"
+ ],
+ "intro": "Kandinsky 2 是一个多语言文本到图像生成模型系列，包含 2.0、2.1 和 2.2 三个版本。它基于潜在扩散架构，结合 CLIP 图像编码器和扩散图像先验，能够根据文本提示生成高质量图像。2.2 版本引入了更强大的 CLIP-ViT-G 图像编码器和 ControlNet 支持，提升了生成图像的美观度和文本理解能力。\n\n该项目提供了多种推理模式，包括文本到图像、图像到图像、图像融合、修复（inpainting）和外绘（outpainting）。用户可以通过 Python 接口调用模型，并利用提供的 Jupyter Notebook 示例快速上手。模型权重托管在 Hugging Face，支持在 CUDA 设备上运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install \"git+https://github.com/ai-forever/Kandinsky-2.git\"",
+  "导入模型：from kandinsky2 import get_kandinsky2",
+  "加载文本到图像模型：model = get_kandinsky2('cuda', task_type='text2img', model_version='2.2')",
+  "生成图像：images = model.generate_text2img(\"red cat, 4k photo\", decoder_steps=50, batch_size=1, h=1024, w=768)"
+ ],
+ "summary": "Kandinsky 2 是一个多语言文本到图像生成模型，支持根据文本提示生成图像，并具备图像融合、修复和外绘等编辑能力。项目提供 2.0、2.1 和 2.2 版本，其中 2.2 版本通过 CLIP-ViT-G 和 ControlNet 提升了生成质量与控制灵活性。适合需要多语言图像生成或图像编辑功能的开发者使用。",
+ "tagline": "多语言文本到图像扩散模型，支持图像融合与修复"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要长时间运行 Agent 任务的开发者，以及希望用自然语言定制个人工具、扩展工作区的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "四种 Agent Harness 模式：Minimal、Standard、Ultimate、Creative",
+  "跨设备切换工作区，手机或浏览器远程控制任务",
+  "用自然语言构建 Mini App，并配有独立界面与 Agent 对话",
+  "通过 MCP、Skills、Hooks 扩展工具与工作流",
+  "Rust Agent Runtime 支持持久会话、中断恢复、长期记忆和上下文压缩",
+  "可更换皮肤，或修改 UI、工具与运行时源码"
+ ],
+ "intro": "OpenBitFun 是一个开源的 Agent 工作台，由 Rust 编写的高性能 Agent Runtime 和桌面应用组成。它提供 Minimal、Standard、Ultimate、Creative 四种 Agent Harness 模式，分别对应快速协作、多步骤日常任务、多 Agent 分工的复杂任务，以及构建 Mini App 和定制界面。\n\n桌面端可以在多台已连接的电脑之间切换，界面随之切换到该设备的会话、工作区、文件和任务状态；手机或浏览器可作为遥控器发送指令、查看进度、处理审批请求，任务在选定的主机上继续运行。用户还可以用自然语言让 Agent 构建 Mini App，每个应用配有独立界面和 Agent 对话，并可安装复用或从市场获取。\n\n扩展方面，项目支持通过 MCP 连接工具、把重复流程做成 Skills、用 Hooks 定制任务执行方式，也可以更换皮肤或直接修改 UI、工具和运行时源码。Rust 运行时负责会话状态、上下文和工具执行，支持持久会话、中断恢复、长期记忆和上下文压缩。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 openbitfun.com/download 下载桌面端，或从 GitHub Releases 获取移动端版本",
+  "在桌面应用中连接本机或其他电脑，选择要使用的工作区",
+  "根据任务复杂度选择 Minimal、Standard、Ultimate 或 Creative 模式",
+  "如需远程控制，部署 Relay server 并在手机或浏览器上连接同一账号",
+  "需要定制时，通过 MCP、Skills、Hooks 或 Mini App 扩展工作区"
+ ],
+ "summary": "OpenBitFun 是一个开源 Agent 工作台，把 Rust 运行时和桌面应用结合起来，让 Agent 能持续处理多步骤任务。它提供四种工作模式，可在多台电脑间切换工作区，并用手机远程下达指令和审批。适合需要长时间运行 Agent、构建个人 Mini App 或深度定制工作区的开发者。",
+ "tagline": "开源 Agent 工作台，Rust 运行时配桌面应用"
+}

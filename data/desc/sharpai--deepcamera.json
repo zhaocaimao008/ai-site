@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望搭建本地 AI 监控系统的开发者、智能家居爱好者，以及关注隐私的家庭用户。",
+ "date": "2026-10-23",
+ "features": [
+  "本地 VLM 视频分析，支持 Qwen、DeepSeek、SmolVLM、LLaVA 等模型",
+  "实时目标检测（YOLO），自动适配 TensorRT、CoreML、OpenVINO、ONNX 等后端",
+  "可插拔技能架构，通过 SKILL.md 接口扩展功能",
+  "隐私保护：深度图匿名化转换，保留活动信息的同时隐藏细节",
+  "智能体层：持久记忆、与摄像头对话、通过 Telegram/Discord/Slack 发送警报",
+  "硬件感知安装：自动检测 GPU/NPU/CPU 并优化模型格式"
+ ],
+ "intro": "DeepCamera 是一个开源的 AI 摄像头技能平台，为监控摄像头添加本地运行的 AI 能力。它基于 YOLO 等模型实现目标检测、人脸识别、重识别和跌倒检测，并集成 Qwen、DeepSeek、SmolVLM、LLaVA 等视觉语言模型进行场景分析。所有推理均在本地完成，注重隐私保护。\n\n项目采用可插拔的技能架构，每个技能是独立模块，通过统一的 JSONL 协议与主程序通信。技能目录涵盖检测、分析、隐私、分割、标注、训练、自动化和集成等类别，支持 NVIDIA、AMD、Apple Silicon、Intel 等多种硬件加速。配套的桌面应用 SharpAI Aegis 提供 LLM 辅助安装、智能体聊天和通过 Discord/Telegram/Slack 发送警报的功能。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "DeepCamera 是一个开源 AI 摄像头技能平台，旨在让普通监控摄像头具备本地 AI 分析能力。它集成了目标检测、人脸识别、视觉语言模型场景理解等功能，所有推理在本地完成以保护隐私。项目采用可插拔技能架构，支持多种硬件加速，并可通过桌面应用简化安装和配置。适合需要本地智能监控的开发者与家庭用户。",
+ "tagline": "开源AI摄像头技能平台，本地运行视觉模型"
+}

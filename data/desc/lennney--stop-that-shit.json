@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Codex、Claude Code 等 AI coding agent 的开发者，尤其是希望控制 agent 任务范围、减少无用改动和 token 消耗的人。",
+ "date": "2026-10-23",
+ "features": [
+  "按 SHIT 四类（范围膨胀、无用防御、意图越界、任务打转）识别并约束 agent 行为",
+  "Skill 提供工程判断规则，Guard 在工具调用前执行边界检查",
+  "支持 review、answer、monitor、change、watch 等指令设置任务契约",
+  "可通过 files=、deps=allow、hash=allow、agents=N 等参数细化边界",
+  "覆盖 Codex、Claude Code、OpenCode、Hermes Agent CLI、Pi 等多平台安装",
+  "可选 STSS 插件，用于精简 agent 输出中的防御性废话"
+ ],
+ "intro": "Stop That Shit（别再造史了）是一个面向 Codex、Claude Code、OpenCode、Hermes Agent CLI、Pi 等宿主的 Hook + Skill Guard，用来约束 AI coding agent 在任务中出现的范围膨胀、无用防御、意图越界和任务打转。它把这类行为归纳为 SHIT 四种：修一个问题顺手重构无关模块、生成没人读取的 checksum、只读审查却修改文件、没有新问题却反复验证。\n\n项目由 Skill 和 Guard 两部分组成。Skill 提供工程判断规则，引导 agent 先读代码、查调用链，再按“当前要交付什么、已有能力够不够、还有什么具体缺口”的顺序决策；Guard 在受支持的工具调用前检查明确边界，例如在 review 模式下写文件会被停止，添加依赖或 hash 操作需要显式放行。\n\n此外还包含可选的 Stop That Shit Slop（STSS），用于删减 agent 输出中的无用辩护和重复犹豫，保留影响理解与决定的条件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code：下载 0.2.5 源码并解压，在仓库根目录执行 claude plugin validate .、claude plugin marketplace add ./、claude plugin install stop-that-shit@stop-that-shit",
+  "Codex：执行 codex plugin marketplace add lennney/stop-that-shit --ref 0.2.5 和 codex plugin add stop-that-shit@stop-that-shit，重启后在 /hooks 中检查并信任命令",
+  "OpenCode：执行 opencode plugin github:lennney/stop-that-shit -g 全局安装",
+  "使用指令设置契约，例如 $stop-that-shit review -- Review 这个 diff，只报告问题，不要修改。",
+  "需要允许修改时使用 $stop-that-shit change -- 修复配置读取失败，补齐受影响的调用方和检查。"
+ ],
+ "summary": "Stop That Shit 是一个约束 AI coding agent 行为边界的工具，针对 agent 在完成任务时顺手重构无关模块、生成没人读取的 checksum、只读审查却改文件、反复验证同一问题等常见越界行为。它通过 Skill 规则和 Guard 拦截，帮助开发者在 Codex、Claude Code 等宿主中控制任务范围，减少无用改动和 token 消耗，适合需要让 agent 严格按指令交付的场景。",
+ "tagline": "拦截 AI coding agent 的范围膨胀与无用防御"
+}

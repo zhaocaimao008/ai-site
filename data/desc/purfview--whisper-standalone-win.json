@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合不想配置 Python 环境、希望通过命令行快速进行语音识别或生成字幕的用户，也适合需要将识别功能集成到其他软件中的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "提供 Whisper 和 Faster-Whisper 的独立可执行文件，无需 Python 环境",
+  "Faster-Whisper 版本速度更快且内存/显存占用更低",
+  "支持自动检测 CUDA 并在 GPU 上运行",
+  "Faster-Whisper-XXL 支持人声提取预处理和多种 VAD 方法",
+  "Faster-Whisper-XXL 支持说话人分离（Speaker Diarization）",
+  "可被 Subtitle Edit、Tero Subtitler 等第三方程序调用"
+ ],
+ "intro": "这个项目把 OpenAI 的 Whisper 和 Faster-Whisper 打包成独立的可执行文件，让不想安装 Python 环境的用户也能直接使用语音识别功能。它提供多个版本：Whisper 原版、Faster-Whisper 以及功能更丰富的 Faster-Whisper-XXL，分别适配不同的操作系统版本。\n\nFaster-Whisper 版本比原版更快且占用更少内存/显存，默认设置针对影视转录做了调整，并支持自动下载模型、进度条显示等便利功能。XXL 版本额外加入了人声提取预处理、多种 VAD 方法以及说话人分离等高级特性。\n\n这些程序主要在命令行界面中使用，也可以被 Subtitle Edit、Tero Subtitler 等第三方软件调用，适合需要快速进行语音转文字或生成字幕的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载对应的可执行文件",
+  "在命令行中运行程序，例如：faster-whisper-xxl.exe \"D:\\videofile.mkv\" --language English --model medium --output_dir source",
+  "使用 --help 查看所有可用参数：faster-whisper-xxl.exe --help",
+  "程序会自动下载模型，也可手动从 Systran 或 Purfview 的 Hugging Face 页面下载"
+ ],
+ "summary": "这个项目将 OpenAI Whisper 和 Faster-Whisper 打包成独立可执行文件，省去安装 Python 环境的麻烦。它提供多个版本，其中 Faster-Whisper 更快且资源占用更低，XXL 版还支持人声提取、多种 VAD 和说话人分离。适合需要在命令行中快速转录音视频或生成字幕的用户，也可被 Subtitle Edit 等软件调用。",
+ "tagline": "无需 Python 的 Whisper 与 Faster-Whisper 独立可执行文件"
+}

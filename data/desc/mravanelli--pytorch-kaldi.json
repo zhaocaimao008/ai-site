@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 DNN/HMM 语音识别、希望结合 PyTorch 灵活建模与 Kaldi 成熟流程的研究者和开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "与 Kaldi 的便捷接口，复用其特征提取和解码能力",
+  "支持用户自定义声学模型，也提供多种预实现网络",
+  "通过配置文件灵活组合多特征、多标签和多神经网络",
+  "支持多 GPU 训练，并可在本地或 HPC 集群运行",
+  "自动分块与上下文扩展输入特征，支持从上次处理块恢复",
+  "提供 TIMIT 和 Librispeech 数据集教程"
+ ],
+ "intro": "PyTorch-Kaldi 是一个用于构建 DNN/HMM 语音识别系统的开源工具包。它把深度神经网络部分交给 PyTorch 管理，而特征提取、标签计算和解码则使用 Kaldi 工具包完成，试图兼顾 Kaldi 的高效与 PyTorch 的灵活。\n\n项目内置了多种预实现的神经网络，包括 MLP、CNN、RNN、LSTM、GRU、Li-GRU 和 SincNet，也支持通过配置文件组合多特征、多标签和多网络结构。工具包提供 TIMIT 和 Librispeech 教程，并设计为可在本地或 HPC 集群上运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Kaldi，并将 Kaldi 二进制路径加入 $HOME/.bashrc",
+  "安装 PyTorch（项目在 PyTorch 1.0 和 0.4 上测试）",
+  "建议准备 GPU 机器并安装 CUDA 库",
+  "参考 TIMIT 或 Librispeech 教程运行示例"
+ ],
+ "summary": "PyTorch-Kaldi 面向 DNN/HMM 语音识别系统的开发，将神经网络部分交给 PyTorch，特征提取、标签计算和解码交给 Kaldi，从而结合两者的灵活性与成熟流程。它适合需要自定义声学模型、组合多特征或多网络结构，并在本地或 HPC 集群上训练语音识别系统的研究场景。",
+ "tagline": "结合 PyTorch 与 Kaldi 的 DNN/HMM 语音识别工具包"
+}

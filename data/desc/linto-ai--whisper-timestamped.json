@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要为语音转写结果添加精确词级时间戳的开发者，以及使用 Whisper 做字幕对齐、语音分析的研究人员。",
+ "date": "2026-10-23",
+ "features": [
+  "预测词级时间戳，比 Whisper 原生片段级时间戳更精确",
+  "为每个词和语音片段输出置信度分数",
+  "支持在 Whisper 前运行 VAD（默认 silero，也可选 auditok）以减少幻觉",
+  "未指定语言时输出语言概率",
+  "提供 Python 函数和命令行两种调用方式",
+  "可绘制音频时间戳与词的对齐图（需 matplotlib）"
+ ],
+ "intro": "whisper-timestamped 是 OpenAI Whisper 语音识别模型的扩展，用于在转写音频时预测词级时间戳，并为每个词和语音片段提供置信度分数。Whisper 原生只能给出约 1 秒精度的片段级时间戳，无法直接定位每个词的出现时间。\n\n该项目基于交叉注意力权重上的动态时间规整（DTW）实现词对齐，在解码每个语音片段后即时完成，通常不需要额外的推理步骤。它还支持在 Whisper 之前运行语音活动检测（VAD），以减少静音段上的幻觉输出，并可在未指定语言时输出语言概率。\n\n项目提供 Python API 和命令行两种使用方式，兼容 openai-whisper 包，并针对长音频文件做了内存优化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip3 install whisper-timestamped",
+  "如需 VAD 功能，安装额外包：pip3 install onnxruntime torchaudio",
+  "在 Python 中调用 whisper_timestamped.transcribe() 进行转写",
+  "或使用命令行方式处理音频文件"
+ ],
+ "summary": "whisper-timestamped 解决 Whisper 语音识别模型无法直接输出词级时间戳的问题。它基于交叉注意力权重和动态时间规整，在转写时预测每个词的起止时间，并给出置信度分数，还支持 VAD 减少静音幻觉。适合需要精确字幕对齐或语音分析的场景。",
+ "tagline": "为 Whisper 语音识别添加词级时间戳与置信度"
+}

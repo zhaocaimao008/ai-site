@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在服务器或本地用容器快速获得 Claude Code 及配套开发环境、不想手动配置依赖的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "一条 docker compose up 启动完整 AI 开发工作站",
+  "内置 Claude Code CLI 与浏览器 Web UI",
+  "集成 8 种 AI CLI 和 50 多个开发工具",
+  "预配置 Playwright 无头浏览器，用于截图和测试",
+  "支持 Claude Max/Pro 订阅 OAuth 或 Anthropic API key 认证",
+  "处理 Docker 中 Chromium、Xvfb、UID 权限等常见问题"
+ ],
+ "intro": "HolyClaude 是一个基于 Docker 的 AI 编程工作站镜像，把 Claude Code、Web UI、无头浏览器、8 种 AI CLI 和 50 多个开发工具打包在一起，用一条 docker compose up 就能启动，省去手动逐个安装配置的麻烦。\n\n它运行的是真正的 Claude Code CLI，可以直接用已有的 Claude Max/Pro 订阅通过 Web UI 完成 OAuth 认证，也可以配置 Anthropic API key，不需要额外付费。项目针对 Docker 环境中的常见问题做了处理，比如共享内存不足导致 Chromium 无法启动、Xvfb 配置、容器内 UID 与宿主机不一致、SQLite 在 NAS 挂载上锁等问题。\n\n镜像提供 Quick 和 Full 等不同变体，支持通过环境变量配置，数据可以持久化保存。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建目录：mkdir holyclaude && cd holyclaude",
+  "创建 docker-compose.yaml 文件，从 README 提供的模板中复制一份",
+  "运行 docker compose up 启动容器",
+  "打开浏览器访问 Web UI，通过 OAuth 或 API key 完成认证"
+ ],
+ "summary": "HolyClaude 把 Claude Code、Web UI、无头浏览器、多种 AI CLI 和常用开发工具打包进一个 Docker 镜像，用一条命令启动，免去逐个安装和调试环境的时间。它运行真实的 Claude Code CLI，可复用已有的 Claude 订阅或 API key。适合想在服务器或本地快速获得完整 AI 编程环境、又不想手动处理 Docker 权限和浏览器配置的开发者。",
+ "tagline": "一条命令搭好的容器化 AI 编程工作站"
+}

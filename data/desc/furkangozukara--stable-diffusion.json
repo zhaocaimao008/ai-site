@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合想系统学习生成式 AI 图像与视频工具、训练方法和云端部署的开发者与爱好者。",
+ "date": "2026-10-23",
+ "features": [
+  "Stable Diffusion、FLUX、SDXL、SD3 等模型的安装与使用教程",
+  "DreamBooth、LoRA、Textual Inversion 等训练与微调指南",
+  "Automatic1111、Forge WebUI、ComfyUI、SwarmUI 等工具的操作讲解",
+  "TTS、语音克隆、DeepFake、文本/图像转视频等生成式 AI 主题",
+  "在 Google Colab、RunPod、Kaggle 等平台运行的相关内容",
+  "视频配有手动修正字幕和章节，便于定位内容"
+ ],
+ "intro": "这是 Dr. Furkan Gözükara（SECourses 频道）维护的教程索引仓库，内容以视频链接和配套说明为主，覆盖 Stable Diffusion、FLUX、SDXL、SD3 等图像生成模型，以及 DreamBooth、LoRA 训练、Automatic1111、Forge WebUI、ComfyUI、SwarmUI 等工具的使用方法。\n\n仓库还涉及 TTS、语音克隆、DeepFake、文本/图像转视频、放大与 3D 生成等主题，并包含在 Google Colab、RunPod、Kaggle 等平台上运行的相关内容。README 中说明视频配有手动修正的字幕和章节，方便按需查找。\n\n需要注意，仓库本身不提供可安装的软件或模型，主要是教程目录和外部链接，实际学习需要跳转到 YouTube 等平台观看。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库是 SECourses 频道的教程索引，把 Stable Diffusion、FLUX、SDXL 等图像生成模型，以及 DreamBooth、LoRA 训练、Automatic1111、ComfyUI 等工具的教学视频整理成列表。适合想按主题查找安装、训练和云端运行教程的开发者与爱好者，但仓库本身不包含可运行代码，学习需跳转到视频平台。",
+ "tagline": "生成式 AI 教程与视频索引仓库"
+}

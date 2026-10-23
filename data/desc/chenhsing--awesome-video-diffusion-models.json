@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频生成与视频编辑的科研人员、学生，以及希望快速了解视频扩散模型研究现状和可用开源工具的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "按任务分类整理视频扩散模型相关论文与资源",
+  "覆盖文本到视频生成、条件控制生成、视频补全与视频编辑等方向",
+  "汇总开源工具箱与基础模型及其 GitHub 链接",
+  "提供 arXiv 论文与 BibTeX 引用信息",
+  "提供中文翻译版本链接"
+ ],
+ "intro": "这是论文《A Survey on Video Diffusion Models》的配套 GitHub 仓库，该综述已被 ACM Computing Surveys（CSUR）接收。仓库围绕视频扩散模型整理研究脉络，按任务组织相关论文与资源，方便读者系统了解这一方向。\n\n内容覆盖视频生成与视频编辑两大板块。生成部分包括数据（caption-level、category-level）、文本到视频生成（基于训练与免训练两类）、姿态/指令/声音/脑信号/多模态等条件控制生成、无条件生成，以及视频补全、增强修复与预测；编辑部分包括文本引导的视频编辑等。\n\n仓库还列出开源工具箱与基础模型，如 CogVideoX、Open-Sora、Stable Video Diffusion、AnimateDiff、VideoCrafter 等，并附有 arXiv 链接与中文翻译（知乎）。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库是一篇被 ACM Computing Surveys 接收的视频扩散模型综述的配套资源页，把视频生成、条件控制、视频补全与视频编辑等方向的论文按任务归类，并汇总了 CogVideoX、Open-Sora、AnimateDiff 等开源模型与工具箱。适合想系统了解视频扩散模型研究脉络、查找相关论文和可用实现的研究者与开发者。",
+ "tagline": "视频扩散模型综述与论文资源合集"
+}

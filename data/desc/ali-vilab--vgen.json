@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合视频生成方向的研究人员和开发者，以及希望基于扩散模型进行视频合成实验的用户。",
+ "date": "2026-10-23",
+ "features": [
+  "集成多种视频生成模型，覆盖文本到视频、图像到视频等任务",
+  "支持从文本、图像、运动、主体和反馈信号生成视频",
+  "提供训练、推理、采样、可视化等完整工具链",
+  "支持图像与视频联合训练及加速方法",
+  "包含 DreamVideo 的评估指标计算代码（CLIP-T、CLIP-I、DINO-I、时序一致性）",
+  "支持 LoRA 微调与推理（InstructVideo）"
+ ],
+ "intro": "VGen 是阿里巴巴通义实验室开源的视频合成代码库，基于扩散模型，集成了多个视频生成方法的实现，包括 I2VGen-XL、VideoComposer、HiGen、TF-T2V、InstructVideo、DreamVideo、VideoLCM 和 ModelScopeT2V 等。\n\n项目支持从文本、图像、运动、主体以及反馈信号等多种输入生成高质量视频，并提供可视化、采样、训练、推理、图像视频联合训练和加速等常用工具。代码库强调可扩展性和完整性，便于研究者管理自己的实验。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "conda create -n vgen python=3.8 && conda activate vgen",
+  "pip install torch==1.12.0+cu113 torchvision==0.13.0+cu113 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu113",
+  "pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple",
+  "sudo apt-get update && sudo apt-get install ffmpeg libsm6 libxext6 -y",
+  "git clone https://github.com/ali-vilab/VGen.git && cd VGen",
+  "python train_net.py --cfg configs/t2v_train.yaml"
+ ],
+ "summary": "VGen 是阿里通义实验室开源的视频生成代码库，基于扩散模型整合了 I2VGen-XL、VideoComposer、HiGen、DreamVideo 等多个视频合成方法。它支持从文本、图像、运动、主体或反馈信号生成视频，并提供训练、推理、采样、可视化和加速等工具。适合需要研究或实验视频生成模型的开发者和研究人员使用。",
+ "tagline": "阿里通义实验室开源的视频生成模型代码库"
+}

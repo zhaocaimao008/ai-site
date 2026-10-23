@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要跨市场看盘与研究的个人交易者、量化研究者，以及希望把 AI 智能体接入交易流程并保持人工审批控制的开发者。",
+ "date": "2026-10-23",
+ "features": [
+  "统一多市场工作区：加密货币、美股、A 股、港股和商品期货的行情、盘口与公司披露集中在一个界面",
+  "TradingView Lightweight Charts v5 图表：支持多时间周期、15 种以上技术指标和加密衍生品指标",
+  "多智能体协作：master、instrument-researcher、trader、risk-reviewer 分工完成研究、交易计划与风险审查",
+  "量化策略回测：通过 strategy_backtest 编写和回测交易信号，支持自定义技术指标",
+  "零信任安全：默认 dry-run，实盘订单需人工确认和 Ed25519 权限校验，无头环境 fail-closed",
+  "本地隐私 BYOK：API 密钥和交易记录只存本机，不向云端发送数据，也不转发行情"
+ ],
+ "intro": "dsh-trading 是一个开源的智能体原生交易终端与量化研究平台，构建在 DeepSeek Harness (DSH) 和 Cordis 微内核之上。它把加密货币、美股、中国 A 股、港股和中国商品期货整合进同一个三栏式工作区，内置 TradingView Lightweight Charts v5 图表、实时盘口和 19 个以上可热插拔的交易所与券商连接器。\n\n项目采用多智能体协作架构，由 master 主导，配合 instrument-researcher、trader、risk-reviewer 等角色，可自主查询行情、分析财报、起草交易计划并做风险压力测试。平台还提供策略回测、自定义技术指标和机构级研究清单。\n\n在安全方面，dsh-trading 默认使用 dry-run 模拟，实盘下单需要显式开启、人工确认并通过 Ed25519 权限校验；API 密钥和交易记录全部保存在本地，采用 BYOK 模式，不上传云端。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "dsh-trading 是一个把 AI 智能体直接嵌入交易终端的开源项目，解决多市场行情分散、研究流程割裂和下单纪律难以执行的问题。它在一个界面里整合加密货币、美股、A 股、港股和商品期货，由多智能体团队辅助查询行情、分析财报和起草交易计划，并提供策略回测。默认模拟运行，实盘下单需人工确认，密钥保存在本地，适合需要跨市场研究和受控执行的交易者与开发者。",
+ "tagline": "基于 DeepSeek Harness 的智能体原生多市场交易终端"
+}

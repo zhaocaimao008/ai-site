@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究长视频生成、世界模型与机器人策略的开发者与研究人员，尤其是需要训练、蒸馏或部署相关模型的团队。",
+ "date": "2026-10-23",
+ "features": [
+  "Long-WAM：长上下文世界动作模型，支持机器人策略训练、评估与真机部署",
+  "LongLive-Plug：一次性蒸馏，能力可在下游模型间复用而无需重新训练",
+  "LongLive 2.0：NVFP4 量化与序列并行的长视频训练/推理基础设施",
+  "LongLive 1.0：实时交互式长视频生成，可边输入提示边生成",
+  "按子项目独立组织，支持 partial clone 与 sparse checkout 按需下载"
+ ],
+ "intro": "LongLive 是 NVIDIA 开源的长视频生成与世界模型研究基础设施，仓库按项目分目录组织，每个目录包含独立的代码、文档和模型权重。目前包含四个子项目：Long-WAM 面向长上下文世界动作模型，可用于训练和评估机器人策略、生成机器人视频，并部署到 YAM、Franka 和 Unitree G1 等平台；LongLive-Plug 提供一次性蒸馏方案，在基座模型上蒸馏一次能力后复用到下游模型；LongLive 2.0 是面向长视频生成的 NVFP4 并行基础设施，支持量化与序列并行训练和推理；LongLive 1.0 侧重实时交互式长视频生成。\n\n各子项目相互独立，可通过 sparse checkout 只下载所需目录，无需拉取整个仓库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库（仅拉取元数据）：git clone --filter=blob:none --sparse --single-branch --branch main --depth 1 https://github.com/NVlabs/LongLive.git",
+  "进入目录：cd LongLive",
+  "选择需要的子项目，例如：git sparse-checkout set Long-WAM",
+  "进入子项目目录：cd Long-WAM",
+  "按该子项目 README 中的说明下载权重并进行训练或推理"
+ ],
+ "summary": "LongLive 是 NVIDIA 开源的长视频生成与世界模型基础设施，把长视频生成、世界动作模型、蒸馏和量化并行推理拆成多个独立子项目。研究者可以按需只下载其中一个目录，用于训练和评估机器人策略、生成机器人视频、蒸馏视频生成能力，或在 NVFP4 与序列并行下训练和部署长视频模型。适合做视频生成与具身智能方向研究、需要复现或二次开发的开发者。",
+ "tagline": "NVIDIA 长视频生成与世界动作模型基础设施"
+}
