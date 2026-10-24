@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想用 AI 将剧本快速转化为动画视频的创作者、内容团队，以及需要可配置多模型流水线的开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "剧本导入与 AI 解析：支持 TXT/DOCX/PDF，自动提取角色并智能分集",
+  "角色四视图生成：为每个角色生成正面、四分之三、侧面、背面参考图，保持画面一致性",
+  "智能分镜与首尾帧：AI 拆解镜头并生成起始帧和结束帧，支持场景参考帧模式",
+  "视频生成与合成：基于首尾帧插值生成片段，拼接为完整动画并烧录字幕",
+  "多模型供应商：支持 OpenAI、Gemini、Kling、Seedance、Veo 等，可按项目配置",
+  "分镜工作流：提供列表、看板、编辑抽屉三种视图，支持版本管理与单镜头精细调整"
+ ],
+ "intro": "AI Comic Builder 是一个基于 Next.js 的 Web 应用，将剧本自动转化为动画视频。它支持上传 TXT/DOCX/PDF 剧本，由 AI 解析文本、提取角色并智能分集，再依次完成角色四视图生成、智能分镜、首尾帧生成、视频提示词生成和视频合成，最终输出带字幕的完整动画。\n\n项目提供分集管理、角色管理、分镜看板等协作视图，每个生成阶段可单独触发或批量执行，用户能控制流水线节奏。支持 OpenAI、Gemini、Kling、Seedance、Veo 等多模型供应商，可按项目配置，并适配 16:9、9:16、1:1 等视频比例。\n\n技术栈为 Next.js 16、React 19、SQLite + Drizzle ORM，视频处理依赖 FFmpeg，支持 Docker 部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pnpm install",
+  "初始化数据库：pnpm drizzle-kit push",
+  "启动开发服务器：pnpm dev，访问 http://localhost:3000",
+  "在设置页面配置 AI 模型供应商（OpenAI / Gemini / Seedance 等）",
+  "或使用 Docker 运行：docker run -d --name ai-comic-builder -p 3000:3000 -v ./data:/app/data -v ./uploads:/app/uploads --platform linux/amd64 twwch/aicomicbuilder:latest"
+ ],
+ "summary": "AI Comic Builder 是一个把剧本自动变成动画视频的 Web 工具。上传剧本后，AI 会解析角色、拆分镜头、生成角色参考图和首尾帧，再逐镜头生成视频并合成带字幕的成片。适合需要快速将文字故事视觉化的创作者，也适合想按项目切换 OpenAI、Gemini、Kling 等模型供应商的开发者。",
+ "tagline": "从剧本到动画视频的全自动 AI 生成流水线"
+}

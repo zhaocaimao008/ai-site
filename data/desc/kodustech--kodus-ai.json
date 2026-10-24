@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望把代码审查自动化、又要求代码和数据留在自有基础设施内的研发团队，以及需要统一审查规范的工程组织。",
+ "date": "2026-10-24",
+ "features": [
+  "在 GitHub、GitLab、Bitbucket、Azure DevOps、Forgejo 的 PR 中自动进行 AI 代码审查",
+  "支持自带 LLM 密钥，可接入 Claude、GPT-5、Gemini、Llama 等模型或任意 OpenAI 兼容端点",
+  "用自然语言定义 Kody Rules，按组织、仓库、路径等范围应用审查规则",
+  "提供 CLI，可对工作区、暂存区、分支或提交运行审查，并接入 CI/CD",
+  "Cockpit 面板跟踪审查效果、规则健康度与交付指标",
+  "Kody Issues 自动追踪已关闭 PR 中未落实的建议"
+ ],
+ "intro": "Kodus 是一个开源的 AI 代码审查工具，可以部署在自己的服务器上，也可以使用官方云服务。它直接接入 GitHub、GitLab、Bitbucket、Azure DevOps 和 Forgejo，在 pull request 中自动审查代码、按严重程度标记风险并给出具体修改建议。\n\n模型方面采用 BYOK（Bring Your Own Key）方式，可接入 OpenAI、Anthropic、Google Gemini、Vertex AI、Novita 或任意 OpenAI 兼容端点，费用直接结算给模型提供商。团队可以用自然语言编写 Kody Rules，把架构约定、安全要求和测试规范变成审查规则，并作用于组织、仓库或指定路径。\n\n除 PR 审查外，Kodus 还提供 CLI 用于本地和 CI/CD 流程，以及 Cockpit 面板用于跟踪审查效果、规则健康度和交付指标。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "自托管：准备至少 2 核 CPU、8 GB 内存、60 GB 磁盘的 VM，按官方安装指南用 Docker 部署",
+  "使用 CLI：在终端运行 kodus review 审查当前工作区",
+  "运行 kodus review --staged 审查暂存区改动",
+  "运行 kodus review --prompt-only 仅输出审查提示"
+ ],
+ "summary": "Kodus 把 AI 代码审查放进 pull request 流程，支持主流 Git 平台，并允许团队用自己的模型密钥，避免额外加价。它适合希望自动化审查、统一架构与安全规范，同时要求代码不离开自有服务器的团队；也可通过 CLI 在本地或流水线中运行审查。",
+ "tagline": "可自托管、自带 LLM 的 AI 代码审查工具"
+}

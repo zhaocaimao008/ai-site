@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究检索增强生成（RAG）的开发者、需要处理长文档问答的工程师，以及希望灵活替换模型组件的 AI 应用构建者。",
+ "date": "2026-10-24",
+ "features": [
+  "递归构建文档树结构，支持长文本检索",
+  "提供添加文档、提问、保存/加载树的 Python API",
+  "支持自定义摘要模型、问答模型和嵌入模型",
+  "默认使用 OpenAI API，可替换为其他模型",
+  "基于论文的官方实现，附带示例 notebook"
+ ],
+ "intro": "RAPTOR 是一个基于论文实现的检索增强生成（RAG）框架，它通过递归地对文档进行摘要和聚类，构建一棵树状结构，从而在长文本上实现更高效、更具上下文感知的信息检索。\n\n项目使用 Python 编写，依赖 OpenAI API 进行摘要和问答，同时允许用户自定义摘要模型、问答模型和嵌入模型，例如 Llama、Mistral、Gemma 或 SBERT。\n\nRAPTOR 提供了添加文档、提问、保存和加载树结构等基础接口，适合需要处理大规模文档并提升问答准确性的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone https://github.com/parthsarthi03/raptor.git && cd raptor && pip install -r requirements.txt",
+  "设置 OpenAI API 密钥并初始化：import os; os.environ[\"OPENAI_API_KEY\"] = \"your-openai-api-key\"; from raptor import RetrievalAugmentation; RA = RetrievalAugmentation()",
+  "添加文档：with open('sample.txt', 'r') as file: text = file.read(); RA.add_documents(text)",
+  "提问：answer = RA.answer_question(question=\"How did Cinderella reach her happy ending?\"); print(\"Answer: \", answer)",
+  "保存树：RA.save(\"demo/cinderella\")；加载树：RA = RetrievalAugmentation(tree=\"demo/cinderella\")"
+ ],
+ "summary": "RAPTOR 是一个检索增强生成框架，它通过递归摘要和聚类把文档组织成树状结构，以改善长文本上的信息检索效果。项目提供 Python 接口，可添加文档、提问并保存或加载树，默认使用 OpenAI API，也支持替换为自定义的摘要、问答和嵌入模型。适合需要处理大规模文档问答的开发者，或希望灵活组合模型组件的研究人员。",
+ "tagline": "递归树状检索增强语言模型"
+}

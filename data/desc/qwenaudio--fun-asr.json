@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要多语言或中文方言语音转写的开发者，以及希望在本地或服务端部署 ASR 模型的工程团队。",
+ "date": "2026-10-24",
+ "features": [
+  "Fun-ASR-Nano 支持中文、英文、日文，含 7 种方言与 26 种地区口音",
+  "Fun-ASR-MLT-Nano 支持 31 种语言的多语种识别",
+  "原生 Hugging Face Transformers 推理，无需安装工具包",
+  "提供 FunASR、vLLM、llama.cpp/GGUF 等多种部署路径",
+  "支持歌词识别、说唱语音识别与说话人分离示例",
+  "针对远场高噪声场景优化识别效果"
+ ],
+ "intro": "Fun-ASR 是通义实验室（Tongyi Lab）推出的端到端语音识别模型系列，包含两个 800M 参数的 checkpoint。Fun-ASR-Nano 基于数千万小时语音训练，支持中文、英文、日文，并覆盖 7 种汉语方言和 26 种地区口音，还支持歌词识别和说唱语音识别；Fun-ASR-MLT-Nano 基于数十万小时数据训练，支持 31 种语言，侧重东亚和东南亚语种。\n\n两个模型均可通过 FunASR 进行推理与服务部署，同时提供原生 Hugging Face Transformers 支持，无需安装额外工具包即可完成转写。项目还给出了 vLLM 批量推理、llama.cpp/GGUF 本地部署以及实时流式 SDK 等路径，并附带 Colab notebook 和可运行示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：python -m pip install 'transformers==5.17.0' 'torch==2.10.0' 'torchaudio==2.10.0' 'librosa==0.11.0' 'soundfile==0.13.1'",
+  "用 AutoProcessor 和 AutoModelForSpeechSeq2Seq 从 FunAudioLLM/Fun-ASR-Nano-2512-hf 加载模型与处理器",
+  "调用 processor.apply_transcription_request 传入音频和 language 参数构造输入",
+  "执行 model.generate 并用 processor.batch_decode 得到转写文本"
+ ],
+ "summary": "Fun-ASR 是通义实验室开源的语音识别模型系列，提供两个 800M 参数的 checkpoint：一个面向中文、英文、日文并覆盖多种汉语方言和口音，另一个支持 31 种语言。项目既可通过 FunASR 推理服务，也支持原生 Transformers 直接调用，并给出 vLLM、llama.cpp 等部署方式，适合需要多语种或方言转写的开发者。",
+ "tagline": "通义实验室开源的多语言端到端语音识别模型系列"
+}

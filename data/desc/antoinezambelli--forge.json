@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在本地或自托管环境运行 LLM、需要可靠工具调用能力的 Python 开发者，以及希望通过代理方式为现有客户端增强可靠性的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "Proxy server：兼容 OpenAI chat-completions 与 Anthropic Messages API，可透明接入现有客户端",
+  "WorkflowRunner：管理系统提示、工具执行、上下文压缩和 guardrails 的完整 agent 循环",
+  "Guardrails middleware：可组合中间件，用于自有编排循环中的响应校验与工具调用修复",
+  "可选的工作流约束：required_steps、prerequisites、terminal_tool",
+  "SlotWorker：为共享推理槽的多智能体架构提供带优先级的排队与自动抢占",
+  "支持 Ollama、llama-server、Llamafile、vLLM、OpenAI 兼容端点及 Anthropic 后端"
+ ],
+ "intro": "forge 是一个面向自托管 LLM 的 Python 框架，核心目标是让本地模型的工具调用（tool-calling）更可靠。你只需提供一组工具，模型自行决定调用哪个、以什么顺序调用；forge 通过 rescue parsing、retry nudges、response validation 等 guardrails 在零必需步骤的情况下也能生效。\n\n工作流结构是可选的：required_steps、prerequisites 和 terminal_tool 允许在需要时约束循环。forge 明确不做多智能体编排或 DAG 规划，而是专注于单个 agentic loop 内的工具调用可靠性。\n\n项目提供三种使用方式：Proxy server 作为 OpenAI chat-completions 与 Anthropic Messages API 的兼容代理，可接入 opencode、Continue、aider、Claude Code 等现有客户端；WorkflowRunner 用于直接构建结构化 agent 循环；Guardrails middleware 可嵌入自有的编排循环。后端支持 OpenAI 兼容端点、Ollama、llama-server、Llamafile、vLLM 和 Anthropic。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 包：pip install forge-guardrails",
+  "启动后端，例如：llama-server -m path/to/model.gguf --jinja -ngl 999 --port 8080",
+  "在 Python 中定义 Workflow、ToolDef 与 ToolSpec，并创建 WorkflowRunner",
+  "调用 await runner.run(workflow, \"What's the weather in Paris?\") 运行工作流",
+  "或使用代理：forge-proxy init 后执行 forge-proxy check 验证配置"
+ ],
+ "summary": "forge 解决的是自托管本地模型在工具调用时容易出错、格式不规范的问题。它提供一层可靠性保障，让模型按需调用你定义的工具，并可选地约束调用步骤。适合在本地 GPU 或自托管后端上构建 agent 工作流的开发者，也适合通过代理方式为现有客户端接入 guardrails。",
+ "tagline": "为自托管 LLM 工具调用提供可靠性保障的 Python 框架"
+}

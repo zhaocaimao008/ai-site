@@ -1,0 +1,20 @@
+{
+ "ai_related": false,
+ "audience": "适合需要分析或转换 Java 源代码的开发者、研究人员和工具构建者。",
+ "date": "2026-10-24",
+ "features": [
+  "解析 Java 源代码构建 AST",
+  "提供分析和转换 API",
+  "支持现代 Java 版本至 Java 25",
+  "设计原则确保模型完整且语义等价",
+  "转换操作符尽早警告无效程序"
+ ],
+ "intro": "Spoon 是一个开源的 Java 库，用于分析、重写、转换和转译 Java 源代码。它解析源文件并构建设计良好的抽象语法树（AST），提供强大的分析和转换 API。支持现代 Java 版本至 Java 25。Spoon 是 Inria 的官方开源项目，也是 OW2 开源联盟的成员。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Maven 项目中添加依赖 fr.inria.gforge.spoon:spoon-core",
+  "使用 Launcher.parseClass 方法解析类，例如：CtClass l = Launcher.parseClass(\"class A { void m() { System.out.println(\\\"yeah\\\");} }\");"
+ ],
+ "summary": "Spoon 是一个 Java 元编程库，用于解析 Java 源代码并构建抽象语法树，提供分析和转换 API。它适合需要静态分析、代码重构、转译或生成 Java 代码的开发者，支持现代 Java 版本。通过 Maven 引入后，可用 Launcher 快速解析类并操作 AST。",
+ "tagline": "分析和转换 Java 源代码的元编程库"
+}

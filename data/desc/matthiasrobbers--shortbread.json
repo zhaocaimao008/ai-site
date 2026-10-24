@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "适合需要为 Android 应用添加快捷方式的开发者，尤其是希望减少手动配置、通过注解简化流程的 Kotlin 或 Java 开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "通过 @Shortcut 注解自动生成应用快捷方式，无需手动配置 manifest 或 XML",
+  "支持为 Activity 或方法添加快捷方式，并可指定图标、标签、排序等属性",
+  "提供 Kotlin 和 Java 两种使用方式，分别通过 kapt 和 annotationProcessor 集成",
+  "支持返回栈、目标 Activity 和 action 等高级配置",
+  "提供 Gradle 插件解决非 final 资源 ID 问题，使用 R2 类"
+ ],
+ "intro": "Shortbread 是一个 Android 库，通过注解处理器为标注了 @Shortcut 的 Activity 或方法自动生成应用快捷方式。开发者无需手动修改 manifest、创建 XML 文件或调用快捷方式管理器，只需在代码中添加注解即可。\n\n注解支持图标、短标签、长标签、排序、禁用消息、返回栈、目标 Activity 和 action 等属性，并可使用资源 ID 或字符串名称。对于 Kotlin 项目需使用 kapt，Java 项目使用 annotationProcessor。\n\n如果使用资源 ID 并遇到非 final 资源 ID 警告，可添加 Shortbread Gradle 插件并使用 R2 类。该库基于 Apache-2.0 协议开源。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 build.gradle 中添加依赖：implementation 'com.github.matthiasrobbers:shortbread:1.4.0'",
+  "Kotlin 项目添加 kapt 'com.github.matthiasrobbers:shortbread-compiler:1.4.0' 并应用 kotlin-kapt 插件",
+  "Java 项目添加 annotationProcessor 'com.github.matthiasrobbers:shortbread-compiler:1.4.0'",
+  "在 Activity 或方法上添加 @Shortcut 注解并配置属性",
+  "如需使用资源 ID，可添加 Shortbread Gradle 插件并使用 R2 类"
+ ],
+ "summary": "Shortbread 是一个 Android 库，帮助开发者通过注解自动生成应用快捷方式，省去手动修改 manifest、创建 XML 文件或调用快捷方式管理器的步骤。它适合需要为应用添加快捷方式、希望简化配置流程的 Android 开发者，支持 Kotlin 和 Java，并提供 Gradle 插件处理资源 ID 相关问题。",
+ "tagline": "用注解自动生成 Android 应用快捷方式的库"
+}

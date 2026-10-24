@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合从事 3D 生成、图像到 3D 重建的研究人员和开发者，以及需要从单图生成多视角图像用于下游任务的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "从单张图像生成六张固定视角的一致多视角图像",
+  "提供 v1.1 和 v1.2 两个版本的基座模型",
+  "支持深度 ControlNet 进行条件控制生成",
+  "v1.2 新增法线生成 ControlNet，可输出视图空间法线图",
+  "提供 diffusers 自定义 pipeline，方便集成",
+  "包含 Streamlit 和 Gradio 本地演示应用"
+ ],
+ "intro": "Zero123++ 是一个基于扩散模型的单图像到多视角生成基础模型，由 SUDO-AI-3D 团队开发。它能够从一张输入图像生成一组固定相机位姿下的多视角图像，这些视角在几何上保持一致，适用于 3D 内容生成流程。项目提供了 v1.1 和 v1.2 两个版本的模型权重，以及配套的深度 ControlNet 和法线生成 ControlNet。\n\n该模型通过 diffusers 自定义 pipeline 集成，用户可以使用 Python 代码调用。输出视角的方位角固定为 30°、90°、150°、210°、270°、330°，仰角在 v1.1 中为 30° 和 -20°，v1.2 中调整为 20° 和 -10°，视场角统一为 30°。v1.2 版本还引入了法线生成 ControlNet，可用于生成视图空间法线图，并辅助生成更精确的 alpha 掩码。\n\n项目代码采用 Apache 2.0 协议，模型权重采用 CC-BY-NC 4.0 协议，允许非商业用途。README 中提供了详细的安装步骤、示例代码和本地演示运行方法。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install torch diffusers transformers（推荐 torch>=2.0, diffusers==0.20.2）",
+  "使用 diffusers 加载 pipeline：DiffusionPipeline.from_pretrained('sudo-ai/zero123plus-v1.1', custom_pipeline='sudo-ai/zero123plus-pipeline', torch_dtype=torch.float16)",
+  "设置调度器：pipeline.scheduler = EulerAncestralDiscreteScheduler.from_config(pipeline.scheduler.config, timestep_spacing='trailing')",
+  "运行推理：result = pipeline(cond, num_inference_steps=75).images[0]",
+  "可选：安装 rembg 去除灰色背景，或运行 streamlit run app.py 启动本地演示"
+ ],
+ "summary": "Zero123++ 是一个扩散模型，能够从单张图像生成一组几何一致的多视角图像，解决 3D 生成中多视角数据获取的问题。它输出固定相机位姿下的六张视图，适合用于图像到 3D 重建、3D 内容创作等场景。项目提供 v1.1 和 v1.2 模型，并支持深度和法线 ControlNet 进行条件控制。",
+ "tagline": "单张图像生成一致多视角的扩散模型"
+}

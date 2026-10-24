@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合使用扩散模型进行图像或视频生成的开发者和研究者，尤其是希望提升推理速度并集成到现有工作流（如 ComfyUI）的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "为 HF diffusers、ComfyUI 和 SD web UI 提供开箱即用的加速",
+  "提供 PyTorch 代码编译工具和优化的 GPU 内核",
+  "支持多种扩散模型，包括 SDXL、SVD、SD3、PixArt 等",
+  "提供生产环境部署优化，如避免编译时间、分布式运行",
+  "包含质量评估工具 odeval 用于基准测试"
+ ],
+ "intro": "OneDiff 是一个针对扩散模型（diffusion models）的开箱即用加速库，旨在提升 Stable Diffusion、SDXL、SVD 等模型的推理速度。它提供了与 Hugging Face diffusers、ComfyUI 和 Stable Diffusion web UI 的集成，通过一行代码即可实现加速。\n\n该项目包含 PyTorch 代码编译工具和优化的 GPU 内核，支持多种编译器后端（如 OneFlow 和 Nexfort），并针对不同模型（如 SD3、PixArt、Kolors）提供了加速报告。OneDiff 还关注生产环境部署，提供避免编译时间、分布式运行等特性。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 torch 和 diffusers：python3 -m pip install \"torch\" \"transformers==4.27.1\" \"diffusers[torch]==0.19.3\"",
+  "安装编译器后端（OneFlow 或 Nexfort，二选一）",
+  "安装 onediff：python3 -m pip install onediff"
+ ],
+ "summary": "OneDiff 是一个扩散模型加速库，主要解决 Stable Diffusion 等模型推理速度慢的问题。它通过代码编译和 GPU 内核优化，为 Hugging Face diffusers、ComfyUI 等常用工具提供一行代码即可启用的加速能力，适合需要快速生成图像或视频的开发者与研究者集成到现有工作流中。",
+ "tagline": "扩散模型开箱即用的加速库"
+}

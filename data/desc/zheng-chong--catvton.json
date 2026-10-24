@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合研究虚拟试穿的研究人员、想要本地部署试穿应用的开发者，以及对时尚 AI 感兴趣的普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "轻量级网络设计，总参数量 899.06M",
+  "参数高效训练，仅需训练 49.57M 参数",
+  "低显存推理，1024x768 分辨率下占用小于 8G VRAM",
+  "提供 Gradio 应用和 ComfyUI 工作流部署方式",
+  "支持 VITON-HD 和 DressCode 数据集推理与评估"
+ ],
+ "intro": "CatVTON 是一个基于扩散模型的虚拟试穿项目，被 ICLR 2025 接收。其核心思路是通过简单的拼接操作实现服装与人物图像的融合，无需复杂网络结构。模型总参数量约 899M，训练时仅需更新 49.57M 参数，推理在 1024x768 分辨率下显存占用低于 8G。\n\n项目提供了完整的推理代码、Gradio 应用和 ComfyUI 工作流，方便用户本地部署。同时发布了无掩码版本和基于 FLUX 的轻量 LoRA 版本，并支持在 Hugging Face 上在线体验。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建 conda 环境并安装依赖：conda create -n catvton python==3.9.0 && conda activate catvton && pip install -r requirements.txt",
+  "运行 Gradio 应用：CUDA_VISIBLE_DEVICES=0 python app.py --output_dir=\"resource/demo/output\" --mixed_precision=\"bf16\" --allow_tf32",
+  "或使用 ComfyUI：下载 ComfyUI-CatVTON.zip 解压到 custom_nodes 目录，启动 ComfyUI 后拖入工作流 JSON 文件"
+ ],
+ "summary": "CatVTON 是一个用于虚拟试穿的扩散模型，通过拼接方式简化网络结构，在保持效果的同时降低计算需求。它训练参数少、推理显存占用低，适合在消费级显卡上部署。项目提供 Gradio 应用和 ComfyUI 工作流，方便开发者快速搭建本地试穿演示，也可用于学术研究中的服装迁移实验。",
+ "tagline": "轻量高效的虚拟试穿扩散模型"
+}

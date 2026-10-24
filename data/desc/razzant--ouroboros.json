@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管通用 AI agent、需要长期记忆与自我演进能力的开发者，以及想直接使用桌面版 agent 的进阶用户。",
+ "date": "2026-10-24",
+ "features": [
+  "身份、持久记忆与历史跨任务和重启延续",
+  "可改写自身代码、架构、prompt、工具和依赖",
+  "协调多个专职 agent 组成 swarm 协同工作",
+  "支持远程 API 或本地 GGUF 模型推理",
+  "提供桌面应用与无头 CLI 两种运行方式",
+  "默认不发送遥测，运行数据保存在本机"
+ ],
+ "intro": "Ouroboros 是一个开源的通用 AI agent，它的身份、持久记忆和历史会跨任务、跨重启延续。它可以在外部项目上工作，协调一组专职 agent 协同执行任务，并且能够改写自己运行所依赖的实现，包括代码、架构、prompt、工具和依赖。\n\n它既可以作为原生桌面应用运行，也提供无头 CLI。运行时把仓库、持久记忆、历史和界面保存在本机，模型推理则可使用你配置的远程 API 或本地 GGUF 模型。默认不发送遥测数据，官方项目也不收集使用或崩溃报告。\n\n项目提供 macOS、Windows 和多种 Linux 发行版的安装包，桌面版内置 CPython 与 SQLite，用户无需克隆仓库或安装 Python。首次启动向导会引导完成模型接入、审查策略和预算设置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS：下载 .dmg，打开后将 Ouroboros.app 拖入 Applications，再从 Applications 启动",
+  "Windows：下载 .zip 并解压，进入 Ouroboros 文件夹运行 Ouroboros.exe",
+  "Debian/Ubuntu/Astra Linux：下载 .deb 后执行 sudo apt install ./ouroboros_*_amd64.deb",
+  "Fedora/RHEL：下载 .rpm 后执行 sudo dnf install ./ouroboros-*.x86_64.rpm",
+  "首次启动时按向导配置模型来源（Codex 账户、远程 API key 或本地 GGUF 模型）、审查策略和预算"
+ ],
+ "summary": "Ouroboros 是一个开源通用 AI agent，特点是身份、持久记忆和历史能跨任务与重启延续，还能改写自身运行的代码、架构、prompt 和工具。它可协调多个专职 agent 协作，支持桌面应用和无头 CLI，数据保存在本机，模型可接远程 API 或本地 GGUF。适合想自托管长期运行、具备自我演进能力 agent 的开发者。",
+ "tagline": "可自我改写、跨任务保留记忆的开源通用 AI agent"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文本到图像生成的研究人员、开发者，以及希望利用多模态 LLM 提升图像生成质量的技术爱好者。",
+ "date": "2026-10-24",
+ "features": [
+  "免训练文本到图像生成，利用多模态 LLM 进行提示重写和区域规划",
+  "支持多种扩散骨干网络：SD 1.4/1.5、SD 2.0/2.1、SDXL 及 IterComp",
+  "兼容专有和开源 MLLM，如 GPT-4、Gemini-Pro、miniGPT-4、DeepSeek-R1 等",
+  "支持高分辨率图像生成（如 2048x1024）和复杂场景组合",
+  "提供基于 diffusers 的管道接口，便于集成和使用"
+ ],
+ "intro": "RPG 是 ICML 2024 接收的文本到图像生成框架，采用免训练范式，利用多模态大语言模型（MLLM）作为提示重写器和区域规划器，结合区域扩散生成高质量图像。\n\n项目支持专有 MLLM（如 GPT-4、Gemini-Pro）和开源本地 MLLM（如 miniGPT-4），并可灵活适配多种扩散骨干网络，包括 SD 1.4/1.5、SD 2.0/2.1 和 SDXL。RPG 能够处理复杂提示词，生成高分辨率图像，并支持图像编辑。\n\n代码基于 diffusers 库实现，提供 RegionalDiffusionPipeline 和 RegionalDiffusionXLPipeline 两种管道，分别用于基础模型和 SDXL。项目持续更新，已集成 DeepSeek-R1、OpenAI o3-mini 和 o1 等推理能力更强的 LLM，以及 IterComp 扩散骨干，以提升组合式图像生成效果。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：参考 README 中的安装说明（如 pip install -r requirements.txt）",
+  "选择扩散骨干：基础模型使用 RegionalDiffusionPipeline，SDXL 使用 RegionalDiffusionXLPipeline",
+  "加载模型：例如 pipe = RegionalDiffusionXLPipeline.from_pretrained(\"comin/IterComp\", torch_dtype=torch.float16, use_safetensors=True)",
+  "配置 MLLM 作为区域规划器（如 GPT-4 或 DeepSeek-R1），输入文本提示生成图像"
+ ],
+ "summary": "RPG 是一个免训练的文本到图像生成框架，它利用多模态大语言模型对用户提示进行重写和区域规划，再结合区域扩散模型生成图像。该项目适合需要根据复杂文本描述生成高质量、高分辨率图像的研究与开发场景，支持多种扩散骨干和 LLM，并提供了基于 diffusers 的易用接口。",
+ "tagline": "基于多模态LLM的免训练文本到图像生成框架"
+}

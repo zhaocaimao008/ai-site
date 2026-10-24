@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究图像编辑的研究者、想低成本定制编辑模型的开发者，以及使用 ComfyUI 的 AI 绘画爱好者。",
+ "date": "2026-10-24",
+ "features": [
+  "基于指令的图像编辑，支持多轮编辑",
+  "仅需 0.1% 训练数据和 1% 参数即可训练 LoRA",
+  "提供 MoE-LoRA 版本权重和训练代码",
+  "支持 ComfyUI 工作流和 Gradio 演示",
+  "低显存优化，4GB VRAM 可运行（配合 ComfyUI-nunchaku）",
+  "提供 Windows 一键包和 Ascend NPU 适配版本"
+ ],
+ "intro": "ICEdit 是浙江大学等机构提出的指令式图像编辑方法，论文被 NeurIPS 2025 接收。它基于大规模扩散 Transformer（DiT），通过上下文生成的方式实现图像编辑，仅需少量训练数据和参数即可达到先进效果。项目开源了推理代码、训练代码、MoE-LoRA 权重以及 ComfyUI 工作流，支持在消费级显卡上运行。\n\n该方法强调用极低的训练成本（0.1% 训练数据）和参数开销完成高质量编辑，并在 ID 保持性上宣称超越 GPT-4o。README 显示其提供 Gradio 演示、Windows 一键包和多种量化方案，最低 4GB 显存即可运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建 conda 环境并安装依赖（参考 README 的 Conda environment setup）",
+  "下载预训练权重（参考 README 的 Download pretrained weights）",
+  "运行 bash 推理脚本（参考 README 的 Inference in bash）",
+  "或启动 Gradio Demo 进行交互式编辑"
+ ],
+ "summary": "ICEdit 是一个基于大规模扩散 Transformer 的指令式图像编辑项目，旨在用极少的训练数据和参数实现高质量编辑。它适合需要低成本定制图像编辑模型的研究者和开发者，也提供了 ComfyUI 工作流和 Gradio 演示，方便普通用户上手体验。项目开源了推理与训练代码，并针对低显存环境做了优化。",
+ "tagline": "基于大规模扩散Transformer的上下文图像编辑方法"
+}

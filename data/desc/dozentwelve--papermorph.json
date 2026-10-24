@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把教材内容转化为互动网页课程的教育工作者、课程开发者，以及想用 AI 将故事制作成短片的创作者。需要熟悉 Claude Code 的基本使用。",
+ "date": "2026-10-24",
+ "features": [
+  "将教材 PDF 按章节拆解，生成带旁白、分步动画和自动评分测验的交互式课程",
+  "把故事、笑话或童话制作成纸偶短片，包含配音、字幕、音效和音乐",
+  "统一的网页播放器，支持暂停、逐步回退、跳转、倍速、字幕和进度保存",
+  "支持将章节或剧集导出为 1080p MP4 和 SRT 字幕文件",
+  "可将书籍打包为 SCORM 1.2 或 2004 格式，用于 LMS 课程",
+  "所有成品为静态网页，无需服务器或数据库，可托管在任何静态托管服务上"
+ ],
+ "intro": "Papermorph 是一个 Claude Code Skill，用来把教材 PDF 或故事文本转换成可交互的网页内容。数学教材会生成公式和图表随旁白逐步变化的课程，科学教材会生成带角色和镜头运动的插图场景，故事或笑话则被做成纸偶短片。所有成品都是静态网页，不需要服务器、数据库或账号，一个书就是一个文件夹，可以托管在任何地方。\n\n项目内置统一的播放器，支持暂停、逐步回退、跳转、倍速、字幕和键盘快捷键，并会按书保存进度。界面语言跟随书籍的 lang 属性，内置英语、俄语、中文和日语。公式可以用 LaTeX 编写，通过 MathJax 渲染。此外还提供视频导出和 SCORM 打包脚本，方便用于课程或 LMS。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Skill：npx skills add DozenTwelve/Papermorph --skill papermorph --agent claude-code",
+  "在 Claude Code 中运行 /papermorph",
+  "按提示选择项目中的 PDF 或输入故事内容，并确认章节和动画风格",
+  "确保已安装 uv、ffmpeg 和 Playwright 浏览器：uv run --with playwright playwright install chromium firefox",
+  "本地预览示例：git clone --depth 1 https://github.com/DozenTwelve/Papermorph.git && cd Papermorph && python3 .claude/skills/papermorph/scripts/serve.py 8765 site，然后打开 localhost:8765"
+ ],
+ "summary": "Papermorph 是一个 Claude Code Skill，能把教材 PDF 或故事文本转换成带动画、旁白和测验的静态网页。数学和科学教材会生成分步讲解的交互课程，故事则被做成纸偶短片。成品无需服务器，可托管在任何地方，适合想快速制作互动教学页面或短片的教育工作者和创作者。",
+ "tagline": "把教材和故事变成带动画、旁白和测验的静态网页"
+}

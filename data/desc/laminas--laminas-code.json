@@ -1,0 +1,17 @@
+{
+ "ai_related": false,
+ "audience": "适合需要动态生成或修改 PHP 代码、进行代码分析或构建开发工具的 PHP 开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "扩展 PHP Reflection API，提供更丰富的反射能力",
+  "支持静态代码扫描",
+  "通过面向对象接口生成 PHP 代码",
+  "支持创建新代码和更新已有代码",
+  "可通过继承基类扩展以生成其他语言或配置文件的代码"
+ ],
+ "intro": "laminas-code 是一个 PHP 库，对 PHP 内置的 Reflection API 进行扩展，并提供静态代码扫描和代码生成能力。它的 Generator 组件允许开发者通过面向对象的接口生成任意代码，既可以创建新代码，也可以更新已有代码。\n\n目前该实现主要限于生成 PHP 代码，但你可以通过继承基类来扩展它，以支持 JavaScript、配置文件、Apache vhost 等其他代码生成任务。项目文档和迁移指南可在其官网查阅。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "laminas-code 是一个 PHP 库，扩展了 PHP 的 Reflection API，并提供静态代码扫描和代码生成功能。它允许开发者通过面向对象的方式生成或更新 PHP 代码，也支持扩展以生成其他类型的代码。适合需要动态生成代码、进行代码分析或构建开发工具的 PHP 开发者使用。",
+ "tagline": "PHP 反射 API 扩展、静态代码扫描与代码生成工具"
+}

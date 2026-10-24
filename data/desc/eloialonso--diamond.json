@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合强化学习、世界模型和扩散模型方向的研究者与开发者，以及对在想象环境中训练智能体感兴趣的读者。",
+ "date": "2026-10-24",
+ "features": [
+  "提供在 Atari 100k 上预训练的扩散世界模型和强化学习策略，可直接运行体验",
+  "支持在想象环境中可视化智能体游玩，并可切换人类控制",
+  "包含完整的训练流程，可复现论文中的超参数设置",
+  "提供 CSGO 世界模型分支，展示扩散模型在复杂 3D 游戏中的生成效果",
+  "支持录制和回放数据集，便于分析智能体行为",
+  "基于 Hydra 的配置系统，方便调整模型和训练参数"
+ ],
+ "intro": "DIAMOND 是一个完全在扩散世界模型（diffusion world model）中训练的强化学习智能体。该项目来自 NeurIPS 2024 Spotlight 论文《Diffusion for World Modeling: Visual Details Matter in Atari》，作者包括 Eloi Alonso 等。其核心思路是用扩散模型作为环境模拟器，让智能体在想象中学习，从而避免与真实环境的大量交互。\n\n项目提供了在 Atari 100k 基准上预训练的世界模型和策略，用户可以直接运行可视化脚本，在模型生成的想象环境中观看智能体游玩，或亲自接管操作。此外，还有一个在《反恐精英：全球攻势》（CSGO）上训练的世界模型分支，仅用于展示世界模型的生成能力。代码基于 Python 和 PyTorch，使用 Hydra 管理配置，支持训练、恢复和可视化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/eloialonso/diamond.git",
+  "cd diamond",
+  "conda create -n diamond python=3.10",
+  "conda activate diamond",
+  "pip install -r requirements.txt",
+  "python src/play.py --pretrained"
+ ],
+ "summary": "DIAMOND 是一个在扩散世界模型中训练的强化学习智能体，旨在让智能体完全在模型生成的想象环境中学习，减少对真实环境的依赖。项目提供了 Atari 100k 预训练模型和策略，用户可运行可视化脚本观看智能体游玩或亲自操作，也支持从头训练和配置调整。适合研究世界模型与强化学习结合的研究者。",
+ "tagline": "在扩散世界模型中训练的强化学习智能体"
+}

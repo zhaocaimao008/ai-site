@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要处理会议、访谈、播客等多人长音频的开发者与团队，也适合研究语音转写和说话人分离的研究人员。",
+ "date": "2026-10-24",
+ "features": [
+  "单次推理完成长音频转写与说话人分离，输出带时间戳和说话人标签的文本",
+  "支持 50 多种语言的语音转写",
+  "可选输出声学事件标注，丰富对音频内容的理解",
+  "提供 Python 调用、SGLang Omni 和 vLLM 部署方式",
+  "支持自定义提示词与热词，可接入 FunASR 生态",
+  "附带字幕 Web 应用，支持简体中文和英文界面"
+ ],
+ "intro": "MOSS-Transcribe-Diarize 0.9B 是一个开源的端到端音频理解模型，把语音转写和说话人分离放在一次推理中完成，而不是拼接独立的 ASR 与 diarization 系统。它面向会议、通话、播客、访谈、讲座和视频等长时、多人、嘈杂的真实录音场景，输出带时间戳和说话人标签的结构化文本。\n\n模型支持 50 多种语言，输出格式为紧凑的 `[start_time][Sxx]text[end_time]`，时间戳以秒为单位，说话人标签如 `[S01]`、`[S02]` 保持一致。它还可以选择输出声学事件标注，帮助下游系统了解谁在何时说了什么。\n\n项目提供 0.9B 权重、Python 调用示例、SGLang Omni 与 vLLM 部署方式、FunASR 生态接入、自定义提示词与热词，以及字幕 Web 应用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Hugging Face 下载 0.9B 模型权重：https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize",
+  "按 README 的 Environment Setup 配置 Python 环境",
+  "参考 Python Usage 示例加载模型并对音频进行转写",
+  "如需服务化部署，可选择 SGLang Omni 或 vLLM 方式启动",
+  "如需字幕界面，运行 README 中 Subtitle Web App 的启动步骤"
+ ],
+ "summary": "MOSS-Transcribe-Diarize 0.9B 是一个端到端音频理解模型，把语音转写和说话人分离合并为一次推理，直接输出带时间戳和说话人标签的文本，并可选标注声学事件。它面向会议、通话、播客、访谈、讲座和视频等长时多人录音场景，支持 50 多种语言。项目提供模型权重、Python 调用示例、SGLang Omni 与 vLLM 部署方式、FunASR 接入和字幕 Web 应用，方便开发者本地运行或集成到现有流程中。",
+ "tagline": "0.9B 端到端长音频转写与说话人分离模型"
+}

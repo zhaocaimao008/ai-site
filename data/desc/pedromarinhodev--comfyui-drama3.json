@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已在用 ComfyUI、希望在本地工作流中做语音克隆、多角色配音或带情绪提示的语音生成的开发者和创作者。",
+ "date": "2026-10-24",
+ "features": [
+  "从几秒音频克隆声音，并可保存为小型 .safetensors 文件重复使用",
+  "支持最多 16 个说话人的对话，用 <|speaker:N|> 标记每行",
+  "支持 [laughs]、[whispers] 等行内提示和自然语言表演指令",
+  "长文本分块生成，每块可参考前文",
+  "内置 Qwen3-ASR 1.7B/0.6B 语音识别，为克隆音频生成转写",
+  "专家权重驻留内存，8 GB 显存显卡可运行"
+ ],
+ "intro": "这个项目把 Fish Audio 的 Drama 3 文本转语音模型接入 ComfyUI，以自定义节点形式运行，无需额外 pip 安装依赖。Drama 3 是一个 35B 模型，支持声音克隆、多说话人对话以及 [sighs]、[whispers] 这类行内提示，最多可在同一段文本中安排 16 个说话人。\n\n由于模型 90% 是路由专家，每帧只用到一层 256 个专家中的 8 个，节点把专家权重放在系统内存，GPU 只保留使用中的缓存，因此 8 GB 显存的显卡也能运行。项目还内置 Qwen3-ASR，可为音频片段生成转写文本，并提供保存与重新加载克隆声音的节点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "把仓库克隆到 ComfyUI 的 custom_nodes 目录并重启 ComfyUI：cd ComfyUI/custom_nodes && git clone https://github.com/PedroMarinhoDev/ComfyUI-Drama3",
+  "从 Hugging Face 下载模型文件，放入对应目录：drama3_fp8experts_bf16.safetensors 到 models/diffusion_models，drama3_codec.safetensors 到 models/vae，Qwen3-ASR 文件到 models/asr",
+  "把 example_workflows/drama3_voice_clone.json 拖入 ComfyUI，在 Load Audio 中选择几秒干净语音，在 Drama 3 Generate 中写入文本并运行",
+  "如需复用声音，取消静音 Save Drama 3 Voice 节点，之后用 Load Drama 3 Voice 加载已保存的声音"
+ ],
+ "summary": "这个项目把 Fish Audio 的 Drama 3 语音合成模型做成 ComfyUI 自定义节点，让用户能在本地工作流里完成声音克隆、多说话人对话和带 [sighs] 等行内提示的语音生成。它通过把专家权重放在内存、GPU 只保留缓存的方式，让 8 GB 显存显卡也能运行，并附带 Qwen3-ASR 用于生成克隆音频的转写。适合需要在 ComfyUI 中做配音或语音实验的开发者。",
+ "tagline": "在 ComfyUI 中原生运行 Fish Audio Drama 3 语音合成"
+}

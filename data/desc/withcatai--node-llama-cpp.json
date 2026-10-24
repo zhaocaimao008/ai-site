@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Node.js 项目中集成本地大语言模型的开发者，以及想快速在终端体验本地模型的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "在本地运行 LLM，支持 Metal、CUDA 和 Vulkan GPU 加速",
+  "提供预编译二进制，缺失时自动回退到用 cmake 从源码构建",
+  "在生成层面强制模型输出 JSON 或遵循指定 JSON schema",
+  "支持函数调用、嵌入、重排序和结构化决策",
+  "提供 CLI，无需写代码即可在终端与模型聊天",
+  "完整 TypeScript 类型支持和详细文档"
+ ],
+ "intro": "node-llama-cpp 是 llama.cpp 的 Node.js 绑定，让你可以在本地机器上运行大语言模型，无需依赖云端 API。项目提供预编译二进制文件，覆盖 macOS、Linux 和 Windows，并支持 Metal、CUDA 和 Vulkan 加速，能自动适配硬件。\n\n除了基础推理，它还提供完整的 LLM 应用开发套件，包括强制模型输出 JSON 或遵循指定 JSON schema、函数调用、嵌入与重排序、结构化决策，以及对特殊 token 注入攻击的防护。项目使用 TypeScript 编写，类型支持完善，文档齐全。\n\n你可以通过 CLI 直接与模型对话，也可以安装 npm 包后在代码中加载 GGUF 模型、创建上下文和聊天会话。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "不安装直接体验：npx -y node-llama-cpp chat",
+  "安装依赖：npm install node-llama-cpp",
+  "准备 GGUF 模型文件，例如 Meta-Llama-3.1-8B-Instruct.Q4_K_M.gguf",
+  "在代码中使用 getLlama 加载模型并创建 LlamaChatSession 进行对话"
+ ],
+ "summary": "node-llama-cpp 是 llama.cpp 的 Node.js 绑定，让开发者在本地机器上运行大语言模型，避免依赖云端服务。它提供预编译二进制和 GPU 加速，并支持强制 JSON 输出、函数调用、嵌入等能力，适合需要在 Node.js 应用中集成本地 LLM 的场景。",
+ "tagline": "在 Node.js 中本地运行 AI 模型的 llama.cpp 绑定"
+}

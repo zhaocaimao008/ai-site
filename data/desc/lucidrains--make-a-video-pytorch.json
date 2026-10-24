@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文本到视频生成、想在 PyTorch 中复用时空卷积与注意力模块的开发者与研究人员。",
+ "date": "2026-10-24",
+ "features": [
+  "实现 PseudoConv3d 伪 3D 卷积（轴向卷积）模块",
+  "实现 SpatioTemporalAttention 时空注意力模块",
+  "提供完整的 SpaceTimeUnet，兼容图像与视频输入",
+  "支持通过 enable_time 参数控制是否在时间维度上训练",
+  "时间模块初始化为恒等输出，便于从图像模型迁移",
+  "集成 flash attention 以提升注意力计算效率"
+ ],
+ "intro": "这是 Meta AI 提出的文本到视频生成模型 Make-A-Video 的 PyTorch 实现（目前仍在开发中）。原论文的核心思路是在一个成熟的文本到图像模型基础上，加入伪 3D 卷积（轴向卷积）和时间注意力机制，以较低的计算成本实现更好的时间融合，并配合帧插值生成视频。\n\n本项目将其中关键的时空模块单独实现为可复用的 PyTorch 组件，包括 PseudoConv3d、SpatioTemporalAttention 以及完整的 SpaceTimeUnet。这些模块可以同时接受图像或视频输入：输入图像时自动跳过时间维度的计算，输入视频时也可以选择关闭时间训练，方便先在图像上预训练、再迁移到视频训练。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install make-a-video-pytorch",
+  "导入模块：from make_a_video_pytorch import PseudoConv3d, SpatioTemporalAttention, SpaceTimeUnet",
+  "使用 PseudoConv3d 和 SpatioTemporalAttention 处理视频特征张量 (batch, features, frames, height, width)",
+  "输入图像张量 (batch, features, height, width) 时，时间卷积与注意力会自动跳过",
+  "使用 SpaceTimeUnet 构建完整模型，可先在图像上训练，再迁移到视频训练"
+ ],
+ "summary": "该项目是 Meta AI 文本到视频模型 Make-A-Video 的 PyTorch 实现，重点复现其伪 3D 卷积与时间注意力机制。它把时空模块做成可复用组件，支持图像与视频两种输入模式，适合想在自有模型中引入视频生成能力、或研究时空注意力结构的开发者参考和使用。",
+ "tagline": "Meta Make-A-Video 的 PyTorch 实现（开发中）"
+}

@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时管理多个 AI 编码 Agent 的开发者，以及想了解或构建 Agent 编排系统的技术人员。",
+ "date": "2026-10-24",
+ "features": [
+  "按场景分类收录 Agent 编排工具",
+  "覆盖终端、桌面、Web 等多种形态",
+  "包含多 Agent 集群与自主任务运行器",
+  "提供 Agent 基础设施与基础组件分类",
+  "提供网页版浏览体验"
+ ],
+ "intro": "这是一个收录开源与源码可用 AI Agent 编排工具的精选列表，按使用场景分类整理，方便开发者按需求查找合适的工具。\n\n列表覆盖终端 TUI/CLI 并行编码 Agent、桌面与 Web 端并行 Agent、多 Agent 集群、自主循环运行器、自主任务运行器、Agent 基础设施与基础组件、个人助理等类别，每个条目附有 GitHub 链接和简短说明。\n\n项目还提供网页版本，可访问 agent-orchestrators.com 查看各工具的更多信息。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目是一个按使用场景分类的 AI Agent 编排工具清单，收录了终端并行编码、桌面与 Web 管理、多 Agent 集群、自主任务运行器以及底层基础设施等类别的开源工具。适合想同时运行多个编码 Agent、需要统一调度与审查，或打算自行搭建编排系统的开发者查阅和选型。",
+ "tagline": "AI Agent 编排工具精选列表"
+}

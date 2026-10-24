@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 辅助完成视频创作、并需要可编辑工作流的创作者和开发者，也适合想自部署视频生成工具的技术用户。",
+ "date": "2026-10-24",
+ "features": [
+  "剧本到分镜：拆解角色、场景与镜头，生成角色参考图、关键帧和过渡视频",
+  "无限画布：连接文本、图片和视频节点，通过自然语言助手搭建可编辑工作流",
+  "图文与配音：按章节生成配图、语音和字幕，组合解说视频",
+  "素材到发布：管理生成历史与参考素材，合成视频并对接 Bilibili 分发",
+  "支持 Docker 自部署与自定义兼容模型服务"
+ ],
+ "intro": "AICON 是一个开源的 AI 视频创作工作台，用无限画布和自然语言助手把文本、图片、视频节点组织成可编辑的工作流。它覆盖从剧本拆解、分镜生成、素材生成到视频合成的链路，也支持按章节生成配图、语音和字幕来组合解说视频。\n\n项目提供 Docker 自部署方式，模型服务可自行配置兼容的 API，不强制绑定特定供应商。画布助手负责创建节点与连线，生成任务由用户手动触发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Docker 和 Docker Compose v2",
+  "git clone https://github.com/869413421/ai-moive-studio.git && cd ai-moive-studio",
+  "cp .env.production.example .env.production 并编辑填写数据库、Redis、JWT、MinIO 等配置",
+  "docker compose --env-file .env.production -f docker-compose.prod.yml up -d",
+  "访问 http://localhost，在「API 密钥管理」配置模型服务后创建项目或画布"
+ ],
+ "summary": "AICON 是一个开源 AI 视频创作工作台，用无限画布和自然语言助手把文本、图片、视频节点组织成可编辑的工作流。它覆盖剧本拆解、分镜生成、素材生成到视频合成的链路，也支持按章节生成配图、语音和字幕来组合解说视频。适合希望用 AI 辅助完成视频创作、并需要可编辑工作流的创作者和开发者，可通过 Docker 自部署并自行配置兼容的模型服务。",
+ "tagline": "无限画布上的 AI 视频创作工作流"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合零基础想学习 AI 编程 CLI 的开发者，以及希望系统掌握 Codex 或 Claude Code 用法的普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "92 篇精修中文教程，Codex 39 篇 + Claude Code 53 篇",
+  "面向零基础读者，用场景类比解释概念，不熟命令行也能学",
+  "以官方文档为事实来源，功能与命令均经核实",
+  "每个动手环节提供完整命令和预期输出，可照跑自验",
+  "覆盖从安装入门到 MCP、子代理、Hooks、Agent SDK 等进阶主题",
+  "配有 81 张暗色工程风原创配图辅助理解"
+ ],
+ "intro": "这是一套面向零基础读者的 AI 编程命令行工具中文教程，共 92 篇、约 52 万字，主力推荐 Codex 39 篇，同时保留 Claude Code 53 篇。内容从安装入门一直延伸到工程实战，每个新概念都采用场景引入、生活化类比和实际场景三段式讲解，不熟悉命令行也能跟上。\n\n教程以官方文档为事实来源，所有功能、命令和默认行为都对照 Codex 与 Claude Code 官方文档核实。每个动手环节给出完整命令和预期输出，方便边读边练、即时验证。作者还加入了第一人称的踩坑记录和判断，并配有 81 张暗色工程风原创配图。\n\n目录覆盖安装配置、项目初始化、提示词写法、权限与沙箱、MCP、子代理、Skills、Hooks、GitHub Actions、Agent SDK 等主题，最后以最佳实践、反模式和 FAQ 收尾。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在线阅读教程：访问 https://coding.stormzhang.ai",
+  "从 Codex 篇开始：https://coding.stormzhang.ai/codex/",
+  "或从 Claude Code 篇开始：https://coding.stormzhang.ai/claude-code/"
+ ],
+ "summary": "这套教程面向零基础读者，系统讲解 Codex 和 Claude Code 两款 AI 编程命令行工具的用法。内容从安装登录、跑通第一个任务讲起，逐步深入到项目配置、权限沙箱、MCP、子代理、Skills、Hooks 和 GitHub Actions 等进阶主题。每个概念都用生活化类比解释，动手环节给出完整命令和预期输出，适合想边读边练、从入门走到工程实战的开发者。",
+ "tagline": "面向小白的 AI 编程 CLI 中文教程，覆盖 Codex 与 Claude Code"
+}

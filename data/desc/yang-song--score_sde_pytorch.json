@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究生成模型的开发者、学生和研究人员，尤其是对扩散模型和基于分数的生成模型感兴趣，希望复现论文结果或进行扩展实验的读者。",
+ "date": "2026-10-24",
+ "features": [
+  "统一框架实现多种基于分数的生成模型（NCSN、NCSNv2、DDPM、NCSN++、DDPM++）",
+  "支持训练、评估样本质量（FID、Inception score）和计算似然",
+  "模块化设计，可扩展新的 SDE、预测器和校正器",
+  "提供与 Hugging Face Diffusers 库的集成，便于快速推理",
+  "支持条件生成任务，如类条件生成、图像修复和着色"
+ ],
+ "intro": "该项目是论文《Score-Based Generative Modeling through Stochastic Differential Equations》的官方 PyTorch 实现。它通过随机微分方程（SDE）统一了基于分数的生成模型框架，将数据变换为简单噪声分布，并利用分数匹配估计各时间步的分数函数，从而逆转 SDE 进行采样生成。\n\n代码库不仅包含论文提出的 NCSN++ 和 DDPM++ 模型，还重新实现了 NCSN、NCSNv2 和 DDPM 等先前工作。支持训练新模型、评估样本质量和似然，并设计为模块化结构，便于扩展新的 SDE、预测器或校正器。此外，项目提供了与 Hugging Face Diffusers 库的集成，方便快速试用预训练模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -r requirements.txt",
+  "下载 CIFAR-10 统计文件并保存到 assets/stats/ 目录",
+  "使用 main.py 进行训练或评估，例如：python main.py --config configs/xxx.py --mode train --workdir workdir",
+  "通过 Diffusers 快速试用：pip install diffusers torch accelerate，然后使用 DiffusionPipeline 加载模型生成图像"
+ ],
+ "summary": "这个项目提供了基于随机微分方程（SDE）的分数生成模型的 PyTorch 实现，统一了 NCSN、DDPM 等多种扩散模型。它支持训练、采样和定量评估，并允许扩展新的 SDE 或采样器。适合研究人员和开发者复现论文结果、理解分数生成模型原理，或在此基础上进行条件生成等实验。",
+ "tagline": "基于随机微分方程的分数生成模型 PyTorch 实现"
+}

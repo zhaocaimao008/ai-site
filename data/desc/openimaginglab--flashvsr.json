@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频超分辨率、扩散模型加速的开发者，以及需要在本地或服务端部署实时视频超分能力的工程人员。",
+ "date": "2026-10-24",
+ "features": [
+  "一步式扩散流式视频超分辨率推理",
+  "局部约束稀疏注意力（LCSA）减少冗余计算",
+  "轻量条件解码器加速重建",
+  "三阶段蒸馏训练流程支持流式超分",
+  "支持扩展到超高分辨率视频",
+  "提供官方推理代码与模型权重"
+ ],
+ "intro": "FlashVSR 是一个面向实时视频超分辨率的扩散模型框架，目标是让扩散模型在视频超分任务上兼顾效率、可扩展性和实时性。它采用一步式流式推理，在单张 A100 GPU 上处理 768×1408 视频可达约 17 FPS。\n\n项目通过三阶段蒸馏流程、局部约束稀疏注意力（LCSA）和轻量条件解码器三项设计，降低冗余计算并加速重建，同时支持扩展到超高分辨率。官方建议主要用于 4× 视频超分场景。\n\n仓库提供推理代码和模型权重，并附有 ComfyUI 等第三方集成说明；作者提醒部分第三方实现未包含 LCSA 模块，可能影响画质。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/OpenImagingLab/FlashVSR && cd FlashVSR",
+  "conda create -n flashvsr python=3.11.13 && conda activate flashvsr",
+  "pip install -e . && pip install -r requirements.txt",
+  "安装 Block-Sparse Attention 后端（README 要求，具体命令见原文）"
+ ],
+ "summary": "FlashVSR 是一个基于扩散模型的视频超分辨率项目，重点解决扩散方法在真实视频超分中延迟高、计算量大、难以扩展到超高分辨率的问题。它采用一步式流式推理，配合局部约束稀疏注意力和轻量解码器来提升速度，官方建议用于 4× 超分场景。适合想研究或部署实时视频超分能力的开发者参考使用。",
+ "tagline": "基于扩散模型的实时流式视频超分辨率框架"
+}

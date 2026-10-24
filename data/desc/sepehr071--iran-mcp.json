@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI 代理访问伊朗本地网站数据的开发者，以及需要查询伊朗商品价格、旅行、医疗、法律等信息的普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "覆盖 39 个 MCP 服务器和 488 个工具，涵盖购物、旅行、医疗、新闻、法律、税务、加密货币等类别",
+  "将伊朗网站的价格统一转换为 Toman，便于比价和汇总",
+  "支持 Claude Code 插件市场安装，也可通过 npx skills 为 Codex、Cursor 等代理添加技能",
+  "每个服务器是独立的 Python 包，可用 uvx 直接运行，多数无需账号或 API key",
+  "提供 iran-travel、iran-fashion、iran-software 等捆绑包，可一次安装多个相关服务器",
+  "部分服务器支持代理列表和可选的浏览器回退，以应对网站的反爬限制"
+ ],
+ "intro": "iran-mcp 是一组面向 AI 代理的 MCP 服务器，把伊朗本地网站的数据和功能封装成可供 Claude、Cursor、Copilot 等客户端调用的工具。项目包含 39 个服务器、488 个工具，覆盖购物比价、分类广告、外卖、旅行、医疗预约、图书、课程、应用商店、新闻、法律、税务和加密货币等场景。\n\n大多数伊朗网站没有公开 API，价格单位也不统一。这些服务器通过映射网站实际使用的接口，把价格统一为 Toman，并以 MCP 工具的形式暴露出来。其中 36 个为社区维护的非官方服务器，另外 3 个（ExirYab、Pasavard、SwapWallet）由对应网站官方提供。\n\n项目提供 Claude Code 插件市场和 Agent Skills 两种安装方式，每个服务器是一个独立的 Python 包，可通过 uvx 运行，大部分站点服务器无需账号或 API key。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "添加 Claude Code 插件市场：claude plugin marketplace add sepehr071/iran-mcp",
+  "安装单个服务器：claude plugin install digikala@iran-mcp",
+  "安装捆绑包：claude plugin install iran-travel@iran-mcp",
+  "为其他代理添加技能：npx skills add sepehr071/iran-mcp"
+ ],
+ "summary": "iran-mcp 把伊朗本地网站的数据封装成 MCP 工具，让 AI 代理可以查询商品价格、分类广告、外卖、旅行、医疗预约、新闻、法律和税务等信息。它适合需要让 Claude、Cursor 等助手访问伊朗网络服务的开发者和普通用户，价格统一以 Toman 显示，多数服务器无需账号即可使用。",
+ "tagline": "为 AI 代理接入伊朗网站数据的 MCP 服务器集合"
+}

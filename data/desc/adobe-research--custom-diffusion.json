@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用少量图片定制文本到图像生成效果的开发者、研究人员和创作者，需要具备基本的 Python 和深度学习环境配置能力。",
+ "date": "2026-10-24",
+ "features": [
+  "基于少量图片（约 4-20 张）微调 Stable Diffusion，学习新概念",
+  "仅微调 cross-attention 层的 key 和 value 投影矩阵，训练快、存储小",
+  "支持多概念联合训练，如新物体加新风格或多个新物体",
+  "支持通过优化合并两个微调模型的权重",
+  "提供单概念和多概念的训练、采样脚本",
+  "发布 CustomConcept101 数据集及预训练模型权重"
+ ],
+ "intro": "Custom Diffusion 是 CVPR 2023 提出的文本到图像扩散模型微调方法，只需约 4 到 20 张新概念的图片，就能让 Stable Diffusion 学会生成该概念在新场景下的图像。它只微调 cross-attention 层中 key 和 value 投影矩阵，因此训练速度快，在 2 张 A100 上约 6 分钟，每个新概念额外存储约 75MB。\n\n该方法支持多概念组合，例如新物体加新艺术风格、多个新物体、新物体加新类别，也支持通过优化合并两个已微调模型的权重。项目提供单概念和多概念的训练与采样脚本，并发布了 CustomConcept101 数据集和预训练模型权重。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/adobe-research/custom-diffusion.git && cd custom-diffusion",
+  "git clone https://github.com/CompVis/stable-diffusion.git && cd stable-diffusion",
+  "conda env create -f environment.yaml && conda activate ldm && pip install clip-retrieval tqdm",
+  "wget https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt",
+  "bash scripts/finetune_real.sh \"cat\" data/cat real_reg/samples_cat cat finetune_addtoken.yaml <pretrained-model-path>"
+ ],
+ "summary": "Custom Diffusion 解决的是用少量图片让文本到图像扩散模型学会新概念的问题。它只微调 cross-attention 中的 key 和 value 投影，训练快且存储开销小，并支持多概念组合与模型权重合并。适合需要定制 Stable Diffusion 生成特定物体、风格或类别的开发者和创作者。",
+ "tagline": "用少量图片定制文本到图像扩散模型的多概念方法"
+}

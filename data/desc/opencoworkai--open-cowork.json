@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用图形界面驱动 AI 智能体完成文件整理、文档生成和桌面自动化的开发者与普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "一键安装包，Windows 与 macOS 开箱即用，无需环境配置",
+  "支持 Claude、OpenAI 兼容 API 以及 GLM、MiniMax、Kimi 等模型",
+  "WSL2 / Lima 虚拟机级沙箱隔离，命令在独立 VM 中执行",
+  "内置 Skills 系统，可生成和处理 PPTX、DOCX、XLSX、PDF",
+  "通过 MCP 连接浏览器、Notion 等外部服务与桌面应用",
+  "支持飞书、Slack 远程控制及桌面 GUI 自动化操作"
+ ],
+ "intro": "Open Cowork 是一个面向 Windows 和 macOS 的开源 AI 智能体桌面应用，把 Claude Code、OpenAI、Gemini、DeepSeek 等模型封装进图形界面，提供一键安装包，无需配置开发环境即可使用。\n\n它通过 WSL2（Windows）或 Lima（macOS）在虚拟机层面隔离命令执行，并内置 Skills 系统生成 PPTX、DOCX、XLSX、PDF 等文档，同时支持 MCP 连接浏览器、Notion 等桌面应用，还能通过飞书和 Slack 远程控制。项目定位是 Claude Cowork 的开源实现，让桌面自动化对普通用户更易上手。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS 用户可通过 Homebrew 安装：brew tap OpenCoworkAI/tap && brew install --cask --no-quarantine open-cowork",
+  "或从 Releases 页面下载 Windows 的 .exe 或 macOS 的 .dmg 安装包",
+  "准备 API Key，支持 OpenRouter、Anthropic 及多种中文模型",
+  "可选：macOS 执行 brew install lima 启用增强沙箱；Windows 安装 WSL2 后自动检测",
+  "从源码构建：git clone 仓库后执行 npm install、npm run rebuild、npm run dev"
+ ],
+ "summary": "Open Cowork 是一个开源的 AI 智能体桌面应用，把 Claude Code 等模型封装成图形界面，提供 Windows 和 macOS 一键安装包。它适合不想折腾命令行、又希望让 AI 帮忙整理文件、生成 PPT/Word/Excel 文档或操作桌面应用的用户。项目通过 WSL2 或 Lima 做虚拟机级隔离，并支持 MCP 扩展和飞书、Slack 远程控制。",
+ "tagline": "开源 AI 智能体桌面应用，一键安装 Claude Code 与 MCP 工具"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速集成多种 LLM 并构建结构化输出或智能体应用的 Python 开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "使用 @llm.call 装饰器统一调用不同 LLM",
+  "通过 Pydantic 模型获取结构化输出",
+  "使用 @llm.tool 定义工具并构建智能体",
+  "支持流式、异步和多轮对话（见文档）",
+  "提供 Python 和 TypeScript 实现"
+ ],
+ "intro": "Mirascope 是一个 Python 库，旨在用统一的接口调用各种前沿 LLM。它通过装饰器简化 LLM 调用，并支持结构化输出和工具调用，帮助开发者快速构建 LLM 应用。\n\n项目采用 monorepo 结构，包含 Python 和 TypeScript 实现，以及文档网站。Python 版本可通过 uv 安装，使用 @llm.call 装饰器即可发起请求，结合 Pydantic 模型获取结构化输出，或使用 @llm.tool 定义工具构建智能体。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Mirascope：uv add \"mirascope[all]\"",
+  "使用 @llm.call 装饰器调用 LLM，例如：@llm.call(\"anthropic/claude-sonnet-4-5\")",
+  "通过 format 参数指定 Pydantic 模型获取结构化输出",
+  "使用 @llm.tool 定义工具，并在 call 中传入 tools 列表构建智能体"
+ ],
+ "summary": "Mirascope 是一个 Python 库，提供统一接口调用多种前沿 LLM，简化模型切换和调用流程。它通过装饰器让开发者用简洁的代码发起请求，并支持结构化输出和工具调用，适合需要快速构建 LLM 应用、智能体或处理结构化数据的场景。",
+ "tagline": "统一接口调用多种前沿 LLM 的 Python 库"
+}

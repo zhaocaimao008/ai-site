@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本到图像生成感兴趣的研究人员和开发者，需要一定的深度学习和 PyTorch 基础。",
+ "date": "2026-10-24",
+ "features": [
+  "文本到图像生成：输入中文文本，生成对应图像",
+  "超分辨率：对生成的图像进行超分辨率增强",
+  "图像到文本：为图像生成描述文本",
+  "候选重排序：对多个生成结果进行评分和选择",
+  "训练支持：提供单节点和多节点的训练脚本"
+ ],
+ "intro": "CogView 是一个 40 亿参数的预训练 Transformer 模型，用于通用领域的文本到图像生成。该项目是 NeurIPS 2021 论文的官方代码库，提供了预训练模型、推理脚本和训练教程。\n\n模型支持中文文本输入生成图像，并包含超分辨率、图像到文本和候选重排序等配套功能。README 中提供了详细的安装、下载和运行步骤，适合研究和开发用途。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 PyTorch (>=1.7.0) 和 apex，然后运行 pip install -r requirements.txt",
+  "下载图像分词器 vqvae_hard_biggerset_011.pt 并放置到 pretrained/vqvae 目录",
+  "从项目页面下载预训练模型并解压到 pretrained/cogview 目录",
+  "将文本查询写入 input.txt，运行 ./scripts/text2image.sh --debug 生成图像"
+ ],
+ "summary": "CogView 是一个基于 Transformer 的文本到图像生成模型，能够根据中文文本描述生成相应图像。该项目提供了预训练模型和推理脚本，支持文本生成图像、超分辨率、图像到文本等任务，并包含训练教程。适合研究人员和开发者了解或使用文本到图像生成技术。",
+ "tagline": "基于Transformer的文本到图像生成模型"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频编辑的开发者、研究人员，以及希望利用扩散模型进行一致视频编辑的从业者。",
+ "date": "2026-10-24",
+ "features": [
+  "无需训练或微调，直接使用预训练文本到图像扩散模型",
+  "通过传播扩散特征实现帧间一致性",
+  "支持与 Plug-and-Play、ControlNet、SDEdit 等图像编辑技术结合",
+  "提供视频预处理（反演）和编辑的完整脚本",
+  "基于 YAML 配置文件灵活调整编辑参数"
+ ],
+ "intro": "TokenFlow 是 ICLR 2024 论文的官方 PyTorch 实现，提出一种无需额外训练或微调的视频编辑框架。它利用预训练的文本到图像扩散模型，通过强制扩散特征空间中的一致性来实现一致的视频编辑。\n\n该方法基于帧间对应关系显式传播扩散特征，从而在保持输入视频空间布局和动态的同时，生成符合目标文本提示的高质量视频。框架可与现成的文本到图像编辑方法（如 Plug-and-Play、ControlNet 等）结合使用。\n\n项目提供完整的预处理和编辑流程，包括视频反演、配置文件编辑和运行脚本，支持结构保持型编辑。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建并激活 conda 环境：conda create -n tokenflow python=3.9 && conda activate tokenflow",
+  "安装依赖：pip install -r requirements.txt",
+  "预处理视频：python preprocess.py --data_path <data/myvideo.mp4> --inversion_prompt <'' or a string describing the video content>",
+  "根据示例创建 YAML 配置文件（如 configs/config_pnp.yaml）",
+  "运行编辑脚本：python run_tokenflow_pnp.py"
+ ],
+ "summary": "TokenFlow 是一个基于扩散模型的视频编辑框架，旨在解决文本驱动视频编辑中的时序一致性问题。它无需训练或微调，通过传播扩散特征来保持帧间一致性，从而在修改视频内容的同时保留原始空间布局和动态。适合需要将现成图像编辑技术扩展到视频场景的研究者和开发者使用。",
+ "tagline": "无需训练的一致视频编辑框架"
+}

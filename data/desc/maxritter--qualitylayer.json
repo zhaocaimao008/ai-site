@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用编码 Agent 开发中大型改动的开发者与团队，尤其是希望保留设计审阅和验证环节的人。",
+ "date": "2026-10-24",
+ "features": [
+  "可视化 Plan：用图表和可点击原型描述改动，批准后才进入编码",
+  "多 Agent 支持：Claude Code、Codex、Cursor、Grok、Antigravity、Pi、OpenCode 等",
+  "分片实现：每个切片从失败的测试开始，逐步构建",
+  "独立验证：由未写代码的 Agent 对照需求检查，未确认项留待人工决定",
+  "代码健康检查：标记复杂函数与深层嵌套，可进一步查找重复代码",
+  "过程留痕：每步决策与结果以 Markdown 写入仓库，App 中显示耗时与预估模型成本"
+ ],
+ "intro": "QualityLayer 是一个围绕编码 Agent 的软件开发工作流工具。它把一次改动拆成 Discuss、Research、Plan、Outline、Implement、Verify、Review 等步骤，每一步都在仓库中写入 Markdown 文件，记录问题、决策和结果。你可以先在 App 或浏览器里审阅图表和可点击的界面原型，批准 Plan 之后再让 Agent 写代码。\n\n它支持 Claude Code、Codex、Cursor、Grok、Antigravity、Pi、OpenCode 等 Agent，使用你自己的订阅或 API key，QualityLayer 本身不对模型调用收费。实现阶段按小切片推进，每片从失败的测试开始；验证阶段由未参与写代码的 Agent 对照需求检查，无法确认的项会留给你决定。此外还提供本地代码健康检查，标记复杂函数和深层嵌套。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并打开 App，或运行 curl -fsSL https://qualitylayer.dev/install.sh | bash（macOS/Linux/WSL）或 irm https://qualitylayer.dev/install.ps1 | iex（Windows PowerShell）",
+  "在 App 或浏览器中选择 + New，挑选仓库和 Agent，描述要做的改动",
+  "回答 Agent 的提问，在对话旁审阅并评论 Plan",
+  "批准 Plan 后开始构建，Agent 依次完成 Outline、Implement 和 Verify",
+  "审阅结果与证据，处理需要你决定或未能运行的检查项"
+ ],
+ "summary": "QualityLayer 把编码 Agent 的工作组织成从讨论、调研、计划到实现、验证和评审的流程，计划阶段提供图表和可点击原型供你审阅，批准后才开始写代码。实现按小切片推进，每片先写失败测试，再由未参与编码的 Agent 独立核对需求。适合用 Claude Code、Codex 等 Agent 处理中大型改动、希望保留人工把关的开发者。",
+ "tagline": "让编码 Agent 按可视化计划构建并验证软件"
+}

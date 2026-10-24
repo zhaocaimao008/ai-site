@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想了解早期 TensorFlow 语音识别实现思路、用于学习研究目的的开发者；生产或实际使用建议转向 Whisper 或 DeepSpeech。",
+ "date": "2026-10-24",
+ "features": [
+  "基于 TensorFlow 的 sequence-to-sequence 语音识别模型",
+  "提供数字分类和说话人分类的 toy 示例脚本",
+  "包含 densenet_layer.py 等较复杂的网络结构示例",
+  "使用频谱图作为语音特征输入",
+  "附带 pyaudio 录音与 portaudio 安装说明"
+ ],
+ "intro": "这是一个使用 TensorFlow 深度学习框架和 sequence-to-sequence 神经网络实现语音识别的开源项目，由早期的 caffe-speech-recognition 迁移而来。项目包含频谱图处理、数字分类、说话人分类等示例，目标是构建一个可独立运行的语音识别系统。\n\n需要留意的是，README 明确说明该项目已不再维护：所用 TensorFlow 1.0 已不兼容，理论也不再是最先进水平，目前仅用于教学目的。作者推荐关注 whisper.cpp 和 Mozilla DeepSpeech 等替代方案。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/pannous/tensorflow-speech-recognition",
+  "cd tensorflow-speech-recognition",
+  "git clone https://github.com/pannous/layer.git",
+  "git clone https://github.com/pannous/tensorpeers.git",
+  "pip install pyaudio",
+  "./number_classifier_tflearn.py"
+ ],
+ "summary": "这个项目用 TensorFlow 和 sequence-to-sequence 网络做语音识别，包含频谱图处理、数字分类、说话人分类等示例，目标是搭建可独立运行的语音识别系统。它已停止维护，所用 TensorFlow 1.0 不再兼容，仅适合作为学习早期语音识别实现思路的参考；实际使用建议转向 Whisper 或 DeepSpeech。",
+ "tagline": "基于 TensorFlow 的序列到序列语音识别实验项目"
+}

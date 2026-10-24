@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合多模态学习、生成模型方向的研究人员和开发者，以及希望探索统一理解与生成模型的 AI 从业者。",
+ "date": "2026-10-24",
+ "features": [
+  "统一的多模态理解与生成：单一 Transformer 处理图像描述、VQA 和文本到图像生成",
+  "Show-o2 支持视频理解与生成，提供 1.5B 和 7B 参数模型",
+  "基于 3D Causal VAE 空间和双路径融合的可扩展架构",
+  "结合自回归建模与 flow matching 的混合模态生成",
+  "开源训练和推理代码，支持预训练和指令微调",
+  "提供 Hugging Face 在线演示和模型权重"
+ ],
+ "intro": "Show-o 系列项目旨在用单一 Transformer 模型统一多模态理解与生成任务。项目包含 Show-o 和 Show-o2 两个版本，分别被 ICLR 2025 和 NeurIPS 2025 接收。Show-o 支持图像描述、视觉问答和文本到图像生成等任务；Show-o2 进一步扩展到视频理解和生成，并提供 1.5B 和 7B 参数模型。\n\nShow-o2 在文本 token 和 3D Causal VAE 空间上进行统一学习，采用双路径空间（-时间）融合，并使用自回归建模和 flow matching 的特定头部，实现多模态理解、图像/视频及混合模态生成。项目开源了训练和推理代码，并提供了在线演示。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/showlab/Show-o.git",
+  "安装依赖：pip install -r requirements.txt",
+  "下载预训练模型权重（如 show-o-512x512-wo-llava-tuning）",
+  "参考 configs 目录下的配置文件进行推理或微调"
+ ],
+ "summary": "Show-o 系列项目探索用单一 Transformer 统一多模态理解与生成。Show-o 支持图像描述、视觉问答和文本到图像生成；Show-o2 进一步扩展到视频理解和生成，并提供 1.5B 和 7B 参数模型。项目开源了训练和推理代码，适合研究多模态统一模型的研究人员和开发者参考使用。",
+ "tagline": "统一多模态理解与生成的单一 Transformer 模型"
+}

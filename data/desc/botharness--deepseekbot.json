@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望搭建个人 AI 助手团队、需要多 Bot 协作或长期记忆的开发者与普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "创建多个有独立身份、人格和像素头像的 Bot",
+  "长期记忆以 Git 仓库保存，可查看、修改和跨设备同步",
+  "支持多 Bot 群聊协作，可 @ 指定 Bot 或派发任务",
+  "接入 Slack、Discord、飞书、QQ 和微信等聊天软件",
+  "支持定时任务、浏览器操作和共享桌面控制",
+  "通过 Bot 市场安装、分享和打包 Bot"
+ ],
+ "intro": "DeepSeekBot 是一个运行在 DeepSeek Harness（DSH）中的插件，提供开源的 GrokBot 替代方案。你可以创建多个具有独立身份、人格和长期记忆的 Bot，分别负责研究、写作或编码等任务，像同事一样私聊、拉群或派活。\n\n每个 Bot 的记忆以 Git 仓库形式保存，可查看、修改和同步，也支持接入 Slack、Discord、飞书、QQ 和微信等聊天软件，让 Bot 以自己的身份回复消息。此外，Bot 可执行定时任务、操作浏览器或共享桌面，并通过 Bot 市场安装和分享现成的 Bot。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并安装 DeepSeek Harness 桌面端",
+  "在桌面端点击「插件 → 添加插件」",
+  "输入 deepseekbot@1.4.1 并安装启用",
+  "侧栏出现「Bot 模式」后即可创建和使用 Bot"
+ ],
+ "summary": "DeepSeekBot 是一个运行在 DeepSeek Harness 中的插件，让你创建多个有独立身份、人格和长期记忆的 AI Bot，像同事一样私聊、拉群和派活。它适合需要多 Bot 协作、跨聊天软件回复或定时执行任务的场景，记忆以 Git 仓库保存，可查看和修改。",
+ "tagline": "基于 DeepSeek Harness 的多 Bot 个人 AI 团队"
+}

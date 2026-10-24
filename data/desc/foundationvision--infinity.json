@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文本到图像生成的研究人员、对自回归视觉建模感兴趣的开发者，以及希望尝试高分辨率图像生成模型的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "位级视觉自回归框架，支持超大词汇表 tokenizer（最高 2^64）",
+  "提供 Infinity-2B 和 Infinity-8B 预训练模型，支持 1024×1024 文本到图像生成",
+  "包含图像 tokenizer 训练代码与权重",
+  "提供推理代码、交互式 Notebook 和在线 Demo",
+  "引入位级自校正（BSC）缓解训练-测试差异"
+ ],
+ "intro": "Infinity 是字节跳动提出的位级视觉自回归建模方法，用于文本到高分辨率图像生成。它通过无限词汇表 tokenizer 和分类器，将 token 词表规模扩展到 2^32 甚至 2^64，并结合位级自校正机制，缓解自回归训练与推理的差异。\n\n项目提供 Infinity-2B 和 Infinity-8B 两种规模的预训练模型，支持 1024×1024 图像生成，并发布了图像 tokenizer 训练代码、推理代码和 Web Demo。根据 README，Infinity 在 GenEval 和 ImageReward 基准上优于 SD3-Medium 等扩散模型，生成 1024×1024 图像仅需 0.8 秒。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/FoundationVision/Infinity.git",
+  "安装依赖（参考 README 中的环境配置说明）",
+  "从 Hugging Face 下载模型权重（如 infinity_2b_reg.pth）",
+  "运行推理脚本或打开 tools/interactive_infer.ipynb 进行交互式生成"
+ ],
+ "summary": "Infinity 是字节跳动开源的文本到图像生成模型，采用位级自回归建模，通过超大词汇表 tokenizer 和分类器提升生成质量与速度。它适合需要高分辨率图像生成的研究与开发场景，提供 2B 和 8B 参数模型、推理代码及在线 Demo，方便开发者快速体验和二次开发。",
+ "tagline": "字节跳动开源的高分辨率图像生成自回归模型"
+}

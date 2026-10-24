@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在自有 VPS 或本地机器上搭建个人 Telegram AI 助手、并需要长期稳定运行的开发者或技术爱好者。",
+ "date": "2026-10-24",
+ "features": [
+  "一键安装依赖、Hermes 和 9Router",
+  "通过 Telegram 网关与 AI 机器人对话",
+  "使用 Cloudflare Pages + D1 搭建轮询隧道，暴露本地 9Router 仪表盘",
+  "提供 watchdog 脚本，定时检查并重启挂掉的服务",
+  "提供 gateway-watch 脚本，检测 Telegram 网关的静默卡死",
+  "包含 cloudflared 替代隧道方案，适用于普通网络环境"
+ ],
+ "intro": "Hermuse 是一套自托管的 AI 智能体运行栈，由 Hermes Agent、9Router 和 Telegram 网关组成。它提供脚本和指南，帮助你在自己的 Linux 服务器上复现这套环境，最终得到一个 24/7 在线的个人 Telegram AI 机器人，以及一个可通过浏览器访问的模型仪表盘。\n\n项目包含自动化安装、Cloudflare 隧道配置和看门狗脚本，用于维持服务稳定运行。9Router 仅绑定本地 127.0.0.1，通过轮询隧道对外提供仪表盘访问。README 也说明这套栈可以配合其他智能体和工具使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 bash scripts/install.sh 安装依赖、Hermes 和 9Router",
+  "运行 hermes setup --portal 登录模型，再运行 hermes gateway setup 连接 Telegram 机器人",
+  "运行 bash scripts/setup-tunnel.sh <pages-project-name> <d1-name> 安装 Cloudflare 隧道",
+  "按正确启动顺序运行 restart-9router.sh、restart-tunnel.sh 和 start-gateway.sh",
+  "将 watchdog.sh 加入 cron 定时任务（每 5 分钟）"
+ ],
+ "summary": "Hermuse 把 Hermes Agent、9Router 和 Telegram 网关打包成一套可自托管的 AI 智能体栈，并提供安装、隧道和看门狗脚本，帮助你在自己的 Linux 服务器上运行一个 24/7 在线的 Telegram AI 机器人。适合需要长期稳定运行个人 AI 助手、又希望数据和服务掌握在自己手中的开发者。",
+ "tagline": "自托管 AI 智能体栈：Hermes + 9Router + Telegram 网关"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合 Unity 开发者、游戏开发者以及希望在游戏中加入智能对话角色的创作者。",
+ "date": "2026-10-24",
+ "features": [
+  "在 Unity 中集成 LLM，创建可交互的 AI 角色",
+  "支持 PC、移动端和 VR，本地运行无需联网",
+  "在 CPU 和 GPU（Nvidia、AMD、Apple Metal）上快速推理",
+  "内置 RAG 系统，支持对自有数据进行语义搜索",
+  "支持远程服务器部署，灵活扩展",
+  "兼容多种主流 LLM 模型，一行代码即可调用"
+ ],
+ "intro": "LLM for Unity 是一个 Unity 插件，用于在 Unity 引擎中集成大语言模型（LLM），让开发者可以创建能与玩家交互的智能 AI 角色。它支持在 PC、移动端和 VR 设备上运行，推理可在 CPU 和 GPU（Nvidia、AMD、Apple Metal）上进行，并且完全本地运行，无需联网，数据不会离开游戏。\n\n项目内置基于 llama.cpp 的后端 LlamaLib，支持多种主流 LLM 模型，并提供检索增强生成（RAG）系统，可对自有数据进行语义搜索以增强角色知识。此外，它还支持远程服务器部署，方便灵活扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Asset Store 安装：在 Asset Store 页面点击 Add to My Assets，然后在 Unity 的 Package Manager 中选择 Packages: My Assets，下载并导入 LLM for Unity 包。",
+  "通过 GitHub 安装：从 GitHub 仓库下载或克隆项目，将包导入 Unity 项目。",
+  "在场景中添加 LLM 组件，配置模型并调用聊天接口开始对话。"
+ ],
+ "summary": "LLM for Unity 是一个 Unity 插件，帮助开发者在游戏中集成大语言模型，创建能与玩家对话的智能角色。它支持在 PC、移动端和 VR 上本地运行，无需联网，并内置 RAG 系统增强角色知识。适合需要为游戏添加 AI 对话功能的 Unity 开发者。",
+ "tagline": "在 Unity 中集成大语言模型，打造可对话的 AI 角色"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 macOS 上本地运行 LLM 的开发者与普通用户，尤其是已使用 llama.cpp 或需要本地 API 接入其他工具的人。",
+ "date": "2026-10-24",
+ "features": [
+  "完全本地运行，数据不离开 Mac",
+  "原生 macOS 应用，体积仅 4 MB",
+  "自动为 Mac 配置模型参数，零配置上手",
+  "内置模型推荐列表，一键安装适配硬件的模型",
+  "模型存放在 Hugging Face 缓存，与 llama.cpp 共享",
+  "提供本地 HTTP API，兼容 llama.cpp server 接口"
+ ],
+ "intro": "Llama 是一个 macOS 菜单栏应用，用于在本地运行大语言模型。启动后会在 http://localhost:9931/v1 运行一个本地服务器，兼容 llama.cpp 的 API。如果系统已安装 llama.cpp 则直接使用，否则自动安装预编译二进制。\n\n应用会自动发现已通过 llama.cpp 安装的模型，也支持从 Hugging Face 安装任意 GGUF 模型，并根据 Mac 硬件推荐可运行的模型。模型按需加载、空闲时卸载，避免长期占用内存。模型文件存放在 Hugging Face 缓存中，与 llama.cpp 及其他工具共享。\n\n内置 WebUI 可直接对话，也可通过 API 连接其他应用。应用会为每个模型自动生成配置，用户可通过 models.user.ini 覆盖或补充设置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Homebrew 安装：brew install --cask llama-app",
+  "或从 GitHub Releases 页面下载安装",
+  "启动应用，本地服务器默认运行在 http://localhost:9931/v1",
+  "在应用内安装推荐模型或从 Hugging Face 安装 GGUF 模型",
+  "使用内置 WebUI 对话，或通过 curl 调用 API"
+ ],
+ "summary": "Llama 是一个 macOS 菜单栏应用，让你在本地运行大语言模型，无需把数据发到云端。它启动后提供兼容 llama.cpp 的本地 API，自动发现已安装模型，也能从 Hugging Face 一键安装 GGUF 模型，并按 Mac 硬件推荐合适模型。适合想在本机跑 LLM、用 API 接入其他工具或直接对话的 macOS 用户。",
+ "tagline": "macOS 菜单栏本地 LLM 运行工具"
+}

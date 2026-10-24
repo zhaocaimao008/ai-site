@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究大语言模型低比特量化、分组量化与旋转变换的研究者和工程师，以及希望直接加载已发布 INT4 检查点做实验的开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "实现基于校准激活的旋转拟合，将高能量方向对齐到量化组锚点",
+  "提供分组非对称 INT4 量化与紧凑 WY 旋转表示",
+  "发布 Qwen3、Qwen3 MoE、Llama 3.2、Llama 3.1 系列预训练检查点与旋转因子",
+  "提供 load_model 加载器与 prismquant 命令行工具，支持文本生成",
+  "旋转模块可脱离语言模型单独使用，对自定义激活做拟合与量化",
+  "包含 CUDA 融合内核、测试与论文复现文档"
+ ],
+ "intro": "PrismQuant 是论文《PrismQuant: Optimal Null-Space Rotations for Grouped Quantizers》的官方代码与预训练权重仓库。它通过校准得到的正交旋转，把激活值中能量较高的方向对齐到量化组的固定方向上，再结合紧凑的 WY 表示与分组非对称 INT4 量化，降低大语言模型在低比特量化下的误差。\n\n仓库包含核心实现、模型目录、测试和论文图表，并发布了 Qwen3 Base、Qwen3 MoE、Llama 3.2 与 Llama 3.1 等多个尺寸的检查点及旋转因子。需要注意的是，发布的 GPTQ 权重是以浮点张量形式存放的反量化 INT4 值，参考运行时模拟激活与 KV 量化但保留浮点存储，并不是打包好的 INT4 推理引擎。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Python 3.10+ 与匹配 CUDA 版本的 PyTorch",
+  "git clone --depth 1 https://github.com/ForeverBlue816/PrismQuant.git && cd PrismQuant",
+  "pip install -e .",
+  "prismquant models",
+  "python 中调用 load_model(\"qwen3_0.6b_base\") 生成文本，或使用 prismquant generate --model qwen3_0.6b_base --prompt \"...\" --max-new-tokens 64"
+ ],
+ "summary": "PrismQuant 是一个面向大语言模型低比特量化的研究代码库，核心思路是通过校准得到的正交旋转，把激活值的高能量方向对齐到分组量化的固定方向，从而减小 INT4 量化误差。仓库提供旋转拟合、分组非对称量化、模型加载器与命令行工具，并发布了 Qwen3 和 Llama 系列的量化检查点。适合想研究或试用分组量化旋转方法的开发者，也可单独调用其旋转模块处理自定义激活。",
+ "tagline": "面向分组量化器的最优零空间旋转方法"
+}

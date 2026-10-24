@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合AI开发者、研究人员和工程师，尤其是正在构建或调试RAG、智能体系统，并关注推理可靠性、可验证性和治理的团队。",
+ "date": "2026-10-24",
+ "features": [
+  "提供Polaris Goal Compiler等可移植协议组件，用于人机执行工作流",
+  "发布Polaris Experiments公开证据包，包含原始输出、审计记录和哈希",
+  "Problem Map 3.0提供AI工作流故障排查地图，快速定位RAG或智能体管道问题",
+  "WFGY 4.0作为治理引擎，涵盖合法性、评估纪律等",
+  "WFGY 3.0支持前沿推理与TXT调用，包含Event Horizon等实验"
+ ],
+ "intro": "WFGY 是一个面向AI推理、RAG和智能体工作流的开源生态系统，当前以WFGY 5.0 Polaris Protocol为旗舰项目。该协议旨在构建、调优、验证和跨会话携带结构化语言系统，强调可治理的协议层和可复用的执行组件。\n\n项目采用分阶段发布模式，已公开Polaris Experiments证据包、Cite First Verification彩蛋和Polaris Goal Compiler等组件。此外，Problem Map 3.0提供针对损坏AI工作流的快速排查指南，WFGY 4.0作为治理引擎，WFGY 3.0则聚焦前沿推理与验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读Polaris Protocol主页了解旗舰方向：./Polaris/README.md",
+  "尝试首个可移植协议组件Polaris Goal Compiler：./Polaris/protocols/goal-compiler/README.md",
+  "查看公开实验证据：./Polaris/experiments/README.md",
+  "若系统已损坏，从Problem Map 3.0开始排查：./ProblemMap/wfgy-ai-problem-map-troubleshooting-atlas.md"
+ ],
+ "summary": "WFGY 是一个面向AI推理、RAG和智能体工作流的开源协议栈，当前以WFGY 5.0 Polaris Protocol为核心，分阶段发布可移植协议组件和公开实验证据。项目还提供Problem Map 3.0用于快速排查损坏的AI管道，以及WFGY 4.0治理引擎和WFGY 3.0前沿推理层。适合需要构建、调试或验证AI工作流的开发者和研究人员。",
+ "tagline": "面向AI推理与RAG的开源协议栈"
+}

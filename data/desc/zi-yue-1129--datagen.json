@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 LLM 自动化完成数据分析与报告撰写流程的开发者、数据科学从业者和研究人员。",
+ "date": "2026-10-24",
+ "features": [
+  "多智能体分工：假设生成、代码编写、可视化、检索、报告撰写与质量审查各由专职 agent 负责",
+  "基于 LangGraph 的状态图工作流，串联假设、人工确认、分析处理、质量审查与修订",
+  "note_agent 记录研究过程，维护上下文与状态",
+  "通过 agent_models.yaml 为每个 agent 自定义模型提供商与模型参数",
+  "支持 MCP 配置，可接入网页搜索、GitHub 等外部服务",
+  "以 Python 脚本方式运行，读取本地数据文件并输出分析报告"
+ ],
+ "intro": "DATAGEN 是一个基于多智能体架构的 AI 数据分析与研究平台，前身名为 AI-Data-Analysis-MultiAgent。它把数据分析、可视化、文献检索和报告撰写拆分成多个专职 agent，由 LangGraph 构建的状态图统一调度，完成从提出假设到产出报告的完整研究流程。\n\n系统内置 hypothesis_agent、code_agent、visualization_agent、searcher_agent、report_agent、quality_review_agent 等角色，并配有 note_agent 记录研究过程。工作流依次经过假设生成、人工确认、分析处理、质量审查和按需修订，用户可在假设阶段选择继续或重新生成。\n\n项目使用 Python 编写，依赖 LangChain 与 OpenAI 等模型服务，支持通过 agent_models.yaml 为每个 agent 单独配置模型提供商和参数，也提供 MCP 相关设置以接入搜索等外部能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/starpig1129/DATAGEN.git",
+  "创建并激活 Conda 环境：conda create -n datagen python=3.10 && conda activate datagen",
+  "安装依赖：pip install -r requirements.txt",
+  "将 `.env Example` 重命名为 `.env` 并填写 WORKING_DIRECTORY、CONDA_ENV、CHROMEDRIVER_PATH 及所需 API key",
+  "把数据文件放入 data 目录，修改 main.py 中的 user_input（如 datapath:YourDataName.csv），然后运行 python main.py"
+ ],
+ "summary": "DATAGEN 用多个专职 AI agent 协作完成数据分析与研究：先由假设 agent 提出研究方向，经人工确认后，由代码、可视化、检索和报告 agent 分工处理，最后进行质量审查与修订。它适合需要把数据文件自动转化为分析图表和完整报告的场景，也方便开发者按 agent 粒度配置不同的大模型。",
+ "tagline": "多智能体协作的自动化数据分析与研究助手"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 ComfyUI 进行语音合成、配音或角色对话创作的开发者和创作者。",
+ "date": "2026-10-24",
+ "features": [
+  "语音克隆：用干净的参考音频和对应转写文本复刻说话人音色",
+  "语音设计：仅凭自然语言描述生成音色，无需参考音频",
+  "语音指导：在克隆音色的基础上，用指令控制语气、情绪和语速",
+  "多角色对话：按 Name: 行或 JSON 脚本生成最多 8 个角色的对话",
+  "内联发声事件：在文本中插入 (laugh)、[笑] 等事件",
+  "提供 bf16 与多种 INT8 量化模型，并支持自动下载"
+ ],
+ "intro": "ComfyUI-Breeze-TTS-2 把 Breeze TTS 2 语音模型接入 ComfyUI，提供一组节点用于语音克隆、语音设计和语音指导。它支持中英双语朗读，并能在文本中直接插入笑声、咳嗽、叹气等发声事件。\n\n项目包含加载模型、语音克隆、语音设计、语音指导、Whisper 转写、Speaker 和 Multi-Speaker 等节点。Multi-Speaker 可以按脚本生成多角色对话，最多接入 8 个 Speaker，混合使用克隆音色和设计音色。模型提供 bf16 与多种 INT8 量化版本，并集成 ComfyUI / AIMDO 动态显存管理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将项目安装到 ComfyUI 的自定义节点目录，并重启 ComfyUI",
+  "在 Breeze TTS 2 Load Model 节点中选择 dtype、device 和量化版本，开启 download_if_missing 自动下载模型",
+  "使用 Voice Clone 节点接入参考音频和精确转写文本，或使用 Voice Design 节点填写音色描述",
+  "需要多角色对话时，把 Speaker 节点连到 Multi-Speaker 的 speaker_1…8 输入，并写入 Name: 行或 JSON 脚本"
+ ],
+ "summary": "这是一个把 Breeze TTS 2 语音模型接入 ComfyUI 的节点集合，解决在 ComfyUI 工作流里做语音克隆、音色设计和多角色配音的问题。它支持中英双语、文本内发声事件，以及按脚本生成多角色对话，并提供量化模型以降低显存占用。适合用 ComfyUI 制作配音、角色对白或语音内容的开发者与创作者。",
+ "tagline": "在 ComfyUI 中实现语音克隆、设计与多角色对话的 TTS 节点"
+}

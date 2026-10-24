@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究检索增强生成的研究人员、需要在资源受限环境中部署 RAG 的开发者，以及希望用小模型实现高效 RAG 的工程师。",
+ "date": "2026-10-24",
+ "features": [
+  "语义感知的异构图索引，统一文本块与命名实体",
+  "轻量级拓扑增强检索，利用图结构高效发现知识",
+  "支持 10+ 种异构图数据库，包括 Neo4j、PostgreSQL、TiDB 等",
+  "提供 API 与 Docker 部署方式",
+  "附带 LiHua-World 基准数据集，用于评估设备端 RAG 系统"
+ ],
+ "intro": "MiniRAG 是一个为小语言模型（SLM）设计的检索增强生成框架，旨在解决小模型在传统 RAG 中因语义理解能力有限而性能下降的问题。它通过两项关键技术实现高效 RAG：语义感知的异构图索引，将文本块与命名实体统一建模；以及轻量级的拓扑增强检索，利用图结构进行知识发现，降低对复杂语言能力的依赖。\n\n实验表明，MiniRAG 在使用小模型时能达到与基于大模型的方法相当的性能，且仅需约 25% 的存储空间。项目还提供了面向设备端场景的基准数据集 LiHua-World，包含单跳、多跳和摘要三类问题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从源码安装：cd MiniRAG && pip install -e .",
+  "或从 PyPI 安装：pip install minirag-hku",
+  "将数据集放入 ./dataset 目录（LiHua-World 已内置）",
+  "运行索引脚本：python ./reproduce/Step_0_index.py",
+  "运行问答脚本：python ./reproduce/Step_1_QA.py"
+ ],
+ "summary": "MiniRAG 是一个面向小语言模型的检索增强生成框架，针对小模型语义理解有限、在传统 RAG 中性能下降的问题，通过异构图索引和轻量级拓扑增强检索来提升效果。它适合在资源受限的设备端场景中部署 RAG，也适合研究小模型 RAG 的开发者参考使用。",
+ "tagline": "面向小模型的极简 RAG 框架"
+}

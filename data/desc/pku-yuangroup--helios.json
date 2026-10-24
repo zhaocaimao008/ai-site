@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频生成模型的研究者，以及希望在单卡或多卡环境部署实时长视频生成的开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "14B 参数规模，单张 H100 上端到端推理 19.5 FPS",
+  "生成分钟级长视频，保持高质量与连贯性",
+  "不依赖常见防漂移策略与标准视频加速技术",
+  "提供 Base、Mid、Distilled 三个版本的代码与权重",
+  "支持 Group Offloading，显存占用可降至约 6GB",
+  "支持多 GPU 上下文并行及多种推理后端集成"
+ ],
+ "intro": "Helios 是北京大学团队开源的视频生成模型，官方称其为 14B 规模的实时长视频生成模型。README 显示，它在单张 H100 GPU 上端到端推理可达 19.5 FPS，在单张 Ascend NPU 上约 10 FPS，并能生成分钟级、高质量且连贯的视频。\n\n与常见做法不同，Helios 没有依赖 self-forcing、error-banks、关键帧采样等防漂移策略，也没有使用 KV-cache、因果掩码、稀疏/线性注意力、TinyVAE、量化等标准加速技术。项目还针对训练和推理吞吐与显存占用做了优化，使训练时可用接近图像扩散的 batch size，并能在 80GB 显存内放下最多四个 14B 模型。\n\n仓库提供 Helios-Base、Helios-Mid、Helios-Distilled 三个版本的训练与推理代码及权重，并支持 Group Offloading、多 GPU 上下文并行、Diffusers、SGLang-Diffusion、vLLM-Omni 和 Ascend-NPU 等集成。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Helios 是一个面向实时长视频生成的 14B 视频生成模型，目标是在单张 H100 上以接近实时的速度生成长达分钟级且连贯的视频。它不依赖常见的防漂移策略和标准加速技巧，而是通过训练与推理优化降低显存占用、提升吞吐。项目提供多个版本的代码与权重，并支持显存卸载、多卡并行和多种推理框架，适合研究视频生成或部署实时视频生成服务的开发者。",
+ "tagline": "14B 实时长视频生成模型，单卡 H100 可达 19.5 FPS"
+}

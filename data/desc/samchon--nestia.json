@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 NestJS 开发后端服务的 TypeScript 开发者，尤其是关注性能、API 文档自动化、客户端 SDK 生成或 AI 聊天机器人集成的团队。",
+ "date": "2026-10-24",
+ "features": [
+  "提供 @TypedBody、@TypedRoute 等装饰器，基于纯 TypeScript 类型进行验证和序列化",
+  "自动生成 Swagger 文档和类型安全的客户端 SDK，支持 Mockup 模拟器",
+  "自动生成 E2E 测试函数，并提供测试程序和性能基准工具",
+  "支持高级 WebSocket 路由",
+  "集成 AI 聊天机器人开发能力，关联 LLM 函数调用库 @agentica",
+  "提供在线 TypeScript 编辑器的 Swagger UI（@nestia/editor）"
+ ],
+ "intro": "Nestia 是一套面向 NestJS 的辅助库，核心目标是利用纯 TypeScript 类型提升开发效率与运行时性能。它提供 @nestia/core 装饰器，用于处理请求体、参数、查询等，并支持 WebSocket 路由；同时包含 @nestia/sdk，可生成 Swagger 文档、客户端 SDK、Mockup 模拟器和 E2E 测试函数。\n\n除了服务端开发，Nestia 还集成了 AI 相关能力，例如通过 Swagger 文档开发 AI 聊天机器人，并关联 @agentica（LLM 函数调用库）和 @autobe（生成 NestJS 应用的编码代理）。项目附带 CLI 工具、E2E 测试程序和基准测试工具，帮助开发者构建、测试和优化 NestJS 应用。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Nestia 是 NestJS 的辅助库集合，利用纯 TypeScript 类型简化请求验证、序列化等环节，并自动生成 Swagger 文档、客户端 SDK 和 E2E 测试代码。它还提供 AI 聊天机器人开发支持，适合希望提升 NestJS 开发效率、减少重复代码，或为后端服务添加 LLM 函数调用能力的开发者。",
+ "tagline": "NestJS 高性能辅助库与 AI 聊天机器人开发工具"
+}

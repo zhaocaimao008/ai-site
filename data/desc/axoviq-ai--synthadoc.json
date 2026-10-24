@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将大量文档整理为可维护知识库的个人研究者、小团队以及企业知识管理场景。",
+ "date": "2026-10-24",
+ "features": [
+  "将多种格式的原始文档（PDF、表格、PPT、网页、图片、视频、Word、TXT、AI 会话记录）编译为结构化 Wiki",
+  "自动构建交叉引用、检测矛盾内容并标记孤立页面",
+  "每个答案均引用来源，保证可追溯性",
+  "输出为本地 Markdown 文件，兼容 Obsidian 等 Wiki 生态",
+  "提供 CLI、Obsidian 插件、Web UI 和 MCP 四种使用接口",
+  "支持自主维护工作流，实现知识库的自我优化"
+ ],
+ "intro": "Synthadoc 是一个开源的 LLM 知识编译引擎，它读取 PDF、表格、PPT、网页、图片、视频、Word、TXT 以及 AI 会话记录等原始文档，利用 LLM 将其合成为持久化、结构化的 Wiki。系统会自动建立交叉引用、检测并呈现矛盾内容、标记孤立页面，并且每个答案都会引用来源。输出以本地 Markdown 文件形式存储，可以无缝集成到 Obsidian 或任何兼容 Wiki 的生态中。\n\n该项目定位为传统 RAG 的透明、可读替代方案，支持自主管理和自我优化，无需依赖外部工具。它提供 CLI、Obsidian 插件、Web UI 和 MCP 等多种接口，适合从个人研究者到企业团队的知识管理场景。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Synthadoc 是一个用 LLM 把零散文档编译成结构化本地 Wiki 的开源引擎。它读取 PDF、表格、网页等多种格式，自动建立交叉引用、发现矛盾并标注来源，输出 Markdown 文件可直接在 Obsidian 中管理。适合个人或团队构建可追溯、可自我维护的知识库，作为传统 RAG 的透明替代方案。",
+ "tagline": "将原始文档编译为结构化本地 Wiki 的 LLM 引擎"
+}

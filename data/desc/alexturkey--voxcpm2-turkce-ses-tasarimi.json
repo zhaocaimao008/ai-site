@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想在低显存设备上做土耳其语语音合成的开发者，以及需要现成土耳其语音色进行朗读或配音的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "用英文音色描述生成多个候选声音，每个候选使用独立 seed",
+  "基于设计录音作为参考朗读任意土耳其语文本，逐句合成",
+  "内置七个合成音色，含参考录音、示例朗读和参数文件",
+  "一条 PowerShell 命令完成安装，自动下载模型与预编译引擎",
+  "本地网页界面，默认监听 127.0.0.1:8765",
+  "支持 Windows（CUDA/Vulkan）与 macOS（Metal）"
+ ],
+ "intro": "这个项目基于 VoxCPM2 模型和打过补丁的 audio.cpp 引擎，让显存只有 4 GB 的显卡（如 GTX 1050 Ti）也能运行土耳其语语音合成。用户先用英文描述想要的音色，模型据此生成若干候选声音，选定后再用该声音朗读任意土耳其语文本。\n\n项目提供一条命令完成的安装脚本、本地网页界面，以及七个由文字描述生成的合成音色，可直接选用。语音克隆部分要求使用者确认拥有本人授权，并明确禁止冒充、欺诈等用途。\n\n引擎为 audio.cpp v0.7.2 加自定义补丁，模型为 VoxCPM2 Q8_0 GGUF，峰值显存约 2.8 GB。除 Windows 外也提供 macOS（Apple Silicon）安装脚本和原生 Mac 应用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载代码 ZIP 并解压，在解压目录打开 PowerShell",
+  "运行安装脚本：powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\kur.ps1 -Kok C:\\vox（AMD/Intel 加 -Vulkan）",
+  "安装完成后双击 baslat.bat，浏览器打开 http://127.0.0.1:8765/",
+  "macOS：安装 cmake 与 python@3.12 后执行 bash scripts/kur.sh，再双击 baslat.command"
+ ],
+ "summary": "这个项目把 VoxCPM2 语音合成模型和打过补丁的 audio.cpp 引擎打包，使 4 GB 显存的显卡也能运行。用户用英文描述音色，模型生成候选声音，选定后用该声音朗读土耳其语文本。项目附带一键安装脚本、本地网页界面和七个现成合成音色，适合在低配设备上做土耳其语语音合成与朗读。",
+ "tagline": "在 4 GB 显卡上设计土耳其语合成语音"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望把重复性工作流自动化、又要求数据留在本机并保留人工审批环节的开发者和团队。",
+ "date": "2026-10-24",
+ "features": [
+  "用一句话描述工作流，自动生成带界面、定时任务和工具的 bot",
+  "支持 Claude Code、Codex、Opencode 及本地模型等多种 agent CLI",
+  "每个 bot 独立沙箱与工具白名单，写操作需人工审批",
+  "内置知识页面、类型化数据表和 1200+ 集成",
+  "Mac 刘海交互，支持快捷键、语音和 iPhone 伴侣应用"
+ ],
+ "intro": "gawkbot 是一个用 Go 编写的开源 AI 机器人平台，运行在用户自己的机器上。它可以把一句话描述的手动工作流变成带独立界面、定时任务和工具的 microapp，并接入 1200 多个集成。每个 bot 拥有自己的沙箱目录和工具白名单，所有对外发送、提交、购买、删除等写操作都要经过人工审批。\n\n它还能发现并接管本机已安装的 Claude Code、Codex、Opencode、Gemini CLI、Ollama 等 agent CLI，把它们纳入统一的 Chief of Staff 管理。在 Mac 上，bot 的提问会从摄像头刘海弹出，支持键盘快捷键、语音和 iPhone 伴侣应用回复。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备并登录一个 bot CLI，默认使用 Claude Code，也可用 Codex CLI 或 Opencode",
+  "Mac 用户可从官网下载签名 .dmg，拖入 Applications 后启动",
+  "从源码构建：git clone https://github.com/najmuzzaman-mohammad/gawkbot.git",
+  "cd gawkbot && cd web && bun install && bun run build && cd ..",
+  "go build -o gawkbot ./cmd/wuphf && ./gawkbot"
+ ],
+ "summary": "gawkbot 是一个自托管的开源 AI 机器人平台，目标是把日常重复的手动流程变成可管理的 microapp。用户用一句话描述任务，平台就生成带界面、定时任务和工具的 bot，并接入大量第三方服务。它还能接管本机已有的 Claude Code、Codex 等 agent，所有对外写操作都需人工确认，适合重视本地运行与审批控制的自动化场景。",
+ "tagline": "在本地运行、可自托管的开源 AI 机器人工作流平台"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI 智能体添加长期记忆能力的开发者、研究人员，以及希望提升对话连贯性和个性化体验的 AI 应用构建者。",
+ "date": "2026-10-24",
+ "features": [
+  "在 LoCoMo 基准测试上取得领先的长期记忆性能，F1 和 BLEU-1 分别提升 49.11% 和 46.18%",
+  "即插即用的记忆管理架构，支持可插拔的存储引擎、更新策略和检索算法",
+  "通过 MemoryOS-MCP 提供模块化工具，为 AI 应用注入长期记忆能力",
+  "支持多种 LLM，包括 OpenAI、Deepseek、Qwen 等",
+  "集成 ChromaDB 向量数据库和 Docker 部署",
+  "提供 Playground 平台和详细文档，方便快速上手"
+ ],
+ "intro": "MemoryOS 是一个面向个性化 AI 智能体的记忆操作系统，旨在让智能体在长期对话中保持连贯、个性化和上下文感知的交互。它借鉴操作系统中的内存管理思想，采用分层存储架构，包含存储、更新、检索和生成四个核心模块，以实现全面高效的内存管理。\n\n该项目在 LoCoMo 基准测试上取得了领先结果，F1 和 BLEU-1 分数分别平均提升 49.11% 和 46.18%。MemoryOS 提供即插即用的记忆管理架构，支持可插拔的存储引擎、更新策略和检索算法，并可通过 MCP Server 为各类 AI 应用注入长期记忆能力。\n\nMemoryOS 支持多种主流 LLM（如 OpenAI、Deepseek、Qwen 等），并已集成 ChromaDB 向量数据库和 Docker 部署。项目还提供了 Playground 平台和详细的文档，方便开发者快速体验和集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问官方文档 https://bai-lab.github.io/MemoryOS/docs 查看安装与配置指南",
+  "根据文档配置所需的 LLM API 密钥（如 OPENAI_API_KEY、DEEPSEEK_API_KEY 等）",
+  "通过 PyPI 安装 MemoryOS 或使用 Docker 部署",
+  "在 Agent 客户端（如 Claude Desktop、Cline、Cursor）中配置 MemoryOS-MCP 以启用长期记忆"
+ ],
+ "summary": "MemoryOS 是一个为个性化 AI 智能体设计的记忆操作系统，解决长期对话中记忆连贯性和个性化不足的问题。它采用分层存储架构，包含存储、更新、检索和生成模块，支持即插即用的记忆管理，并可通过 MCP 为各类 AI 应用注入长期记忆。适合需要增强智能体记忆能力的开发者和研究者。",
+ "tagline": "为个性化 AI 智能体提供记忆管理的操作系统"
+}

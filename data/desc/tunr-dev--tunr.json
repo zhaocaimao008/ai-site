@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要让 AI agent 读取客户内网数据的 SaaS 供应商，以及希望控制外部访问范围的企业 IT 与安全团队。",
+ "date": "2026-10-24",
+ "features": [
+  "客户侧 connector 仅向外连接，内网地址不离开本机",
+  "按 agent、资源、模式和时长发放授权，需客户审批并附理由",
+  "数据库三层只读限制，写入操作被拒绝",
+  "agent 不接触数据库凭据，端到端 TLS 加密",
+  "完整审计日志，支持 CSV 导出，可即时撤销访问",
+  "提供 MCP 工具，可在 Claude Code、Cursor 等客户端中调用"
+ ],
+ "intro": "tunr 是一个用 Go 编写的工具，核心功能是让 AI agent 访问客户内网中的数据，例如本地 ERP、账本和文件服务器。客户在自己的网络中运行一个只向外发起连接的 connector，把数据库等资源注册为命名资源；供应商的 agent 通过 tunr access 请求访问，客户审批后获得一个本地端口，无需拿到数据库密码。\n\n访问权限按 agent、资源、模式和时长授予，请求需附带理由，读写权限需要两位不同的审批人，授权到期自动失效。数据库访问有三层只读限制，agent 与 connector 之间使用端到端 TLS，所有授权决定、会话和查询摘要都会进入客户可导出的审计日志，撤销后连接会立即断开。\n\n除 Bridge 外，tunr 还提供应用部署与托管、MCP 工具集成，以及最初作为免费内网穿透隧道的能力。目前支持 Postgres 和原始 TCP 资源，项目处于 preview 阶段。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：brew install tunr-dev/tap/tunr 或 curl -fsSL https://raw.githubusercontent.com/tunr-dev/tunr/main/install.sh | sh",
+  "客户侧运行 tunr connect 配置 relay、站点和 token，并用 tunr connect resource add 注册资源",
+  "供应商侧运行 tunr access request 申请授权，客户在门户中审批",
+  "运行 tunr access <资源> --port <端口> 获取本地连接串并访问",
+  "如需在 agent 中调用，运行 claude mcp add tunr -- tunr mcp 接入 MCP 工具"
+ ],
+ "summary": "tunr 解决的是 AI agent 需要读取客户内网数据、但客户不愿开放 VPN 或交出数据库密码的问题。客户在网络内部署一个只向外连接的 connector，把数据库注册为资源；供应商的 agent 按需申请限时授权，客户审批后通过本地端口访问，数据库保持只读，所有操作进入审计日志。适合需要跨企业边界让 agent 安全取数的场景。",
+ "tagline": "让 AI agent 安全访问客户内网数据的连接器"
+}

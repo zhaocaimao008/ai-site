@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 Sonos 音箱、希望用命令行或自动化方式控制家庭音频的开发者，以及想通过 AI 代理管理播放的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "发现并控制同一局域网内 S1 和 S2 两代 Sonos 音箱，支持按房间名、别名或全部设备操作",
+  "提供 CLI、HTTP API 和 MCP 服务器三种控制接口，方便脚本或 AI 代理调用",
+  "内置策略控制：每房间音量上限、安静时段、客户端工具白名单、操作日志和撤销",
+  "基于 Spotify 收藏的 DJ 功能，支持情绪、流派、年代等引导，古典作品按乐章顺序完整播放",
+  "通过 Tailscale 在 tailnet 内远程访问，不暴露公网，音箱始终留在局域网",
+  "纯 Rust 实现，禁止 unsafe 代码，使用自有异步栈，无需在音箱上安装任何东西"
+ ],
+ "intro": "FrankenSonos 是一个用 Rust 编写的 Sonos 音箱控制器和守护进程，直接通过局域网协议（SSDP 发现、UPnP/SOAP、GENA 事件）与音箱通信，同时支持 S1 和 S2 两代设备。它提供 CLI、HTTP API 和 MCP 服务器三种接口，让用户或 AI 代理可以控制播放、音量、分组、队列等。\n\n项目强调内存安全（禁止 unsafe 代码）和代理友好设计，内置音量上限、安静时段、操作日志和撤销等策略。还包含一个基于 Spotify 收藏的 DJ 功能，可按流派、情绪、年代等偏好选曲，古典作品会完整播放。通过 Tailscale 可在 tailnet 内远程访问，不暴露公网。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 `fsonos selftest` 检查你的 Sonos 环境，不会改变任何可听内容",
+  "启动守护进程：`fsonos serve`",
+  "使用 CLI 控制，例如 `fsonos pause Kitchen` 或 `fsonos volume Kitchen 20 --fade 10s`",
+  "如需远程访问，运行 `fsonos tailscale setup` 通过 Tailscale Serve 配置 HTTPS"
+ ],
+ "summary": "FrankenSonos 是一个 Rust 编写的 Sonos 音箱控制器，直接通过局域网协议与 S1、S2 两代设备通信，提供 CLI、HTTP API 和 MCP 接口。它适合想用命令行或 AI 代理控制家庭音频的开发者，内置音量上限、安静时段等策略，并支持通过 Tailscale 在 tailnet 内远程操作，音箱无需离开局域网。",
+ "tagline": "用 Rust 编写的 Sonos 音箱控制器，支持 CLI、HTTP 和 MCP"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 LLM 智能体、函数调用编排的开发者与研究人员，以及希望优化多工具调用延迟和成本的工程师。",
+ "date": "2026-10-24",
+ "features": [
+  "自动识别任务依赖并并行化函数调用",
+  "支持开源模型（如 LLaMA）和 OpenAI GPT 系列",
+  "提供 HotpotQA、Movie、ParallelQA 基准评估",
+  "支持 vLLM、Azure、Friendli 等多种后端",
+  "可通过自定义工具和示例提示适配新场景",
+  "支持流式执行以降低延迟"
+ ],
+ "intro": "LLMCompiler 是一个用于编排 LLM 并行函数调用的框架，支持开源与闭源模型。它通过自动识别任务间的依赖关系，将问题分解为可并行执行的任务，从而优化多函数调用的执行流程。\n\n传统方法通常需要顺序推理和行动，导致高延迟、高成本甚至不准确的行为。LLMCompiler 让用户指定工具和可选的上下文示例，自动计算优化的函数调用编排，在多种任务上实现了延迟加速、成本节省和准确率提升。\n\n该项目基于 ICML 2024 论文实现，提供在 HotpotQA、Movie Recommendation 和 ParallelQA 等基准上的评估脚本，并支持 OpenAI、Azure、Friendli 以及 vLLM 部署的自定义模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建 conda 环境：conda create --name llmcompiler python=3.10 -y",
+  "激活环境：conda activate llmcompiler",
+  "克隆仓库并安装依赖：git clone https://github.com/SqueezeAILab/LLMCompiler && cd LLMCompiler && pip install -r requirements.txt",
+  "设置 OpenAI API 密钥：export OPENAI_API_KEY=\"sk-xxx\"",
+  "运行基准评估：python run_llm_compiler.py --benchmark {benchmark-name} --store {store-path} [--stream]"
+ ],
+ "summary": "LLMCompiler 解决的是 LLM 多函数调用时顺序执行导致的高延迟和高成本问题。它自动分析任务依赖，将可并行的函数调用编排成优化执行计划，支持 LLaMA 等开源模型和 GPT 系列。适合需要让 LLM 调用多个工具完成复杂任务的场景，例如多跳问答、推荐系统和并行问答基准测试。",
+ "tagline": "自动并行化 LLM 函数调用的编译器框架"
+}

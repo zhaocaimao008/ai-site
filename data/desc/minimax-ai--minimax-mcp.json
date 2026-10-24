@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 MCP 客户端中直接调用 MiniMax 多模态生成能力的开发者，以及需要语音、图像、视频生成工具的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "提供文本转语音与声音克隆能力",
+  "支持文本生成图像、图像生成视频与文本生成视频",
+  "可作为 MCP 服务器接入 Claude Desktop、Cursor、Windsurf 等客户端",
+  "支持 stdio 与 SSE 两种传输方式",
+  "可通过环境变量选择资源以 URL 返回或下载到本地"
+ ],
+ "intro": "MiniMax-MCP 是 MiniMax 官方提供的 Model Context Protocol（MCP）服务器，用 Python 实现。它把 MiniMax 的语音合成、声音克隆、图像生成和视频生成等 API 封装成 MCP 工具，让 Claude Desktop、Cursor、Windsurf、OpenAI Agents 等 MCP 客户端可以直接调用这些能力。\n\n项目支持 stdio 和 SSE 两种传输方式，输出资源可以选择以 URL 形式返回，或下载到本地指定目录。使用时需要从 MiniMax 平台获取 API key，并注意 API key 与 API host 必须按区域匹配，否则会报 invalid api key 错误。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 MiniMax 平台获取 API key，并确认使用 Global 还是 Mainland 的 API host",
+  "安装 uv：curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "在 Claude Desktop 的 claude_desktop_config.json 中添加 MiniMax MCP 配置，command 使用 uvx，args 为 minimax-mcp -y",
+  "在 env 中填写 MINIMAX_API_KEY、MINIMAX_MCP_BASE_PATH 和与 key 匹配的 MINIMAX_API_HOST",
+  "重启客户端后即可通过 MCP 工具调用语音、图像和视频生成能力"
+ ],
+ "summary": "MiniMax-MCP 是 MiniMax 官方的 MCP 服务器，把语音合成、声音克隆、图像生成和视频生成等 API 封装成工具，供 Claude Desktop、Cursor 等 MCP 客户端调用。适合想在已有 AI 客户端里直接生成语音、图片或视频的开发者，配置 API key 和对应区域的 host 即可使用。",
+ "tagline": "MiniMax 官方 MCP 服务器，接入语音、图像与视频生成"
+}

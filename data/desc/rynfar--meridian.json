@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用现有 Claude 或 Antigravity 订阅在 Pi、OpenCode 等编码客户端中调用 AI 的开发者，以及需要本地 API 桥接和用量监控的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "将 Claude 和 Antigravity 订阅接入 Pi、OpenCode 等编码客户端",
+  "本地 API 桥接，支持 Anthropic Messages 和 OpenAI Chat Completions 等客户端 API",
+  "浏览器管理界面，可管理提供商、请求和用量",
+  "可选的 macOS 桌面应用，用于管理本地服务、版本和诊断",
+  "Claude 后端支持持久会话、提示缓存和多账号配置",
+  "Antigravity 预览支持流式输出、客户端工具和对话复用"
+ ],
+ "intro": "Meridian 是一个本地 API 桥接服务，让 Pi、OpenCode 等编码客户端通过你的 Claude 或 Antigravity 订阅账号来使用 AI 能力。Claude 请求经由 Anthropic 的 Agent SDK 处理，Antigravity 请求则通过 Google 官方已登录的 agy CLI 运行。\n\n它提供浏览器管理界面和可选的 Mac 应用，用于管理提供商、查看请求历史和用量。Claude 后端已发布，支持持久会话、提示缓存和多账号配置；Antigravity 后端处于预览阶段，支持流式输出、客户端工具和对话复用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 22+",
+  "运行 npm install -g @rynfar/meridian 安装 Meridian",
+  "运行 claude login 登录 Claude 账号",
+  "运行 meridian 启动服务",
+  "打开 http://127.0.0.1:3456 进行配置"
+ ],
+ "summary": "Meridian 是一个本地 API 桥接工具，让你用已有的 Claude 或 Antigravity 订阅账号，在 Pi、OpenCode 等编码客户端中直接调用 AI 能力。它把客户端请求转发到对应的官方后端，并提供浏览器界面和 Mac 应用来管理提供商、查看请求历史和用量。适合想复用订阅额度、又不想更换编码工具的开发者。",
+ "tagline": "用订阅账号将 Claude 和 Antigravity 接入编码客户端"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合图像修复领域的研究人员和开发者，以及希望快速体验文本引导图像修复功能的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "即插即用地集成到任何预训练扩散模型中进行图像修复",
+  "提供针对 Stable Diffusion v1.5 和 SDXL 的预训练检查点",
+  "支持分割掩码和随机掩码两种训练模式",
+  "包含完整的训练、推理和评估代码",
+  "提供 Gradio 演示和 ComfyUI 集成",
+  "发布了 BrushData 训练数据集和 BrushBench 测试基准"
+ ],
+ "intro": "BrushNet 是 ECCV 2024 论文的官方实现，提出了一种基于扩散模型的文本引导图像修复方法。其核心设计是将掩码图像特征与噪声潜变量分开处理，以降低学习负担，并在整个预训练模型上施加密集的逐像素控制，从而提升修复效果。\n\n该项目提供了完整的训练、推理和评估代码，以及针对 Stable Diffusion v1.5 和 SDXL 的预训练检查点。BrushNet 可以即插即用地集成到任何预训练的扩散模型中，支持分割掩码和随机掩码两种模式。此外，还提供了 Gradio 演示和 ComfyUI 集成，方便用户快速体验和部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/TencentARC/BrushNet.git",
+  "创建并激活 conda 环境：conda create -n diffusers python=3.9 -y && conda activate diffusers",
+  "安装 PyTorch 1.12.1 和依赖：pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116",
+  "安装 diffusers 和依赖包：pip install -e . && cd examples/brushnet/ && pip install -r requirements.txt",
+  "下载检查点和数据集，并参考 README 运行推理或训练脚本"
+ ],
+ "summary": "BrushNet 是一个基于扩散模型的文本引导图像修复项目，通过分解双分支架构将掩码图像特征与噪声潜变量分开处理，并利用逐像素控制提升修复质量。它可以即插即用地集成到预训练扩散模型中，支持 Stable Diffusion v1.5 和 SDXL，适用于图像修复研究、应用开发以及快速体验文本引导修复的场景。",
+ "tagline": "即插即用的文本引导图像修复扩散模型"
+}

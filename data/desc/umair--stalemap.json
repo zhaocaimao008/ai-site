@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编码代理进行 JavaScript/TypeScript 开发的开发者，尤其是项目依赖较新、代理经常生成过时代码的场景。",
+ "date": "2026-10-24",
+ "features": [
+  "自动识别训练截止后发生变化的依赖，并生成变更笔记写入 AGENTS.md 或 CLAUDE.md",
+  "编辑时守卫：每次编辑后运行类型检查，若使用变更 API 则立即报错并附说明",
+  "提供 MCP 工具 search_changes，代理可用自然语言查询变更",
+  "对比依赖两个版本的 .d.ts 文件，检测移除、重命名、新增必填参数等变更",
+  "支持 Claude Code、Cursor、Codex、OpenCode 及任意 MCP 客户端",
+  "提供 GitHub Action，可在 CI 中检查笔记是否缺失或过时"
+ ],
+ "intro": "stalemap 是一个面向 JavaScript/TypeScript 项目的工具，用于解决编码代理（如 Claude Code、Cursor、Codex）因训练数据截止而使用过时 API 的问题。它会找出项目依赖中在模型训练截止日期之后发生变化的包，并通过三种方式告知代理：在 AGENTS.md 或 CLAUDE.md 中写入简短的变更笔记；在每次编辑后运行类型检查，若使用了变更后的 API 则立即给出编译器错误和对应说明；提供 MCP 工具 search_changes 供代理按需查询。\n\nstalemap 通过对比依赖两个版本的 .d.ts 文件、发布说明和升级指南来识别变更，支持 npm、pnpm、yarn、bun 等包管理器。它提供命令行工具、Claude Code 插件、MCP 服务器和 GitHub Action 等多种集成方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx stalemap  # 预览变更和将要写入的笔记块",
+  "npx stalemap sync  # 将笔记块写入 AGENTS.md 或 CLAUDE.md",
+  "npx stalemap check  # 用于 CI：当笔记块缺失或过时时退出码为 1",
+  "npx stalemap guard src/**/*.ts  # 手动运行编辑时守卫",
+  "stalemap setup --agent cursor  # 为 Cursor 等代理自动配置笔记、MCP 服务器和守卫"
+ ],
+ "summary": "stalemap 解决编码代理因训练数据截止而使用过时依赖 API 的问题。它会找出项目依赖中在模型训练截止后发生变化的包，通过写入 AGENTS.md/CLAUDE.md 的笔记、编辑后的类型检查守卫以及 MCP 查询工具，让代理及时了解变更。适合使用 Claude Code、Cursor 等代理开发 JavaScript/TypeScript 项目、依赖版本较新的开发者。",
+ "tagline": "让编码代理了解训练截止后依赖的变化"
+}

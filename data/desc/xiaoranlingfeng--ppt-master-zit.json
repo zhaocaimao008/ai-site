@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地生成 PPT 配图、注重隐私或希望避免按图付费的开发者与 PPT 制作用户。",
+ "date": "2026-10-24",
+ "features": [
+  "默认使用本地 ComfyUI 运行 Qwen-Image-2.1 文生图工作流，无需 API key",
+  "支持按演示文稿切换 MOSS-Image SFT 和 Z-Image Turbo 工作流",
+  "interview gate 在生成前逐项确认大纲、页数、内容、动画和配图模型",
+  "生成后可编辑的 PPTX，并修复项目符号继承问题",
+  "导出后转 PDF 逐页检查渲染结果",
+  "支持清单续跑，修改单个提示词不会重新生成整份演示文稿"
+ ],
+ "intro": "这是 ppt-master v6.7.0 的一个分支版本，将 AI 幻灯片配图的生成后端从云端 API 替换为本地 ComfyUI。整个可编辑 PPTX 的生成流程与上游一致，区别在于默认使用本地 Qwen-Image-2.1 文生图工作流，无需 API key，也没有按图计费，提示词和图片都不离开本机。\n\n除了默认的 Qwen-Image-2.1，还可以按演示文稿选择 MOSS-Image SFT 或 Z-Image Turbo 两个本地工作流。项目新增了逐项确认的 interview gate，在生成前与用户确认大纲、页数、每页内容、动画、配图模型等决策。生成后还会将 PPTX 转成 PDF 并逐页检查渲染结果。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 ComfyUI 并放置 Qwen-Image-2.1 模型文件（diffusion_models、text_encoders、vae 对应目录）",
+  "将项目文件夹放入 agent 的 skills 目录，或使用能执行 Python 的 agent",
+  "复制 .env.example 为 .env，设置 IMAGE_BACKEND=comfyui、COMFY_MODEL=qwen、COMFY_ROOT 为 ComfyUI 集成包根目录",
+  "运行手动冒烟测试：python scripts/image_gen.py \"students collaborating in a bright classroom, flat illustration, warm tones, Strictly no text, no letters, no numbers, no watermarks anywhere.\" --backend comfyui --aspect_ratio 16:9 --image_size 1K -o ./out"
+ ],
+ "summary": "这个项目是 ppt-master 的分支，把 AI 幻灯片配图的生成后端换成本地 ComfyUI，默认用 Qwen-Image-2.1 文生图，无需 API key，也不按图付费，图片和提示词都留在本机。适合想在本地生成 PPT 配图、注重隐私或希望控制成本的用户。生成流程与上游一致，输出可编辑 PPTX，并支持切换 MOSS-Image 和 Z-Image Turbo 工作流。",
+ "tagline": "本地 ComfyUI 生图的 PPT 生成工具"
+}

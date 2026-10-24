@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地私密运行大模型的开发者、AI 爱好者，以及需要将本地模型作为 OpenAI API 替代品接入现有工具的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "本地运行开源 LLM，支持 HuggingFace 上的 Llama、Gemma、Qwen、Mistral、Phi 等模型",
+  "提供 OpenAI 兼容的本地 API 服务器（http://localhost:1337/v1），可被任意客户端调用",
+  "内置多种推理引擎（llama.cpp、MLX-VLM），支持投机解码与 KV 缓存优化",
+  "集成 OpenAI、Anthropic、Mistral 等云端模型提供商，可自由切换",
+  "支持连接多个 MCP 服务器，扩展工具与文件访问能力",
+  "提供 Artifacts 实时预览、自定义助手、项目对话树等辅助功能"
+ ],
+ "intro": "Atomic Chat 是一个本地 AI 应用与推理引擎，让你在自己的电脑上运行开源权重的大语言模型，实现完全离线的私密对话。它基于 Tauri 构建，提供 macOS、Windows、Linux 桌面客户端以及 iOS、Android 移动端。\n\n项目内置三种推理引擎：基于 llama.cpp 的定制版本（支持 TurboQuant KV 缓存优化）、上游 llama.cpp 以及面向 Apple Silicon 的 MLX-VLM。它支持 Llama、Gemma、Qwen、Mistral、Phi 等模型，并可通过 OpenAI 兼容的本地 API（http://localhost:1337/v1）被其他工具调用。\n\n除了本地模型，Atomic Chat 也集成了 OpenAI、Anthropic 等云端模型提供商，并支持 MCP 服务器、自定义助手、项目对话树等功能，方便在同一个界面中混合使用本地与云端模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载对应平台的安装包（macOS、Windows、Linux）或从应用商店安装移动版",
+  "启动应用，在界面中加载一个本地模型（如从 HuggingFace 下载的 GGUF 模型）",
+  "如需通过 API 调用，确保模型已加载，然后使用 curl 或 OpenAI SDK 向 http://localhost:1337/v1 发送请求",
+  "示例：curl http://localhost:1337/v1/chat/completions -H \"Content-Type: application/json\" -d '{\"model\":\"<model-id-loaded-in-atomic-chat>\",\"messages\":[{\"role\":\"user\",\"content\":\"Say hello in one word\"}]}'"
+ ],
+ "summary": "Atomic Chat 是一个让你在个人电脑上离线运行开源大模型的桌面应用与推理引擎。它整合了 llama.cpp 和 MLX-VLM 等后端，支持 Llama、Gemma、Qwen 等模型，并对外提供 OpenAI 兼容的本地 API，方便将本地模型接入现有工具链。适合注重隐私、希望完全本地使用 AI 的开发者与普通用户。",
+ "tagline": "本地运行开源大模型的桌面聊天与推理引擎"
+}

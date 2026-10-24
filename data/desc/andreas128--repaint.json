@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究图像修复、扩散模型的研究人员和开发者，以及希望使用预训练模型快速实现图像填充的从业者。",
+ "date": "2026-10-24",
+ "features": [
+  "使用预训练的扩散模型进行图像修复，无需重新训练",
+  "提供 ImageNet、CelebA-HQ、Places2 的模型和配置文件",
+  "支持多种掩码类型：thin、thick、every second line、super-resolution、expand、half",
+  "可通过调整 schedule 参数（如 t_T、jump_n_sample）控制生成速度与质量",
+  "代码结构清晰，包含 schedule、denoise、predict、condition 等模块的详细注释"
+ ],
+ "intro": "RePaint 是 CVPR 2022 论文的官方 PyTorch 实现，提出一种使用去噪扩散概率模型（DDPM）进行图像修复（inpainting）的推理方案。它不训练或微调扩散模型，而是对预训练模型进行条件化，利用已知区域逐步引导未知区域的生成。\n\n项目提供了 ImageNet、CelebA-HQ 和 Places2 数据集的预训练模型与配置文件，支持多种掩码类型（如细条、粗条、隔行、超分辨率、扩展、半图）。用户可以通过修改配置文件中的路径和参数，将方法应用于自己的图像。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/andreas128/RePaint.git",
+  "pip install numpy torch blobfile tqdm pyYaml pillow",
+  "pip install --upgrade gdown && bash ./download.sh",
+  "python test.py --conf_path confs/face_example.yml"
+ ],
+ "summary": "RePaint 是一个基于去噪扩散概率模型的图像修复项目，它利用预训练模型，通过已知区域引导未知区域的生成，无需额外训练。适合需要修复图像缺失部分的研究者和开发者，支持多种数据集和掩码类型，并允许调整参数以平衡速度与效果。",
+ "tagline": "基于扩散模型的图像修复方法"
+}

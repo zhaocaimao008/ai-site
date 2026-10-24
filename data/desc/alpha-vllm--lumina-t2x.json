@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合研究多模态生成模型的研究人员、需要文本生成图像/音频等能力的开发者，以及对扩散模型和 Transformer 架构感兴趣的 AI 从业者。",
+ "date": "2026-10-24",
+ "features": [
+  "支持文本到图像、音频、音乐等多种模态的生成",
+  "提供基于 Flow-based Large Diffusion Transformers 的统一架构",
+  "包含多个预训练模型检查点（如 Lumina-Next-SFT、Lumina-T2I）",
+  "支持与 Hugging Face diffusers 和 ComfyUI 集成",
+  "提供推理和训练代码，包括 Dreambooth 微调"
+ ],
+ "intro": "Lumina-T2X 是一个基于 Flow-based Large Diffusion Transformers 的统一框架，旨在将文本转换为任意模态、分辨率和时长的内容。该项目在 ICLR 2025 和 NeurIPS 2024 上亮相，提供了包括文本到图像、文本到音频、文本到音乐等多种生成能力的模型和代码。\n\n项目包含多个模型变体，如 Lumina-Next、Lumina-T2I、Lumina-T2Audio 等，并提供了预训练检查点、推理代码和训练脚本。此外，Lumina-T2X 还支持与 Hugging Face diffusers 和 ComfyUI 等生态工具的集成，方便开发者使用和扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Lumina-T2X 是一个统一的多模态生成框架，利用流式大扩散 Transformer 将文本转换为图像、音频、音乐等不同模态的内容。它提供了多个预训练模型和推理代码，适合研究人员和开发者探索文本到多模态生成任务，并支持与 diffusers、ComfyUI 等工具集成。",
+ "tagline": "基于流式大扩散Transformer的统一多模态生成框架"
+}

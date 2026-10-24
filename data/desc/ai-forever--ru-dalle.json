@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本生成图像感兴趣的开发者、研究人员，以及需要俄语图像生成能力的应用开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "支持俄语文本生成图像，提供多个预训练模型",
+  "内置超分辨率模块，提升生成图像质量",
+  "使用 ruCLIP 对生成结果进行自动评分和挑选",
+  "支持图像提示（Image Prompt）控制生成风格",
+  "提供微调示例和 Colab 笔记本，便于定制模型"
+ ],
+ "intro": "ruDALL-E 是一个基于 PyTorch 的文本到图像生成项目，专门针对俄语优化。它提供了多个预训练模型（如 Malevich XL、Emojich XL、Surrealist XL），可通过 pip 安装 rudalle 包快速使用。项目包含生成图像、超分辨率、基于 ruCLIP 的自动挑选等完整流程，并支持图像提示和微调。\n\nREADME 中给出了详细的代码示例和 Colab 笔记本，方便开发者上手。此外，还提供了与 Hugging Face Spaces 的集成以及视频生成（VideoDALL-E）的扩展。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 rudalle 包：pip install rudalle==1.1.3",
+  "导入所需模块并加载模型：from rudalle import get_rudalle_model, get_tokenizer, get_vae",
+  "准备模型：dalle = get_rudalle_model('Malevich', pretrained=True, fp16=True, device='cuda')",
+  "使用 generate_images 函数生成图像：generate_images(text, tokenizer, dalle, vae, top_k=2048, images_num=24, bs=8, top_p=0.995)",
+  "可选：使用 super_resolution 和 cherry_pick_by_ruclip 进行后处理"
+ ],
+ "summary": "ruDALL-E 是一个专门针对俄语的文本到图像生成项目，基于 PyTorch 实现。它提供了多个预训练模型，能够根据俄语描述生成图像，并包含超分辨率、自动挑选等后处理流程。适合需要俄语图像生成能力的开发者、研究人员，或对文本生成图像技术感兴趣的用户进行实验和应用开发。",
+ "tagline": "根据俄语文本生成图像的 ruDALL-E 模型"
+}

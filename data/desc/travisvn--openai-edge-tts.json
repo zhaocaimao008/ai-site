@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要免费 TTS 服务的开发者、自托管 AI 应用用户，以及希望用本地服务替换 OpenAI、Azure 或 ElevenLabs 付费 TTS 的团队。",
+ "date": "2026-10-24",
+ "features": [
+  "提供与 OpenAI 兼容的 /v1/audio/speech 端点，请求结构一致",
+  "支持 SSE 流式音频输出，实现实时播放",
+  "映射 OpenAI 语音（alloy、echo 等）到 edge-tts 语音，也可直接指定任意 edge-tts 语音",
+  "支持多种音频格式：mp3、opus、aac、flac、wav、pcm",
+  "可调节语速（0.25x 到 4.0x）",
+  "通过 Docker 或 Python 本地运行，配置灵活"
+ ],
+ "intro": "OpenAI-Compatible Edge-TTS API 是一个本地部署的文本转语音服务，它模拟 OpenAI 的 /v1/audio/speech 接口，让现有调用 OpenAI TTS 的应用无需修改代码即可切换到免费方案。底层使用 edge-tts，调用微软 Edge 的在线语音合成服务，因此完全免费。\n\n项目支持 OpenAI 的六种语音映射（alloy、echo、fable、onyx、nova、shimmer），也允许直接指定任意 edge-tts 语音。输出格式包括 mp3、opus、aac、flac、wav 和 pcm，语速可在 0.25 到 4.0 倍之间调整，并支持 SSE 流式返回音频。\n\n部署方式灵活，可通过 Docker 快速运行，也支持 Python 虚拟环境本地启动。适合需要低成本 TTS 能力的开发者、自托管 LLM 应用（如 Open WebUI）用户，以及希望替换付费 TTS 服务的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 Docker 容器：docker run -d -p 5050:5050 travisvn/openai-edge-tts:latest",
+  "或克隆仓库并配置 .env 文件（复制 .env.example）",
+  "使用 Docker Compose 启动：docker compose up -d",
+  "访问 http://localhost:5050/v1/audio/speech 测试 API"
+ ],
+ "summary": "这个项目提供一个本地运行的文本转语音 API，接口与 OpenAI 的 /v1/audio/speech 兼容，底层调用免费的 edge-tts 服务。它适合需要低成本语音合成能力的开发者，尤其是那些已经在使用 OpenAI TTS 接口、希望无痛切换以节省费用的应用，也适合自托管 AI 工具集成语音输出。",
+ "tagline": "兼容 OpenAI 的免费本地 TTS API，基于 edge-tts"
+}

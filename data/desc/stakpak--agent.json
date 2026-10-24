@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要自动化运维、部署和基础设施管理的开发者与 DevOps 团队，尤其是希望用 AI 代理但担心生产环境安全的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "Autopilot 24/7 自主运行，支持启动、停止、状态查看和日志",
+  "Secret Substitution 让 AI 使用凭据而不暴露实际值",
+  "Warden Guardrails 网络级策略阻止破坏性操作",
+  "内置 DevOps Rulebooks 和文档研究代理",
+  "支持定时任务与 Slack、Telegram、Discord 通知路由",
+  "基础设施代码索引与语义搜索（Terraform、Kubernetes、Dockerfile、GitHub Actions）"
+ ],
+ "intro": "Stakpak 是一个用 Rust 编写的开源 AI 代理，设计为 24/7 运行在你的机器上，帮助保持应用持续运行，只在需要人工介入时通知你。它试图提供类似 PaaS 的便利，但避免平台锁定。\n\n与直接让 LLM 操作生产环境不同，Stakpak 强调安全机制：Secret Substitution 让模型使用凭据却看不到实际值，Warden Guardrails 在网络层阻止破坏性操作，并内置 DevOps 知识库。它支持生成基础设施代码、调试 Kubernetes、配置 CI/CD 和自动化部署。\n\n项目提供 Autopilot 模式，可通过命令行启动后台自主代理，并支持 Slack、Telegram、Discord 等通知渠道和定时任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "curl -sSL https://stakpak.dev/install.sh | sh",
+  "stakpak init",
+  "stakpak autopilot up",
+  "stakpak autopilot status",
+  "stakpak autopilot logs"
+ ],
+ "summary": "Stakpak 是一个常驻机器的开源 AI 代理，用于自动保持应用运行、生成基础设施代码、调试 Kubernetes 和配置 CI/CD。它通过 Secret Substitution 和 Warden Guardrails 等机制，让 LLM 在不直接接触凭据和破坏性操作的前提下参与 DevOps 工作，适合希望用 AI 自动化运维但重视生产安全的开发者和团队。",
+ "tagline": "常驻机器的开源 DevOps AI 代理"
+}

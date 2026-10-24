@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 AMD Radeon 或 NVIDIA 显卡、希望在家本地运行语音助手并控制智能家居的开发者与普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "低延迟语音对话：停止说话后约 0.23 秒开始回答",
+  "智能轮次检测与打断：识别你是否说完，可随时打断",
+  "内置实用工具：网页搜索、天气、计时器、购物清单和记忆",
+  "智能家居控制：支持 Home Assistant 和 Jellyfin",
+  "多平台支持：Linux 和 Windows（WSL2），AMD/NVIDIA GPU",
+  "语音克隆与多音色：7 种内置声音，支持 5-15 秒样本克隆"
+ ],
+ "intro": "Ming Voice 是一个完全本地运行的实时语音助手，基于 inclusionAI/Ming-3.0-audio-tiny 语音到语音模型。它能在你停止说话后约 0.23 秒开始回答，支持智能轮次检测、随时打断和唤醒词，对话记录在重启后仍可恢复。\n\n除了自然对话，它还内置了网页搜索、天气、计算器、计时器、购物清单和记忆功能，并能控制 Home Assistant 和 Jellyfin。所有音频处理都在本地 GPU 上完成，开启工具时仅搜索词和地点会发送到外部服务。\n\n项目提供 Linux 和 Windows（WSL2）的一键安装脚本，支持 AMD Radeon RX 6000 系列及以上（NVIDIA 为实验性支持），需要至少 16GB 显存。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux：在终端运行 curl -fsSL https://raw.githubusercontent.com/JMS1717/ming-voice/main/install.sh | bash",
+  "Windows：在 PowerShell 运行 irm https://raw.githubusercontent.com/JMS1717/ming-voice/main/install.ps1 | iex",
+  "安装脚本会自动配置 Python、PyTorch 和模型（约 20GB），完成后从应用菜单启动 Ming Voice"
+ ],
+ "summary": "Ming Voice 是一个完全本地运行的实时语音助手，基于 Ming-3.0-audio-tiny 模型，能在你停止说话后约 0.23 秒开始回答。它适合希望在家用自己 GPU 运行语音助手、控制智能家居或进行自然语音对话的用户，支持 AMD Radeon 和 NVIDIA 显卡，提供 Linux 与 Windows 一键安装。",
+ "tagline": "本地实时语音助手，支持 AMD/NVIDIA GPU"
+}

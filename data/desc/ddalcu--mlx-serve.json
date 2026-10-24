@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Mac 上离线运行开源模型、使用 Claude Code 等编码代理，或需要本地图像、音视频生成能力的开发者和普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "兼容 OpenAI、Anthropic、Ollama 三种 API，支持流式输出、工具调用、JSON schema、视觉和推理",
+  "支持 FLUX.2、Qwen-Image、LTX-Video、ACE-Step、Qwen3-TTS 等图像、视频、音乐、语音和 3D 模型",
+  "可从 SSD 流式读取专家权重，在 128 GB Mac 上运行 GLM-5.3-Flash、DeepSeek-V4.1-Flash 等大模型",
+  "支持多台 Mac 通过 Thunderbolt 5 或局域网协同运行和共享模型",
+  "内置语音转写与会议记录，支持 30 种语言和说话人区分",
+  "提供 macOS 应用、CLI 和 Homebrew 安装，另有 iPhone 版本"
+ ],
+ "intro": "MLX-Serve 是一个面向 Apple Silicon 的原生本地推理服务，由 Zig 后端和 Swift 前端组成，不依赖 Python。它同时兼容 OpenAI、Anthropic 和 Ollama 的 API，任何支持这些接口的客户端都可以直接连接使用。\n\n除了文本对话和编码代理，它还支持图像、视频、音乐、语音合成与克隆、3D 生成，以及多语言语音转写。应用会根据 Mac 内存推荐可运行的模型，并支持从 SSD 流式加载超出内存的大模型，也支持多台 Mac 通过网络共享模型。\n\n项目提供 macOS 应用、命令行工具和 Homebrew 安装方式，服务默认监听 localhost:11234，浏览器打开即可使用内置控制台。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载 MLX-Serve.dmg 并拖入 Applications 打开，或执行 brew tap ddalcu/mlx-serve https://github.com/ddalcu/mlx-serve && brew trust ddalcu/mlx-serve && brew install --cask mlx-serve",
+  "仅需命令行服务时执行 brew install mlx-serve",
+  "运行 mlx-serve run gemma4 下载模型、启动服务并进入对话",
+  "运行 mlx-serve serve 启动已下载模型的服务，默认地址为 http://localhost:11234",
+  "将任意 OpenAI、Anthropic 或 Ollama 客户端指向该地址，或在浏览器打开使用内置控制台"
+ ],
+ "summary": "MLX-Serve 让 Apple Silicon Mac 在本地离线运行开源大模型，并提供兼容 OpenAI、Anthropic 和 Ollama 的接口，现有客户端可直接接入。除文本对话和编码代理外，它还覆盖图像、视频、音乐、语音与 3D 生成，并支持从 SSD 流式加载超出内存的模型。适合想在 Mac 上自建本地推理服务、注重隐私或需要多模态生成能力的开发者。",
+ "tagline": "在 Mac 上本地运行大模型与多模态生成的原生服务"
+}

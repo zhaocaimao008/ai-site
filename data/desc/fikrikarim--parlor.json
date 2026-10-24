@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合想在本地设备上体验实时多模态语音助手的开发者，以及关注端侧 AI 和语音交互的研究者。",
+ "date": "2026-10-24",
+ "features": [
+  "完全本地运行的多模态语音对话，支持摄像头画面输入",
+  "基于 smart-turn-v3 的免按键轮次判断与打断处理",
+  "流式语音识别、回复生成与逐句 TTS 播放",
+  "定时器、实时翻译、只听模式等语音控制动作",
+  "可选后台研究功能，通过 OpenAI 兼容端点联网查询",
+  "支持 Gemma 4 e2b/e4b/12b 多种模型尺寸配置"
+ ],
+ "intro": "Parlor 是一个完全在本地设备上运行、实时多模态 AI 实验项目，功能类似 GPT-Live。它通过浏览器采集麦克风和摄像头数据，经 WebSocket 发送到 FastAPI 服务器，由 Gemma 4 模型在 llama.cpp 上完成语音与视觉理解并流式生成回复，再用 Kokoro TTS 逐句朗读。\n\n项目采用级联架构，包含智能轮次判断、打断处理、定时器、实时翻译、只听模式等交互特性。默认完全离线运行，可选配置 OpenAI 兼容端点进行后台研究。目前为研究预览版，适合在 Apple Silicon Mac 或 Linux GPU 设备上体验本地实时语音助手。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/fikrikarim/parlor.git && cd parlor",
+  "curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "brew install llama.cpp",
+  "uv sync",
+  "uv run parlor",
+  "打开 http://localhost:8000，授权摄像头和麦克风后开始对话"
+ ],
+ "summary": "Parlor 是一个完全在本地运行的实时多模态语音助手实验项目，功能类似 GPT-Live。它用浏览器采集麦克风和摄像头数据，由本地 Gemma 4 模型理解并流式生成回复，再通过 TTS 朗读。适合想在 Apple Silicon Mac 或 Linux GPU 上体验端侧实时语音交互的开发者，也支持可选的联网后台研究。",
+ "tagline": "完全本地运行、实时多模态语音助手"
+}

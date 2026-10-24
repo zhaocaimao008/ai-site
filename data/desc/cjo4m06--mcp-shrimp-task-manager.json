@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 辅助开发的开发者，尤其是依赖 Claude Code、Cline 等 MCP 兼容工具的团队，用于管理复杂项目任务和保持开发上下文。",
+ "date": "2026-10-24",
+ "features": [
+  "智能任务规划与分解，将复杂项目拆分为可管理的子任务",
+  "自动跟踪任务依赖关系，管理任务之间的先后顺序",
+  "持久化内存，任务和进度跨会话保存，避免上下文丢失",
+  "研究模式，系统化探索技术方案并生成分析报告",
+  "代理系统，可为特定任务分配专门的 AI 代理",
+  "提供任务查看器 Web 界面，支持拖拽和实时搜索"
+ ],
+ "intro": "Shrimp Task Manager 是一个基于 MCP（Model Context Protocol）的任务管理服务器，旨在帮助 AI 代理在软件开发过程中保持上下文、分解复杂任务并跟踪进度。它通过自然语言指令将开发需求转化为结构化任务，支持依赖管理和迭代优化。\n\n项目强调思维链、反思和风格一致性，提供持久化内存、智能任务分解和上下文保留等功能，使 AI 代理能够像开发者一样进行推理和规划。它兼容 Claude Code、Cline 等 MCP 客户端，并包含可选的 Web 界面用于可视化任务管理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 18+ 和 npm，然后克隆仓库并安装依赖：git clone https://github.com/cjo4m06/mcp-shrimp-task-manager.git && cd mcp-shrimp-task-manager && npm install && npm run build",
+  "在项目目录创建 .mcp.json 文件，配置 MCP 服务器路径和环境变量（如 DATA_DIR）",
+  "使用配置启动 Claude Code：claude --dangerously-skip-permissions --mcp-config .mcp.json",
+  "在对话中初始化项目规则：\"init project rules\"",
+  "规划并执行任务：\"plan task: implement user authentication\"，然后 \"execute task\" 或 \"continuous mode\""
+ ],
+ "summary": "Shrimp Task Manager 是一个 MCP 服务器，帮助 AI 代理在开发过程中管理任务。它能把自然语言需求拆解成结构化子任务，跟踪依赖关系，并跨会话保存进度，避免上下文丢失。适合使用 Claude Code 等工具的开发者，用于规划功能、修复 bug 或进行技术调研，让 AI 辅助开发更有条理。",
+ "tagline": "为 AI 代理设计的任务管理 MCP 服务器"
+}

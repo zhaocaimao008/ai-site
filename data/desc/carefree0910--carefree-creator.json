@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想要本地部署 AI 图像生成服务、或为创作工具开发后端的开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "文本生成图像（Stable Diffusion 基础版与动漫版）",
+  "图像到图像转换与内补全/外补全",
+  "草图生成图像",
+  "超分辨率（Real ESRGAN）",
+  "支持 pip 安装与 Docker 部署",
+  "提供 CLI 参数控制模型加载以节省显存"
+ ],
+ "intro": "carefree-creator 是 AI 创作产品 Creator 的后端项目，基于 carefree-learn 构建，集成了 Stable Diffusion、Waifu Diffusion、Real ESRGAN、Latent Diffusion 等多种模型，提供文本生成图像、图像到图像、内补全、外补全、草图生成图像、超分辨率等功能。\n\n项目通过 CLI 工具 cfcreator 启动本地服务，支持 pip 安装和 Docker 部署。由于默认会加载多个模型，GPU 显存占用约 11~13 GB，但提供了 --limit、--lazy、--cpu 等参数来降低资源需求。WebUI 代码位于 carefree-drawboard 项目。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install carefree-creator",
+  "启动服务：cfcreator serve",
+  "无 NVIDIA GPU 时：cfcreator serve --cpu",
+  "显存有限时：cfcreator serve --limit 1 或 cfcreator serve --lazy",
+  "Docker 运行：docker run --gpus all --rm -p 8123:8123 $TAG_NAME:latest"
+ ],
+ "summary": "carefree-creator 是一个开源 AI 图像创作后端，集成了 Stable Diffusion 等多种生成模型，支持文生图、图生图、内补全、外补全、草图生图和超分辨率。它通过命令行工具启动本地服务，适合开发者部署 AI 绘画后端，或为创作工具提供图像生成能力。",
+ "tagline": "开源 AI 创作后端，集成多种图像生成模型"
+}

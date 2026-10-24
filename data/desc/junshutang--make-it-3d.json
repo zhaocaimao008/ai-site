@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对 3D 生成、扩散模型和神经辐射场感兴趣的研究人员与开发者，需要具备一定的深度学习基础和 GPU 环境。",
+ "date": "2026-10-24",
+ "features": [
+  "从单张图像生成高保真 3D 几何与纹理",
+  "两阶段优化：神经辐射场粗阶段 + 点云细化阶段",
+  "利用 2D 扩散先验进行新视角监督",
+  "支持文本到 3D 生成和纹理编辑应用",
+  "提供完整训练代码和测试数据"
+ ],
+ "intro": "Make-It-3D 是 ICCV 2023 收录的研究项目，旨在仅凭一张图像创建高保真 3D 内容。该方法利用预训练的 2D 扩散模型作为 3D 感知监督，通过两阶段优化流程实现：第一阶段优化神经辐射场，结合参考图像约束和新视角扩散先验；第二阶段将粗模型转换为带纹理的点云，并进一步利用扩散先验和参考图像的高质量纹理提升真实感。\n\n项目提供了完整的训练代码，包括粗阶段和细化阶段，并支持文本到 3D 生成和纹理编辑等应用。代码依赖 PyTorch、tiny-cuda-nn、CLIP、diffusers、pytorch3d 等库，训练时还需 DPT 深度估计、SAM 分割、BLIP2 描述生成和 Stable Diffusion 2.0 模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio===0.10.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html",
+  "安装其他库：pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch 等（见 README）",
+  "准备 DPT 权重、SAM、BLIP2 和 Stable Diffusion 2.0 模型",
+  "粗阶段训练：python main.py --workspace ${NAME} --ref_path \"${IMGPATH}\" --phi_range 135 225 --iters 2000",
+  "细化阶段训练：python main.py --workspace ${NAME} --ref_path \"${IMGPATH}\" --phi_range 135 225 --refine"
+ ],
+ "summary": "Make-It-3D 是一个研究项目，解决从单张图像生成高保真 3D 内容的问题。它利用预训练 2D 扩散模型作为监督，通过两阶段优化（神经辐射场粗阶段和点云细化阶段）重建几何并生成纹理。适合对 3D 生成、扩散模型和 NeRF 感兴趣的研究者与开发者，可用于一般物体的 3D 创建、文本到 3D 生成和纹理编辑等场景。",
+ "tagline": "从单张图像生成高保真3D内容"
+}

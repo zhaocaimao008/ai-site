@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合生成模型的研究人员和开发者，尤其是对 GAN 感兴趣并希望快速实验和应用的 PyTorch 用户。",
+ "date": "2026-10-24",
+ "features": [
+  "支持多种 GAN 模型，包括无条件 GAN、条件 GAN 和图像翻译模型",
+  "提供 GAN 插值、投影和操作等应用工具",
+  "采用 MMDDP 实现高效的分布式训练",
+  "新的模块化设计支持灵活组合损失模块",
+  "支持混合精度训练（FP16）",
+  "包含丰富的模型库和预训练权重"
+ ],
+ "intro": "MMGeneration 是 OpenMMLab 项目下的生成模型工具箱，基于 PyTorch 和 MMCV 构建，当前主要聚焦于 GAN 相关模型。它提供了高质量的训练性能，支持无条件 GAN、内部 GAN 和图像翻译模型，并计划支持条件模型。\n\n该工具箱集成了多种 GAN 应用，如 GAN 插值、投影和操作，方便用户探索生成模型。它还针对生成模型的高动态训练特点，采用 MMDDP 实现高效的分布式训练，并通过新的模块化设计支持复杂损失模块的灵活组合。\n\n需要注意的是，MMGeneration 已合并到 MMEditing 中，并新增了 Text2Image 和 3D-aware Generation 等任务的支持。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 PyTorch：pip3 install torch torchvision",
+  "安装 MMCV：pip3 install openmim && mim install mmcv-full",
+  "从源码安装 MMGeneration：git clone https://github.com/open-mmlab/mmgeneration.git && cd mmgeneration && pip3 install -e ."
+ ],
+ "summary": "MMGeneration 是一个基于 PyTorch 和 MMCV 的生成模型工具箱，主要针对 GAN 模型提供训练和应用支持。它集成了多种 GAN 变体、图像翻译模型以及 GAN 插值、投影等应用工具，并支持分布式训练和混合精度。适合研究人员和开发者快速实验生成模型，但需注意该项目已合并到 MMEditing，新任务如 Text2Image 和 3D-aware Generation 也在那里更新。",
+ "tagline": "基于 PyTorch 和 MMCV 的生成模型工具箱，支持 GAN 训练与应用。"
+}

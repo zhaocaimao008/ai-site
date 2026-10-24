@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合正在选型 RAG 框架的开发者，以及希望了解 RAG 生态工具与资源的普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "按类别收录 RAG 框架、评估优化工具、RAG 引擎与资源站点",
+  "每个条目包含简介、官网、GitHub 链接、Star 数与活跃度",
+  "FAQ 解释 RAG 概念、框架与引擎区别及向量数据库选型",
+  "列出 ragas、Trulens、Phoenix、Deepchecks 等评估工具",
+  "支持社区通过 Pull Request 提交新条目"
+ ],
+ "intro": "RAGHub 是一个由社区维护的目录，收录 Retrieval-Augmented Generation（RAG）生态中的框架、项目与资源。项目面向 r/RAG 社区，目标是帮助开发者跟上这一领域快速涌现的新工具，判断哪些框架仍然适用。\n\n目录按类别组织，包括 RAG Frameworks、RAG Evaluation and Optimization Frameworks、RAG Engines、RAG Resources and Sites 和 Model LeaderBoards 等，每个条目列出名称、简介、网站、GitHub 链接、Star 数和活跃度。README 还提供 FAQ，解释 RAG 的基本概念、框架与引擎的区别、向量数据库选型、评估工具以及常见问题的应对思路。\n\n项目本身不提供代码实现，而是一个持续更新的索引，任何人都可以按照贡献指南提交新的条目。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Fork 本仓库",
+  "在对应分类下按现有表格格式添加条目",
+  "提交 Pull Request，具体规范见 CONTRIBUTING.md"
+ ],
+ "summary": "RAGHub 是一个社区维护的 RAG 工具目录，把不断出现的框架、评估工具和引擎按类别整理在一起，并附上简介、链接和活跃度。它适合正在为聊天机器人、文档问答等场景挑选 RAG 方案的开发者，也适合想快速了解生态全貌的读者。项目本身不提供代码，而是作为索引和 FAQ 帮助判断工具是否仍然适用。",
+ "tagline": "社区维护的 RAG 框架与资源目录"
+}

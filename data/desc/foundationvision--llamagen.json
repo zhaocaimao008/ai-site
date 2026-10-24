@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合图像生成方向的研究者与开发者，尤其是对自回归模型、视觉 tokenization 和可扩展生成模型感兴趣的人员。",
+ "date": "2026-10-24",
+ "features": [
+  "提供类别条件图像生成模型，参数从 100M 到 3B，在 ImageNet 上评估",
+  "提供文本条件图像生成模型，支持 256x256 和 512x512 分辨率",
+  "包含两个图像 tokenizer，下采样率分别为 16 和 8",
+  "支持 vLLM 推理框架，提升生成吞吐量",
+  "提供在线 Hugging Face Space 和本地 Gradio 演示",
+  "开源训练与采样代码，基于 PyTorch（torch>=2.1.0）"
+ ],
+ "intro": "LlamaGen 将大语言模型的“下一 token 预测”范式应用于图像生成，验证了无需视觉归纳偏置的纯自回归模型在适当缩放后能达到领先的图像生成效果。项目由 HKU 与字节跳动的研究者提出，并开源了预训练权重与训练、采样代码。\n\n仓库提供两个图像 tokenizer（下采样率 16 和 8）、七个类别条件生成模型（100M 到 3B 参数）以及两个文本条件生成模型（700M 参数）。所有模型均支持 vLLM 推理加速，并提供在线与本地 Gradio 演示。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载所需模型权重并放入 ./pretrained_models 文件夹",
+  "运行类别条件生成示例：python3 autoregressive/sample/sample_c2i.py --vq-ckpt ./pretrained_models/vq_ds16_c2i.pt --gpt-ckpt ./pretrained_models/c2i_L_384.pt --gpt-model GPT-L --image-size 384",
+  "运行文本条件生成示例（需先按 language/README.md 安装依赖）：python3 autoregressive/sample/sample_t2i.py --vq-ckpt ./pretrained_models/vq_ds16_t2i.pt --gpt-ckpt ./pretrained_models/t2i_XL_stage1_256.pt --gpt-model GPT-XL --image-size 256",
+  "启动本地 Gradio 演示：python app.py"
+ ],
+ "summary": "LlamaGen 是一个将大语言模型下一 token 预测范式用于图像生成的开源项目，提供从 100M 到 3B 参数的类别条件模型和 700M 参数的文本条件模型，以及配套的图像 tokenizer。适合研究自回归图像生成、视觉 tokenization 和模型可扩展性的开发者，也提供在线演示和本地 Gradio 界面供快速体验。",
+ "tagline": "基于 Llama 的自回归图像生成模型"
+}

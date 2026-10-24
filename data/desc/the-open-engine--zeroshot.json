@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用 Claude Code、Codex 等编码 Agent，并希望为代码质量和评审流程加上可控约束的开发者与团队。",
+ "date": "2026-10-24",
+ "features": [
+  "用图定义编码、评审、修复的工作流，引擎强制执行评审关卡与重试上限",
+  "每个 Agent 可单独选择模型和 harness（Pi、Claude Code、Codex、Copilot）",
+  "被拒绝的产出自动回流给执行者修复并再次评审",
+  "工作流可保存为 profile 复用",
+  "提供 CLI 命令查看运行列表、状态和日志，并有本地 Web UI 观察进度",
+  "支持本地运行、自托管 Docker 和云端三种方式"
+ ],
+ "intro": "zeroshot 是一个用 Rust 编写的开源编排工具，面向编码 Agent 的工作流管理。它的核心思路是：写代码的 Agent 不应该自己宣布任务完成。用户可以把编码、独立评审和修复串成一张有向图，指定每个环节使用哪个 Agent 和模型，以及哪些检查必须通过。\n\n引擎会强制执行图中定义的评审关卡和重试上限。被拒绝的产出会按配置回流给执行者修复，然后再次评审。每个 Agent 可以各自使用不同的模型和 harness，README 中列出的包括 Pi、Claude Code、Codex 和 Copilot。工作流可以保存为 profile 复用。\n\n项目提供 CLI，可本地运行、自托管 Docker，或使用 zeroshot Cloud。本地运行可复用已登录 harness 的会话，包括订阅制会话。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：npm install -g @the-open-engine-company/zeroshot",
+  "创建 input.json，写入任务描述，例如 {\"task\": \"Add JSON output to the status command and cover it with focused tests.\"}",
+  "创建 runtime.json，指定 harness、provider、model 和 effort",
+  "运行：zeroshot run --title \"Add JSON status output\" --template software-change --input input.json --uniform-runtime-config runtime.json",
+  "另开终端执行 zeroshot ui，访问 http://127.0.0.1:4173/ui/ 查看运行进度"
+ ],
+ "summary": "zeroshot 解决的是编码 Agent 自评自验不可靠的问题。它让用户把编码、独立评审和修复编排成一张工作流图，由引擎强制执行评审关卡和重试上限，被拒绝的产出会回流修复。适合已经使用 Claude Code、Codex 等 Agent、希望为代码质量加上可控流程的开发者。",
+ "tagline": "用可配置工作流编排编码 Agent 的独立评审与修复"
+}

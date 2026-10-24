@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 LLM Agent、希望复现或使用 CodeAct 方法的开发者和研究人员，也适合想基于 CodeActAgent 构建应用的用户。",
+ "date": "2026-10-24",
+ "features": [
+  "提出 CodeAct 方法，用可执行代码统一 LLM Agent 的动作空间",
+  "发布 CodeActInstruct 指令微调数据集，包含 7k 多轮交互",
+  "提供 CodeActAgent-Mistral-7b-v0.1 和 CodeActAgent-Llama-7b 两个模型",
+  "支持 vLLM 和 llama.cpp 将模型服务为 OpenAI 兼容 API",
+  "提供基于 Docker 的容器化代码执行引擎，每个会话独立容器",
+  "支持通过 Chat-UI 或 Python 脚本与 Agent 交互"
+ ],
+ "intro": "CodeAct 是 ICML 2024 论文《Executable Code Actions Elicit Better LLM Agents》的官方实现。它提出用可执行代码作为 LLM Agent 的统一动作空间，让模型通过多轮交互执行代码、根据执行结果动态修正或发起新动作。项目包含指令微调数据集 CodeActInstruct 和基于 Mistral-7b 与 Llama-2-7b 的 CodeActAgent 模型。\n\nCodeActAgent 系统由 LLM 服务、交互界面和代码执行引擎组成，支持通过 Docker 部署，并提供 Chat-UI 和 Python 脚本两种交互方式。代码执行引擎会为每个会话启动独立的 Docker 容器来运行代码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载模型：git lfs install && git clone https://huggingface.co/xingyaoww/CodeActAgent-Mistral-7b-v0.1",
+  "使用 vLLM 启动模型服务：./scripts/chat/start_vllm.sh $YOUR_DIR_TO_DOWNLOADED_MISTRAL_MODEL/CodeActAgent-Mistral-7b-v0.1",
+  "启动代码执行引擎（参考 README 中 Start your Code Execution Engine 部分）",
+  "通过 Chat-UI 或 Python 脚本连接 OpenAI 兼容 API 进行交互"
+ ],
+ "summary": "CodeAct 是一个 LLM Agent 框架，它把 Agent 的动作统一为可执行代码，让模型能通过多轮交互执行代码并根据结果调整后续动作。项目提供了指令微调数据集 CodeActInstruct 和基于 Mistral-7b、Llama-2-7b 的 CodeActAgent 模型，适合研究或构建需要调用工具、执行代码的智能体应用。",
+ "tagline": "用可执行代码统一 LLM Agent 动作空间"
+}

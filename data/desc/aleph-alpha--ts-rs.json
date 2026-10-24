@@ -1,0 +1,22 @@
+{
+ "ai_related": false,
+ "audience": "适合使用 Rust 构建后端或 WebAssembly 模块，并需要与 TypeScript 前端共享类型定义的开发者。",
+ "date": "2026-10-24",
+ "features": [
+  "从 Rust struct 生成 TypeScript 类型声明",
+  "从 Rust enum 生成 TypeScript 联合类型声明",
+  "支持泛型类型",
+  "兼容 serde 属性（rename、tag、skip 等）",
+  "导出到多个文件时自动生成必要的 import",
+  "可通过环境变量配置导出目录、import 扩展名和大整数类型"
+ ],
+ "intro": "ts-rs 是一个 Rust 库，用于从 Rust 的 struct 和 enum 自动生成对应的 TypeScript 类型声明。它通过派生宏为类型实现 TS trait，在测试运行时将类型定义导出为 .ts 文件，从而让前后端共享同一份类型定义。\n\n该库支持泛型、与 serde 属性兼容（如 rename、tag、skip 等），并能生成跨文件的 import 语句。你可以通过环境变量控制导出目录、import 扩展名以及大整数类型的映射方式，也可以使用 TS::export_all 等 API 以编程方式导出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Cargo.toml 中添加依赖：ts-rs = \"12.0\"",
+  "为需要导出的类型添加 #[derive(ts_rs::TS)] 和 #[ts(export)] 属性",
+  "运行 cargo test 或 cargo test export_bindings，生成的 TypeScript 文件会输出到 bindings/ 目录"
+ ],
+ "summary": "ts-rs 解决 Rust 后端与 TypeScript 前端之间类型定义重复维护的问题。它通过派生宏从 Rust 的 struct 和 enum 生成对应的 TypeScript 类型声明，并支持 serde 属性、泛型和多文件导出。适合使用 Rust 开发 Web 服务或 WebAssembly 模块、需要与前端共享数据结构的场景。",
+ "tagline": "从 Rust 类型生成 TypeScript 类型声明"
+}

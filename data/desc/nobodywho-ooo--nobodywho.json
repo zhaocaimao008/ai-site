@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在移动端或桌面应用中集成本地 LLM 的开发者，尤其是使用 Kotlin、Swift、React Native、Flutter、Python 或 Godot 的技术团队。",
+ "date": "2026-10-24",
+ "features": [
+  "本地离线运行 LLM，无需 API key 或网络连接",
+  "支持任意 GGUF 格式的聊天模型，如 Gemma、Qwen、Mistral",
+  "类型安全的工具调用，自动从函数签名生成结构化语法",
+  "多模态输入，可向 LLM 提供图像和音频信息",
+  "集成文本转语音（Kokoro、Pocket TTS、Supertonic）和语音转文本（Whisper）",
+  "提供 Kotlin、Swift、React Native、Flutter、Python、Godot 等多种语言绑定"
+ ],
+ "intro": "NobodyWho 是一个用 Rust 编写的推理引擎，目标是让开发者能在本地、离线地运行大语言模型，无需 API key 或额外费用。它基于 llama.cpp 和 ONNX Runtime，支持 GPU 加速（Vulkan/Metal），可运行任何 GGUF 格式的模型，包括 Gemma、Qwen、Mistral 等。\n\n除了文本对话，它还提供多模态输入（图像和音频）、类型安全的工具调用（自动从函数签名生成结构化语法）、文本转语音（Kokoro、Pocket TTS、Supertonic）、语音转文本（Whisper）以及语音活动检测（Silero）。模型可以直接从 Hugging Face 或任意 URL 下载并缓存。\n\n项目提供了 Kotlin、Swift、React Native/Expo、Flutter、Python 和 Godot 的绑定，覆盖桌面（Linux/macOS/Windows）、Android、iOS 等平台，方便集成到不同技术栈的应用中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 包：pip install nobodywho",
+  "在代码中导入 Chat：from nobodywho import Chat",
+  "创建 Chat 实例并指定模型：chat = Chat('hf:NobodyWho/Qwen_Qwen3-0.6B-GGUF:Q4_K_M')",
+  "调用 ask 方法提问：response = chat.ask('What is the capital of Denmark?')",
+  "获取完整回复：print(response.completed())"
+ ],
+ "summary": "NobodyWho 是一个本地 LLM 推理引擎，让开发者在设备上离线运行大语言模型，无需依赖云端 API。它支持 GGUF 格式的模型，并提供工具调用、多模态输入、语音合成与识别等能力，同时为 Kotlin、Swift、React Native、Flutter、Python 和 Godot 提供绑定，适合需要在移动端或桌面应用中集成本地 AI 的开发者。",
+ "tagline": "在任意设备上本地运行 LLM 的推理引擎"
+}

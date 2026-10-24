@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对视频生成感兴趣的研究者和开发者，尤其是需要保持人物或物体外观一致性的场景。",
+ "date": "2026-10-24",
+ "features": [
+  "支持单张或多张参考图像生成主体一致的视频",
+  "基于 Wan2.1 模型适配，提供 1.3B 和 14B 参数版本",
+  "支持 480P 和 720P 分辨率视频生成",
+  "提供单 GPU 和多 GPU（FSDP + xDiT USP）推理脚本",
+  "通过文本提示描述参考图像内容以提升生成效果"
+ ],
+ "intro": "Phantom 是字节跳动智能创作团队提出的视频生成框架，专注于在生成视频时保持参考图像中主体的外观一致性。它基于现有的文本到视频和图像到视频架构，通过重新设计联合文本-图像注入模型，利用文本-图像-视频三元组数据实现跨模态对齐。\n\n项目提供了 Phantom-Wan-1.3B 和 Phantom-Wan-14B 两个模型，支持单主体和多主体参考（最多4张参考图），可生成480P和720P视频。用户通过命令行指定参考图像和文本提示即可生成视频，也支持多GPU推理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Phantom-video/Phantom.git && cd Phantom",
+  "安装依赖：pip install -r requirements.txt（确保 torch >= 2.4.0）",
+  "下载 Wan2.1-1.3B 基础模型：huggingface-cli download Wan-AI/Wan2.1-T2V-1.3B --local-dir ./Wan2.1-T2V-1.3B",
+  "下载 Phantom-Wan 模型：huggingface-cli download bytedance-research/Phantom --local-dir ./Phantom-Wan-Models",
+  "运行单 GPU 推理：python generate.py --task s2v-1.3B --size 832*480 --ckpt_dir ./Wan2.1-T2V-1.3B --phantom_ckpt ./Phantom-Wan-Models/Phantom-Wan-1.3B.pth --ref_image \"examples/ref1.png,examples/ref2.png\" --prompt \"你的提示词\" --base_seed 42"
+ ],
+ "summary": "Phantom 是一个视频生成框架，旨在解决生成视频时参考图像中主体外观不一致的问题。它基于文本到视频和图像到视频架构，通过跨模态对齐技术，让生成的视频保持人物或物体的身份特征。适合需要根据参考图生成主体一致视频的研究者和开发者，支持单主体和多主体参考，并提供不同参数规模的模型。",
+ "tagline": "基于参考图像生成主体一致的视频"
+}

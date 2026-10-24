@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地环境中使用 AI 助手完成实际工作、注重数据隐私的开发者与普通用户。",
+ "date": "2026-10-24",
+ "features": [
+  "对话式工作：在对话中创建并持续操作设计或代码文件夹，自动启用缺失工具或连接应用。",
+  "目标与代理：支持持续运行直到完成的目标，以及可委派、可停止和消息传递的代理。",
+  "审批机制：风险操作在对话、主页、通知指示器或连接渠道中等待批准或拒绝。",
+  "记忆与知识：个人知识图谱，支持回忆、审查、Dream Cycle 精炼、文档和 Obsidian 兼容的 wiki 库。",
+  "设计与代码面板：支持演示文稿、文档和原型的设计与导出，以及代码文件夹的变更、Git、终端和 Docker 沙箱。",
+  "工作流与集成：支持定时、Webhook 和链式运行的工作流，以及 GitHub、Notion 等应用和技能的连接与使用。"
+ ],
+ "intro": "Row-Bot 是一个本地优先的桌面 AI 助手，旨在让用户在自己的机器上完成实际工作。它通过对话交互，将重要信息记录在本地知识图谱中，并能在用户指定的文件、代码目录、设计和工作流中操作。项目支持通过 Ollama 运行本地模型，也支持接入 ChatGPT、Claude、Grok 订阅或任何 OpenAI 兼容端点，数据保留在本地。\n\nRow-Bot 提供丰富的功能，包括目标与代理、审批机制、记忆与知识管理、设计与代码面板、工作流、应用与技能集成、工具（如网络搜索、文件、shell、浏览器自动化）、消息渠道与语音交互等。它提供 Windows、macOS、Linux 和 Docker 安装方式，并支持从源码构建。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 Windows 安装程序或 macOS DMG 并运行。",
+  "Linux 用户运行：curl -fsSL https://raw.githubusercontent.com/siddsachar/row-bot/main/installer/install-linux.sh | bash",
+  "Docker 用户：export ROW_BOT_IMAGE=ghcr.io/siddsachar/row-bot:X.Y.Z && docker compose -f deploy/docker/compose.yaml up --detach",
+  "从源码构建：克隆仓库后运行 uv sync --locked --all-extras --group test，然后 cd frontend && npm ci && npm run build && cd ..，最后 uv run python launcher.py"
+ ],
+ "summary": "Row-Bot 是一个本地优先的桌面 AI 助手，帮助用户在自己的电脑上通过对话完成实际任务。它集成了文件操作、代码编辑、知识图谱记忆、工作流和多种工具，并支持本地模型或云端模型。适合注重数据隐私、希望用 AI 辅助日常工作和开发的用户。",
+ "tagline": "本地优先的桌面 AI 助手，集成工具与知识图谱"
+}
