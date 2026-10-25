@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用自然语言快速生成和迭代 UI 设计稿的开发者与设计师，尤其是已经在使用 Codex 的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "通过对话生成可编辑的 .op 设计文件，包含图层、文字和形状",
+  "在交互式画布上手动编辑设计，支持选择、缩放、文字修改和撤销",
+  "选中元素后描述修改，Codex 针对所选元素及其子元素进行精准调整",
+  "自动下载并验证适用于 macOS、Windows、Linux 的 Rust 运行时",
+  "保存和重新打开 .op 文件，每个对话拥有独立画布和恢复草稿",
+  "支持浅色/深色主题跟随宿主环境，无需重新加载文档"
+ ],
+ "intro": "Codex OpenPencil 是一个 Codex 插件，把 Codex 对话与本地 Rust 引擎驱动的 OpenPencil 画布连接起来。用户通过自然语言描述界面需求，Codex 会生成可编辑的矢量设计节点，并保存为 .op 文件。\n\n画布支持交互式编辑，包括选择图层、平移缩放、修改文字、绘制形状和撤销操作。用户还可以选中元素后描述修改要求，Codex 会针对所选元素及其子元素进行精准调整。插件会自动下载匹配当前系统的运行时，并验证安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 22+、Git 和带插件支持的本地 Codex 客户端",
+  "在 Codex 中发送：Install and set up https://github.com/ZSeven-W/codex-openpencil following its INSTALL.md, open an editable canvas, and create a single-page mobile task app.",
+  "或手动安装：git clone https://github.com/ZSeven-W/codex-openpencil.git && cd codex-openpencil && npm run setup",
+  "安装后可能需要重新连接或新建对话以加载工具",
+  "在对话中要求打开 OpenPencil 画布并描述设计需求，例如“用op设计一个单页 APP”"
+ ],
+ "summary": "Codex OpenPencil 是一个 Codex 插件，让用户通过对话在本地 OpenPencil 画布上生成和修改可编辑的矢量 UI 设计稿。它适合需要快速产出界面原型、并希望保留图层可编辑性的开发者与设计师，尤其适合已使用 Codex 的用户。",
+ "tagline": "在 Codex 对话中创建和编辑 OpenPencil 矢量设计稿"
+}

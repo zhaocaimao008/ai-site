@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 RAG 方向的研究者、研究生，以及希望系统了解 RAG 论文脉络的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "按主题分类整理 RAG 相关论文，覆盖评测、检索增强、指令微调、嵌入、搜索、长文本与记忆、优化、应用等方向",
+  "收录 RAG 相关的 workshop、教程与书籍资源",
+  "每条论文条目附作者、发表会议或 arXiv 编号、日期及论文链接",
+  "开放 pull request，鼓励研究者提交自己的论文信息"
+ ],
+ "intro": "这是一个围绕大语言模型检索增强生成（RAG）的 Awesome 清单仓库，主要收录 RAG 方向的论文，并按主题分类整理，方便研究者按方向查找。\n\n目录涵盖 Survey and Benchmark、Retrieval-enhanced LLMs、RAG Instruction Tuning、RAG In-Context Learning、RAG Embeddings、RAG Simulators、RAG Search、RAG Long-text and Memory、RAG Evaluation、RAG Optimization、RAG Application、RAG for Missing Modalities 等类别。除论文外，还列出相关 workshop、教程与书籍资源。\n\n仓库本身不提供代码或工具，作者欢迎研究者通过 pull request 补充自己的论文信息。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库把大语言模型检索增强生成（RAG）方向的论文按主题归类，从评测基准、检索增强、指令微调、嵌入、搜索到长文本记忆、优化与应用，并附上 workshop、教程和书籍链接。它不提供代码，适合研究者按方向快速定位文献，也方便开发者了解 RAG 的技术脉络。",
+ "tagline": "汇总 LLM 检索增强生成（RAG）论文与资源的清单"
+}

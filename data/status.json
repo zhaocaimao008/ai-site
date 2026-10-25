@@ -1,10 +1,12 @@
 {
- "date": "2026-10-24",
+ "date": "2026-10-25",
  "errors": [],
- "generated": 100,
+ "generated": 99,
  "key_present": true,
  "model": "deepseek-chat",
- "repos": 1280,
- "skipped": [],
+ "repos": 1274,
+ "skipped": [
+  "Blizaine/Maestro"
+ ],
  "todo": 100
 }

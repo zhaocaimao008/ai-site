@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要长时间运行深度学习实验的研究人员和工程师，尤其是希望利用 GPU 资源自动进行超参搜索或模型迭代的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "Leader-Worker 架构，支持 24/7 自主实验循环",
+  "恒定大小记忆，控制长时运行的 token 消耗",
+  "支持本地、SSH 远程和 Slurm 集群执行后端",
+  "实验账本与停滞信号，基于历史指标指导规划",
+  "代码检索与论文搜索工具，辅助理解代码和文献",
+  "可选速率限制与安全扫描，防止预算浪费"
+ ],
+ "intro": "Deep Researcher Agent 是一个能自主运行深度学习实验的 AI 智能体，目标是让实验在无人值守的情况下持续进行。它采用 Leader-Worker 架构，由 Leader 负责规划与决策，Worker 执行具体实验，并通过恒定大小的记忆机制控制上下文长度。\n\n项目支持本地、SSH 远程以及 Slurm 集群三种执行后端，可对接 Claude Code、Codex CLI 或 OpenAI 兼容 API（包括 DeepSeek、Qwen、Kimi、GLM 等国内模型）。智能体会将每轮实验的假设、指标和结果记录到实验账本中，并据此判断进展是否停滞，同时维护失败路径与洞察日志，避免重复无效尝试。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建项目文件夹，并在其中编写 PROJECT_BRIEF.md 文件",
+  "运行命令：/auto-experiment --project /path/to/project --gpu 0",
+  "使用 /experiment-status 查看进度，或配置 Obsidian 同步笔记"
+ ],
+ "summary": "Deep Researcher Agent 是一个面向深度学习实验的自主 AI 智能体，可在无人值守时持续运行训练与调参任务。它通过 Leader-Worker 分工和恒定记忆控制长时运行的上下文开销，并记录实验历史以判断进展。适合需要长时间占用 GPU 进行模型迭代或超参搜索的研究场景，支持本地、远程 SSH 和 Slurm 集群执行。",
+ "tagline": "24/7 自主运行深度学习实验的 AI 智能体"
+}

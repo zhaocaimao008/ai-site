@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速将人脸照片转换为艺术风格图像的开发者或普通用户，也适合熟悉 ComfyUI 并想本地部署自定义工作流的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "支持将人脸转换为 3D、像素艺术、电子游戏、黏土动画和玩具五种风格",
+  "提供 Replicate 在线运行入口，无需本地配置",
+  "提供 ComfyUI 工作流文件，可在本地 ComfyUI 中加载使用",
+  "依赖 InstantID、IPAdapter 和 ControlNet 等自定义节点实现人脸特征保持",
+  "包含本地开发脚本，可一键克隆所需插件"
+ ],
+ "intro": "face-to-many 是一个基于 ComfyUI 的 AI 图像生成项目，能够将任意人脸照片转换为 3D、像素艺术、电子游戏角色、黏土动画或玩具风格。项目提供了在 Replicate 上直接运行的在线版本，也支持在本地 ComfyUI 环境中部署。\n\n本地运行需要下载基础模型 albedobaseXL_v13、人脸分析模型 antelopev2 以及 InstantID 相关的 IP-Adapter 和 ControlNet 模型，并安装多个自定义节点插件。项目使用 artificialguybr 制作的 LoRA 模型来实现不同风格的转换。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入 ComfyUI 目录：git clone --recurse-submodules https://github.com/fofr/cog-face-to-many.git && cd cog-face-to-many/ComfyUI",
+  "创建并激活 Python 虚拟环境：python3 -m venv . && source bin/activate",
+  "安装依赖：pip install -r requirements.txt",
+  "下载所需模型文件（albedobaseXL_v13、antelopev2、instantid-ip-adapter.bin、instantid-controlnet.safetensors）到对应目录",
+  "运行脚本安装自定义节点：./scripts/clone_plugins.sh，然后启动：python3 main.py"
+ ],
+ "summary": "face-to-many 是一个基于 ComfyUI 的 AI 图像风格转换项目，可将任意人脸照片变成 3D、像素艺术、电子游戏角色、黏土动画或玩具风格。它适合想快速生成趣味头像或角色形象的用户，既可通过 Replicate 在线运行，也可在本地 ComfyUI 中部署，利用 InstantID 和 IPAdapter 等技术保持人脸特征。",
+ "tagline": "将人脸转换为多种艺术风格的 AI 工具"
+}

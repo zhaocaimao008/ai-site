@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要安全运行 AI 编码代理的开发者，尤其是希望代理拥有完整机器权限但又不危及宿主机的场景。",
+ "date": "2026-10-25",
+ "features": [
+  "为每个 AI 编码代理提供独立 Incus 系统容器，拥有 root、Docker 和 systemd",
+  "主动防御：内核级监控检测反向 shell、C2、数据外泄等威胁，自动暂停或终止容器",
+  "网络隔离：nftables 出口控制（开放/受限/允许列表）、DNS 固定和端口范围限制",
+  "凭据隔离：SSH 密钥、令牌、环境变量默认不进入容器，启动时列出所有授权",
+  "支持并行代理、持久化或临时容器，工作区文件自动保存回宿主机",
+  "可复用 Profiles 配置，支持继承，一键应用镜像、工具、资源限制和网络模式"
+ ],
+ "intro": "Coi（Code on Incus）是一个用 Go 编写的工具，它让 AI 编码代理（如 Claude Code、Codex、opencode 等）运行在独立的 Incus 系统容器中。每个容器都是一个完整的 Linux 系统，拥有 root 权限、systemd、Docker 和包管理器，代理可以像在真实服务器上一样工作，但无法访问宿主机、凭据或环境变量。\n\n项目通过主动防御机制监控内核级行为，检测到反向 shell、C2 通信、数据外泄等威胁时自动暂停或终止容器。网络出口可通过 nftables 控制，支持开放、受限和允许列表三种模式。工作区文件修改会正确保存回宿主机，文件所有权自动匹配。\n\nCoi 支持并行运行多个代理、持久化或临时容器、可复用的配置文件（Profiles），以及无头模式和审计日志，适合需要安全隔离 AI 编码环境的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：curl -fsSL https://raw.githubusercontent.com/coipond/coi/master/install.sh | bash",
+  "首次构建基础镜像（约 5-10 分钟）：coi build",
+  "进入项目目录并启动交互式 AI 会话：cd your-project && coi shell"
+ ],
+ "summary": "Coi 解决 AI 编码代理在本地运行时可能危及宿主机安全的问题。它利用 Incus 系统容器为每个代理创建独立的完整 Linux 环境，代理可自由使用 root、Docker 和包管理器，但无法接触宿主机凭据。内置主动防御和网络出口控制，能自动应对可疑行为。适合需要安全隔离运行 Claude Code、Codex 等工具的开发者，也支持并行代理和持久化开发环境。",
+ "tagline": "为 AI 编码代理提供独立隔离的 Linux 机器"
+}

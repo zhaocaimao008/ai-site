@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本到图像生成模型感兴趣的研究者和开发者，尤其是希望复现 Muse 论文或基于 MaskGit 进行实验的 PyTorch 用户。",
+ "date": "2026-10-25",
+ "features": [
+  "实现 VQGanVAE 的训练，支持图像编码与重建",
+  "提供 MaskGit 模型，支持文本条件图像生成训练",
+  "支持超分辨率 MaskGit，可基于低分辨率图像生成高分辨率图像",
+  "集成 T5 文本编码器，支持文本到图像的条件生成",
+  "提供 Muse 类，组合基础模型和超分辨率模型进行端到端生成"
+ ],
+ "intro": "这是 lucidrains 对 Muse 论文的 PyTorch 复现，Muse 是一种基于掩码生成式 Transformer 的文本到图像生成模型。项目提供了完整的训练和推理流程，包括 VQGanVAE 的训练、基础 MaskGit 模型以及超分辨率 MaskGit 模型。\n\n代码结构清晰，用户可以先训练 VAE 将图像编码为离散 token，再训练 Transformer 进行文本条件生成，最后通过超分辨率模型提升图像质量。项目还提供了 Muse 类将基础模型和超分辨率模型组合起来，方便直接生成图像。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装包：pip install muse-maskgit-pytorch",
+  "训练 VQGanVAE：使用 VQGanVAETrainer 在图像文件夹上训练",
+  "训练基础 MaskGit：加载训练好的 VAE 和 MaskGitTransformer，使用 MaskGit 进行训练",
+  "训练超分辨率 MaskGit：设置 cond_image_size 并传入低分辨率图像进行训练",
+  "生成图像：使用 Muse 类组合基础模型和超分辨率模型，传入文本生成图像"
+ ],
+ "summary": "该项目是 Muse 文本到图像生成模型的 PyTorch 实现，采用掩码生成式 Transformer 架构。它提供了从训练 VQGanVAE、基础 MaskGit 到超分辨率 MaskGit 的完整代码，并支持组合模型进行端到端图像生成。适合希望复现 Muse 论文或研究文本到图像生成技术的开发者使用。",
+ "tagline": "Muse 文本到图像模型的 PyTorch 实现"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时处理图数据和向量检索的开发者，尤其是构建 Graph-RAG、智能体记忆或知识图谱应用的团队。",
+ "date": "2026-10-25",
+ "features": [
+  "兼容 Neo4j 的 Bolt 协议和 Cypher 查询语言",
+  "图遍历与向量检索在同一引擎中执行",
+  "基于 MVCC 的快照隔离和历史读取",
+  "支持 REST、GraphQL、gRPC 及 Qdrant 兼容接口",
+  "提供 CPU、CUDA、Metal、Vulkan 硬件加速",
+  "内置记忆衰减、自动关系等 AI 原生特性"
+ ],
+ "intro": "NornicDB 是一个用 Go 编写的图数据库，同时支持图遍历、向量检索和基于 MVCC 的历史读取。它兼容 Neo4j 的 Bolt 协议和 Cypher 查询语言，也提供 REST、GraphQL 和 gRPC 接口，并支持 Qdrant 风格的客户端工作流，方便现有应用迁移。\n\n项目面向 AI 原生工作负载，内置向量搜索、记忆衰减、自动关系等特性，并支持 CPU、CUDA、Metal、Vulkan 等多种硬件加速路径。它适用于知识系统、智能体记忆、Graph-RAG 等需要将语义搜索与图查询结合的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Homebrew 安装：brew tap orneryd/nornicdb && brew install nornicdb && brew services start nornicdb",
+  "或使用 Docker 运行（arm64/Apple Silicon）：docker run -d --name nornicdb -p 7474:7474 -p 7687:7687 -v nornicdb-data:/data timothyswt/nornicdb-arm64-metal-bge:latest",
+  "或使用 Docker 运行（amd64/CPU）：docker run -d --name nornicdb -p 7474:7474 -p 7687:7687 -v nornicdb-data:/data timothyswt/nornicdb-amd64-cpu-bge:latest",
+  "打开 http://localhost:7474 访问管理界面"
+ ],
+ "summary": "NornicDB 是一个将图数据库与向量检索结合的开源数据库，兼容 Neo4j 的 Bolt 和 Cypher，也支持 Qdrant 风格的接口，方便现有应用迁移。它通过 MVCC 提供历史读取和快照隔离，并内置向量搜索、记忆衰减等面向 AI 的功能。适合需要统一处理图查询、语义搜索和审计追溯的 Graph-RAG、智能体记忆等场景。",
+ "tagline": "图与向量融合的AI原生数据库，兼容Neo4j与Qdrant"
+}

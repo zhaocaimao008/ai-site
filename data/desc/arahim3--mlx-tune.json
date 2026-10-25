@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 Apple Silicon Mac、希望在本地进行模型微调原型验证的开发者与研究者，也适合需要将训练脚本在 Mac 与云端 GPU 之间迁移的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "支持 SFT、DPO、ORPO、GRPO、KTO、SimPO 等多种训练方法",
+  "覆盖 LLM、VLM、TTS、STT、Embedding、OCR 等多类模型的微调",
+  "提供与 Unsloth 兼容的 API，降低迁移成本",
+  "支持 LoRA 与全量微调，兼容 MoE 架构",
+  "可将模型导出为 HuggingFace 格式或 GGUF",
+  "包含 JEPA 系列（LeJEPA、I-JEPA、V-JEPA 2、LLM-JEPA）支持"
+ ],
+ "intro": "mlx-tune 是一个基于 Apple MLX 框架的微调工具，让开发者能在 Apple Silicon Mac 上本地微调大语言模型、视觉语言模型、语音合成与识别模型、嵌入模型以及 OCR 模型。它提供与 Unsloth 兼容的 API，现有训练脚本只需替换导入语句即可在 Mac 上运行。\n\n项目支持 SFT、DPO、ORPO、GRPO、KTO、SimPO 等多种训练方法，并覆盖 LoRA、全量微调、MoE 模型、JEPA 系列等场景。训练完成后可将模型导出为 HuggingFace 格式或 GGUF，方便在 Ollama、llama.cpp 等工具中使用。\n\n作者明确表示该项目并非要替代 Unsloth，而是为了解决在 Mac 上本地原型验证、再迁移到云端 GPU 进行大规模训练的工作流问题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install mlx-tune",
+  "将代码中的 from unsloth import FastLanguageModel 替换为 from mlx_tune import FastLanguageModel",
+  "将 from trl import SFTTrainer 替换为 from mlx_tune import SFTTrainer",
+  "其余训练代码保持不变，即可在 Mac 上运行"
+ ],
+ "summary": "mlx-tune 让 Apple Silicon Mac 用户能在本地微调大语言模型、视觉语言模型、语音合成与识别模型、嵌入模型和 OCR 模型。它提供与 Unsloth 兼容的 API，现有训练脚本只需更换导入即可运行，适合在 Mac 上做原型验证和快速迭代，再将同一脚本迁移到云端 GPU 进行大规模训练。",
+ "tagline": "在 Mac 上原生微调 LLM、视觉、音频与 OCR 模型"
+}

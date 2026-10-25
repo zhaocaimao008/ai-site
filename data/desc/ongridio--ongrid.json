@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要处理线上告警和故障排查的 SRE、运维与平台工程团队，以及希望自托管 AI 运维助手的中小团队。",
+ "date": "2026-10-25",
+ "features": [
+  "协调者与 SRE、网络、数据库等专家子 Agent 分工协作",
+  "告警触发自动调查，RCA 结果回写聊天频道",
+  "结合拓扑、指标、日志、链路定位根因到源码行",
+  "Edge 外联零入站端口，浏览器 SSH 全程审计",
+  "内置 Prometheus + Loki + Tempo + Grafana 可观测性栈",
+  "支持多家大模型热切换与 Slack、Telegram、飞书、钉钉等双向 IM 通道"
+ ],
+ "intro": "Ongrid 是一个用 Go 编写的运维 AI Agent，目标是把告警排查和故障处理放进团队日常使用的聊天工具里。它接入了指标、日志、链路追踪和拓扑影响面分析，能够沿着服务依赖关系做根因关联，并把结论回写到 Slack、Telegram、飞书或钉钉等频道。\n\n项目自带 Prometheus、Loki、Tempo 和 Grafana 组成的可观测性栈，Agent 负责生成查询语句；模型方面支持 Anthropic、OpenAI、GLM、DeepSeek、Gemini、Kimi 等，可热切换。主机侧提供只读的 bash 沙箱和 26 个以上巡检工具，所有调用都有审计记录。\n\n部署采用 Edge 主动外联的方式，主机不需要开放 22/80/443 入站端口，并提供浏览器 SSH 反向隧道。此外还包含 Kubernetes 集群纳管、网络设备发现、工作流编排、知识库检索和 MCP 服务器接入等能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载对应架构的 release 包：wget https://github.com/ongridio/ongrid/releases/download/v0.18.2/ongrid-v0.18.2-linux-amd64.tar.xz",
+  "解压并进入目录：tar -xf ongrid-v0.18.2-linux-amd64.tar.xz && cd ongrid-v0.18.2-linux-amd64",
+  "运行安装脚本：sudo ./install.sh",
+  "中国大陆网络可改用镜像地址：wget https://ongrid.cloud/dl/ongrid-v0.18.2-linux-amd64.tar.xz"
+ ],
+ "summary": "Ongrid 是一个自托管的运维 AI Agent，用来应对告警响应和故障定位。它把指标、日志、链路和拓扑关联起来做根因分析，并能在 Slack、Telegram、飞书、钉钉里直接对话和接收调查结果。主机通过 Edge 主动外联接入，无需开放入站端口，适合希望把 AI 助手接入现有监控与聊天工具的 SRE 和运维团队。",
+ "tagline": "面向运维的 AI Agent，从聊天窗口定位故障根因并执行修复"
+}

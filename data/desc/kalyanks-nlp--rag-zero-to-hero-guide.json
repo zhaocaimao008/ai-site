@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合希望系统学习 RAG 的开发者、LLM 应用工程师，以及需要了解 RAG 评估方法的技术人员。",
+ "date": "2026-10-25",
+ "features": [
+  "RAG 基础课程：概念、原理、步骤、优缺点、术语与学习路线",
+  "多个 Jupyter Notebook 实践：从零实现、LangChain、网页 RAG、YouTube 视频 RAG、Agentic RAG",
+  "RAG 评估课程：检索与生成指标，以及 RAGAS、DeepEval 和幻觉检测示例",
+  "RAG Toolkit：分类整理框架、文档解析、向量数据库、分块等工具",
+  "RAG 综述论文汇总"
+ ],
+ "intro": "这是一个围绕检索增强生成（RAG）整理的学习资源仓库，内容从基础概念延伸到进阶实践。基础课程部分用文档解释 RAG 是什么、为什么需要 RAG、索引与检索、增强与生成等步骤，并附有术语表和开发者技术栈说明。\n\n实践部分提供多个 Jupyter Notebook，包括不依赖框架从零实现 RAG、使用 LangChain 实现 RAG、对网页和 YouTube 视频字幕做 RAG，以及用 CrewAI 构建 Agentic RAG。仓库还包含 RAG 评估课程，介绍检索器与生成器的评估指标，并给出用 RAGAS、DeepEval 做评估以及检测幻觉的示例。\n\n此外，RAG Toolkit 部分按框架、研究、网页抓取、文档解析、向量数据库、分块等类别汇总了相关开源工具和论文链接，方便按需查找。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库把 RAG 的学习材料集中在一起，从基本概念、工作流程讲到用 LangChain 等框架动手实现，还覆盖网页与视频字幕等数据来源。它同时提供评估指标和 RAGAS、DeepEval 等评估示例，并汇总常用工具与论文，适合想系统入门或补齐 RAG 实践与评估环节的开发者按目录查阅。",
+ "tagline": "从基础到进阶系统学习 RAG 的开源指南"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究者和开发者进行视频/图像生成实验，以及希望通过 ComfyUI 或 Diffusers 集成的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "文本到视频生成（支持 5 秒和 10 秒时长）",
+  "图像到视频生成（给定输入图像和文本提示）",
+  "文本到图像生成（Image Lite 模型）",
+  "图像编辑功能",
+  "支持英文和俄文提示（Video Pro）",
+  "提供预训练、SFT 和蒸馏检查点，支持 LoRA 训练和相机控制"
+ ],
+ "intro": "Kandinsky 5.0 是一个扩散模型家族，可根据文本提示和/或图像生成视频或图像。项目包含多个模型变体：Video Pro（19B 参数，支持高清视频生成）、Video Lite（2B 参数，轻量版）、Image Lite 以及图像编辑模型。\n\nVideo Pro 支持英文和俄文提示，可生成 5 秒或 10 秒视频，并提供 SFT 和 Pretrain 版本。Video Lite 包含文本到视频模型，有 5 秒和 10 秒检查点，部分经过蒸馏可 16 步生成。所有模型均提供 Hugging Face 检查点，并集成到 Diffusers 和 ComfyUI。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/kandinskylab/kandinsky-5.git",
+  "安装依赖：pip install -r requirements.txt",
+  "从 Hugging Face 下载所需模型检查点（如 kandinskylab/Kandinsky-5.0-T2V-Pro-sft-5s）",
+  "运行示例脚本：python examples/inference_examples_t2v.py --config configs/k5_pro_t2v_5s_sft_hd.yaml --checkpoint <path> --prompt \"your prompt\""
+ ],
+ "summary": "Kandinsky 5.0 是一个开源的扩散模型家族，用于根据文本或图像生成视频和图像。它提供不同规模的模型（如 19B 的 Video Pro 和 2B 的 Video Lite），支持 5 秒和 10 秒视频生成，并集成到 Diffusers 和 ComfyUI。适合需要视频生成能力的研究者和开发者使用。",
+ "tagline": "Kandinsky 5.0：视频与图像生成的扩散模型家族"
+}

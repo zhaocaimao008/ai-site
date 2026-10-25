@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 Codex、Claude Code 等 AI 编程工具、关心额度重置时机的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "按工具分节汇总 Codex、Claude Code、Grok Bot 的用量重置状态",
+  "每条公告标注是否已确认、覆盖用户范围和日期",
+  "附原始来源链接，便于核对",
+  "提供按工具拆分的独立重置提醒仓库",
+  "可通过 Watch → Custom → Releases 接收更新通知"
+ ],
+ "intro": "这个仓库汇总 Codex / OpenAI、Claude Code / Anthropic、Grok Bot / xAI 等 AI 编程工具的用量限制重置公告和额外使用额度信息，每条记录都附上原始来源链接。\n\nREADME 按工具分节列出当前状态，例如某条重置公告是否已确认、覆盖哪些用户、日期是否公布，并给出对应的 X 帖子链接。仓库本身不提供额度，也不代替官方账号查询，只做信息整理。\n\n如果只想接收某一家的重置提醒，可以订阅对应的独立提醒仓库；想同时看全部更新，则关注本仓库的 Releases。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 GitHub 上打开本仓库，按工具查看当前重置状态",
+  "点击公告旁的 Original source 链接核对原始信息",
+  "如需单一工具提醒，订阅对应的 reset alerts 仓库",
+  "在本仓库选择 Watch → Custom → Releases 接收合并更新"
+ ],
+ "summary": "这个仓库整理 Codex、Claude Code、Grok Bot 等 AI 编程工具的用量限制重置公告和额外额度信息，每条都附原始来源，并标注是否已确认、覆盖哪些用户。适合经常使用这些工具、想及时知道额度何时恢复的开发者，也可以订阅按工具拆分的提醒仓库。",
+ "tagline": "追踪各家 AI 编程工具用量限制重置与额外额度的信息源"
+}

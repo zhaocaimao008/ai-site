@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Git 进行版本控制的开发团队，尤其是希望在不改变现有工作流的情况下，为 AI 生成代码增加一道自动审查防线的工程师。",
+ "date": "2026-10-25",
+ "features": [
+  "在 git commit 时自动触发 AI 代码审查，检查 diff 中的风险",
+  "覆盖 10 类风险、100+ 失败模式，包括安全、可靠性、成本等问题",
+  "Issue Navigator 支持按严重程度、类别、类型和区域筛选审查结果",
+  "Summary Deck 为每次审查生成 60 秒幻灯片式变更摘要",
+  "可将问题一键发送给 AI 代理（如 Claude）进入修复循环",
+  "内置反馈机制，通过点赞/点踩调整后续审查的信噪比"
+ ],
+ "intro": "git-lrc 是一个免费、轻量的 AI 代码审查工具，它通过 Git 钩子在每次 commit 时自动对 diff 运行 AI 审查，在代码进入永久历史之前发现问题。项目认为 AI 生成代码虽然快，但可能悄悄移除逻辑、放宽约束、引入昂贵的云调用或泄露凭证，而等到 PR 阶段已经太晚。\n\ngit-lrc 将审查嵌入到每个团队都有的 commit 环节，不依赖特定 IDE 或额外看板。审查结果以行内评论形式呈现，并配有 Issue Navigator 按风险类别、严重程度和区域筛选问题，以及 Summary Deck 生成变更摘要。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux/macOS 安装：curl -L https://hexmos.com/ipm-install | bash && ipm i HexmosTech/git-lrc",
+  "Windows 安装：iwr https://hexmos.com/ipm-install-ps | iex; ipm i HexmosTech/git-lrc",
+  "或使用直接安装脚本：curl -fsSL https://hexmos.com/lrc-install.sh | bash",
+  "安装后正常执行 git commit，git-lrc 会自动运行 AI 审查"
+ ],
+ "summary": "git-lrc 解决的是 AI 生成代码在提交时可能悄悄引入逻辑错误、安全漏洞或成本风险的问题。它把 AI 审查挂到 git commit 上，在代码进入永久历史前给出行内评论，并提供按风险分类筛选的 Issue Navigator 和变更摘要。适合希望在不改变团队工作流的前提下，为每次提交增加自动审查的开发者。",
+ "tagline": "在 git commit 时自动运行的 AI 代码审查工具"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将网页版 AI 服务封装为 API 的开发者，以及希望统一调用多个 AI 网站能力的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "提供 OpenAI 兼容的 /v1/chat/completions 和 /v1/models 接口，支持流式响应与心跳保活",
+  "基于 Camoufox 模拟人类打字与鼠标轨迹，规避自动化检测",
+  "支持多窗口并发执行，可配置独立代理，实现多账号浏览器实例级数据隔离",
+  "内置任务队列、负载均衡、故障转移和错误重试",
+  "提供 Web 管理界面，支持实时日志、VNC 连接和适配器管理",
+  "支持从 LMArena、Gemini、ChatGPT、DeepSeek 等网站获取文本、图片或视频结果"
+ ],
+ "intro": "WebAI2API 是一个基于 Camoufox（Playwright）的网页 AI 转 API 工具。它通过模拟人类操作与 LMArena、Gemini 等网站交互，提供兼容 OpenAI 格式的接口服务，并支持多窗口并发与多账号管理。\n\n项目支持文本生成、图片生成和视频生成（具体取决于目标网站），内置任务队列、负载均衡、故障转移和错误重试等机制。同时提供可视化管理界面，支持实时日志查看、VNC 连接和适配器管理。\n\n部署方式包括源码运行和 Docker 容器化，首次使用需在 WebUI 中完成账号登录和人机验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pnpm install",
+  "初始化浏览器等预编译依赖：npm run init（网络受限时可加 -- -proxy=http://username:passwd@host:port）",
+  "启动服务：npm start（Linux 虚拟显示启动：npm start -- -xvfb -vnc）",
+  "访问 http://localhost:3000 打开 Web 管理界面，使用配置文件中 auth 设置的 Token 登录",
+  "在 WebUI 中连接虚拟显示器，手动登录目标 AI 网站账号并完成人机验证"
+ ],
+ "summary": "WebAI2API 通过浏览器自动化将 LMArena、Gemini 等网页版 AI 服务封装成 OpenAI 兼容 API，方便开发者用统一接口调用这些网站的能力。它支持多窗口并发和账号隔离，适合需要聚合多个网页 AI 服务、或为现有应用快速接入 AI 能力的场景。",
+ "tagline": "将网页版 AI 服务转为 OpenAI 兼容 API 的工具"
+}

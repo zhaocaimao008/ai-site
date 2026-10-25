@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要文本生成图像能力的研究者、开发者，以及希望使用中文提示词生成图像的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "支持中文和英文提示词生成图像",
+  "支持 512 到 2048 分辨率的高清图像生成",
+  "基于 GLM-4-9B 文本编码器，提示词长度上限 1024 token",
+  "提供 diffusers 版本，便于集成和推理",
+  "支持模型 CPU 卸载和文本编码器 4bit 量化以降低显存占用"
+ ],
+ "intro": "CogView4 是智谱 AI 推出的文本生成图像模型系列，包括 CogView4、CogView3-Plus 和 CogView3。CogView4 拥有 60 亿参数，基于 Diffusion Transformer 架构，支持原生中文输入和中文文本到图像生成，同时兼容英文。模型支持 512 到 2048 分辨率的图像生成，提示词长度上限为 1024 个 token。\n\nCogView3 是基于级联扩散的文本到图像系统，采用中继扩散框架；CogView3-Plus 则是基于 Diffusion Transformer 的新系列模型。项目已适配 Hugging Face diffusers 库，并提供了在线体验空间。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 diffusers 库：pip install diffusers",
+  "从 Hugging Face 或 ModelScope 下载模型权重",
+  "使用 diffusers 的 CogView4 管道加载模型并生成图像"
+ ],
+ "summary": "CogView4 是智谱 AI 开源的文本生成图像模型系列，包含 CogView4、CogView3-Plus 和 CogView3。CogView4 支持中英文提示词，尤其擅长中文文本到图像生成，可输出高分辨率图像。该项目适合需要中文图像生成能力的研究者和开发者，提供了 diffusers 集成和在线体验空间，便于快速上手和二次开发。",
+ "tagline": "智谱AI开源的中英双语文本生成图像模型系列"
+}

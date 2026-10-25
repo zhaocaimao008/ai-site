@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合对扩散模型可控图像生成感兴趣的研究人员和开发者，以及希望快速体验全景图生成或空间控制生成的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "无需训练或微调即可控制预训练扩散模型",
+  "支持生成全景图等自定义宽高比图像",
+  "支持空间引导信号，如分割掩码和边界框",
+  "提供 diffusers 集成示例（StableDiffusionPanoramaPipeline）",
+  "提供 Gradio 演示界面"
+ ],
+ "intro": "MultiDiffusion 是 ICML 2023 论文的官方 PyTorch 实现，提出一种统一的框架，利用预训练的文本到图像扩散模型实现多样且可控的图像生成，无需额外训练或微调。其核心是一种新的生成过程，通过优化任务将多个扩散生成过程与共享参数或约束绑定在一起。\n\n该方法可应用于生成符合用户控制的高质量、多样化图像，例如指定宽高比（如全景图）以及空间引导信号（从精细的分割掩码到边界框）。项目提供了与 diffusers 库的集成示例、Gradio 演示以及空间控制的网页演示。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：确保 PyTorch >= 1.10.0 及 diffusers 等库",
+  "使用 diffusers 集成：运行 README 中的示例代码，加载 StableDiffusionPanoramaPipeline 并生成全景图",
+  "启动 Gradio 演示：在终端运行 `python app_gradio.py`",
+  "访问 HuggingFace Spaces 在线体验全景图或空间控制演示"
+ ],
+ "summary": "MultiDiffusion 是一个基于预训练文本到图像扩散模型的可控图像生成框架，无需重新训练或微调。它通过融合多个扩散路径，让用户能够指定图像宽高比（如生成全景图）或提供空间引导信号（如分割掩码、边界框）来控制生成结果。项目提供了 diffusers 集成和 Gradio 演示，适合需要灵活控制图像生成的开发者和研究者快速上手。",
+ "tagline": "无需训练即可控制扩散模型生成图像"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 视频生成感兴趣的研究者和开发者，以及希望基于 SD1.5 生态定制文生视频/图生视频效果的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "支持文本到视频（T2V）生成，可搭配 SD1.5 社区基础模型定制风格",
+  "支持图像到视频（I2V）生成，建议先用 SDXL 等模型生成首帧",
+  "提供 61 帧和 125 帧两种视频生成模型",
+  "支持视频扩展，将 61 帧视频扩展到 125 帧",
+  "支持视频回溯，将 125 帧视频下采样到 61 帧",
+  "提供 ComfyUI 应用入口（由社区贡献）"
+ ],
+ "intro": "FancyVideo 是 360CVGroup 开源的视频生成模型官方实现，论文题为《FancyVideo: Towards Dynamic and Consistent Video Generation via Cross-frame Textual Guidance》。项目提供推理代码和预训练模型，支持从文本或图像生成视频，并包含 61 帧和 125 帧两种模型。\n\n代码基于 AnimateDiff 构建，并融合了 CV-VAE、Res-Adapter 和 Long-CLIP 等开源工作的思路。除了基础的文生视频和图生视频，还提供视频扩展（将 61 帧扩展到 125 帧）和视频回溯（将 125 帧下采样到 61 帧）功能。\n\nREADME 给出了完整的环境配置、模型下载和推理命令，并说明推理代码在 24GB 3090 GPU、CUDA 12.1 环境下测试通过。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并创建 conda 环境：git clone https://github.com/360CVGroup/FancyVideo.git && cd FancyVideo && conda create -n fancyvideo python=3.10 && conda activate fancyvideo && pip install -r requirements.txt",
+  "下载模型：git lfs install && git clone https://huggingface.co/qihoo360/FancyVideo && mv FancyVideo/resources/models resources，再下载 stable-diffusion-v1-5 到 resources/models",
+  "运行图生视频：CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./ python scripts/demo.py --config configs/inference/i2v.yaml",
+  "运行文生视频（以 pixars 基础模型为例）：CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./ python scripts/demo.py --config configs/inference/t2v_pixars.yaml",
+  "运行 125 帧图生视频：CUDA_VISIBLE_DEVICES=0 PYTHONPATH=./ python scripts/demo.py --config configs/inference/i2v_125_frames.yaml"
+ ],
+ "summary": "FancyVideo 是一个开源的视频生成模型，能够根据文本或图像生成视频，并支持视频扩展与回溯。它基于 AnimateDiff 等开源工作构建，提供 61 帧和 125 帧模型，适合想尝试文生视频、图生视频或基于 SD1.5 定制视频风格的开发者和研究者。",
+ "tagline": "基于跨帧文本引导的文本/图像生成视频模型"
+}

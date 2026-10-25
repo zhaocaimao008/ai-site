@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要开发多模态大模型的研究人员、算法工程师，以及希望快速上手文生图、文生视频或多模态理解应用的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "覆盖图文预训练、文生图、文生视频、多模态理解等丰富任务",
+  "集成 LLaVA、Qwen-VL、InternVL2、Stable Diffusion 等主流模型",
+  "提供数据处理、模型开发、预训练、精调、推理部署全流程支持",
+  "包含自研 PP-DocBee 文档理解模型和 PP-VCtrl 视频生成控制模型",
+  "基于飞桨 4D 混合并行与算子融合的高性能分布式训推能力",
+  "提供 DataCopilot 多模态数据处理工具箱，支持数据转换与可视化"
+ ],
+ "intro": "PaddleMIX 是飞桨生态下的多模态大模型开发套件，聚合图像、文本、视频等模态，覆盖视觉语言预训练、微调、文生图、文生视频和多模态理解等任务。项目提供从数据处理、模型开发、预训练、精调到推理部署的全流程支持，并针对不同任务给出推荐模型的最佳实践。\n\n套件包含丰富的模型库，支持 LLaVA、Qwen-VL、InternVL2、Stable Diffusion 等主流模型，同时提供自研的 PP-DocBee 文档理解模型、PP-VCtrl 视频生成控制模型以及 DataCopilot 数据处理工具箱。基于飞桨的 4D 混合并行和算子融合等优化策略，PaddleMIX 具备高性能分布式训练与推理能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆 PaddleMIX 仓库：git clone https://github.com/PaddlePaddle/PaddleMIX.git",
+  "创建并激活虚拟环境（如 conda create -n paddlemix python=3.10）",
+  "安装 PaddlePaddle（GPU/CPU 推荐一键安装，或参考 README 手动安装）",
+  "安装依赖（推荐一键安装，或手动安装）",
+  "验证安装是否成功"
+ ],
+ "summary": "PaddleMIX 是飞桨生态下的多模态大模型开发套件，面向需要处理图像、文本、视频等多种模态的开发者。它整合了主流多模态模型与自研模型，提供从数据处理、训练到推理部署的全流程工具，适合开展文生图、文生视频、文档理解等任务的研究与工程落地。",
+ "tagline": "基于飞桨的多模态大模型开发套件"
+}

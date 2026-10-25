@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合正在使用或希望了解 DeepSeek Harness 的开发者、插件作者以及需要扩展 AI 编码助手能力的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "按功能分类整理 DSH 生态中的插件、工具和基础设施",
+  "涵盖 Agent 编排、上下文搜索、记忆知识、UI 交互、IDE 客户端等类别",
+  "提供官方运行时安装命令和外部插件包安装命令",
+  "收录来自 dsh-external/hub 和公开 dsh-plugin 话题的资源",
+  "包含完整目录文件 CATALOG.md 和贡献指南"
+ ],
+ "intro": "Awesome DeepSeek Harness 是一个面向 DeepSeek Harness（DSH）生态的精选资源列表，汇总了插件、工具和基础设施。内容主要来自 dsh-external/hub 目录和 GitHub 上公开的 dsh-plugin 话题，覆盖核心插件、Agent 编排、上下文搜索、记忆知识、输入编辑、UI 主题、IDE 客户端、浏览器远程、模型推理、Git 工程、安全治理、输出交付、办公文档、通知渠道、插件开发、运行时运维等多个类别。\n\n项目本身是一个 awesome 列表，不提供代码实现，但 README 给出了官方运行时的安装方式以及外部插件包的安装命令，方便用户快速开始使用 DSH 生态中的插件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Node.js 安装官方运行时：npx @deepseek-ai/dsh web",
+  "使用 pnpm 安装外部插件包：dsh plugin --profile web add \"github:owner/repo#ref\"",
+  "安装或更新插件包后，重启 dsh --profile web",
+  "在设置 → 插件中管理已安装的插件"
+ ],
+ "summary": "Awesome DeepSeek Harness 是一个整理 DeepSeek Harness 生态资源的精选列表，把分散的插件、工具和基础设施按功能分类汇总，方便开发者查找和安装。它适合正在使用 DSH 或想扩展其能力的用户，通过 README 中的命令可以快速安装官方运行时和外部插件包。",
+ "tagline": "DeepSeek Harness 生态插件与工具精选列表"
+}

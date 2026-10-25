@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自行掌控健康数据、愿意自托管的开发者，以及需要整理多来源化验与可穿戴数据的个人用户。",
+ "date": "2026-10-25",
+ "features": [
+  "用一条命令把多语言化验项目名称与单位标准化到统一编码",
+  "整合化验报告、可穿戴数据和基因文件为一份个人健康记录",
+  "内置 MCP server，可从 Python 或 MCP 客户端调用解析引擎",
+  "支持 Docker 部署，可选用云端模型 API 或本地 llama.cpp 模型",
+  "回答附带可点击的编号来源，追溯到具体读数与文件"
+ ],
+ "intro": "Mirobody 是一个自托管的健康数据引擎，目标是把分散的化验报告、可穿戴设备数据和基因文件整理成一份标准化记录，并让每个答案都能追溯到原始文件。它内置 MCP server，既可以用 Docker 加一个模型 API key 运行，也可以完全在本机用 llama.cpp 跑模型。\n\n项目提供命令行工具做名称与单位标准化，例如把中文、日文、印尼语的血红蛋白名称统一解析到同一个 LOINC 代码；对“血脂”这类类别词则保持未解析。完整应用支持上传报告、按记录提问并生成带编号来源的图表。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv 后运行：uvx --python 3.12 mirobody resolve \"LDL cholesterol\" 血红蛋白 ヘモグロビン \"Total Kolesterol\" 血脂",
+  "在浏览器中打开 GitHub Codespaces，等待自动初始化完成",
+  "打开终端打印的设置链接，填入自己的模型 API key",
+  "用 you@mirobody.ai、验证码 111111 登录，提问“How has my cholesterol changed?”",
+  "或在本机克隆仓库后运行：COMPOSE_PROFILES=local-cpu ./deploy.sh"
+ ],
+ "summary": "Mirobody 面向想把个人健康数据集中管理的用户，把化验报告、可穿戴记录和基因文件整理成统一格式，并支持用自然语言提问、答案可追溯到原始文件。它既可以 Docker 部署配合云端模型，也能完全在本机用 llama.cpp 运行，适合注重数据自主、愿意自托管的开发者。",
+ "tagline": "自托管的 AI 健康数据引擎，统一化验、可穿戴与基因数据"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频-音频联合生成的研究者、需要本地部署或微调多模态生成模型的开发者，以及对唇形同步视频生成感兴趣的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "单次推理同时生成视频与同步音频",
+  "支持多语言唇形同步和环境音效生成",
+  "提供 360p 和 720p 模型权重",
+  "包含推理、训练、LoRA 微调和评估工作流",
+  "支持 CPU offload 以降低显存占用",
+  "提供 API 和 ComfyUI 插件"
+ ],
+ "intro": "MOVA 是一个开源的基础模型，能在单次推理中同时生成高保真视频和同步音频，避免级联管线带来的误差累积。它采用非对称双塔架构，融合预训练的视频塔和音频塔，并通过双向交叉注意力实现模态交互。项目在多人说话场景中注重多语言唇形同步和环境音效。\n\n仓库提供了模型权重、推理代码、训练流程、LoRA 微调脚本和评估代码，支持 360p 和 720p 分辨率，并提供 CPU offload 等显存优化选项。此外，还有 API 和 ComfyUI 插件可供使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "conda create -n mova python=3.13 -y && conda activate mova",
+  "pip install -e .",
+  "hf download OpenMOSS-Team/MOVA-360p --local-dir /path/to/MOVA-360p",
+  "torchrun --nproc_per_node=1 scripts/inference_single.py --ckpt_path /path/to/MOVA-360p/ --cp_size 1 --height 352 --width 640 --prompt \"...\" --ref_path ./assets/single_person.jpg --output_path ./data/samples/single_person.mp4 --seed 42 --offload cpu"
+ ],
+ "summary": "MOVA 是一个开源基础模型，能在单次推理中同时生成视频和同步音频，避免传统级联管线的误差累积。它采用双塔架构融合视频与音频模态，注重多语言唇形同步和环境音效。项目提供模型权重、推理代码、训练流程、LoRA 微调脚本和评估代码，适合研究视频-音频联合生成的开发者本地部署或微调。",
+ "tagline": "单模型同步生成视频与音频的开源基础模型"
+}

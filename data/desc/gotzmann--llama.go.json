@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地或自有服务器上运行 LLaMA 模型的 Go 开发者，以及不想依赖 GPU 集群的机器学习爱好者。",
+ "date": "2026-10-25",
+ "features": [
+  "纯 Golang 实现张量运算和 LLaMA 推理",
+  "支持 LLaMA-7B 和 13B 模型加载与推理",
+  "跨平台运行，支持 Mac、Linux、Windows",
+  "内置 REST API 服务器模式，支持并行任务",
+  "提供命令行交互和静态提示词推理",
+  "针对 ARM NEON 和 x64 AVX2 优化"
+ ],
+ "intro": "llama.go 是用纯 Golang 重写 llama.cpp 的项目，目标是在没有 GPU 集群的普通硬件上运行 LLaMA 系列大语言模型。它实现了张量运算、LLaMA 网络架构和模型加载，并支持多线程推理。\n\n项目提供跨平台二进制，支持 Mac、Linux 和 Windows，并针对 Apple Silicon 的 ARM NEON 和 Intel/AMD 的 AVX2 做了优化。除了命令行推理，还内置 REST API 服务器模式，方便集成到实际项目中。\n\n当前版本支持 LLaMA-7B 和 13B 的 FP32 模型，需要较大内存。后续路线图包括 LLaMA V2、GGUF 格式、量化以及 GPU 支持等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载转换好的 LLaMA-7B 或 13B FP32 模型文件",
+  "下载对应平台的预编译二进制，或从源码构建：go build -o llama-go-v1.exe -ldflags \"-s -w\" main.go",
+  "运行推理：llama-go-v1.4.0-macos --model ~/models/llama-7b-fp32.bin --prompt \"Why Golang is so popular?\"",
+  "启动服务器模式：llama-go-v1.4.0-macos --model ~/models/llama-7b-fp32.bin --server --host 127.0.0.1 --port 8080 --pods 4 --threads 4"
+ ],
+ "summary": "llama.go 是一个用纯 Go 语言实现的 LLaMA 大模型推理项目，参考 llama.cpp 的设计，让开发者无需 GPU 集群也能在普通硬件上运行 LLaMA 模型。它支持 7B 和 13B 模型，提供命令行和 REST API 两种使用方式，适合想在 Go 项目中集成大模型推理或进行本地实验的开发者。",
+ "tagline": "纯 Go 实现的 LLaMA 大模型推理引擎"
+}

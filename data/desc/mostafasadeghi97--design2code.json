@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合前端开发者、设计师以及需要快速将设计稿转为代码的团队使用。",
+ "date": "2026-10-25",
+ "features": [
+  "支持上传草图、线框图、Figma、XD 等设计图片",
+  "自动生成整洁、响应式的 HTML/CSS/JS 代码",
+  "基于 Next.js 构建，可一键部署到 Vercel",
+  "提供在线托管版本和 ChatGPT GPT 入口",
+  "开源且采用 MIT 许可证，允许自由使用和修改"
+ ],
+ "intro": "Design2Code 是一个开源工具，能够将网页设计截图（包括草图、线框图、Figma、XD 等格式）自动转换为整洁、响应式的 HTML/CSS/JS 代码。用户只需上传设计图片，项目便会利用 OpenAI GPT 等视觉模型生成对应的前端代码。\n\n该项目基于 Next.js 构建，支持一键部署到 Vercel，也提供了在线托管版本和 ChatGPT GPT 入口，方便直接体验。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问在线托管版本 https://design2code.dev 直接使用",
+  "或通过 ChatGPT GPT 入口体验：https://chat.openai.com/g/g-q7eESGBHX-screenshot-to-code",
+  "如需自行部署，点击 Vercel 部署按钮一键部署",
+  "若使用 Vercel 免费计划，需将 app/api/code/route.ts 中的 maxDuration 改为 10 秒"
+ ],
+ "summary": "Design2Code 是一个开源工具，可将网页设计截图（如草图、线框图、Figma 或 XD 导出图）自动转换为整洁、响应式的 HTML/CSS/JS 代码。它适合前端开发者和设计师快速将设计稿转为可用的前端代码，减少手动编码工作。项目基于 Next.js 构建，支持一键部署到 Vercel，也提供了在线托管版本和 ChatGPT GPT 入口，方便直接体验。",
+ "tagline": "将网页设计截图转换为 HTML/CSS 代码"
+}

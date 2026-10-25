@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合视频生成方向的研究者、对身份保持文本到视频感兴趣的开发者，以及希望基于 diffusers 快速体验或二次开发的人员。",
+ "date": "2026-10-25",
+ "features": [
+  "基于频率分解的 DiT 可控文本到视频生成，保持人物身份一致",
+  "无需微调（tuning-free）即可用于推理",
+  "支持 CogVideoX 系列模型训练与适配",
+  "集成 TeaCache 缓存推理和 xDiT 并行推理加速",
+  "已合并进 diffusers 库，提供标准接口调用",
+  "提供在线 Demo、Colab 示例和预览数据集"
+ ],
+ "intro": "ConsisID 是北京大学袁粒团队开源的文本到视频生成模型，被 CVPR 2025 评为 Highlight。它基于 DiT 架构，通过频率分解的思路，在生成视频时保持人物身份一致，属于无需微调的可控 IPT2V 模型。\n\n项目提供了推理代码、训练代码以及与 CogVideoX 系列模型的适配，并支持 TeaCache 缓存推理和 xDiT 并行推理等加速方案。模型已合并进 diffusers 库，方便开发者直接调用。\n\nREADME 中提供了 Hugging Face Space 在线体验、Colab 示例和预览数据集，适合研究者和开发者快速尝试或二次开发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 diffusers 开发版：pip install git+https://github.com/huggingface/diffusers.git",
+  "克隆项目仓库并进入目录",
+  "参考 README 中的推理脚本运行 ConsisID 生成视频",
+  "可选：使用 tools/cache_inference 或 tools/parallel_inference 加速推理"
+ ],
+ "summary": "ConsisID 是一个文本到视频生成模型，重点解决生成视频中人物身份不一致的问题。它基于 DiT 架构，通过频率分解实现无需微调的身份保持视频生成，适合需要让同一人物在多段视频中保持外观一致的研究与开发场景。项目提供推理、训练代码，并已集成到 diffusers，方便直接调用或二次开发。",
+ "tagline": "基于频率分解的身份保持文本到视频生成模型"
+}

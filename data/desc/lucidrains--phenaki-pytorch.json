@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本到视频生成感兴趣的研究人员和开发者，需要具备 PyTorch 和深度学习基础。",
+ "date": "2026-10-25",
+ "features": [
+  "实现 Phenaki 视频生成模型，使用 Mask GIT 进行文本引导视频生成",
+  "包含 C-ViViT 视频编码器，支持图像和视频训练",
+  "提供 MaskGit 生成模型和可选的 Token Critic 机制",
+  "支持多场景视频拼接，通过 prime_frames 实现长视频生成",
+  "提供 PhenakiTrainer 训练器，支持文本到视频训练"
+ ],
+ "intro": "Phenaki-pytorch 是 Phenaki Video 模型的 PyTorch 实现，使用 Mask GIT 技术生成最长可达 2 分钟的文本引导视频。项目包含 C-ViViT 视频编码器、MaskGit 生成模型以及可选的 Token Critic 机制，用于提升生成质量。\n\n该实现支持训练和采样，允许研究人员在图像或视频数据上训练 C-ViViT，并通过 Phenaki 模型进行文本到视频的生成。README 提供了详细的代码示例，包括模型初始化、训练循环和视频采样流程，还支持通过多场景拼接生成长视频。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装包：pip install phenaki-pytorch",
+  "初始化 CViViT 和 MaskGit 模型，并加载预训练权重（如有）",
+  "使用 Phenaki 模型进行训练：loss = phenaki(videos, texts=texts); loss.backward()",
+  "使用 phenaki.sample(texts='...', num_frames=17) 生成视频",
+  "可选：使用 make_video 函数拼接多个场景生成长视频"
+ ],
+ "summary": "Phenaki-pytorch 是文本引导视频生成模型 Phenaki 的 PyTorch 实现，利用 Mask GIT 技术生成最长 2 分钟的视频。项目提供了 C-ViViT 编码器、MaskGit 生成模型和训练器，支持在图像或视频数据上训练，并通过多场景拼接实现长视频生成。适合研究文本到视频生成的研究人员和开发者使用。",
+ "tagline": "基于 Mask GIT 的文本引导视频生成模型 PyTorch 实现"
+}

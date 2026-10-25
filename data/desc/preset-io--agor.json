@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望把 AI 编码代理从个人使用升级为团队协作的开发团队，以及需要自托管、关注权限与成本可观测性的工程组织。",
+ "date": "2026-10-25",
+ "features": [
+  "在隔离 git 分支上运行编码代理，每个分支有独立开发环境和对话历史",
+  "实时 2D 画布：分支为卡片、区域为 zone，支持实时光标、评论和共享会话",
+  "会话树：fork 探索不同方案，spawn 子会话处理具体子任务",
+  "AI 队友具备知识库记忆、skills 和 MCP 工具连接，并可通过 Slack、GitHub 等渠道触达",
+  "支持定时任务、分支级 RBAC、按用户凭据与按提示词的 token 和费用统计",
+  "多运行时：Claude Code、Codex、Gemini、OpenCode、Copilot、Cursor（beta）按会话切换"
+ ],
+ "intro": "Agor 是一个基于 TypeScript 的 Web 工作空间，用于在隔离的 git 分支上运行编码代理。它本身不提供模型，而是驱动你已经在用的代理 CLI 与 SDK，包括 Claude Code、Codex、Gemini、OpenCode、Copilot 和 Cursor（beta），每个会话可切换，自带订阅即可使用。\n\n每个工作单元是一个 git 分支，拥有独立的工作目录、开发环境、对话历史和 PR；分支与代理会话以卡片形式排布在实时 2D 画布上，团队成员可以通过实时光标、评论和共享会话跟进代理进度并随时介入。\n\n在此之上，Agor 还提供带知识库记忆的 AI 队友、可复用的 skills 与 MCP 连接、Slack 和 GitHub 等网关渠道、定时任务，以及分支级 RBAC 和按提示词统计的 token 与费用记录。可自托管，也提供托管云服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js ≥ 22.12 和 Git，并确保在 PATH 中",
+  "npm install -g agor-live",
+  "agor init  # 创建配置与数据库，并安装所选的代理工具",
+  "agor daemon start  # 后台运行守护进程",
+  "agor open  # 打开 Web UI，按向导创建第一块画布和 AI 队友"
+ ],
+ "summary": "Agor 把 AI 编码代理的使用从个人聊天窗口搬到团队共享的实时画布上。它在你已有的 git 分支上运行 Claude Code、Codex、Gemini 等代理，每个分支有独立的开发环境和对话记录，同事可以通过实时光标、评论和共享会话看到代理在做什么并随时接手。它还支持带知识库的 AI 队友、可复用 skills、MCP 连接和定时任务，适合想把个人提示词与工作流沉淀为团队能力、并需要权限和成本可观测性的开发团队。",
+ "tagline": "让团队与 AI 编码代理在同一块实时画布上协作"
+}

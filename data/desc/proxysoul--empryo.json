@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或 CI 中借助 AI 精确修改代码、并希望自动验证修改结果的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "先读取仓库代码地图，预判修改影响范围",
+  "通过 AST 和 LSP 按符号名精确编辑函数或类",
+  "编辑后自动运行类型检查、lint 和测试并修复",
+  "按项目记忆决策和过往 bug",
+  "支持桌面、终端和 headless CI 三种运行方式",
+  "可使用任意模型或已有付费方案"
+ ],
+ "intro": "Empryo 是一个面向桌面、终端和 CI 的 AI 编码工具。它先构建仓库的代码地图，了解一次修改会影响哪些文件，再通过 AST 和 LSP 按函数或类名精确编辑代码，而不是按文本行替换。编辑完成后，它会自动运行类型检查、lint 和测试，并在同一轮对话中修复问题。\n\nEmpryo 支持任意模型，也可以使用你已有的付费方案。它按项目记住决策和过去的 bug，方便后续复用。该仓库公开的是 SoulForge v2 核心与引擎代码，并非 Empryo v3 的完整源码；当前桌面应用和新功能在私有仓库中开发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS/Linux 安装：curl -fsSL https://empryo.com/install.sh | bash",
+  "Windows 安装：irm https://empryo.com/install.ps1 | iex",
+  "桌面应用和安装包从 empryo.com/download 获取"
+ ],
+ "summary": "Empryo 是一个 AI 编码工具，先为仓库建立代码地图，再通过 AST 和 LSP 按符号名精确修改代码，并在修改后自动运行类型检查、lint 和测试。它支持桌面、终端和 CI 环境，可使用任意模型或已有付费方案，适合希望让 AI 安全改代码并自动验证结果的开发者。",
+ "tagline": "基于代码地图与 AST 的 AI 编码助手"
+}

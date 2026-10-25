@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在自有服务器上搭建私有 AI 环境的开发者、运维人员与小型团队，尤其是需要本地 LLM、工作流自动化或 RAG 应用的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "一键安装：交互式向导选择服务并自动生成密钥，无需手动配置",
+  "私有 AI 环境：本地运行 Ollama 模型，支持 CPU、NVIDIA 或 AMD GPU 及多 GPU",
+  "ChatGPT 替代：Open WebUI 提供本地与 API 模型的聊天界面，可选代码执行沙箱",
+  "工作流自动化：n8n 支持 400+ 集成、队列模式与 MCP 服务器",
+  "AI 代理与 RAG：集成 OpenClaw、Flowise、Dify、Letta、LightRAG、RAGFlow、Qdrant 等",
+  "自动 HTTPS 与监控：Caddy 反向代理配 Let's Encrypt，Grafana + Prometheus 仪表盘与告警"
+ ],
+ "intro": "Selfhost AI 是一个基于 Docker Compose 的一键安装器，用于在自有服务器上部署 30 多个开源 AI 与自动化工具。它通过交互式向导选择所需服务，自动生成密钥，并借助 Caddy 配置自动 HTTPS，将 n8n、Ollama、Open WebUI、OpenClaw、Dify、Flowise、Supabase、ComfyUI、Qdrant 等组件整合为私有 AI 环境。\n\n项目面向希望数据自主可控的开发者与团队，提供本地 LLM 运行、ChatGPT 风格聊天界面、工作流自动化、AI 代理与 RAG 引擎、向量数据库、文档处理与监控等能力。所有服务通过 Docker 容器运行，支持健康检查、依赖管理与诊断命令，更新时保留现有配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备一台运行 Ubuntu 24.04 LTS 的 VPS（公开 IP），配置域名并添加通配符 DNS 记录 A *.yourdomain.com -> 服务器 IP",
+  "克隆仓库：git clone https://github.com/kossakovsky/selfhost-ai && cd selfhost-ai",
+  "运行安装脚本：sudo bash ./scripts/install.sh",
+  "按向导提示选择要部署的服务，等待安装完成"
+ ],
+ "summary": "Selfhost AI 解决的是在自有服务器上快速搭建私有 AI 工具栈的问题。它用一条命令和交互式向导，把 n8n、Ollama、Open WebUI、Dify、ComfyUI、Qdrant 等 30 多个开源工具通过 Docker Compose 部署起来，并自动配置 HTTPS 和监控。适合想本地运行大模型、做工作流自动化或构建 RAG 应用，又希望数据留在自己服务器上的开发者和团队。",
+ "tagline": "一键部署自托管 AI 工具栈"
+}

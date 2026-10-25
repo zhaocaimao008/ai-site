@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 React Native 移动应用中集成端侧大模型推理的开发者，尤其是关注 iOS/Android 本地 AI 能力、希望避免云端调用的团队。",
+ "date": "2026-10-25",
+ "features": [
+  "在 React Native 应用中加载 GGUF 模型并进行本地推理",
+  "支持 Metal（iOS）和 OpenCL/Hexagon NPU（Android，实验性）GPU/NPU 加速",
+  "提供对话补全、文本补全、tokenize/detokenize、embedding、rerank 等接口",
+  "支持多模态模型（通过 mmproj 投影器）和实验性端侧 TTS",
+  "支持基于槽位的并行解码、工具调用和 GBNF/JSON schema 语法采样",
+  "提供 Expo 配置插件和预编译原生库，简化集成"
+ ],
+ "intro": "llama.rn 是 llama.cpp 的 React Native 绑定，让开发者可以在 iOS 和 Android 应用中直接运行 GGUF 格式的大语言模型，实现端侧推理。项目基于 C/C++ 实现，通过 JavaScript 接口暴露模型加载、文本补全、对话生成等能力。\n\n它支持 Metal（iOS）和 OpenCL/Hexagon NPU（Android，实验性）加速，并提供多模态投影、并行解码、工具调用、语法采样等功能。从 v0.10 起要求 React Native 新架构，旧架构可参考 v0.9 分支。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npm install llama.rn 安装依赖（postinstall 会自动下载预编译原生库）",
+  "iOS 项目重新执行 npx pod-install",
+  "Android 项目在 proguard-rules.pro 中添加 -keep class com.rnllama.** { *; }",
+  "从 HuggingFace 搜索并下载 GGUF 格式模型文件",
+  "使用 initLlama 初始化上下文，再调用 context.completion 进行对话或文本补全"
+ ],
+ "summary": "llama.rn 把 llama.cpp 的端侧推理能力封装成 React Native 接口，让 iOS 和 Android 应用可以直接加载 GGUF 模型并在本地完成对话、文本生成、嵌入和重排序等任务。它适合想在移动端集成离线大模型、利用 GPU/NPU 加速，或需要多模态、工具调用与结构化输出的开发者。",
+ "tagline": "React Native 的 llama.cpp 绑定，在移动端本地运行大模型"
+}

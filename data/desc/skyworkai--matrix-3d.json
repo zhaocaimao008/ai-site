@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合从事3D生成、虚拟现实、游戏开发等领域的研究人员和开发者，以及对AI生成3D场景感兴趣的普通用户。",
+ "date": "2026-10-25",
+ "features": [
+  "支持文本到场景和图像到场景的生成",
+  "生成大范围、可360度自由探索的3D场景",
+  "提供可定制的轨迹与无限扩展能力",
+  "提供多种预训练模型（480p/720p/5B）及低显存模式",
+  "包含Gradio演示界面"
+ ],
+ "intro": "Matrix-3D 是一个基于全景表示的全向可探索3D世界生成项目，结合条件视频生成与全景3D重建技术。它支持从单张图片或文本提示生成大范围、可360度自由探索的3D场景，并提供可定制的轨迹与无限扩展能力。\n\n项目包含多个预训练模型，如 Text2PanoImage、PanoVideoGen（480p/720p/5B）和 PanoLRM，并提供了低显存模式，最低可在12G显存下运行5B模型。安装需在Linux系统与NVIDIA GPU环境下进行，依赖Python 3.10、PyTorch 2.7.0等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone --recursive https://github.com/SkyworkAI/Matrix-3D.git",
+  "创建conda环境：conda create -n matrix3d python=3.10",
+  "激活环境：conda activate matrix3d",
+  "安装PyTorch：pip install torch==2.7.0 torchvision==0.22.0",
+  "运行安装脚本：chmod +x install.sh && ./install.sh"
+ ],
+ "summary": "Matrix-3D 是一个AI驱动的3D场景生成工具，能够从单张图片或文本提示生成大范围、可360度自由探索的3D世界。它结合了全景视频生成与3D重建技术，支持自定义轨迹和无限扩展，适合需要快速构建沉浸式3D场景的研究与开发场景。项目提供多种预训练模型和低显存模式，降低了使用门槛。",
+ "tagline": "从单张图片或文本生成可360度探索的大规模3D场景"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在自己机器或私有环境中运行 Agent 与模型的开发者，以及需要在内网或离线环境分发、签名和验证模型的团队。",
+ "date": "2026-10-25",
+ "features": [
+  "一条命令启动本地推理服务并接入指定 Agent，例如 llmman launch claude --model qwen3.8",
+  "模型以 OCI 镜像形式存储和分发，支持从 Docker Hub、Hugging Face 等源直接拉取或迁移到任意 OCI registry",
+  "支持 cosign 格式的模型签名与验证，可配置信任策略自动检查拉取的模型",
+  "提供与 Ollama/OpenAI/Anthropic 兼容的 API 端点，可运行文本、图像、视频和音频生成模型",
+  "多个 llmman serve 守护进程可组成聚合集群，请求自动路由到已加载模型或资源充足的节点",
+  "支持本地模型与托管提供商（如 baseten、groq）混合使用，通过 --provider 参数切换"
+ ],
+ "intro": "llmman 是一个用 Rust 编写的命令行工具，目标是让 Claude Code、Codex、OpenCode 等 Agent 能直接对接本地或托管的任意模型。它把模型打包成标准 OCI 镜像，因此可以像分发容器镜像一样在 Docker Hub、Hugging Face 或自建 registry 之间拉取、推送和迁移模型。\n\n项目不维护私有模型库，也不要求注册账号，而是直接使用上游 llama.cpp、vllm、sglang、mlx-lm 等推理后端，支持 GGUF 和 safetensors 格式。除了文本对话，它还能运行扩散模型生成图像、视频和音频，并提供与 Ollama/OpenAI/Anthropic 兼容的 API 端点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：curl -fsSL https://llmmanorg.github.io/install.sh | sh（Linux/macOS）",
+  "启动 Agent 对接本地模型：llmman launch claude --model qwen3.8",
+  "直接与模型对话：llmman run qwen3.8",
+  "启动兼容 API 端点：llmman serve",
+  "从 Hugging Face 迁移模型到自己的 registry：llmman transfer hf.co/unsloth/Qwen3.5-0.8B-GGUF docker.io/owner/model:latest"
+ ],
+ "summary": "llmman 解决的是让不同 AI Agent 灵活对接本地或托管模型的问题。它把模型封装成标准 OCI 镜像，复用容器 registry 的拉取、推送和签名机制，无需私有模型库或账号。适合想在自有机器上运行 Claude Code 等 Agent、或在离线与合规环境中分发和验证模型的开发者。",
+ "tagline": "用一条命令让任意 Agent 跑在任意模型上"
+}

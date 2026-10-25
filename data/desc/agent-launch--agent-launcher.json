@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时使用多种编码 Agent CLI 的开发者，以及希望用图形界面统一管理 Agent 配置和会话的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "检测并链接系统中已安装的编码 Agent CLI，缺失时可一键安装",
+  "为每个 Agent 管理多个提供商配置档案，并同步环境变量与原生配置文件",
+  "在嵌入式终端或聊天视图中运行 Agent，支持选择项目文件夹作为工作目录",
+  "读取各 CLI 的本地会话历史，支持恢复或删除会话记录",
+  "查看已安装的 MCP 服务器和 Skills，并提供本地用量统计面板",
+  "提供配置连通性检查，通过最小模型请求验证端点、凭据和模型"
+ ],
+ "intro": "Agent Launcher 是一个本地桌面工作区，用于统一管理多种编码 Agent 的命令行工具（CLI）。它会检测系统中已安装的 CLI 并建立链接，对缺失的 CLI 提供一键安装，同时支持配置官方账号或兼容 API 的提供商档案。\n\n每个 Agent 可以在内嵌终端或聊天视图中运行，并支持选择项目文件夹作为工作目录。应用会读取各 CLI 自身的本地会话历史，支持恢复或删除会话记录，还能查看已安装的 MCP 服务器、Skills 以及本地用量统计。\n\n项目采用本地优先设计，API 密钥以明文存储在本地配置文件中，界面中会做掩码处理。目前支持的 Agent 包括 Claude Code、Codex CLI、OpenCode、Pi、Gemini CLI 和 Hermes Agent。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的安装包（macOS DMG/ZIP、Windows NSIS、Linux AppImage）",
+  "首次启动时，应用会检测已安装的 CLI 命令，若存在多个副本可选择要链接的命令",
+  "对未找到的 CLI 可一键安装，或按官方文档自行安装后重新检测",
+  "在向导中完成官方账号或 API 配置，然后选择项目文件夹开始会话"
+ ],
+ "summary": "Agent Launcher 把多个编码 Agent 的命令行工具集中到一个桌面应用里管理。它能识别系统中已有的 CLI 并建立链接，为缺失的工具提供一键安装，还能为每个 Agent 保存多套提供商配置并同步到原生配置文件。适合需要同时使用 Claude Code、Codex CLI 等工具、又不想分别维护配置和会话的开发者。",
+ "tagline": "在一个桌面应用中配置并运行多种编码 Agent CLI"
+}

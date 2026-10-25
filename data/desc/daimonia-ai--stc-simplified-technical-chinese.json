@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合日常使用 AI 聊天、写文档的普通用户，以及开发 AI 产品、编写 Agent 指令、撰写技术文档或产品界面文字的团队。",
+ "date": "2026-10-25",
+ "features": [
+  "提供对话、文档、产品界面、Agent 指令四类场景的写作规则",
+  "包含推荐词表、不推荐写法及项目术语表模板，统一用词",
+  "支持 CLI 工具（stc init、stc check）进行安装和文件检查",
+  "可作为独立 Skill 安装到 Claude Code、Codex 等 Agent 中",
+  "支持网页聊天通过链接读取规则并使用",
+  "任务回执按“做完了／需要你／知会”三段组织，汇报更清晰"
+ ],
+ "intro": "STC（Simplified Technical Chinese）是一套面向 AI 的中文写作规范，包含表达规则、词表和检查工具，用于生成、审阅和改写中文内容。它针对大模型输出中文时常见的啰嗦、术语不一致、指代不清等问题，提供可操作的规则和场景化指导。\n\n项目提供四类场景规则（对话、文档、产品界面、Agent 指令），并附带推荐词表、项目术语表模板以及命令行工具。用户可以通过 CLI、独立 Skill 或网页聊天三种方式接入，将 STC 设为默认输出规则或用于审阅已有内容。\n\nSTC 参考了 ASD-STE100 的结构，但规则和词条均为独立编写，旨在帮助开发者和写作者获得更自然、简短且术语一致的中文输出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Agent 中发送安装指令：使用 npm 安装 @daimonia/stc@latest，再运行 stc init",
+  "或手动安装 CLI：npm install -g @daimonia/stc@latest && stc init",
+  "在网页聊天中发送：请读取并使用 STC：https://raw.githubusercontent.com/daimonia-ai/STC-Simplified-Technical-Chinese/main/WEB.md",
+  "设置默认规则：对 Agent 说“请将 STC 设为当前项目的默认中文输出规则”",
+  "审阅内容：对 Agent 说“请按 STC 审阅并优化以下中文，保留事实、数字、名称和原意”"
+ ],
+ "summary": "STC 是一套给 AI 使用的中文写作规范，旨在解决大模型输出中文时啰嗦、术语不一致、指代不清等问题。它提供分场景的写作规则、词表和检查工具，适合日常使用 AI 聊天、写文档的用户，以及开发 AI 产品、编写 Agent 指令或产品界面文字的团队。通过 CLI、Skill 或网页聊天接入，可设为默认输出规则或用于审阅改写。",
+ "tagline": "给 AI 用的中文写作规范，让输出更简洁一致"
+}

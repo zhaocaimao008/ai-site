@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地或自托管环境中通过网页界面与 Ollama 模型对话的开发者与普通用户。",
+ "date": "2026-10-25",
+ "features": [
+  "流式回复，支持停止、重新生成和编辑，编辑与重新生成会保留为可切换的版本，回复可分支为新聊天",
+  "支持 qwen3、deepseek-r1、gpt-oss 等思考模型，推理过程显示在可折叠块中，可开关思考或设置努力级别",
+  "支持图片附件（用于 llava、gemma3 等视觉模型）以及文本或代码文件附件",
+  "可搜索 Ollama 模型库并选择尺寸拉取，显示进度，支持删除、查看能力和上下文长度、从内存卸载模型",
+  "可全局、按模型或按聊天设置系统提示词和生成参数（temperature、num_ctx、top_p、seed 等）",
+  "聊天按日期分组，支持固定、归档、重命名、生成标题和全文搜索（⌘K）"
+ ],
+ "intro": "Ollama GUI 是一个单页应用，直接从浏览器与 Ollama API 通信，没有自己的后端。聊天记录保存在浏览器的 IndexedDB 中，除了发送到指定的 Ollama 服务器外，数据不会离开你的机器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装并启动 Ollama，拉取模型：ollama pull llama3.2",
+  "克隆仓库并安装依赖：git clone https://github.com/HelgeSverre/ollama-gui.git && cd ollama-gui && bun install",
+  "启动开发服务器：bun run dev，然后访问 http://localhost:5173",
+  "如需使用托管版本，启动 Ollama 时设置 OLLAMA_ORIGINS=https://ollama-gui.vercel.app ollama serve"
+ ],
+ "summary": "Ollama GUI 是一个纯前端的网页聊天界面，直接调用 Ollama API 与本地大模型对话，聊天记录保存在浏览器 IndexedDB 中，不经过额外后端。它支持流式回复、思考模型、图片与文件附件、模型拉取与管理、生成参数设置以及聊天历史搜索，适合想在本地或自托管环境里用图形界面使用 Ollama 的用户。",
+ "tagline": "通过 Ollama API 与本地大模型聊天的网页界面"
+}

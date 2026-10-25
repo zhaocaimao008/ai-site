@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI Agent 开发感兴趣的开发者，尤其是希望用 Docker Compose 快速搭建和运行 Agent 示例、了解不同框架集成方式的人群。",
+ "date": "2026-10-25",
+ "features": [
+  "提供多种 Agent 框架的示例，包括 LangGraph、CrewAI、Agno、ADK、Spring AI 等",
+  "支持本地运行开源模型（如 qwen3、llama3.2、gemma3）或使用 OpenAI 模型",
+  "通过 MCP 协议集成外部工具，如 DuckDuckGo 搜索、GitHub、PostgreSQL 等",
+  "每个示例自包含，使用 Docker Compose 一键启动",
+  "涵盖单 Agent 和多 Agent 协作等不同模式"
+ ],
+ "intro": "这个仓库提供了一系列可直接运行的 AI Agent 示例，每个示例都通过 Docker Compose 定义，将开源大模型、工具（MCP）和 Agent 运行时组合在一起。示例覆盖了多种主流 Agent 框架，如 LangGraph、CrewAI、Agno、ADK、Spring AI 等，并展示了单 Agent 与多 Agent 的不同模式。\n\n每个示例都是自包含的，可以在本地或云端运行。模型方面，既支持通过 Docker Model Runner 在本地运行开源模型（如 qwen3、llama3.2、gemma3），也支持切换为 OpenAI 的云端模型。工具集成则通过 MCP 协议连接搜索、GitHub、数据库等服务。\n\n对于想了解如何用容器化方式搭建和运行 AI Agent 的开发者，这些示例提供了可复用的配置和清晰的启动步骤。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker Desktop 4.43.0+ 或 Docker Engine，并确保 GPU 支持已启用（或使用 Docker Offload）",
+  "进入任意示例目录，例如 `cd a2a`",
+  "如果示例包含 `mcp.env.example`，复制为 `.mcp.env` 并填入所需的 MCP token",
+  "运行 `docker compose up --build` 启动示例",
+  "如需使用 OpenAI 模型，创建 `secret.openai-api-key` 文件并填入 API key，然后运行 `docker compose -f compose.yaml -f compose.openai.yaml up`"
+ ],
+ "summary": "这个项目收集了多个用 Docker Compose 编排 AI Agent 的示例，把开源大模型、MCP 工具和 Agent 运行时组合成可直接运行的配置。它适合想了解不同 Agent 框架（如 LangGraph、CrewAI、ADK）如何集成，或希望快速在本地或云端启动 Agent 演示的开发者。",
+ "tagline": "用 Docker Compose 编排和运行 AI Agent 的示例集合"
+}

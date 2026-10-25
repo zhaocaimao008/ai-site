@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex 等 AI 编程代理的开发者，尤其是想规范化新项目起点或改造已有代码库的团队。",
+ "date": "2026-10-25",
+ "features": [
+  "提供机器环境配置提示词，涵盖运行时、代理、插件与备份记录",
+  "提供 Next.js 新项目初始化提示词，生成产品文档、基础栈与质量检查",
+  "提供已有项目的诊断、改造与验证流程提示词",
+  "支持 Claude Code 与 Codex 的分别配置，并保留项目原有技术栈",
+  "可重复运行以检查工具包版本、避免重复指令与技能"
+ ],
+ "intro": "Vibe Coding Toolkit 是一套面向 AI 编程代理的文档、提示词和模板集合，核心用途有两个：配置开发机器，以及初始化或升级单个项目。它把「准备环境、启动新应用、改造已有项目、维护上下文与质量」这些流程写成可复制的提示词，交给能读写文件并执行命令的代理去完成。\n\n新项目默认采用 Next.js 基础栈，包含 App Router、TypeScript、Tailwind、ESLint，以及 Drizzle/PostgreSQL、Zod、Pino 和 Vitest 等组件；已有项目则保留原有技术栈，先诊断再逐步改进。仓库本身不存放业务代码，只提供「配方」，代码始终留在你的项目里。\n\n指南分别覆盖 Claude Code 和 Codex，其他具备等价能力的客户端也可参照执行。README 也说明，没有环境访问权限的对话只能解释流程，无法验证安装和测试结果。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在目标目录中打开具备终端访问权限的 AI 代理",
+  "粘贴提示词：Read https://raw.githubusercontent.com/soumatheusgomes/vibe-coding-toolkit/main/docs/prompts/11-next-project-bootstrap.md and execute setup in this directory.",
+  "在第二行补充项目名称、问题、受众、主要流程和约束",
+  "已有项目则改用 docs/prompts/12-existing-project-setup.md 的提示词执行",
+  "需要配置本机环境时使用 docs/prompts/10-development-environment-setup.md"
+ ],
+ "summary": "这个项目把 AI 编程代理的配置流程整理成可直接复制的提示词，帮助开发者准备开发机器、初始化 Next.js 新项目，或诊断并升级已有代码库。它不存放业务代码，而是提供文档、模板和质量检查约定，适合希望用 Claude Code、Codex 等代理规范化开发起点、保持项目上下文与质量的开发者。",
+ "tagline": "用 AI 代理配置开发环境与项目脚手架的提示词工具包"
+}

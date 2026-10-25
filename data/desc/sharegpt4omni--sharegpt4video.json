@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频理解与生成的研究人员、多模态大模型开发者，以及需要高质量视频字幕数据或视频描述工具的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "发布大规模高描述性视频-文本数据集，含 40K GPT4-Vision 生成字幕和约 400K 隐式视频片段字幕",
+  "提供通用视频描述器 ShareCaptioner-Video，支持不同时长、分辨率和宽高比，并有质量与效率两种推理模式",
+  "开源大型视频语言模型 ShareGPT4Video-8B，可用于视频对话和详细描述",
+  "提供训练代码，验证高质量视频字幕对提升 LVLM 视频理解能力的作用",
+  "展示用高质量视频字幕改进 Text-to-Video 生成性能（基于 Open-Sora-Plan）"
+ ],
+ "intro": "ShareGPT4Video 是 NeurIPS 2024 收录的研究项目，聚焦于用更高质量的视频字幕来改进视频理解与生成模型。项目发布了大规模、高描述性的视频-文本数据集，包含约 40K 条由 GPT4-Vision 生成的视频描述，以及约 400K 条隐式视频片段描述。\n\n项目同时提供了通用视频描述器 ShareCaptioner-Video，可处理不同时长、分辨率和宽高比的视频，并支持质量与效率两种推理模式。此外，还开源了大型视频语言模型 ShareGPT4Video-8B，可用于视频对话与详细描述。\n\nREADME 还展示了如何用 ShareCaptioner-Video 生成的高质量字幕来提升 Text-to-Video 模型（如 Open-Sora-Plan）的表现，并提供了训练代码以验证高质量字幕对 LVLM 理解能力的帮助。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/ShareGPT4Omni/ShareGPT4Video",
+  "conda create -n share4video python=3.10 -y && conda activate share4video",
+  "cd ShareGPT4Video && pip install --upgrade pip && pip install -e . && pip install -e \".[train]\" && pip install flash-attn --no-build-isolation",
+  "python run.py --model-path Lin-Chen/sharegpt4video-8b --video examples/yoga.mp4 --query \"Describe this video in detail.\"",
+  "python app.py  # 启动 ShareGPT4Video-8B 本地 demo；或 cd captioner && python app.py 启动 ShareCaptioner-Video demo"
+ ],
+ "summary": "ShareGPT4Video 是一个面向视频理解与生成的研究项目，核心是用更高质量的视频字幕来提升模型表现。它发布了包含大量 GPT4-Vision 生成描述的视频-文本数据集，并开源了通用视频描述器 ShareCaptioner-Video 和视频语言模型 ShareGPT4Video-8B。适合需要视频字幕数据、视频描述工具或多模态视频模型的研究与开发场景。",
+ "tagline": "用高质量视频描述提升视频理解与生成"
+}

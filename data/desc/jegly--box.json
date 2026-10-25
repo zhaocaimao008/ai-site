@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、需要在 Android 设备上离线使用 AI 对话、图像生成、语音交互等功能的开发者和普通用户。",
+ "date": "2026-10-25",
+ "features": [
+  "完全离线运行，支持 GGUF 模型导入与 llama.cpp 引擎",
+  "集成 LiteRT 与 llama.cpp 混合引擎，支持 GPU 及多平台 NPU 加速",
+  "端侧图像生成（Bonsai、FLUX.2 klein、Z-Image）与图像超分辨率",
+  "语音模式（语音到语音）、多语言语音识别与合成",
+  "文档分析问答、视觉多模态、人脸识别与照片修复",
+  "生物识别锁、加密聊天记录、防点击劫持等安全加固"
+ ],
+ "intro": "Box 是一个基于 Google AI Edge Gallery 分支开发的 Android 应用，主打完全离线的端侧 AI 能力。它集成了 LiteRT 与 llama.cpp 混合引擎，支持导入 GGUF 模型，并利用 GPU 以及 Snapdragon、Google Tensor、MediaTek 的 NPU 进行加速。\n\n除了文本对话，Box 还提供图像生成（Bonsai、FLUX.2 klein、Z-Image）、语音模式（语音到语音）、多语言语音识别与合成、文档分析与问答、视觉多模态、图像超分辨率、人脸识别、照片修复、音乐生成等功能。安全方面包含生物识别锁、加密聊天记录和防点击劫持保护。\n\n应用界面支持英语、法语、葡萄牙语、德语和简体中文，适合注重隐私、希望在无网络环境下使用 AI 功能的 Android 用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载最新 APK（普通 Android 选 Main 版，GrapheneOS/LineageOS 等自定义 ROM 选 custom-rom-support 版）",
+  "或使用 Obtainium：点击 + 按钮，粘贴仓库地址 https://github.com/jegly/Box",
+  "在 APK filter regex 中填入 Main 或 custom-rom-support，点击 Add 安装",
+  "安装后打开应用，在设置中检查更新或导入 GGUF 模型开始使用"
+ ],
+ "summary": "Box 是一个 Android 端的离线 AI 应用，基于 Google AI Edge Gallery 分支开发，让用户在无网络环境下也能使用本地大模型。它支持导入 GGUF 模型，并利用 GPU 和手机 NPU 加速，提供文本对话、图像生成、语音交互、文档问答、视觉识别等多种功能，同时加入生物识别锁和加密存储等安全措施。适合注重隐私、希望在手机上离线运行 AI 功能的用户。",
+ "tagline": "Android 上的全离线本地 AI 套件"
+}

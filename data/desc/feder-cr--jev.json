@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或边缘设备上快速进行文本分类、决策判断的开发者，以及希望替代云端 Jev 服务的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "支持是/否（noul）、多选（choice）和评分（score）三种问题类型",
+  "提供与 Jev 兼容的 HTTP API（POST /v1/systemone）",
+  "纯 CPU 推理，单个二进制文件，无需 Python",
+  "一次请求可对同一文本提出多个问题，文本只读取一次",
+  "返回每个答案的概率和置信度，便于人工复核",
+  "支持通过 JEV_API_KEY 环境变量启用 API 密钥认证"
+ ],
+ "intro": "jevos 是一个开源的决策模型推理项目，提供与 Jev 和 Microsoft-Decision-1 兼容的 API。你只需发送一段文本和问题（是/否、多选或评分），它就会返回每个答案的概率，全部在本地 CPU 上运行，无需 GPU 或 Python。\n\n项目以单个二进制文件分发，支持 Linux 和 Windows，模型以 OpenVINO int8 格式提供，也提供 GGUF 格式供 llama.cpp 使用。它通过 HTTP 服务提供 /v1/systemone 接口，可一次对同一段文本提出多个问题，并返回概率和置信度。\n\n根据 README 的基准测试，jevos-v5 在短请求上延迟约 30 毫秒，长请求约 132 毫秒，在七项任务上的准确率从 0.36 到 0.92 不等。它适合需要快速、离线决策支持的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 release 页面下载对应系统的压缩包和 jevos-v5-openvino-int8.zip",
+  "解压：tar -xzf jev-linux-x64.tar.gz（Windows 用 unzip jev-windows-x64.zip）",
+  "进入目录并解压模型：cd jev && unzip ../jevos-v5-openvino-int8.zip",
+  "启动服务：./jev serve（Windows 用 jev.exe serve）",
+  "发送请求：curl http://127.0.0.1:8017/v1/systemone -H 'Content-Type: application/json' -d '{...}'"
+ ],
+ "summary": "jevos 是一个在本地 CPU 上运行的决策模型，能对一段文本回答是/否、多选或评分问题，并给出每个答案的概率。它兼容 Jev 的 API，适合需要快速、离线决策支持的场景，比如工单分类、规则判断或内容审核。项目提供单个二进制文件和预转换模型，部署简单，无需 GPU 或 Python 环境。",
+ "tagline": "在笔记本 CPU 上快速做是/否、多选和评分决策"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究文本到图像生成的研究人员、开发者，以及希望使用预训练模型生成图像或进行图像补全的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "支持中英文文本到图像生成",
+  "提供文本引导的图像补全功能",
+  "基于分层 Transformer 架构，使用 LoPAR 加速生成",
+  "支持多种图像风格选择，如照片、漫画、油画等",
+  "提供交互式命令行和批量文件输入两种推理方式"
+ ],
+ "intro": "CogView2 是一个用于通用领域文本到图像生成的分层 Transformer 模型，参数量为 6B-9B-9B。该实现基于 SwissArmyTransformer 库（v0.2），支持中文和英文文本输入，其中中文输入的效果通常更好。\n\n模型通过 LoPAR 加速生成过程，并利用 CogLM 实现双向补全，从而支持文本引导的图像补全任务。项目提供了预训练模型，用户可以从文本生成图像，或进行文本引导的补全。\n\n运行预训练模型建议使用 A100 GPU，但也可以通过调整推理批大小在较小 GPU 上运行。项目还提供了 Hugging Face Spaces 和 Replicate 上的在线演示。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -r requirements.txt",
+  "编译 LocalAttention 内核（可选，若不安装可使用 --only-first-stage 运行第一阶段）：git clone https://github.com/Sleepychord/Image-Local-Attention && cd Image-Local-Attention && python setup.py install",
+  "设置环境变量 SAT_HOME 指定模型存储路径，并下载模型（coglm/cogview2-dsr/cogview2-itersr）到该路径下",
+  "运行文本到图像生成：./text2image.sh --input-source input.txt",
+  "运行文本引导补全：./text_guided_completion.sh --input-source input_comp.txt"
+ ],
+ "summary": "CogView2 是一个文本到图像生成模型，支持中英文输入，通过分层 Transformer 架构生成通用领域的图像。它提供预训练模型，可用于根据文字描述生成图片，或对图片中指定区域进行文本引导的补全。适合需要文本生成图像能力的研究者和开发者，尤其适合中文场景。",
+ "tagline": "基于分层 Transformer 的中英文文本到图像生成模型"
+}

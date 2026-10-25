@@ -1,0 +1,20 @@
+{
+ "ai_related": true,
+ "audience": "适合想要快速体验文本生成视频模型的研究者、开发者或爱好者，无需本地 GPU 环境。",
+ "date": "2026-10-25",
+ "features": [
+  "提供多个文本生成视频模型的 Colab 笔记本，包括 zeroscope、longscope、animov 等",
+  "每个笔记本对应一个 Hugging Face 模型，并附有打开链接",
+  "包含水印移除工具笔记本",
+  "部分笔记本标注了模型来源和致谢信息"
+ ],
+ "intro": "这个项目收集了多个文本生成视频（text-to-video）模型的 Colab 笔记本，让用户可以直接在浏览器中运行这些模型，无需本地配置环境。每个笔记本对应一个特定的模型，例如 zeroscope、longscope、animov 等，并提供了在 Colab 中打开的链接。\n\n项目主要依赖 Hugging Face 上的预训练模型，部分笔记本还标注了模型来源和致谢。用户只需点击对应的 Colab 徽章即可打开笔记本，按照里面的步骤运行即可生成视频。此外，项目还包含一个水印移除工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开项目 GitHub 页面，浏览可用的 Colab 笔记本列表",
+  "点击任意笔记本对应的“Open in Colab”徽章",
+  "在 Colab 中按照笔记本内的说明运行代码（通常需要依次执行单元格）"
+ ],
+ "summary": "这个项目汇集了多个文本生成视频模型的 Colab 笔记本，让用户能在浏览器中直接运行这些模型，无需本地配置环境。每个笔记本对应一个 Hugging Face 上的预训练模型，如 zeroscope、longscope 等，适合想快速体验文本生成视频的研究者或爱好者。",
+ "tagline": "文本生成视频的 Colab 笔记本合集"
+}

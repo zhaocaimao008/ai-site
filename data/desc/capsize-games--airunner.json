@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望在本机离线运行 AI 聊天与艺术生成工具的开发者和创作者。",
+ "date": "2026-10-25",
+ "features": [
+  "可自定义名称、性格、声音和长期记忆的 AI 聊天伴侣",
+  "多图层画布，支持绘制、生成、滤镜和草图转图像",
+  "图像生成支持 Z-Image Turbo、图生图、局部重绘和背景移除",
+  "完整 TTS 与 STT，支持语音对话",
+  "基于 RAG 的长期记忆召回，伴侣可感知时间、日期和天气",
+  "内置 HuggingFace 和 Civitai 模型下载器，支持多种本地 LLM 和图像模型"
+ ],
+ "intro": "AI Runner 是一个本地运行的 AI 应用，包含两个核心部分：一个可自定义名称、性格、声音和记忆的聊天伴侣，以及一个用于 AI 艺术创作的多图层画布。所有对话、记忆和生成内容默认保存在本机，无需联网、API Key 或订阅。\n\n伴侣支持语音对话、长期记忆和环境感知（时间、日期、天气），画布则支持草图转图像、图生图、局部重绘和滤镜等操作。项目提供桌面下载、Docker 容器和 pip 安装等多种获取方式，主要支持 Linux，Windows 支持为实验性。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "桌面下载：从 capsizegames.itch.io/ai-runner 获取，无需 Python 环境",
+  "Docker：docker pull ghcr.io/capsize-games/airunner:linux-desktop",
+  "Python：pip install airunner",
+  "开发者从仓库安装：./scripts/install.sh",
+  "分布式安装：./deployment/install_distributed.sh --role ..."
+ ],
+ "summary": "AI Runner 是一个本地运行的 AI 应用，把可自定义性格、声音和记忆的聊天伴侣与多图层 AI 艺术画布结合在一起。它适合希望离线使用、注重隐私的用户，所有对话和生成内容默认留在本机，无需联网或订阅。项目提供桌面下载、Docker 和 pip 安装方式，主要支持 Linux。",
+ "tagline": "本地运行的 AI 艺术与聊天伴侣"
+}

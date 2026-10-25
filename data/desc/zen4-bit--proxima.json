@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Cursor、VS Code 等编辑器中统一调用多个 AI 模型，又不想为每个模型单独购买 API 的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "将 ChatGPT、Claude、Gemini、Perplexity 等模型统一为本地 MCP 端点，供编辑器调用",
+  "Session Routing 复用已登录的浏览器会话，无需 API Key；也支持 BYOK 自带密钥",
+  "内置 Python agent，支持多 agent 委派与跨会话记忆",
+  "本地 SQLite 记忆引擎与上下文跟踪、提示词路由",
+  "提供 40 个 MCP 工具，以及 REST API、WebSocket、CLI 和 SDK 接口",
+  "Electron 图形界面，包含状态面板与配置设置"
+ ],
+ "intro": "Proxima 是一个运行在本地的多 AI MCP Server，目标是把 ChatGPT、Claude、Gemini、Perplexity 等模型接入 Cursor、VS Code、Windsurf 或 Claude Desktop 等开发工具。它提供两种路由方式：默认的 Session Routing 复用浏览器中已登录的账号会话，无需 API Key；也可以使用 BYOK 模式填入自己的密钥。\n\n除了模型路由，项目还附带一个 Python agent，支持多 agent 委派、跨会话记忆，以及基于本地 SQLite 的记忆引擎。所有服务运行在 127.0.0.1 上，README 称其注重本地与隐私。项目基于 Electron 构建，提供状态面板和配置界面，并对外暴露 MCP 工具、REST API、WebSocket、CLI 和 SDK。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认满足 README 中的前置条件（Prerequisites）",
+  "按 README 的 Install & Start 步骤安装并启动 Proxima",
+  "在编辑器中按 Connect to Your Editor (MCP) 的说明完成 MCP 连接",
+  "在 Proxima 界面选择 Session Routing 或 BYOK 路由模式"
+ ],
+ "summary": "Proxima 是一个本地运行的多 AI MCP Server，把 ChatGPT、Claude、Gemini、Perplexity 等模型统一成编辑器可调用的本地端点，让 Cursor、VS Code 等工具直接使用这些模型。它默认复用浏览器已登录的会话，省去 API Key，也支持自带密钥，并附带 Python agent 和本地记忆能力，适合想减少多份订阅与 API 开销的开发者。",
+ "tagline": "把 ChatGPT、Claude、Gemini 等接入本地编辑器的 MCP 网关"
+}

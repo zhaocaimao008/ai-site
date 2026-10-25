@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望拥有一个长期跟踪自己学习状态、能主动提醒和复习的个人用户，以及想基于 Pi SDK 扩展学习类智能体的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "三层记忆：L1 学习者画像、L2 原生 wiki 知识库、L3 会话记录与跨对话检索",
+  "主动调度器：用自然语言创建 cron 任务，可从智能体、UI 或守护进程运行",
+  "个人 IM 通道：飞书原生支持，微信支持 iLink 扫码登录或桥接模式",
+  "Practice Lab：工作区级 Web 终端，运行记录可被智能体读取",
+  "技能系统与内容中心：从远程 hub 浏览并导入技能与预设",
+  "可插拔模型提供方：兼容 openai-completions 与 anthropic-messages 接口，UI 内实时切换"
+ ],
+ "intro": "Inno Agent 是一个面向单个学习者的开源个人学习智能体，基于 Pi coding-agent SDK 构建，且不修改其内核。它把长期学习支持拆成三层显式记忆：L1 学习者画像（目标、知识状态、误解、偏好）、L2 原生 wiki 知识库（可读可查，支持混合检索与文档导入）、L3 会话记录（索引到 SQLite FTS5，支持跨对话召回）。\n\n围绕这三层记忆，项目提供 cron 调度器、飞书/微信个人 IM 通道，以及带浏览器终端的 Practice Lab，形成学习闭环。它提供桌面应用（Electron）、Web UI 和终端 CLI 三种形态，共享同一运行时状态。\n\n项目定位是个人工具：单进程单活跃会话，不做多用户并发与水平扩展，需要团队使用时建议每人运行一个实例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "方式一：从 GitHub Releases 下载 macOS 或 Windows 安装包，首次启动后在 ~/.inno-agent/config/config.json 或应用设置中填入模型 API Key",
+  "方式二：克隆仓库后执行 npm install 与 npm run build",
+  "创建运行时目录：mkdir -p runtime/config runtime/data runtime/skills workspace，并复制 config.example.json 为 runtime/config/config.json，填入 providers[*].apiKey",
+  "启动服务：npm run server -- --home ./runtime --workspace ./workspace --port 3000，然后访问 http://localhost:3000",
+  "方式三：执行 docker compose up -d，服务运行在 3000 端口"
+ ],
+ "summary": "Inno Agent 是一个面向单个学习者的开源学习智能体，解决通用对话助手难以长期跟踪学习状态的问题。它用三层记忆分别保存学习者画像、wiki 知识库和会话记录，并配合定时调度、飞书/微信消息通道和带终端的练习区，把讲解、练习与复习串成闭环。适合希望获得持续个性化学习支持的个人用户，也适合研究学习类智能体的开发者参考。",
+ "tagline": "带三层记忆与主动调度的个人学习智能体"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望看清 AI 编码代理的上下文、模型调用和工具执行过程的开发者，以及需要在远程开发机或服务器上运行代理并随时接入的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "以树状结构组织对话，支持分支、折叠历史、在分支间移动或复制条目",
+  "工具调用、上下文和属性在独立视图中展示，便于检查",
+  "可查看每次模型调用的系统提示、消息、工具定义、输出、token 用量和耗时",
+  "厂商中立，支持 Claude Code、OpenAI Codex、GitHub Copilot、Gemini、Ollama 等提供方",
+  "桌面应用与浏览器作为同步客户端，可同时连接同一实时会话",
+  "会话持久化到磁盘，退出或重连后仍可继续，包括等待中的审批"
+ ],
+ "intro": "Juggler 是一个面向 AI 编码代理的可视化工作台。它把对话组织成可导航的树状结构，而不是滚动的聊天记录，工具调用、上下文和属性都能在独立视图中打开查看。\n\n它不绑定特定模型厂商，Claude Code、OpenAI Codex、GitHub Copilot、Gemini、Ollama 等提供方都通过统一接口接入，用户可以使用已有的订阅或自己的 API 密钥。模型流量直接从本机发往所选提供方，Juggler 不代理、不读取、不保存副本。\n\n会话保存在磁盘上，桌面应用和浏览器都是同一服务器的客户端，可以同时连接同一个实时会话。服务器可以运行在代码所在的开发机或服务器上，界面则放在任意方便的位置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 或 juggler.studio 下载对应平台的安装包",
+  "macOS 打开 .dmg 拖入 Applications；Windows 运行 setup.exe；Linux 解压 tarball 后运行 juggler 或 juggler-app",
+  "直接运行服务器：juggler",
+  "服务器会打印 URL 和二维码，在终端按 b 在浏览器中打开，或按 w 打开桌面应用",
+  "默认仅监听 localhost；如需局域网访问，在终端按 p 或使用 --public 启动"
+ ],
+ "summary": "Juggler 是一个可视化 AI 编码代理工作台，把对话组织成可导航的树，让工具调用、上下文和每次模型调用都能被打开检查。它不绑定厂商，可接入 Claude Code、Codex、Copilot、Gemini、Ollama 等，适合需要看清代理行为、在远程开发机上运行会话并多端接入的开发者。",
+ "tagline": "可视化的 AI 编码代理工作台，支持本地与远程会话。"
+}

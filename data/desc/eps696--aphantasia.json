@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 文本生成图像/视频感兴趣的开发者和创作者，尤其是希望探索非 GAN 方法、需要高分辨率输出或连续视频生成的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "生成大规模细节纹理，类似 DeepDream 效果",
+  "支持全高清/4K 及以上分辨率",
+  "支持多种 CLIP 模型（ViT-B/32、ViT-B/16、RN50 等）",
+  "连续模式处理短语列表，生成带平移/缩放运动的视频",
+  "支持文本和/或图像作为主提示，可分别设置风格和排除主题",
+  "可从保存的参数或图像开始/恢复生成过程"
+ ],
+ "intro": "Aphantasia 是一个基于 CLIP 模型和 Lucent 库的文本生成图像工具集，采用 FFT/DWT/RGB 参数化方法，无需 GAN 即可生成图像。它支持生成高分辨率（全高清/4K 及以上）的细节纹理，并能处理复杂的文本查询，包括带权重的提示词、风格描述和排除主题。\n\n该项目还提供连续模式，可逐行处理文本文件（如歌词）生成视频，支持平移/缩放运动和基于 Depth Anything 2 的 3D 效果。用户可以通过命令行参数调整生成过程，如迭代次数、样本数、美学损失等，并支持从保存的参数或图像恢复生成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -r requirements.txt",
+  "安装 CLIP：pip install git+https://github.com/openai/CLIP.git",
+  "生成图像：python clip_fft.py -t \"the text\" --size 1280-720",
+  "生成视频（逐行处理文本文件）：python illustrip.py --in_txt mycontent.txt --in_txt2 mystyles.txt --size 1280-720 --steps 100"
+ ],
+ "summary": "Aphantasia 是一个基于 CLIP 的文本生成图像与视频工具，采用 FFT/DWT/RGB 参数化方法，无需 GAN。它适合需要生成高分辨率细节纹理、处理复杂文本提示（如带权重、风格和排除词）或从歌词等文本列表制作连续视频的场景。项目提供命令行工具和 Colab 笔记本，支持从保存参数或图像恢复生成，并可选 3D 效果。",
+ "tagline": "基于 CLIP 的文本生成图像/视频工具集"
+}

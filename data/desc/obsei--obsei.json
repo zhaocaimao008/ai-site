@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要分析客户反馈但受隐私或合规限制、不能将数据发送到外部 SaaS 的团队，以及希望自托管、可替换模型和采集源的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "在数据摄入阶段自动脱敏邮箱、电话、卡号、IBAN 及多国身份证号，可选姓名脱敏与作者假名化",
+  "内置多种反馈来源：App Store、Google Play、Zendesk、GitHub issues、RSS、SQL、IMAP 等",
+  "支持进程内零样本分类器，也可接入 Ollama、vLLM、OpenAI、Bedrock、Vertex 等模型",
+  "提供主题聚类、多语言分组、带引用的问答和只读 Studio 分析面板",
+  "可将结果路由到 Slack、Jira、Linear、Webhook、SQL 等目标，并支持告警",
+  "提供 MCP server 与 Claude Code 插件，让 agent 基于隐私过滤后的证据回答问题"
+ ],
+ "intro": "obsei 是一个开源的客户之声（Voice of Customer）分析平台，定位为 Enterpret 和 Unwrap 的自托管替代方案。它从应用商店评论、客服工单、通话记录、调查问卷等渠道收集反馈，在数据进入任何 LLM 之前先剥离 PII（个人身份信息），并支持作者假名化，让团队无需把原始文本发送给第三方 SaaS 或公共模型。\n\n项目提供内置的采集源（App Store、Google Play、Zendesk、GitHub issues、RSS、SQL 等）、分类增强器（默认进程内零样本模型，也可接入 Ollama、vLLM、OpenAI、Bedrock 等）以及输出目标（Slack、Jira、Linear、Webhook、SQL 等）。分析侧支持主题聚类、多语言分组、带引用的问答和只读 Studio 面板，并内置 MCP server 与 Claude 插件供 agent 使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "mkdir voc && cd voc",
+  "uvx --from \"obsei[recommended]>=1.0\" obsei init",
+  "obsei try",
+  "obsei add appstore",
+  "obsei run"
+ ],
+ "summary": "obsei 是一个自托管的客户之声分析平台，用于从应用评论、客服工单、调查等渠道收集反馈并做分类与主题分析。它的特点是在数据进入任何 LLM 之前先剥离 PII 并对作者假名化，适合不能把原始反馈发给第三方 SaaS 或公共模型的团队。项目支持自带采集源、模型和输出目标，并提供 MCP server 供 agent 使用。",
+ "tagline": "自托管、隐私优先的客户之声分析工具"
+}

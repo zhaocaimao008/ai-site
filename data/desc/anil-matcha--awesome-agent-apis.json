@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI Agent 挑选可调用 API 的开发者，以及想查找生成式媒体模型或第三方数据工具的使用者。",
+ "date": "2026-10-25",
+ "features": [
+  "收录 660+ 个 muapi 托管的生成式媒体模型，按能力分类浏览",
+  "社区可提交第三方 API 工具，覆盖 SEO、数据补充、社交、爬虫等",
+  "每个条目以单个 YAML 文件描述功能、认证、定价与示例响应",
+  "提供 llms.txt，让 Agent 一次读取即可掌握目录用法",
+  "附带校验脚本，提交前可本地检查 YAML 格式",
+  "区分 draft 与 verified 状态，标明条目是否经过真实调用验证"
+ ],
+ "intro": "这是一个供 AI Agent 调用的 API 工具目录。其中 models/ 收录了 660 多个通过 muapi 提供的生成式媒体模型，providers/ 则收录社区提交的第三方 API，覆盖 SEO、数据补充、社交、爬虫等类别。每个条目都是一个 YAML 文件，记录工具的功能、认证方式、定价和调用示例。\n\n仓库本身是参考文档，不是代理服务：models/ 条目需要你用自己的 muapi key 调用，providers/ 条目则用贡献者或你自己的账号调用。Agent 可以读取 llms.txt，一次获取即可了解如何浏览和使用整个目录，无需安装或认证。\n\n第三方条目需通过 PR 提交，并经过维护者用真实 key 验证后才会标记为 verified。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "浏览目录：ls providers/ models/",
+  "按类别查看：cat capabilities.yaml",
+  "查看第三方工具详情：cat providers/<provider>.yaml",
+  "查看 muapi 模型详情：cat models/<model>.yaml",
+  "提交新工具前本地校验：python3 scripts/catalog_validate.py providers/<your-provider>.yaml"
+ ],
+ "summary": "这个项目把 Agent 可调用的 API 工具整理成统一格式的 YAML 目录，解决工具信息分散、定价和认证方式不透明的问题。它既收录 muapi 托管的生成式媒体模型，也收录社区提交的 SEO、数据补充、爬虫等第三方 API。适合需要为 Agent 选型或查找具体模型与工具调用方式的开发者，按能力分类即可快速浏览。",
+ "tagline": "面向 Agent 的 API 工具目录，含 660+ 生成式媒体模型"
+}

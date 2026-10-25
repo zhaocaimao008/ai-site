@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想理解 coding agent 内部原理、希望动手实现一个迷你 agent 的 TypeScript 开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "用约 600 行 TypeScript 实现一个可读文件、改代码、执行命令的 coding agent",
+  "沿 pi 的数据流拆解组件，按需造轮子，保留核心思想",
+  "教学网站将文章与源码并排展示，阅读时逐步补全代码",
+  "提供 Trace 跟踪，可打断点逐行查看代码执行流",
+  "支持通过环境变量配置 OpenAI 兼容 API 的模型与接口地址"
+ ],
+ "intro": "PI from Scratch 是一个教学项目，用约 600 行 TypeScript 从零实现一个能读文件、改代码、执行命令的 coding agent，称为 nano-pi。项目沿着 pi 的数据流拆解，删去工程细节，只保留核心思想，让读者理解 agent 的组成与执行过程。\n\n配套网站把文章和源码放在一起，阅读推进时右侧编辑器会逐步补全代码，并设计了 Trace 跟踪，可以打断点逐行过代码，帮助理解执行流。nano-pi 需要 Node.js 22 或更高版本，以及一个 OpenAI 兼容 API 来运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 Node.js 版本为 22 或更高",
+  "运行 npm install 安装依赖",
+  "设置环境变量 NANOPI_API_KEY=your-api-key",
+  "运行 npm run dev 启动 nano-pi",
+  "可选设置 NANOPI_MODEL 和 NANOPI_BASE_URL 指定模型与接口地址"
+ ],
+ "summary": "这个项目用约 600 行 TypeScript 从零实现一个能读文件、改代码、执行命令的迷你 coding agent，并沿 pi 的数据流拆解核心组件。配套网站把文章和源码并排展示，阅读时逐步补全代码，还提供 Trace 跟踪帮助逐行理解执行流。适合想弄清 agent 内部原理、动手写一个迷你 agent 的开发者。",
+ "tagline": "600 行 TypeScript 手写迷你 coding agent"
+}

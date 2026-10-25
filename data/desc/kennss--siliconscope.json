@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Mac 上跑本地大模型、做 Core ML 或媒体处理的开发者，以及希望用一款工具替代 iStat Menus 类监控的 Apple Silicon 用户。",
+ "date": "2026-10-25",
+ "features": [
+  "免 sudo 监控 CPU、GPU、内存、网络、SSD、传感器与电池",
+  "追踪 ANE、Media Engine 和内存带宽等 Apple Silicon 专属指标",
+  "菜单栏按指标分项固定，支持柱状、历史曲线、双行、单值等多种样式",
+  "记录全部指标并支持 Replay 时间轴回放",
+  "对本地模型测量 tokens/sec 与 tokens/Wh 能效",
+  "Fleet 远程监控：自动发现局域网设备，远程 Mac 保留 ANE 视图，Linux GPU 机器显示显存与容器信息"
+ ],
+ "intro": "SiliconScope 是一款面向 Apple Silicon Mac 的原生 SwiftUI 系统监控工具，提供完整仪表盘和菜单栏组件，无需 sudo 权限即可运行。它重点补足活动监视器和终端工具看不到的指标：ANE（Neural Engine）、Media Engine 以及内存带宽，方便观察本地 AI 推理和媒体任务如何占用芯片加速器。\n\n除实时监控外，它还会记录各项指标，支持像回放录像一样拖动时间轴回看会话；菜单栏可将 CPU、GPU、内存、网络、SSD、传感器、电池等卡片分别固定为独立条目，并自定义显示样式。内置的 tok/s 测量可对本地模型跑一次短生成，记录解码速度与每瓦 token 数。4.0 版本加入 Fleet，通过加密配对的 agent 把远程 Mac、Linux/NVIDIA 机器和云服务器接入同一仪表盘。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载最新版本并安装",
+  "打开应用查看主仪表盘，无需 sudo 即可读取各项指标",
+  "在菜单栏设置中把需要的指标卡片固定为独立菜单栏条目",
+  "如需测量本地模型速度，使用“Measure tok/s”跑一次短生成",
+  "如需监控其他机器，在目标设备上运行 agent，通过 mDNS 自动发现或手动配对加入 Devices 侧栏"
+ ],
+ "summary": "SiliconScope 是一款运行在 Apple Silicon Mac 上的原生系统监控工具，无需 sudo 即可查看 CPU、GPU、内存、传感器等常规指标，并额外呈现 ANE、Media Engine 和内存带宽这类活动监视器不显示的加速器数据。它适合需要观察本地 AI 推理、Core ML 或媒体任务如何占用芯片资源的开发者，也提供菜单栏分项显示、指标回放和本地模型 tok/s 测量。新版还可通过 agent 把远程 Mac、Linux GPU 主机和云服务器接入同一面板。",
+ "tagline": "免 sudo 的 Apple Silicon 系统监控，追踪 ANE 与内存带宽"
+}

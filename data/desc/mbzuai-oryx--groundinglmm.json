@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合多模态学习、视觉定位和图像分割方向的研究人员与开发者，以及需要构建像素级视觉理解应用的技术人员。",
+ "date": "2026-10-25",
+ "features": [
+  "端到端训练的多模态大模型，支持图像和区域输入",
+  "生成与分割掩码对齐的自然语言回答",
+  "提出 Grounded Conversation Generation（GCG）任务及评估协议",
+  "发布 GranD 数据集（750 万概念、8.1 亿区域）和 GranD-f 数据集",
+  "支持指代表达分割、区域级描述和图像描述等下游任务",
+  "提供训练、评估代码和预训练检查点"
+ ],
+ "intro": "GLaMM（Grounding Large Multimodal Model）是 CVPR 2024 收录的多模态大模型，能够生成与物体分割掩码自然融合的文本回答。它接受图像和区域输入，统一了短语定位、指代表达分割和视觉语言对话，支持多粒度交互。\n\n项目还提出了 Grounded Conversation Generation（GCG）新任务及评估协议，并构建了 GranD 数据集（750 万概念、8.1 亿区域）和 GranD-f 微调数据集。仓库提供训练、评估代码和预训练检查点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "参考 docs/install.md 设置 conda 环境",
+  "参考 docs/datasets.md 下载并整理所需数据集",
+  "参考 docs/model_zoo.md 下载预训练检查点",
+  "参考 docs/offline_demo.md 运行本地演示"
+ ],
+ "summary": "GLaMM 是一个多模态大模型，能根据图像和区域输入生成带物体分割掩码的文本回答，把视觉定位与对话能力结合起来。项目还提出了 GCG 任务和评估协议，并构建了大规模 GranD 数据集。适合研究视觉定位、指代表达分割或多模态对话的开发者，可用于需要像素级视觉理解的应用场景。",
+ "tagline": "像素级视觉定位的多模态大模型"
+}

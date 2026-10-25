@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要借助 LLM 进行代码重构、生成或实验的开发者，尤其是熟悉命令行和 Git 工作流的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "用自然语言指令直接修改代码库中的文件",
+  "支持 liquidjs 模板系统，可复用 include 片段",
+  "内置 refactor、swe、test-first 等模板",
+  "提供 dry-run 模式预览提示内容",
+  "支持交互模式和非交互模式",
+  "可指定模型（默认 gpt-4o，支持 gpt-3.5-turbo）"
+ ],
+ "intro": "Promptr 是一个命令行工具，允许你用自然语言指令让 OpenAI 的 LLM 模型直接修改代码库中的文件。你只需在提示中引用相关文件，模型生成的代码变更就会直接应用到这些文件上。\n\n它支持基于 liquidjs 的模板系统，可以创建可复用的 include 片段来统一项目规范或共享指令。内置了 refactor、swe、test-first 等模板，也支持自定义模板。\n\nPromptr 提供 dry-run 模式预览发送给模型的提示，支持交互模式、指定模型（默认 gpt-4o）和输出路径，适合重构、代码生成和实验等场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node 18 并设置 OPENAI_API_KEY 环境变量",
+  "使用 npm 安装：npm install -g @ifnotnowwhen/promptr",
+  "编写提示文件，包含相关文件的相对路径",
+  "运行：promptr -p my_prompt.txt",
+  "用 Git 工具检查模型应用的变更"
+ ],
+ "summary": "Promptr 是一个命令行工具，让你用自然语言指令让 OpenAI 模型直接修改代码库中的文件。你只需在提示中引用相关文件，模型生成的变更就会应用到这些文件上。它支持 liquidjs 模板系统，可复用项目规范或指令片段，适合重构、代码生成和实验等场景。",
+ "tagline": "用自然语言指令让 LLM 直接修改代码库的 CLI 工具"
+}

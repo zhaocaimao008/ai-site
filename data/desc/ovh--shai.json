@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合习惯在终端工作的开发者，以及需要将编码智能体集成到脚本或服务中的团队。",
+ "date": "2026-10-25",
+ "features": [
+  "交互式终端编码智能体，支持对话写代码、修 bug 和问答",
+  "Headless 模式，可通过管道传入提示词用于脚本和自动化",
+  "HTTP 服务模式，提供 OpenAI 兼容 API 和 SSE 流式输出",
+  "Shell 助手，命令失败时自动建议修复方案",
+  "通过 AGENTS.md 加载项目上下文，支持自定义 agent 和 Skills 扩展",
+  "支持 MCP 配置，兼容多个 LLM 提供商"
+ ],
+ "intro": "shai 是一个用 Rust 编写的终端编码智能体，定位为结对编程助手。它提供交互式 TUI，可以直接在终端里对话写代码、修 bug 和提问；也支持 headless 模式，通过管道传入提示词用于脚本和自动化。\n\n除了交互使用，shai 还能以 HTTP 服务方式运行，提供 OpenAI 兼容的 API 和 SSE 流式输出。它内置 shell 助手，在命令失败时自动建议修复方案，并支持通过 AGENTS.md 加载项目上下文、自定义 agent、Skills 扩展以及 MCP 配置。模型方面兼容 OVHcloud、OpenAI、Anthropic、Mistral、Ollama、OpenRouter 等多个提供商。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装最新稳定版：curl -fsSL https://raw.githubusercontent.com/ovh/shai/main/install.sh | sh",
+  "配置 AI 提供商：shai auth",
+  "启动交互式 TUI：shai",
+  "以 headless 模式运行：shai -p \"make me a hello world in main.py\"",
+  "以 HTTP 服务运行：shai serve --port 3000"
+ ],
+ "summary": "shai 是一个用 Rust 编写的终端编码智能体，解决开发者希望在命令行内直接获得结对编程协助的需求。它既能以交互式 TUI 对话写代码、修 bug，也支持管道传入提示词的 headless 模式用于自动化，还能作为 HTTP 服务提供 OpenAI 兼容接口。适合习惯终端工作流、需要将 AI 编码能力嵌入脚本或服务的开发者。",
+ "tagline": "运行在终端里的 Rust 编码智能体"
+}

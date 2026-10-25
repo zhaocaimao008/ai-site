@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在手机上离线运行大模型、体验本地 AI 生成能力，或想用本地模型辅助编码的开发者与普通用户。",
+ "date": "2026-10-25",
+ "features": [
+  "本地 LLM 多轮聊天，支持 RAG 记忆、联网搜索、TTS 自动朗读和多模态输入",
+  "AI Agent 支持设备函数调用、MCP 工具，并在 Android 上生成和编辑 Termux 命令",
+  "Vibe Coder 提供 HTML/JS 实时预览，Android 可经 Termux 用本地模型运行 Codex",
+  "图像生成（Stable Diffusion 1.5）、音乐生成（SoundGen / Magenta Realtime 2）和视频生成（LTX-Video / Stable Video Diffusion）",
+  "本地媒体搜索与视频时刻查找，基于 EmbeddingGemma 2 在设备上索引照片和视频",
+  "语音合成与克隆（Kokoro、Supertonic 3、Pocket TTS）、Whisper 转录、离线翻译和图像超分"
+ ],
+ "intro": "LLM Hub 是一个面向 Android 和 iOS 的开源移动应用，目标是把大语言模型、图像生成、视频生成和音乐生成都放到手机本地运行。它针对移动端做了 CPU/GPU/NPU 加速优化，支持多种模型格式，数据不出设备。\n\n应用内置了聊天、AI Agent、Vibe Coder、写作辅助、图像生成、音乐生成、媒体搜索、视频时刻查找、语音合成与克隆、图像超分、视频生成、翻译、转录、诈骗检测等功能。其中 AI Agent 支持设备函数调用、MCP 工具和 Android 上的 Termux 命令生成；Vibe Coder 可在 Android 上通过 Termux 集成 Codex，用本地模型完成代码编辑与命令执行。\n\n项目还提供了 Android 和 iOS 的安装包下载，桌面版（Windows/macOS）在计划中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Google Play 或 App Store 下载安装 LLM Hub",
+  "在应用内下载并选择要使用的本地模型",
+  "Android 用户如需 Codex 模式，先安装 Termux 并允许外部应用命令，再在应用内执行 Install Codex"
+ ],
+ "summary": "LLM Hub 是一个 Android/iOS 开源应用，把大语言模型、图像、视频和音乐生成放到手机本地运行，并针对移动端 CPU/GPU/NPU 做加速。它适合想离线、私密使用 AI 聊天与生成能力的用户，也提供 AI Agent、Termux 命令生成和基于本地模型的 Codex 编码辅助。",
+ "tagline": "在手机上本地运行 LLM、图像、视频与音乐生成"
+}

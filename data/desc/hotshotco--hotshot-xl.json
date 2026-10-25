@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想要从文本生成 GIF 的开发者、艺术家和 AI 爱好者，尤其是已经熟悉 Stable Diffusion 和 LoRA 的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "文本生成 GIF，与 Stable Diffusion XL 配合使用",
+  "支持任意微调的 SDXL 模型生成 GIF",
+  "支持加载个性化 LoRA，无需微调 Hotshot-XL",
+  "兼容 SDXL ControlNet，控制 GIF 的构图和布局",
+  "生成 1 秒、8 FPS 的 GIF，支持多种宽高比"
+ ],
+ "intro": "Hotshot-XL 是一个 AI 文本生成 GIF 的模型，训练时与 Stable Diffusion XL 配合使用。它可以基于任意微调过的 SDXL 模型生成 GIF，这意味着你可以利用现有的 SDXL 模型或自己微调的模型来制作 GIF。\n\n如果你希望生成个性化主题的 GIF，可以加载自己的 SDXL LoRA，而无需微调 Hotshot-XL。此外，Hotshot-XL 兼容 SDXL ControlNet，可以按照你想要的构图或布局生成 GIF。模型训练时生成 1 秒、8 FPS 的 GIF，并支持多种宽高比。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建虚拟环境并安装依赖：pip install virtualenv --upgrade && virtualenv -p $(which python3) venv && source venv/bin/activate && pip install -r requirements.txt",
+  "下载 Hotshot-XL 权重：git lfs install && git clone https://huggingface.co/hotshotco/Hotshot-XL",
+  "下载微调的 SDXL 模型（或使用自己的）：git lfs install && git clone https://huggingface.co/hotshotco/SDXL-512",
+  "运行文本生成 GIF 推理：python inference.py --prompt=\"a bulldog in the captains chair of a spaceship, hd, high quality\" --output=\"output.gif\""
+ ],
+ "summary": "Hotshot-XL 是一个文本生成 GIF 的 AI 模型，与 Stable Diffusion XL 配合使用。它允许用户基于任意微调的 SDXL 模型生成 GIF，并支持加载个性化 LoRA 和 ControlNet 来控制构图。适合需要从文本快速生成短 GIF 的开发者或创作者，尤其是熟悉 SDXL 生态的用户。",
+ "tagline": "与 Stable Diffusion XL 配合的文本生成 GIF 模型"
+}

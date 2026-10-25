@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想在手机、笔记本或边缘设备上本地运行大 MoE 模型的开发者和普通用户，以及需要本地 OpenAI 兼容接口的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "按需从闪存流式读取 MoE 专家，运行大于设备内存的模型",
+  "`--auto` 自动测量硬件并规划缓存与设备分配",
+  "支持任意 llama.cpp 可加载的 MoE gguf 与量化",
+  "CPU、Metal、Vulkan、OpenCL、Hexagon NPU 等模块化后端",
+  "各平台提供 OpenAI 兼容本地服务器，支持流式、工具调用与推理",
+  "提供 Android/iOS 应用、桌面 Web 应用和命令行工具"
+ ],
+ "intro": "BigMoeOnEdge 是一个基于 llama.cpp 公共 API 的推理引擎，专门用来在内存装不下模型的情况下运行 Mixture-of-Experts（MoE）模型。它的做法是：每个 token 都需要的权重常驻内存，最近用过的专家放进缓存，其余专家在路由器需要时从闪存读取。项目称输出与模型完全载入内存时一致，并有测试验证。\n\n引擎支持 llama.cpp 能加载的任意 MoE gguf 和任意量化，专家张量从文件中自动识别，新架构无需改代码。后端以模块形式加载 CPU、Metal、Vulkan、OpenCL 和 Hexagon NPU，CUDA、HIP、SYCL 模块也可用各自工具链构建后加载。`--auto` 会测量可用内存、存储速度以及 CPU/GPU/NPU，自动决定缓存大小、常驻内容和任务分配。\n\n项目提供 Android、iOS 原生应用和桌面 Web 应用，并在各平台启动一个 OpenAI 兼容的本地服务器，支持流式输出、工具调用和推理内容。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS：打开 dmg 并将应用拖入 Applications；Windows：运行 setup.exe；Linux：`chmod +x BigMoeOnEdge-<version>-linux-x86_64.AppImage` 后运行",
+  "启动后在浏览器打开 `http://127.0.0.1:8765/`，在 Models 中选择模型",
+  "命令行运行：`bmoe-cli -m model.gguf --auto -p \"Explain MoE routing.\"`",
+  "查看规划：`bmoe-cli -m model.gguf --plan`",
+  "用 OpenAI SDK 连接 `http://127.0.0.1:8765/v1`，api_key 填 `local`"
+ ],
+ "summary": "BigMoeOnEdge 解决的是 MoE 大模型体积超过设备内存、无法本地运行的问题。它把每个 token 都要用的权重留在内存，其余专家按需从闪存读取，从而在手机、笔记本等设备上运行更大的 gguf 模型。适合想在本地离线跑 MoE 模型、或需要本地 OpenAI 兼容接口的开发者与普通用户。",
+ "tagline": "在内存不足的设备上流式运行超大 MoE 模型"
+}

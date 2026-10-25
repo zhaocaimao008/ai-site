@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合正在使用或准备使用 Claude Code、希望用 hooks 和 skills 规范 AI 编码行为的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "提供全局与项目级 CLAUDE.md 模板，统一配置和安全规则",
+  "附带多个 hook 脚本，用于拦截敏感文件访问、危险命令、编辑后格式化等",
+  "包含 commit-messages 和 security-audit 两个 skill 示例",
+  "提供 /new-project、/security-check、/pre-commit 等自定义命令",
+  "讲解 MCP servers、Context7 和单一用途对话等使用要点"
+ ],
+ "intro": "这个仓库是围绕 Claude Code 的配置与使用指南，内容涵盖全局 CLAUDE.md、MCP servers、自定义命令、hooks 和 skills。作者的核心观点是：CLAUDE.md 里的规则只是“建议”，而 hooks 才是确定性的“强制执行”，例如用 PreToolUse hook 阻止 Claude 读取 .env 文件或执行 rm -rf 等危险命令。\n\n仓库同时提供了可直接复制的模板和脚本，包括全局与项目级 CLAUDE.md 模板、settings.json 配置、多个 hook 脚本，以及 commit-messages、security-audit 两个 skill 和若干 slash 命令。README 还引用研究说明单一用途对话的重要性，指出混合话题会导致性能下降。\n\n需要注意，README 明确标注 V2 版本已过时，建议改用作者新的 Starter Kit；仓库本身更接近一份配置资料与示例集合，而非可独立运行的软件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/TheDecipherist/claude-code-mastery.git",
+  "复制 hooks 并赋予执行权限：mkdir -p ~/.claude/hooks && cp hooks/* ~/.claude/hooks/ && chmod +x ~/.claude/hooks/*.sh",
+  "复制配置模板（先审阅再修改）：cp templates/settings.json ~/.claude/settings.json",
+  "复制 skills：mkdir -p ~/.claude/skills && cp -r skills/* ~/.claude/skills/",
+  "启动 claude 后，用 /hooks 和 /skills 检查是否加载成功"
+ ],
+ "summary": "这个项目面向使用 Claude Code 的开发者，整理了一套配置实践：用全局 CLAUDE.md 统一规则，用 hooks 强制执行安全限制，用 skills 和自定义命令复用工作流。仓库提供可直接复制的模板与脚本，适合想减少重复配置、避免 Claude 误改敏感文件或执行危险命令的人参考。README 已注明该版本过时，建议查看作者的新版 Starter Kit。",
+ "tagline": "Claude Code 配置指南：CLAUDE.md、hooks、skills 与命令"
+}

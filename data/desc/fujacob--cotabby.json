@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 macOS 各应用中获得本地 AI 输入补全、并重视隐私与离线可用的开发者和普通用户。",
+ "date": "2026-10-25",
+ "features": [
+  "行内 ghost-text 补全，Tab 逐词接受，反引号整句接受",
+  "emoji 补全，输入 :rocket: 即可插入",
+  "行内宏：数学计算、单位与货币换算、日期和随机值",
+  "单键自动纠错",
+  "三种引擎：Apple Intelligence、本地开源模型、OpenAI 兼容端点",
+  "可自定义 GGUF 模型，放入模型文件夹即可使用"
+ ],
+ "intro": "Cotabby 是一款 macOS 上的 AI 自动补全工具，在几乎任何文本输入框中提供灰色行内建议，按 Tab 逐词接受，继续输入则忽略。它支持 emoji 补全、行内宏（数学、单位与货币换算、日期、随机值）以及一键纠错。\n\n生成引擎有三种可选：Apple Intelligence（需 macOS 26 及受支持机型）、完全本地运行的开源模型（基于 llama.cpp 运行 GGUF 模型，macOS 14+ 可用），以及可配置的 OpenAI 兼容端点（如本地 Ollama 或局域网服务）。默认引擎在设备上生成，无需账号，不做遥测。\n\n项目使用 Swift 编写，以菜单栏应用形式运行，提供 Homebrew 安装和手动下载两种方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Homebrew 安装：brew tap FuJacob/cotabby && brew install --cask cotabby",
+  "或从 cotabby.app 下载最新版本，拖入 Applications 文件夹",
+  "在设置 → Engine 中选择 Apple Intelligence、Open Source 或 OpenAI 兼容引擎",
+  "若使用 Open Source 引擎，从菜单栏下载内置模型（如 tabby-2-mini）",
+  "在任意文本框输入，出现灰色建议时按 Tab 逐词接受，按 Esc 忽略"
+ ],
+ "summary": "Cotabby 把 AI 自动补全带到 macOS 的几乎所有输入框：打字时出现灰色行内建议，按 Tab 逐词接受。它提供 Apple Intelligence、本地开源模型和 OpenAI 兼容端点三种引擎，默认在设备上生成，适合希望离线使用、注重隐私的 Mac 用户日常写作与输入。",
+ "tagline": "为整个 Mac 提供本地 AI 输入补全的开源工具"
+}

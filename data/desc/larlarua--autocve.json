@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合安全研究人员、渗透测试人员、代码审计工程师以及需要自动化漏洞挖掘的开发团队。",
+ "date": "2026-10-25",
+ "features": [
+  "一键完成从项目筛选、仓库导入、审计任务创建到 CVE 报告生成的全流程",
+  "Multi-Agent 协同审计：Orchestrator 调度 Recon、Scan、Triage、Finding、Verification 等 Agent",
+  "三种审计模式：增强扫描、智能审计、综合审计，适应不同场景",
+  "交互式审计与全过程追踪：支持追问、可视化活动日志与 Agent Tree",
+  "智能漏洞管理：自动提交、去重、结构化入库，并支持 Skills 扩展",
+  "提供 Docker Compose 一键部署与源码部署两种方式"
+ ],
+ "intro": "AutoCVE 是一个基于多 Agent 协同的自动化 CVE 挖掘平台，旨在将安全审计流程从项目筛选、源码审计、漏洞验证到报告生成全部自动化。用户只需导入项目并配置模型，即可启动审计任务，由 Orchestrator 调度 Recon、Scan、Triage、Finding 和 Verification 等 Agent 协同工作。\n\n平台提供三种审计模式：增强扫描快速过滤工具误报，智能审计深度挖掘高价值漏洞，综合审计结合两者进行全量覆盖。审计过程支持交互式追问和可视化追踪，漏洞经去重后结构化入库，并支持为不同 Agent 配置专属 Skills 以扩展能力。\n\nAutoCVE 采用 Python FastAPI 后端与 React 前端，通过 Docker Compose 一键部署，适合安全研究人员、渗透测试人员及开发团队用于漏洞挖掘与代码审计。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux/macOS/Git Bash 执行：curl -fsSL https://raw.githubusercontent.com/larlarua/AutoCVE/v1.0.5/docker-compose.prod.yml | docker compose -f - up -d",
+  "Windows PowerShell/CMD 执行：curl.exe -fsSL https://raw.githubusercontent.com/larlarua/AutoCVE/v1.0.5/docker-compose.prod.yml | docker compose -f - up -d",
+  "或源码部署：git clone https://github.com/larlarua/AutoCVE.git && cd AutoCVE && docker compose up -d --build",
+  "访问前端 http://localhost:3000 配置模型并导入项目",
+  "创建审计任务，跟踪实时审计，管理漏洞并导出报告"
+ ],
+ "summary": "AutoCVE 是一个利用多 Agent 协同实现 CVE 挖掘自动化的平台，覆盖项目筛选、源码审计、漏洞验证和报告生成全流程。它适合安全研究人员和渗透测试人员快速发现开源项目中的安全漏洞，并通过三种审计模式平衡效率与深度，同时提供交互式追踪和漏洞管理功能。",
+ "tagline": "Agent 驱动的自动化 CVE 挖掘平台，覆盖源码审计到报告生成全流程"
+}

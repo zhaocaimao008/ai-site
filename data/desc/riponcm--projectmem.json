@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 AI 编程助手进行日常开发、希望 agent 跨会话保留项目上下文的开发者。",
+ "date": "2026-10-25",
+ "features": [
+  "以 issues、attempts、fixes、decisions 等类型化事件记录项目历史",
+  "在重复已失败的方案前触发 pre-commit 警告",
+  "原生 MCP server，支持 Claude Code、Cursor、Antigravity、Codex 等客户端",
+  "记忆保存在仓库内的 .projectmem/ 目录，完全本地、无遥测",
+  "pjm doctor 自动发现并注册已有项目",
+  "pjm visualize 在本地生成仪表盘，展示失败热力图与案例"
+ ],
+ "intro": "projectmem 是一个面向 AI 编程助手的记忆层。它把项目开发过程中遇到的问题、尝试过的方案、有效的修复和做出的决策记录成带类型的事件，存放在仓库内的 .projectmem/ 目录中，让 agent 在新会话开始时读取这些历史，而不是从零重新摸索。\n\n它通过原生 MCP server 向 Claude Code、Claude Desktop、Cursor、Antigravity 和 Codex 暴露工具，agent 可以自行读取记忆并记录工作。由于记录的是结构化事件而非聊天历史，projectmem 能在你重复一个已经失败过的方案之前给出警告。\n\n项目采用 local-first 设计，不需要云端、账号或遥测，唯一的网络请求是可选的版本更新检查。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install -U projectmem",
+  "pjm doctor  # 发现已有项目",
+  "pjm doctor --fix  # 注册这些项目",
+  "在 MCP 客户端配置中加入 projectmem 的 mcpServers 配置并完全重启客户端",
+  "cd your-project && pjm init"
+ ],
+ "summary": "AI 编程助手每次新会话都从零开始，容易重复昨天失败的调试思路。projectmem 把项目中的问题、尝试、修复和决策记录为类型化事件，保存在仓库内的本地目录，并通过 MCP server 让 Claude Code、Cursor 等 agent 自动读取和写入。由于记录的是结构化事件，它能在你重走失败方案前发出警告，适合希望 agent 跨会话保留项目经验的开发者。",
+ "tagline": "为 AI 编程助手提供本地持久记忆的 MCP 服务器"
+}

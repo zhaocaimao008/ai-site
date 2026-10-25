@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 ComfyUI 中集成视觉语言模型、目标检测或视频理解能力的开发者与进阶用户。",
+ "date": "2026-10-25",
+ "features": [
+  "Modern VLM 节点统一加载 Qwen 3 VL、SmolVLM2、InternVL、Gemma 3 等视觉语言模型",
+  "支持 Florence-2、Moondream、PaLI-Gemma、llama.cpp/GGUF 等专用模型节点",
+  "提供 VLM_DETECTIONS、VLM_TRACKS 等结构化输出，用于检测、分割与跟踪",
+  "支持开放词汇检测、SAM2/SAM3 分割和视频时序推理",
+  "内置文本工具节点，包括 JSON 解析、模板、清洗、替换和流式查看"
+ ],
+ "intro": "ComfyUI VLM Nodes 是一组面向生产环境的 ComfyUI 自定义节点，主要把视觉语言模型（VLM）接入 ComfyUI 工作流。它提供统一的 Modern VLM 节点，支持 Qwen 3 VL、SmolVLM2、InternVL、Gemma 3 等模型，并保留 Florence-2、Moondream、llama.cpp/GGUF 等专用节点。\n\n除了图像理解与文本生成，项目还定义了 VLM_DETECTIONS、VLM_TRACKS 等结构化数据类型，用于开放词汇检测、SAM2/SAM3 分割、目标跟踪和视频时序推理。文本工具节点覆盖 JSON 解析、模板、清洗和流式输出，方便构建多步骤的视觉处理流程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将项目克隆到 ComfyUI 的 custom_nodes 目录",
+  "安装项目依赖（参考 README 的安装说明）",
+  "重启 ComfyUI，在节点菜单中找到 VLM Nodes 分类",
+  "使用 Modern VLM 节点选择模型并连接图像输入"
+ ],
+ "summary": "ComfyUI VLM Nodes 把多种视觉语言模型接入 ComfyUI 工作流，提供统一的模型加载节点和结构化检测、分割、跟踪输出。它适合需要在 ComfyUI 中完成图像理解、开放词汇检测或视频时序分析的场景，也包含文本处理工具节点来辅助构建多步骤流程。",
+ "tagline": "为 ComfyUI 提供视觉语言模型与结构化视觉处理节点"
+}

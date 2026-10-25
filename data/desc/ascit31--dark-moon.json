@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合安全团队、DevSecOps 工程师、红队成员，以及需要在自有基础设施上做授权渗透测试的安全从业者。",
+ "date": "2026-10-25",
+ "features": [
+  "50 个专项 agent 自主完成侦察、漏洞发现与利用，并记录命令与原始输出",
+  "覆盖 Web、API、云、Active Directory、Kubernetes、CI/CD 及 AI/LLM 端点",
+  "Privacy Gateway 本地令牌化真实 IP、主机与凭据，支持 Ollama、llama.cpp 本地模型",
+  "所有操作经 MCP 接口受控执行，可编排 140 多个攻击工具",
+  "针对 OWASP LLM Top 10 的 LLM 端点探测（garak 探测）",
+  "可与 GitHub、GitLab、Jenkins、VS Code、JetBrains、n8n、Grafana、Splunk 集成"
+ ],
+ "intro": "DarkMoon 是一个开源的自主 AI 渗透测试平台，用 Python 编写，以命令行工具形式运行。你只需给出一个已获授权的目标，它就会自行完成侦察、指纹识别、漏洞发现与利用，并为每个发现附上具体命令和原始输出作为证据。\n\n它内置 50 个专项 agent，覆盖 Web、API、Active Directory、Kubernetes、云（AWS/Azure/GCP）、CI/CD、数据库、IoT 固件以及 AI/LLM 端点，并针对 OWASP LLM Top 10 提供 garak 探测。所有 agent 的方法论以 Markdown 明文保存，可阅读、可修改。\n\n项目强调隐私与可控：支持 Ollama、llama.cpp 等本地模型，Privacy Gateway 会在本地把真实 IP、主机名和凭据替换为占位符，模型只处理占位符，真实值留在本地；AI 不直接执行命令，所有操作经由受控、可记录的 MCP 接口完成，可编排 140 多个攻击工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/ASCIT31/Dark-Moon.git",
+  "cd Dark-Moon",
+  "./install.sh",
+  "./darkmoon.sh \"TARGET: example.com\"",
+  "./darkmoon.sh --log <session_id>"
+ ],
+ "summary": "DarkMoon 是一个自主 AI 渗透测试工具，面向已获授权的自有基础设施：给出目标后，它自行完成侦察、漏洞发现与利用，并为每个发现附上命令和原始输出。它内置 50 个专项 agent，覆盖 Web、API、云、Active Directory、Kubernetes、CI/CD 和 AI/LLM 端点，可运行在本地 LLM 上，并通过 Privacy Gateway 在本地替换真实 IP、主机和凭据，适合安全团队和 DevSecOps 在自有环境中做授权测试。",
+ "tagline": "本地 LLM 驱动的自主 AI 渗透测试工具"
+}

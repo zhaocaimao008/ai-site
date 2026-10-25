@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将 AI Agent 落地到生产环境的开发者与团队，尤其是使用 TypeScript、希望统一管理多种 AI 资源并保持供应商可替换的场景。",
+ "date": "2026-10-25",
+ "features": [
+  "统一资源抽象：LLM、VectorDB、存储、缓存等接口在不同供应商间保持一致",
+  "模块化连接器：支持 OpenAI、Anthropic、AWS Bedrock、Pinecone、Milvus、Redis、S3 等服务",
+  "内置安全机制：提供 Candidate/ACL 访问控制与凭据管理",
+  "Agent 生命周期管理：支持编排、运行和监控 Agent",
+  "SDK 与 CLI：提供 TypeScript SDK 和项目脚手架命令行工具",
+  "支持加载 .smyth 文件运行可视化构建的 Agent"
+ ],
+ "intro": "SmythOS Runtime Environment（SRE）是一个用 TypeScript 编写的开源 AI Agent 运行时，包含内核、SDK 和 CLI 三部分。它借鉴操作系统内核的思路，为 LLM、向量数据库、存储、缓存等 AI 资源提供统一抽象接口，让同一套业务代码可以在不同供应商之间切换。\n\nSRE 内置安全访问控制、凭据管理和可观测性，并提供 40 多个生产级组件，支持本地、云端和边缘环境运行。开发者可以用代码构建 Agent，也可以加载 .smyth 文件运行可视化工具生成的 Agent。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "全局安装 CLI：npm i -g @smythos/cli",
+  "运行 sre create 按引导创建项目",
+  "或在现有项目中安装 SDK：npm install @smythos/sdk",
+  "参考 examples 目录和官方文档编写并运行 Agent"
+ ],
+ "summary": "SRE 是一个开源的 AI Agent 运行时，解决的是 Agent 从开发到生产过程中资源接口不统一、供应商难替换的问题。它把 LLM、向量数据库、存储和缓存等资源抽象成一致接口，并内置安全与可观测能力。适合用 TypeScript 构建、需要跨本地和云端部署 Agent 的开发者。",
+ "tagline": "面向生产环境的 AI Agent 开源运行时与 SDK"
+}

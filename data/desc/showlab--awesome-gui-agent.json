@@ -1,0 +1,16 @@
+{
+ "ai_related": true,
+ "audience": "研究或开发 GUI 智能体、网页/桌面/移动端自动化助手的人员，以及需要快速了解该领域论文与基准的读者。",
+ "date": "2026-10-25",
+ "features": [
+  "按数据集/基准、模型/智能体、综述、项目分类整理 GUI 智能体资源",
+  "每条条目附带 arXiv、GitHub、项目主页等链接",
+  "提供 Awesome-Paper-Agent，可根据 arXiv 链接自动生成格式化条目",
+  "接受 issue 和 pull request 补充缺失论文与信息"
+ ],
+ "intro": "这是一个面向多模态图形用户界面（GUI）智能体的资源汇总仓库，由 showlab 维护，持续收录相关论文、数据集、基准、模型与项目。内容按 Datasets / Benchmarks、Models / Agents、Surveys、Projects 分类导航，每条条目附有 arXiv、GitHub 或项目主页链接，方便按方向检索。\n\n仓库还提供了一个基于 ChatGPT 的 Awesome-Paper-Agent，输入 arXiv 链接即可自动生成格式化的条目信息，便于向列表提交 pull request。列表覆盖网页、桌面和移动端 GUI 自动化等场景，适合作为该方向的入门索引。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库把多模态 GUI 智能体相关的论文、数据集、基准和项目按类别整理成索引，覆盖网页、桌面与移动端界面自动化等方向。适合研究者或开发者快速查找该领域的代表工作与评测资源，也可借助其配套的 ChatGPT 工具把 arXiv 链接转成统一格式的条目，方便补充到列表中。",
+ "tagline": "多模态 GUI 智能体论文与资源精选列表"
+}

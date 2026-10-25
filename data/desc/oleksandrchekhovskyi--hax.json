@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合习惯在终端工作、运行本地模型、关注工具行为可审查性的开发者，以及需要在资源受限环境中使用编程助手的用户。",
+ "date": "2026-10-25",
+ "features": [
+  "单个 C 二进制，依赖少，启动快，内存占用仅几 MB",
+  "本地模型优先：自动发现 llama.cpp 模型与能力，无需额外配置",
+  "终端友好：流式 Markdown 与工具输出，保留原生滚动历史",
+  "可审查：Ctrl+T 查看完整对话记录，可选协议追踪",
+  "支持 OpenAI、Anthropic、OpenRouter、DeepSeek、Ollama 等多种提供商",
+  "遵循 Unix 风格：XDG 路径、纯文本配置与会话文件、子进程组合"
+ ],
+ "intro": "hax 是一个用 C 语言编写的终端原生编程助手，以单个原生二进制文件分发，依赖少、启动快、内存占用低，适合在资源有限的环境中运行本地模型。\n\n它把本地模型作为一等公民：启动 llama-server 后运行 hax --provider llama.cpp，即可自动发现模型和运行时能力，无需额外配置。同时支持 OpenAI、Anthropic、OpenRouter、DeepSeek、Ollama 等多种云端与本地服务。\n\nhax 尊重终端使用习惯，流式输出 Markdown 和工具结果，只重绘当前行或输入区，保留原生滚动历史。你可以通过 Ctrl+T 查看发送给模型和模型回复的完整记录，也可选收集详细的协议追踪。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Homebrew 安装：brew install oleksandrchekhovskyi/hax/hax",
+  "在项目目录运行 hax 进入交互式 REPL",
+  "使用 /provider 选择提供商并配置模型",
+  "运行 hax -p \"list TODOs\" 执行单次提示并输出结果",
+  "运行 hax -c 继续当前目录最近一次会话"
+ ],
+ "summary": "hax 是一个用 C 编写的极简终端编程助手，以单个二进制运行，依赖少、内存占用低。它特别适合在终端中配合本地 llama.cpp 模型使用，也能连接 OpenAI、Anthropic 等云端服务。项目强调可审查性和终端友好，适合需要轻量、透明 AI 编程工具的开发者。",
+ "tagline": "用 C 写的极简终端编程助手"
+}

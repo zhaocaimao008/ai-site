@@ -1,0 +1,20 @@
+{
+ "ai_related": true,
+ "audience": "适合对文本到视频生成感兴趣的研究者和开发者，以及希望体验延时视频生成的普通用户。",
+ "date": "2026-10-25",
+ "features": [
+  "根据文本提示生成延时视频",
+  "提出变质视频生成流程",
+  "构建 ChronoMagic 数据集",
+  "支持批量推理",
+  "提供在线演示和 ComfyUI 扩展"
+ ],
+ "intro": "MagicTime 是一个基于扩散模型的延时视频生成项目，旨在根据文本提示生成表现物体随时间变化过程的延时视频。项目提出了变质视频生成流程，并构建了 ChronoMagic 数据集，以提升视频生成模型对真实世界的刻画能力。该工作已被 TPAMI 2025 接收。\n\n项目提供了推理脚本，支持批量推理，并提供了 Hugging Face Space、Replicate 和 Colab 等在线体验方式。此外，还有 ComfyUI 扩展可供使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone --depth=1 https://github.com/PKU-YuanGroup/MagicTime.git",
+  "运行推理脚本：python inference_magictime.py"
+ ],
+ "summary": "MagicTime 是一个文本到延时视频的生成项目，专注于让视频模型模拟物体随时间推移的渐变过程。它提出了变质视频生成流程，并构建了 ChronoMagic 数据集来提升模型对真实世界的表现力。适合研究视频生成的研究者，或想体验文本生成延时视频的用户。",
+ "tagline": "基于扩散模型的延时视频生成项目"
+}

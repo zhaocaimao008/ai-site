@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究自回归扩散视频生成、少步蒸馏和实时交互式视频生成的开发者与研究人员。",
+ "date": "2026-10-25",
+ "features": [
+  "用 Causal ODE 或因果一致性蒸馏为 DMD 提供初始化",
+  "支持 chunk-wise 与 frame-wise 自回归视频生成",
+  "frame-wise 模型统一文生视频与图生视频",
+  "提供 1/2/4-step 推理权重，降低生成延迟",
+  "支持 Rolling Forcing 扩展至分钟级长视频",
+  "包含 Stage 1 到 Stage 3 的完整训练流水线"
+ ],
+ "intro": "Causal Forcing 是清华大学等机构提出的自回归扩散模型蒸馏方法，用于高质量、实时的交互式视频生成。它用 Causal ODE 或 Causal Consistency Distillation 为非对称 DMD 提供理论正确的初始化，在相同训练预算和推理效率下，视觉质量与运动动态优于 Self Forcing。\n\n项目支持 chunk-wise 与 frame-wise 两类模型，后者原生统一 T2V 和 I2V。后续的 Causal Forcing++ 用因果一致性蒸馏替代 ODE，省去 ODE 配对数据构建，并开源了首个 frame-wise 1-step/2-step 模型。仓库提供基于 Wan2.1 的预训练权重、推理脚本和分阶段训练流程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "创建 conda 环境并安装依赖：conda create -n causal_forcing python=3.10 -y && conda activate causal_forcing",
+  "安装依赖：pip install -r requirements.txt、pip install git+https://github.com/openai/CLIP.git、pip install flash-attn --no-build-isolation、python setup.py develop",
+  "下载基础模型：hf download Wan-AI/Wan2.1-T2V-1.3B --local-dir wan_models/Wan2.1-T2V-1.3B",
+  "下载 Causal Forcing 权重：hf download zhuhz22/Causal-Forcing chunkwise/causal_forcing.pt --local-dir checkpoints",
+  "按 README 的 CLI 推理章节运行 1/2/4-step 的 T2V 与 I2V 生成"
+ ],
+ "summary": "Causal Forcing 是一套面向实时交互式视频生成的自回归扩散蒸馏方案，核心是用因果 ODE 或因果一致性蒸馏为 DMD 提供正确初始化，从而在相同训练与推理成本下提升画质和运动表现。项目提供 chunk-wise 与 frame-wise 模型、1/2/4 步推理权重，并支持文生视频、图生视频及长视频扩展，适合研究少步视频生成与实时交互应用的开发者。",
+ "tagline": "面向实时交互视频生成的因果自回归扩散蒸馏方法"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对视频生成、扩散模型感兴趣的研究者和开发者，需要具备一定的 PyTorch 和深度学习基础。",
+ "date": "2026-10-25",
+ "features": [
+  "实现 Video Diffusion Models 的时空因子化 U-Net",
+  "支持无条件视频生成与采样",
+  "支持文本条件视频生成，可传入 BERT 嵌入或字符串",
+  "提供 Trainer 类，简化在 GIF 数据集上的训练流程",
+  "支持图像与视频联合训练，通过 prob_focus_present 参数控制注意力聚焦"
+ ],
+ "intro": "本项目是 Jonathan Ho 等人论文《Video Diffusion Models》的 PyTorch 实现，将 DDPM 扩展到视频生成领域。核心是一个时空因子化的 U-Net 架构，把图像生成从 2D 扩展到 3D 视频。\n\n项目提供了 Unet3D 和 GaussianDiffusion 两个主要类，支持无条件视频生成、文本条件生成（可使用 BERT 文本嵌入或直接传入字符串），以及图像与视频联合训练。还包含一个 Trainer 类，方便在 GIF 数据集上训练模型。\n\n代码结构清晰，适合研究视频扩散模型的研究者和开发者参考使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装包：pip install video-diffusion-pytorch",
+  "导入模块：from video_diffusion_pytorch import Unet3D, GaussianDiffusion",
+  "创建模型和扩散过程：model = Unet3D(dim=64, dim_mults=(1,2,4,8)); diffusion = GaussianDiffusion(model, image_size=32, num_frames=5, timesteps=1000, loss_type='l1')",
+  "准备视频数据并计算损失：videos = torch.randn(1, 3, 5, 32, 32); loss = diffusion(videos); loss.backward()",
+  "采样生成视频：sampled_videos = diffusion.sample(batch_size=4)"
+ ],
+ "summary": "这个项目用 PyTorch 实现了 Jonathan Ho 的 Video Diffusion Models 论文，把扩散模型从图像生成扩展到视频生成。它提供了时空因子化的 U-Net 和扩散过程封装，支持无条件生成和文本条件生成，还附带一个 Trainer 类方便在 GIF 数据集上训练。适合想研究或应用视频扩散模型的研究者和开发者参考。",
+ "tagline": "基于 PyTorch 的视频扩散模型实现"
+}
