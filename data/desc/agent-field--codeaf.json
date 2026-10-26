@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望利用开放模型进行低成本编码的开发者，以及需要同时管理多个项目、多个任务的团队或个人。",
+ "date": "2026-10-26",
+ "features": [
+  "统一窗口管理所有项目和对话，支持标签页切换和全局跳转",
+  "将自然语言请求自动拆分为多个独立任务，每个任务在独立分支运行",
+  "自动测试任务结果，通过检查的改动合并到你的分支，不会直接推送到 main 等保护分支",
+  "内置 senior-dev 和 sec 等专用子代理，分别处理代码修改和安全审计",
+  "支持 OpenRouter、Codex、DeepSeek、GLM、Kimi、MiniMax、Qwen 和 Ollama 等多种模型接入方式",
+  "提供 headless 模式，可作为其他流程的后端"
+ ],
+ "intro": "CodeAF 是一个用 Go 编写的编码代理工具，专为 DeepSeek、Qwen、GLM、Kimi、MiniMax、Ollama 等开放模型优化，目标是在这些模型上获得接近前沿水平的编码能力，同时控制成本。它以一个二进制文件分发，支持 macOS、Linux 和 Windows，无需额外安装依赖。\n\n与单仓库单终端的代理不同，CodeAF 提供统一窗口管理机器上的所有项目和对话，支持将自然语言描述拆分为多个任务，每个任务在独立的仓库副本和分支上运行，自动测试并合并通过检查的改动。它还内置了 senior-dev、sec 等专用子代理，分别处理代码修改和本地安全审计。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装脚本：curl -fsSL https://agentfield.ai/get/codeaf | bash",
+  "启动 CodeAF：codeaf",
+  "首次启动时在浏览器中连接 OpenRouter，或输入 API key；也可通过 /connect 或 codeaf connect codex 登录 ChatGPT 计划",
+  "在对话中直接描述任务，例如输入 /senior-dev fix the retry bug and add tests 调用专用子代理"
+ ],
+ "summary": "CodeAF 是一个面向开放模型的编码代理工具，旨在让 DeepSeek、Qwen、GLM 等模型在编码任务上发挥更好效果并控制成本。它提供统一窗口管理多个项目和对话，能将自然语言请求拆分为独立任务并行执行，自动测试并合并通过的改动，还内置代码修改和安全审计等专用子代理。适合希望用开放模型进行低成本编码、同时管理多任务的开发者。",
+ "tagline": "为开放模型打造的终端编码代理与软件工厂"
+}

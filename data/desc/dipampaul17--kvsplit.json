@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Apple Silicon Mac 上运行本地 LLM 并希望节省内存、延长上下文的开发者和研究者。",
+ "date": "2026-10-26",
+ "features": [
+  "独立量化 KV 缓存中的键和值，支持 K8V4、K4V8、K4V4 等组合",
+  "针对 Apple Silicon 的 Metal 支持优化",
+  "包含基准测试套件，可测量困惑度、内存和速度",
+  "提供内存使用和性能分析工具",
+  "生成出版级可视化图表",
+  "一键安装脚本，灵活配置 Python 环境和 llama.cpp 集成"
+ ],
+ "intro": "KVSplit 是一个针对 Apple Silicon 优化的工具，通过对注意力机制中的 KV 缓存采用不同的量化精度（键和值分别量化），来降低内存占用，从而在 Mac 上运行更大上下文窗口或更大规模的 LLM。项目基于 llama.cpp 并启用 Metal 支持。\n\n根据 README 的测试数据，K8V4（8 位键、4 位值）配置在 8K tokens 时内存占用为 71.50 MB，相比 FP16 的 176.00 MB 减少 59%，困惑度仅增加 0.86%，同时推理速度提升 5.7%。项目还提供了基准测试、可视化工具和安装脚本，方便用户快速比较不同配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/dipampaul17/KVSplit.git",
+  "进入目录：cd kvsplit",
+  "运行安装脚本：chmod +x scripts/install_kvsplit.sh && ./scripts/install_kvsplit.sh",
+  "使用推荐配置运行：./llama.cpp/build/bin/llama-cli -m models/your-model.gguf -p \"Your prompt\" -t 8 --flash-attn --kvq 8"
+ ],
+ "summary": "KVSplit 是一个针对 Apple Silicon 的 LLM 推理优化工具，它通过对 KV 缓存中的键和值采用不同量化精度（如 8 位键、4 位值），在几乎不损失质量的情况下显著降低内存占用，从而让 Mac 用户能在相同内存下运行更长上下文或更大模型。项目基于 llama.cpp 并集成 Metal 支持，附带基准测试和可视化工具，适合需要在本地高效运行 LLM 的开发者。",
+ "tagline": "在 Apple Silicon 上通过差异化 KV 缓存量化运行更大 LLM"
+}

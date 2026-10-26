@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想在本地私有环境运行大模型的开发者，以及需要在 Node.js 项目中集成模型问答能力的工程师。",
+ "date": "2026-10-26",
+ "features": [
+  "本地运行 GGUF 模型，附带网页聊天界面",
+  "CLI 管理模型：安装、列出、切换、删除",
+  "提供 Web API 和 TypeScript 开发 API",
+  "支持 JSON Schema 语法约束模型输出",
+  "实时流式输出文本",
+  "跨平台支持 Windows、Linux、Mac"
+ ],
+ "intro": "Catai 是一个用 TypeScript 编写的工具，让你在自己的电脑上运行 GGUF 格式的大语言模型，并提供一个网页聊天界面。它基于 node-llama-cpp 和 Llama.cpp，支持 Windows、Linux 和 Mac 多个平台。\n\n除了聊天界面，Catai 还提供命令行工具管理模型，包括安装、列出、切换和删除模型，以及启动本地服务。它同时暴露了简单的 Web API 和开发 API，方便在 Node.js 项目中调用模型进行问答，并支持用 JSON Schema 语法约束输出格式。\n\n模型默认下载到 ~/catai 目录，下载采用多线程方式。配置可以通过网页界面修改。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js（当前版本）",
+  "npm install -g catai",
+  "catai install qwen3-4b-q4_k_m",
+  "catai up"
+ ],
+ "summary": "Catai 让你在自己的电脑上运行 GGUF 格式的大语言模型，并附带一个网页聊天界面。它提供命令行工具来安装、切换和管理模型，也提供 Web API 与 TypeScript 开发接口，方便在 Node.js 项目中调用模型。适合希望本地私有运行模型、或需要把模型问答能力集成进自己程序的开发者。",
+ "tagline": "在本地运行 GGUF 模型的聊天助手与 Node.js API"
+}

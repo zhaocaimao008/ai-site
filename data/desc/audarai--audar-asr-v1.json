@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要处理阿拉伯语方言语音识别的开发者、语音产品团队以及研究阿拉伯语 NLP 的工程师，也适合在边缘设备或服务器上部署语音转写服务的用户。",
+ "date": "2026-10-26",
+ "features": [
+  "支持现代标准阿拉伯语及海湾、埃及、黎凡特、马格里布等主要方言",
+  "支持阿拉伯语-英语混码和英语，共 30 种语言",
+  "提供 Flash（0.78B）和 Turbo（2.35B）两个版本，兼顾实时与精度",
+  "支持 Transformers、GGUF（llama.cpp）和 vLLM 多种推理运行时",
+  "提供长音频分块转写和基于 LocalAgreement-2 的流式增量输出示例",
+  "在 Open Universal Arabic ASR Leaderboard 上 Turbo 排名第一，Flash 为最强小模型"
+ ],
+ "intro": "Audar-ASR-V1 是 AudarAI 推出的阿拉伯语优先生成式语音识别模型系列，包含 Flash 和 Turbo 两个版本。它基于开源音频大模型，使用超过 30 万小时标注音频进行适配训练，并经过四阶段课程学习与 KTO 偏好对齐，最终能转写现代标准阿拉伯语、主要方言（海湾/阿联酋、埃及、黎凡特、马格里布）、阿拉伯语-英语混码以及英语，共支持 30 种语言。\n\n模型将转写视为音频条件下的下一词预测，采用 Whisper 风格编码器与 Qwen3 解码器架构，支持 30 秒上下文。Flash 版 0.78B 参数，适合实时字幕、语音助手和端侧离线场景；Turbo 版 2.35B 参数，追求更低错误率，适合困难方言和长音频。两者共享同一提示接口，可无缝切换。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -r examples/requirements.txt",
+  "使用 Transformers 转写阿拉伯语：python examples/transcribe.py clip.wav",
+  "指定英语转写：python examples/transcribe.py english.wav --lang en",
+  "使用 GGUF 推理（需构建支持 Qwen3-ASR 的 llama.cpp）：./examples/gguf_infer.sh clip.wav turbo",
+  "使用 vLLM 部署服务：./examples/vllm_serve.sh turbo"
+ ],
+ "summary": "Audar-ASR-V1 是一个专注于阿拉伯语及其方言的生成式语音识别模型系列，提供 Flash 和 Turbo 两个版本。它解决了阿拉伯语方言转写困难、混码识别不准的问题，支持现代标准阿拉伯语、海湾、埃及、黎凡特、马格里布等方言以及阿拉伯语-英语混码。适合需要实时字幕、语音助手、长音频转写或离线部署的开发者与产品团队使用。",
+ "tagline": "面向阿拉伯语方言的生成式语音识别模型"
+}

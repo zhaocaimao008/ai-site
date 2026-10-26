@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在终端中直接使用 AI 编码助手、并需要灵活切换多家模型提供商的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "单个静态二进制，内置 30+ 模型提供商接入",
+  "内置 read、write、edit、bash、glob 等编码工具",
+  "支持交互式 TUI、print、json 三种运行模式",
+  "通过 AGENTS.md 和 SKILL.md 管理持久与可复用指令",
+  "支持任意语言的扩展（subprocess + JSON-RPC）",
+  "内置 Telegram bot 与实验性的持久化、可恢复运行"
+ ],
+ "intro": "zot 是一个用 Go 编写的轻量级编码智能体运行框架（coding agent harness），以单个静态二进制文件分发。它内置了 Anthropic、OpenAI、Gemini、DeepSeek、Kimi、GitHub Copilot、Ollama 等 30 多个模型提供商的接入，并自带 read、write、edit、bash、glob 等基础工具，让开发者可以在终端里直接驱动 AI 完成编码任务。\n\nzot 提供交互式 TUI、print 和 json 三种运行模式，支持通过 AGENTS.md 设置持久指令、通过 SKILL.md 复用技能，还可以用任意语言编写扩展（基于 subprocess + JSON-RPC）。此外它内置 Telegram bot，并提供实验性的持久化运行能力，可在崩溃后恢复中断的任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS/Linux 一键安装：curl -fsSL https://www.zot.sh/install.sh | bash",
+  "Windows PowerShell 安装：iwr -useb https://www.zot.sh/install.ps1 | iex",
+  "或使用 Go 安装：go install github.com/patriceckhart/zot/cmd/zot@latest",
+  "运行 zot 并输入 /login 完成认证",
+  "通过 --api-key 参数或对应环境变量（如 ANTHROPIC_API_KEY）提供密钥"
+ ],
+ "summary": "zot 是一个用 Go 编写的轻量级编码智能体运行框架，以单个静态二进制形式提供。它内置多家模型提供商接入和常用编码工具，支持终端交互、脚本输出等多种运行方式，并可通过 AGENTS.md、SKILL.md 和扩展机制定制行为。适合希望在终端中直接调用 AI 完成编码任务、并需要灵活切换模型提供商的开发者。",
+ "tagline": "用 Go 编写的轻量级编码智能体运行框架"
+}

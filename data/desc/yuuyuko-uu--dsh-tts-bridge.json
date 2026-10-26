@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 DSH 并希望以语音方式收听会话内容的开发者或普通用户，需拥有 DeepSeek 账号并使用 Chromium 内核浏览器。",
+ "date": "2026-10-26",
+ "features": [
+  "自动朗读：开启后，选定会话每完成一轮即自动朗读",
+  "手动控制：每条回复下方提供朗读、停止、收藏按钮",
+  "多会话选择：可勾选多个当前载入的会话进行监听",
+  "收藏与导出：支持分区收藏句子，并可导出为 markdown",
+  "状态卡片：DSH 右下角卡片显示状态，可拖动、一键停止",
+  "自愈机制：DeepSeek 页面不在时自动唤回"
+ ],
+ "intro": "朗读桥是一个由 DSH 插件和浏览器扩展两部分组成的工具，用于将 DSH（DeepSeek Harness）中的会话内容自动发送到 DeepSeek 网页端，并利用用户自己账号的朗读功能播放出来。声音从用户本地电脑发出，无需一直盯着 DeepSeek 页面。\n\n插件负责监听指定会话，将每轮完整回复加入队列；浏览器扩展则从队列取内容，在已登录的 DeepSeek 页面中触发朗读按钮。两者配合，实现自动或手动朗读。\n\n项目不调用 DeepSeek 接口、不提取音频、不存储凭证，仅模拟用户在浏览器中点击朗读按钮的行为。使用时需要保持 DeepSeek 页面开启，且首次需手动点击一次朗读按钮以授权。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 DSH 插件市场搜索「朗读桥」安装，或运行命令：dsh plugin --profile web add github:Yuuyuko-uu/dsh-tts-bridge",
+  "重启 DSH，右下角出现 🐳 朗读桥 卡片",
+  "打开 chrome://extensions，开启开发者模式，点击「加载已解压的扩展程序」，选择插件安装目录下的 extension/ 文件夹",
+  "打开 https://chat.deepseek.com 并登录账号",
+  "在 DeepSeek 页面手动点击一次「朗读」按钮以授权"
+ ],
+ "summary": "朗读桥解决的是在 DSH 中不想一直盯着屏幕、希望用语音收听会话内容的需求。它通过插件和浏览器扩展配合，把 DSH 里的回复自动送到 DeepSeek 网页端，用你自己账号的朗读功能播放出来，声音从本地电脑发出。适合使用 DSH 且拥有 DeepSeek 账号的用户，在 Chromium 浏览器上即可使用。",
+ "tagline": "把 DSH 会话内容交给 DeepSeek 网页端朗读的桥接工具"
+}

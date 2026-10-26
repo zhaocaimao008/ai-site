@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用编码代理的开发者、代码审查人员以及希望自动化代码质量检查的团队。",
+ "date": "2026-10-26",
+ "features": [
+  "审查意图与代码：检查代理对话是否遵循目标，并验证代码变更的正确性。",
+  "多种运行方式：支持终端、代理技能和 CI 集成。",
+  "自带模型：可使用任何提供商的 API 密钥，或通过 --agentic 使用现有订阅。",
+  "GitHub PR 审查：通过可复用的 GitHub Action 自动审查拉取请求。",
+  "灵活配置：支持自定义模型、配置文件和问题指南。"
+ ],
+ "intro": "Vet 是一个独立的验证工具，用于检查代码变更和编码代理的行为。它通过分析代理对话和代码差异，找出值得关注的问题，例如目标偏离或代码正确性缺陷。\n\nVet 可以在终端、作为代理技能或 CI 中运行，支持自带模型（通过 API 密钥）或使用 Anthropic/OpenAI 订阅（通过 --agentic 选项）。它免费开源，不收集数据，请求直接发送到推理提供商。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：pip install verify-everything",
+  "在当前仓库运行：vet \"Implement X without breaking Y\"",
+  "与基线提交比较：vet \"Refactor storage layer\" --base-commit main",
+  "使用 Claude Code 等代理：vet \"Implement X without breaking Y\" --agentic --agent-harness claude",
+  "安装代理技能：curl -fsSL https://raw.githubusercontent.com/imbue-ai/vet/main/install-skill.sh | bash"
+ ],
+ "summary": "Vet 是一个用于验证代码变更和编码代理行为的工具，帮助开发者发现代码中的问题以及代理执行与用户意图的偏差。它可以在终端、作为代理技能或 CI 中运行，支持自带模型或使用现有订阅，适合需要自动化代码审查和代理行为监控的场景。",
+ "tagline": "验证代码变更与编码代理行为的独立工具"
+}

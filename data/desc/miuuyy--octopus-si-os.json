@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对智能体架构、操作系统原理和自演化系统感兴趣的研究者与开发者，尤其是愿意在 macOS 上体验研究预览版本的人。",
+ "date": "2026-10-26",
+ "features": [
+  "基于 Rust 内核的智能体执行架构，以 Interface、Artifact、Run 等原语组织运行",
+  "支持智能体在策略下自我演化：创建目标、修改接口、添加工具、组织 worker",
+  "提供 Home、Projects、Agents、Tasks 等管理概念，权限按项目隔离",
+  "桌面客户端与终端客户端共享同一套 Home、Projects 和 Agents",
+  "通过 Applications 接入聊天渠道、MCP 服务器和其他模型提供商",
+  "通过 Drivers 在文件夹、git worktree、浏览器、桌面、容器或远程机器上执行任务"
+ ],
+ "intro": "Octopus Superintelligence OS 是一个研究预览项目，尝试用操作系统原理重新组织 AI 智能体的执行方式。它把智能体能力视为架构中的契约，而非附加在循环上的插件，内核由约 4.5 万行 Rust 代码构成，其余部分（包括 Codex）都移植到该内核之上。\n\n项目提供 Home、Projects、Agents、Tasks 等概念，支持桌面客户端和终端客户端，智能体可以读写文件、操作浏览器、使用桌面应用，并通过文本或语音交互。在策略允许下，智能体能够创建和修改目标、调整接口、添加工具、组织 worker，这些改动会跨任务持久化。\n\n目前项目定位为研究预览，作者指出当前模型（包括 GPT-6）尚不能自主采取主动，普通编码任务与 Codex CLI 相比没有额外优势。研究重点是：让智能体重塑执行环境的架构，能否帮助其获得主动性和可测量的自我改进。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认环境：macOS 14+、Node 24、稳定版 Rust 和 ChatGPT 账号",
+  "克隆仓库并安装依赖：git clone https://github.com/miuuyy/Octopus-SI-OS.git && cd Octopus-SI-OS && npm ci --prefix app",
+  "下载 Node 24.15.0 头文件并校验、解压到 app/build 目录",
+  "打包并打开应用：OCTOPUS_NATIVE_NODE_HEADERS=\"$PWD/app/build/node-v24.15.0/include/node\" npm --prefix app run package:mac && open -n ./app/build/Octopus.app",
+  "首次运行时用 ChatGPT 登录，设置本地密码，在嵌入式终端按 Enter 启动系统并完成初始设置"
+ ],
+ "summary": "Octopus Superintelligence OS 是一个用操作系统原理构建的智能体运行环境，目标是让智能体不仅能执行任务，还能在策略允许下调整自己的目标、接口、工具和执行环境，并将这些改动持久化。它适合研究智能体架构、探索自主性与自我改进机制的开发者和研究者。项目目前是研究预览，普通编码任务与 Codex CLI 相比没有额外优势，核心问题是这种架构能否帮助智能体获得主动性和长期发展能力。",
+ "tagline": "基于操作系统原理的自进化智能体运行环境"
+}

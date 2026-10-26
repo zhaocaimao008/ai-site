@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code 进行开发、希望并行处理多项任务并避免上下文耗尽的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "将任务派发到后台 worker，每个 worker 拥有独立完整上下文窗口",
+  "主会话仅保留调度清单，保持轻量，不阻塞后续操作",
+  "worker 遇到问题可向用户提问，回答后继续执行且不丢失上下文",
+  "支持按任务混合使用不同模型（Claude、GPT、Gemini 等）",
+  "自动检测已安装的 CLI 和可用模型，生成配置文件",
+  "支持 worktree 隔离执行，适合并行处理多个独立任务"
+ ],
+ "intro": "Dispatch 是一个运行在 Claude Code 内部的技能，用于解决长会话中上下文窗口被逐步占满的问题。它把主会话变成轻量调度器：你只需描述任务，Dispatch 生成检查清单，并将具体执行交给拥有独立完整上下文的后台 worker。\n\nworker 可以并行运行，主会话保持精简，你无需轮询进度。worker 遇到疑问时会主动提问，你回答后它继续执行，不会丢失上下文。Dispatch 支持按任务指定不同模型（如 Claude、GPT、Gemini），并自动发现可用 CLI 和模型，生成配置文件。\n\n首次运行会自动检测环境并生成 ~/.dispatch/config.yaml，无需手动配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装技能：npx skills add bassimeledath/dispatch -g（用户级）或 npx skills add bassimeledath/dispatch（项目级）",
+  "在 Claude Code 会话中运行 /dispatch 预热配置（可选，但推荐）",
+  "使用 /dispatch 任务描述 派发任务，例如：/dispatch use sonnet to find better design patterns for the auth module",
+  "随时输入 status 查看进度，或继续派发其他任务"
+ ],
+ "summary": "Dispatch 是一个 Claude Code 技能，用来解决长会话中上下文窗口被逐步占满、任务串行执行效率低的问题。它把主会话变成调度器，将具体任务分发给拥有独立上下文的后台 worker 并行执行，主会话保持精简。适合需要同时处理代码审查、重构、测试、文档等多项任务的开发者，也支持按任务指定不同模型。",
+ "tagline": "Claude Code 技能：后台并行派发任务，扩展有效上下文窗口"
+}

@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合经常吃麦当劳、想根据预算和口味选餐、比较门店价格或记录探索经历的用户，以及对 MCP、AI Skill 和本地图像生成感兴趣的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "通过自然语言描述预算、口味和排除条件，由 AI 查询真实餐品并筛选推荐",
+  "查询附近门店，比较最多 3 家门店同一商品、同一规格的价格",
+  "查询优惠券包和活动日历，标出到期日期并生成体素风格优惠日历",
+  "根据实际选择的餐品计算能量、蛋白质、脂肪、碳水化合物、钠和钙等营养数据",
+  "记录确认吃过的餐品和去过的门店，生成体素风格餐品图鉴和探店统计",
+  "内置 Python 体素渲染，本地生成 PNG 图片，无需调用外部图片生成 API"
+ ],
+ "intro": "Oh-My-McDonald 是一个基于麦当劳官方 MCP 的对话驱动 AI Skill。用户可以用自然语言提出用餐需求，例如预算、口味偏好或排除条件，AI 会调用 MCP 工具查询真实餐品、门店价格、优惠券和营养信息，并筛选出符合条件的候选餐品。\n\n项目使用 Python 本地脚本处理数据和生成图片，将查询结果整理成四种体素风格的 PNG 场景：餐品图鉴、优惠日历、门店比价和营养餐桌。渲染完全在本地完成，不需要网页界面，也不依赖图片生成 API。\n\n此外，项目支持记录用户确认吃过的餐品和去过的门店，并生成对应的图鉴和探店统计。整个流程以对话为主，适合经常吃麦当劳、想根据预算和口味选餐、比较门店价格或记录探索经历的用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/xiaozhangup/Oh-My-McDonald.git && cd Oh-My-McDonald",
+  "创建并激活虚拟环境：python -m venv .venv && source .venv/bin/activate",
+  "安装依赖：python -m pip install -r requirements.txt",
+  "配置中文字体（可选）：export OMM_FONT=\"/path/to/your/font.ttf\"",
+  "配置麦当劳 MCP Token：export MCD_MCP_TOKEN=\"YOUR_MCD_MCP_TOKEN\"",
+  "查看命令帮助：python oh-my-mcdonald/scripts/oh_my_mcdonald.py --help"
+ ],
+ "summary": "Oh-My-McDonald 是一个基于麦当劳官方 MCP 的对话式 AI Skill，解决餐品、门店、优惠和营养信息分散、难以在一次对话中综合查询的问题。用户可以用自然语言说明预算、口味和排除条件，由 AI 调用 MCP 工具获取真实数据并筛选推荐，再用本地 Python 脚本生成体素风格的餐品图鉴、优惠日历、门店比价和营养餐桌图片。适合经常吃麦当劳、想按需选餐、比价或记录探索经历的用户。",
+ "tagline": "基于麦当劳官方 MCP 的对话式 AI 点餐助手"
+}

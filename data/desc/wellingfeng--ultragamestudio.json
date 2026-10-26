@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Unity、Unreal、Godot 或 Web 引擎的游戏开发者，以及希望在编码同时生成美术与音频资产的独立团队。",
+ "date": "2026-10-26",
+ "features": [
+  "在聊天中编写玩法代码、引擎集成、着色器逻辑、构建脚本和测试",
+  "通过 /image、/sprite、/mesh-mode-start 等命令生成图像、精灵、3D 模型、音频和视频",
+  "支持 ComfyUI 节点式图像管线",
+  "内置 40 多个游戏开发专家角色，覆盖 Unity、Unreal、Godot 和 Web 引擎",
+  "可将常规任务路由到免费或低成本通道，密钥与历史保存在本地"
+ ],
+ "intro": "UltraGameStudio 是一个面向游戏开发的 AI 编码智能体，采用 Claude Code、Codex、Gemini 这类工具的交互方式，但针对游戏引擎场景做了定制。它不只处理源码，还能理解材质、蓝图、地形、天空、UI（如 UMG）、骨骼动画、打包与性能优化等引擎概念，支持 Unity、Unreal、Godot 和 Web 引擎项目。\n\n除了写代码，它把游戏资产生成也放进同一个对话界面：图像、3D 模型、2D 精灵动画、图集、音频、骨骼绑定和视频都可以通过斜杠命令生成，并回填到项目中继续编码。项目内置 40 多个游戏开发专家角色，覆盖技术总监、玩法/网络/工具程序员、关卡与数值设计、美术与音频指导、QA、发布管理等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在对话中输入 /image、/img、/draw 或 /生图 进入图像生成模式",
+  "使用 /sprite 生成 2D 精灵，使用 /mesh-mode-start 生成 3D 模型",
+  "使用 /music、/speech-mode-start 或 /video 生成音频与视频资产",
+  "使用对应的 *-mode-end 命令退出当前模式"
+ ],
+ "summary": "游戏开发中代码只是一部分，材质、蓝图、地形、UI、骨骼动画和打包同样占大量精力，通用编码助手往往不理解这些概念。UltraGameStudio 把编码对话与资产生成放在同一界面，既能写玩法代码和引擎集成，也能生成图像、3D 模型、精灵、音频和视频，并内置游戏开发专家角色，适合使用 Unity、Unreal、Godot 或 Web 引擎的开发者。",
+ "tagline": "面向游戏开发的 AI 编码智能体"
+}

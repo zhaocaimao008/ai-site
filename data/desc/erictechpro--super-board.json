@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code 并希望把 GitHub 看板任务自动推进到合并 PR 的开发者与团队。",
+ "date": "2026-10-26",
+ "features": [
+  "看板驱动：向 Ready 列添加卡片后自动排空，完成 Build → QA → Review 全流程",
+  "8 个 skill 与 9 个命令，覆盖任务收集、UI 打磨、可视化报告和 git 同步",
+  "6 个 guard hook 自动拦截密钥读取、危险删除、越界 worktree 和受保护分支推送",
+  "合并门禁：需通过项目 verify_commands 并固定在被审查的 commit 上",
+  "按卡片难度自动路由模型，支持 --low/--high 与 --codex 切换",
+  "安装脚本一行命令完成部署，onboard 分 8 步引导配置"
+ ],
+ "intro": "super-board 是一套运行在 Claude Code 上的技能与命令集合，把 GitHub Projects 看板变成自动化的开发流水线。你在看板里添加任务卡片，它按 Build → QA → Review 三个阶段依次执行：在独立 worktree 中做最小改动并提草稿 PR，由 QA 环节收集证据、检查测试缺口，再由 Review 环节把关合并。\n\n项目包含 8 个 skill（5 个手动触发、3 个由看板自动运行）、9 个命令和 6 个 guard hook。hook 会拦截 worktree 路径越界、读取密钥文件、写入疑似 API key、删除项目外文件等操作，合并前还会运行项目自定义的 verify_commands。模型按卡片难度由路由器分级选择，也支持切换到 Codex 的 GPT 模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在项目目录执行安装：curl -fsSL https://raw.githubusercontent.com/EricTechPro/super-board/main/get.sh | bash",
+  "运行 /super-board onboard 完成检查、GitHub、看板、分支等 8 步配置",
+  "运行 /super-board run my-app 启动看板处理",
+  "把任务卡片加入 Ready 列，等待自动执行与合并"
+ ],
+ "summary": "super-board 把 GitHub Projects 看板接到 Claude Code 上，你只需往 Ready 列添加任务卡片，它就会自动完成构建、QA 和代码审查，最终产出合并的 PR。适合已经在用 Claude Code、希望把零散开发任务交给代理批量推进的开发者，安装和配置都通过命令完成。",
+ "tagline": "给 Claude Code 用的看板式自动开发流水线"
+}

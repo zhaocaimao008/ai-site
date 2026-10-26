@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Cursor、Codex 等 AI 编程助手，并希望跨会话保持项目上下文连贯的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "跨会话保存进度与下一步计划，通过 end session 和 continue 恢复上下文",
+  "维护项目规则、项目 wiki、文件组织规则、更新日志和文档索引等 Markdown 文件",
+  "提供 status 命令快速查看项目当前状态和下一步建议",
+  "支持 Project Profile 与 Normal Close / Full Close 模式，管理长期文档对齐",
+  "自动检查更新（Claude Code 内每日一次），也可手动运行脚本检查",
+  "支持英文、中文和双语模式切换项目文件语言"
+ ],
+ "intro": "project-butler 是一个面向 AI 编程助手的项目记忆系统，支持 Claude Code、Cursor、Codex 等工具。它通过在项目根目录维护一组纯 Markdown 文件（如 CLAUDE.md、PROJECT.md、TODO.md、session-handoff.md 等），把项目规则、当前状态、下一步任务和会话交接记录持久化下来，避免每次新会话都要重新解释上下文。\n\n日常使用只需四个自然语言动作：首次运行 /project-butler 初始化项目记忆，工作结束时说 end session 保存进度，下次说 continue 恢复上下文，随时用 status 查看项目状态。对于需要更强产品、架构或路线图对齐的项目，还可以在初始化时创建 Project Profile，并选择 Normal Close 或 Full Close 来管理配置更新。\n\n所有核心文件都是纯文本，其他工具即使不原生运行该 skill 也能读取，方便在不同 AI 助手之间共享同一份项目事实来源。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库到 Claude Code skills 目录：git clone https://github.com/JamesShi96/project-butler.git ~/.claude/skills/project-butler",
+  "打开任意项目，运行 /project-butler 初始化项目记忆",
+  "正常工作，结束时说 end session 保存进度和下一步",
+  "下次说 continue 恢复上下文，无需重新解释项目"
+ ],
+ "summary": "project-butler 解决 AI 编程助手跨会话遗忘项目上下文的问题。它把项目规则、当前状态、待办和会话交接记录整理成纯 Markdown 文件，让 Claude Code、Cursor、Codex 等工具在下次会话中快速恢复，适合需要长期维护同一项目、频繁切换助手或希望减少重复解释的开发者。",
+ "tagline": "让 AI 编程助手跨会话记住你的项目"
+}

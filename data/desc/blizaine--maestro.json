@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地完成 AI 视频、图像和音乐创作，并且不想手动配置复杂模型的创作者与开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "Director 模式：根据音频或故事自动规划镜头、生成图像与视频片段",
+  "Music Video 技能：分析 BPM、段落与能量，按节拍安排镜头",
+  "Short Film 技能：按剧本组织场景、角色对白与剪辑连续性",
+  "图像生成与编辑：支持 MOSS Image、Qwen Image 等模型及多参考图",
+  "Performance Auto-Tune：自动检测硬件并推荐量化、分块与显存配置",
+  "非破坏性多轨编辑器，可逐步审阅和修改生成结果"
+ ],
+ "intro": "Maestro 是一个完全本地运行的 AI 创作工作室，把图像、视频和音频生成、LLM 驱动的制作流程以及非破坏性多轨编辑器整合在一个界面里。它基于 WanGP 流水线构建，可通过 Pinokio 一键安装，并针对 LTX-2.5、MiniMax H3 等本地模型和 LoRA 做了优化。\n\n核心是 Director 模式：用户放入一段音频或写一个故事，本地 LLM 会规划镜头、撰写剧本或歌词、生成起始帧与关键帧并保持角色一致性，再按模型和 LoRA 的提示词规范逐条润色，最后完成多片段生成。它提供 Music Video 和 Short Film 两种技能，前者按节拍规划镜头，后者按剧本组织场景与对白。\n\n项目还包含 Performance Auto-Tune，首次启动时检测 GPU、显存和内存并自动选择量化、VAE 分块等配置，同时保留手动调节入口。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Pinokio 安装 Maestro（项目主页为 pinokio.computer）",
+  "首次启动后等待 Auto-Tune 检测 GPU、显存和内存并选择配置",
+  "在 Director 模式中放入音频或编写故事，选择 Music Video 或 Short Film",
+  "选择 Auto Mode 端到端运行，或使用 Manual 模式逐步审阅和修改"
+ ],
+ "summary": "Maestro 是一个完全本地运行的 AI 创作工作室，把图像、视频、音频生成和多轨编辑整合到一个界面中。它适合想制作音乐视频或短片的创作者：放入音频或写一个故事，本地 LLM 会规划镜头、生成画面并完成多片段合成。项目基于 WanGP 流水线，可通过 Pinokio 安装，并带有自动检测硬件、推荐性能配置的功能。",
+ "tagline": "本地一站式 AI 视频、图像与音乐创作工作室"
+}

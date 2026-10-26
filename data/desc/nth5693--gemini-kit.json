@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Gemini CLI 的开发者，尤其是希望用多智能体协作加速日常编码、测试和代码审查的团队或个人。",
+ "date": "2026-10-26",
+ "features": [
+  "27 个专用 AI Agent，覆盖规划、编码、测试、审查、安全、前端、后端、DevOps 等角色",
+  "45 个斜杠命令和 33 个工作流，支持 /plan、/review、/cook 等完整开发流程",
+  "复合系统：探索、计划、执行、审查、沉淀知识库，解决方案可复用",
+  "学习系统：根据用户反馈记忆修正，避免重复错误",
+  "自动 Git 检查点与 30+ 密钥检测模式，降低误操作和泄露风险",
+  "支持 Discord 与 Telegram 通知集成"
+ ],
+ "intro": "Gemini-Kit 是 Gemini CLI 的扩展，把终端变成一个虚拟工程团队。它内置 27 个专用 AI Agent（如 Planner、Coder、Tester、Reviewer、Security Auditor 等）、15 个技能模块、45 个斜杠命令和 33 个工作流，覆盖从探索、计划、编码、测试到审查的完整开发流程。\n\n项目提供复合系统（/explore → /plan → /work → /review → /compound），每次迭代都会积累知识库并复用解决方案；同时包含学习系统、23 个关键模式、多智能体编排、自动 Git 检查点和实时密钥检测等机制。\n\n安装后可在自己的项目目录中启动 gemini，通过 /status、/explore、/plan 等命令快速开始。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/nth5693/gemini-kit.git ~/.gemini/extensions/gemini-kit",
+  "安装并构建：cd ~/.gemini/extensions/gemini-kit && npm install && npm run build",
+  "链接扩展：gemini extensions link $(pwd)",
+  "进入你的项目目录并启动：cd /path/to/your/project && gemini",
+  "尝试命令：/status、/explore React、/plan Add auth"
+ ],
+ "summary": "Gemini-Kit 是 Gemini CLI 的扩展，把终端变成一支虚拟工程团队。它提供多个专用 AI Agent、斜杠命令和工作流，覆盖探索、计划、编码、测试、审查等环节，并能在迭代中积累可复用的知识库。适合希望借助多智能体协作提升日常开发效率的开发者。",
+ "tagline": "为 Gemini CLI 扩展多智能体与工作流的开发工具包"
+}

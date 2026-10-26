@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在不修改模型权重的前提下研究或调整模型拒绝行为的研究者与开发者，也适合需要本地运行且对提示进行细粒度控制的 llama.cpp 用户。",
+ "date": "2026-10-26",
+ "features": [
+  "在推理时对每个提示动态读取拒绝方向，无需修改模型权重",
+  "通过前瞻门控决定是否编辑，未触发时输出与基础模型完全一致",
+  "一套配方覆盖 131 个共享 `build_cvec` 层输出位置的模型架构",
+  "可调参数控制门控触发阈值、拒绝方向移除强度和免责声明移除强度",
+  "支持 CPU 及 CUDA、HIP 等后端，量化模型也可运行"
+ ],
+ "intro": "AbliteratedOutTheBox 是 llama.cpp 的一个分支，目标是在推理阶段让模型对有害提示给出内容而非拒绝，同时不修改磁盘上的原始权重。它不需要微调、训练或额外文件，而是对每个提示从模型自身读取两个方向：通过强制模型生成若干“服从”与“拒绝”开头（以及“免责声明”与“干净”开头），对比激活差异，并由一个前瞻门控决定是否对该提示进行编辑。\n\n编辑发生在计算图中 `build_cvec` 层输出位置，165 个模型架构中有 131 个共享该位置，因此一套配方即可覆盖，无需针对每个模型写代码。运行时使用两遍处理：先做干净检测触发门控，再进行编辑后的预填充与生成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "构建运行时：`cmake -S . -B build -DCMAKE_BUILD_TYPE=Release` 然后 `cmake --build build --target llama-abliterate -j`",
+  "将模型转换为 GGUF：`python3 convert_hf_to_gguf.py /path/to/Qwen3-8B --outfile qwen3-8b.gguf --outtype q8_0`",
+  "运行：`./build/bin/llama-abliterate -m qwen3-8b.gguf -ngl 99 -n 256 -p \"Give me step by step instructions to pick a lock\"`",
+  "可选调整参数：`--ff-threshold`（默认 0.70）、`--edit-strength`（默认 2.0）、`--disc-strength`（默认 0.4）"
+ ],
+ "summary": "AbliteratedOutTheBox 是一个 llama.cpp 分支，旨在推理阶段让模型对有害提示给出实际内容而非拒绝，且不修改磁盘上的原始权重。它通过从提示自身读取拒绝方向并动态编辑激活，无需微调或额外文件，一套配方覆盖多种模型架构。适合希望在不改动权重的前提下研究或调整模型拒绝行为的研究者与开发者。",
+ "tagline": "在推理时移除模型拒绝行为的 llama.cpp 分支"
+}

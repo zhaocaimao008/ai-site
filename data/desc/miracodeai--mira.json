@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望将 AI 代码审查部署在自己基础设施上的开发团队，尤其是对代码隐私、LLM 成本可控性和审查质量有要求的工程组织。",
+ "date": "2026-10-26",
+ "features": [
+  "使用自选 LLM（OpenRouter 或 OpenAI 兼容端点）自动审查 PR/MR，并支持 @miracodeai 内联问答",
+  "全仓库代码索引，为模型提供跨文件上下文，并支持组织级包搜索",
+  "每小时通过 OSV.dev 扫描依赖漏洞，展示严重性、公告链接和修复版本",
+  "依赖与影响范围图，帮助评估修改某个符号的影响",
+  "自定义及组织级审查规则，可通过 .mira.yaml 或仪表盘配置",
+  "学习循环：从已合并 PR 和人工审查模式中合成团队规则，减少噪音"
+ ],
+ "intro": "Mira 是一个可自托管的 AI 代码审查工具，通过你选择的 LLM 对 Pull Request 和 Merge Request 自动生成简洁、可操作的反馈。它支持 OpenRouter 以及任何 OpenAI 兼容端点，模型选择灵活，且不收取 LLM 费用加价。\n\n除了逐行评论，Mira 会对整个代码库建立索引，让模型获得跨文件的真实项目上下文，并支持组织级包搜索与基于 OSV.dev 的每小时 CVE 扫描。它还提供依赖与影响范围图、自定义规则、学习循环（从已合并 PR 中合成团队规则）以及仪表盘，展示成本、审查健康度等信号。\n\nMira 默认自托管，所有数据（diff、索引、审查历史、漏洞数据）存储在你自己控制的 SQLite 或 Postgres 中，支持 GitHub、GitLab 和 Forgejo/Codeberg。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 .env 文件，填入 MIRA_GITHUB_APP_ID、MIRA_GITHUB_PRIVATE_KEY、MIRA_WEBHOOK_SECRET 和 OPENROUTER_API_KEY 等密钥",
+  "可选：创建 mira.yaml 配置文件，指定 llm.model 和 llm.indexing_model 等部署级默认值",
+  "使用 Docker 运行：docker run -p 8000:8000 --env-file .env -v \"$(pwd)/mira.yaml:/app/mira.yaml\" ghcr.io/miracodeai/mira:latest --config /app/mira.yaml",
+  "在代码仓库上安装 GitHub App（或配置 GitLab/Forgejo 访问令牌），之后每个 PR 将自动获得审查"
+ ],
+ "summary": "Mira 是一个自托管的 AI 代码审查工具，用你选择的 LLM 自动审查 PR/MR，并给出简洁反馈。它通过全仓库索引提供跨文件上下文，支持依赖漏洞扫描、影响范围图、自定义规则和学习循环，所有数据存在你自己的数据库中。适合希望掌控代码隐私和 LLM 成本、同时需要高质量自动审查的团队。",
+ "tagline": "自托管 AI 代码审查，支持索引、漏洞扫描与学习循环"
+}

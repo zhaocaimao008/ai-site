@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编码代理进行规格驱动开发的工程师和团队，尤其是希望在写代码前对设计进行多角度评审的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "提供 /egm-brainstorm 命令，用多视角金鱼群对早期概念进行压力测试",
+  "提供 /egm-draft 命令，逐节生成 Markdown 设计规格文档",
+  "提供 /egm-review 多阶段评审流水线，依次执行 Zoom Out、Comprehension、Critic、Readiness",
+  "提供 /egm-resolve 对评审发现进行交互式分类和自动修补",
+  "提供 /egm-drift-report 扫描已提交规格与代码之间的偏差",
+  "提供 /egm-bootstrap 递归生成代码库文档并更新哨兵块"
+ ],
+ "intro": "Elephant-Goldfish Model（EGM）是 Google 开源的一套规格驱动开发（Spec-Driven Development）插件，用于配合 AI 编码代理工作。它把开发流程拆成两个角色：拥有深度上下文的“大象”会话负责头脑风暴和撰写设计规格；零上下文的“金鱼”子代理则只读取草稿规格和源码，从多个对立视角对设计进行压力测试。\n\n项目提供 Brainstorm、Draft、Review、Resolve 等技能命令，覆盖从概念探索、规格草稿、多阶段评审到代码漂移检测的环节。安装方式适配 Antigravity、Claude Code、Codex 等代理环境，也支持通过自然语言让任意 AI 代理安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装插件：在 Claude Code 中运行 claude plugin marketplace add google/elephant-goldfish-model && claude plugin install egm@egm",
+  "运行 /egm-brainstorm 探索问题边界并用金鱼群测试早期概念",
+  "运行 /egm-draft 将概念简报转换为 docs/designs/<feature>.md 下的设计文档",
+  "运行 /egm-review docs/designs/<feature>.md 执行多阶段金鱼评审",
+  "通过 pull request 提交已验证的设计文档，并依据批准的规格实现代码"
+ ],
+ "summary": "EGM 是 Google 开源的规格驱动开发插件，解决 AI 编码代理在写代码前缺乏系统化设计评审的问题。它让深度上下文的“大象”会话起草设计规格，再让零上下文的“金鱼”子代理从多个对立视角压力测试规格，适合希望在编码前用 AI 辅助完成设计探索、文档撰写和评审的开发者。",
+ "tagline": "用大象与金鱼双角色协作，为 AI 编码代理提供规格驱动开发插件"
+}

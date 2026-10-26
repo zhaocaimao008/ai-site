@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要跨多台机器和多种 AI 代理框架统一管理任务的开发者，以及希望在 macOS 或 iOS 上随时跟踪代理运行的用户。",
+ "date": "2026-10-26",
+ "features": [
+  "统一接入多种 AI 提供商和订阅账户，支持 OAuth 登录与配额查看",
+  "在本地电脑、私有云服务器或云端运行代理，支持 Claude Code、Codex 等框架",
+  "实时跟踪和干预代理运行，支持侧边提问面板和持久化任务唤醒",
+  "项目组织任务、技能和同步的本地 Context 文件夹",
+  "iOS 客户端可浏览项目、查看任务记录并发送后续指令",
+  "通过 MCP 提供控制平面，供 Hermes 等协调器使用"
+ ],
+ "intro": "Orb 是一个客户端应用，用于集中管理 AI 提供商、远程机器和多种代理框架（harness）。它支持 macOS 和 iOS，后端为 sandboxed.sh（项目原名），负责项目、任务、事件历史和远程节点协调。\n\n用户可以在本地电脑、私有云服务器或云端代理上运行代理，并选择 Claude Code、Codex、Antigravity、OpenCode 或 Grok 等框架。Orb 还支持通过 OAuth 连接订阅账户，查看配额状态，并在对话中实时跟踪和干预代理运行。\n\n桌面端基于 Tauri 和 SolidJS，iOS 端使用 SwiftUI，后端用 Rust 编写，并包含经过形式化验证的 Lean 4 编排内核。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 sandboxed.sh 后端：按照 Docker 指南或原生 Linux 指南安装",
+  "构建并打开 Orb 桌面客户端或 iOS 应用，输入服务器 URL 并登录",
+  "连接执行环境：配置本地框架、注册远程机器或连接云端代理账户",
+  "创建项目并启动代理，选择执行模式并输入任务"
+ ],
+ "summary": "Orb 是一个客户端应用，把分散的 AI 提供商账户、本地或远程机器以及多种代理框架集中到一个界面里管理。它适合需要在不同设备间跟踪代理任务、统一调度 Claude Code 等编码代理的开发者。后端 sandboxed.sh 负责项目记录和远程执行，桌面端和 iOS 端共享同一套任务与对话数据。",
+ "tagline": "统一管理 AI 提供商、机器与代理框架的客户端"
+}

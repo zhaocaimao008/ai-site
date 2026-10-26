@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Rust 应用中集成 llama.cpp 进行本地大模型推理的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "提供 llama.cpp 的 Rust FFI 绑定，可在 Rust 项目中加载 GGML/GGUF 模型",
+  "支持文本生成，可通过 token_callback 逐 token 回调处理输出",
+  "已实现 cublas、openBLAS、OpenCL 和 Metal 的 GPU 加速支持",
+  "以 llama_cpp_rs crate 发布，可通过 Cargo.toml 引入",
+  "仓库包含带 Dockerfile 的示例"
+ ],
+ "intro": "rust-llama.cpp 为 llama.cpp 提供 Rust 绑定，让 Rust 开发者可以直接在项目中加载 GGML/GGUF 格式的模型文件并进行文本生成。绑定实现参考了 go-llama.cpp 项目，通过 FFI 调用 llama.cpp 的 C++ 接口。\n\n项目以 crate 形式发布在 crates.io，名称为 llama_cpp_rs。使用时需要先克隆包含子模块的仓库并构建，然后在 Cargo.toml 中添加依赖。README 中给出了加载模型和调用 predict 方法的基本示例，支持通过 token_callback 逐 token 处理输出。\n\n根据 TODO 列表，项目已支持 cublas、openBLAS、OpenCL 和 Metal GPU 加速，并已同步支持 GGUF 格式；测试用例和通过 HTTP/S3 获取模型的功能尚未完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并拉取子模块：git clone --recurse-submodules https://github.com/mdrokz/rust-llama.cpp",
+  "构建项目：cargo build",
+  "在 Cargo.toml 中添加依赖：llama_cpp_rs = \"0.3.0\"",
+  "参考 README 示例，使用 LLama::new 加载模型文件并调用 predict 生成文本"
+ ],
+ "summary": "rust-llama.cpp 是 llama.cpp 的 Rust 绑定库，让 Rust 开发者能在自己的项目中加载 GGML/GGUF 模型并执行文本生成。它通过 FFI 调用 llama.cpp 的 C++ 接口，支持逐 token 回调输出，并已实现 cublas、openBLAS、OpenCL 和 Metal 等 GPU 加速。适合需要在 Rust 应用里集成本地大模型推理的开发者。",
+ "tagline": "llama.cpp 的 Rust 语言绑定库"
+}

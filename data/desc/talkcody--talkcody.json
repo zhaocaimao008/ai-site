@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望掌控模型选择、成本与代码隐私的开发者，以及想用本地模型离线编程的用户。",
+ "date": "2026-10-26",
+ "features": [
+  "支持 OpenAI、Anthropic、Google 及本地模型，无厂商锁定",
+  "四级并行（项目、任务、代理、工具）同时执行多个任务",
+  "数据与代码 100% 本地存储，可配合 Ollama/LM Studio 离线使用",
+  "支持文本、语音、图片和文件的多模态输入",
+  "通过 MCP Server 扩展能力，并提供代理与技能市场",
+  "内置终端，基于 Rust + Tauri 实现原生性能"
+ ],
+ "intro": "TalkCody 是一个免费开源的 AI 编程代理（AI Coding Agent），采用 React 19 + TypeScript 前端与 Tauri 2 + Rust 后端构建，以桌面客户端形式运行。它强调本地优先：所有数据、对话和代码都存储在用户自己的机器上，配合 Ollama 或 LM Studio 等本地模型可完全离线使用。\n\n与仅依赖云端的工具不同，TalkCody 不绑定单一模型厂商，支持 OpenAI、Anthropic、Google 以及本地模型，并可复用已有的 ChatGPT Plus/Pro 或 GitHub Copilot 订阅。它提供项目、任务、代理、工具四个层级的并行执行能力，同时支持多模态输入、MCP Server 扩展、内置终端以及代理与技能市场。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从官网下载并安装对应平台的 TalkCody 客户端",
+  "配置 OpenAI、Anthropic、Google 等提供商的 API Key",
+  "选择偏好的 AI 模型",
+  "导入你的项目",
+  "开始借助 AI 辅助编码"
+ ],
+ "summary": "TalkCody 是一个免费开源的桌面端 AI 编程代理，解决云端 AI 工具绑定单一模型、上传代码带来的隐私与成本顾虑。它支持多家模型提供商和本地模型，数据全部留在本机，可离线使用，并通过多级并行执行提升任务效率。适合重视模型自由、费用控制和代码隐私的开发者。",
+ "tagline": "免费开源的本地 AI 编程助手"
+}

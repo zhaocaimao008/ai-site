@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想用现成 AI 搭建个人助手团队、又不想写代码的用户，也适合希望把 agent 文件集中管理的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "在浏览器中创建 agent，设置形象、性格、职业和任务规则",
+  "每个 agent 生成一份可阅读的纯文本 SKILL.md 文件",
+  "Agent home 集中管理团队，支持单文件备份",
+  "一键复制团队内容，粘贴到 Gemini、ChatGPT、Claude 等 AI 使用",
+  "支持保存到文件夹，配合 Claude Code、Codex 等 agentic AI",
+  "数据保存在本地，无需账号，无服务器和追踪"
+ ],
+ "intro": "Helpercraft 是一个单文件网页应用，用来创建和整理自己的 AI agent。每个 agent 是一份纯文本的 SKILL.md 文件，写明它的工作、说话方式、能帮什么以及安全规则，使用前可以直接阅读。\n\n应用把 agent 以人物或动物的形象可视化展示，可以设置性格、职业和任务，并把整支团队保存在一个文件夹里。你可以把团队交给 Gemini、ChatGPT、Claude 等已有的 AI 使用，AI 会先建议哪些 agent 适合当前任务，并在开始前征求你的同意。\n\n所有数据保存在浏览器本地，不需要账号，也没有服务器和追踪。支持英文、繁体中文和西班牙文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开 Helpercraft 网页版，或下载 helpercraft.html 并用 Chrome 或 Edge 打开",
+  "创建 agent，设置形象、性格和职业，然后点击 Craft",
+  "点击 Copy 复制 agent 内容",
+  "打开 Gemini、DeepSeek 等聊天机器人，粘贴内容并提出需求",
+  "在电脑上可把团队保存到文件夹，再用 Copy for my AI 粘贴到 Claude Code 或 Codex 并附加任务"
+ ],
+ "summary": "Helpercraft 解决的是 AI agent 以纯文本文件形式存在、难以创建和整理的问题。它提供一个单文件网页应用，让你用可视化方式制作带职业、性格和规则的 agent，并把整支团队放在一个文件夹里。你可以把团队交给 Gemini、ChatGPT、Claude 等已有 AI 使用，AI 会先建议合适的 agent 并征求同意。适合不想写代码、希望本地保存数据的用户。",
+ "tagline": "在浏览器里制作 AI agent 团队，交给现有 AI 使用"
+}

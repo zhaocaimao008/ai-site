@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究自回归视频生成、世界模型和扩散模型的开发者与研究人员，以及希望复现或微调 TI2V 模型的用户。",
+ "date": "2026-10-26",
+ "features": [
+  "提出 Future Chunk Prediction（FCP），通过辅助分支预测未来视频块，增强物理一致性",
+  "仅使用视频像素监督，无需额外标注",
+  "提供 1.3B 和 5B 两种规模的自回归 TI2V 模型权重（TF 基线与 FCP）",
+  "支持文本与视频到视频生成推理，可指定时长、种子和前缀长度",
+  "提供 uv 和 conda 两种环境安装方式，并附模型下载与推理脚本"
+ ],
+ "intro": "Looking Ahead 是腾讯 ARC Lab 与南京大学等机构提出的自回归视频生成方法。针对 teacher-forcing 训练中时间冗余导致模型依赖局部捷径、难以学习真实动态的问题，作者引入 Future Chunk Prediction（FCP），用辅助分支从当前视频块的中间特征预测时间上更远的视频块，仅用视频像素监督训练。\n\n项目提供训练与推理代码，以及 1.3B 和 5B 两个规模的自回归文本与图像到视频（TI2V）模型权重，包含 TF 基线与 FCP 版本。代码基于 Python 和 PyTorch，支持 uv 或 conda 安装环境，并提供单卡推理示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 FFmpeg（Ubuntu/Debian）：sudo apt-get update && sudo apt-get install -y ffmpeg",
+  "使用 uv 安装环境：UV_CACHE_DIR=.uv-cache uv sync --python 3.12，然后 source .venv/bin/activate",
+  "下载上游模型权重：hf download Wan-AI/Wan2.2-TI2V-5B --local-dir weights/Wan-AI/Wan2.2-TI2V-5B",
+  "下载项目权重：hf download TencentARC/Looking-Ahead --local-dir weights/Looking-Ahead",
+  "运行推理示例：python inference.py --config fcp_wan22_ti2v_5b --checkpoint_path weights/Looking-Ahead/fcp_wan22_ti2v_5b/model_ema.pt --use_ema --video_path examples/inference/v2v/milk_pouring.mp4 --prompt_file examples/inference/v2v/milk_pouring.txt --duration 5s --seed 42 --sink 3 --output_path outputs/v2v/fcp_milk_pouring"
+ ],
+ "summary": "Looking Ahead 是一个自回归视频生成项目，针对训练中模型容易依赖局部时间捷径、忽视真实动态的问题，提出 Future Chunk Prediction 方法，让模型从当前视频块特征预测更远的未来块，仅用视频像素监督来提升生成视频的物理一致性。项目提供 1.3B 和 5B 规模的文本与图像到视频模型权重及推理代码，适合研究视频生成与世界模型的开发者复现和实验。",
+ "tagline": "通过预测未来视频块提升自回归视频生成物理一致性"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速消化论文、报告或长网页的研究者、学生和开发者，也适合希望整理 AI 回复内容的 Claude Code 或 Pi 用户。",
+ "date": "2026-10-26",
+ "features": [
+  "五级细节折叠：Full、Brief、Key、Takeaway、Topic，逐层压缩文本",
+  "支持网页链接、arXiv、PubMed Central、Wikipedia 及 PDF、Word、EPUB 等文件",
+  "缩放时词语平滑移动，可停在中间层级或单独展开某段",
+  "AI 问答返回结构化答案，并标注引用段落，可开启联网搜索",
+  "与 Zotero 库集成，直接打开条目并保留元数据",
+  "通过 TextFold Bridge 插件与 Obsidian 笔记双向链接"
+ ],
+ "intro": "TextFold 是一个本地运行的文本阅读工具，能把论文、网页、文件或 AI 回复折叠成五个细节层级：从完整原文、关键句摘录，到 AI 生成的要点、一句话总结和主题卡片。阅读时可以在层级之间平滑缩放，保留的词语会滑动到新位置，其余淡出。\n\n它支持粘贴链接（arXiv、PubMed Central、Wikipedia 等）或拖入 PDF、Word、EPUB、图片等多种文件，还能与 Zotero 库和 Obsidian 笔记联动。AI 问答会先给简短答案，再列出引用原文段落的证据，所有处理都在本机完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载 macOS 或 Windows 应用，或安装 Python 包（需 Python 3.9+）",
+  "运行 `python3 -m textfold serve` 启动本地服务",
+  "在界面中粘贴链接或拖入文件开始阅读",
+  "使用 `python3 -m textfold get` 让脚本或 agent 按层级获取文档内容"
+ ],
+ "summary": "TextFold 解决长文本阅读时信息过载的问题：它把论文、网页、文件或 AI 回复折叠成五个细节层级，让读者从整体概览逐步缩放到原文。适合需要快速浏览大量材料、又不想丢失关键细节的研究者和开发者，也方便在 Claude Code 等工具中整理 AI 输出。",
+ "tagline": "把长文折叠成五级细节，按需缩放阅读"
+}

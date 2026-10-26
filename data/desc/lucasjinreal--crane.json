@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合熟悉 Rust 的开发者、需要本地部署多模态模型的工程师，以及希望研究推理引擎实现的技术人员。",
+ "date": "2026-10-26",
+ "features": [
+  "支持多种 LLM 和 VLM 模型，如 Qwen 系列、Gemma 4、MiniCPM-V 等",
+  "集成 OCR、TTS、ASR、VAD 等语音与视觉能力",
+  "提供 OpenAI 兼容 API 和 SGLang 接口",
+  "支持 GGUF 格式模型加载与量化推理",
+  "可在 CPU、CUDA、Metal 上运行，适配 Apple Silicon"
+ ],
+ "intro": "Crane 是一个用 Rust 编写的推理引擎，底层依赖 Candle 框架，目标是在 CPU 和 GPU 上高效运行多种 AI 模型，同时保持代码简洁、便于二次开发。它支持 LLM、VLM、OCR、TTS、ASR、VAD 等任务，并兼容 GGUF 格式和 OpenAI 风格 API。\n\n项目强调开箱即用，提供命令行聊天工具和兼容 OpenAI/SGLang 接口的服务端，方便直接调用模型能力。相比 llama.cpp，Crane 的代码更精简，适合希望用 Rust 构建 AI 应用或研究推理优化的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/lucasjinreal/Crane.git",
+  "进入项目目录并构建：cargo build --release",
+  "使用 chat_cli 运行模型：cargo run --release --bin chat_cli -- --model <模型路径>",
+  "启动 OpenAI 兼容服务：cargo run --release --bin crane-serve -- --model <模型路径>"
+ ],
+ "summary": "Crane 是一个基于 Rust 和 Candle 的推理引擎，旨在简化多模态 AI 模型的本地部署与调用。它支持 LLM、VLM、OCR、TTS、ASR 等任务，兼容 GGUF 格式和 OpenAI 接口，可在 CPU、CUDA、Metal 上运行。适合希望用 Rust 构建 AI 应用或研究推理优化的开发者。",
+ "tagline": "基于 Rust 和 Candle 的多模态 AI 推理引擎"
+}

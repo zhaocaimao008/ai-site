@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合经常使用麦当劳积分、希望避免积分过期或兑换踩坑的普通用户，以及想了解 MCP Skill 开发的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "积分账本：查询可用、累计、已用、过期等字段，并做账目自洽校验",
+  "商城去伪：逐类目查询并按 spuId 合并，剔除假上架和现金商品",
+  "性价比榜：从商品名解析券面价，计算「分/元」并升序排列",
+  "隐藏现金成本：补调商品详情，标注到店另付金额和是否纯积分",
+  "抽奖参谋：展示奖池结构和期望值解读，资格以 drawDecision 为准",
+  "安全下单：兑换前输出摘要，必须用户明确确认才执行"
+ ],
+ "intro": "麦享掌柜是一个 WorkBuddy Skill，通过 MCP 协议连接麦当劳官方接口，帮助用户管理积分资产。它解决的核心问题是积分商城数据失真：默认查询会漏报商品，大量商品显示上架但兑换窗口已过，且所有积分兑换都需要到店另付现金。\n\n项目用 Python 脚本做确定性计算（过滤、去重、解析、排序），Agent 层负责解读和建议。脚本不输出主观判断，只提供可复现的事实，如单位积分成本、隐藏现金成本、剩余天数等。\n\n功能覆盖积分账本、商城去伪、性价比排序、隐藏成本标注、兑换下单和抽奖参谋，所有不可逆操作都要求用户二次确认。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并运行离线演示：git clone https://github.com/yurenpai/mc-points-steward.git && cd mc-points-steward && python skill/scripts/demo.py",
+  "将 skill/ 目录复制到 WorkBuddy 的 skills 目录：cp -r skill/ ~/.workbuddy/skills/mc-points-steward/",
+  "在 WorkBuddy 中配置 mcd-mcp 连接器，使用 mcp-config.example.json 并替换 ${MCD_MCP_TOKEN} 为你的 Token",
+  "直接向 WorkBuddy 提问，如「我有多少积分？」「积分能换什么？哪个最划算？」"
+ ],
+ "summary": "麦享掌柜是一个帮你打理麦当劳积分的 WorkBuddy Skill。它通过 MCP 接口拉取积分商城数据，解决默认查询漏报、假上架商品多、隐藏现金成本不透明等问题。脚本负责确定性计算，Agent 负责解读建议，适合想避免积分过期或兑换踩坑的用户。",
+ "tagline": "麦当劳积分资产管家，帮你查账、去伪、比价、参谋抽奖"
+}

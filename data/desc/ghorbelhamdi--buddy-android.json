@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想在手机上用 AI agent 自动完成跨应用操作、又不想折腾电脑或 root 的 Android 用户和开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "悬浮气泡聊天，支持文字与语音输入，回复可朗读",
+  "AI agent 读取屏幕、点击、输入、滚动，操作任意应用",
+  "发送、购买、删除等敏感操作前需用户批准",
+  "支持通知触发自动回复，可设置确认或倒计时",
+  "提供本地 MCP 服务器，把手机工具开放给其他 agent 会话",
+  "GitHub 版本支持后台浏览器和 Linux 工具构建 APK"
+ ],
+ "intro": "Buddy 是一个 Android 应用，以悬浮气泡的形式提供聊天入口，让 Claude Code、Codex、OpenCode、Antigravity 或 Grok 这类 AI agent 直接操作你的手机。你输入或说出需求，比如回复消息、把商品加入购物车，它会读取屏幕内容、点击和输入来完成操作。\n\n它通过 Android 的无障碍服务获得操作能力，agent 运行在应用内置的 Alpine Linux 环境中，并通过本地 MCP 服务器调用读屏、点击、输入、滚动、打开应用等手机工具。整个过程不需要电脑、adb、root 或 API key，使用的是你自己的 Claude、ChatGPT、Google 或 X 账号套餐，OpenCode 的免费模型则无需账号。\n\n在发送、发布、购买或删除等操作前，Buddy 会弹出确认卡片让你批准、拒绝或修改；它也不会代你输入密码、验证码或支付信息。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Buddy：加入 Google Play 测试组并安装，或下载 buddy.apk 直接打开安装",
+  "首次启动后按设置向导选择 agent（Claude Code、Codex、OpenCode、Antigravity 或 Grok）",
+  "开启无障碍服务，安装并登录对应账号",
+  "在气泡中输入第一个任务，例如让它回复一条消息"
+ ],
+ "summary": "Buddy 把 AI agent 装进 Android 手机的悬浮气泡里，让 Claude Code、Codex、OpenCode、Antigravity 或 Grok 读取屏幕并点击、输入，替你完成发消息、购物、改设置等跨应用操作。它基于无障碍服务运行，无需电脑、adb 或 root，使用你自己的账号套餐，并在发送、购买、删除前请求确认。适合想在手机上体验 AI 自动操作的用户。",
+ "tagline": "悬浮气泡里的 Android AI 助手，替你操作手机"
+}

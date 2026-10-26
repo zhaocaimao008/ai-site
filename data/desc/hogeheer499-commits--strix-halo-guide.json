@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在 AMD Strix Halo 迷你主机或笔记本上尝试本地大模型的开发者和技术爱好者，尤其是使用 128GB 内存、Ubuntu 24.04 的用户。",
+ "date": "2026-10-26",
+ "features": [
+  "提供从 BIOS 内存设置到 Ollama 运行的逐步配置路线，并包含 GPU 是否真正生效的检查方法",
+  "基于多台真实设备的实测数据，给出不同用途（聊天、编码、图像、长上下文）的模型推荐与速度参考",
+  "记录已知失败场景和故障排查步骤，帮助避免常见配置陷阱",
+  "提供针对 128GB 级系统的自动安装脚本，可设置 Vulkan 相关环境变量并固定 Ollama 版本",
+  "每个关键性能数字都链接到原始证据或附带明确说明，便于验证和复现"
+ ],
+ "intro": "这个项目面向在 AMD Strix Halo（Ryzen AI MAX+ 395 / Radeon 8060S）平台上运行本地大模型的用户，提供从 BIOS 设置、Ubuntu 24.04 安装到 Ollama 配置的完整步骤，并附有在真实硬件上测得的参数与模型对比。内容基于 10 台 Strix Halo 系统及 3 个独立来源的实测结果，每个关键数字都链接到原始证据或标注了限制条件。\n\n项目还包含模型选型建议、故障排查、购买参考和可复现性说明，并提供了一个针对 128GB 内存级别系统的自动安装脚本。需要注意的是，脚本目前仅适用于 Ubuntu 24.04 和 128GB 级配置，全新安装路径尚未在硬件上完成验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 BIOS 中设置 UMA 为 512MB（若可用）或厂商最小值（如 2GB），保持 IOMMU 启用或默认",
+  "安装 Ubuntu 24.04 LTS",
+  "克隆仓库：git clone https://github.com/hogeheer499-commits/strix-halo-guide",
+  "进入目录并运行脚本：cd strix-halo-guide && bash setup.sh",
+  "用 ollama run qwen3.6:35b-a3b 与模型对话，并按文档执行已知答案、GPU 和回环监听检查"
+ ],
+ "summary": "这个项目为 AMD Strix Halo 平台（Ryzen AI MAX+ 395）提供本地大模型的配置指南和实测基准。它解决的是在这类统一内存设备上让模型真正跑在 GPU 上、选对模型并避免常见配置错误的问题，适合使用 128GB 内存、Ubuntu 24.04 的开发者参考。内容基于多台真实设备和独立来源的测量，并附有自动安装脚本和故障排查步骤。",
+ "tagline": "AMD Strix Halo 本地大模型配置与实测指南"
+}

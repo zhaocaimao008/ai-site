@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合习惯在终端中使用 AI 编程助手、又希望随时用手机查看或接管会话的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "支持 Claude Code、Aider、GitHub Copilot、Gemini CLI、OpenCode 等 23 种以上终端 AI 工具",
+  "端到端加密（AES-256-GCM + DH-2048），服务器零知识",
+  "多会话并行运行，每个会话独立 WebSocket 连接",
+  "自动重连与状态同步，支持会话恢复",
+  "自动检测已安装的 AI 工具，无需手动配置",
+  "提供预编译二进制，npm 安装即用，无需编译"
+ ],
+ "intro": "Termly CLI 是一个命令行工具，让你从手机或平板远程访问运行在电脑上的终端 AI 编程助手。它支持 Claude Code、Aider、GitHub Copilot、Gemini CLI、OpenCode 等 23 种以上交互式终端 AI 工具，通过端到端加密的 WebSocket 连接把终端会话同步到移动端。\n\n项目采用 AES-256-GCM 加密和 DH-2048 密钥交换，服务器不接触明文数据。支持多会话并行、自动重连与状态同步，并能自动检测已安装的 AI 工具。安装通过 npm 完成，自带预编译二进制，无需本地编译。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：npm install -g @termly-dev/cli",
+  "进入项目目录：cd /path/to/your/project",
+  "启动会话：termly start",
+  "查看会话状态：termly status",
+  "停止指定会话：termly stop <session-id>"
+ ],
+ "summary": "Termly CLI 解决的是离开电脑后无法继续使用终端 AI 编程助手的问题。它在本地启动 Claude Code、Aider、Gemini CLI 等工具，并通过端到端加密的连接把会话同步到手机或平板，服务器看不到明文内容。适合需要远程查看进度、临时接管编码任务，或同时管理多个 AI 会话的开发者。",
+ "tagline": "在手机上远程操控终端 AI 编程助手"
+}

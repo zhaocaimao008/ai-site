@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合体重管理期人群、健身增肌人群、需要控钠的代谢关注者，以及想学习MCP实际应用的开发者。",
+ "date": "2026-10-26",
+ "features": [
+  "基于SP矩阵理论，将餐品按营养密度和钠负担分为主力区、解馋区、填充区、双刃区四个象限",
+  "根据用户身体档案（身高、体重、年龄、活动水平、目标）计算BMR、TDEE和单餐营养目标",
+  "使用结构角色模型和多目标加权打分，推荐三套符合约束的套餐方案，并给出营养数据和取舍提示",
+  "集成麦当劳官方MCP Server，支持门店点餐、领券和下单流程",
+  "提供健康记录功能，包括每日摄入记录、体重趋势和热量缺口可视化",
+  "可作为独立Web应用运行，也可作为WorkBuddy Skill在对话中调用"
+ ],
+ "intro": "这是一个面向身材管控期人群的麦当劳选餐工具。它基于SP矩阵理论，将餐品按营养密度和钠负担划分为四个象限，帮助用户根据自身身体档案和每日消耗目标，快速筛选出合适的餐品组合。项目打通了麦当劳官方MCP Server，提供从营养计算、套餐推荐到门店点餐、领券下单的完整闭环。\n\n工具包含35个官方MCP工具和14个REST接口，前端零第三方依赖，可独立运行或作为WorkBuddy Skill调用。核心功能包括：根据Mifflin-St Jeor公式计算BMR和TDEE，生成个性化营养目标；通过Canvas绘制SP矩阵散点图，直观展示餐品分布；使用多目标约束求解器推荐三套套餐方案，并给出每套方案的营养数据和取舍提示。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/ChinaOpenClaw/mcd-nutrition-expert.git",
+  "cd mcd-nutrition-expert/skills/mcd-nutrition-expert",
+  "cp .env.example .env  # 填入你的 MCP Token",
+  "pip install -r requirements.txt",
+  "python scripts/server.py  # 访问 http://127.0.0.1:8899"
+ ],
+ "summary": "这个项目帮助在身材管控期想吃麦当劳的人解决“不知道吃多少、点哪个、怎么搭配”的问题。它基于SP矩阵理论，将餐品按营养密度和钠负担分类，结合用户身体档案计算每日目标，并推荐三套套餐方案，同时打通麦当劳官方MCP Server实现点餐闭环。适合减脂、增肌或需要控钠的用户，也适合想学习MCP集成的开发者参考。",
+ "tagline": "基于SP矩阵的麦当劳营养选餐与点餐工具"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建知识图谱问答系统的 Rust 开发者，以及关注隐私、希望完全在浏览器端运行 RAG 应用的技术团队。",
+ "date": "2026-10-26",
+ "features": [
+  "从文档构建知识图谱，支持实体抽取与关系识别",
+  "自然语言查询，基于图谱进行答案合成",
+  "三种部署架构：服务端、纯 WASM 客户端、混合模式",
+  "集成 LightRAG、Leiden、Cross-Encoder、HippoRAG 等检索增强技术",
+  "支持 Ollama 本地 LLM 嵌入与 Qdrant 向量数据库",
+  "WASM 端支持 WebGPU 加速与浏览器内完整流水线"
+ ],
+ "intro": "GraphRAG-rs 是 GraphRAG（基于图的检索增强生成）的 Rust 实现，可从文档中抽取实体与关系构建知识图谱，并支持自然语言问答。项目提供三种部署架构：纯服务端、纯 WASM 客户端（完全在浏览器运行）以及混合模式，其中服务端和 WASM 模式已可用。\n\n它集成了多项研究技术来提升检索质量，包括 LightRAG 双层检索、Leiden 社区检测、Cross-Encoder 重排序、HippoRAG 个性化 PageRank 和语义分块，并支持符号锚定、动态边权重、因果链分析等高级特性。嵌入后端可选用 Ollama 或哈希回退，向量存储可选 Qdrant，WASM 端则使用 ONNX Runtime Web 和 WebLLM。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：cargo install --path graphrag-cli",
+  "构建索引：graphrag index ./mydoc.txt",
+  "提问：graphrag ask \"What is the main topic?\"",
+  "可选：添加 --ollama 参数使用本地 LLM 进行实体抽取（需运行 ollama serve）"
+ ],
+ "summary": "GraphRAG-rs 是一个用 Rust 编写的高性能 GraphRAG 实现，主要解决从文档中自动构建知识图谱并进行自然语言问答的问题。它适合需要本地化、隐私优先或浏览器端运行的检索增强生成场景，提供纯服务端、纯 WASM 和混合三种部署方式，并集成了多种提升检索质量的研究技术。",
+ "tagline": "用 Rust 实现的高性能 GraphRAG，支持从文档构建知识图谱并自然语言查询。"
+}

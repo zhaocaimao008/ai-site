@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合正在使用或准备使用 AI 编程助手（如 Claude Code、Cursor、Codex CLI、GitHub Copilot）的开发者，也适合想建立团队 AI 编码规范的工程团队。",
+ "date": "2026-10-26",
+ "features": [
+  "按需求规划、编码、调试、测试、审查等开发阶段组织技巧",
+  "每条技巧附 Claude Code、Cursor、Codex CLI 等工具的具体实现",
+  "介绍 CLAUDE.md、AGENTS.md 等记忆文件与上下文配置方法",
+  "提供 Plan Mode 等先规划后编码的工作流建议",
+  "提供英文、西班牙文、德文、法文、日文、葡萄牙文版本"
+ ],
+ "intro": "这是一个社区维护的技巧合集，面向使用 AI 编程助手写代码的开发者，按开发流程阶段组织内容：需求与规划、UI 与原型、编码、调试、测试与 QA、代码审查与重构，另有跨阶段技巧。\n\n每条技巧都给出具体工具的实现方式，覆盖 Claude Code、Cursor、Codex CLI、GitHub Copilot 等，例如如何用 /init 生成 CLAUDE.md、用 AGENTS.md 提供项目上下文、先让助手出计划再动手。内容来自 Simon Willison、Armin Ronacher、Anthropic 团队等实践者的经验，并提供多语言版本和在线站点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 项目根目录运行 /init 生成初始 CLAUDE.md",
+  "在 Cursor 或 Codex CLI 项目根目录创建 AGENTS.md，写入常用命令、技术栈和代码规范",
+  "在 Claude Code 中按 Shift+Tab 进入 Plan Mode，先让助手列出步骤和风险再实现",
+  "按 README 的目录从需求规划阶段开始，逐条尝试适合自己工具的技巧"
+ ],
+ "summary": "这个项目把使用 AI 编程助手写代码的经验按开发阶段整理成可操作的技巧，从需求规划一直覆盖到代码审查与重构。每条技巧都说明在 Claude Code、Cursor、Codex CLI 等工具中怎么落地，比如用 CLAUDE.md 或 AGENTS.md 提供项目上下文、先让助手出计划再写代码。适合想系统提升 AI 辅助编码效率的开发者参考。",
+ "tagline": "按开发阶段整理的 AI 编程助手实用技巧合集"
+}
