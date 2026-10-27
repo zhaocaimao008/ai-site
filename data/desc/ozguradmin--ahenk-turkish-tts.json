@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要土耳其语语音合成的开发者、研究人员，以及想在本地或浏览器中快速体验土耳其语 TTS 的用户。",
+ "date": "2026-10-27",
+ "features": [
+  "Ahenk 大模型支持疑问语调、六种情绪和笑声，需 GPU",
+  "Ahenk Cep 小模型仅 8.6M 参数，可在 CPU 上实时合成",
+  "trnorm 纯 Python 文本规范化，处理数字、日期、货币等",
+  "提供 TR-Zor 和 TR-Soru 测试集及评估工具",
+  "浏览器演示和 Ahenk Okur 文档朗读工具"
+ ],
+ "intro": "Ahenk 是一套面向土耳其语的开源语音合成工具，包含两个主要模型：Ahenk 是基于 VoxCPM2 的 LoRA 大模型（2B+36M），支持疑问语调、六种情绪和笑声，需 GPU 运行；Ahenk Cep 是 8.6M 参数的小模型，可在 CPU 上实时合成。项目还提供 trnorm 文本规范化工具，将数字、日期、货币等书面表达转为口语形式，以及 TR-Zor 和 TR-Soru 测试集用于评估。\n\n所有模型使用同一设计音色 f022，并非真人录音。项目附带浏览器演示和 Ahenk Okur 文档朗读工具，方便直接体验。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install torch ema-lightning==1.1.2 \"git+https://github.com/ozguradmin/ahenk-turkish-tts\"",
+  "下载模型：使用 huggingface_hub 的 snapshot_download 获取 ozgurguler/ahenk-cep-tr",
+  "运行示例代码合成语音并保存为 WAV 文件",
+  "仅需文本规范化时，运行 trnorm \"Saat 09:30'da 3. kata gelin, ücret 1.250,50 TL.\""
+ ],
+ "summary": "Ahenk 提供开源的土耳其语语音合成方案，包含适合 GPU 的大模型 Ahenk 和可在 CPU 上运行的轻量模型 Ahenk Cep，并附带文本规范化工具 trnorm 及测试集。适合需要土耳其语 TTS 的开发者、研究者，或想在浏览器中直接体验的用户。",
+ "tagline": "开源土耳其语语音合成工具集，含大模型与端侧小模型"
+}

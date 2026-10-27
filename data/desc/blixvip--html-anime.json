@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 动画、创意编程感兴趣的开发者，以及想用编码代理生成动画的创作者。",
+ "date": "2026-10-27",
+ "features": [
+  "根据场景提示词生成分镜表，包含镜头时长、色彩脚本和对话",
+  "支持 Claude Code、Codex、Cursor、Grok 等编码代理读取规则并绘制动画",
+  "使用 HTML 和 CSS 绘制动画帧，通过 HyperFrames 进行计时和渲染",
+  "提供 Node 脚本在本地生成分镜表，无需依赖",
+  "包含参考短片和技能文档，展示镜头、上色、计时、相机和渲染规则"
+ ],
+ "intro": "html-anime 是一个将场景提示词转化为分镜表（shot sheet），再由编码代理（如 Claude、Codex、Cursor、Grok）用 HTML 和 CSS 绘制动画帧的项目。它不调用视频模型，而是通过 HyperFrames 对 HTML 画面进行计时和渲染，最终输出动画视频。\n\n项目包含一个网站，可在浏览器中根据 logline、时长、画幅、色彩脚本和对话生成分镜表；也提供 Node 脚本 harness/compile.js 在本地生成同样的分镜表。分镜表规定了镜头时长总和、一个 sakuga 镜头、作画张数等规则，代理需遵守这些规则来绘制。\n\n仓库内还包含参考短片《Kokuyō》及其剧照、技能文档（SKILL.md）和测试脚本，适合想尝试用代码生成动画的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/blixvip/html-anime.git",
+  "cd html-anime",
+  "在浏览器中打开网站生成分镜表，或将分镜表粘贴到编码代理作为第一条消息",
+  "python -m http.server 启动本地服务后访问网站",
+  "或使用 Node 脚本：import { compileBrief } from \"./harness/compile.js\"; 调用 compileBrief 生成分镜表"
+ ],
+ "summary": "html-anime 让编码代理用 HTML 和 CSS 绘制动画，而不是调用视频模型。你只需写一个场景提示词，网站或 Node 脚本会生成分镜表，规定镜头时长、作画张数和色彩脚本，再把分镜表交给 Claude、Codex 等代理，由它们按规则画出动画帧，最后通过 HyperFrames 渲染成视频。适合想用代码生成动画的开发者尝试。",
+ "tagline": "用代码画动画：提示词生成分镜表，AI 代理绘制 HTML 动画"
+}

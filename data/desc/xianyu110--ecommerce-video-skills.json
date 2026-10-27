@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合电商运营、短视频创作者和开发者，尤其是希望在本地用 AI Agent 快速生成带货视频、不想依赖云端服务或剪辑软件的用户。",
+ "date": "2026-10-27",
+ "features": [
+  "爆款拆解复刻：输入链接或转写，拆解结构并生成可渲染的 storyboard.json",
+  "3秒钩子脚本：提供多种钩子类型，一次生成多版台词、画面和花字方案",
+  "卖点分镜表：按 15/30/60 秒结构公式输出分镜，一镜一信息",
+  "本地自动成片：storyboard.json 经 edge-tts 配音、ffmpeg 转场字幕 BGM 合成 MP4",
+  "多平台规格导出：适配抖音、TikTok Shop、视频号等，自动避开安全区",
+  "多语言配音与封面 A/B：支持英文等语言渲染，并可生成多版封面标题"
+ ],
+ "intro": "这是一个面向电商短视频制作的 Agent Skills 集合，包含 13 个可独立安装的技能，覆盖从脚本创作到成片导出的完整流程。它把写钩子、分镜、图生视频提示词、配音、字幕、剪辑、导出和封面 A/B 等环节拆解成独立模块，方便在 Claude Code、Codex 或 Cursor 中按需调用。\n\n项目强调本地渲染：使用 Python 和 ffmpeg 完成视频合成，edge-tts 提供免费配音，无需任何 API Key 或云端视频服务。图生视频模型仅作为可选环节，每个镜头都有本地 Ken Burns 兜底。同时内置平台规格与安全区适配，支持抖音、TikTok Shop、视频号、小红书、淘宝主图视频和 Amazon 等渠道导出，并具备多语言配音和广告法合规检查能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx skills add xianyu110/ecommerce-video-skills",
+  "git clone https://github.com/xianyu110/ecommerce-video-skills.git && cd ecommerce-video-skills",
+  "mkdir -p ~/.claude/skills && cp -r skills/* ~/.claude/skills/",
+  "pip install -r requirements.txt",
+  "python scripts/assemble.py examples/aura-bottle/storyboard.json -o out/aura.mp4"
+ ],
+ "summary": "这个项目提供 13 个可独立安装的 Agent 技能，帮助电商卖家把商品图变成带配音、字幕和 BGM 的 9:16 短视频。它覆盖钩子脚本、分镜、图生视频提示词、配音、字幕、剪辑和平台导出等环节，最终用本地 Python 和 ffmpeg 渲染成片，无需 API Key。适合想在 Claude Code、Codex 或 Cursor 中快速制作抖音、TikTok Shop 等平台带货视频的运营和开发者。",
+ "tagline": "13个电商短视频Agent技能，一张商品图本地生成带货视频"
+}

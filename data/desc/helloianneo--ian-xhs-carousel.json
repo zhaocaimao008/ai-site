@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合写文章、做案例拆解并想发布小红书图文的内容创作者，尤其是 AI、产品、设计、效率工具领域、素材中常有截图和步骤的人。",
+ "date": "2026-10-27",
+ "features": [
+  "将文章、案例或笔记排版成 3:4 小红书轮播图，输出 1080×1440 PNG",
+  "提供 20 个母版，覆盖封面、步骤、清单、对比、截图、数据、代码等页面类型",
+  "支持浅色和深色两套主题，版式一致",
+  "先生成分镜表供确认，再排版渲染，减少返工",
+  "输出每页 PNG、总览图和可编辑的 HTML 源文件",
+  "母版不合适时，用同一套样式自动拼出新排法"
+ ],
+ "intro": "Ian XHS Carousel 是一个 Claude Code Skill，用于把文章、案例或笔记排版成一组 3:4 的小红书轮播图，输出尺寸为 1080×1440。它提供 20 个母版，覆盖封面、步骤、对比、展示、数字、文字和结尾等常见页面类型，并支持浅色与深色两套主题。\n\n使用流程是先把内容交给它，生成一张分镜表供你确认，确认后再进行排版和渲染。最终产出包括每页一张 PNG、一张总览图和可编辑的 HTML 源文件。如果 20 个母版都不合适，它会用同一套样式拼出新排法。\n\n项目适合写文章、做案例拆解并想顺手发布小红书图文的人，尤其是内容中常包含截图、步骤、对比、数据或代码的 AI、产品、设计类创作者。它偏向简洁的产品界面风，不适合手绘、插画或大色块海报风格。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并复制 Skill 到 Claude Code：git clone https://github.com/helloianneo/ian-xhs-carousel.git && mkdir -p ~/.claude/skills && cp -R ./ian-xhs-carousel/ian-xhs-carousel ~/.claude/skills/",
+  "安装渲染依赖：pip install playwright pillow && playwright install chromium",
+  "在 Claude Code 中输入：/ian-xhs-carousel 把下面这篇文章做成一组小红书图文。",
+  "粘贴文章内容，等待生成分镜表并确认",
+  "确认后等待排版渲染，获取每页 PNG 和总览图"
+ ],
+ "summary": "这个项目是一个 Claude Code Skill，用来把文章、案例或笔记排版成一组 3:4 的小红书轮播图，输出 1080×1440 的 PNG。它提供 20 个母版和浅色、深色两套主题，适合内容中常含截图、步骤、对比或代码的创作者。使用时会先生成分镜表供确认，再排版渲染，最终得到每页图、总览图和可编辑的 HTML 源文件。",
+ "tagline": "把文章排成 3:4 小红书图文的 Claude Code Skill"
+}

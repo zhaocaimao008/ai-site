@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 助手查询自己 Canvas 课程信息的学生，以及对 MCP 服务器实现感兴趣的开发者。",
+ "date": "2026-10-27",
+ "features": [
+  "所有工具均为只读，仅发送 GET 请求，无法修改 Canvas 数据",
+  "提供 26 个工具，覆盖课程、作业、成绩、文件、公告、讨论等场景",
+  "输出精简，将 Canvas HTML 转为纯文本，只保留模型需要的字段",
+  "通过 Streamable HTTP 远程运行，支持网页和移动客户端",
+  "无状态设计，每个请求使用新的服务器实例，不缓存或存储数据",
+  "仅三个运行时依赖，无需构建步骤或数据库"
+ ],
+ "intro": "canvas-mcp 是一个只读的 Model Context Protocol 服务器，用于连接 Canvas LMS。部署后，你可以把它作为自定义连接器添加到 Claude 或 ChatGPT 中，然后用自然语言询问课程相关问题，比如本周截止的作业、成绩计算、公告摘要等。\n\n服务器提供 26 个工具，全部只发送 GET 请求，不会提交、发布、删除或标记任何内容。它通过 Streamable HTTP 远程运行，支持网页和移动客户端，并且是无状态的，不缓存或存储数据。\n\n每个部署实例服务于一个用户，因为服务器以拥有 Canvas 访问令牌的用户身份操作。适合学生快速查询自己的课程信息，也适合开发者参考其 MCP 实现。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Canvas 中创建个人访问令牌：Account → Settings → Approved Integrations → + New Access Token",
+  "生成连接器密钥：node -e \"console.log(require('crypto').randomBytes(24).toString('hex'))\"",
+  "部署服务器（例如使用 Railway）：npm i -g @railway/cli && railway login && railway init && railway up",
+  "在部署平台设置环境变量 CANVAS_BASE_URL、CANVAS_API_TOKEN 和 MCP_SECRET，并生成域名",
+  "在 Claude 或 ChatGPT 中添加自定义连接器，粘贴连接器 URL：https://<your-domain>/<MCP_SECRET>/mcp"
+ ],
+ "summary": "canvas-mcp 是一个只读的 MCP 服务器，把 Canvas LMS 的课程数据接入 Claude、ChatGPT 等 AI 助手。部署后，学生可以用自然语言查询作业截止时间、成绩构成、公告和反馈等信息。所有工具仅发送 GET 请求，适合需要安全查询个人课程数据的场景。",
+ "tagline": "只读的 Canvas LMS MCP 服务器，让 AI 助手查询课程信息"
+}

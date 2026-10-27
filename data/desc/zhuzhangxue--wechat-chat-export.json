@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要把微信聊天记录交给大模型处理、自己留存或检索的 Windows 微信用户，以及希望基于导出 JSON 做二次开发的开发者。",
+ "date": "2026-10-27",
+ "features": [
+  "导出私聊和群聊为 TXT、Markdown、JSON 三种格式",
+  "尽量导出本机缓存的图片、文件、语音和视频",
+  "支持微信 SILK 语音转 WAV，并可选用 SenseVoice 本地语音转文字",
+  "v1.4.0 起支持一次导出全部可可靠识别的聊天，并生成总索引",
+  "提供聊天预览，可直接查看文字和图片，打开文件、语音和视频",
+  "导出期间使用一次性临时目录，结束后尝试清理敏感缓存"
+ ],
+ "intro": "这是一个面向 Windows 微信 4.1.12+ 的本地聊天记录导出工具。它可以把私聊和群聊导出为 TXT、Markdown 和 JSON 三种格式，其中 TXT 适合直接交给 GPT、Claude、Gemini 等大模型读取，Markdown 方便自己阅读，JSON 保留更多结构信息。\n\n工具会尽量导出本机仍有缓存的图片、文件、语音和视频，并支持把微信 SILK 语音转成 WAV。勾选本地语音转文字后，会使用 SenseVoice 在本机完成识别，不上传语音。v1.4.0 起支持一次导出本机全部可可靠识别的聊天，并生成总索引。\n\n所有处理都在本机完成，不联网补齐聊天内容或媒体。导出期间会创建一次性临时目录存放解密材料，结束后尝试清理。项目提供单文件 Windows EXE，也可以从源码运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "登录 Windows 微信，并保持微信在后台运行",
+  "从 GitHub Releases 下载单文件 EXE，或从源码安装依赖：python -m pip install -r requirements.txt",
+  "运行 GUI：python app.py，或使用命令行：python cli.py \"好友备注名或群名\" --images --files --voices --videos",
+  "在 GUI 中输入好友备注、昵称或群名，选择是否附带媒体，点击「开始导出」",
+  "如需本地语音转文字，先运行 python cli.py --install-asr，再在导出时勾选或使用 --transcribe-voices"
+ ],
+ "summary": "这个项目解决的是把 Windows 微信聊天记录整理成通用格式、方便交给大模型读取的问题。它支持私聊和群聊，可导出 TXT、Markdown、JSON，并尽量带上本机缓存的图片、文件、语音和视频；还能在本机把语音转成文字。适合需要把聊天内容用于大模型分析、个人留存或二次开发的 Windows 用户。",
+ "tagline": "把 Windows 微信聊天记录导出为 TXT、Markdown、JSON，方便交给大模型"
+}

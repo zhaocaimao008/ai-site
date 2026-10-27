@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望用 AI 智能体辅助编码、又需要真实 IDE 和版本控制隔离的开发者。",
+ "date": "2026-10-27",
+ "features": [
+  "基于 git worktree 的隔离工作区，智能体可并行工作",
+  "Monaco 编辑器、文件树、终端、diff 与评论式代码审查",
+  "SPEC.md 规格图作为持久项目知识，由 spec_* 工具维护",
+  "多个并发 pi 会话，各自选择模型并显示 token 与成本",
+  "支持 Agent Skills、MCP 服务器与内置工作流",
+  "桌面应用或浏览器访问，内置英文与简体中文界面"
+ ],
+ "intro": "ThinkRail 是 JetBrains 孵化项目，在轻量级 IDE 中围绕 pi 编码智能体构建了完整工作台。它把每个任务放进独立的 git worktree 工作区，智能体可以并行工作而不影响你的主检出，完成后合并或删除分支即可。\n\nIDE 部分包含 Monaco 编辑器、文件树、终端和 diff 视图，并支持在文件与 diff 上留评论、作为结构化上下文发给聊天。项目用 SPEC.md 组成的规格图作为长期知识，智能体通过 spec_* 工具读取和维护，让意图跨会话保留。\n\n此外支持 Agent Skills、MCP 服务器、多会话并行聊天，以及 JetBrains AI 或 pi 自带认证的模型接入。提供桌面应用和 thinkrail CLI 两种形式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 releases 页面下载对应平台的 thinkrail-desktop 安装包（如 macOS 的 DMG）",
+  "或使用 thinkrail CLI 在浏览器中打开同一应用",
+  "打开一个 git 仓库作为项目，并从中创建 worktree 工作区",
+  "在聊天中启动 pi 会话，选择模型开始编码",
+  "在 Settings 中配置语言、环境变量、MCP 服务器与模型提供方"
+ ],
+ "summary": "ThinkRail 是一个围绕 pi 编码智能体构建的 IDE，解决的是让 AI 写代码时不干扰主分支、又能保留项目意图的问题。它把任务放进独立的 git worktree 工作区，智能体可并行修改，再通过合并或删除分支收尾；同时用 SPEC.md 规格图记录项目知识，供智能体跨会话读取和维护。适合需要真实编辑器、版本控制隔离和规格驱动流程的开发者。",
+ "tagline": "JetBrains 出品的 agentic IDE，围绕 pi 编码智能体构建"
+}

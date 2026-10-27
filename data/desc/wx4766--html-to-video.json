@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要制作讲解动画、动态图解、产品演示或数据可视化动画的开发者与内容创作者，也适合让 AI 生成 HTML 后自动渲染成视频的自动化流程。",
+ "date": "2026-10-27",
+ "features": [
+  "确定性逐帧渲染：相同输入得到相同输出，可复现、可版本管理",
+  "11 个模板开箱即用，改 CFG 配置即可出片，支持横屏与竖屏",
+  "多镜头与 8 种转场，可在单个 HTML 内合成整支片子",
+  "支持输出 MP4、GIF、透明层（--alpha）和外部字幕（--srt）",
+  "内置 QA 质量门，自动检查黑屏、卡顿、半截字等问题",
+  "自带零依赖素材库：图标、参数化人物、卡片箭头与运镜"
+ ],
+ "intro": "html-to-video 是一个基于 Node.js 的确定性渲染器，用无头浏览器把 HTML 或 Canvas 动画逐帧截图，再通过 ffmpeg 编码成 H.264 MP4，也支持输出 GIF、透明层和字幕。它不依赖 React 等框架，也没有构建步骤，一个 HTML 文件就能跑。\n\n项目提供 11 个开箱即用的模板，覆盖讲解片、标题卡、图表、时间线、竖屏卡片等场景，改顶部配置块即可出片。支持多镜头与 8 种转场、横竖屏自适应、主题切换、批量渲染和 SRT 字幕，并内置自动化质量检查。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "复制模板：cp assets/templates/bar-chart.html my-video.html",
+  "修改 my-video.html 顶部的 CFG（title / data / note）",
+  "运行渲染：bash assets/render.sh my-video.html --duration=6 --fps=60",
+  "切换竖屏：bash assets/render.sh title-card.html --duration=6 --fps=60 --width=1080 --height=1920"
+ ],
+ "summary": "html-to-video 解决的是把网页动画稳定转成视频的问题。你写一个 HTML 或 Canvas 动画，它用无头浏览器逐帧截图再编码成 MP4，输出确定、可复现。适合做讲解动画、动态图表、产品演示和竖屏短视频，也方便让 AI 生成 HTML 后自动渲染成片。",
+ "tagline": "把 HTML/Canvas 动画逐帧渲染成 MP4 或 GIF 的命令行工具"
+}

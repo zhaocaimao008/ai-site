@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合有编程基础、希望系统学习 AI 工程并从事相关岗位的开发者，也适合想补全数学和系统知识的学习者。",
+ "date": "2026-10-27",
+ "features": [
+  "十个部分覆盖从基础数学到 AI 工程、MLOps 和安全的完整路径",
+  "173 节课，每节包含概念、数学、代码、生产失败模式和习题",
+  "166 个可运行实验，全部由 CI 执行验证",
+  "提供 COMPETENCIES.md 将五个岗位所需技能映射到具体课程和实验",
+  "实验为纯 Python 文件，支持 VS Code、PyCharm 和 Jupyter 逐单元格运行",
+  "包含安全视角，例如 RAG 攻击与数据管道凭证泄露"
+ ],
+ "intro": "No Shortcuts 是一门免费、系统的 AI 工程课程，覆盖数据工程、经典机器学习、深度学习、语言模型、强化学习、MLOps 与安全。课程强调不跳过基础，包含数学推导、从零实现和可运行实验，每个实验都经过 CI 执行。\n\n课程分为十个部分，共 57 个模块、173 节课，每节课包含概念、数学、代码、生产环境中的失败模式、习题和原始资料。目标是把学习者培养成能胜任数据工程师、数据科学家、机器学习工程师、深度学习工程师或 AI 工程师岗位的人。\n\n作者有十五年以上的系统工程师经验，课程中会结合安全视角，例如在教 RAG 时也会教如何攻击它，在教数据管道时指出凭证泄露的位置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库或下载代码，进入项目文件夹",
+  "创建虚拟环境：uv venv && source .venv/bin/activate（或 python -m venv .venv）",
+  "安装依赖：uv pip install -r requirements.txt（或 pip install -r requirements.txt）",
+  "运行第一部分所有实验：python tools/run_labs.py --part 1",
+  "运行单个实验：python part-1-foundations/02-linear-algebra/labs/lab_02_3_least_squares.py"
+ ],
+ "summary": "No Shortcuts 是一门面向 AI 工程岗位的系统课程，强调不跳过数学、代码和系统基础。它覆盖数据工程、经典机器学习、深度学习、语言模型、强化学习、MLOps 与安全，包含大量可运行实验。适合有编程基础、想扎实掌握 AI 工程全链路并用于实际工作的人。",
+ "tagline": "从数学到部署的AI工程完整课程，含173课166个可运行实验。"
+}

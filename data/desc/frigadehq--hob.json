@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "希望在本地私密使用 AI、不想依赖云端服务的开发者和普通用户。",
+ "date": "2026-10-27",
+ "features": [
+  "在本地运行 Gemma、gpt-oss 等开放权重模型，数据不出本机",
+  "自动根据电脑配置选择并配置合适的模型",
+  "支持填写 PDF、处理文档、分析表格等任务",
+  "提供 Mac、Windows、Linux 桌面安装包",
+  "支持离线使用，并集成 MCP"
+ ],
+ "intro": "Hob 是一个基于 Electron 和 TypeScript 开发的桌面应用，目标是让用户在本地电脑上使用 AI 模型，作为 Claude 和 ChatGPT 的开源替代方案。它支持 Mac、Windows 和 Linux，可运行 Gemma、gpt-oss 等开放权重模型，强调隐私保护并支持离线使用。\n\n应用会根据电脑配置自动挑选合适的开放权重模型并完成设置，用户无需手动配置推理环境。README 展示的用例包括填写 PDF、处理文档、读取表格并生成图表等。项目采用 MIT 协议，由 Frigade 开发维护。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台安装包：Mac 为 Hob-mac-arm64.dmg，Windows 为 Hob-windows-x64.exe，Linux 为 Hob-linux-x86_64.AppImage",
+  "安装并启动 Hob，应用会自动选择适合本机配置的开放权重模型并完成设置",
+  "在应用内开始对话，或打开文档、PDF、表格等文件进行处理"
+ ],
+ "summary": "Hob 是一款桌面 AI 应用，让你在自己的电脑上直接运行 Gemma、gpt-oss 等开放权重模型，不必把数据发到云端。它面向注重隐私、需要离线使用 AI 的用户，安装后会自动挑选适合本机配置的模型，可用于填写 PDF、处理文档和分析表格等日常任务。",
+ "tagline": "在自己电脑上本地运行开源模型的桌面 AI 助手"
+}

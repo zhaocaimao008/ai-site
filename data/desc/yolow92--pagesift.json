@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI 代理或 RAG 系统构建网页内容提取管道的开发者，以及希望以低内存开销进行大规模网页抓取的数据工程师。",
+ "date": "2026-10-27",
+ "features": [
+  "高性能网页抓取与内容提取，输出干净的 Markdown 和结构化数据",
+  "支持自适应爬取、PDF 解析、RSS 解析和浏览器渲染",
+  "提供与 Firecrawl v1/v2 和 Jina Reader 兼容的 API",
+  "提供 Python 和 Node.js 原生 SDK",
+  "内存受限设计，可在低内存环境下稳定运行",
+  "支持 MCP 协议，便于与 AI 代理集成"
+ ],
+ "intro": "PageSift 是一个用 Rust 编写的高性能、内存受限的网页抓取与内容提取引擎，专为 AI 代理和 LLM 流水线设计。它可以将任意网站、文档或存档转换为干净的 Markdown 和结构化数据，并以单个二进制文件的形式提供，同时附带原生 SDK。\n\n项目支持自适应爬取、PDF/RSS 解析、浏览器渲染，并提供与 Firecrawl v1/v2 和 Jina Reader 兼容的 API。它还提供了 Python 和 Node.js SDK，方便不同语言的开发者集成。PageSift 注重内存效率，能够在有限的内存环境下稳定运行。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "PageSift 是一个用 Rust 编写的高性能网页抓取与内容提取引擎，旨在将网站、文档等转换为干净的 Markdown 和结构化数据，供 AI 代理和 RAG 流水线使用。它支持自适应爬取、PDF/RSS 解析、浏览器渲染，并提供兼容 Firecrawl 和 Jina Reader 的 API 以及 Python/Node.js SDK。适合需要高效、低内存网页内容提取的开发者。",
+ "tagline": "为 AI 代理和 RAG 打造的高性能网页抓取与内容提取引擎"
+}

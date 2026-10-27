@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合有一定开发基础、想自建数字人直播间的用户，尤其是希望控制成本、自定义人设和音色的主播或开发者。",
+ "date": "2026-10-27",
+ "features": [
+  "弹幕驱动数字人动作：观众弹幕经本地桥翻译为动作指令，由 Vidu 渲染执行",
+  "本地 LLM 与 TTS 集成：使用 DeepSeek 或 OpenAI 兼容接口生成回复，OmniVoice 合成语音",
+  "舞台页操作台：支持打字聊天、直发动作、快捷指令、点播歌单、参考图换装和自动录播",
+  "多平台弹幕接入：通过配套采集器或自带转发器接入抖音、B站、YouTube 等平台",
+  "音色克隆与热切换：基于 OmniVoice 支持设计音色或克隆音色，直播中可切换"
+ ],
+ "intro": "赛博小雅直播版是一个组件化的数字人直播软件，包含舞台页、本地桥接服务以及弹幕、歌单、录播等完整链路。它不提供现成的人物形象、音色或人设，需要用户自行准备 Vidu 账号、LLM API Key 和 TTS 服务。\n\n项目通过浏览器中的舞台页操作，本地桥接服务负责将文字指令转发给 Vidu 云端渲染口型、表情和动作，同时在本机运行 LLM 思考、TTS 发声和弹幕处理。这样成本主要来自 Vidu 的渲染费用，音色、人设和歌单都掌握在用户手中。\n\n适合想搭建个人数字人直播、又希望控制成本和数据流向的开发者或主播。按照 README 的步骤，从零跑起来大约需要一小时。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 3.12 和 uv，创建虚拟环境并安装依赖：uv venv .venv --python 3.12 && uv pip install -r requirements.txt",
+  "安装 ffmpeg 并确保命令行可用",
+  "准备 Vidu 账号、形象 ID、动作库 ID 和 API Key，以及 LLM API Key",
+  "复制 config.example.json 为 config.json，填写 vidu.api_key、avatar.avatar_id、llm.key_file 等字段",
+  "启动桥和舞台页：.venv\\Scripts\\python.exe -m src.main，然后浏览器打开 http://127.0.0.1:8795/stage 点「开始连线」"
+ ],
+ "summary": "赛博小雅直播版是一个组件化数字人直播方案，用本地桥接服务把观众弹幕、LLM 回复和 TTS 语音串起来，再交给 Vidu 云端渲染口型和动作。它不包含现成形象和音色，需要自己准备 Vidu 账号、LLM Key 和 OmniVoice 服务。适合想低成本搭建个人数字人直播间、并希望自定义人设与音色的开发者或主播。",
+ "tagline": "组件版数字人直播方案，弹幕驱动动作与语音"
+}
