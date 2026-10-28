@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合制作 YouTube Shorts、Reels、插画故事或火柴人解说等短视频的创作者，以及希望本地掌控生成与剪辑流程的开发者。",
+ "date": "2026-10-28",
+ "features": [
+  "场景生产：项目、角色、参考图、场景提示词与图像/视频生成队列",
+  "Chrome MV3 扩展桥接已登录的 Google Flow 会话发起生成请求",
+  "旁白与字幕：旁白脚本、SRT 编辑、音色选择及可选本地 TTS",
+  "语音分析：可选的转写与时间对齐工具",
+  "音频与剪辑：音乐音效库、混音、字幕、画面布局控制与 FFmpeg 导出",
+  "时间线：拖拽媒体到轨道、排序裁剪、在播放头处分割"
+ ],
+ "intro": "FrameWeaver 是一个本地运行的视频创作工作台，把 React 前端、Python 后端和 Chrome 扩展组合成一套流程。它面向短视频和故事类内容，支持规划场景、复用角色参考图、通过自己的 Google Flow 会话生成画面，再准备旁白、字幕和音频，最后用 FFmpeg 组装导出。\n\n项目还提供分层时间线、媒体库、语音分析和可选的本地 TTS 集成，并附带 macOS 桌面测试版。桌面版额外支持通过本地 muse2api 网关使用 Muse AI 做脚本规划、参考图/场景图和图生视频，以及无需终端的 ChatGPT 组件安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS 用户可从 Releases 下载对应芯片的 DMG，拖入 Applications 即可使用（内置 Python 和 FFmpeg）",
+  "如需 Google Flow，下载 Chrome 扩展 ZIP，解压后在 chrome://extensions 开启开发者模式并加载 extension 文件夹",
+  "在设置中配置可选的 AI 模型与提供商账号",
+  "从源码运行请参考 README 的 Source 部分（本段未给出具体命令）"
+ ],
+ "summary": "FrameWeaver 是一个本地视频创作工作台，把场景规划、角色参考图、AI 画面生成、旁白字幕、语音分析和时间线剪辑串成一条流程。它通过 Chrome 扩展复用你已登录的 Google Flow 会话生成素材，再用 FFmpeg 导出成片。适合制作 YouTube Shorts、Reels、插画故事或火柴人解说等短视频，也适合希望本地掌控生成与剪辑的开发者。",
+ "tagline": "本地 AI 视频工作台，整合场景生成、配音与时间线剪辑"
+}

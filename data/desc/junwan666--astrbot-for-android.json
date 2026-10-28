@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Android 手机上本地运行 AstrBot 与 NapCat、又不想折腾 Root 或独立服务器的用户和开发者。",
+ "date": "2026-10-28",
+ "features": [
+  "双服务管理：AstrBot 与 NapCat 可独立或一键启停，查看运行、连接和异常状态",
+  "内置 WebUI：通过 WebView 直接打开 AstrBot 和 NapCat 后台，预填初始凭据",
+  "人设库：内置预设并支持新增、删除、搜索、分类和默认切换",
+  "实时日志与资源概览：查看服务日志、应用内存和手机总内存占用",
+  "备份与恢复：支持本机快照、便携备份和更新回退",
+  "扩展组件：SSH 终端、Ubuntu 桌面、cpolar 内网穿透按需安装"
+ ],
+ "intro": "AstrBot for Android 是一个面向 Android 设备的本地部署与运行管理应用，把 AstrBot 和 NapCat 集成进单个 APK。它内置 PRoot Ubuntu 运行环境，无需 Root 即可在手机上初始化环境、启停服务并查看运行状态。\n\n应用使用 Kotlin 与 Jetpack Compose 构建原生管理界面，支持简体中文和英文，并通过内置 WebView 访问 AstrBot 与 NapCat 的 WebUI，方便在手机端完成 QQ 登录、模型接入和插件配置。此外还提供人设库、实时日志、备份恢复、SSH 终端、Ubuntu 桌面和 cpolar 内网穿透等扩展功能。\n\n完整 APK 约 720 MiB，要求 Android 8.0 及以上、ARM64 架构。App、AstrBot 和 NapCat 可分别独立更新，更新过程支持签名校验与失败回退。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载完整 APK，在 ARM64 Android 手机上安装并打开 App 完成环境初始化",
+  "点击“启动全部”，等待 AstrBot 和 NapCat 就绪",
+  "打开 NapCat 后台登录 QQ，在 AstrBot 后台配置模型、平台和插件",
+  "按“设置 → 后台运行”的引导调整手机权限，再按需使用人设、备份、SSH 和 cpolar"
+ ],
+ "summary": "这个项目把 AstrBot 和 NapCat 打包进一个 Android APK，借助内置的 PRoot Ubuntu 环境在手机本地运行，不需要 Root。它提供原生管理界面和内置 WebUI，可完成服务启停、QQ 登录、模型与插件配置，并附带日志、备份、SSH 和 cpolar 等扩展。适合想在手机上自托管聊天机器人、又不想单独准备服务器的用户。",
+ "tagline": "在 Android 手机上本地运行 AstrBot 与 NapCat 的管理应用"
+}

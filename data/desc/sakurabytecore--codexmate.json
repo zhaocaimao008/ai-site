@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用多个 AI 编程工具、需要找回或整理历史对话的开发者，以及想统一管理 Provider 和 skills 的用户。",
+ "date": "2026-10-28",
+ "features": [
+  "统一会话浏览器：在一个界面浏览 Codex、Claude Code、Gemini CLI、CodeBuddy、Pi、OpenCode、Zed 等工具的本地会话，支持按来源、项目或时间筛选。",
+  "会话导出：将选中的对话导出为 Markdown，便于阅读和归档。",
+  "Provider 管理：为 Codex、Claude、OpenCode、KiloCode、OpenClaw、Pi 等切换 Provider 和模型。",
+  "OpenAI 兼容桥接：将 Codex 的 Responses API 转换为标准 OpenAI 格式，并规范化 Codex 指纹请求头。",
+  "Skills 市场：在不同 Agent 应用之间导入和导出 skills。",
+  "任务编排：用 DAG 规划并执行有依赖关系的复杂任务，并查看日志。"
+ ],
+ "intro": "Codex Mate 是一个本地运行的 CLI 加 Web 工具，用来集中浏览、筛选和导出散落在 Codex、Claude Code、Gemini CLI 等 AI 编程工具里的历史会话。它不提供新模型，也不替代你的编程助手，而是管理已有工具和本地记录。\n\n除了会话浏览器，它还提供 Provider 切换、Skills 市场、Prompt 文件编辑和基于 DAG 的任务编排等功能。所有操作都在本机完成，不需要云端账号，模型请求仍发往你配置的 Provider。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Homebrew 安装：brew tap SakuraByteCore/codexmate && brew install codexmate（需先安装 Node.js）",
+  "或通过 npm 安装：npm install -g codexmate",
+  "运行 codexmate run，打开终端中打印的地址",
+  "在会话浏览器中选择有记录的工具来源，打开对话并使用导出功能",
+  "需要配置 Provider 时运行 codexmate setup"
+ ],
+ "summary": "Codex Mate 解决的是 AI 编程工具会话分散、难以查找和归档的问题。它在本机运行，把 Codex、Claude Code、Gemini CLI 等工具的本地会话集中到一个 Web 界面，支持按来源、项目或时间筛选，并导出为 Markdown。适合同时使用多个 AI 编程助手、需要回顾历史对话或统一管理 Provider 与 skills 的开发者。",
+ "tagline": "本地浏览、筛选并导出多个 AI 编程工具的会话记录"
+}

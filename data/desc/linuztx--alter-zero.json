@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在终端中借助 AI 完成编码、调试、安全审查或自动化任务的开发者与安全研究人员。",
+ "date": "2026-10-28",
+ "features": [
+  "在终端中读取、编辑、运行命令并检查结果，实时显示命令输出和可读 diff",
+  "提供权限模式、变更审查和任务清单，执行过程可控可查",
+  "支持订阅服务、API 提供商以及 Ollama、LM Studio 本地模型",
+  "可添加子代理、技能、生命周期钩子和 MCP 服务器进行扩展",
+  "单一 Rust 二进制，支持持久会话、内联图片和键盘驱动操作",
+  "提供 Kali Linux 容器构建，便于安全研究场景使用"
+ ],
+ "intro": "Alter Zero 是一个用 Rust 编写的开源 AI 编码代理，直接在终端中运行。它能够读取项目文件、进行编辑、执行命令并检查结果，用户可以在终端里实时跟进每一步操作。除了编码，它也可用于安全漏洞排查、技术调查和日常自动化任务。\n\n项目提供权限模式选择、变更审查和任务清单，让执行过程可控可查。模型方面支持订阅服务、API 密钥以及 Ollama、LM Studio 等本地模型。此外还支持子代理、技能、生命周期钩子和 MCP 服务器扩展，并以单一 Rust 二进制形式提供持久会话、内联图片和键盘操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux 或 macOS 一键安装：curl -fsSL https://raw.githubusercontent.com/linuztx/alter-zero/main/install.sh | sh",
+  "或使用 npm 安装：npm install -g @linuztx/alter-zero",
+  "从源码构建：git clone https://github.com/linuztx/alter-zero.git && cd alter-zero && cargo install --path . && alter-zero",
+  "运行 /login 选择订阅、API 提供商或本地模型服务器并连接",
+  "运行 /model 选择模型，然后描述任务并跟进执行"
+ ],
+ "summary": "Alter Zero 是一个用 Rust 编写的终端 AI 编码代理，帮助开发者在终端内完成读代码、改代码、跑命令和验证结果等任务。它适合需要边执行边审查的编码调试场景，也可用于安全漏洞排查、技术调查和日常自动化。项目支持多种模型接入方式，包括订阅、API 密钥和本地模型，并允许通过子代理、技能和 MCP 服务器扩展工作流。",
+ "tagline": "Rust 编写的终端 AI 编码代理，兼顾安全研究与自动化"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要持续掌握自身外部暴露面的安全团队、渗透测试与漏洞管理人员，以及希望把资产发现和 CVE 验证接入自有工具链的开发者。",
+ "date": "2026-10-28",
+ "features": [
+  "用 bbot、naabu、nmap 持续发现子域名、证书、IP、端口和服务指纹",
+  "将 CVE 按真实利用来源评级，并与实际运行的资产匹配",
+  "AI 分诊加 Nuclei、nmap 等只读验证，记录复现命令作为证据",
+  "主机变化时间线，含截图差异对比",
+  "对自有资产清单做 Shodan 风格搜索，如 port:3389 -host:vpn",
+  "提供 REST API、MCP server 和多种即时通讯告警"
+ ],
+ "intro": "cvENGINE 是一个自托管的外部攻击面评估系统。输入一个域名后，它会用 bbot、naabu、nmap 等工具发现子域名、IP、端口、服务版本、TLS 和技术栈，并持续维护一份类似 Shodan 的资产清单。\n\n在发现资产的基础上，它把 CVE 情报与资产实际运行情况做匹配，按真实利用来源给出 fire、smoke、ice 评级，并用 AI 分诊和只读验证（Nuclei、nmap、banner 探测）复现问题，记录具体命令作为证据。主机变化会进入时间线，支持截图对比。\n\nAI 模型可接入 Anthropic、OpenAI、OpenRouter、Ollama 或 vLLM；不配置模型时，发现、扫描、匹配和验证仍可运行。系统通过 Docker Compose 部署在自己的服务器上，提供 REST API、MCP server 以及 Slack、Discord、Telegram、Lark 告警。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Debian 或 Ubuntu 服务器上准备 4 GB 以上内存",
+  "git clone https://github.com/hevnsnt/CVEngine.git",
+  "cd CVEngine",
+  "sudo ./install.sh"
+ ],
+ "summary": "cvENGINE 把资产发现、漏洞扫描和 CVE 情报合成一个持续循环，回答“今天被利用的漏洞里，我暴露了哪些”。输入域名后自动发现子域名、端口和服务，将 CVE 按利用热度评级并匹配实际资产，再用 AI 分诊和只读检查复现问题。适合安全团队自托管管理外部攻击面。",
+ "tagline": "自托管的 AI 外部攻击面评估与漏洞验证平台"
+}

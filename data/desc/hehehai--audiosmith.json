@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Mac 上本地完成语音生成、有声书制作、视频配音或转录，并且在意隐私与离线使用的创作者和开发者。",
+ "date": "2026-10-28",
+ "features": [
+  "Studio 支持导入 TXT、MD、DOCX、EPUB、SRT、VTT 脚本，用标记控制停顿、语速和发音，并导出 WAV、M4A 等格式",
+  "Voices 支持从录音或音视频文件克隆声音、用一句话设计声音，并提供带评级的参考音频检查",
+  "Stories 按 `Name: line` 自动分配角色，内置本地 AI 导演为每句台词标注情绪",
+  "Audiobook 导入 EPUB、TXT、Markdown 或 DOCX，按章节生成带封面和标签的 M4B",
+  "Dub 对视频或音频进行人声分离、带说话人区分的转录、翻译，再用克隆声音按原时间轴配音",
+  "所有模型通过 MLX 在本地 GPU 运行，下载后可离线使用，无需账号或云服务"
+ ],
+ "intro": "AudioSmith 是一款运行在 Apple silicon Mac 上的语音工作室，把文字转语音、声音克隆与设计、故事配音、有声书制作、视频配音和转录听写整合在一个应用里。所有模型通过 MLX 在 Mac 的 GPU 上本地运行，不需要账号、云服务或 Python，模型下载完成后可离线使用。\n\n项目当前版本为 0.4.0-beta.7，处于 beta 阶段，安装包经 Developer ID 签名并由 Apple 公证，支持自动更新。应用提供 Studio、Voices、Stories、Audiobook、Dub 等模块，覆盖从脚本生成、角色分配、章节导出到多语言配音的完整流程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 actnow.dev 下载 AudioSmith 安装包，系统要求 macOS 15 或更高版本、Apple silicon M1 或更新芯片",
+  "首次启动后下载所需模型，之后即可离线使用",
+  "在 Studio 中写入或导入脚本，选择模型和声音，生成并导出音频",
+  "在 Dub 中拖入视频或音频文件，按人声分离、转录、翻译、配音四步完成配音"
+ ],
+ "summary": "AudioSmith 是一个在 Apple silicon Mac 上本地运行的语音工作室，把文字转语音、声音克隆与设计、故事配音、有声书制作、视频配音和转录听写集中在一个应用里。模型通过 MLX 在本地 GPU 运行，无需账号或云服务，下载后可离线使用，适合需要在本机完成语音创作、又在意隐私和离线场景的创作者。",
+ "tagline": "在 Mac 本地运行的语音工作室"
+}

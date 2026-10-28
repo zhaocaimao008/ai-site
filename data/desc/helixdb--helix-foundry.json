@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将分散的企业数据整合为知识图谱并进行探索与问答的开发者、数据工程师和业务团队。",
+ "date": "2026-10-28",
+ "features": [
+  "连接 PostgreSQL、MySQL、Amazon S3、Stripe、PostHog、WorkOS、GitHub、Linear、Granola 和 Cal.com 等数据源",
+  "上传 Markdown、文本、PDF 文档以及 CSV、TSV、JSON、JSON Lines、Parquet 表格文件",
+  "AI 代理自动起草本体，包含类型、链接、来源和规则，支持人工审阅与编辑",
+  "将本体版本载入 HelixDB，形成可探索的连通图",
+  "以图或记录形式浏览数据，每个值可追溯至原始行或引文",
+  "支持带引用答案的问答，并可切换多种 AI 模型提供商"
+ ],
+ "intro": "Helix Foundry 是一个数据集成与知识图谱构建工具。它可以连接 PostgreSQL、MySQL、S3、Stripe、PostHog、GitHub、Linear 等数据源，也支持上传 Markdown、PDF、CSV、Parquet 等文档和表格文件。连接后，AI 代理会基于这些数据起草一份本体（ontology），包括类型、链接、来源表和文档以及规则。\n\n用户审阅并编辑本体后，可以将其设为当前版本并载入 HelixDB，形成一个连通的图。载入后，可以以图或记录的形式探索数据，每个值都能追溯到原始行或引文，并支持带引用的问答。\n\n项目提供托管服务 foundry.helix-db.com，也支持通过 Docker Compose 在本地运行。AI 模型可自动选用 Claude、OpenAI、Ollama 或 LM Studio，也可在设置中切换为 Azure OpenAI、Amazon Bedrock 或任意 OpenAI 兼容服务器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Docker 和 Compose v2",
+  "克隆仓库：git clone https://github.com/helixdb/helix-foundry.git",
+  "进入目录：cd helix-foundry",
+  "启动服务：docker compose up -d --wait",
+  "打开 http://localhost:3000 开始使用"
+ ],
+ "summary": "Helix Foundry 用于把公司分散的数据源和文档整合成一个连通的图数据库。它先连接 PostgreSQL、MySQL、S3、Stripe 等数据源或上传文件，再由 AI 代理起草本体，经人工审阅后载入 HelixDB。载入后可以图或记录形式探索数据，追溯每个值的来源，并进行带引用的问答。适合需要构建知识图谱、统一数据视图的团队，支持托管和本地 Docker 运行。",
+ "tagline": "连接企业数据，由 AI 代理起草本体并载入 HelixDB 图数据库"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想在 WhatsApp 上构建个人助理或业务机器人、并希望数据自主可控的开发者。",
+ "date": "2026-10-28",
+ "features": [
+  "一条命令生成可运行的 WhatsApp AI 代理项目",
+  "本地优先：对话、记忆和数据保存在自己机器上",
+  "支持多种模型提供商，包括本地 Ollama",
+  "内置知识检索层，可选 SQLite 或 Cognee 知识图谱",
+  "提供 Gmail/Calendar 只读助手示例，展示工具调用",
+  "模块化 npm 包，按需引入 WhatsApp、生产力等组件"
+ ],
+ "intro": "这是一个用 TypeScript 编写的开源 SDK，帮助开发者在 WhatsApp 上搭建自己的 AI 代理。项目采用本地优先设计，模型密钥、WhatsApp 号码和数据都由你自己提供，对话与记忆保存在本机文件中，不经过第三方服务器。\n\nSDK 提供代理核心、WhatsApp 消息处理、知识检索层等模块，并附带一个 Gmail/Calendar 助手示例，展示如何接入真实工具。你可以选择本地 SQLite 或自托管的 Cognee 作为记忆后端，支持 OpenAI、Anthropic、Gemini 或本地 Ollama 模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npm create @wappy_ai/agent 并按提示选择模型、记忆后端等选项",
+  "复制环境变量文件：cp .env.sample .env，填入模型密钥和 WhatsApp 凭据",
+  "安装依赖：npm install",
+  "启动开发服务器：npm run dev，获取 Meta webhook 配置所需的 URL"
+ ],
+ "summary": "这个项目是一个面向 WhatsApp 的开源 AI 代理 SDK，让你用自己的模型密钥和 WhatsApp 号码，在本机运行一个能记住上下文、调用工具的对话代理。它适合想搭建个人助理、客服或预约机器人，又不愿把数据交给第三方云服务的开发者。项目提供脚手架命令和可选的 Gmail/Calendar 示例，记忆后端可选本地 SQLite 或自托管 Cognee。",
+ "tagline": "在 WhatsApp 上运行本地 AI 代理的开源 SDK"
+}

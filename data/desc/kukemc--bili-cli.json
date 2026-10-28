@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI Agent 自动运营或辅助运营 B 站账号的开发者与 UP 主，也适合想用命令行批量处理 B 站内容的用户。",
+ "date": "2026-10-28",
+ "features": [
+  "扫码登录并自动续期，所有命令统一 JSON 输出，错误带 hint 提示下一步",
+  "视频观看一条命令获取信息、AI 总结、字幕全文、章节、热评、弹幕高能时刻和画面总览图",
+  "支持点赞、收藏、投币（每日上限 5 个）、一键三连、评论回复、真正 @ 用户和私信收发",
+  "可发布图文动态、视频投稿、定时发布、改稿、建合集，并默认勾选 AI 生成内容声明",
+  "提供单稿件与账号维度的数据复盘，包括完播率、互动率、观众画像和同类对比",
+  "一键安装技能到 18 个 Agent，或通过 MCP 提供 17 个工具给桌面客户端"
+ ],
+ "intro": "bili-cli 是一个面向 AI Agent 的哔哩哔哩命令行工具，用 Python 编写，通过统一 JSON 输出让 Agent 能执行 B 站操作。它覆盖扫码登录、浏览推荐与热门、观看视频（含字幕、AI 总结、弹幕高能时刻和画面总览图）、点赞收藏投币、评论回复、私信收发、发动态、视频投稿、数据复盘等 80 多条命令。\n\n项目内置安全护栏，包括本地限流、审计日志、投币每日上限、写操作 --dry-run 预览、私信白名单和 AI 内容声明，并支持一键安装到 Claude Code、Codex、Cursor 等 18 个 Agent，或通过 MCP 提供给 Claude Desktop 等客户端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "uv tool install bili-agent（或 pipx install bili-agent / pip install bili-agent）",
+  "bili skills install --yes",
+  "bili auth login 扫码登录",
+  "bili auth status --wait 120 等待扫码完成",
+  "bili owner set <你的UID> 设置主人账号"
+ ],
+ "summary": "bili-cli 把 B 站账号的日常操作封装成命令行工具，并以统一 JSON 输出，方便 AI Agent 直接调用。它覆盖看视频、互动、私信、发动态、投稿和数据复盘等场景，还内置限流、审计日志和投币上限等安全措施，适合想让 Agent 辅助运营 B 站账号的开发者与 UP 主。",
+ "tagline": "为 AI Agent 设计的 B 站命令行工具，JSON 输出，可看视频、互动、投稿"
+}
