@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在 AI 对话中分析长视频内容的开发者，以及用 DSH 做视频理解、剪辑素材检索的用户。",
+ "date": "2026-10-29",
+ "features": [
+  "把视频画面压成一张宫格分镜图，单图约 384 token",
+  "输出按时间对齐的文本清单：每格起止时间、台词、切镜数",
+  "video_zoom 对重点片段用更小时间窗、更密格数放大查看",
+  "video_locate 纯文本地把一句话定位到时间码",
+  "支持本地文件与 B 站/YouTube 链接，长片可按时间窗切分",
+  "转写可选：视频自带字幕、已有 SRT/JSON 或本地/云端 ASR"
+ ],
+ "intro": "dsh-video-storyboard 是一个 DeepSeek Harness（DSH）插件，用来解决多模态模型理解长视频时 token 消耗过大的问题。逐帧抽图会让 token 数量急剧增加，只喂字幕又会丢掉画面信息。这个插件把视频画面压缩成一张 9～16 格的宫格图（约 384 token），再配一份按时间对齐的文本清单，列出每格的起止时间、台词和切镜次数，模型据此判断某段内容大致出现在第几秒。\n\n插件提供四个工具：video_probe 只读容器头信息，不消耗图片 token；video_storyboard 生成宫格图和清单；video_zoom 放大查看某一段；video_locate 把一句话定位到时间码。它依赖本机的 ffmpeg/ffprobe，可选 yt-dlp 下载 B 站、YouTube 链接，转写可选用视频自带字幕、已有 SRT/JSON 或本地/云端 ASR 服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 ffmpeg：winget install Gyan.FFmpeg",
+  "如需贴 B 站/YouTube 链接，安装 yt-dlp：pip install --user -U yt-dlp",
+  "安装插件并重启 DSH：node scripts/install-dev.mjs",
+  "对本地文件生成分镜：node bin/storyboard.mjs film.mp4 --cells 9 --out film.png",
+  "长片按 5 分钟切窗：node bin/storyboard.mjs film.mp4 --batch 300 --out film.png"
+ ],
+ "summary": "这个插件面向需要让多模态模型理解长视频的场景。逐帧抽图会让 token 数量急剧增加，只喂字幕又会丢掉画面信息，它改为把画面压成一张宫格分镜图，并附上带时间码的台词与切镜清单，模型据此判断某段内容大致出现在第几秒，需要细节时再放大某一段。适合在 DSH 中分析本地视频或 B 站、YouTube 链接的开发者。",
+ "tagline": "把视频压成一张分镜图加时间码清单，让 AI 看懂视频"
+}

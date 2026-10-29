@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管编码代理、注重数据隐私和控制权的开发者与团队。",
+ "date": "2026-10-29",
+ "features": [
+  "在自有 Linux 机器上运行 Claude Code、Codex、Pi 等编码代理",
+  "保存代理聊天历史到本地磁盘",
+  "代理以独立 Linux 用户运行，无管理员权限",
+  "API 需要密钥令牌，默认仅监听 localhost",
+  "提供 HTTP API 和桌面应用连接自建核心",
+  "支持 Tailscale 远程访问和原地升级"
+ ],
+ "intro": "Cloudroom 是一个开源、可自托管的 Rust 运行时，用于在云端运行编码代理。它可以在你自己的 Linux 机器上运行 Claude Code、Codex、Pi 等代理，并保存聊天历史。核心是一个 Rust 服务，每台机器一个，无需数据库，也不需要 Cloudroom 账号。\n\n代理使用你自己的登录信息调用模型，运行在独立的 Linux 用户下，没有管理员权限和 sudo，无法读取核心的令牌或历史文件。API 请求需要密钥令牌，默认只监听 localhost。历史记录保存在本地磁盘，可像普通文件夹一样备份。\n\n项目还提供桌面应用，支持 Mac、Linux 和 Windows，可通过 URL 和令牌连接自建核心。仓库包含核心和桌面应用代码，核心需要 Rust 1.89+、Git 以及要运行的代理 CLI。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Ubuntu 24.04 上使用脚本安装核心（参考 core/docs/setup.md）",
+  "通过 Tailscale 从其他设备访问核心",
+  "构建核心：cd core && cargo build --locked --release",
+  "运行测试：cargo test --locked --all-targets",
+  "下载桌面应用并用 URL 和令牌连接自建核心"
+ ],
+ "summary": "Cloudroom 让你在自己的 Linux 机器上运行 Claude Code、Codex 等编码代理，并把聊天历史保存在本地。它适合需要自托管、不想依赖第三方云服务的开发者，代理以独立用户运行且无管理员权限，API 需令牌访问，还提供桌面应用连接自建核心。",
+ "tagline": "自托管的云端编码代理运行时"
+}

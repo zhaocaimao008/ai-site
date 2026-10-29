@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在 AI Agent 中获取社交平台、电商平台公开数据的开发者，以及使用 Claude Code、Cursor 等工具构建数据工作流的用户。",
+ "date": "2026-10-29",
+ "features": [
+  "一个 MCP 端点接入 90 个平台的 414 个数据 API",
+  "覆盖 TikTok、Instagram、Amazon、YouTube、小红书、抖音等平台",
+  "提供 17 个网页搜索工具和 52 种 CAPTCHA 处理",
+  "各平台数据统一为同一种 JSON 结构",
+  "提供 10 个可复用 skills（router、7 个产品、2 个工作流）",
+  "支持 Claude Code、Codex、Cursor、VS Code 等宿主"
+ ],
+ "intro": "EveryInfra 是一个面向 AI Agent 的 MCP 服务与插件，把 TikTok、Instagram、Amazon、YouTube、小红书、抖音等平台的公开数据整理成统一接口。按 README 说明，它提供 90 个平台上的 414 个数据 API、17 个网页搜索工具，以及覆盖 52 种类型的 CAPTCHA 处理能力，所有平台返回同一种 JSON 结构。\n\n它支持以远程 MCP 端点接入 Claude Code、Codex、Cursor、VS Code 等工具，也提供插件和 REST/SDK 两种使用方式。Agent 可以自行选择 API 并校验输入，失败或空结果的调用不计费。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 everyinfra.com 获取 API Key",
+  "Claude Code 执行：claude mcp add --transport http everyinfra https://api.everyinfra.com/mcp --header \"Authorization: Bearer <API Key>\"",
+  "Codex 执行：export EVERYINFRA_API_KEY=\"<API Key>\"，再执行 codex mcp add everyinfra --url https://api.everyinfra.com/mcp --bearer-token-env-var EVERYINFRA_API_KEY",
+  "Cursor / VS Code 点击 README 顶部的安装按钮，然后替换 <API Key>",
+  "用自然语言向 Agent 提问，例如让它查找 Amazon 上 \"standing desk\" 的前 30 个结果并比较价格、评分和评论数"
+ ],
+ "summary": "EveryInfra 把 TikTok、Instagram、Amazon、YouTube、小红书、抖音等平台的公开数据封装成统一的 MCP 接口，让 AI Agent 不必处理登录和反爬就能读取这些内容。它适合在 Claude Code、Cursor 等工具中做跨平台数据采集、商品比价或内容分析的场景，也提供 REST/SDK 供应用和 CI 任务调用。",
+ "tagline": "为 AI Agent 提供 90 个平台公开数据的 MCP 服务"
+}

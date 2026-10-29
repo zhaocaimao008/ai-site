@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要统一管理多个 LLM 提供商、控制成本与安全、并追求低延迟高吞吐的开发者与平台团队。",
+ "date": "2026-10-29",
+ "features": [
+  "统一 API 接入 OpenAI、Anthropic、Gemini、Bedrock 等多家提供商，并支持格式转换",
+  "智能路由：回退链、加权分流、最低成本/延迟/负载、重试、对冲和熔断",
+  "成本控制：按组织、团队、项目、密钥设置美元或 token 预算与速率限制",
+  "安全护栏：PII、密钥、关键词、正则、JSON schema、工具权限、话题、审核和模型评判",
+  "生产就绪：精确/语义缓存、MCP 与 agent 网关、OIDC/SAML/SCIM 单点登录、审计日志",
+  "单二进制内置管理控制台，无需额外部署 UI 或 sidecar"
+ ],
+ "intro": "Antirion 是一个用 Rust 编写的开源 AI 网关，以单个二进制文件形式提供，内置管理控制台。它位于你的应用与各类模型提供商之间，让客户端用 OpenAI、Anthropic、Gemini 或 Bedrock 等任意一种 API 格式发起请求，由网关负责翻译和转发。\n\n项目支持 OpenAI、Azure OpenAI、Anthropic、Amazon Bedrock、Google Vertex AI、Gemini、Mistral、Cohere、Groq、Together、Fireworks、DeepSeek、xAI、Cerebras、DeepInfra、Perplexity 以及任何兼容 OpenAI 或 Anthropic 的服务器（如 vLLM）。除了路由，它还提供回退链、加权分流、重试、熔断等可靠性机制，以及按组织、团队、项目和密钥设置的预算与速率限制。\n\n安全方面，Antirion 内置了针对 PII、密钥、关键词、正则、JSON schema、工具权限、话题、审核和模型评判的护栏，可在请求、响应和流式传输中生效。它还支持精确与语义缓存、MCP 和 agent 网关、OIDC/SAML/SCIM 单点登录、审计日志，并可以单节点或基于 PostgreSQL 和 Valkey 的集群方式部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "启动网关：docker run -p 8080:8080 -p 8081:8081 -v antirion-data:/var/lib/antirion eliasbiondo/antirion",
+  "打开控制台 http://localhost:8081/ui/，粘贴首次启动时打印的 admin token 登录",
+  "在 Providers 中添加 OpenAI 或 Anthropic 提供商并填入 API key，测试通过后保存",
+  "在 Models 中添加模型（如 gpt-4.1-mini 或 claude-haiku-4-5），命名为 chat",
+  "在 API keys 中创建密钥，然后用 curl 或任意 OpenAI SDK 向 http://localhost:8080/v1 发送请求"
+ ],
+ "summary": "Antirion 是一个用 Rust 编写的开源 AI 网关，以单个二进制文件提供，内置管理控制台。它解决应用对接多家模型提供商时接口不统一、成本难控制、安全策略分散的问题。适合需要统一路由、预算限制、安全护栏和可观测性的开发团队，尤其适合高并发生产环境。",
+ "tagline": "高性能开源 AI 网关，统一接入多家模型提供商"
+}

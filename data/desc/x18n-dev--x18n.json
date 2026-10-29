@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "适合需要管理多语言资源的开发者，尤其是使用多种框架或希望统一 i18n 工作流的团队。",
+ "date": "2026-10-29",
+ "features": [
+  "自动检测 45+ 框架和库，零配置",
+  "支持 JSON、YAML、PO、Fluent 等多种文件格式",
+  "检查缺失键、未使用键、占位符不匹配等问题",
+  "检测过时翻译和硬编码字符串",
+  "提供 CLI、浏览器 UI、VS Code 扩展和 LSP 支持",
+  "支持从 i18n Ally 迁移配置"
+ ],
+ "intro": "x18n 是一个与框架无关的国际化（i18n）工具包，用于检查、查看和管理多语言资源。它支持 Vue、React、Angular、Svelte、Astro、Next.js、Nuxt、Flutter、Laravel、Rails、.NET 等 45+ 种预设，无需额外配置即可自动识别项目结构。\n\nx18n 能够处理 JSON、YAML、PO、Fluent、INI、Properties 等多种文件格式，并支持命名空间。它提供缺失键、未使用键、占位符不匹配等检查，还能检测过时的翻译、查找硬编码字符串，并支持按文本搜索键名。\n\n工具以 CLI、浏览器 UI、VS Code 扩展、LSP 语言服务器以及 Vite/Nuxt DevTools 面板等形式提供，方便在不同环境中使用。CLI 支持 --json 输出，便于集成到 CI 或脚本中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 pnpx @x18n/cli 查看 i18n 资源概览",
+  "运行 pnpx @x18n/cli check 进行 lint 和检查",
+  "使用 pnpx @x18n/cli usages nav.keys 列出指定键的用法",
+  "运行 pnpx @x18n/cli ui 启动浏览器交互界面"
+ ],
+ "summary": "x18n 是一个跨框架的国际化工具包，帮助开发者检查、查看和管理多语言资源。它能自动识别项目框架和文件格式，提供缺失键、未使用键、占位符不匹配等检查，并支持过时翻译检测和硬编码字符串提取。通过 CLI、浏览器 UI、编辑器扩展等多种方式使用，适合需要统一 i18n 工作流的开发团队。",
+ "tagline": "跨框架的 i18n 检查、查看与管理工具包"
+}

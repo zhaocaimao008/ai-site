@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已使用 DeepSeek Harness、希望让 AI 以独立 QQ 号身份参与私聊和群聊的开发者或进阶用户。需要自行准备机器人 QQ 小号和 OneBot v11 网关。",
+ "date": "2026-10-29",
+ "features": [
+  "模块化功能：表情包、语音、记忆、空间、B 站、翻唱、生图等均可独立开关、替换或自写扩展",
+  "本地记忆库：中文二元切词 + BM25 索引，结合遗忘曲线和重要程度加权，支持记忆合并与过时标记",
+  "群聊策略：按话题相关度插话、防刷屏刹车、合并转发展开、拍一拍互动，被叫必回",
+  "按聊天选模型：可为不同私聊或群聊单独指定模型，优先级从具体聊天到全局逐级回退",
+  "本地接口替换：语音合成、生图、翻唱换声、语音识别可接入本地模型或服务，面板生成脚本模板",
+  "安全默认：总开关默认关闭、试运行开启，权限按操作单独设置，执行前二次校验"
+ ],
+ "intro": "Aurabot 是一个 DeepSeek Harness（DSH）插件，它让 DSH 里的 AI 以独立 QQ 号「大肥鱼」的身份接入 QQ。通过 SnowLuma 或任意 OneBot v11 网关连接后，这个 AI 拥有独立人格、心情和本地记忆，能看图、收发语音和表情包、翻唱歌曲、写 QQ 空间日记、浏览 B 站并评论，还会主动找人聊天。\n\n项目采用模块化设计，表情、语音、记忆、空间、B 站、翻唱、生图等功能均可单独关闭、替换或自行编写扩展，群聊策略、提示词、回复拆分和模型选择也能通过模块修改，保存即生效。每个私聊或群聊对应一个 DSH 会话，可在侧栏查看 AI 的思考过程和工具调用。安全方面默认总开关关闭、试运行开启，不手动打开不会向 QQ 发送任何消息。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 桌面版执行：& \"$env:LOCALAPPDATA\\Programs\\DeepSeek Harness\\resources\\runtime\\cli\\bin\\dsh.cmd\" plugin --profile desktop add github:accomplish07zrh-eng/dsh-aurabot-qq",
+  "Linux / Docker 执行：dsh plugin --profile <profile> add github:accomplish07zrh-eng/dsh-aurabot-qq",
+  "重启 DSH，打开左侧栏「自动化任务」下的 Aurabot，按设置向导填写机器人 QQ 号和你的 QQ 号",
+  "选择 QQ 网关：使用 SnowLuma（Windows）或填入已有 OneBot v11 服务的正向 WebSocket 地址和 token",
+  "先试运行或直接上线，在面板中调整人格、权限和模块开关"
+ ],
+ "summary": "Aurabot 是一个 DeepSeek Harness 插件，让 DSH 里的 AI 以独立 QQ 号「大肥鱼」的身份接入 QQ。它通过 SnowLuma 或 OneBot v11 网关连接，具备人格、心情和本地记忆，能收发语音和表情包、翻唱、写空间日记、浏览 B 站并评论，还会主动找人聊天。功能模块化，可关闭、替换或自行扩展，适合想让 AI 以独立身份参与 QQ 私聊和群聊的用户。",
+ "tagline": "让 DeepSeek Harness 的 AI 以独立 QQ 号「大肥鱼」在 QQ 中生活"
+}

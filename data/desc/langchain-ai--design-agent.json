@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让团队在 Slack 中快速产出品牌一致视觉素材的设计、市场与内容团队，也适合研究 Deep Agents 与 Agent 工程实践的开发者。",
+ "date": "2026-10-29",
+ "features": [
+  "在 Slack 线程中接收需求与附件，并将成品回传到同一线程",
+  "每个线程分配独立沙箱，内置 Chrome、FFmpeg、HyperFrames、D2 等工具",
+  "通过 35 个技能路由选择工作流，按需加载设计 wiki 与品牌包",
+  "支持异步子 Agent 并行处理大型任务，如影片的分镜、动态分镜到制作",
+  "团队与个人两层记忆，可保存并复用设计规则",
+  "任务结束后通过 learn_from_job 记录经验，供后续任务参考"
+ ],
+ "intro": "Content Studio 是 LangChain 开源的品牌设计 Agent，基于 Deep Agents 构建，并部署在 Managed Deep Agents 上。用户在 Slack 线程里像向设计师提需求一样描述任务、附上已有文件，Agent 会返回符合品牌规范的成品文件，覆盖尺寸调整后的广告图、演示文稿、图表、示意图和动态影像等。\n\n项目把创意决策交给模型，把渲染、校验和交付交给代码。每个线程拥有独立的 LangSmith 沙箱，内置 Chrome、FFmpeg、HyperFrames、D2 和字体，产出物以代码形式保存在项目文件夹中，修改即编辑并重新渲染。Agent 通过技能路由选择工作流，结合设计 wiki 与品牌包，并支持团队记忆和个人记忆。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一个在 Slack 里使用的品牌设计 Agent：用户像向设计师提需求一样描述任务并附上文件，它便返回符合品牌规范的图片、演示文稿、图表或动态影像。项目基于 Deep Agents 构建，每个对话线程有独立沙箱，产出物以代码保存，便于修改和重新渲染，适合需要批量产出品牌素材的团队。",
+ "tagline": "在 Slack 对话中生成品牌视觉素材的设计 Agent"
+}

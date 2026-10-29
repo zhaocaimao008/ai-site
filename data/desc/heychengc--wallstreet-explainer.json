@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想制作财经/科技解读短片的内容创作者、开发者，以及使用 Claude Code 等 AI 工具进行视频生成的技术用户。",
+ "date": "2026-10-29",
+ "features": [
+  "提供财经短片的设计思路与风格规范（镜头、转场、数字表达）",
+  "内置素材搜索、下载、裁剪、截图和高亮定位工具",
+  "支持临时配音、时间线对齐和正式配音替换",
+  "提供人物抠像、去色边、镜头运动与景深等视觉工具",
+  "逐帧渲染视频，并支持混音（配音、原声、音效、配乐）",
+  "包含样片的文案、导演表和画面代码作为参考"
+ ],
+ "intro": "wallstreet-explainer 是一个面向 AI 工具的 Skill，用于生成华尔街风格的财经/科技解读短片。它定义了这类视频的设计思路、风格语言，并提供了找片、截图、配音、渲染和混音的工具链。\n\n项目强调真实素材与数字可视化：素材优先来自新闻发布会、产品发布、企业官方画面，数字和关系用图表、大字等方式表达。镜头运动克制，转场连贯，避免 PPT 式渐入渐出。整个片子通过代码逐帧绘制，按时间线编排，最后渲染成视频。\n\nREADME 提供了在 Claude Code 中安装使用的步骤，并包含样片《AI 到底有多烧钱》的完整示例，以及素材版权说明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/HeyChengC/wallstreet-explainer.git ~/.claude/skills/wallstreet-explainer",
+  "cd ~/.claude/skills/wallstreet-explainer",
+  "pip install -r requirements.txt",
+  "npm install && npx playwright install chromium",
+  "安装 ffmpeg 并放入 PATH，重启 Claude Code 后对 AI 说“用 wallstreet-explainer 做一条 1 分钟的片子，讲 AI 到底有多烧钱”"
+ ],
+ "summary": "wallstreet-explainer 是一个 AI Skill，用于生成华尔街风格的财经/科技解读短片。它规定了这类视频的素材选择、数字可视化、镜头运动和转场风格，并提供找片、截图、配音、渲染和混音等工具。适合想用 AI 工具制作财经短视频的创作者，通过代码逐帧绘制画面，最终渲染成片。",
+ "tagline": "用代码生成华尔街风格财经解读短片的 AI Skill"
+}

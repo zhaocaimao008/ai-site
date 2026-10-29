@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合制作无真人出镜 YouTube 视频的内容创作者，以及希望用 AI 代理批量生产解说类动画视频的开发者。",
+ "date": "2026-10-29",
+ "features": [
+  "支持 Director Mode 与 Autopilot Mode 两种制作流程",
+  "提供 6 种火柴人视觉风格、8 种视觉选项",
+  "Director Mode 生成导演阐述、分镜和逐场景视频提示词",
+  "Autopilot Mode 自动生成插图、配音、字幕、音效并合成视频",
+  "可指定画幅比例、旁白语言和声音",
+  "以 Skill 形式安装到支持 Skills 的 AI 助手中使用"
+ ],
+ "intro": "Stickman Video Director 是一个开源项目，目标是把一段主题、文章或完整脚本转成火柴人风格的动画视频，面向不想出镜的 YouTube 频道创作者。项目提供多种视觉风格，覆盖科普解说、心理励志、教育宣传、暖心故事等题材。\n\n它给出两种制作方式：Director Mode 由 AI 规划分镜和逐场景视频提示词，用户自己在 Google Flow 等工具生成片段，再用 CapCut 等剪辑；Autopilot Mode 则在 Codex、Claude Code 等能读写文件、执行命令的 AI 编程代理中运行，自动完成插图、配音、字幕、音效和视频合成，输出完整视频文件。\n\nAutopilot 需要可用的图像与语音生成服务以及本地视频渲染环境，Skill 本身免费开源，但接入的服务可能另行收费。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "向支持 Skills 的 AI 助手发送安装指令：Install this Skill for me: https://github.com/kaomei/stickman-video-director",
+  "安装后让助手阅读 SKILL.md，了解两种模式各自产出什么、需要哪些工具",
+  "选择 Director Mode 时，提供主题或文案，指定画幅、风格和时长，先获取导演阐述再要逐场景提示词",
+  "选择 Autopilot Mode 时，在 Codex 或 Claude Code 等环境中提供主题、文章或链接，由代理完成生成与合成"
+ ],
+ "summary": "这个项目把主题、文章或脚本转成火柴人动画视频，提供多种视觉风格，适合做科普、励志、故事类无真人出镜的 YouTube 内容。它有两种用法：一种由 AI 规划分镜和逐场景提示词，用户自行生成片段并剪辑；另一种在 AI 编程代理中自动完成插图、配音、字幕和视频合成。需要接入图像与语音生成服务及本地渲染环境。",
+ "tagline": "把脚本自动做成多风格火柴人动画视频"
+}

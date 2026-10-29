@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex 等编码代理的开发者，以及希望自托管轻量任务看板、在本地或树莓派上运行的个人用户。",
+ "date": "2026-10-29",
+ "features": [
+  "浏览器看板与 MCP server 合为一体，人和代理操作同一批任务",
+  "单二进制、零配置启动，数据保存在本地 SQLite",
+  "通过私有 git 仓库在多台机器间同步看板",
+  "支持 Claude Code、Codex 等 MCP 客户端接入",
+  "全局搜索、图片附件、Backlog 列与 Markdown/JSON 导出",
+  "可安装为后台服务并随登录启动"
+ ],
+ "intro": "Kanzo 把浏览器里的看板和 MCP server 打包进同一个小程序，让你和编码代理在同一批任务上协作。整个看板就是一个文件夹，数据存在 SQLite 里，配置在 config.toml，不需要账号，也不需要自己搭服务器。\n\n它用 Rust 编写，单个二进制约 4 MB，启动只需毫秒级，空闲内存占用也很低，可以跑在笔记本、台式机甚至树莓派上。通过一个你自己的私有 git 仓库，多台机器可以共享同一块看板；切换机器时执行同步即可，两边都改过时会询问保留哪一份。\n\n代理通过 MCP 接入后，可以领取任务、把卡片移到 doing、在工作过程中写评论；它还能根据所在仓库的 git remote 找到对应项目。看板支持搜索所有项目、附件图片、Backlog 列以及导出 Markdown 或 JSON。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：curl -LsSf https://github.com/emanuele-em/kanzo/releases/latest/download/kanzo-installer.sh | sh，或 cargo install kanzo",
+  "运行 kanzo 启动看板并打开 http://localhost:4242",
+  "接入代理：claude mcp add kanzo --scope user -- kanzo mcp，或 codex mcp add kanzo -- kanzo mcp",
+  "在设置中填入私有 git 仓库地址以启用多机同步，之后可用 kanzo sync 手动同步"
+ ],
+ "summary": "Kanzo 是一个自托管的看板工具，把网页看板和 MCP server 放进同一个程序，让开发者和编码代理围绕同一批任务协作。它体积小、启动快、无需账号和服务器，数据存在本地 SQLite 中，并可通过自己的私有 git 仓库在多台机器间同步。适合使用 Claude Code、Codex 等代理的开发者，也适合想在树莓派等设备上运行轻量任务管理的人。",
+ "tagline": "一个二进制同时提供看板与 MCP 服务，人和编码代理共用任务"
+}

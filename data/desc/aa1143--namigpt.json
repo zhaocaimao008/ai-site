@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合有一点 Python 和线性代数基础、想从零理解大模型工作原理的开发者与学习者。",
+ "date": "2026-10-29",
+ "features": [
+  "从零手写 GPT-2 模型，不依赖现成 Transformer 模块",
+  "15 篇图文教程，每篇配可运行脚本",
+  "加载 OpenAI 官方权重进行推理和文本生成",
+  "提供动态可视化，逐步展示矩阵计算过程",
+  "与 HuggingFace 实现对齐的测试，保证结果一致",
+  "包含 Gradio 网页演示，展示续写和候选词概率"
+ ],
+ "intro": "NamiGPT 是一套面向零基础读者的中文教程，目标是通过从零手写 GPT-2 来理解大模型的工作原理。教程使用 PyTorch 实现，不调用现成的 Transformer 模块，模型代码不到 200 行，并加载 OpenAI 官方权重进行推理和文本生成。\n\n内容分为 15 篇文章，从分词、Embedding、注意力机制到 Transformer 堆叠、加载权重和文本生成，每篇都配有可运行的脚本。教程用「猫吃鱼」这个三词例子逐步拆解矩阵运算，并提供动态可视化辅助理解。\n\n项目还包含与 HuggingFace 实现对齐的测试，确保手写模型的结果一致。适合想深入理解 GPT-2 内部机制、但被公式和论文劝退的开发者学习。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/aa1143/NamiGPT.git",
+  "cd NamiGPT && pip install -r requirements.txt",
+  "export HF_ENDPOINT=https://hf-mirror.com（国内网络建议设置）",
+  "运行示例代码加载模型并生成文本",
+  "python demo/app.py 启动网页演示"
+ ],
+ "summary": "NamiGPT 是一套中文教程，通过从零手写 GPT-2 帮助读者理解大模型内部机制。它用 PyTorch 实现模型，不调用现成 Transformer 模块，并加载官方权重进行推理和文本生成。教程包含 15 篇文章，每篇配有可运行脚本和动态可视化，用「猫吃鱼」例子拆解矩阵运算。适合有 Python 和线性代数基础、想深入理解 GPT-2 工作原理的开发者学习。",
+ "tagline": "从零手写 GPT-2，逐行理解大模型原理"
+}

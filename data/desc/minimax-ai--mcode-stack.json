@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 MiniMax Code 或其他支持 SKILL.md 的 AI 编码代理的开发者，尤其是希望规范 AI 辅助编码流程、提升代码审查和上下文管理效率的团队。",
+ "date": "2026-10-29",
+ "features": [
+  "提供 17 个 SKILL.md 格式的技能，覆盖任务拆分、上下文管理、代码审查、长命令检查等场景",
+  "技能可直接安装到 MiniMax Code，通过 /技能名 调用或由代理根据描述自动加载",
+  "支持作为插件整体安装，也可通过插件市场添加仓库地址进行安装和更新",
+  "包含检查清单和 WORKFLOW.md 工作流文档，帮助团队建立 AI 编码习惯",
+  "技能格式通用，大部分可在其他支持 SKILL.md 的代理中使用"
+ ],
+ "intro": "mcode-stack 是 MiniMax Code 团队在日常开发中实际使用的 AI 编码工作流和技能集合。它并非提示词合集或最佳实践清单，而是团队用来保持 AI 生成代码质量、决定任务是否交给子代理、管理长会话上下文等具体场景的操作指南。\n\n每个技能都是一个 SKILL.md 文件或检查清单，可以直接安装到 MiniMax Code 中使用。仓库包含 17 个技能，分为规划拆分、上下文与工具、长会话与命令、代码审查、实验与热修复等类别，覆盖 AI 辅助编码的常见环节。\n\n这些技能采用通用的 SKILL.md 格式，因此大部分也能在其他支持该格式的代理中使用。项目还提供了插件市场安装方式，方便整体安装和更新。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/MiniMax-AI/mcode-stack.git ~/mcode-stack",
+  "创建技能目录：mkdir -p ~/.agents/skills",
+  "复制单个技能：cp -R ~/mcode-stack/stacks/ronny/skills/long-command-check ~/.agents/skills/",
+  "在 MiniMax Code 新会话中输入 /skills 查看已安装技能，用 /long-command-check 运行",
+  "或通过插件市场安装：在 MiniMax Code 桌面版打开 Plugins，选择 Add marketplace 并输入 MiniMax-AI/mcode-stack"
+ ],
+ "summary": "mcode-stack 是 MiniMax Code 团队开源的 AI 编码工作流与技能集合，包含 17 个 SKILL.md 技能和检查清单，覆盖任务拆分、上下文管理、代码审查、长会话处理等环节。适合使用 MiniMax Code 或其他支持 SKILL.md 的 AI 编码代理的开发者，帮助规范 AI 辅助编码流程，提升代码质量和协作效率。",
+ "tagline": "MiniMax Code 团队自用的 AI 编码工作流与技能集"
+}

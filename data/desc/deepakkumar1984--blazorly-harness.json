@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本机或 CI 中运行编码智能体的开发者，以及需要可定制 Web 界面或编辑器集成的用户。",
+ "date": "2026-10-29",
+ "features": [
+  "提供聊天式 Web UI，支持流式回复、工具卡片、任务与上下文用量展示。",
+  "内置 bash、文件读写编辑、grep/glob、网页搜索、LSP 诊断等工具，并可接入 MCP 服务器。",
+  "支持多智能体编排，可生成子智能体、组建团队或并行执行。",
+  "会话持久化，每轮对话和工具调用都会保存，重启后仍可恢复。",
+  "权限预设（full-access / workspace-write / read-only）控制 agent 可操作的范围。",
+  "单二进制安装，支持 Linux、macOS、Windows 的 x64 与 arm64 平台。"
+ ],
+ "intro": "Blazorly Harness 是一个用 C# 编写的智能体编码运行时，提供完整的 agent 循环、工具管道、沙箱和会话持久化。它自带四种前端：Blazor Web UI、无头 CLI，以及面向编辑器和自动化的 JSON-RPC / ACP stdio 服务器。\n\n项目强调 token 效率和本地 LLM 友好，内置可选的 token 节省开关，并支持通过 OpenAI 兼容接口连接 DeepSeek、Ollama、LM Studio 等本地或远程模型。权限预设可控制 agent 对文件系统的访问范围，适合在个人电脑或 CI 环境中运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux/macOS 运行：curl -fsSL https://raw.githubusercontent.com/deepakkumar1984/blazorly-harness/main/installer/install.sh | bash",
+  "Windows 运行：powershell -c \"irm https://raw.githubusercontent.com/deepakkumar1984/blazorly-harness/main/installer/install.ps1 | iex\"",
+  "启动 Web UI：blazorly",
+  "在浏览器打开 http://localhost:5080，进入 Settings → Providers 添加提供商和密钥，并配置模型 ID。"
+ ],
+ "summary": "Blazorly Harness 是一个本地运行的智能体编码运行时，让 AI 代理读取文件、执行命令、搜索网页并调度子代理完成任务。它提供浏览器 Web UI 和无头模式，适合开发者在本机或 CI 中运行编码助手，也支持接入编辑器或自动化流程。项目注重 token 效率，并可通过权限预设限制代理对文件系统的访问。",
+ "tagline": "本地优先的智能体编码运行时，支持 Web UI 与无头模式。"
+}

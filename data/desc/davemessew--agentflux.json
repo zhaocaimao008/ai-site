@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地或自有服务器上搭建 AI 工作流、注重数据隐私的开发者与个人用户。",
+ "date": "2026-10-29",
+ "features": [
+  "可视化工作流编辑器，提供 17 个预配置步骤、8 个模板，支持分支、撤销/重做和 JSON 导入导出",
+  "AI 智能体：描述任务、选择数据源和模型后手动启动或按计划运行",
+  "视频转工作流：从录屏中识别操作步骤，带时间戳审阅后转为可编辑工作流（需从源码构建）",
+  "本地知识库：存储文档、查看运行观察结果，并将指令复用为技能",
+  "连接自有模型：支持 Ollama、LM Studio、vLLM 和 OpenAI 兼容端点",
+  "可追溯运行：检查步骤与结果、取消任务，并导出 JSON 或 CSV"
+ ],
+ "intro": "AgentFlux 是一个可在本地或服务器上通过 Docker 运行的可视化 AI 工作流平台。它把文档、数据源和语言模型连接成可编辑的流程图，每一步都可以手动配置，也可以让智能体根据任务描述自动生成工作流。\n\n平台支持导入 PDF、DOCX、XLSX、CSV、JSON 和文本文件，连接本地文件夹、HTTP 端点或已批准的程序，并接入 Ollama、LM Studio、vLLM 等 OpenAI 兼容的模型服务。运行记录可追溯，结果能导出为 JSON 或 CSV。\n\nAgentFlux 没有登录系统，默认只绑定 localhost，面向单用户使用。预构建的 Docker 镜像不包含模型，需要自行准备本地模型服务或外部 API 凭据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 release v0.2.0 下载 agentflux-0.2.0-linux-amd64.tar.gz 和 compose.yaml 到同一文件夹",
+  "在终端中运行 docker load -i agentflux-0.2.0-linux-amd64.tar.gz",
+  "运行 docker compose up -d --wait 启动服务",
+  "打开 http://localhost:4310 访问界面",
+  "在 Models 中连接本地模型服务（如 Ollama: http://host.docker.internal:11434）"
+ ],
+ "summary": "AgentFlux 是一个自托管的可视化 AI 工作流平台，把文档、数据源和语言模型连接成可编辑的流程图，也支持用智能体根据任务描述自动生成工作流。它适合希望在本地或自有服务器上处理文件、自动化任务并保持数据不外流的开发者与个人用户，模型可接入 Ollama、LM Studio 等本地服务。",
+ "tagline": "自托管的可视化 AI 工作流与智能体平台"
+}

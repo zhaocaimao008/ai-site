@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想快速制作知识类短视频的内容创作者，以及熟悉命令行、愿意用代码生成视频的开发者。",
+ "date": "2026-10-29",
+ "features": [
+  "两种预设画风：夜曲（适合底层知识）和寓言（适合心理行为演示）",
+  "根据文案或选题自动选择画风、生成字幕稿和分镜表",
+  "自动创建代码工程并渲染视频，支持 30 秒样片预览",
+  "自动配置音效，BGM 可自定义添加",
+  "基于 Canvas 逐帧绘制，通过浏览器截图合成视频"
+ ],
+ "intro": "这是一个面向 AI Agent 的 skill，用于生成抖音上流行的“Vibe 知识大赏”风格知识短片。它提供两种画风：「夜曲」适合讲解底层、难懂的知识，「寓言」适合把心理、行为逻辑直观演示出来。用户只需提供文案或选题，skill 会确认内容后自动选择画风、撰写字幕稿、排分镜表，并创建对应的代码工程。\n\n生成流程基于 Canvas 和 JavaScript 逐帧绘制，驱动浏览器截图后压成视频，再混入音效。音效自动配置，BGM 可自行添加。安装时需要 Python 依赖、Playwright、字体脚本，以及本机 Chrome 和 ffmpeg。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将项目目录放入 Agent 的 skill 目录，如 ~/.claude/skills/vibe-knowledge-film",
+  "安装依赖：pip install -r requirements.txt",
+  "安装 Playwright 浏览器：python -m playwright install",
+  "下载字体：python engine/get_fonts.py",
+  "创建工程：python scripts/new_film.py <工程目录> --world C（或 B）",
+  "渲染视频：python engine/render.py <工程目录> --serve"
+ ],
+ "summary": "这个项目是一个 AI Agent skill，用来生成抖音上流行的知识短片。它提供「夜曲」和「寓言」两种画风，分别适合讲解底层知识和演示心理行为逻辑。用户提供文案或选题后，skill 会自动选画风、写字幕稿、排分镜表并创建代码工程，先出样片确认再渲染全片。适合想快速制作知识短视频的创作者和开发者。",
+ "tagline": "用代码生成抖音风格知识短片，支持两种画风与自动配音效。"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 辅助开发、希望快速理解代码结构的开发者，以及需要快速上手项目的团队成员。",
+ "date": "2026-10-29",
+ "features": [
+  "多级缩放地图：从整体应用到文件、端点，展示依赖关系",
+  "通俗英文命名：用日常语言描述功能，悬停解释技术术语",
+  "跨仓库连接：跟踪导入关系，匹配前后端请求与响应",
+  "从页面探索：选择页面查看其背后的所有组件和服务",
+  "自然语言提问：用问题获取答案和迷你地图",
+  "健康检查：发现硬编码密码、未授权端点、未使用文件等"
+ ],
+ "intro": "Floorplan 是一个由 Claude 或 Codex 驱动的代码库可视化工具。它会读取你的项目代码，生成一张可交互的地图，用通俗的英文名称标注每个部分、文件和网络请求，并展示它们之间的连接关系。\n\n地图支持多级缩放，从整个应用深入到具体文件与端点，还能跨仓库匹配前端请求与后端接口。你可以从某个页面出发，查看其背后的所有组件、请求、服务端代码和外部服务。此外，地图支持自然语言提问，返回答案和迷你地图，并提供健康检查、最近改动高亮等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 18+ 和 Claude Code 或 Codex",
+  "Claude Code：运行 `claude plugin marketplace add haydenschmitty/floorplan` 和 `claude plugin install floorplan@floorplan`",
+  "Codex：在插件市场添加 `haydenschmitty/floorplan` 并安装 Floorplan，或运行 `codex plugin marketplace add haydenschmitty/floorplan` 和 `codex plugin add floorplan@floorplan`",
+  "启动新会话，请求生成 floorplan 或输入 `$floorplan`"
+ ],
+ "summary": "Floorplan 是一个利用 Claude 或 Codex 为代码库生成交互式地图的工具。它用通俗英文标注代码的各个部分和连接，帮助开发者快速理解应用结构，尤其适合 AI 辅助开发的项目和团队新人上手。",
+ "tagline": "用 AI 为代码库绘制交互式英文地图"
+}

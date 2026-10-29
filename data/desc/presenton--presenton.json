@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要快速生成演示文稿的开发者、团队及普通用户，尤其注重数据隐私和自托管能力的场景。",
+ "date": "2026-10-29",
+ "features": [
+  "通过提示词或上传文档生成演示文稿",
+  "导出完全可编辑的 PPTX 或 PDF 文件",
+  "支持自托管 Web 应用和桌面客户端（Mac/Windows/Linux）",
+  "兼容多种 AI 提供商（OpenAI、Gemini、Ollama 等）",
+  "内置多套演示模板，并支持自定义 PPTX 模板",
+  "提供 AI 演示生成 API"
+ ],
+ "intro": "Presenton 是一个开源的 AI 演示文稿生成工具，支持通过提示词或上传文档自动生成幻灯片，并导出为完全可编辑的 PPTX 或 PDF 文件。项目提供 Web 自托管（Docker）和桌面应用（macOS、Windows、Linux）两种使用方式，避免 SaaS 锁定和强制订阅。\n\n它兼容多种 AI 模型提供商，包括 Ollama、LM Studio、OpenAI、Gemini、Anthropic 等，也支持自带 API key 或使用本地模型。内置多套演示模板（如商务、创意、高管、通用等），并允许用户导入自己的 PPTX 设计作为模板。此外，项目还提供 AI 演示生成 API，方便集成到其他工作流中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 Docker 自托管 Web 版：参考官方文档 https://docs.presenton.ai/v3/get-started/quickstart",
+  "或从 https://presenton.ai/download 下载桌面应用（Mac/Windows/Linux）",
+  "启动后配置 AI 提供商（如 OpenAI、Ollama 等）的 API key 或本地模型",
+  "输入提示词或上传文档，选择模板生成演示文稿",
+  "在拖拽编辑界面调整后导出 PPTX 或 PDF"
+ ],
+ "summary": "Presenton 是一个开源的 AI 演示文稿生成工具，能根据提示词或上传文档自动创建幻灯片，并导出为可编辑的 PPTX 或 PDF。它支持自托管 Web 版和桌面客户端，兼容多种 AI 模型提供商，内置多套模板，也允许导入自定义 PPTX 设计。适合需要快速制作演示文稿、又希望避免 SaaS 锁定或注重数据隐私的开发者与团队。",
+ "tagline": "开源 AI 演示文稿生成器与 API"
+}

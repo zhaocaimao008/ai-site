@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 GitHub Copilot、Claude Code、Codex 或 Cursor 的开发者与设计师，希望在编码环境中快速生成高质量 UI 设计原型。",
+ "date": "2026-10-29",
+ "features": [
+  "原生集成多种编程 Agent，包括 VS Code Copilot Chat、Claude Code、Codex、Cursor 等",
+  "提供 270+ 设计技能、150+ 品牌设计系统和 160+ 可复用示例",
+  "支持从真实示例开始修改，避免从零生成",
+  "品牌设计系统可记忆并默认应用于后续生成",
+  "生成结果以文件形式保存在仓库中，无数据库锁定",
+  "可将原型一键转换为生产代码"
+ ],
+ "intro": "Open Design Agent Kit 将 Open Design 的设计技能、品牌设计系统和可复用示例直接集成到 GitHub Copilot Chat、Claude Code、Codex、Cursor 等支持 MCP 的编程 Agent 中。你无需安装桌面应用或配置额外 API 密钥，只需在聊天中描述需求，Agent 就会用自身的模型和文件工具生成设计文件。\n\n项目内置了 270+ 设计技能、150+ 品牌设计系统和 160+ 可复用示例，覆盖落地页、仪表盘、移动原型、演示文稿等场景。生成结果以普通文件形式保存在你的仓库中，方便版本控制和后续开发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "VS Code：从 Marketplace 安装“Open Design Agent Kit”扩展",
+  "Claude Code：运行 `/plugin marketplace add feimacode/open-design-agent-kit`，然后 `/plugin install open-design`",
+  "或运行 `npx @feimacode/open-design-agent-kit init --tools claude` 初始化项目",
+  "在 Agent 聊天中描述设计需求，如“设计一个落地页”"
+ ],
+ "summary": "Open Design Agent Kit 把专业设计能力直接嵌入你正在使用的编程 Agent 中，无需切换应用或配置额外密钥。它提供大量设计技能、品牌系统和可复用示例，帮助你在聊天中快速生成落地页、仪表盘、原型等设计文件，并直接保存在仓库里。适合希望提升设计产出效率的开发者与设计师。",
+ "tagline": "把专业设计能力嵌入你正在用的编程 Agent"
+}
