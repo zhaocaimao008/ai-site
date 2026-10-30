@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地生成游戏音效、音乐或配音的开发者与创作者，以及希望通过 MCP 让 AI 智能体自动制作音频的用户。",
+ "date": "2026-10-30",
+ "features": [
+  "根据文字描述生成音效、环境声和拟音",
+  "生成纯音乐或带歌词的歌曲，支持 extend、cover、repaint",
+  "文本转语音、声音克隆与声音转换",
+  "多轨时间线编排、MIDI、效果与混音",
+  "内置 MCP 服务器，提供 24 个工具供 Claude Code 和 Cursor 调用",
+  "本地 HTTP API（端口 17494）"
+ ],
+ "intro": "Soundbox 是一个在本地 GPU 上运行的开源音频生成应用，定位为 ElevenLabs 和 Suno 的免费替代品。它基于 Stable Audio、ACE-Step 等开放权重模型，可以生成音效与环境声、纯音乐、带歌词的歌曲，以及语音和声音克隆，全程离线，无需账号或积分。\n\n除了生成，它还提供多轨时间线用于编排、混音和加效果，并支持把保存的声音分配给脚本台词。项目提供 Windows 和 macOS 桌面安装包，同时开放本地 HTTP API 和 MCP 服务器，可接入 Claude Code、Cursor 等智能体客户端。\n\n所有数据保存在本地 SQLite 文件和 WAV 文件夹中，模型下载前会显示许可证与显存需求。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的安装包（Windows x64、macOS Apple silicon 或 Intel）并安装",
+  "首次启动时确认未签名应用的运行提示",
+  "打开 SFX 页面，描述材质、动作和空间，选择模型后生成，首次使用会先下载模型",
+  "如需接入智能体，启动 Soundbox 后运行：claude mcp add --transport http soundbox http://127.0.0.1:17494/mcp"
+ ],
+ "summary": "Soundbox 让你在自己的 GPU 上离线生成音效、音乐、带歌词的歌曲和语音，并支持声音克隆，不需要账号或付费额度。它把生成、多轨编排和混音放在同一个桌面应用里，还提供本地 API 和 MCP 服务器，方便 Claude Code、Cursor 等智能体直接调用。适合做游戏音频、视频配乐或需要批量生成语音的开发者与创作者。",
+ "tagline": "本地运行的开源 AI 音效、音乐与语音生成工具"
+}

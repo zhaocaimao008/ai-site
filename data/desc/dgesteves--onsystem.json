@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合维护 React 设计系统包、并在 monorepo 中使用编码 Agent 的团队与开发者。",
+ "date": "2026-10-30",
+ "features": [
+  "检查组件、部件、props 和变体是否存在，例如 <Card.Header>、variant=\"danger\"",
+  "发现原生元素可替换为设计系统组件的情况，如 <button> 改为 <Button>",
+  "检测硬编码颜色，包括 hex、rgb、hsl、oklch 和 Tailwind 调色板类",
+  "检查仅图标按钮是否缺少可访问名称",
+  "支持从样式表、DTCG 文件或 DESIGN.md 读取 token，并可导出",
+  "提供 MCP server 与 GitHub Action，覆盖编辑时和 PR 检查"
+ ],
+ "intro": "onsystem 是一个面向 React 设计系统团队的工具，用来约束编码 Agent 生成的 UI 代码。Agent 往往按训练数据写界面，容易写出调色板颜色、硬编码间距、原生元素、不存在的组件或变体等问题。onsystem 用 TypeScript 编译器从源码读取你的组件、cva 与 tv 变体、部件和 token，再检查 .tsx 与 .jsx 文件，每条问题都带规则 id、位置和修复建议。\n\n它可以在编辑时和 Pull Request 阶段运行，也提供 GitHub Action 只检查 PR 改动的行。在 monorepo 中只需在设计系统包里配置一次，所有应用都能生效。它同时以 MCP server 形式提供，可接入 Cursor、VS Code、Claude Code 等客户端，并与 @shadcn/lint 并行工作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Cursor 中通过 Install server 按钮安装 onsystem MCP server",
+  "或手动配置命令：npx -y onsystem --root ${workspaceFolder}",
+  "在 Claude Code 中安装 onsystem 插件",
+  "在 GitHub Actions 中使用 dgesteves/onsystem@v0 检查 PR 改动行"
+ ],
+ "summary": "编码 Agent 写 UI 时常凭训练数据发挥，容易用上调色板颜色、硬编码间距、原生元素或设计系统里不存在的组件与变体。onsystem 从源码读取你的组件、变体和 token，在编辑时与 Pull Request 阶段检查 .tsx 和 .jsx 文件，并为每条问题给出修复建议。它适合维护 React 设计系统包、在 monorepo 中引入编码 Agent 的团队，配置一次即可覆盖所有应用。",
+ "tagline": "让编码 Agent 遵守你的设计系统"
+}

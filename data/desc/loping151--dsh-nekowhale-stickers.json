@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合给聊天机器人或 AI 助手添加表情包能力的开发者，以及使用 DeepSeek Harness、MCP 或 QQ 机器人框架的用户。",
+ "date": "2026-10-30",
+ "features": [
+  "逐张标注的表情知识库，含场景标签、动作描述、梗出处和双人表情方向",
+  "按情绪和场景词打分检索，支持中文部分匹配与随机去重",
+  "本地模板生成文字表情包：想、举牌、葱卷、上联、下联、抱",
+  "提供 cordis 服务、MCP server、回复标记、CLI 和公开 JSON 等多种接口",
+  "支持增量同步、黑白名单和 agent 自选表情",
+  "dsh 网页界面内置大肥鱼桌宠，可双击查询 DeepSeek 余额"
+ ],
+ "intro": "这个项目把「大肥鱼」和「GPT娘」两套表情包整理成结构化知识库，逐张标注使用场景、画面描述、梗出处和双人表情的方向，让模型能按情绪或场景检索合适的表情，而不是靠视觉理解图片。常驻上下文占用约 60 token。\n\n它提供多种接入方式：作为 DeepSeek Harness 插件安装后，模型可通过 sticker_search、sticker_send 等工具找图发图；也提供 MCP server、cordis 服务、[sticker:名字] 回复标记、CLI 和公开 JSON，方便在 QQ 机器人、LangBot、NoneBot 等框架中使用。另有本地模板，可用文字生成「想」「举牌」「葱卷」「上联」「下联」「抱」等表情。\n\n在 dsh 网页界面中还会显示大肥鱼桌宠，双击可查询 DeepSeek 余额。表情包形象由「可以叫我云大人/雾雪」制作，代码与数据分别采用 Apache-2.0 和 CC BY-NC 4.0 许可。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装插件：dsh plugin --profile web add dsh-nekowhale-stickers",
+  "重启 dsh web，或在网页侧栏「插件 → 添加插件」中填入 dsh-nekowhale-stickers",
+  "在网页侧栏「插件 → 大肥鱼表情包」中调整配置并保存",
+  "在其他框架中可通过 MCP 接入：npx -y dsh-nekowhale-stickers mcp",
+  "也可用 CLI 试用：npx dsh-nekowhale-stickers search 摸鱼"
+ ],
+ "summary": "这是一个面向聊天机器人的表情包知识库，把大肥鱼和 GPT娘两套表情逐张标注场景、梗和方向，让模型能按情绪检索并发送合适表情，也支持用模板本地生成文字表情。它可作为 DeepSeek Harness 插件、MCP server 或 CLI 使用，适合给 QQ 机器人、AI 助手等添加表情互动能力。",
+ "tagline": "给聊天机器人用的表情包知识库与本地出图工具"
+}

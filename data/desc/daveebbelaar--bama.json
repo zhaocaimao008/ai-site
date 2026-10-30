@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 代理快速构建原生 macOS 应用的开发者，尤其是熟悉 Swift 和 SwiftUI 但想提升自动化程度的人。",
+ "date": "2026-10-30",
+ "features": [
+  "提供 21 个代理技能，覆盖从克隆、规划、编码、设计到发布的完整开发流程",
+  "支持通过截图克隆现有应用界面，并生成屏幕索引和用户故事",
+  "包含 Swift 6 并发、SwiftData、AppKit 桥接等编码指导",
+  "提供 Liquid Glass 设计、布局网格、设计系统等设计技能",
+  "内置构建、快照验证和测试技能，支持亮暗模式检查",
+  "附带 12 个小型 Mac 应用的构建计划，可直接使用"
+ ],
+ "intro": "BAMA 是一套面向 AI 代理的“技能”集合，旨在帮助开发者用 Swift 和 SwiftUI 构建原生 macOS 应用。它覆盖从克隆现有应用界面、规划用户故事、编写代码、设计界面到测试发布的完整流程，所有操作都通过代理完成，无需打开 Xcode 图形界面。\n\n项目包含 21 个技能，分为 Start、Plan、Code、Design、Ship 五个阶段。你可以让代理克隆喜欢的应用并截图分析，生成带验收标准的用户故事，然后逐个里程碑实现。设计阶段提供 Liquid Glass 风格、布局网格、设计系统等指导，发布阶段则包含构建、快照验证和测试。\n\nBAMA 还提供了 12 个小型 Mac 应用的构建计划（如窗口贴靠、剪贴板历史），可直接作为起点。它支持 Claude Code、Codex、Cursor 等多种代理，通过插件或 skills.sh 安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx skills@latest add daveebbelaar/bama 安装技能",
+  "在代理中输入 /bama 获取下一步建议",
+  "或直接让代理克隆应用：Clone my to-do app as a native Mac app. Screenshot every screen, write the user stories, and build milestone 1."
+ ],
+ "summary": "BAMA 是一套面向 AI 代理的技能集合，帮助开发者用 Swift 和 SwiftUI 构建原生 macOS 应用。它覆盖从克隆现有应用界面、规划用户故事、编写代码、设计界面到测试发布的完整流程，所有操作通过代理完成，无需打开 Xcode。适合希望用 AI 代理自动化开发 macOS 应用的开发者，尤其适合快速原型和克隆现有应用。",
+ "tagline": "用 AI 代理技能构建原生 macOS 应用"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用编码 Agent 批量制作竖屏解说短视频的开发者、内容创作者和技术布道者，需要具备 Node、ffmpeg 等基础环境。",
+ "date": "2026-10-30",
+ "features": [
+  "九个 Agent Skills 覆盖策略、钩子、脚本、分镜、配音、构建与 QA 全流程",
+  "Remotion 剪纸组件库：24 个背景、17 种运镜、10 种转场",
+  "胶片质感层与 79 个合成音效、8 段配乐，无需授权音频文件",
+  "支持 Claude Code、OpenCode、Codex、Gemini CLI、Cursor、Copilot 等读取 Agent Skills 的工具",
+  "安装器提供 Minimal、Standard、Full、Custom 四种模式，可后续升级",
+  "可选本地 Qwen3-TTS 配音与 ASR 词级时间对齐"
+ ],
+ "intro": "papercut-explainer 把「做一条竖屏解说短视频」拆成一套可交给编码 Agent 执行的流程。你只需用自然语言描述需求，例如「用 25 秒解释这个仓库」，Agent 就会依次完成选题策略、钩子、脚本、分镜、配音和 Remotion 场景搭建，最后你审看静帧和成片。\n\n项目由两部分组成：九个遵循开放 SKILL.md 格式的 Agent Skills，覆盖从策略到 QA 的各个阶段，也可单独调用某一阶段；以及一套 Remotion 组件库，包含剪纸风格组件、24 个背景、17 种运镜、10 种转场、胶片质感层、79 个音效和 8 段配乐。\n\n输出为 1080×1920 竖屏视频，画面模仿分层彩纸拼贴效果。配音可使用占位音轨，也可安装本地 Qwen3-TTS 生成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx skills add 0xS4N4TG/papercut-explainer",
+  "在 Agent 中说「set up papercut-explainer」，由 papercut-setup 完成克隆与安装",
+  "或手动执行 git clone https://github.com/0xS4N4TG/papercut-explainer && cd papercut-explainer && ./install.sh",
+  "按提示选择 Minimal、Standard 或 Full 模式",
+  "向 Agent 描述视频需求，审看静帧与最终成片"
+ ],
+ "summary": "这是一个把竖屏剪纸风格解说视频制作流程交给编码 Agent 的开源项目。它提供九个 Agent Skills 和一套 Remotion 组件库，你只需描述想解释的内容，Agent 就会完成脚本、分镜、配音和场景搭建，并输出 1080×1920 视频。适合需要快速产出技术解说短视频的开发者与内容创作者。",
+ "tagline": "用编码 Agent 生成剪纸风格竖屏解说短视频"
+}

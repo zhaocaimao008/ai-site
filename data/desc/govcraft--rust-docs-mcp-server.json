@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 AI 编程助手编写 Rust 代码的开发者，尤其是需要确保 crate API 准确性的场景。",
+ "date": "2026-10-30",
+ "features": [
+  "针对单个 Rust crate 抓取最新文档并生成嵌入",
+  "支持指定 crate 版本和 feature 集合",
+  "使用 OpenAI text-embedding-3-small 进行语义搜索",
+  "使用 gpt-4o-mini 基于检索到的文档生成答案",
+  "缓存文档和嵌入到本地 XDG 数据目录",
+  "通过 MCP 协议暴露 query_rust_docs 工具"
+ ],
+ "intro": "AI 编程助手（如 Cursor、Cline）在生成 Rust 代码时，常因训练数据截止而推荐过时的 crate API。本项目是一个 MCP 服务器，针对单个 Rust crate 抓取当前文档，生成嵌入向量，并通过工具调用让 LLM 基于最新文档回答问题。\n\n每个服务器实例专注于一个 crate，支持指定版本和 feature，使用 OpenAI 的嵌入和摘要模型。文档和嵌入会缓存到本地，避免重复生成。服务器通过 stdio 与 AI 助手通信，暴露 query_rust_docs 工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "设置环境变量：export OPENAI_API_KEY=\"sk-...\"",
+  "从 GitHub Releases 下载对应系统的二进制文件并放入 PATH",
+  "首次运行：rustdocs_mcp_server \"serde@^1.0\"（等待文档下载和嵌入生成完成）",
+  "在 AI 编程助手中配置该 MCP 服务器，即可调用 query_rust_docs 工具"
+ ],
+ "summary": "这个项目解决 AI 编程助手因训练数据过时而推荐旧版 Rust crate API 的问题。它作为 MCP 服务器运行，针对指定 crate 抓取当前文档并生成嵌入，让 LLM 通过工具调用基于最新文档回答 API 使用问题。适合使用 Cursor、Cline 等助手编写 Rust 代码、需要准确 crate 信息的开发者。",
+ "tagline": "为 AI 编程助手提供最新 Rust crate 文档的 MCP 服务器"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为自有业务或客户做 SEO 审计、内容规划和竞品分析的开发者、SEO 从业者及网站运营人员，尤其是已经在使用 AI 编程助手的人群。",
+ "date": "2026-10-30",
+ "features": [
+  "网站审计：检查页面可访问性、结构化数据、答案内容和业务身份，输出优先级行动清单",
+  "AI 搜索优化：覆盖 AEO 和 GEO，帮助搜索引擎与 AI 工具理解和引用网站内容",
+  "竞品对比：查找并验证服务、客户和市场相近的竞品，将差距转化为计划",
+  "外链与声誉规划：从发布库和实时研究中筛选相关机会，生成四周日历",
+  "内容撰写：基于业务和已检查内容生成完整文章草稿，标注待确认事实",
+  "报告输出：生成 HTML 和 PDF 格式的品牌化报告，包含证据和下一步行动"
+ ],
+ "intro": "BeyondSEO 是一个免费开源的 AI SEO 技能（skill），可以安装到 Claude Code、ChatGPT、Codex 等 AI 助手中使用。它围绕网站审计、AI 搜索优化（AEO/GEO）、内容撰写、竞品对比和外链规划提供工作流，帮助用户从域名和目标出发，得到可执行的计划、内容草稿和改进建议。\n\n项目覆盖技术 SEO、答案引擎优化、生成式引擎优化、本地 SEO 和声誉管理。它内置原生爬虫引擎，无需 API key 即可运行；可选接入只读的 Google Search Console 和 Analytics 数据来补充真实表现证据。报告会列出受影响页面、每项修改的原因、内容草稿以及验证结果的方式。\n\n项目以 Python 编写，采用 MIT 协议，提供 HTML 和 PDF 格式的品牌化报告输出，并包含一个虚构示例业务用于演示报告格式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并安装 BeyondSEO skill（如 2.10.0 版本的 zip 包）到你的 AI 助手",
+  "在助手中输入提示词：Use BeyondSEO to audit https://example.com.",
+  "补充业务信息，例如：Understand our business first. Tell me what to fix, which competitors really matter, and what to write next. Give me a clear 30/60/90-day plan.",
+  "查看生成的报告，按优先级选择要执行的工作"
+ ],
+ "summary": "BeyondSEO 是一个可安装到 AI 助手里的开源 SEO 技能，帮助用户从网站域名和目标出发，完成页面审计、AI 搜索优化、竞品对比、外链规划和内容草稿撰写。它适合需要为自有业务或客户做 SEO 工作的开发者与运营人员，尤其适合已经在使用 Claude Code、ChatGPT 等助手的人，把 SEO 流程直接放进对话中执行。",
+ "tagline": "在 AI 助手里完成网站 SEO 审计与内容规划"
+}

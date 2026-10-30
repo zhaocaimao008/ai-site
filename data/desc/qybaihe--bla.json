@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要发布软件构建产物并希望增加逆向工程难度的开发者，尤其是使用 Electron、JavaScript、WebAssembly 或 Python 的团队。",
+ "date": "2026-10-30",
+ "features": [
+  "自动发现并保护多种构建产物格式，如 dist/、build/、.asar、.wasm、.sqlite 等",
+  "通过植入格式有效的诱饵、蜜罐元数据和虚假控制流来误导分析器",
+  "将产物推过 REA 的资源预算限制，如头部大小、嵌套深度、接口清单等",
+  "保持运行时行为等价，不影响最终用户使用",
+  "提供 CLI 命令和 MCP 服务器，可与编码代理集成",
+  "包含基准测试和针对真实 REA 的实证验证报告"
+ ],
+ "intro": "BLA（Blind LLM Agents）是一个防御性工具，用于保护你自己发布的软件构建产物，防止被 AI 逆向工程代理（REA）自动分析。它通过植入诱饵、耗尽资源预算、制造歧义等手段，让分析器在尝试理解代码时消耗大量 token 并得到不完整或误导性的结果，同时保持程序运行时行为不变。\n\nBLA 支持多种格式，包括二进制、Electron 应用、JavaScript 包、Python、WebAssembly、Go buildinfo、SQLite、模型文件等。它提供命令行和 MCP 集成，可以自动发现构建目录并执行审计、保护、验证流程。项目包含基准测试和针对真实 REA 的实证结果，但部分格式的防护尚未经过实际验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx bla-agents setup  # 注册 MCP 和技能到你的编码代理",
+  "npx bla-agents harden .  # 对当前项目执行一键 Counter-REA 处理",
+  "npx bla-agents benchmark  # 运行 14 个目标的基准测试"
+ ],
+ "summary": "BLA 是一个防御性工具，用于保护你自己发布的软件构建产物，防止被 AI 逆向工程代理自动分析。它通过植入诱饵、耗尽资源预算和制造歧义，让分析器消耗大量 token 并得到不完整结果，同时保持程序运行时行为不变。适合需要发布 Electron 应用、JavaScript 包、WebAssembly 或 Python 等产物的开发者，增加逆向工程难度。",
+ "tagline": "对抗 AI 逆向工程代理的二进制保护工具"
+}

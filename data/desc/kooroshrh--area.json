@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究高分辨率图像生成、希望在不微调模型的情况下突破扩散 Transformer 原生分辨率限制的开发者和研究人员。",
+ "date": "2026-10-30",
+ "features": [
+  "免训练即可接入 diffusers 的 FLUX.1 和 Ideogram 4 管线",
+  "两阶段注意力：跨尺度粗注意力 + 自适应窗口细注意力",
+  "支持 2K 到 4K 甚至更高分辨率生成，速度随分辨率提升",
+  "提供 generate.py 命令行工具和 Python API 两种使用方式",
+  "附带 HRGen-1K 高分辨率生成基准的 1000 条提示词",
+  "支持多 GPU 分摊模型和低显存自动 CPU offload"
+ ],
+ "intro": "AReA 是一种无需训练即可插入扩散 Transformer 的注意力机制，用于生成超出模型训练分辨率的图像。它观察到去噪过程中注意力的有效感受野会从早期全局结构逐渐收窄到后期局部细节，因此分两阶段处理：第一阶段在低分辨率网格上做跨尺度粗注意力，第二阶段在逐步缩小的局部窗口内做细注意力，并加入 Halo 邻域和全局 KV 桥接。\n\nAReA 不计算目标分辨率的完整注意力，也不需要 RoPE 外推、额外参数或微调，且与模型无关。项目提供 FLUX.1 和 Ideogram 4 的官方实现，附带 HRGen-1K 高分辨率生成基准提示词。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/KooroshRH/AReA.git && cd AReA",
+  "安装对应 CUDA 版本的 PyTorch，然后执行 pip install -r requirements.txt",
+  "在 Hugging Face 上接受模型许可并运行 huggingface-cli login",
+  "运行 python generate.py --model flux1 --prompt \"...\" --height 4096 --width 4096 --seed 0 生成图像"
+ ],
+ "summary": "AReA 是一个免训练的注意力机制，用来让扩散 Transformer 生成远超其训练分辨率的图像。它利用去噪过程中注意力感受野从全局到局部的变化规律，分两阶段计算注意力，避免在目标分辨率上做完整注意力，也不需要额外参数或微调。项目提供 FLUX.1 和 Ideogram 4 的官方实现，适合想低成本生成高分辨率图像的研究者和开发者。",
+ "tagline": "免训练的高分辨率扩散 Transformer 注意力机制"
+}

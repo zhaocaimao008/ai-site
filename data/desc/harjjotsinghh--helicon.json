@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Meta Muse Code CLI 的开发者，以及希望在桌面或 VS Code 中获得图形化会话、diff 与审批界面的用户。",
+ "date": "2026-10-30",
+ "features": [
+  "按工作目录分组的项目与会话历史，支持恢复任意会话",
+  "在编辑发生处展示 inline diff，并显式呈现审批（onRequest / promptUnmatched / denyUnmatched）",
+  "线程旁的文件查看器，可浏览源码、预览编辑 Markdown、查看图片、视频和 PDF",
+  "展示 Muse Code 报告的 5 小时窗口与每周额度用量",
+  "支持设置、暂停、恢复、修改和清除 /goal",
+  "管理后台工具调用与 workflow 运行，可取消、跳过或重试"
+ ],
+ "intro": "Helicon 是 Meta Muse Code CLI（命令为 muse）的开源图形客户端，提供 Windows、macOS、Linux 桌面应用和 VS Code 扩展，另有浏览器试用版。Muse Code 本身只有终端界面，Helicon 把它包装成类似 Codex、Claude 桌面应用的体验：按工作目录分组项目，每个项目下保留会话与任务历史，可随时恢复，包括从 muse 终端 TUI 启动的会话。\n\n它通过官方 @muse-code/sdk 使用 Muse Session Protocol（MSP）与 muse serve 通信，不抓取终端输出；认证沿用用户自己的 muse login，不存储凭据，状态保存在本地 SQLite。桌面端基于 Tauri 2，与 Web 端共用同一套 React UI。\n\n项目为 MIT 协议的社区非官方项目，与 Meta 无隶属关系，使用前需自行安装并登录 muse CLI。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装并登录 Muse Code CLI：muse login",
+  "从官网或 GitHub Releases 下载对应平台的桌面安装包，或从 VS Code Marketplace / Open VSX 安装扩展",
+  "打开 Helicon，选择工作目录创建或恢复会话",
+  "在会话中查看 diff 与审批请求，按需批准或拒绝"
+ ],
+ "summary": "Helicon 为只有终端界面的 Meta Muse Code CLI 提供图形客户端，包含跨平台桌面应用和 VS Code 扩展。它把项目、会话历史和 diff 集中展示，在编辑位置呈现改动并显式给出审批选项，还提供文件查看器和用量面板。适合已使用 muse CLI、希望在桌面或编辑器里更直观地管理编码会话与审批的开发者。",
+ "tagline": "Meta Muse Code CLI 的开源桌面客户端与 VS Code 扩展"
+}
