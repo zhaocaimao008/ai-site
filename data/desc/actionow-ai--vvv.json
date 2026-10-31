@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI Agent 快速制作婚礼视频等短片，并愿意复用模板的开发者或普通用户。",
+ "date": "2026-10-31",
+ "features": [
+  "提供多种可编辑婚礼视频模板，支持 16:9 和 9:16 画幅",
+  "支持 Claude Code、Codex、Cursor 等 25+ 个 Agent 接入",
+  "Agent 可自动整理照片、按情绪分组并规划节拍时间线",
+  "支持从抖音、小红书、快手等链接学习参考视频并复刻",
+  "渲染前自动检查画幅、音量、静止画面和卡点",
+  "可将工程打包为 .vvv 文件，便于交接给其他 Agent"
+ ],
+ "intro": "vvv 是一个面向编程 Agent 的开源视频模板与技能库。它提供可编辑的婚礼视频模板，并支持 Claude Code、Codex 等 25+ 个 Agent 通过插件、npx 或 MCP 方式接入。用户只需提供照片、文案和音乐，Agent 就能完成从整理素材、规划节拍到渲染成片的流程。\n\n项目强调模板复用：场景结构、版式、节奏和检查只做一次，每部新片只修改照片、名字、日期、文案和配乐等属于该片的内容。此外，vvv 还能学习参考视频的结构和节奏，用用户自己的素材重建为可编辑工程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code 用户：运行 `/plugin install vvv --marketplace actionow-ai/vvv`",
+  "其他 Agent 用户：运行 `npx skills add actionow-ai/vvv`，再 clone 本仓库并设置 `VVV_KIT`",
+  "MCP 客户端：运行 `claude mcp add --transport http vvv https://mcp.vibevision.video/mcp`",
+  "确保本机已安装 Python 3.9+、Node.js 26 和 npm"
+ ],
+ "summary": "vvv 是一个给编程 Agent 用的开源视频模板库，主要解决婚礼视频等短片制作中反复设计、生成和调试同类视频代码的问题。它提供可编辑模板，用户只需提供照片、文案和音乐，Agent 就能完成整理素材、规划节拍、渲染成片和检查。适合想借助 Claude Code、Codex 等 Agent 快速出片，并希望复用模板或复刻参考视频结构的场景。",
+ "tagline": "一次构建视频模板，多次复用的 Agent 技能"
+}

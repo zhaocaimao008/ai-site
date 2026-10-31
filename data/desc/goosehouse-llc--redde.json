@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在自己的机器上运行 Hermes 或兼容 OpenAI 的模型服务器，并希望通过 iPhone、iPad 或 CarPlay 便捷访问和管理 AI agent 的开发者与用户。",
+ "date": "2026-10-31",
+ "features": [
+  "语音优先：设备端语音识别，支持免提模式、打断、AirPods 和 CarPlay，可切换摄像头将画面随问题发送。",
+  "实时观察 agent 工作：流式推理、工具调用、子 agent，以及审批、澄清问题、sudo 提示和密钥卡片，可通过通知或语音回答。",
+  "手机工具：开启后 agent 可访问日历、提醒事项、联系人、照片和文件文件夹，所有更改先经你确认。",
+  "丰富的回复渲染：支持 Markdown、代码高亮、表格、任务列表、Mermaid 图表和数学公式，离线渲染且无第三方 Swift 依赖。",
+  "完整的 agent 管理：共享会话账本、项目、多个服务器和 Hermes 配置文件、技能与工具集、记忆和上下文文件、cron 任务和 Kanban 板。",
+  "隐私保护：离线消息队列、已打开对话在无连接时仍可阅读、Face ID 锁定，无账号、分析或追踪。"
+ ],
+ "intro": "Redde 是一个面向 iPhone、iPad 和 CarPlay 的客户端，用于连接你在自己机器上运行的 Hermes AI agent，或任何兼容 OpenAI 的模型服务器。你可以通过语音或文字与 agent 交互，查看它的推理过程和工具调用，并批准它要执行的操作。\n\n应用强调隐私：无需账号，不包含分析或追踪，对话只发送到你设置的服务器，语音识别在设备端完成，凭据保存在 iOS Keychain 中。唯一由 Goosehouse 运营的服务是可选的推送中继，通知经过加密且无法被读取。\n\nRedde 还提供会话、项目、技能、cron 任务和 Kanban 板的管理，支持 Siri、快捷指令、小组件和 Apple Watch 等 iOS 生态功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 iOS 26 或更高版本，并准备好后端：Hermes Dashboard（`hermes serve`，端口 9119）、Hermes API（端口 8642，需 `API_SERVER_KEY`）或 OpenAI 兼容服务器（如 llama.cpp、Ollama）。",
+  "在电脑上运行 `scripts/setup-code.py --name Home --dashboard http://hermes.home.example:9119 --user redde` 生成设置链接和二维码。",
+  "在 Redde 的设置界面选择“扫描设置代码”或“粘贴设置链接”，确认后保存连接。",
+  "已设置一台设备后，可在“设置 › 连接 › 设置另一台设备”中显示代码，供其他设备扫描。"
+ ],
+ "summary": "Redde 是一个 iOS 客户端，让你在 iPhone、iPad 或 CarPlay 上连接自己运行的 Hermes AI agent 或兼容 OpenAI 的模型服务器。它支持语音和文字交互，能展示 agent 的推理与工具调用过程，并让你审批操作。适合注重隐私、希望从手机管理自托管 AI agent 的开发者使用。",
+ "tagline": "在 iPhone、iPad 和 CarPlay 上连接自托管 AI agent 的客户端"
+}

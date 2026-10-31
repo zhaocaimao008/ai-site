@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想在手机上直接运行或远程使用 DeepSeek Harness 的开发者与普通用户，需要 Android 8.0 及以上设备。",
+ "date": "2026-10-31",
+ "features": [
+  "本机运行：App 内安装 Ubuntu、Node.js 与 DSH 运行环境，免 Root、免 Termux",
+  "远程连接：通过 SSH 或 DSH Remote 使用电脑、服务器上的 DSH",
+  "聊天与工具：切换模型、发送图片、语音输入，处理工具审批和提问",
+  "手机操控：授权后让本机引擎读取屏幕、点按和输入，可随时停止",
+  "分享与回放：生成分享卡和端到端加密的对话回放链接",
+  "外观与适配：多套主题色、桌面图标、桌宠，横屏与平板重新排版"
+ ],
+ "intro": "DSH Go 是 DeepSeek Harness 的 Android 客户端，基于 Flutter 开发，支持 Android 8.0 及以上。它把 DSH 引擎装进手机：App 内可安装 Ubuntu、Node.js 与 DSH 运行环境，无需 Root 或另装 Termux；也能通过 SSH 或 DSH Remote 连接电脑、服务器上的 DSH，一键切换接着用。\n\n除了聊天界面，它还提供工具审批与提问、图片与语音输入、原生插件界面、手机操控（读取屏幕、点按输入，需授权且可随时停止），以及对话分享卡、端到端加密的对话回放链接、主题配色和桌宠等外观选项。界面支持中英文切换，横屏与平板有专门排版。\n\n需要注意，功能随主机和连接方式不同：DSH Remote 目前只支持图片附件、不能在 App 内打开网页版，插件管理限于开关，也不支持 DS Bot 和对话日志导出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 或官网下载页下载对应架构的 APK（常见手机选 arm64 包），并允许该安装来源",
+  "首次启动时，选择在本机安装运行环境，或连接远程主机",
+  "为所选主机配置模型和所需凭据，然后开始对话",
+  "如需手机操控，按界面说明开启无障碍等权限；仅连接远程主机时无需安装本机运行环境"
+ ],
+ "summary": "DSH Go 是 DeepSeek Harness 的 Android 客户端，解决在手机上使用 DSH 的问题。它既能在 App 内安装 Linux 与 DSH 运行环境、无需 Root 直接本机运行，也能通过 SSH 或 DSH Remote 连接电脑上的 DSH 继续对话。适合想在移动端处理编码任务、查看和审批工具调用，或远程操控电脑上 DSH 的用户。",
+ "tagline": "DeepSeek Harness 的 Android 客户端，本机运行或远程遥控"
+}

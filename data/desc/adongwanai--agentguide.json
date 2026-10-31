@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "想系统学习 AI Agent 开发、准备大模型算法或开发岗位面试的开发者、算法工程师和转行人员。",
+ "date": "2026-10-31",
+ "features": [
+  "按开发岗与算法岗分别设计的学习路线图",
+  "覆盖 Agent Harness、Context Engineering、RAG、Eval 等技术栈",
+  "LangGraph、MCP、Multi-Agent 等框架与协议教程",
+  "简历级实战项目合集与项目落地方法",
+  "1500+ 面试题与面经、系统设计、编程题",
+  "前沿专题：自进化 Agent、Agentic RL、Coding Agent 等"
+ ],
+ "intro": "AgentGuide 是一个面向 AI Agent 工程、研究与求职的开源知识库，对标 JavaGuide 的组织方式，把分散的课程、教程、论文和开源项目整合成一条从入门到拿 Offer 的学习路径。内容覆盖 Agent 系统与 Harness、Context Engineering 与 Memory、Tools 与 MCP 协议、RAG 与知识系统、Eval 与可观测性、Post-training 与 Agentic RL 等方向。\n\n项目按开发岗和算法岗两条路线分别给出学习路线图，并强调求职导向：每个知识点标注面试怎么考、简历怎么写，同时提供实战项目合集和面试题库。适合想系统学习 Agent 开发、准备大模型岗位面试或转行进入该领域的开发者与算法工程师。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "AgentGuide 把 AI Agent 开发所需的知识整理成一条系统化路径，涵盖 Agent Loop、上下文工程、工具与 MCP 协议、RAG、评测与后训练等主题，并按开发岗和算法岗分别给出学习路线。它面向想入门 Agent 开发或准备大模型岗位面试的人，用实战项目和面试题库帮助把学到的内容落到简历和面试表达上。",
+ "tagline": "AI Agent 开发与求职的系统化开源指南"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合手头有低端或旧款 NVIDIA 显卡、AMD 集成显卡，或希望仅用 CPU 运行本地大模型的开发者和技术爱好者。",
+ "date": "2026-10-31",
+ "features": [
+  "支持从 1 GB Quadro K420 到 RTX 3080 的多款 NVIDIA 显卡，以及 AMD Radeon 780M 和 CPU",
+  "运行 Ternary-Bonsai 2B 至 27B 模型，实验性支持 NVIDIA Nemotron",
+  "提供 OpenAI 兼容的服务器，可接入聊天客户端、脚本和编码代理",
+  "一键安装脚本自动检测硬件、下载模型、校验输出并启动服务",
+  "支持多卡张量并行（如两张 Quadro K1200 合并为 8 GB）和多服务器部署",
+  "内置提示缓存，针对代理场景优化长文档问答的响应速度"
+ ],
+ "intro": "Kindi 是一个为 Prism ML 的 Ternary-Bonsai 系列语言模型（2B、4B、9B、27B，三值权重）编写的定制推理引擎，目标是在低成本硬件上运行这些模型。它最初针对 1 GB 显存的 NVIDIA Quadro K420 开发，现已支持从 Kepler 架构到 Ampere 架构的多款 NVIDIA 显卡、AMD Radeon 780M 集成显卡，以及纯 CPU 运行。\n\n项目提供 OpenAI 兼容的服务器，方便聊天客户端、脚本和编码代理接入。安装脚本会自动检测硬件、下载并转换模型、校验输出与 llama.cpp 逐 token 一致，然后启动服务。它还包含提示缓存、多卡张量并行、多服务器部署等特性，并附带与 llama.cpp 的性能对比数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Linux x86-64 上运行一键安装脚本：curl -fsSL https://amirhusain.com/kindi/install.sh | bash",
+  "脚本会自动检测显卡、下载并转换模型、校验输出，然后在 127.0.0.1:8093 启动服务",
+  "如需先查看每一步操作，可在 bash 后加 -s -- --dry-run",
+  "也可手动克隆仓库并用 Docker 构建镜像：docker build -t kindi:0.3.0 -f docker/Dockerfile ."
+ ],
+ "summary": "Kindi 是一个专为低显存硬件设计的 LLM 推理引擎，让 2B 到 27B 的三值权重模型能在 1 GB 的旧 NVIDIA 显卡、AMD 集成显卡甚至纯 CPU 上运行。它提供 OpenAI 兼容服务器，安装脚本自动完成模型下载、转换和校验，适合想在低成本设备上本地部署语言模型、接入编码代理或聊天工具的开发者。",
+ "tagline": "面向低端 GPU 的定制 LLM 推理引擎"
+}

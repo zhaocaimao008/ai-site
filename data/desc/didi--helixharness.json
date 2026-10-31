@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望将团队工程规范与业务知识融入 AI 编码流程的开发团队，以及需要定制和演进自有 Harness 的框架维护者。",
+ "date": "2026-10-31",
+ "features": [
+  "基于项目仓库的 Harness 约束，指导代理在规划和实现时遵循工程规则",
+  "可累积的知识库，归档时经确认保留稳定业务规则和实现经验，供后续任务复用",
+  "按需加载上下文，通过索引引导代理读取当前任务相关的文档",
+  "可检查的开发生命周期，Propose 定义范围与验收，Apply 实现测试评审，Archive 记录结果",
+  "跨会话和跨仓库的工作流状态持久化，支持恢复未完成任务和多仓库协调",
+  "提供 9 个命令，支持一键运行完整流程或分步执行"
+ ],
+ "intro": "HelixHarness 是一个基于 Codex 和 Claude Code 的插件，帮助团队把业务知识、工程规范和研发流程带入 AI 编码代理的工作中。它通过项目内的知识库、约束规则和任务契约，让代理在需求、实现、测试、评审和归档各阶段遵循团队既定的工程 DNA。\n\n项目提供 9 个命令，覆盖从提案到归档的完整开发生命周期，并支持单仓库和多仓库工作区。经过验证的稳定知识可以在归档阶段经确认后保留，供后续任务复用。可选的 helixharness-platform 平台让维护者观察使用情况、比较框架版本并评估改进。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装插件（Codex）：codex plugin marketplace add https://github.com/didi/helixharness.git && codex plugin add helix@helixharness-marketplace",
+  "安装插件（Claude Code）：claude plugin marketplace add https://github.com/didi/helixharness.git && claude plugin install helix@helixharness-marketplace",
+  "在目标应用仓库中打开新的代理会话，输入 /helix:init 初始化",
+  "运行 /helix:propose task-filter ./requirements/task-filter.md --loop 执行完整流程，或分别运行 /helix:propose、/helix:apply 和 /helix:archive"
+ ],
+ "summary": "HelixHarness 是一个帮助团队在 Codex 和 Claude Code 上构建专属 AI 编码 Harness 的插件。它把业务知识、工程规范和研发流程组织成项目内可审阅的文档，让编码代理在需求、实现、测试、评审和归档各阶段遵循团队规则，并将验证过的经验保留下来供后续任务复用。适合希望将团队工程 DNA 融入 AI 开发流程的开发者与维护者。",
+ "tagline": "为团队构建专属 AI 编码 Harness 的工程化插件"
+}

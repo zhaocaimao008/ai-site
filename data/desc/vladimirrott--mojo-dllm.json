@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在本地运行扩散语言模型、对 Mojo 语言或 CPU/GPU 推理性能感兴趣的开发者和研究者。",
+ "date": "2026-10-31",
+ "features": [
+  "支持 LLaDA-8B 和 Dream-7B 扩散语言模型的本地推理",
+  "从量化 GGUF 文件加载模型，无需 Python 运行时",
+  "CPU 和 NVIDIA GPU 两种执行路径，GPU 可选",
+  "全部核心组件（GGUF 读取、tokenizer、量化矩阵乘、GPU kernel、transformer、去噪循环）用 Mojo 实现",
+  "提供 setup 脚本自动检查环境、安装 Mojo 工具链、构建并下载模型",
+  "内置基准测试结果，并与 llama.cpp、diffuse-cpp 对比"
+ ],
+ "intro": "mojo-dllm 是一个用 Mojo 语言实现的扩散语言模型本地推理运行时，支持 LLaDA-8B 和 Dream-7B 两个模型，可以从量化 GGUF 文件在 CPU 或 NVIDIA GPU 上运行。GGUF 读取器、tokenizer、量化矩阵乘、GPU kernel、transformer 和去噪循环全部用 Mojo 编写，运行时不需要 Python，GPU 也是可选的。\n\n扩散语言模型不是从左到右逐词生成，而是从一张被 mask 的 token 画布出发，在固定步数内逐步确定最有把握的 token，直到画布填满。每一步都要对整个画布重跑一遍模型，因此运行时的主要负载是一连串 GEMM。项目围绕这一特点做了实现和优化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv：curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "克隆仓库并进入目录：git clone https://github.com/vladimirrott/mojo-dllm && cd mojo-dllm",
+  "运行 ./mojo-dllm setup 检查环境、安装 Mojo 工具链、构建并可选下载 LLaDA-8B 模型",
+  "运行 ./mojo-dllm run \"Explain speculative decoding in two sentences.\" 开始推理",
+  "如遇问题，运行 ./mojo-dllm doctor 查看缺失项和修复命令"
+ ],
+ "summary": "mojo-dllm 是一个用 Mojo 编写的扩散语言模型本地推理运行时，支持 LLaDA-8B 和 Dream-7B，可从量化 GGUF 文件在 CPU 或 NVIDIA GPU 上运行，运行时不需要 Python。它适合想在本地尝试扩散语言模型、或关注 Mojo 推理性能的开发者。",
+ "tagline": "用 Mojo 写的扩散语言模型本地推理工具"
+}

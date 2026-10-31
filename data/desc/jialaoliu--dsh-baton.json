@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用 Claude Code 或 Codex 与 DeepSeek Harness 的开发者，尤其是希望把耗时较长、规模较大的编码任务交给 DeepSeek 执行以控制成本的人群。",
+ "date": "2026-10-31",
+ "features": [
+  "通过 MCP 工具调用把编码任务从 Claude Code 或 Codex 转交给本地 DeepSeek Harness",
+  "任务在 Harness 会话中实时运行，可查看并介入",
+  "运行结束后唤醒主 agent 一次，无需轮询",
+  "返回变更文件列表、项目自身测试输出和逐条需求检查清单",
+  "支持在同一 Harness 会话中由 Codex 与 Claude 交替接力，消息标注发送方",
+  "零依赖，无需 Node.js，提供 macOS 与 Windows 安装方式"
+ ],
+ "intro": "dsh-baton 是一个 MCP server 加一个小型 Harness 插件。主 agent（Claude Code 或 Codex）通过一次工具调用把编码任务交给本机的 DeepSeek Harness，任务在 Harness 窗口里以普通会话运行，过程中可以实时查看和介入。\n\n任务结束后主 agent 会被唤醒一次，不需要轮询，并拿回证据而非摘要：新建、修改、删除了哪些文件，项目自身测试的输出，以及逐条对照需求的检查结果。与单纯的模型间 MCP 桥接不同，工作在 Harness UI 中保持可见，结果也附带可验证的依据。\n\n项目需要 DeepSeek Harness ≥ 0.2.1-rc.2（已登录）以及 Claude Code 或 Codex，支持 macOS 和 Windows，零依赖。README 给出的基准测试显示，把大型长任务交给 DeepSeek 执行可以明显降低总成本和对 5 小时窗口的占用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Harness 中打开 Plugins → Add plugin，输入 dsh-baton-host，点击 Install，再点击 Enable now",
+  "仅 Codex 用户：在 Codex 的 Settings → Hooks 中信任 dsh-baton: waiting for the Harness run",
+  "新建一个 Claude Code 或 Codex 会话，让它调用 dsh_list_workspaces 验证连接",
+  "若 Harness 提示无法注册，可在终端运行 npx -y dsh-baton-mcp setup（需要 Node.js ≥ 22.15）"
+ ],
+ "summary": "dsh-baton 解决的是把 Claude Code 或 Codex 中的编码任务转交给本地 DeepSeek Harness 执行的问题。它由 MCP server 和 Harness 插件组成，任务在 Harness 窗口里可见可介入，结束后主 agent 被唤醒一次，并拿回变更文件、测试输出和需求核对清单。适合希望把大型长任务交给 DeepSeek 以降低开销的开发者。",
+ "tagline": "把 Claude Code / Codex 的编码任务交给本地 DeepSeek Harness 执行"
+}

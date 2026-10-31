@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用代码制作风格化动画的开发者、视频创作者，以及使用 Claude Code 或 Codex 进行创意编程的用户。",
+ "date": "2026-10-31",
+ "features": [
+  "341 种代码动画风格提示词，覆盖粒子、水墨、赛博朋克、漫画等多种视觉方向",
+  "193 张参考静帧与离线风格挑选器，支持搜索、筛选和导出已选清单",
+  "可安装为 Claude Code 或 Codex Skill，让助手按需读取风格并制作动画",
+  "轻量检索脚本，按编号、关键词或系列查找风格，避免加载整个素材库",
+  "浏览器渲染工具，将提供时间接口的 HTML 逐帧导出为 MP4，可混入音频"
+ ],
+ "intro": "这个项目整理了 341 种代码动画风格提示词，其中 193 种配有参考静帧，148 种为文字参考，分为 10 个系列。素材以 Markdown 文件形式提供，并附带一个可离线使用的风格挑选器，方便按关键词或编号筛选。\n\n项目将这些素材封装为 Claude Code 和 Codex 可安装的 Skill，让编程助手能按需读取风格、规划镜头并生成可编辑的 HTML 动画。此外还提供了轻量检索脚本和基于 Playwright 与 FFmpeg 的 HTML 逐帧导出 MP4 工具。\n\n安装 Skill 后，用户可以用自然语言描述主题、时长和画幅，助手会参考风格提示词编写动画代码，并在本地渲染视频。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/XiaoyeCodes/code-animation-prompts.git",
+  "安装 Skill 给 Codex：python scripts/install_skill.py --target codex",
+  "或安装给 Claude Code：python scripts/install_skill.py --target claude",
+  "在助手对话中调用风格，例如：使用 $code-animation-prompts，用 B3 粒子聚形做一段 12 秒横屏动画",
+  "如需导出视频，安装 Playwright 与 FFmpeg 后运行 render_video.py 脚本"
+ ],
+ "summary": "这个项目收集了 341 种代码动画风格提示词和 193 张参考静帧，并封装成 Claude Code 与 Codex 可安装的 Skill。它解决的是用代码做动画时缺乏风格参考和制作流程的问题，适合需要快速生成片头、科普短片、国风或赛博风格动画的开发者与创作者。",
+ "tagline": "341 种代码动画风格提示词与 Claude Code/Codex Skill"
+}

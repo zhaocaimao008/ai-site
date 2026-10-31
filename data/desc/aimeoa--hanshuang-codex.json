@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要管理多个 AI 编程工具提示词与技能配置的开发者，以及对逆向工具链部署有需求的用户。",
+ "date": "2026-10-31",
+ "features": [
+  "九个破甲目标页支持安装、卸载与装回原始记忆",
+  "提示词从 memory/ 目录读取，安装时按目标注入",
+  "Skills 管理页可查看和启停本机 Codex 技能",
+  "随包 Seep 逆向工作台，支持部署、自检与卸载",
+  "便携版提供 portable-uninstall.ps1 与批处理清理残留"
+ ],
+ "intro": "寒霜破甲工具是一个基于 Electron 的桌面应用，界面移植自 PI-Desktop 的设计系统，功能由 electron/main.cjs 调用同级目录的 PowerShell 脚本完成。它针对 Codex、ZCode、Cursor、OpenCode、Claude、WorkBuddy 国际版与国内版、DeepSeek Harness、豆包共九个目标，提供安装、卸载和装回原始记忆的操作。\n\n提示词不随包分发，而是从 memory/ 目录读取用户自己放入的 .md 文件，安装时按目标注入；记忆文件为空时安装会直接报错。卸载与还原不依赖随包提示词文件，用户自己写进 AGENTS.md、CLAUDE.md 或记忆档案的内容会被保留。\n\n项目还随包附带 Seep 逆向工作台（Seep-Reverse-Lab v1.6.0），包含 MCP 服务、技能库、战术知识库和案例手册，可在界面中部署、自检和卸载。打包产物为 Windows 便携版 zip，解压即用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install",
+  "npm run dev 启动 Vite 开发服务器",
+  "npx electron . 运行应用（默认加载 dist/）",
+  "npm run build 构建渲染层到 dist/",
+  "npm run dist 打包生成 release/ 下的便携版 zip"
+ ],
+ "summary": "这是一个 Electron 桌面工具，用来给 Codex、Cursor、Claude、OpenCode 等多个 AI 编程工具安装和卸载自定义提示词与技能，并支持还原安装前的原始记忆。提示词由用户自己放入 memory/ 目录，安装时注入到对应目标。项目还随包附带一套逆向工作台，可在界面中部署和自检。适合需要统一管理多个 AI 工具配置的开发者。",
+ "tagline": "面向多个 AI 编程工具的提示词注入与逆向工具链桌面应用"
+}

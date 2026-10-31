@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已安装 Claude Code 和 Codex（ChatGPT）并希望直接在对话中生成或编辑图片的开发者与普通用户。",
+ "date": "2026-10-31",
+ "features": [
+  "通过本地 Codex 的 image_gen 工具生成图片，无需 OpenAI API Key",
+  "支持文生图、基于参考图编辑、透明背景、指定尺寸和输出格式",
+  "支持一次生成多个变体，或从 JSONL 批量并行处理多个任务",
+  "提供 daemon 和 exec 两种引擎，daemon 引擎可降低调用开销",
+  "图片自动保存到默认目录，且不会覆盖已有文件",
+  "提供 --doctor 命令检查环境配置，--stop-daemon 停止后台进程"
+ ],
+ "intro": "c2c-img 是一个 Claude Code 插件，它借助本地已登录的 Codex（ChatGPT）内置 image_gen 工具，让 Claude 在对话中直接生成和编辑图片。因为使用 ChatGPT 登录态，所以不需要配置 OPENAI_API_KEY。\n\n安装后，你只需用自然语言描述需求，比如“画一个舒适的等距阅读角”或“把背景换成极光夜空”，Claude 会自己撰写提示词、调用脚本、检查结果并展示图片。脚本支持文生图、图片编辑、透明背景、指定尺寸和格式、批量生成变体等选项，图片默认保存到 ~/Pictures/c2c_img/ 目录，且不会覆盖已有文件。\n\n项目提供 daemon 和 exec 两种引擎，daemon 引擎会保持 codex app-server 常驻以降低每次调用的开销，exec 引擎作为回退方案。它依赖 Codex 的内部协议，升级 Codex 后建议运行 --doctor 检查环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Codex CLI 并用 ChatGPT 账号登录（codex login），同时安装 Python 3.9 或更高版本",
+  "在 Claude Code 中执行 /plugin marketplace add actionow-ai/c2c_img 添加插件市场",
+  "执行 /plugin install c2c-img@c2c-img 安装插件",
+  "运行 python3 skills/c2c-img/scripts/c2c_img.py --doctor 检查环境配置",
+  "在 Claude Code 中直接说“画一张……”或“把这张图改成……”即可生成或编辑图片"
+ ],
+ "summary": "c2c-img 是一个 Claude Code 插件，它利用你本地已登录的 Codex（ChatGPT）内置图片生成能力，让 Claude 在对话中直接生成和编辑图片，无需额外配置 API Key。适合已经同时使用 Claude Code 和 Codex、希望用自然语言快速出图或改图的开发者与普通用户。",
+ "tagline": "让 Claude Code 通过本地 Codex 生成和编辑图片"
+}
