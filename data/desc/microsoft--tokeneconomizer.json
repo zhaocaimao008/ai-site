@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合经常在固定仓库中使用 Claude Code、Codex 或 GitHub Copilot CLI 等编码 Agent，并希望控制 token 开销的开发者。",
+ "date": "2026-11-01",
+ "features": [
+  "Micro-skills：从跨会话的重复失败和定期模型复盘中提炼仓库事实，在会话开始时注入上下文",
+  "Tool pruning：对长期未使用的工具通过 Agent 自身设置停用，并可一条命令恢复",
+  "Failure-loop intervention：用 judge 模型判断某一轮是否卡住，达到置信阈值时给出转向提示",
+  "作为插件接入 Claude Code、Codex、GitHub Copilot CLI 和 Pi，实验性支持 opencode",
+  "按缓存计费方式统计成本，并把插件自身模型调用的开销计入报告",
+  "每个机制可单独开关，失败时不影响原有会话继续进行"
+ ],
+ "intro": "TokenEconomizer 是微软研究院与 UC Berkeley 等机构合作的开源项目，目标是在不修改编码 Agent 本身的前提下，降低它在同一仓库中反复运行的成本。它从 Agent 已经跑过的会话里学习经验，再把这些经验用于后续会话，减少重复摸索仓库、加载无用工具和陷入失败循环带来的浪费。\n\n项目以插件形式支持 Claude Code、Codex、GitHub Copilot CLI 和 Pi，并对 opencode 提供实验性支持。它包含三个机制：micro-skills 记录仓库的构建与命令事实，tool pruning 停用长期未使用的工具，failure-loop intervention 在某一轮反复失败时给出转向提示。学到的内容保存在本地 ~/.tokeneconomizer 目录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备一个受支持的 Agent（Claude Code、Codex、GitHub Copilot CLI 或 Pi），并按其支持的方式登录",
+  "按 README 的安装说明将 TokenEconomizer 作为插件安装到该 Agent",
+  "在常用仓库中正常使用 Agent，插件会在会话中逐条提示它执行的动作",
+  "经过若干会话后，micro-skills 与 tool pruning 开始生效；学到的内容保存在 ~/.tokeneconomizer"
+ ],
+ "summary": "TokenEconomizer 针对编码 Agent 在同一仓库反复工作时重复付费的问题：每次会话都要重新摸索仓库命令、加载用不到的工具、陷入相同的失败循环。它作为插件接入 Claude Code、Codex、GitHub Copilot CLI 等 Agent，从历史会话中学习仓库事实、裁剪闲置工具并在卡住时给出提示，适合长期在固定仓库中使用编码 Agent 的开发者。",
+ "tagline": "让编码 Agent 在常用仓库里越用越省 token"
+}

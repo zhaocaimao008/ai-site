@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 Pascal 或 Volta 架构 NVIDIA 显卡、希望在本地运行语言模型的开发者和爱好者。",
+ "date": "2026-11-01",
+ "features": [
+  "针对 P100、V100、GTX 10 系列等显卡优化的 GPU 内核和自动调参",
+  "自有 PXQ/PXQN 量化格式，并兼容标准 GGUF 模型",
+  "支持多卡张量拆分、投机解码和专家缓存",
+  "提供 OpenAI 风格 API 和浏览器图形界面 PXA Control",
+  "支持长上下文和热切换模型（部分显卡）"
+ ],
+ "intro": "PXA 是一个面向 NVIDIA Pascal 和 Volta 架构显卡（如 Tesla P100、V100、GTX 1080 Ti）的语言模型服务器。它自带 PXQ/PXQN 量化格式和针对这些芯片编写的 GPU 内核，能根据显卡和模型自动选择运行参数，并提供 OpenAI 风格的本地 API，方便聊天应用或脚本接入。\n\n项目也支持加载标准 GGUF 文件，但性能优化主要围绕 PXQ 量化。它提供浏览器图形界面 PXA Control，可管理服务器、模型、聊天和编码，也支持命令行和容器部署。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "解压发布包：tar xzf pxa-v4.0-linux-x86_64-cuda12.8-sm60_61_70.tar.gz && cd pxa-v4.0",
+  "运行 ./pxa 启动 PXA Control 浏览器界面",
+  "在界面中选择显卡和模型，点击 Start；无浏览器时可运行 ./pxa --tui 使用终端界面"
+ ],
+ "summary": "PXA 是一个专为 NVIDIA Pascal 和 Volta 架构显卡（如 Tesla P100、V100、GTX 1080 Ti）打造的语言模型服务器。它通过自有的 PXQ/PXQN 量化格式和针对这些芯片编写的 GPU 内核，让老显卡也能高效运行本地模型，并提供 OpenAI 风格 API 和图形界面，适合想在本地部署语言模型的开发者和爱好者。",
+ "tagline": "为 Pascal 和 Volta 显卡优化的本地 LLM 推理引擎"
+}

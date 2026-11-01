@@ -1,0 +1,17 @@
+{
+ "ai_related": false,
+ "audience": "适合关注《命运2》游戏保存、Sunrise 项目以及 Destiny API 研究的技术用户。",
+ "date": "2026-11-01",
+ "features": [
+  "在 Sunrise 0.3.2.0 上重现赛季 Tower 活动",
+  "覆盖 Farm 相关的季节性活动内容",
+  "涉及 Destiny API 与 OAuth 相关集成",
+  "包含 MCP server 与工具相关标签",
+  "提供研究性文档记录"
+ ],
+ "intro": "这是一个面向《命运2》(Destiny 2) 的游戏保存类项目，目标是在 Sunrise 0.3.2.0 基础上重新启用赛季性的 Tower 与 Farm 活动内容。项目以 HTML 为主，同时带有 C++、TypeScript 相关标签，并涉及 Destiny API、OAuth 以及 Model Context Protocol 等方向。\n\n从现有信息看，它更像是一份围绕特定版本 Sunrise 的研究与文档型仓库，用于记录和复现这些已下线或难以再体验的季节活动。README 未提供安装或运行说明，因此具体使用方式需要进一步查看仓库内容。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目围绕《命运2》的赛季性 Tower 与 Farm 活动展开，尝试在 Sunrise 0.3.2.0 上让这些内容重新可用，属于游戏保存方向的研究型仓库。它适合关心旧活动复现、Destiny API 与相关工具链的开发者参考，但仓库未给出明确的上手步骤，需要自行阅读代码与文档。",
+ "tagline": "在 Sunrise 0.3.2.0 上重现《命运2》赛季塔与农场活动"
+}

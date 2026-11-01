@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在不查看源代码的情况下重建软件功能的开发者，以及关注干净房间实现和行为测试的研究人员。",
+ "date": "2026-11-01",
+ "features": [
+  "黑盒观察：通过驱动程序捕获目标行为，不接触源代码",
+  "行为泛化：UI 发现、等价类探测、故障注入与规则验证",
+  "门控检查：检测复制表达和真实名称，严格模式需人工批准",
+  "干净房间重建：实现者仅见规格，通过门控获取抽象验证结果",
+  "多目标支持：CLI、Web 应用和 Android 应用",
+  "审计日志：所有交互记录在签名哈希链中"
+ ],
+ "intro": "Teardown 是一个基于 MCP 的工具包，用于通过黑盒观察进行干净房间重实现。它让一个观察者代理以黑盒方式研究目标应用，记录其接受、拒绝、默认值、边界行为以及界面顺序，并将这些转化为可证伪的规则和声明，最终发布为经过净化的规格说明。另一个干净实现者代理只能看到该规格，并编写自己的实现，通过抽象通过/失败判定来验证。\n\n该项目支持 CLI、Web 和 Android 目标，观察者与实现者均在受限容器中运行，所有交互通过门控并记录在签名哈希链审计日志中。Teardown 不捕获代码、反编译或堆栈跟踪，无法观察的内容会明确标记为未知。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "uv tool install \"teardown-cleanroom[web]\"",
+  "teardown install-browser",
+  "teardown demo",
+  "claude mcp add teardown-observe -- teardown observe --project /path/to/project",
+  "teardown review --project P --feature F",
+  "teardown release --project P --feature F"
+ ],
+ "summary": "Teardown 是一个 MCP 驱动的工具包，用于通过黑盒观察重建软件功能，而不查看源代码。它让观察者代理研究目标应用的行为，生成净化规格，再由干净实现者代理仅根据规格编写实现，并通过抽象判定验证。适合需要在不接触实现细节的情况下重建功能的开发者，支持 CLI、Web 和 Android 目标。",
+ "tagline": "通过黑盒观察重建软件功能，不接触源代码。"
+}

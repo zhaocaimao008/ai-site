@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想用 AI 助手交易 BSC 新币、且持有币安 AI 钱包的开发者或交易者。",
+ "date": "2026-11-01",
+ "features": [
+  "按合约地址买卖 Four.meme、Flap、GANG 等平台的 Agent 币",
+  "狙击新币开盘，可设置买入金额、数量、每日上限和税率",
+  "买前安全检查与链上模拟买卖，识别隐藏税和卖不掉的币",
+  "支持 AI 专属 NFT Mint，自动查找 mint 函数并模拟确认",
+  "自动在 PancakeSwap V2 和 KyberSwap 之间比价走深池",
+  "本地交易页面（aiwb ui）提供 K 线、快买按钮和持仓管理"
+ ],
+ "intro": "ai-wallet-binance 是一个命令行工具，让 Claude、Codex、DeepSeek 或 Grok 等 AI 通过自然语言指令，使用你自己的币安 Agentic Wallet 在 BSC 上买卖代币。私钥始终由币安保管，每笔交易由币安签名，工具本身不接触私钥，运行在你自己的电脑或服务器上。\n\n它支持按合约地址买卖 Four.meme、Flap、GANG 等发射台的 Agent 币，也支持狙击新币开盘、买前安全检测与链上模拟、NFT Mint、自动走深池报价、本地记账和浏览器交易页面。你还可以接入 GMGN 数据做只读查询，但下单仍走币安 AI 钱包。\n\n项目免费开源，适合想用 AI 辅助交易 BSC 新币、又希望私钥不离开币安的用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 18 以上，并准备好开好 AI 钱包的币安 App",
+  "运行 npm install -g @binance/agentic-wallet 安装币安钱包工具",
+  "运行 npm install -g ai-wallet-binance 安装本工具",
+  "运行 aiwb doctor 检查环境",
+  "跟 AI 说“运行 aiwb agents，读完它打印的说明，帮我设置好”，或直接运行 aiwb ui 扫码登录"
+ ],
+ "summary": "这个项目让你用自然语言指挥 AI，通过自己的币安 AI 钱包在 BSC 上买卖新币。它支持多个发射台的 Agent 币、狙击开盘、买前模拟检测和 NFT Mint，私钥始终留在币安。适合想用 AI 辅助交易、又在意私钥安全的 BSC 用户。",
+ "tagline": "让 AI 用你的币安 AI 钱包交易 BSC 新币"
+}

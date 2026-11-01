@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合会写 Python、了解基本 API 调用，希望系统学习 Agent 开发的读者。",
+ "date": "2026-11-01",
+ "features": [
+  "19 讲中文教程，覆盖 LLM、RAG、工具调用、记忆、多 Agent、评测与安全",
+  "4 项实践练习，含从零搭建 Agent、设计评测、课程项目与论文实践",
+  "HW1 与第 5 讲配套代码的阅读指南",
+  "支持搜索、目录和深浅主题的网页版，以及单文件离线 HTML",
+  "提供 Markdown 源文件，可用 Node.js 脚本重新构建站点"
+ ],
+ "intro": "这是一套面向 Python 开发者的 AI 智能体（Agent）中文自学教程，内容围绕斯坦福大学 Stanford CS329Z 的公开材料整理，讲解如何构建、评测和改进 Agent。\n\n教程共 19 讲，覆盖大语言模型、RAG、工具调用、记忆、多 Agent 协作、评测与安全防护等主题，并配有 4 项实践练习，包括从零搭建 Agent、设计评测、课程项目和论文实践。仓库提供完整的 Markdown 源文件，以及支持搜索、目录和深浅主题的网页版与单文件离线版。\n\n项目说明中明确，这是独立整理的中文学习资料，并非 Stanford 官方中文版。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载仓库后，直接用浏览器打开 html/index.html",
+  "只想保存一个文件时，使用 html/offline.html",
+  "建议先读第 1–4 讲，再结合 HW1 动手实践",
+  "修改 Markdown 后，在仓库目录运行 node tools/build_site.mjs",
+  "运行 python3 tools/verify_publication.py 校验发布内容"
+ ],
+ "summary": "这套中文教程围绕斯坦福 CS329Z 的公开材料，讲解如何构建、评测和改进 AI 智能体，内容从大语言模型、RAG、工具调用延伸到记忆、多 Agent 协作与安全防护。它适合会写 Python、了解基本 API 调用，想系统学习 Agent 开发的读者，可在线阅读，也可下载离线 HTML 阅读。",
+ "tagline": "斯坦福 CS329Z 智能体课程中文学习资料"
+}

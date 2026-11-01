@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 macOS 并已有 ChatGPT 账号的开发者或普通用户，尤其是希望在 T3 Code、编辑器等任意输入框中快速语音输入的人。",
+ "date": "2026-11-01",
+ "features": [
+  "可配置的全局快捷键，默认 Control–Option–Space",
+  "录音浮窗显示输入电平、时长，支持取消与停止",
+  "自动粘贴或手动 Command–V 粘贴转写结果",
+  "通过 Codex CLI 复用 ChatGPT 登录，无需 API key",
+  "本地转写历史，支持复制、删除和清空",
+  "支持系统/浅色/深色主题、强调色和浮窗位置设置"
+ ],
+ "intro": "GPT Voice 是一个开源的 macOS 菜单栏听写应用，通过 Codex CLI 复用你已有的 ChatGPT 登录会话，把语音转成文字并插入当前输入框。它不需要单独的 API key，适合在 T3 Code、Codex CLI、编辑器或其他任何文本输入场景中快速口述内容。\n\n按下全局快捷键（默认 Control–Option–Space）开始录音，停止后自动粘贴或手动按 Command–V 粘贴，应用不会替你提交文本。它提供录音浮窗、权限引导、主题与快捷键设置，并保留本地转写历史。注意：音频会发送到 ChatGPT 进行转写，因此需要联网，且使用的私有端点可能随账号或服务变化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载 DMG，拖拽 GPT Voice 到 Applications 并打开",
+  "复用现有会话或选择 Sign in with ChatGPT",
+  "授予麦克风权限，并为自动粘贴授予辅助功能权限（或选择手动粘贴）",
+  "选择快捷键并完成练习录音",
+  "从源码构建：git clone https://github.com/entropyconquers/gpt-voice.git && cd gpt-voice && swift test && ./scripts/build.sh --install"
+ ],
+ "summary": "GPT Voice 是一个 macOS 菜单栏听写工具，解决在任意输入框中快速语音转文字的需求。它通过 Codex CLI 复用 ChatGPT 登录，无需单独 API key，按下快捷键说话即可把转写结果插入当前文本字段，适合在 T3 Code、编辑器等场景口述内容。音频会发送到 ChatGPT，需要联网。",
+ "tagline": "用 ChatGPT 登录的 Mac 菜单栏语音听写工具"
+}

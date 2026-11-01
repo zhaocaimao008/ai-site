@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 LLM Agent 评测、后训练和强化学习的研究者与开发者，也适合需要可复现实验流程的工程师。",
+ "date": "2026-11-01",
+ "features": [
+  "在真实 HTTP 服务中注入多种故障，改变正确的下一步动作",
+  "基于服务端状态、提交日志和读取版本进行副作用评分",
+  "提供可重放验证的教师模型，用于生成 DAgger 训练数据",
+  "支持 Qwen3 等模型的后训练研究，包含行为克隆与 DAgger 对比",
+  "提供 CaseDeskEnv 作为 RL 环境，支持 reset/step/state 接口",
+  "所有研究注册、哈希锁定、可重放，保证结果可复现"
+ ],
+ "intro": "ResolveLab 是一个用于评测和训练 LLM Agent 的工具环境。它运行一个真实的 HTTP 服务（CaseDesk），在任务过程中注入多种故障，例如分页查询中的近似引用、If-Match 冲突（412）、Retry-After（429）、写入提交后的 502、任务中途权限被撤销（403）等。Agent 只能看到任务描述和工具返回的观测，故障标志和预期状态保留在服务端。\n\n与只看最终输出是否正确的评测不同，ResolveLab 从服务端状态、提交日志和读取版本对整条轨迹进行评分。写错记录、重复提交、缺少最新读取、虚假成功和无理由升级都会导致失败，即使最终记录看起来正确。\n\n项目还包含一个可重放验证的教师模型，用于生成 DAgger 训练数据，并提供了注册式后训练研究的完整流程。所有已发布的研究都在模型运行前注册，测试输入和权重在测试前哈希锁定，每个发布的 episode 都可以在无 GPU 的情况下通过真实 HTTP 重放。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/Ta0p1/ResolveLab.git && cd ResolveLab",
+  "python -m pip install -e \".[dev]\"",
+  "python examples/casedesk_quickstart.py",
+  "resolvelab casedesk run --episode test-test_conflict_rate-07 --model ollama:qwen3:4b",
+  "resolvelab casedesk eval --pool dev --model ollama:qwen3:4b --output runs/qwen3-4b-dev.json"
+ ],
+ "summary": "ResolveLab 是一个面向 LLM Agent 的评测与训练环境，它在一个真实的 HTTP 服务中注入多种故障，并从服务端状态、提交日志和读取版本对 Agent 的整条操作轨迹进行评分，而不是只看最终输出。项目还提供可重放验证的教师模型来生成训练数据，并支持注册式后训练研究。适合需要严格评估 Agent 副作用、研究后训练方法或构建可复现实验流程的开发者。",
+ "tagline": "带故障注入与副作用评分的 LLM Agent 评测环境"
+}

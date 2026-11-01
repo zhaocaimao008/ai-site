@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在消费级硬件或单机上运行超大 MoE 模型、且已有 SSD 存储空间的开发者和研究者。",
+ "date": "2026-11-01",
+ "features": [
+  "从 SSD 流式加载 MoE 专家权重，突破 RAM/VRAM 容量限制",
+  "兼容标准 GGUF 模型文件，支持 DeepSeek-V4.1-Flash-1017 和 Muse-Spark-Open",
+  "提供终端 CLI 聊天和浏览器 Web UI",
+  "暴露 OpenAI 兼容 API，可对接现有客户端",
+  "支持 macOS/Metal 与 Linux/CUDA，Windows 开发中",
+  "首次运行自动下载模型并测量机器性能"
+ ],
+ "intro": "InferSSD 基于 llama.cpp 构建，通过从 SSD 流式读取 MoE 模型的专家权重，让显存和内存不足以完整容纳的大模型也能运行。它使用标准 GGUF 文件，提供终端聊天、浏览器聊天界面和 OpenAI 兼容 API。\n\n目前支持 DeepSeek-V4.1-Flash-1017 和 Muse-Spark-Open 两个模型，并给出了在 MacBook Pro、RTX 5060 Ti、RTX 5090 和 DGX Spark 上的性能对比数据。项目支持 macOS/Metal 和 Linux/CUDA，Windows 版本仍在开发中。\n\n安装脚本会从源码编译引擎，需要 Git、Python 3.9+ 和 C/C++ 编译器；macOS 还需 Xcode Command Line Tools，Linux 还需 CUDA toolkit、liburing 头文件和 systemd cgroup v2。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装脚本：curl -fsSL https://github.com/wici-ai/inferssd/releases/latest/download/install.sh | sh",
+  "终端聊天：inferssd cli -hf mrfakename/DeepSeek-V4.1-Flash-1017-GGUF",
+  "启动 Web UI 和 API：inferssd serve -hf mrfakename/DeepSeek-V4.1-Flash-1017-GGUF",
+  "浏览器打开 http://127.0.0.1:8080，或将 OpenAI 客户端指向 http://127.0.0.1:8080/v1",
+  "首次运行会下载约 470 GiB 模型文件，可用 --model-dir 指定 SSD 路径"
+ ],
+ "summary": "InferSSD 解决的是大 MoE 模型无法完整装入内存或显存的问题：它基于 llama.cpp，把专家权重放在 SSD 上按需流式读取，从而在普通机器上运行参数量远超硬件容量的模型。项目使用标准 GGUF 文件，提供终端聊天、网页界面和 OpenAI 兼容 API，目前支持 DeepSeek-V4.1-Flash-1017 与 Muse-Spark-Open，适合想在本地体验超大 MoE 模型的开发者。",
+ "tagline": "用 SSD 流式加载 MoE 专家，运行超出内存的大模型"
+}

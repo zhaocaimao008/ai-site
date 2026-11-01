@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合中小企业主、业务顾问和希望利用本地 AI 进行市场调研与试点规划的开发者。",
+ "date": "2026-11-01",
+ "features": [
+  "基于公司网站自动调研产品、服务、价格、竞争对手和评价，并标注来源",
+  "生成因果假设（观察→机制→行动→验证方式）和具体试点计划",
+  "支持本地文档处理和本地 Qwen 模型对话（Windows）",
+  "提供自主实施步骤、时间线、负责人和预算公式",
+  "包含网页审计和 Enterprise 审计模式"
+ ],
+ "intro": "BAIagent 是一个面向企业的 AI 顾问工具，通过分析公司网站、公开页面和外部提及，帮助用户梳理市场信息、区分事实与假设，并生成可衡量的试点计划。它强调证据链接和可验证性，而非直接承诺收益。\n\nWindows 版本支持本地文档（TXT、Markdown、CSV、JSON、PDF、DOCX）和本地 Qwen 模型对话，无需云端 API 密钥。项目还包含网页审计和 Enterprise 模式，共享同一代码库。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 用户可下载安装包（BAIagent-Director-Setup-Windows-1.2.0-x64.exe）并运行",
+  "开发环境需 Node.js 24 和 npm，运行 npm ci 安装依赖",
+  "运行 npm run electron:dev 启动桌面应用",
+  "运行 npm test 执行测试，或使用 npm run build 等命令构建"
+ ],
+ "summary": "BAIagent 是一个本地优先的 AI 商业顾问，通过分析公司网站和公开信息，帮助用户梳理市场情况、区分事实与假设，并制定可验证的试点计划。它适合中小企业主或顾问进行初步市场调研和方案规划，Windows 版还支持本地文档和 Qwen 模型对话，减少对云端 API 的依赖。",
+ "tagline": "本地优先的 AI 商业顾问，提供可验证的试点计划"
+}
