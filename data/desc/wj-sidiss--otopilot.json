@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想批量制作无露脸短视频的内容创作者，以及希望用编码代理自动化视频生产流程的开发者。",
+ "date": "2026-11-02",
+ "features": [
+  "从主题到成片：自动生成脚本、配图、配音、剪辑，输出 MP4、SRT 和封面",
+  "免费素材源：Wikimedia、Openverse、NASA 及多家博物馆 CC0 图片，无需 API key",
+  "多种画幅：支持 YouTube 长视频、Shorts、Reels、TikTok 竖屏格式",
+  "发布包生成：自动整理标题、描述、章节、标签和素材署名",
+  "可与 Claude Code / Codex 配合，用自然语言指令驱动整个流程",
+  "本地运行：面板仅监听 localhost，无账号、无追踪"
+ ],
+ "intro": "Otopilot 是一个在本地运行的视频自动生成工具。你只需给出一个主题和标题，它会依次完成脚本撰写、配图检索、配音、剪辑，最终输出 MP4 视频、SRT 字幕、封面图以及一份 YouTube 发布包（含标题、描述、章节、标签和素材署名）。整个流程在浏览器面板中操作，面板只监听 localhost，不需要注册账号。\n\n配图来源包括 Wikimedia、Openverse、NASA 以及多家博物馆的 CC0 藏品，也支持 Pexels、Pixabay 等图库；配音默认使用免费的 Edge 语音，并可回退到系统语音，也支持 Azure、Piper 等可选方案。工具会过滤掉 NC/ND 许可的图片，并自动生成署名文件。\n\n项目还支持把仓库交给 Claude Code 或 Codex 这类编码代理，由代理读取 AGENTS.md 后按自然语言指令生成视频。界面提供 15 种语言，但命令行提示和详细文档目前为土耳其语。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "node -v  # 确认 Node 22+",
+  "npm ci --ignore-scripts  # 安装依赖",
+  "node ff-yol.js  # 检查 ffmpeg，未安装可用 winget install Gyan.FFmpeg 等命令安装",
+  "node panel.js  # 打开 http://localhost:4173 面板",
+  "在面板中输入主题和标题，点击 ÜRET 生成视频"
+ ],
+ "summary": "Otopilot 把一句主题变成可直接发布的竖屏或横屏视频：自动写脚本、找免费图片、配音、剪辑，并输出字幕、封面和 YouTube 发布包。它完全在本地运行，免费路径不需要 API key，适合制作无露脸短视频的创作者，也可以交给 Claude Code 或 Codex 按自然语言指令驱动。",
+ "tagline": "输入一个主题，本地生成带配音字幕的成品短视频"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要按请求控制模型对齐行为的开发者和研究人员，尤其是使用 Hermes 或 OpenClaw 等 harness 的用户。",
+ "date": "2026-11-02",
+ "features": [
+  "按请求应用对齐配置，支持验证用户和渠道或始终开启模式",
+  "支持多种模型和推理引擎，如 vLLM、TensorFold、SGLang、llama.cpp",
+  "提供五个起始配置，包括四个紧凑配置和一个 DeepSeek 配置",
+  "可与 Hermes、OpenClaw 或自定义 harness 集成",
+  "提供安装向导，自动检测模型和 harness，简化设置流程",
+  "支持通过命令行管理联系人批准和工具继承设置"
+ ],
+ "intro": "FlashAlign 是一个按请求应用模型对齐配置的工具，由 Aevonix Research 开发。它允许用户在不永久修改模型权重的情况下，为经过验证的用户和渠道应用 abliteration 等对齐配置，或者对所有路由请求保持配置激活。\n\n项目支持多种模型和推理引擎，包括 DeepSeek、GLM、Qwen 和 Gemma 系列，并可与 Hermes、OpenClaw 或自定义 harness 集成。V1 版本提供的起始配置主要关注减少拒绝回答，未来可能增加提高拒绝率的配置。\n\nFlashAlign 提供安装向导，可自动检测本地模型和 harness，选择匹配的配置，准备引擎并创建部署签名密钥。用户可以选择“验证联系人”或“始终开启”模式，并控制哪些工具继承配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/Aevonix/FlashAlign.git",
+  "cd FlashAlign",
+  "bash ./install.sh --auto",
+  "选择“验证联系人”或“始终开启”模式",
+  "使用 bash ./install.sh --detect 检查设置"
+ ],
+ "summary": "FlashAlign 是一个按请求应用模型对齐配置的工具，允许在不永久修改权重的情况下，为验证用户或所有请求启用 abliteration 等配置。它支持多种模型和推理引擎，可与 Hermes、OpenClaw 或自定义 harness 集成，适合需要灵活控制模型对齐行为的开发者和研究人员。",
+ "tagline": "按请求即时应用对齐配置，支持验证用户或始终开启。"
+}

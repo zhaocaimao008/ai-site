@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Windows 上使用 Claude Code、Codex CLI、opencode、Gemini CLI 等 AI 编码代理的开发者，以及希望代理 shell 命令更接近 Linux 行为、又不想安装 WSL 或 Git Bash 的用户。",
+ "date": "2026-11-02",
+ "features": [
+  "提供可直接替换的 bash.exe，无需 Git Bash、MSYS2 或 WSL",
+  "处理 Windows 下的参数展开、路径混用、编码与控制台窗口等问题",
+  "支持将 Claude Code、opencode 等代理指向 sill 的 bash.exe",
+  "内置 MCP 服务器，提供 bash、bash_output、bash_kill 三个工具",
+  "支持后台任务与超时控制，命令在独立 Job Object 中运行"
+ ],
+ "intro": "sill 是一个面向 AI 编码代理的原生 Windows Bash 解释器，基于 brush 分支开发，用 Rust 编写。它提供可直接替换的 bash.exe，无需 Git Bash、MSYS2 或 WSL，让 Claude Code、opencode、Codex CLI、Gemini CLI 等代理在 Windows 上执行 shell 命令时，行为更接近模型在 Linux 上的预期。\n\n项目针对 Windows 上代理常见的失败点做了处理，包括参数与通配符展开、路径形式混用、非英文编码、控制台窗口闪烁、后台服务占用输出管道以及缺少 make、rg、ps 等工具。README 还提供了与 Git Bash、PowerShell 的对比测试结果，以及 MCP 服务器模式，供 shell 为 PowerShell 的代理调用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Scoop 安装：scoop bucket add sill https://github.com/lemonadesaltbagel/scoop-sill，然后 scoop install sill/sill",
+  "或从最新 release 下载 sill-windows-x64.zip 和 install-windows.ps1，在 PowerShell 中运行：powershell -ExecutionPolicy Bypass -File install-windows.ps1 -Zip sill-windows-x64.zip -AddToPath -ClaudeCode",
+  "Claude Code 用户可将 CLAUDE_CODE_GIT_BASH_PATH 指向 ...\\sill\\bash.exe；opencode 用户设置 SHELL 为 ...\\sill\\bash.exe",
+  "Codex CLI、Gemini CLI、Claude Desktop 可通过安装脚本的 -Mcp codex,gemini,claude 选项接入 MCP 服务器",
+  "任意 MCP 客户端可使用命令 ...\\sill\\bash.exe、参数 --mcp（stdio）接入"
+ ],
+ "summary": "sill 是一个面向 AI 编码代理的原生 Windows Bash 解释器，目标是让代理在 Windows 上执行 shell 命令时，不再因参数展开、路径格式、编码或缺少常用工具而频繁失败。它无需 Git Bash、MSYS2 或 WSL，可直接替换 bash.exe，也提供 MCP 服务器模式。适合在 Windows 上使用 Claude Code、Codex CLI、opencode、Gemini CLI 等代理的开发者，希望减少代理命令失败、又不想引入完整 Linux 环境的场景。",
+ "tagline": "为 Windows 上的 AI 编码代理提供原生 Bash 解释器"
+}

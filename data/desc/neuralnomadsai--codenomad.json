@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 OpenCode 进行 AI 编码、需要跨项目管理和长会话导航的开发者，以及希望通过浏览器或远程方式访问编码工作区的用户。",
+ "date": "2026-11-02",
+ "features": [
+  "多项目与桌面窗口管理，支持每个窗口独立标签页、草稿和视图恢复",
+  "嵌套会话浏览、对话分叉、全历史搜索和时间线导航",
+  "Git worktree 创建与切换，可随会话移动子会话并查看 Git 变更",
+  "富对话展示 Markdown、代码、diff 和工具结果图片，支持 /btw 临时提问",
+  "文件选择、粘贴、拖放和 @ 引用项目文件",
+  "远程访问与 Remote Control，支持密码认证和 HTTPS，可通过 OpenTunnel 配对手机或其他电脑"
+ ],
+ "intro": "CodeNomad 是面向 OpenCode V2 的桌面和浏览器工作区，用于管理多个项目、长对话和 Git worktree。它连接 OpenCode 的共享后台服务，让会话在 CodeNomad 和兼容的终端客户端之间保持可访问。\n\n项目提供 Electron 和 Tauri 两种桌面构建，也可通过 npx 启动服务器在浏览器中使用。主要功能包括多项目标签页、嵌套会话与全历史导航、Git worktree 管理、富文本对话、文件附件、远程访问、语音输入和可定制界面。\n\nCodeNomad 1.0 要求 OpenCode V2（最低 2.2.3，推荐 2.2.5），不支持 OpenCode V1。桌面版内置 Node.js 和 npm，首次启动时需选择或安装 OpenCode 可执行文件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从下载页或 Releases 获取对应平台的桌面安装包，或使用 npx 启动服务器",
+  "桌面版首次启动时选择已有的 OpenCode 可执行文件，或通过设置界面安装 OpenCode",
+  "打开项目文件夹，连接模型提供商，然后开始会话",
+  "服务器方式运行：npx @neuralnomads/codenomad --password \"your-password\" --launch",
+  "远程访问时添加 --host 0.0.0.0 并连接打印出的 HTTPS 地址"
+ ],
+ "summary": "CodeNomad 是 OpenCode V2 的桌面与浏览器工作区，解决多项目、长对话和 Git worktree 场景下的管理问题。它连接 OpenCode 共享后台服务，提供项目标签页、嵌套会话导航、worktree 切换、富对话展示和远程访问等功能，适合需要跨项目使用 AI 编码并保持会话可访问的开发者。",
+ "tagline": "OpenCode 的桌面与浏览器工作台"
+}

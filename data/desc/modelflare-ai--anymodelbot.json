@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望在自己设备上运行个人 AI 智能体、需要多模型切换并愿意按量付费的开发者与普通用户。",
+ "date": "2026-11-02",
+ "features": [
+  "每个机器人拥有独立的人设、默认模型、工作区和记忆",
+  "可读写文件、执行命令、操作桌面，越出工作区前需用户批准",
+  "支持在应用内及微信、飞书、Telegram、Slack、Discord 中对话",
+  "通过 Modelflare 一个账户调用 70+ 模型，按 token 计费",
+  "对话、记忆、文件与 API Key 保存在本地设备",
+  "提供 Windows、macOS、Linux 安装包及 Docker 部署方式"
+ ],
+ "intro": "AnyModelBot 是一个本地优先的 AI 智能体桌面应用，支持 Windows、macOS 和 Linux，也可以部署到 Docker 或服务器。一个机器人就是一套人设，带着自己的默认模型、工作区和记忆，你可以在应用内和它聊天，也能通过微信、飞书、Telegram、Slack、Discord 找到它。\n\n它能读写文件、执行命令、操作桌面，一旦要越出自己的工作区就会先向你请求批准。对话、记忆、文件和 API Key 都留在本地设备上，模型则通过 Modelflare 一个账户调用 GPT、Claude、Gemini、Grok、DeepSeek、Kimi、GLM 等 70 多个模型，按 token 计费，应用本身没有订阅。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载对应平台的安装包并安装",
+  "首次启动时在浏览器登录或注册 Modelflare，Docker 部署则改为粘贴 API Key",
+  "在应用内创建机器人，设置人设、默认模型和工作区",
+  "用 Docker 部署时运行 docker run -d --name amb -p 3600:3600 -v amb-data:/data ghcr.io/modelflare-ai/anymodel-bot，再执行 docker exec amb cat /data/ui-token 获取访问令牌",
+  "从源码运行：git clone 仓库后执行 npm install、npm run setup、npm start，打开 http://127.0.0.1:3600/"
+ ],
+ "summary": "AnyModelBot 是一个本地优先的个人 AI 智能体应用，让你在自己的电脑或服务器上运行带人设、工作区和记忆的机器人，并通过微信、飞书等渠道与它对话。它能读写文件、执行命令、操作桌面，越出工作区前会请求批准。模型经 Modelflare 一个账户调用 GPT、Claude、Gemini 等 70 多个模型，按量计费，适合想自托管 AI 助手并灵活切换模型的用户。",
+ "tagline": "跑在自己电脑上的多模型 AI 智能体，按量付费"
+}

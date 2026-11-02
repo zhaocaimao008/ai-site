@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为本地 AI 代理或 RAG 流程提供搜索与网页正文获取能力的开发者，以及希望自托管搜索服务、注重隐私和网络安全的用户。",
+ "date": "2026-11-02",
+ "features": [
+  "无需 API key，自托管运行，搜索词不离开本机",
+  "一次请求返回排序结果和约 32,000 字符的页面正文，用于 grounding",
+  "移植 SearXNG 的 226 种引擎类型，默认启用 180 个，支持并行查询与故障引擎暂停恢复",
+  "内置 SSRF 防护，仅允许访问公网地址",
+  "响应格式兼容 SearXNG，支持 JSON 输出和 include_raw_content 参数",
+  "提供 /healthz、/metrics、响应缓存、图片代理和机器人限流等运维功能"
+ ],
+ "intro": "RustXNG 是一个用 Rust 编写的自托管网页搜索与 grounding 引擎，面向本地 AI 代理。它不需要 API key，也不按调用次数收费，一次请求即可返回排序后的搜索结果和网页正文，让代理基于来源作答而不是猜测。\n\n项目从 SearXNG 移植了 226 种引擎类型，默认启用 180 个，并加入按词项覆盖、站点权威性等维度的排序逻辑。它内置 SSRF 防护，只允许访问公网地址，搜索词不会离开本机。响应格式兼容 SearXNG，支持 JSON 输出和 include_raw_content 参数获取页面文本。\n\nRustXNG 还提供可选的本地索引二进制 rustxng-index（实验性，默认关闭），以及 /healthz、/metrics 等运维端点。需要注意的是，当前构建中 Google 不可用，因为其接口返回 403 或需要 JavaScript。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载对应平台的预编译二进制，或使用 cargo install --git https://github.com/sahenjp/RustXNG.git --tag v0.25.0 安装",
+  "启动服务：rustxng &（默认监听 127.0.0.1:8888）",
+  "执行搜索：curl \"http://127.0.0.1:8888/search?q=tokio+runtime&format=json\"",
+  "获取页面正文：curl \"http://127.0.0.1:8888/search?q=tokio+runtime&format=json&include_raw_content=1\"",
+  "在浏览器打开 http://127.0.0.1:8888/ 使用 Web 界面"
+ ],
+ "summary": "RustXNG 是一个用 Rust 编写的自托管搜索与 grounding 引擎，专为本地 AI 代理设计。它不需要 API key，一次请求就能返回排序后的搜索结果和网页正文，让代理基于来源内容作答。项目从 SearXNG 移植了大量搜索引擎，内置 SSRF 防护，搜索词不会离开本机，响应格式兼容 SearXNG。适合需要为 AI 代理或 RAG 流程提供搜索能力、同时注重隐私和网络安全的开发者。",
+ "tagline": "自托管、防 SSRF 的 AI 代理搜索与 grounding 引擎"
+}
