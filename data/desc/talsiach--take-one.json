@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速制作产品宣传片、品牌广告或音乐视频的开发者、创作者和营销人员，尤其是已经使用 Claude Code 的用户。",
+ "date": "2026-11-03",
+ "features": [
+  "一句话生成完整短片，自动完成从创意到成片的全部流程",
+  "模拟 12 个专业角色分工，包括策略、编剧、导演、剪辑和审核",
+  "提供本地审阅室，可逐帧添加笔记并生成下一版",
+  "支持纯代码生成（免费）或接入付费 AI 服务（图片、视频、语音、音乐）",
+  "输出 1080p 60fps 的 MP4 视频及配套社交媒体文案",
+  "所有处理在本地进行，无追踪，仅按需联网"
+ ],
+ "intro": "Take One 是一个 Claude Code 技能，让你用一行文字就能生成完整的短片、广告或音乐视频。它模拟了一个创意工作室的流程，从构思、脚本、视觉、配音、音乐到剪辑和审核，全部由 AI 自动完成。\n\n项目通过多个“角色”分工合作，比如策略师、创意总监、编剧、导演等，最终输出 1080p 60 帧的 MP4 视频，并附带社交媒体文案。你还可以在本地审阅室中逐帧添加笔记，让下一版更符合你的要求。\n\n它支持纯代码生成（免费），也可以接入付费的图片、视频、语音和音乐服务来提升效果。所有处理都在本地进行，无需担心隐私问题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中粘贴安装指令：Install the Take One skill: clone https://github.com/talsiach/take-one into ~/.claude/skills/take-one, then run bash ~/.claude/skills/take-one/scripts/doctor.sh and tell me what is missing.",
+  "或手动在终端运行：npx skills add talsiach/take-one -g -a claude-code",
+  "运行检查脚本：bash ~/.claude/skills/take-one/scripts/doctor.sh",
+  "在 Claude Code 中输入：/take-one a 30 second launch video for <your product>",
+  "根据提示选择工作模式（直接生成或分阶段），并确认方案后等待成片"
+ ],
+ "summary": "Take One 是一个 Claude Code 技能，能把一句话变成完整的短片、广告或音乐视频。它模拟创意工作室流程，自动完成构思、脚本、视觉、配音、音乐和剪辑，并输出 1080p 视频。适合需要快速制作产品宣传片或品牌视频的开发者与创作者，支持纯代码免费生成，也可按需接入付费 AI 服务提升效果。",
+ "tagline": "在 Claude Code 里一句话生成短片、广告或音乐视频"
+}

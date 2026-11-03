@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合经常在 AI 代理中处理图片（如生成关键帧、阅读扫描 PDF、让 AI 操作电脑截图）的开发者与普通用户。",
+ "date": "2026-11-03",
+ "features": [
+  "模型自动管理图片上下文，只发送当前需要的图片",
+  "支持按描述搜索图片、按轮次浏览、点击查看大图",
+  "记录图片内容和用户评论，便于长期对话中找回",
+  "可固定重要图片，使其随每条消息发送",
+  "兼容 Codex、Claude Code、WorkBuddy、OpenCode、Gemini CLI 等多种代理",
+  "所有数据保留在本地，隐私安全"
+ ],
+ "intro": "Context Attachment Manager 是一个针对多模态 AI 代理的上下文管理插件。它解决的是“多模态税”问题：在 Codex、Claude Code 等代理中，每轮对话都会重新发送整个聊天记录，包括之前的所有图片，导致请求体积越来越大、速度变慢甚至连接失败。\n\n该插件让模型自行管理图片：较早的图片不再随每条消息发送，当模型需要某张图片时，它会按需拉回。你可以固定重要图片（如角色参考），也可以手动选择发送哪些图片。插件还会记录每张图片的内容和你的评论，方便后续搜索和找回。\n\n它支持 Codex、Claude Code、WorkBuddy、OpenCode、Gemini CLI 等多种代理，安装后无需额外配置。所有数据保留在本地，不会发送到外部服务器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将以下内容粘贴给你的代理（Codex、Claude Desktop 的 Code 标签页或任何支持的代理）：Install the Context Attachment Manager plugin for me, following https://github.com/chipfighter/context-attachment-manager/blob/main/INSTALL.md",
+  "重启代理（在 Claude Desktop 中，开始新会话）",
+  "在 Codex 中，打开任务侧边栏的 Context Assets；在 Claude Desktop 中，面板会在有图片时自动打开，输入 /cam 可重新打开",
+  "继续聊天，模型会自动选择较早的图片；点击图片并勾选 Send every turn 可固定图片；关闭面板底部的 Auto-select 可手动选择"
+ ],
+ "summary": "Context Attachment Manager 是一个解决多模态 AI 代理中图片重复上传问题的插件。在 Codex、Claude Code 等工具里，每轮对话都会重新发送所有历史图片，导致请求体积膨胀、速度变慢甚至连接失败。该插件让模型自动管理图片上下文，只发送当前需要的图片，并支持搜索、固定和按需拉回。适合经常在代理中处理图片的开发者与用户。",
+ "tagline": "自动管理 AI 代理中的图片上下文，避免重复上传旧图。"
+}

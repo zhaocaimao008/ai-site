@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI 代理直接操控移动设备进行自动化测试、演示或交互的开发者与团队。",
+ "date": "2026-11-03",
+ "features": [
+  "通过 MCP 协议连接云端真实 iPhone 或 Android 模拟器",
+  "支持屏幕查看、点击、输入、滑动、打开应用等操作",
+  "兼容 Claude、Cursor、ChatGPT、Codex、VS Code 等多种 MCP 客户端",
+  "提供 OAuth 登录和 API key 两种认证方式",
+  "无需本地环境配置，仅需 URL 和登录即可使用"
+ ],
+ "intro": "Phone Harness MCP 是一个基于 Model Context Protocol 的远程服务器，让 AI 代理能够连接并操控云端的真实 iPhone 或 Android 模拟器。通过统一的 MCP 接口，代理可以查看屏幕、点击、输入、滑动以及打开应用，操作方式与真人使用手机类似。\n\n该项目支持多种主流 MCP 客户端，包括 Claude、Cursor、ChatGPT、Codex、VS Code 等，只需添加服务器 URL 并完成 OAuth 登录即可使用，无需本地配置 Mac、adb 或配对。云端 Android 模拟器按分钟计费，iPhone 则采用月度订阅制。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在支持的 MCP 客户端中添加服务器 URL：https://mcp.phone-harness.com/mcp",
+  "完成 OAuth 登录（或使用 API key 作为 bearer token）",
+  "使用 phone_list_available_devices 工具查看可用设备",
+  "使用 phone_start_device 启动设备并指定运行时长（默认 30 分钟）",
+  "通过其他工具对设备进行点击、输入、滑动等操作"
+ ],
+ "summary": "Phone Harness MCP 是一个远程 MCP 服务器，让 AI 代理能够连接并操控云端的真实 iPhone 或 Android 模拟器。它解决了 AI 代理无法直接操作移动设备的问题，代理可以查看屏幕、点击、输入、滑动和打开应用。适合需要让 AI 代理进行移动端自动化测试、演示或交互的开发者，支持 Claude、Cursor、ChatGPT 等多种 MCP 客户端，无需本地配置即可使用。",
+ "tagline": "让 AI 代理通过 MCP 操控真实 iPhone 和 Android 模拟器"
+}

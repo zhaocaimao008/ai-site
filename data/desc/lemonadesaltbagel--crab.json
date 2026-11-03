@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在合规前提下参考现有产品行为、重新实现某个功能的开发者，以及研究黑盒测试与干净室重实现的团队。",
+ "date": "2026-11-03",
+ "features": [
+  "黑盒观察 CLI、Web、Android 目标的行为，不采集源码",
+  "将观察结果整理为可证伪规则，并生成脱敏 spec",
+  "gate 检查复制表达与真实名称，支持严格模式人工审批",
+  "在隔离容器中运行 clean implementer，仅暴露 spec",
+  "通过同一套测试对比原版与克隆，返回抽象通过/失败结论",
+  "记录带哈希链的审计日志"
+ ],
+ "intro": "CRAB 是一个基于 MCP 的工具包，用于对目标软件做黑盒观察，并在不接触其源码的前提下完成干净室重实现。它把工作拆成两个角色：observer 只通过驱动观察目标接受什么、拒绝什么、默认值、边界行为和界面流程，把观察结果整理成可证伪的规则与声明，经 gate 检查后发布为脱敏的 spec；clean implementer 只能看到这份 spec 并自行实现，验证时也只拿到抽象的通过/失败结论。\n\nCRAB 不会采集代码、反编译结果或调用栈，无法观察到的部分会显式标记为 unknown。观察者与实现者都可以运行在受限容器中，所有跨边界的信息都经过 gate 并记录在带哈希链的审计日志里。项目支持 CLI、Web 和 Android 三类目标，目前处于早期版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "uv tool install \"crab-cleanroom[web]\"",
+  "crab install-browser",
+  "crab demo",
+  "claude mcp add crab-observe -- crab observe --project /path/to/project",
+  "crab review --project P --feature F 后执行 crab approve 与 crab release",
+  "crab cleanroom up --project P --kit KIT --claude-token-file ~/.config/crab-claude-token"
+ ],
+ "summary": "CRAB 面向想参考现有产品功能、又不愿接触对方源码的开发者：它让一个观察者 agent 把目标软件当作黑盒，记录其输入输出、边界行为和界面流程，整理成脱敏的行为规范，再由另一个只能看到规范的 agent 重新实现，并用同一套测试对比原版与克隆。适合 CLI、Web 和 Android 目标的功能重建与行为验证场景。",
+ "tagline": "通过黑盒观察重建软件行为的 MCP 工具包"
+}

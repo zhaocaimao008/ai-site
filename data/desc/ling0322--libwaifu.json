@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地 GPU 上运行 AI 图像生成和语音合成的开发者与爱好者，尤其是对动漫风格图像感兴趣的用户。",
+ "date": "2026-11-03",
+ "features": [
+  "支持多种文生图模型，包括 SDXL、Anima、Krea 2 和 Qwen-Image",
+  "提供语音合成（IndexTTS、CosyVoice）和语音转换功能",
+  "支持图层分解，将动漫插画拆分为最多24个图层并导出为 PSD",
+  "低内存模式，允许在显存不足时仍能运行大模型",
+  "终端界面交互，支持模型下载、设备选择和参数调整",
+  "跨平台 GPU 加速，支持 CUDA、Metal 和 Vulkan"
+ ],
+ "intro": "libwaifu 是一个完全在本地机器上运行的 AI 图像生成器，使用 Rust 和 C++ 编写，支持 CUDA、Metal 和 Vulkan 后端。它集成了多种文生图模型，如 SDXL、Anima、Krea 2 和 Qwen-Image，用户只需输入提示词即可生成图片，无需 API 密钥或云端服务。\n\n除了图像生成，项目还包含语音合成和语音转换功能，支持 IndexTTS 和 CosyVoice 模型。此外，它提供了图层分解功能，可将动漫插画拆分为多个图层并导出为 PSD 文件。项目包含一个终端界面 `waifu`，用于选择模型、设备并生成图片，同时提供 C API 供其他程序调用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 `waifu` 启动终端界面，按提示选择模型和设备",
+  "使用 `waifu -m sdxl:wai -device cuda` 直接指定模型和设备",
+  "生成的图片保存在 `waifu-output/waifu-NNNN.png`，可通过 `-output` 指定其他目录",
+  "使用 `cargo run --release -p waifu-tools --bin speak` 进行语音合成"
+ ],
+ "summary": "libwaifu 是一个本地运行的 AI 图像与语音生成工具，支持 SDXL、Qwen-Image 等多种模型，利用 CUDA、Metal 或 Vulkan 在自有 GPU 上推理，无需云端。它提供终端界面进行文生图，并包含语音合成、语音转换和图层分解功能，适合需要本地化、隐私保护的 AI 创作场景。",
+ "tagline": "本地运行的AI图像与语音生成工具，支持多种模型和GPU加速。"
+}

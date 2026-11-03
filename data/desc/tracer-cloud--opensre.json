@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要排查 CI/CD 构建失败、希望减少重复调查工作的开发者和 SRE 团队，也适合希望在自有基础设施上运行代理的团队。",
+ "date": "2026-11-03",
+ "features": [
+  "读取失败的 CI 运行日志，追踪失败原因并推送修复供审查",
+  "区分 CI 自身导致的失败与代码导致的失败，帮助定位正确的问题",
+  "提供交互式 shell，支持自然语言描述事件和斜杠命令管理会话",
+  "提供无头 CLI，可在脚本或 CI 任务中非交互执行单轮代理查询",
+  "提供 Python API，可在自有代码中进程内驱动代理会话",
+  "支持自托管，使用自己的模型"
+ ],
+ "intro": "OpenSRE 是一个用 Python 编写的开源 CLI 代理，面向 CI/CD 可靠性问题。当 CI 运行失败时，它不只告诉你“失败了”，而是读取失败运行的日志、追踪原因，并推送一个修复供你审查。项目强调自托管，可使用自己的模型，目前处于 public alpha 阶段。\n\n它支持交互式 shell 和无头 CLI 两种使用方式：在交互式 shell 中可以用自然语言描述事件并观察代理工作；在脚本或 CI 任务中可以用 `opensre ask` 执行单轮非交互查询。此外还提供 Python API，便于在自有代码中进程内驱动代理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS 或 Linux 安装：curl -fsSL https://install.opensre.com | bash -s -- -gh",
+  "Windows（PowerShell）安装：& ([scriptblock]::Create((irm https://install.opensre.com/install.ps1))) -gh",
+  "启动 OpenSRE：opensre",
+  "无头执行单轮查询：opensre ask \"why is checkout-api slow?\"",
+  "配置集成：opensre integrations setup"
+ ],
+ "summary": "OpenSRE 是一个开源的 CI/CD 可靠性代理，用 Python 编写。它针对 CI 构建失败后只提示“失败”却不说明原因的问题，自动读取失败运行的日志、追踪根因，并推送修复供人工审查。项目支持自托管和自带模型，提供交互式 shell、无头 CLI 和 Python API 三种使用方式，适合需要快速排查构建失败、减少重复调查工作的开发者和 SRE 团队。",
+ "tagline": "开源 CI/CD 可靠性代理，自动排查构建失败并推送修复"
+}

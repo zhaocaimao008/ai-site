@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在本机或自有环境中用可控成本运行编码 agent 的开发者，以及需要把多步骤编码任务固化为可重复工作流的团队。",
+ "date": "2026-11-03",
+ "features": [
+  "编码 agent：读取文件、编辑代码并运行检查",
+  "YAML 工作流：并行步骤、检查条件、审批关卡与失败续跑",
+  "多模型接入：云端 API key 或本机 Ollama、llama.cpp 等运行时",
+  "终端窗口内提供 /model、/workflow、/graph、/files 等命令",
+  "通过 ACP 协议在 Zed、JetBrains、VS Code 等编辑器中使用",
+  "支持 ssh 远程网关与脚本/CI 无头运行"
+ ],
+ "intro": "Memdoor 是一个用 Go 编写的编码 agent 与工作流运行器。它把任务交给 agent 去读文件、改代码、跑检查；对于需要重复执行的工作，则用 YAML 定义工作流，把步骤、并行任务和审批关卡组织起来，每一步通过检查才算完成，失败后可从失败步骤继续。\n\n项目强调模型可替换：工作流本身不绑定具体模型，可以接 OpenRouter、Anthropic、OpenAI、Gemini 等云端服务，也可以用 `memdoor connect local` 在本机运行 Ollama、llama.cpp、vLLM 等开源权重模型，无需账号。README 还给出了一个用五个 Qwen 模型组成工作流、在 LiveCodeBench Hard 上取得成绩的示例，并公开了全部运行记录。\n\n除终端 TUI 外，它还支持通过 ACP 在 Zed、JetBrains、VS Code 等编辑器中使用，以及用 `memdoor run` 在脚本或 CI 中执行无头任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "curl -fsSL https://memdoor.ai/install.sh | bash",
+  "export OPENROUTER_API_KEY=sk-or-...（或使用 memdoor connect local 接本机模型）",
+  "cd your-project && memdoor",
+  "在窗口内用 /workflow 查看并运行项目工作流，或用 memdoor run \"任务描述\" 执行无头任务"
+ ],
+ "summary": "Memdoor 是一个终端里的编码 agent 和工作流运行器，用来把读文件、改代码、跑测试这类任务交给模型执行，并把多步骤流程写成 YAML 以便重复运行。它不绑定特定模型，既能用云端 API，也能在本机跑开源权重模型，适合想自己掌控模型选择和执行过程的开发者。",
+ "tagline": "用工作流编排小模型完成编码任务的终端工具"
+}

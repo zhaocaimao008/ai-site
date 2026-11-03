@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有兼容 uMouse 硬件、希望在 Windows 上为 AI 智能体增加真实鼠标控制与语音输入能力的开发者。",
+ "date": "2026-11-03",
+ "features": [
+  "通过 uMouse 硬件执行鼠标移动、点击、滚动和拖拽，支持多显示器与负坐标",
+  "提供任务独占控制接口，同一时间只允许一个任务驱动鼠标和键盘",
+  "支持可插拔的语音识别服务，实现语音听写并输入到当前焦点窗口",
+  "提供只读传感器接口，可查询光标位置和按键状态",
+  "附带安装脚本，可快速注册到 ZCode、Claude Desktop、Cursor 等客户端"
+ ],
+ "intro": "uMouse MCP 是一个面向 AI 智能体的 Model Context Protocol（MCP）服务器，运行在 Windows x64 上，通过兼容的 uMouse 硬件设备实现 USB HID 鼠标控制与语音听写。它让智能体能够执行鼠标移动、点击、滚动和拖拽等操作，并支持可插拔的语音识别服务。\n\n该项目需要特定的 uMouse 硬件和固件，普通 USB 鼠标无法使用。发布包提供 MCPB 和 ZIP 两种形式，ZIP 内含生产依赖、原生 SDK DLL 和语音预览界面，无需 npm install 或编译即可使用，但需单独安装 Node.js 22 x64。\n\n源代码实现了共享 v2 架构，包含硬件动作、任务独占控制和只读传感器等能力，但发布 ZIP 并非完整的共享 v2 打包，部分功能需参考源码开发文档。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 22 x64，连接兼容的 uMouse USB 接收器/设备并开启鼠标",
+  "下载 ZIP 发布包并解压到固定位置",
+  "在解压目录运行安装命令，例如 `node mcp/scripts/install-agents.mjs claude`（可选 zcode 或 cursor）",
+  "重启对应的客户端（如 Claude Desktop 需完全退出再打开）",
+  "让智能体调用 `umouse_status`、`umouse_get_capabilities` 和 `umouse_list_devices` 检查设备状态"
+ ],
+ "summary": "uMouse MCP 是一个 Windows x64 上的 MCP 服务器，让 AI 智能体通过兼容的 uMouse 硬件设备执行真实的鼠标移动、点击、滚动和拖拽，并支持语音听写输入。它适合需要让智能体操作桌面应用或进行语音交互的开发者，但必须配合特定硬件和固件使用，普通鼠标无法替代。",
+ "tagline": "为 AI 智能体提供硬件鼠标控制的 MCP 服务器"
+}

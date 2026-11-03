@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建可控、可定制客户服务聊天代理的开发者，以及希望用自然语言规则管理代理行为的产品团队。",
+ "date": "2026-11-03",
+ "features": [
+  "用自然语言策略定义代理行为，引擎确保每次对话都遵守规则",
+  "支持自定义工具（tool）调用外部系统，如查询订单状态",
+  "提供预设回复（canned response）控制特定场景下的措辞",
+  "内置 Dashboard 用于创建项目、测试会话和检查连接",
+  "支持 OpenRouter、OpenAI、Anthropic、Gemini、LiteLLM 及自定义模型提供商",
+  "提供脚手架命令快速生成零售支持、线索生成等示例项目"
+ ],
+ "intro": "Parlant 是一个用 Python 构建客户服务聊天代理的开源平台。你只需用自然语言描述代理应该如何行为，编码代理就会帮你实现，而 Parlant 提供引擎来保证代理在每次对话中都遵守这些规则。\n\n它内置了聊天组件、人工转接、测试、托管和分析等客户服务代理所需的功能。代理运行在你自己的代码上，可以连接任何你能访问的系统，并自由选择模型提供商，费用直接支付给模型提供商。\n\nParlant 支持通过策略（policy）、预设回复（canned response）和工具（tool）来定义代理行为，并提供 Dashboard 用于本地开发和测试。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Parlant：pip install parlant",
+  "设置模型提供商密钥，例如：export OPENROUTER_API_KEY=\"<YOUR_API_KEY>\"",
+  "在 Dashboard 创建本地开发项目并设置项目令牌：export PARLANT_DASHBOARD_PROJECT_TOKEN=\"<YOUR_PROJECT_TOKEN>\"",
+  "编写 main.py 定义代理、工具和策略，然后运行：python main.py",
+  "在 Dashboard 中点击 Check connection 和 Open project，创建新会话进行测试"
+ ],
+ "summary": "Parlant 是一个用 Python 构建客户服务聊天代理的开源平台。它让你用自然语言描述代理行为，由编码代理实现，引擎负责在对话中遵守规则。适合需要可控、可定制客服代理的开发者，支持自定义工具、预设回复和多种模型提供商，并提供 Dashboard 用于测试和托管。",
+ "tagline": "用自然语言规则构建可控的客户服务聊天代理"
+}

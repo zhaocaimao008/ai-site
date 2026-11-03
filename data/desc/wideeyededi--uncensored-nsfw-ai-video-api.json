@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要接入成人向 AI 视频生成 API 的开发者，以及想了解 123vips.com 平台功能和接入边界的集成人员。",
+ "date": "2026-11-03",
+ "features": [
+  "提供 Seedance Spicy 与 Wan NSFW 两条模型线的接入方向说明",
+  "介绍异步任务架构：创建任务后持久化 task id，再轮询或通过 webhook 获取结果",
+  "说明积分计费与可审计账单要求，包括价格快照、预授权和退款记录",
+  "列出服务端安全要求：参数白名单、18+ 门禁、地区限制和上游审核策略",
+  "附带 API_INTEGRATION.md、llms.txt 和脱敏截图等文档资源"
+ ],
+ "intro": "这个仓库是 123vips.com（Vipeak AI）成人向 AI 视频生成 API 的开发者文档集合，不包含站点生产代码、用户数据或密钥。内容围绕 Seedance Spicy 和 Wan NSFW 两条模型线，说明文生视频、图生视频的异步任务架构、webhook 回调、积分计费以及服务端安全要求。\n\nREADME 同时介绍了站点本身的功能：角色浏览与角色库、AI 视频生成、AI 图片生成、角色聊天互动，以及案例、工作流和账户积分管理等入口。仓库还提供 API_INTEGRATION.md、llms.txt 和脱敏截图，帮助开发者了解接入流程和边界。\n\n需要注意，模型版本、端点路径、参数和定价以登录后 API Access 中的官方文档为准，仓库明确不猜测未公开的接口。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库收集了 123vips.com 成人向 AI 视频生成 API 的开发者文档，重点说明 Seedance Spicy 和 Wan NSFW 两条模型线的接入方向，以及异步任务、webhook 回调、积分计费和参数白名单等工程要求。适合需要集成 18+ 文生视频或图生视频能力的开发者阅读，实际接口细节需登录站点后查阅官方文档。",
+ "tagline": "面向开发者的 18+ AI 视频生成 API 接入文档"
+}
