@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望借助 AI 代理加速原型和游戏开发的独立开发者、小型团队，以及想为游戏工作流扩展自定义工具的开发者。",
+ "date": "2026-11-04",
+ "features": [
+  "AI 代理自动配置引擎、构建游戏并试玩测试",
+  "支持 Unreal Engine、Unity、Godot、Roblox Studio 及浏览器",
+  "可使用 Claude Code / ChatGPT 订阅或本地模型，支持多代理混用模型",
+  "通过 Blender 插件本地生成 3D 素材，并接入 Meshy、Tripo、ElevenLabs 等服务",
+  "插件系统可扩展代理工具，支持从 GitHub 安装和发布到 Marketplace"
+ ],
+ "intro": "Genex 是一个面向游戏开发的桌面应用，用 AI 代理在对话中完成游戏制作。它支持 Unreal Engine、Unity、Godot 和 Roblox Studio，代理会自行配置引擎环境、构建游戏并进行试玩测试；也可以直接发布到网页。\n\n模型方面，可以使用 Claude Code 或 ChatGPT 订阅，也可以运行本地模型，并支持在主代理、工作代理和审查代理之间混用不同模型。3D 素材可通过 Blender 插件在本地生成，Meshy、Tripo、ElevenLabs 等服务经由 Genex 工具路由接入。\n\n项目提供 macOS、Linux 和 Windows 预览版安装包，采用 MIT 协议，目前处于早期阶段。插件机制允许为代理扩展新工具，并可通过 Marketplace 分发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 releases 页面下载对应平台安装包（macOS 为 Genex.dmg，Linux 为 .deb/.rpm/.zip，Windows 为 Genex-Setup.exe）",
+  "启动应用，选择使用 Claude Code / ChatGPT 订阅或配置本地模型",
+  "在对话中描述要做的游戏，由代理配置引擎、构建并试玩测试",
+  "如需扩展工具，在 Plugins → Add 中加载本地插件或从 GitHub 安装"
+ ],
+ "summary": "Genex 是一个桌面应用，把 AI 代理接入游戏开发流程：你在对话里提出需求，代理负责配置引擎、构建游戏并自行试玩测试。它覆盖 Unreal Engine、Unity、Godot 和 Roblox Studio，也能发布到网页，并支持订阅模型或本地模型、多代理协作以及 Blender 本地生成 3D 素材。适合想用 AI 加速游戏原型与开发的独立开发者。",
+ "tagline": "用 AI 代理在主流游戏引擎里做游戏的桌面应用"
+}

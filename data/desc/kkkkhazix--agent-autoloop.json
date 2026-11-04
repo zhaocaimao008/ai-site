@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让命令行 Agent 在后台自动处理重复任务、又不想一直盯着终端的开发者，以及需要把 AI 接入日常运维和交付流程的个人或小团队。",
+ "date": "2026-11-04",
+ "features": [
+  "事件驱动调度：定时任务、GitHub Webhook、HTTP 接口等事件按规则自动派给 Agent",
+  "挂起零消耗：等待人工拍板时进程退出，不占后台进程也不消耗 Token",
+  "多通道通知：支持飞书、钉钉、企微、Slack、Discord 和桌面通知发卡片请示",
+  "插件化架构：事件来源、Agent、通知通道和交付流水线均可替换或自定义",
+  "内置场景模板：每日早报、跟进 Issue、告警排查、网站巡检、PR 自动交付等",
+  "事件溯源与安全机制：只追加日志、指令数据分离、跳数熔断"
+ ],
+ "intro": "Agent Autoloop 是一个轻量自动化中台，用于让 Claude Code、Codex 等命令行 Agent 在后台自动接活并跟进到底。它把任务调度做成零外部依赖的内核，将事件来源、Agent、通知通道和交付流水线拆成可插拔插件。\n\n它解决“人守着终端用 Agent”的问题：关掉窗口或人走开后任务就断。通过规则配置，定时任务、GitHub Issue、业务报错等事件可自动派给指定 Agent 执行；遇到删数据、重启服务、花钱等拿不准的事，才通过飞书、钉钉、企微、Slack、Discord 或桌面通知发卡片找你拍板。等待期间不占进程、不消耗 Token，回答后接上原会话继续干完。\n\n项目支持 macOS 和 Linux，一条命令安装，一行配置接入新 Agent，无需 SDK 或修改 Agent 源码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node 24、Git、curl 和任意已登录的命令行 Agent",
+  "运行安装命令：curl -fsSL https://raw.githubusercontent.com/KKKKhazix/agent-autoloop/main/install.sh | sh",
+  "运行 agent-autoloop try 走一遍提问、拍板、继续的流程",
+  "编辑 ~/.agent-autoloop/rules.json 配置任务规则，保存后自动生效",
+  "运行 agent-autoloop check 检查规则，用 agent-autoloop status 查看进展"
+ ],
+ "summary": "Agent Autoloop 让 Claude Code、Codex 等命令行 Agent 在后台自动接活并跟进到底，解决人必须守着终端、关掉窗口任务就断的问题。它通过规则把定时任务、GitHub Issue、业务报错等事件派给指定 Agent，遇到拿不准的事才发卡片到飞书、钉钉、Slack 等通道请你拍板，等待期间不占进程也不消耗 Token。适合希望把重复任务交给 Agent 自动处理、又不想一直盯终端的开发者。",
+ "tagline": "让命令行 Agent 后台自动接活、按需请示的轻量中台"
+}

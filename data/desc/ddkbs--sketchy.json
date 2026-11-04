@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望 AI 在解释时自动生成清晰图表的开发者、教师和学生，尤其适用于使用 Claude、Cursor 或 VS Code 进行编程和学习的场景。",
+ "date": "2026-11-04",
+ "features": [
+  "AI 决定画什么，Sketchy 自动计算布局，无需 AI 计算坐标",
+  "支持系统流程、CS/ML 概念、代码仓库、电路图、照片标注等多种图表类型",
+  "交互式图表：悬停查看详情、红笔批注并发送给 AI、点击代码节点打开文件",
+  "可导出为 SVG、PNG 或 Excalidraw 文件，保留字体",
+  "作为 Claude skill 或 MCP 服务器，集成 Claude、Cursor、VS Code 等工具"
+ ],
+ "intro": "Sketchy 是一个面向 AI 助手的图表布局引擎。AI 只需决定画什么、标注什么，Sketchy 负责计算位置：它提供带命名锚点的部件库和自动布局，AI 无需计算坐标，因此每次都能生成精确一致的图。\n\n它支持在 Claude 聊天中作为 skill 使用，也可作为 MCP 服务器接入 Claude Code、Cursor、VS Code 等客户端。可绘制系统流程、计算机科学概念、代码仓库结构、Arduino/ESP32 电路图，以及带标注的照片。图表支持悬停查看详情、红笔批注后发回 AI、点击代码节点打开文件，并可导出为 SVG、PNG 或 Excalidraw 文件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude 聊天：从最新 release 下载 sketchy-skill-<version>.zip，在 Claude 设置 → Capabilities → Skills 中上传，然后在任意聊天中请求绘图。",
+  "Claude Code 终端：运行 `claude mcp add sketchy --scope user -- npx -y @ddkbs/sketchy`，再用 `claude mcp list` 检查连接。",
+  "Cursor / VS Code：点击 Add to Cursor 或 Add to VS Code 按钮，或手动在 MCP 配置中添加 `npx -y @ddkbs/sketchy`。",
+  "Claude 桌面应用：从 release 下载对应平台的 .mcpb 文件，双击安装并在 Code 标签页中使用。"
+ ],
+ "summary": "Sketchy 是一个让 AI 助手在解释时自动绘制手绘风格交互图的布局引擎。AI 只负责决定画什么和标注什么，Sketchy 通过部件库和自动布局计算位置，避免 AI 计算坐标导致的不精确。它可作为 Claude skill 或 MCP 服务器使用，支持系统流程、代码结构、电路图等多种图表，适合需要 AI 边讲边画的开发者和学习者。",
+ "tagline": "让 AI 在解释时画出精准的手绘风格交互图"
+}

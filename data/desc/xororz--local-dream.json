@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合想在 Android 手机上离线体验 Stable Diffusion 的普通用户，以及关注端侧 AI 推理部署的开发者。",
+ "date": "2026-11-04",
+ "features": [
+  "在 Android 设备上本地运行 Stable Diffusion 图像生成",
+  "支持骁龙 NPU 加速，覆盖 SD1.5 与 SDXL 模型",
+  "支持 CPU/GPU 推理作为备选方案",
+  "支持导入 SDXL MNN 包进行 CPU/GPU 推理",
+  "集成 Real-ESRGAN 等图像放大模型与 NSFW 内容过滤"
+ ],
+ "intro": "Local Dream 是一个 Android 应用，让 Stable Diffusion 图像生成模型直接在手机上运行。它支持 SD1.5 和 SDXL 模型，并针对高通骁龙 NPU 做了加速：SD1.5 需要 Hexagon V68 或更新架构，SDXL 需要骁龙 8 Gen 3 及更新设备。没有 NPU 时，也可以回退到 CPU 或 GPU 推理。\n\n项目已开源且完全免费，代码主要用 Kotlin 编写，底层依赖 Qualcomm QNN SDK、阿里巴巴 MNN、stable-diffusion.cpp 等开源库完成模型执行与张量运算。用户指南和文档已迁移到独立的 Guide 站点。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Local Dream 把 Stable Diffusion 搬到了 Android 手机上，利用骁龙 NPU 加速推理，也支持 CPU/GPU 回退。它适合想在本地设备上直接生成图片、不想依赖云端服务的用户，尤其是有骁龙 8 Gen 3 或更新机型的玩家。项目已开源免费，支持 SD1.5 和 SDXL 模型。",
+ "tagline": "在 Android 设备上运行 Stable Diffusion，支持骁龙 NPU 加速"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合法律科技开发者、法律研究者、需要按日期查询或追溯法律条文的 AI 应用开发者，以及对开放法律数据感兴趣的技术用户。",
+ "date": "2026-11-04",
+ "features": [
+  "按司法管辖区组织法律文本，每个国家/地区独立仓库，通过子模块聚合",
+  "支持查询任意国家在任意日期的法律条文",
+  "追溯条文每一行或每一个词的立法来源（blame/words）",
+  "比较两个日期之间的法律变化（diff）",
+  "提供 MCP 服务器，含 18 个只读工具，可接入 AI 客户端",
+  "命令行工具支持 world、show、blame、words、diff、laws 等操作"
+ ],
+ "intro": "global-law 把各国法律文本组织成 Git 仓库，每个司法管辖区对应一个子模块仓库（如 lexifina/<country>-law）。每次提交代表一部法律生效，提交信息记录生效日期，因此可以查询任意国家在任意日期的法律状态。\n\n项目提供命令行工具和 MCP 服务器。命令行支持按日期查看条文、追溯每行或每个词的立法来源、比较两个日期之间的变化。MCP 服务器包含 18 个只读工具，可接入 Claude Code、Cursor 等 AI 客户端，让模型直接查询法律条文及其历史。\n\n仓库本身以 CC0 发布，但各国法律文本仍受其各自仓库的条款约束。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/lexifina/global-law && cd global-law",
+  "python3 tools/countries.py add united-states/federal/usc",
+  "python3 tools/law.py show 2022-05-01 united-states/federal/usc/title-11/1182.md",
+  "python3 tools/law.py blame 2022-07-01 <path>",
+  "配置 MCP 服务器：在 Claude Code、Cursor 等客户端中打开仓库文件夹，或按 README 中的 JSON 配置其他客户端"
+ ],
+ "summary": "global-law 将各国法律文本纳入 Git 版本控制，每次提交对应一部法律生效，从而支持按日期查询任意国家的法律条文，并追溯每句话的立法来源。项目提供命令行工具和 MCP 服务器，适合法律科技开发者、研究者以及需要让 AI 模型准确引用法律历史的场景。",
+ "tagline": "用 Git 历史管理全球法律，可追溯每句话的出处"
+}

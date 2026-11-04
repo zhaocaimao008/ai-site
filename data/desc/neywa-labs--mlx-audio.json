@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Mac 上本地运行语音 AI 模型的开发者和研究者，以及需要集成 TTS/STT 功能的 Python 开发者。",
+ "date": "2026-11-04",
+ "features": [
+  "支持文本转语音、语音转文本、语音转语音和音乐生成",
+  "针对 Apple Silicon 优化的快速推理",
+  "多语言支持与声音克隆能力",
+  "提供命令行工具和 Python API",
+  "内置交互式 Web 界面和 OpenAI 兼容 REST API",
+  "支持 3-bit 到 8-bit 量化以优化性能"
+ ],
+ "intro": "MLX-Audio 是一个基于 Apple MLX 框架构建的语音处理库，支持文本转语音（TTS）、语音转文本（STT）、语音转语音（STS）以及音乐生成。它针对 Apple Silicon（M 系列芯片）进行了推理优化，所有模型均在本地运行。\n\n项目提供了多种模型架构，涵盖 Kokoro、Qwen3-TTS、Higgs Audio 等 TTS 模型，并支持多语言、声音克隆、语速调节等功能。同时提供命令行工具、Python API、交互式 Web 界面和 OpenAI 兼容的 REST API，方便集成到不同工作流中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install -U mlx-audio",
+  "使用命令行生成语音：mlx_audio.tts.generate --model mlx-community/Qwen3-TTS-12Hz-0.6B-CustomVoice-8bit --text 'Hello, world!' --voice Vivian",
+  "或通过 Python API 加载模型并生成语音"
+ ],
+ "summary": "MLX-Audio 是一个基于 Apple MLX 框架的语音处理库，让开发者能在 Apple Silicon 设备上本地运行文本转语音、语音转文本、语音转语音和音乐生成模型。它针对 M 系列芯片优化推理速度，支持多语言和声音克隆，并提供命令行、Python API 和 Web 界面，适合需要在 Mac 上离线处理语音任务的场景。",
+ "tagline": "在 Apple Silicon 上本地运行语音 AI 模型"
+}

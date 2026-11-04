@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在个人电脑上本地运行大模型、注重数据隐私的开发者，以及需要本地 API 接入编码代理或聊天应用的用户。",
+ "date": "2026-11-04",
+ "features": [
+  "在本地 PC 上运行 Qwen3.8-Flash-Next、GLM 5.3 Flash、DeepSeek V4 Flash 等十二个模型",
+  "提供 Windows 和 Linux 一键安装",
+  "在 localhost 上提供 OpenAI/Anthropic 兼容 API",
+  "支持在服务器运行时切换已安装的模型",
+  "部分模型支持图像输入",
+  "内置基准测试命令，可测量 tokens/s 和提示读取速度"
+ ],
+ "intro": "PolyStrata 是一个用 C++ 编写的本地推理引擎，目标是在普通 PC 上运行通常需要服务器的大型 AI 模型。它支持十二个模型，分为两个引擎：Qwen3.8-Flash-Next 使用 Strata 项目的引擎，其余十一个模型使用专为 PolyStrata 编写的引擎。\n\n项目提供 Windows 和 Linux 的一键安装，并在 localhost 上暴露 OpenAI/Anthropic 兼容 API，方便接入聊天应用和编码代理。模型文件以 GGUF 格式分发，部分模型支持图像输入，并可在运行时切换已安装的模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从项目发布页下载 Windows 或 Linux 一键安装包并安装",
+  "启动 PolyStrata 服务器，默认在 localhost 提供 OpenAI/Anthropic 兼容 API",
+  "使用内置基准测试：python polystrata.py benchmark --model <name> --prompt-tokens 24000",
+  "在 strata-<model>.json 的 args 列表中添加 \"--ram-experts-mib\", \"6144\" 以减少内存占用"
+ ],
+ "summary": "PolyStrata 是一个本地推理引擎，让你在普通 PC 上运行通常需要服务器的大型 AI 模型，支持聊天、写代码和接入编码代理，数据不出本机。它提供 Windows/Linux 一键安装，并在 localhost 暴露 OpenAI/Anthropic 兼容 API，适合注重隐私、想本地部署大模型的开发者和普通用户。",
+ "tagline": "在个人电脑上本地运行大型 AI 模型"
+}

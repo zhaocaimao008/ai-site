@@ -1,0 +1,17 @@
+{
+ "ai_related": false,
+ "audience": "适合需要跨平台即时通讯解决方案的开发者，以及对 Tauri + Vue 3 技术栈感兴趣的前端或全栈工程师。",
+ "date": "2026-11-04",
+ "features": [
+  "跨平台支持 Windows、macOS、Linux、iOS 和 Android",
+  "基于 Tauri 构建，使用前端技术栈开发桌面与移动应用",
+  "采用 Vue 3 组合式 API 与 TypeScript，提供类型安全",
+  "使用 Vite 7 作为构建工具，支持快速开发与生产打包",
+  "提供配套服务端项目 HuLa-Server"
+ ],
+ "intro": "HuLa 是一个基于 Tauri、Vite 7、Vue 3 和 TypeScript 构建的即时通讯系统。它利用 Tauri 的跨平台能力，将前端技术栈打包为桌面与移动应用，目标是在保证安全性的同时减少资源占用。\n\n项目支持 Windows 10/11、macOS 10.5+、Ubuntu 22.0+、iOS 9.0+ 和 Android 12+（SDK30+），Web 端暂不支持，需要自行移除桌面相关功能。README 提供了界面截图和启动文档链接，但未给出具体的安装或运行命令。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "HuLa 是一个用 Tauri、Vue 3 和 TypeScript 构建的跨平台即时通讯应用，覆盖 Windows、macOS、Linux、iOS 和 Android。它适合想研究或二次开发跨平台聊天客户端的开发者，也适合作为 Tauri 结合 Vue 3 的实践参考。项目提供配套服务端，但 README 未给出具体安装命令，需参考启动文档配置环境。",
+ "tagline": "基于 Rust + Vue3 的跨平台即时通讯应用"
+}

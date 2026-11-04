@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合有 Linux 服务器、希望自托管 QQ 群聊机器人的开发者或爱好者，需要基本的命令行和 Docker 使用经验。",
+ "date": "2026-11-04",
+ "features": [
+  "单轮分条发言，先判断图片情绪再回应，结束前自检",
+  "贴纸系统：自动收藏并优先使用 QQ 收藏表情",
+  "主动发言：会话安静时发起话题、无人回应时补一句、模型自安排唤醒",
+  "长期记忆与检索：人物印象、会话交接，支持关键词/短句检索",
+  "语音转写与合成：支持 QQ 语音（SILK）与视频音轨，可发语音回复",
+  "插件与技能包：插件独立子进程运行，技能包为只读 Markdown 流程"
+ ],
+ "intro": "QQ Agent Plus 是一个运行在 Linux 服务器上的 QQ 群聊 Agent，通过 OneBot v11 协议连接外部协议端，使用 OpenAI Chat Completions 兼容接口驱动对话。它不依赖 Windows 或 Electron，适合自托管部署。\n\n项目支持单轮分条发言、表情包收发、长期记忆与检索、主动发言、语音转写与合成、图片生成、插件与技能包等能力，并提供内置运维命令和 Web 控制台用于配置与监控。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "docker pull ghcr.io/sakurawwwxh/qq-agent-plus:0.9.13",
+  "git clone https://github.com/sakurawwwxh/qq-agent-plus.git",
+  "cd qq-agent-plus",
+  "docker compose up -d",
+  "在网页控制台填写模型 Key 与群号，并扫码登录 QQ"
+ ],
+ "summary": "QQ Agent Plus 是一个面向 Linux 服务器的 QQ 群聊 Agent，通过 OneBot v11 连接协议端，用 OpenAI 兼容接口驱动对话。它解决群聊机器人发言生硬、缺少记忆和运维不便的问题，支持分条发言、表情包、长期记忆、主动发言、语音与插件扩展，适合想自托管 QQ 群聊机器人的开发者。",
+ "tagline": "面向 Linux 的 QQ 群聊 Agent，支持分条发言与表情包"
+}

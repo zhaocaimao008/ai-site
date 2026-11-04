@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要较少内容限制文本模型的开发者，以及进行安全研究、逆向工程或创意写作的用户。",
+ "date": "2026-11-04",
+ "features": [
+  "OpenAI 兼容 API，只需更换 base URL 和模型名即可接入现有客户端",
+  "提供 DeepSeek 和 GLM 系列 abliterated/uncensored 文本模型",
+  "支持流式响应和函数工具调用",
+  "包含 Python 和 TypeScript 的请求与流式示例代码",
+  "提供 Cline、Continue、OpenCode 等编码客户端的配置指南",
+  "文档涵盖模型目录、定价、错误处理与计费说明"
+ ],
+ "intro": "UncensoredLabs 提供一个 OpenAI 兼容的 API，让开发者通过修改 base URL 和模型名，就能在现有客户端中调用经过 abliterated 处理的 DeepSeek 和 GLM 文本模型。这些模型的权重经过修改以减少拒绝行为，适合需要较少内容限制的文本生成场景。\n\n该仓库是官方公开的文档与示例集合，包含快速开始、Python 和 TypeScript 示例、流式响应、编码客户端配置、模型目录、错误与计费说明等指南。托管平台本身的实现并未包含在此仓库中。\n\n所有模型支持文本、流式输出和函数工具调用，上下文长度为 1,000,000 tokens。使用前需要在仪表盘创建应用 API 密钥，新账户可获得试用额度。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 UncensoredLabs 仪表盘创建账户并生成应用 API 密钥",
+  "设置环境变量：export UNCENSOREDLABS_API_KEY=\"YOUR_APPLICATION_API_KEY\"",
+  "使用 curl 发送请求到 https://uncensoredlabs.dev/v1/chat/completions，指定模型如 deepseek-v4.1-flash-1017-abliterated",
+  "参考 examples/chat.py 或 examples/chat.ts 使用 OpenAI SDK 集成"
+ ],
+ "summary": "这个项目提供 OpenAI 兼容的 API，让开发者通过更换 base URL 和模型名，在现有客户端中调用经过 abliterated 处理的 DeepSeek 和 GLM 文本模型。仓库包含快速开始、Python/TypeScript 示例、流式响应、编码客户端配置和模型定价等文档，适合需要较少内容限制文本生成的安全研究、逆向工程或创意写作场景。",
+ "tagline": "通过 OpenAI 兼容 API 访问未审查的 DeepSeek 与 GLM 模型"
+}

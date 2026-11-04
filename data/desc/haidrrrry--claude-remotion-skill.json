@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 Claude 快速产出可编辑、品牌可控动态图形视频的开发者、内容创作者和设计人员，无需 After Effects 或 Premiere 等时间线软件。",
+ "date": "2026-11-04",
+ "features": [
+  "将运动设计规则固化为 10 条硬性约束，避免线性插值和单调淡入淡出",
+  "提供 17 个可复制粘贴的运动模式组件，包括入场、转场、字幕、计数器等",
+  "强制渲染后抽帧检查再交付，确保输出经过视觉验证",
+  "附带主题模板 theme.ts，统一颜色、缓动和弹簧预设",
+  "支持 Claude Code 按用户或按项目安装，也支持 Claude Desktop/Claude.ai 上传 .skill 文件",
+  "examples 目录包含四个完整 Remotion 合成示例，可直接渲染"
+ ],
+ "intro": "这是一个面向 Anthropic Claude 的开源 Agent Skill，安装后 Claude Code、Claude Desktop 和 Claude AI 可以按 Remotion（React + TypeScript 视频框架）的规范生成和编辑动态图形视频。它把运动设计经验写成硬性规则，并强制 Claude 在交付前执行“渲染 → 抽帧检查 → 修复 → 重渲染”的验证循环。\n\n项目包含 SKILL.md、17 个可复用的运动模式组件、设计规则和主题模板，覆盖弹簧动画、错峰编排、调色、胶片颗粒、Ken Burns、逐词字幕和声音设计等。适合制作 Logo 动画、品牌片头、竖屏 Reels/Shorts、无真人出镜的内容视频和产品讲解等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/haidrrrry/claude-remotion-skill.git",
+  "Claude Code 按用户安装：mkdir -p ~/.claude/skills && cp -r claude-remotion-skill/remotion-motion-graphics ~/.claude/skills/",
+  "Claude Desktop/Claude.ai：在 Settings → Capabilities → Skills 中上传 remotion-motion-graphics.skill",
+  "验证：对 Claude 说“make me a 3 second logo sting”，确认它先读取 skill 并在交付前抽帧检查",
+  "运行示例：cd examples && npm install && npm run audio && npm run render:selffix"
+ ],
+ "summary": "这个项目是一个 Claude Agent Skill，用来让 Claude 按 Remotion 的规范生成和编辑动态图形视频。它把运动设计经验写成硬性规则，并要求 Claude 在交付前渲染、抽帧检查、修复再重渲染，适合制作 Logo 动画、品牌片头、竖屏短视频和产品讲解等需要精确控制文字、颜色和节奏的场景。",
+ "tagline": "教 Claude 用 Remotion 制作专业动态图形视频的 Agent Skill"
+}

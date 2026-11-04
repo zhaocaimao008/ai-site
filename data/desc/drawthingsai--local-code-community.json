@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 Apple 设备上本地运行 AI 代理、处理文件任务或开发工作的用户，以及希望研究端侧推理和代理运行时的开发者。",
+ "date": "2026-11-04",
+ "features": [
+  "设备端 LLM 推理引擎，支持 Apple Silicon 离线运行",
+  "内置 Python 3.14、Node.js 24、shell 及常用 Unix 命令的沙盒环境",
+  "任务和对话线程持久化保存，支持中断后续跑和实时引导",
+  "内置多种技能（skills），覆盖 Office 文档、图表、视频、网页浏览等场景",
+  "支持连接云端模型（Anthropic、OpenAI、OpenRouter 等）",
+  "长期上下文缓存，将模型上下文（含图像和循环状态）保存到磁盘"
+ ],
+ "intro": "Local Code 是一款主要用 Swift 编写的私有 AI 代理应用，面向 Mac、iPad 和 iPhone。它把三部分整合在一个应用里：针对 Apple Silicon 的 LLM 推理引擎、为每个模型调优的编码 harness，以及内置 Python、Node.js、shell 等工具的代理运行时。代理可以在你指定的文件夹中完成数据分析、图表绘制、文档和幻灯片制作、软件开发等任务。\n\n推理可以在设备上离线运行，支持 DeepSeek 4.1 Flash 1017 等模型；也可以选择 Anthropic、OpenAI、OpenRouter 或兼容 OpenAI 的云端模型。代理的工具运行在应用沙盒内，只能访问你允许的文件夹。\n\n该仓库包含应用及其命令行工具的源代码，以及构建所需的库和第三方依赖。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 getlocalcode.app 下载 Local Code 应用",
+  "首次启动时根据设备内存选择建议的模型（如 32 GB 以下选 Qwen 3.8 27B 2-bit S）",
+  "选择一个工作区文件夹，代理将在该文件夹内读写文件",
+  "在应用内与代理对话，或使用内置技能（如 office、answers-charts）完成任务"
+ ],
+ "summary": "Local Code 是一个在 Mac、iPad 和 iPhone 上运行的私有 AI 代理应用，把端侧 LLM 推理、编码 harness 和内置 Python/Node.js/shell 的代理运行时整合在一起。它适合希望离线处理文件任务（如数据分析、文档制作、软件开发）或需要可控沙盒环境的用户，也支持切换云端模型。",
+ "tagline": "面向 Mac、iPad 和 iPhone 的本地私有 AI 代理"
+}

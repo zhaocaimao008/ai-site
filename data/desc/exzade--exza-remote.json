@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI 助手直接协助处理本机文件、终端任务和系统检查的开发者、IT 支持人员及技术团队。",
+ "date": "2026-11-04",
+ "features": [
+  "通过单个 HTTPS MCP 端点接入 ChatGPT、Claude 及兼容 MCP 客户端",
+  "使用一次性配对码将电脑绑定到 EXZA 账号",
+  "在授权范围内进行文件查看与管理、终端命令执行和任务跟踪",
+  "查看设备状态、系统信息与进程",
+  "敏感操作需用户审批，连接可撤销",
+  "提供 macOS、Windows、Linux 客户端安装路径"
+ ],
+ "intro": "EXZA Remote 是一个托管式 MCP 服务，用于把 ChatGPT、Claude 等兼容 MCP 的 AI 客户端连接到用户自己的 Mac、Windows 或 Linux 电脑。它由远程 MCP 端点和本地电脑客户端组成，不是云端虚拟桌面，也不是开源 npm 包。\n\n连接建立后，AI 可以在授权范围内查看文件、检查系统与进程状态、执行终端命令并跟踪长时间运行的任务，部分桌面操作仅在 macOS 等平台可用。敏感操作需要用户在本地或平台侧确认，设备通过一次性配对码绑定到账号，连接可随时关闭。\n\n项目本身是专有商业服务，GitHub 仓库主要用于产品说明，安装需在官网注册账号并按官方文档操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 remote.exza.de 注册 EXZA 账号",
+  "登录客户面板，打开 My Devices，选择对应平台的官方安装说明",
+  "在电脑上启动本地 EXZA Remote 客户端，将显示的一次性配对码填入面板并在终端确认",
+  "在支持的 AI 客户端中添加远程 MCP 服务器地址 https://remote.exza.de/mcp，完成 EXZA OAuth 登录与授权",
+  "先用检查设备连接状态等无害操作验证连通性"
+ ],
+ "summary": "EXZA Remote 解决的是让 AI 助手直接接触用户本机的问题：它通过 MCP 把 ChatGPT、Claude 等客户端连接到自己的 Mac、Windows 或 Linux 电脑，在授权范围内查看文件、检查系统、执行终端命令。适合需要 AI 协助处理本地开发与运维任务、又希望保留审批和撤销控制的开发者与技术团队。",
+ "tagline": "通过 MCP 让 ChatGPT、Claude 远程操作你自己的电脑"
+}
