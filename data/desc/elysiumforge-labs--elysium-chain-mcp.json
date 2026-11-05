@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要让 AI 代理安全地读取或操作 Elysium 链上数据的开发者，尤其是使用 Claude Desktop 或 Cursor 等 MCP 客户端的用户。",
+ "date": "2026-11-05",
+ "features": [
+  "八个始终注册的只读工具，支持查询链状态、区块、交易、余额、代币信息、合约视图函数、事件日志和调用模拟",
+  "七个区块浏览器工具，需配置 EXPLORER_API_URL 后启用，提供地址概览、交易记录、代币转账等查询",
+  "两个写入工具（send_native 和 write_contract），需设置 ENABLE_WRITES=true 才注册，且仅限测试网链 ID 99801",
+  "支持 stdio 和 HTTP 两种 MCP 传输方式，HTTP 模式可配置绑定地址和 Bearer 令牌",
+  "通过环境变量配置 RPC 超时、重试、速率限制、日志级别等参数",
+  "写入工具默认 dry_run 模式，模拟并返回交易详情，需显式设置 dry_run=false 才签名提交"
+ ],
+ "intro": "elysium-chain-mcp 是一个基于 Model Context Protocol (MCP) 的服务器，让 AI 代理能够读取和交互 Elysium 链。Elysium 是 Kinetiq 为 Hyperliquid 构建的 Arbitrum Orbit L2。项目使用 TypeScript 编写，要求 Node.js 20 或更高版本。\n\n服务器默认提供八个只读工具，涵盖链状态、区块、交易、余额、代币信息、合约调用、事件日志和调用模拟。当配置了区块浏览器 API 时，还会注册七个浏览器工具。写入工具默认关闭，需显式启用，且仅支持 Elysium 测试网（链 ID 99801）。\n\n传输方式支持 stdio 和 HTTP，可通过环境变量配置 RPC 端点、超时、重试等参数。适合需要让 AI 代理安全地查询或操作 Elysium 链上数据的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 20 或更高版本",
+  "在 MCP 客户端配置中添加 mcpServers 对象，指定命令 npx -y elysium-chain-mcp，并设置环境变量 ELYSIUM_RPC_URL 和 ELYSIUM_CHAIN_ID",
+  "如需本地运行，执行 npm install、npm run build 和 npm start，启动前导出 ELYSIUM_RPC_URL 和 ELYSIUM_CHAIN_ID",
+  "如需 HTTP 传输，设置 MCP_TRANSPORT=http，服务器将绑定 127.0.0.1:3000，接受 POST /mcp 请求",
+  "如需启用写入工具，设置 ENABLE_WRITES=true 并提供 ELYSIUM_PRIVATE_KEY，注意仅支持测试网链 ID 99801"
+ ],
+ "summary": "elysium-chain-mcp 是一个 MCP 服务器，让 AI 代理能够读取和交互 Elysium 链（Kinetiq 为 Hyperliquid 构建的 Arbitrum Orbit L2）。它提供只读工具查询链上数据，并可选启用写入工具在测试网上发送交易。适合需要让 AI 代理安全访问 Elysium 链上信息的开发者，尤其是使用 Claude Desktop 或 Cursor 等 MCP 客户端的场景。",
+ "tagline": "让 AI 代理读写 Elysium 链的 MCP 服务器"
+}

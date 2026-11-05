@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合从事游戏、动画和 VFX 的数字雕刻师与 3D 艺术家，也适合希望免费使用雕刻工具并尝试 AI 生成 3D 的开发者。",
+ "date": "2026-11-05",
+ "features": [
+  "多种雕刻笔刷、对称、遮罩、面组与 Parts 多网格管理",
+  "体素重网格、四边形重拓扑、Project All 与雕刻层（可作 blend shape）",
+  "顶点绘制与基于 UV 的纹理绘制，支持 1K-8K 贴图",
+  "Brush Lab：用文字描述让 AI 生成笔刷，可分享为 .sfbrush 或笔刷代码",
+  "图像/文本生成 3D 模型，支持 Hugging Face 演示、ComfyUI、fal.ai、Meshy 等",
+  "游戏管线集成：生成 LOD、Send to Unreal、导出 OBJ/FBX/glTF/USD"
+ ],
+ "intro": "SculptForge 是一款免费开源的数字雕刻应用，面向 VFX、动画和游戏制作，原生支持 Linux、macOS 和 Windows。它提供标准、Clay、Smooth、Move、Crease 等常用笔刷，以及对称、遮罩、面组、Gizmo、动态拓扑、体素重网格和四边形重拓扑等功能，并支持顶点绘制与 UV 纹理绘制。\n\n项目内置免费的 AI 能力：Brush Lab 可根据文字描述生成笔刷配方；图像/文本生成 3D 可借助 Hugging Face 官方演示、自建 ComfyUI 或 fal.ai、Meshy 等服务，将草图或概念图转为可雕刻模型。此外还支持导出 LOD、通过 Bridge 发送到 Unreal Engine，以及 Gaussian splats 和 OpenUSD。\n\n当前版本为 v0.8 早期发布，核心雕刻、管线与 AI 功能可用，并提供内置用户指南。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载对应平台的安装包并安装",
+  "首次启动时选择 Classic sculpting keys 以沿用熟悉的雕刻快捷键",
+  "通过 File 菜单导入 OBJ、FBX、glTF 或 USD 模型开始雕刻",
+  "使用 Brush Lab 输入文字描述生成自定义笔刷",
+  "在 AI 生成 3D 功能中选择图像或文本输入，生成模型后重网格并继续雕刻"
+ ],
+ "summary": "SculptForge 是一个免费开源的跨平台数字雕刻工具，面向游戏、动画和 VFX 制作。它提供常用雕刻笔刷、遮罩、面组、重拓扑和纹理绘制，并集成免费的 AI 笔刷生成与图像/文本转 3D 能力，还能生成 LOD 并发送到 Unreal Engine。适合想找免费雕刻软件、或希望在雕刻流程中试用 AI 生成模型的创作者。",
+ "tagline": "免费开源的跨平台数字雕刻软件，内置 AI 生成"
+}

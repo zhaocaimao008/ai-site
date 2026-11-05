@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合想从零理解 AI Agent 工作原理的开发者，以及希望动手实现一个本地 Agent 的学习者。",
+ "date": "2026-11-05",
+ "features": [
+  "从最小循环起步，每课增加一个 Agent 能力，并提供可运行的代码快照",
+  "覆盖工具系统、权限、上下文管理、Skills、MCP、子 Agent、计划与记忆等主题",
+  "不绑定厂商，使用 OpenAI 兼容接口，默认 DeepSeek，改环境变量即可换模型",
+  "自带本地网页端，展示每一步的思考、工具调用和完整上下文",
+  "第 3 课起每课附带测试，用假模型运行，无需 API Key",
+  "最后拆解 Claude Code、Codex 等主流 Agent 的实现思路"
+ ],
+ "intro": "NamiAgent 是一套面向零基础学习者的 AI Agent 教程，同时本身也是一个能在本地运行的 Agent。它从约 100 行的最小循环开始，每课增加一个能力：工具系统、权限控制、上下文管理、Skills、MCP、子 Agent、计划与长期记忆，最终拆解 Claude Code、Codex 等主流 Agent 的设计。\n\n项目按课提供可运行的代码快照（lessons/lesson-01 到 lesson-11），每课都有对应文章，方便对比相邻两课的差异。它使用 OpenAI 兼容接口，默认接入 DeepSeek，只依赖 openai 一个包，不引入任何 Agent 框架。\n\n此外还自带一个本地网页端，可以直观看到每一步的模型思考、工具调用和完整上下文变化；写文件、执行命令等操作会先请求确认。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/aa1143/NamiAgent.git && cd NamiAgent",
+  "pip install -r requirements.txt",
+  "export API_KEY=你的模型密钥",
+  "export NAMI_WORKSPACE=~/agent-workspace && mkdir -p $NAMI_WORKSPACE",
+  "cd lessons/lesson-05 && python agent.py",
+  "python web/app.py --demo  # 可选：演示模式，无需 API Key"
+ ],
+ "summary": "NamiAgent 把 AI Agent 拆成可以一步步跟着写的教程：从最小循环开始，每课加一个能力，最终覆盖工具、权限、上下文、MCP、记忆等主题，并拆解主流 Agent 的做法。它同时是一个能在本地运行的 Agent，自带网页端展示每一步的思考和上下文变化，适合想真正弄懂 Agent 内部机制的开发者动手学习。",
+ "tagline": "从零手写可运行的 AI Agent，逐课拆解主流实现"
+}

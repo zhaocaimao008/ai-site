@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在终端或 Claude Desktop 中使用 Claude Code 进行开发的程序员，尤其是需要实时掌握 Claude 文件操作和 Git 变更的用户。",
+ "date": "2026-11-05",
+ "features": [
+  "实时文件树：显示 Claude 的读取、写入和提交活动，并自动展开或折叠相关文件夹",
+  "Git 集成：按文件和文件夹显示 Git 状态、变更行数以及分支领先/落后信息",
+  "搜索与跳转：按名称搜索未打开的文件夹，用 git grep 或 grep -r 搜索文件内容，并用 z 键快速跳转目录",
+  "预览与 diff：支持代码、Markdown、图片、视频帧、PDF 和 Word 页面预览，以及文件或文件夹的 diff 查看",
+  "上下文与保护：将选中文件发送给 Claude 作为上下文，并设置受保护路径阻止 Claude 编辑",
+  "键盘操作：提供 vim 风格移动、快捷键浮层和终端内 alt+l / alt+h 切换"
+ ],
+ "intro": "Claude Code Filetree 是一个 Claude Code 插件，在终端或 Claude Desktop 应用中增加一个实时文件树面板，用来显示 Claude 正在读取、编辑或提交哪些文件。它把文件浏览、Git 状态、搜索、预览和 diff 整合到同一个侧栏里，让开发者不必离开会话就能了解 Claude 的操作范围。\n\n项目支持按名称或内容搜索文件、用 zoxide 风格跳转目录、查看文件或文件夹的 diff，还能把选中的文件作为上下文发送给 Claude。此外，它可以设置受保护路径，阻止 Claude 修改指定文件，并显示仓库外写入的文件。\n\n该工具需要 Claude Code 2.1.306 或更新版本以及 git，安装通过插件市场完成，适合在终端中重度使用 Claude Code 的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在终端运行：claude plugin marketplace add data-goblin/claude-code-filetree",
+  "在终端运行：claude plugin install filetree@claude-code-filetree",
+  "或在 Claude Code 会话内执行：/plugin marketplace add data-goblin/claude-code-filetree",
+  "然后执行：/plugin install filetree@claude-code-filetree",
+  "若安装报错 Unrecognized key: \"options\"，先运行 claude update 再重试"
+ ],
+ "summary": "Claude Code Filetree 是一个 Claude Code 插件，在终端或桌面应用中提供 IDE 风格的文件树侧栏，实时展示 Claude 读取、编辑和提交了哪些文件。它整合 Git 状态、文件搜索、内容预览和 diff 查看，并支持将选中文件作为上下文发送给 Claude，或保护指定路径不被修改。适合希望随时掌握 Claude 文件操作范围、减少来回切换窗口的开发者。",
+ "tagline": "为 Claude Code 提供 IDE 风格文件树，实时查看读写与 Git 状态"
+}

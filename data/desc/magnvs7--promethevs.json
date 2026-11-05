@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在本地消费级硬件上运行大型开源模型、并需要 OpenAI 兼容接口的开发者与高级用户。",
+ "date": "2026-11-05",
+ "features": [
+  "在 64 GB 内存和 12 GB 显存的 PC 上运行完整 510 GB 模型",
+  "compress-then-correct 方法：2-bit 专家副本加速，低置信度词用原始权重纠正",
+  "OpenAI 兼容本地端点，支持流式输出和工具调用",
+  "安装时从官方权重构建存储，并用哈希校验",
+  "提供硬件检查、构建存储、启动引擎和验证安装的脚本",
+  "附带速度与质量报告、图表和日志"
+ ],
+ "intro": "PROMETHEVS 是一个本地推理引擎，目标是在普通消费级硬件上运行完整的 DeepSeek-V4.1-Flash-1017 模型（原始权重约 510 GB）。它采用“先压缩再纠正”的方法：每个词先在专家权重的 2-bit 副本上计算，当模型对前两个候选词犹豫时，再用存储的纠正平面精确重建原始权重并重新计算该词，从而在速度接近压缩副本的同时，输出接近完整模型。\n\n项目提供 OpenAI 兼容的本地服务器，支持流式输出和工具调用，可接入各类兼容 OpenAI API 的应用和编码代理。安装脚本会从 DeepSeek 官方下载权重并在本机构建存储，所有数据留在本地。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从最新 release 下载 PROMETHEVS_0.2.zip 并解压，例如到 C:\\promethevs_pkg",
+  "在 PowerShell 中运行硬件检查：powershell -ExecutionPolicy Bypass -File scripts\\check_hardware.ps1",
+  "下载权重并构建存储：powershell -ExecutionPolicy Bypass -File scripts\\build_stores.ps1 --run",
+  "启动引擎：powershell -ExecutionPolicy Bypass -File scripts\\start_engine.ps1",
+  "将 OpenAI 兼容应用指向 http://127.0.0.1:8100/v1，模型名 deepseek-v4.1-flash-1017-promethevs，API key 任意非空"
+ ],
+ "summary": "PROMETHEVS 解决的是在普通 PC 上运行超大模型的问题：它让 510 GB 的 DeepSeek-V4.1-Flash 在 64 GB 内存和 12 GB 显卡的机器上跑起来。通过“先压缩再纠正”的方法，大部分词用 2-bit 专家副本快速生成，模型犹豫时再用原始权重精确重算。项目提供 OpenAI 兼容本地接口，适合想本地部署大模型并接入现有工具链的开发者。",
+ "tagline": "在64GB内存+12GB显卡的PC上运行510GB的DeepSeek-V4.1-Flash"
+}

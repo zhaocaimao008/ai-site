@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望批量筛选和投递职位、且愿意在终端中操作的技术型求职者；需要自备 OrcaRouter API key。",
+ "date": "2026-11-05",
+ "features": [
+  "解析简历并生成职位搜索计划，自动提取联系方式",
+  "在本地职位库中按标题匹配岗位，默认排除超过 60 天的旧职位",
+  "用决策模型筛选候选职位，再按简历逐条评分并列出差距",
+  "在可见浏览器中自动填写申请表，提交前需用户确认",
+  "通过 Markdown 插件适配 Ashby、Greenhouse、Lever 等招聘网站",
+  "记录每次投递的页面反馈，保存在 applied.csv 和 data/proofs/"
+ ],
+ "intro": "AIHawk 是一个运行在终端里的求职自动化工具。它读取你的简历（PDF、docx 或文本），据此生成搜索计划，并从内置职位库中找出标题匹配的岗位。职位库以发布包形式提供，首次启动会下载约 672 MB 的索引，之后在本地检索。\n\n工具会对候选职位进行筛选和评分：先用决策模型从标题匹配的职位中挑出 100 个，再保留其中 25 个，然后按简历逐条打 1 到 5 分并列出差距。你可以手动选择职位，也可以让 AIHawk 在可见浏览器中自动填写申请表；提交前需要你按 a 确认，发送记录保存在 applied.csv 和 data/proofs/ 中。\n\n它通过插件支持 Ashby、Greenhouse、Lever、Workable 等招聘网站，其他职位会列出链接供手动申请。模型调用经由 OrcaRouter，默认使用 deepseek 和 gemini 系列模型，也支持配置其他兼容 OpenAI 接口的网关。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pipx install git+https://github.com/feder-cr/Jobs_Applier_AI_Agent_AIHawk",
+  "或使用 uv：uv tool install git+https://github.com/feder-cr/Jobs_Applier_AI_Agent_AIHawk，然后运行 uv tool update-shell 并打开新终端",
+  "首次运行：aihawk resume.pdf（简历可为 PDF、docx 或文本文件）",
+  "按提示输入 OrcaRouter key，之后可用 aihawk 单独重新打开职位列表",
+  "在界面中按空格选择职位，按 a 确认发送申请"
+ ],
+ "summary": "AIHawk 把求职筛选和投递搬进终端：你提供简历，它生成搜索计划，从本地职位库中找出标题匹配的岗位，用模型筛选并逐条评分，再在可见浏览器里自动填写申请表。适合想批量处理职位、又希望保留提交确认环节的开发者。",
+ "tagline": "终端里的 AI 求职助手：读简历、筛职位、自动填表"
+}

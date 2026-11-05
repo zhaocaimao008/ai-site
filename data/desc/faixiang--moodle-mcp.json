@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Moodle 平台的学生、教师，以及希望让 Claude、Cursor 等 AI 客户端直接读取课程数据的开发者。",
+ "date": "2026-11-05",
+ "features": [
+  "提供 10 个只读工具，覆盖课程列表、近期更新、待交作业、测验状态、课程文件和每周摘要",
+  "作业按即将到期、已逾期、无压力分类，并计算剩余天数",
+  "moodle_weekly_digest 一次调用汇总近期新增、即将到期和逾期内容",
+  "moodle_download_week 可将某一周的文件下载到本地文件夹，仅写入磁盘，不向 Moodle 提交任何内容",
+  "零依赖，仅使用 Python 标准库，单文件即可运行",
+  "内置配置自检与站点诊断工具，帮助排查 token 和权限问题"
+ ],
+ "intro": "Moodle-MCP 是一个基于 Python 标准库实现的 MCP 服务器，通过 Moodle 官方 Web Service API 读取课程、作业、测验、截止日期和课程文件等信息，无需浏览器抓取或模拟点击。项目以单个 server.py 文件提供 10 个只读工具，可接入 Claude Desktop、Cursor 等支持 MCP 的客户端。\n\n所有工具均为只读设计，代码中不存在提交、选课、编辑或删除接口。服务器采用 stdio JSON-RPC 2.0 通信，调用之间保留 150 毫秒间隔以降低触发 WAF 的风险。支持 Moodle 3.x/4.x，要求站点启用 Web Services 与 REST 协议，并持有 webservice/rest:use 权限。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Moodle 站点获取个人访问令牌：头像 → Preferences → Account → Security → Manage access keys，创建名为 Moodle-MCP 的密钥，服务选择 Moodle mobile web service",
+  "在 server.py 同目录创建 config.json，填入 url 和 token，或设置 MOODLE_URL 与 MOODLE_TOKEN 环境变量",
+  "在 Claude Desktop 或 Cursor 的 mcp.json 中注册服务器，command 设为 python，args 指向 server.py 的绝对路径",
+  "启动客户端后调用 moodle_setup_guide 或 moodle_config_status 检查配置，再用 moodle_weekly_digest 获取课程摘要"
+ ],
+ "summary": "Moodle-MCP 解决的是让 AI 客户端直接读取 Moodle 课程数据的问题。它通过 Moodle 官方 Web Service API 提供只读工具，可查询课程、作业截止日期、测验状态和课程文件，并支持按周下载文件到本地。适合希望用 Claude、Cursor 等 MCP 客户端整理课程任务、跟踪截止日期的学生和开发者，无需浏览器抓取，配置好 token 即可使用。",
+ "tagline": "零依赖的 Moodle MCP 服务器，让 AI 读取课程作业与截止日期"
+}

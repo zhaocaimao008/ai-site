@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 LLM 记忆机制、超网络与参数高效微调的研究者和开发者，也适合想快速体验文档内化效果的普通用户。",
+ "date": "2026-11-05",
+ "features": [
+  "用超网络将文档上下文转换为 LoRA 权重并注入 LLM",
+  "提供预训练 checkpoint，可从 Hugging Face 下载",
+  "Python API 支持 internalize 内化文档、reset 清除记忆",
+  "附带交互式 Web Demo 和自生成数据查看器",
+  "提供主实验与 NIAH 实验的完整训练、评估脚本"
+ ],
+ "intro": "Doc-to-LoRA（D2L）是 SakanaAI 提出的参考实现，核心思路是用超网络（hypernetwork）把一段上下文文档直接转换成 LLM 的 LoRA 权重，让模型在推理时“记住”文档中的事实信息，而不需要修改原始模型参数或进行长上下文推理。\n项目提供预训练模型、Python API 和交互式 Demo。通过 ModulatedPretrainedModel 加载 checkpoint 后，调用 internalize(doc) 即可将文档内容注入模型，之后的生成会受该文档影响；调用 reset() 可清除已内化的信息。README 还给出了主实验和 NIAH 实验的数据准备、训练与评估脚本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv：curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "运行安装脚本：./install.sh",
+  "登录并下载预训练模型：uv run huggingface-cli login && uv run huggingface-cli download SakanaAI/doc-to-lora --local-dir trained_d2l --include \"*/\"",
+  "使用 Python API 加载模型，调用 model.internalize(doc) 内化文档后生成回答",
+  "运行交互式 Demo：uv run demo/app.py"
+ ],
+ "summary": "Doc-to-LoRA 解决的是让 LLM 快速记住外部文档内容的问题。它不依赖长上下文窗口，而是用超网络把文档直接转成 LoRA 权重注入模型，使后续回答受该文档影响，并可随时清除。项目提供预训练模型、Python 接口和 Demo，适合研究模型记忆与参数高效适配的开发者。",
+ "tagline": "用超网络把文档即时内化为 LoRA 权重"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想让 AI 实时理解屏幕内容、又在意 token 成本的 DSH 用户和开发者；也适合需要按变化量抽帧的 Node 开发者。",
+ "date": "2026-11-05",
+ "features": [
+  "按 HSV 变化分筛选帧，静止画面几乎不出图",
+  "多帧拼进一张图，固定 token 成本摊到 4~8 帧",
+  "支持屏幕、摄像头、视频文件作为输入源",
+  "提供 low/standard/high/ultra 四档画布，token 消耗明确",
+  "可选语音播报（say）和视频声音转写（台词）",
+  "可作为普通 Node 库独立使用，不依赖 DSH"
+ ],
+ "intro": "See Now 是一个给 DSH 用的实时视觉插件，让 AI 能直接“看见”你的屏幕、摄像头或视频文件，而不是靠你描述。它先给每一帧打一个 0–255 的变化分，只保留画面突变或持续运动攒够量的帧，再把留下的几帧拼进同一张图交给模型。这样静止画面几乎不产生图片，一段 30 秒的操作常常只需 2~3 张图。\n\n插件支持 Windows 和 macOS 的屏幕采集，也提供独立的 Node 库接口，可脱离 DSH 使用。它还包含可选的语音播报和视频声音转写功能，但核心的帧筛选与拼图不依赖这些附加模块。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 DSH 中安装插件：dsh plugin --profile web add dsh-see-now",
+  "重启 DSH 使插件生效",
+  "让模型调用 see_now({ action: \"watch\" }) 获取当前屏幕画面",
+  "如需语音播报，配置 ~/.dsh/voice.json 指定 TTS 适配器",
+  "非 DSH 环境可 import { spawnFrames } from 'dsh-see-now/capture' 和 createPipeline 独立使用"
+ ],
+ "summary": "See Now 解决的是“让 AI 实时看屏幕但别烧 token”的问题。它不按固定间隔截全屏，而是先计算每帧的变化分，只保留画面突变或持续运动攒够量的帧，再把几帧拼成一张图交给模型。静止屏幕几乎不出图，一段操作往往只需两三张图。适合需要 AI 陪伴看屏幕、又在意成本的场景，也提供独立 Node 库接口。",
+ "tagline": "按变化量筛选屏幕帧，多帧拼图省 token 的 AI 视觉插件"
+}

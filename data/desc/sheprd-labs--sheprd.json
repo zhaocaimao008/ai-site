@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时管理多个仓库、worktree 和 AI agent 会话的开发者，尤其是习惯在终端中工作、希望把 agent 协作集中在一个原生应用里的人。",
+ "date": "2026-11-05",
+ "features": [
+  "在原生界面中管理终端标签页与分屏，并组织仓库和 Git worktree",
+  "与 AI agent 对话，在 diff 上逐行留注并发送给 agent 审阅",
+  "通过 Teleport 把 worktree 连同提交、未提交改动和 agent 会话迁移到其他主机",
+  "浏览器标签页支持元素标注，并把标注发送回对应 agent",
+  "状态栏展示各 AI 服务的用量与主机的 CPU、内存等负载信息",
+  "支持本地、SSH 和云端机器，以及多种侧边栏布局与主题"
+ ],
+ "intro": "Sheprd 是一个用 Rust 和 GPUI 编写的原生桌面应用，面向 macOS、Linux 和 Windows。它把终端会话、仓库与 Git worktree、标签页和分屏组织在同一个界面里，并支持与 AI agent 对话、审阅 agent 的改动、跟踪 pull request 与用量。\n\n应用通过本地 Herdr daemon 或内置的 herdr-core 终端工作：daemon 持有终端进程，因此关闭 Sheprd 后会话仍会继续运行。它还能连接本地、SSH 和云端机器，并提供浏览器预览、自动化、mods 和手机远程控制等能力。\n\n项目与 Herdr 官方无关联，发布包中已捆绑固定版本的 herdr-core，因此 Herdr 1 并非必需。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Sheprd 是一个原生桌面应用，把终端、Git worktree 和 AI agent 会话集中到同一界面。它通过本地 Herdr daemon 管理终端进程，支持审阅 agent 改动、跨主机迁移 worktree、标注浏览器页面并回传给 agent。适合同时处理多个仓库和 agent 任务的开发者。",
+ "tagline": "用 Rust 和 GPUI 打造的原生终端与 AI Agent 工作台"
+}

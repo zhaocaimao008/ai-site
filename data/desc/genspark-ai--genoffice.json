@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在本地处理 Office 文档并希望借助 AI 辅助编辑的开发者、办公用户，以及想让编码代理直接生成和修改 Office 文件的团队。",
+ "date": "2026-11-05",
+ "features": [
+  "打开并保存原生 .docx、.xlsx、.pptx 文件，仅重写被编辑的部分",
+  "内置 AI 面板，修改以修订和 diff 呈现，支持一键回滚",
+  "本地完成 PDF 转 Word/Excel/PowerPoint、Markdown 转 Word 等转换",
+  "基于本地 SQLite 索引按文件名和全文搜索文档",
+  "支持自带 API key，接入 Claude、OpenAI、Gemini 等多种模型",
+  "提供 genoffice CLI 和 agent skill，供编码代理操作 Office 文件"
+ ],
+ "intro": "GenOffice 是一款免费开源的办公套件，支持 macOS、Windows 和 Linux，定位为 Microsoft Office 的替代品。它能打开并保存原生的 .docx、.xlsx、.pptx 文件，也能编辑 PDF、Markdown 和 HTML，并在每个文档旁内置 AI 面板。\n\nAI 的修改以修订和 diff 形式呈现，可一键回滚；表格中写入的是实时公式而非粘贴的数值，生成的幻灯片和页面仍可继续编辑。文件在本地打开、编辑、保存和转换，PDF 转 Word/Excel/PowerPoint、Markdown 转 Word 等操作都在设备上完成，只有 AI 调用会发送到你选择的模型服务商。\n\n项目还提供 genoffice 命令行工具和面向 Claude Code、Codex、Cursor 等编码代理的 skill，让代理无需打开窗口即可创建、转换和编辑真实的 Office 文件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台安装包（macOS、Windows 或 Linux）",
+  "安装后打开应用，选择使用 Genspark 登录或填入自己的模型 API key",
+  "打开或新建 .docx、.xlsx、.pptx 等文件，在 AI 面板中描述要做的修改",
+  "如需在编码代理中使用，调用 genoffice 命令行或安装对应 skill"
+ ],
+ "summary": "GenOffice 是一个跨平台的开源办公套件，用来替代 Microsoft Office 处理日常文档。它能打开和保存真实的 .docx、.xlsx、.pptx 文件，也支持 PDF、Markdown 和 HTML，并在文档旁内置 AI 助手，修改以修订形式呈现、可回滚。文件编辑和格式转换都在本地完成，适合希望数据留在本机、又想用 AI 辅助写作和制表的用户，也方便编码代理直接操作 Office 文件。",
+ "tagline": "开源 AI 办公套件，本地编辑 Office 文件"
+}
