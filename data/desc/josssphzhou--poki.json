@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI agent 自动化操作 iPhone 的开发者，以及已经在使用 Claude Code、Codex 等 MCP 客户端的用户。",
+ "date": "2026-11-06",
+ "features": [
+  "通过本地 MCP server 让 AI agent 操作真实 iPhone，无需越狱或额外硬件",
+  "支持接入 Claude Code、Codex 及其他兼容 mcpServers 的 MCP 客户端",
+  "自带 Poki Agent 终端 agent，可记住过往任务并在重复执行时加速",
+  "支持 iMessage 和 Telegram 消息渠道",
+  "提供预构建的 macOS arm64 包，内含原生桥接和 idevice 工具"
+ ],
+ "intro": "Poki 是一个本地 MCP server 和 agent，让 AI agent 直接操作一台真实的 iPhone。它不需要越狱，也不需要额外硬件，通过 macOS 上的原生桥接与 iOS 设备通信，把屏幕内容和操作指令交给配置好的模型服务处理。\n\n项目提供两种使用方式：一是作为 MCP server 接入 Claude Code、Codex 等支持 mcpServers 的客户端，使用你自己的订阅；二是使用自带的 Poki Agent 终端 agent，支持 iMessage 和 Telegram 渠道，并能记住过往任务、在重复执行时更快。\n\nPoki 需要 macOS 15 或更高版本、完整 Xcode、Rust、Node.js 24+ 和 ffmpeg。物理 iPhone 需先通过 USB 与 Mac 配对，目前仅在中文界面的 iPhone 上验证过，且只支持竖屏。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入目录：git clone https://github.com/JosssphZhou/poki.git && cd poki",
+  "运行安装脚本并启动服务：./bin/setup && npm start",
+  "在另一个终端注册 MCP server：claude mcp add --scope user poki-mcp -- node \"$PWD/src/stdio.mjs\"",
+  "安装 Poki Agent 并登录：npm ci --prefix agent && export PATH=\"$PWD/bin:$PATH\" && poki login",
+  "运行任务：poki \"Search esp32 in Chrome and summarize the top result\""
+ ],
+ "summary": "Poki 让 AI agent 直接操作一台真实的 iPhone，不需要越狱或额外硬件。它在本机运行 MCP server，把 iPhone 的屏幕内容和操作指令交给配置好的模型服务，适合想用 Claude Code、Codex 等 MCP 客户端或自带终端 agent 自动完成手机任务的开发者。",
+ "tagline": "让 AI agent 像你一样操作真实 iPhone"
+}

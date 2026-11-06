@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "使用 pi 终端编码代理、希望从手机或另一台设备查看和操作会话的开发者。",
+ "date": "2026-11-06",
+ "features": [
+  "实时镜像终端输出、工具调用和状态变化，断线重连后增量补齐",
+  "从浏览器向会话发送消息，pi 忙碌时可排队或 steer，并确认送达",
+  "远程执行切换模型、调整思考等级、压缩上下文、管理会话树等命令",
+  "多设备共享一个 relay，查看各设备在线状态与会话，并可在指定设备新建会话",
+  "二维码设备配对，扫描后确认设备信息与校验码即可自动写入设备 token",
+  "支持本机无服务器模式，手机经局域网访问，外出时可按需开启 Cloudflare Tunnel"
+ ],
+ "intro": "Pi-Remote 是 pi 终端编码代理的配套工具，通过 pi 官方扩展 API 附加到正在运行的会话上，不修改 pi 源码，也不接管终端。本地 pi 进程始终持有会话，浏览器只显示实时镜像，并可向会话发送消息和命令。\n\n它支持远程输入、切换模型与思考等级、手动压缩上下文、创建/分叉/克隆会话、浏览会话树等操作，命令最终在本地 pi 进程中执行。多台机器可共享一个 relay，UI 会列出设备在线状态和会话，并支持二维码配对。\n\nrelay 可自托管，也可在本机运行实现无服务器模式，手机通过局域网或按需开启的 Cloudflare Tunnel 访问。扩展通道与 Web UI 使用独立 token，远程 bash 默认关闭。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在目标机器上安装 pi：npm install -g @earendil-works/pi-coding-agent",
+  "安装依赖：npm install",
+  "启动 relay：npm run relay（监听 127.0.0.1:7001 和 7002）",
+  "macOS/Linux 执行 node deploy/setup.cjs ws://127.0.0.1:7001，再运行 deploy/sync-extension.sh 安装扩展",
+  "运行 deploy/attach.sh 使设备上线，另开终端运行 deploy/start-pi.sh 启动 pi",
+  "浏览器打开 http://127.0.0.1:7002，输入 .env 中的 viewer token 登录"
+ ],
+ "summary": "Pi-Remote 解决的是 pi 终端编码代理只能在本地终端操作的问题。它通过 pi 官方扩展 API 把运行中的会话实时镜像到浏览器，让用户在手机或另一台设备上查看输出、回复提示并发送命令，命令仍在本地 pi 进程中执行。适合需要离开电脑后继续关注或干预 pi 会话的开发者，relay 可自托管或在本机运行。",
+ "tagline": "把 pi 终端会话实时镜像到浏览器，支持远程查看与操作"
+}

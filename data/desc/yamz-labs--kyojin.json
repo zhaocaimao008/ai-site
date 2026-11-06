@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地桌面硬件上部署和运行大语言模型的开发者、研究人员以及 AI 爱好者。",
+ "date": "2026-11-06",
+ "features": [
+  "在单台桌面设备上运行 100 GB 级大模型",
+  "支持 AMD Strix Halo、NVIDIA RTX 和 Apple Mac 平台",
+  "提供 OpenAI API 兼容的推理服务",
+  "默认开启投机解码，保持输出一致",
+  "支持超长上下文（最高 983K tokens）",
+  "Qwen3.8-27B 支持图像输入"
+ ],
+ "intro": "Kyojin 是一个开源推理引擎，目标是在单台桌面机器上运行 100 GB 级别的开放大模型，例如 GLM-5.3、Qwen3.8 和 DeepSeek V4.1。它基于 ExLlamaV3 构建，支持 AMD Strix Halo、NVIDIA RTX 以及 Apple Mac 三类硬件平台，并通过 OpenAI API 对外提供服务。\n\n项目提供 EXL3 量化模型包，用户可以从 Hugging Face 下载后直接启动服务。内置投机解码（默认开启）、长上下文支持（最高 983K tokens）以及 Qwen3.8-27B 的图像输入能力。此外，还提供可选的 uncensored 模式，该模式在运行时通过预设实现，不修改模型权重。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Yamz-Labs/kyojin && cd kyojin",
+  "根据硬件平台完成一次性构建（AMD 参考 doc/install.md，NVIDIA 参考 tools/cuda/README.md，Mac 参考 kyojin-mac 安装说明）",
+  "下载模型包，例如：hf download yamz-labs/GLM-5.3-Flash-EXL3-Yamz --local-dir ./glm-pack",
+  "启动服务，例如：python tools/glm/serve.py --model ./glm-pack --port 8000 -c 131072 --num-draft 2",
+  "使用 curl 测试：curl http://localhost:8000/v1/chat/completions -H \"Content-Type: application/json\" -d '{\"messages\": [{\"role\": \"user\", \"content\": \"Say hello in five words.\"}]}'"
+ ],
+ "summary": "Kyojin 是一个开源推理引擎，旨在让单台桌面电脑运行 100 GB 级别的大模型，如 GLM-5.3、Qwen3.8 和 DeepSeek V4.1。它基于 ExLlamaV3，兼容 AMD Strix Halo、NVIDIA RTX 和 Apple Mac，并提供 OpenAI API 接口。适合需要在本地硬件上部署大模型进行推理的开发者，支持长上下文和投机解码。",
+ "tagline": "在单台桌面设备上运行百 GB 级大模型的开源推理引擎"
+}

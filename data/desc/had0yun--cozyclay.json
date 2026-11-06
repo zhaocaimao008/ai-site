@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 AI 视频生成前控制构图、运镜和动作节奏的创作者、分镜与预演人员，以及希望用代码或 AI 代理驱动 3D 场景的开发者。",
+ "date": "2026-11-06",
+ "features": [
+  "Stage：用基础几何体搭建布景，添加绑定角色或胶囊体替身，像 3D 编辑器一样自由移动视角",
+  "Move：用自然语言描述动作，由浏览器内的确定性编译器逐帧烘焙，并在预览前检查碰撞、脚滑、可达范围和手部接触",
+  "Shoot：在时间线上安排镜头、绘制移动轨道、通过镜头视角取景，每个镜头记录目标视频模型的限制",
+  "Export：导出首尾帧、灰盒参考片段、相机参数和提示词，以及 mp4、深度与法线通道、联系表和 OTIO 剪辑表",
+  "Storyboard：以分镜面板加字幕的形式制作故事板、动态分镜和联系表",
+  "AI 驱动：通过 Agent 面板、MCP server 或 cclay live 终端命令实时控制场景，每次代理改动都可单步撤销"
+ ],
+ "intro": "CozyClay 是一个运行在浏览器中的开源 previs（预演）软件。它把 AI 视频生成前需要确定的场景要素先做出来：用基础几何体搭建布景、摆放角色、安排动作、设计镜头与剪辑点，再把这一版灰盒（greybox）作为参考交给 AI 视频模型，让生成结果跟随你的构图和运镜，而不是只靠一段文字提示去猜。\n\n项目用 JavaScript 编写，基于 three.js 和 React Three Fiber，通过 npx 即可在本地启动，不需要 GPU、Python 或下载模型。除了手动操作，还可以通过工作室内的 Agent 面板、MCP server 或终端 CLI 让 AI 代理直接驱动场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx cozyclay",
+  "在浏览器打开 http://127.0.0.1:5180/app/（需要 Node.js 22.19 或更高版本及 Chromium 浏览器）",
+  "如需从源码运行：git clone https://github.com/NomaDamas/CozyClay.git && cd CozyClay && npm install && npm run dev",
+  "如需接入 MCP 客户端，在配置中添加 {\"mcpServers\": {\"cozyclay\": {\"command\": \"npx\", \"args\": [\"-y\", \"cozyclay\", \"mcp\"]}}}"
+ ],
+ "summary": "CozyClay 是一个浏览器端的开源预演工具，用来在调用 AI 视频模型之前先把场景定下来：搭建布景、摆放角色、编排动作、设计镜头和剪辑点，再导出首尾帧、灰盒参考片段与提示词交给视频模型。适合希望控制构图与运镜、减少反复生成成本的创作者，也支持通过 AI 代理或 MCP 驱动场景。",
+ "tagline": "浏览器里的开源预演工具，先搭场景再交给 AI 生成视频"
+}

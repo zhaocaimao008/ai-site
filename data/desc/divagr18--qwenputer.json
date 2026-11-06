@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合对语言模型内部机制、可解释性和编译进权重计算感兴趣的研究者与开发者。",
+ "date": "2026-11-06",
+ "features": [
+  "将 32 位 RISC-V CPU 编译并插入 Qwen3.5-4B 的权重中",
+  "使用 Gated DeltaNet 状态作为 RAM，存储代码、数据和寄存器",
+  "在模型前向传播中运行 C 和 MicroPython 代码",
+  "通过官方 riscv-tests 测试套件",
+  "支持在权重内运行神经网络（实验性 NPU）和文件系统（实验性）"
+ ],
+ "intro": "Qwenputer 是一个实验性模型，它在 Qwen3.5-4B 的权重中直接插入了一个 32 位 RISC-V CPU。这个 CPU 由 11 层 Transformer 构成，位于 Qwen 原有层之前，其权重全部由编译器计算得出，而非学习得到。CPU 利用模型自身的 Gated DeltaNet 状态作为 RAM，将代码、数据、寄存器和程序计数器存储其中。\n\nCPU 在模型的前向传播过程中运行 C 和 MicroPython 代码，并通过了官方的 riscv-tests 测试套件。模型以标准的 Qwen3_5ForCausalLM 加载，通过 RvChat 驱动在提示后启动 CPU，所有 token 仍来自权重。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/divagr18/qwenputer && cd qwenputer/experimental/riscv && uv sync --extra hf",
+  "hf download divagr1925/Qwen3.5-4B-Qwenputer --local-dir qwenputer-rv",
+  "uv run python -m chipformer.rv.chat qwenputer-rv --firmware tests/data/rv/calc-bridge.elf --ask \"Use calc: what is 123456789 * 987654321?\""
+ ],
+ "summary": "Qwenputer 是一个实验性项目，它将一个 32 位 RISC-V CPU 直接编译进 Qwen3.5-4B 的权重中，并利用模型的 Gated DeltaNet 状态作为内存。它解决了在语言模型内部精确执行计算的问题，适合研究模型内部机制、可解释性以及探索将计算单元嵌入权重的开发者。",
+ "tagline": "将 RISC-V CPU 编译进语言模型权重的实验项目"
+}

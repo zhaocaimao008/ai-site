@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合想在个人电脑上运行 AI 伴侣、喜欢动漫风格交互的开发者或普通用户，需要一定的 Windows 操作和硬件配置基础。",
+ "date": "2026-11-06",
+ "features": [
+  "Live2D 动漫角色形象，支持实时语音与文字对话",
+  "长期记忆功能，能记住用户信息与对话内容",
+  "支持 OpenRouter 云端语言模型或 Ollama 本地模型",
+  "语音识别与语音合成，实现自然语音交互",
+  "提供 Windows 安装脚本，自动下载模型与资源",
+  "浏览器界面访问，显示健康状态与设置选项"
+ ],
+ "intro": "OpenAmika 是 MekaHime 开源的 AI 伴侣项目，角色 Amika 以 Live2D 动漫形象呈现，支持实时语音和文字对话，并具备长期记忆能力。她运行在用户自己的 Windows PC 上，语言模型可通过 OpenRouter 调用云端 API，或使用 Ollama 在本地运行。\n\n项目包含语音识别、语音合成、记忆系统和 Live2D 渲染等模块，安装脚本会自动下载所需模型和资源。用户首次启动后可通过浏览器界面与 Amika 交互，设置姓名、城市等信息，并选择语言模型后端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开 PowerShell，运行：cd C:\\",
+  "git clone https://github.com/zeekk0/OpenAmika.git",
+  "cd OpenAmika",
+  "powershell -ExecutionPolicy Bypass -File scripts\\setup_windows.ps1",
+  "envs\\brain\\Scripts\\python.exe scripts\\setup_tts.py",
+  ".\\Start_OpenAmika.bat"
+ ],
+ "summary": "OpenAmika 是一个开源的 AI 伴侣项目，角色 Amika 以 Live2D 形象出现，能通过语音和文字与用户实时对话，并记住用户信息。她运行在本地 Windows 电脑上，语言模型可选择 OpenRouter 云端服务或 Ollama 本地部署。项目适合想在个人设备上体验动漫风格 AI 伴侣的用户，安装脚本简化了环境配置和资源下载流程。",
+ "tagline": "开源 AI 伴侣 Amika：Live2D 形象、实时语音与长期记忆"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望批量筛选并投递求职申请、愿意在本地运行 Python 工具的求职者，以及想研究浏览器自动化求职流程的开发者。",
+ "date": "2026-11-06",
+ "features": [
+  "根据简历生成搜索条件并匹配职位",
+  "对候选职位按 1 到 5 分打分并说明差距",
+  "由用户挑选职位后一次性确认投递",
+  "用真实 Firefox 自动填写公司申请表单并提交",
+  "保存每次申请的页面内容和截图",
+  "支持通过 Markdown 文件添加新站点"
+ ],
+ "intro": "AIHawk 是一个用 Python 编写的 AI 求职代理。你提供简历后，它会把简历转成搜索条件，从 24 个公开来源的职位中筛选匹配项，读取最合适的职位并对照简历打分，列出差距和理由，再由你挑选要投递的岗位。\n\n确认后，它会打开真实的 Firefox 浏览器，进入公司自己的申请表单，填写必填字段、附上简历并提交，同时保存每个申请页面的内容和截图。它不依赖 LinkedIn 账号或 Easy Apply，而是直接在公司接收申请的页面上操作，并支持通过 Markdown 文件扩展新站点。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 在 PowerShell 中运行：irm https://raw.githubusercontent.com/feder-cr/Jobs_Applier_AI_Agent/main/run.ps1 | iex",
+  "Linux 运行：curl -LsSf https://raw.githubusercontent.com/feder-cr/Jobs_Applier_AI_Agent/main/run.sh | sh",
+  "从 OrcaRouter 获取所需的 key",
+  "提供简历，按界面提示选择职位并确认投递"
+ ],
+ "summary": "AIHawk 是一个自动求职的 AI 浏览器代理：读取你的简历后，从多个公开来源筛选匹配职位并打分，由你挑选确认，再用真实 Firefox 打开公司申请表单填写并提交，同时留存页面截图。适合想减少重复投递操作、又希望自己把关岗位的求职者。",
+ "tagline": "用 AI 自动筛选并投递求职申请的浏览器代理"
+}

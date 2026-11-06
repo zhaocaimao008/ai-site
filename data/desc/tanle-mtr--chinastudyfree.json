@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合想免费使用 AI 辅助学习的中小学生、大学生，以及希望自建或二次开发教育平台的开发者。",
+ "date": "2026-11-06",
+ "features": [
+  "覆盖小学、初中、高中、大学四个学段的互动课程，含 148 本教材",
+  "支持多出版社教材版本，如人教版、沪教版、北师大版、苏教版等",
+  "四端统一：Web 静态站、Tauri 桌面端、Capacitor 安卓/iOS、Docker 部署",
+  "AI 后端提供出题、讲解、故事生成、TTS 语音合成和课本配图",
+  "教材中心可浏览 ChinaTextbook 开源教材库的真实目录并跳转 PDF",
+  "离线优先：音频、课本页、故事图打包进静态产物，无网也能学习"
+ ],
+ "intro": "聪聪学堂（ChinaStudyFree）是一个免费公益的 AI 学习平台，基于 MIT 协议开源。它把上游的小学 AI 学习项目扩展为覆盖小学、初中、高中、大学四个学段，并统一为 Web、桌面、安卓、iOS 四端。前端使用 Next.js 静态导出，桌面端用 Tauri 封装并内嵌 Node AI 服务，移动端用 Capacitor 加载同一套 Web 资源，Docker 则提供静态站点加 Express AI 后端的一键部署方式。\n\n平台内置 148 本教材的互动课程，涵盖语文、数学、英语、物理、化学、生物、历史、地理、道德与法治、思想政治、信息技术等学科，并支持多出版社版本。教材中心可浏览 ChinaTextbook 开源教材库的真实目录，按学段、出版社、学科、年级分组跳转查看 PDF。AI 后端提供出题、讲解、故事生成、语音合成和课本配图能力，语音使用免费的 EdgeTTS。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install 安装 workspace 依赖",
+  "npm run build:data 生成前端数据",
+  "npm run sync:textbooks 抓取教材目录",
+  "npm run gen:content 生成互动课程内容",
+  "npm run dev:web 启动前端开发服务器（http://localhost:3000）",
+  "可选：复制 .env.example 到 apps/server/.env 填入 API Key，运行 npm run dev:server 启动 AI 后端"
+ ],
+ "summary": "聪聪学堂是一个免费公益的 AI 学习平台，将原本仅覆盖小学的项目扩展为小学、初中、高中、大学四个学段，并统一为 Web、桌面、安卓、iOS 四端。它内置多学科多出版社的互动课程，提供 AI 出题、讲解、语音合成等能力，适合学生日常学习，也适合开发者自建或二次开发教育应用。",
+ "tagline": "四端四学段免费公益 AI 学习平台"
+}

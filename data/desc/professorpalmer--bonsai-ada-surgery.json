@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想在消费级 NVIDIA 显卡（12 GB 或 8 GB 显存）上本地运行大上下文语言模型的开发者和研究者，尤其是需要长上下文或 agent 工具调用的场景。",
+ "date": "2026-11-06",
+ "features": [
+  "在 12 GB 显卡上以 q4_0 K/V 缓存支持 262,144 token 上下文窗口",
+  "在 8 GB 显卡上以 q3_0 K/V 缓存支持 262,144 token 上下文窗口",
+  "提供 OpenAI 兼容 API，默认监听 8080 端口",
+  "修复运行时问题：effort 词、输出上限、xhigh 默认值、工具调用格式",
+  "支持 MTP 草稿解码和可选的 agent 层（API 卡片、沙箱 Python）",
+  "附带详细的性能数据、原始日志和复现方法"
+ ],
+ "intro": "这个项目让 Ternary Bonsai 2 27B（PrismML 的 1.58-bit 三元模型，PTQ1_0 量化，约 5.9 GB）在 12 GB 和 8 GB 的 NVIDIA 显卡上以完整的 262,144 token 上下文窗口运行。它基于打过补丁的 PrismML llama.cpp，附带一个启动器，会根据显卡容量自动配置 K/V 缓存（12 GB 用 q4_0，8 GB 用 q3_0），并支持 MTP 草稿解码和一个可选的 agent 层。模型权重本身没有改动。\n\nREADME 指出，许多用户报告的代码和 agent 能力损失来自运行时而非模型压缩。项目通过服务端修复了模板拒绝的 effort 词、截断思考过程的输出上限、xhigh 模板默认值导致的过度思考，以及 JSON 格式的工具调用等问题。在相同权重下，工具调用解析从 1/9 提升到 9/9，HumanEval 分数也有改善。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载 bonsai-bundle-win-x64.zip 并解压到本仓库",
+  "将 Ternary-Bonsai-2-27B-PTQ1_0.gguf 和 MTP head 文件放入 models\\ 目录",
+  "运行 .\\start-server.ps1 启动服务",
+  "通过 http://<host>:8080/v1 访问 OpenAI 兼容 API"
+ ],
+ "summary": "这个项目解决的是在显存有限的消费级显卡上运行大上下文模型的问题。它让 27B 的三元量化模型在 12GB 和 8GB 显卡上都能使用完整的 262k token 窗口，并通过运行时修复改善工具调用和代码生成表现。适合需要本地长上下文推理或 agent 工具调用的开发者。",
+ "tagline": "在 12GB/8GB 显卡上运行 262k 上下文的 27B 三元模型"
+}

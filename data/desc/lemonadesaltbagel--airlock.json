@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在私有代码库上使用 AI 编码辅助、但又不能将源码发送到云端的开发者和团队。",
+ "date": "2026-11-06",
+ "features": [
+  "本地代理执行编码任务，仅在卡住时向云端模型咨询",
+  "咨询内容自动改写为通用示例，移除项目标识符和代码",
+  "操作系统级沙箱限制文件写入和网络访问",
+  "确定性检查阻止包含项目标识符、密钥或 crown jewels 的消息外发",
+  "加密、防篡改的外发日志，可查看离开本机的所有内容",
+  "支持按咨询内容审批（ask/jewels/auto/never）"
+ ],
+ "intro": "Airlock 是一个隐私优先的本地编码代理。你的项目由运行在本机的模型处理，代理在本地读取和编辑代码、运行测试。当遇到困难的技术点时，它会向云端前沿模型咨询，但咨询内容会先被改写成不包含项目文件名、标识符、业务细节或代码的通用最小示例，并在发送前展示给你确认。\n\n整个代理运行在操作系统沙箱中（macOS Seatbelt、Linux bubblewrap），只能写入项目目录，无法读取用户主目录，且除 Airlock 网关外没有网络访问。只有网关持有 API 密钥，所有外发请求都会记录在加密、防篡改的日志中。你可以通过 crown jewels 配置声明绝不能外泄的术语、文件或描述，确定性检查会阻止包含这些内容的消息发出。\n\n目前项目处于预览状态，官方建议先在测试项目上使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/lemonadesaltbagel/Airlock.git && cd Airlock",
+  "npm install && npm run build",
+  "node apps/airlock/dist/main.js doctor",
+  "cd path/to/your-test-project && node /path/to/Airlock/apps/airlock/dist/main.js init",
+  "export ANTHROPIC_API_KEY=... && node /path/to/Airlock/apps/airlock/dist/main.js run \"fix the failing date parsing test\""
+ ],
+ "summary": "Airlock 是一个本地运行的编码代理，项目代码始终留在本机模型中处理。当本地模型遇到难题时，它会把问题改写成不含项目标识符和代码的通用示例，再向云端前沿模型咨询，并在发送前让你确认。它通过操作系统沙箱限制代理的文件和网络访问，并用确定性检查阻止敏感内容外泄。适合需要在私有代码上使用 AI 辅助、又不能把源码交给云服务的开发场景。",
+ "tagline": "本地编码代理，咨询前沿模型而不泄露源码"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI agent 集成 x402 API 支付能力的开发者，以及希望通过终端或 MCP 客户端使用支付功能的用户。",
+ "date": "2026-11-06",
+ "features": [
+  "设备保险库加密存储密钥，支持可选密码保护",
+  "支付前应用支出策略，直接向服务方付款并生成本地收据",
+  "提供 Call、Router、Agents、Swarms、MCP、SDK 等多种使用界面",
+  "支持通过 MCP 客户端调用命名空间化的支付工具",
+  "提供 CLI 命令用于发现、检查、发布和支付 x402 API"
+ ],
+ "intro": "vAPI Network 为 Base 上的 AI agent 提供支付与信任基础设施，核心是使用 USDC 的 x402 API 支付。vapi-network 是其开源、非托管的 TypeScript 客户端，可在终端、MCP 客户端或自有代码中发现并支付 x402 服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm i -g vapi-network",
+  "vapi setup [--no-cloud-backup]",
+  "vapi fund",
+  "vapi search \"weather\"",
+  "vapi pay <listing-ref> --max 0.02"
+ ],
+ "summary": "vAPI Network 的 vapi-network 是一个开源、非托管的 TypeScript 客户端，用于在 Base 上使用 USDC 发现并支付 x402 API。它把密钥加密保存在本机设备保险库中，支付前应用支出策略，直接向服务方付款并生成本地收据。适合需要在终端、MCP 客户端或自有代码中为 AI agent 接入 x402 支付能力的开发者。",
+ "tagline": "面向 AI agent 的 x402 API 支付客户端"
+}
