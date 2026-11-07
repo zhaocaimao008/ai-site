@@ -1,0 +1,20 @@
+{
+ "ai_related": true,
+ "audience": "使用 GPT Image 2.6 生成图片、需要在速度与质量之间做取舍的开发者与设计人员。",
+ "date": "2026-11-07",
+ "features": [
+  "对比 Flare 与 Sunburst 两个变体的价格、速度和细节表现",
+  "给出草稿、筛选、成品三个阶段的变体选择建议",
+  "提供同一提示词分别调用两个模型的 Python 示例",
+  "说明两者单价相同，差异在于耗时而非成本"
+ ],
+ "intro": "这个仓库是一份简短的选型说明，介绍 GPT Image 2.6 提供的两个服务变体 Flare 和 Sunburst。两者使用相同的提示词语言，单张图片价格也相同，区别在于计算预算：Flare 出图更快，细节和提示词遵循度表现一般；Sunburst 速度较慢，但在细节还原和文字排版上更好。\n\nREADME 用一张对照表列出两者的价格、速度、细节表现和适用场景，并给出选择建议：批量草稿和反复迭代用 Flare，最终成品和文字较多的版式用 Sunburst。由于两者单价一致，实际差异主要体现在耗时而非成本上。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 APIMart 获取 API key",
+  "在代码中初始化 client",
+  "用 client.images.generate 分别指定 model 为 gpt-image-2.6-flare 或 gpt-image-2.6-sunburst 生成图片"
+ ],
+ "summary": "这个仓库说明 GPT Image 2.6 的 Flare 与 Sunburst 两个服务变体该如何选择。两者提示词语言和单张价格相同，Flare 出图更快但细节一般，Sunburst 较慢但细节和文字排版更好。适合需要批量出草稿再挑最终成品的图像生成场景，帮助使用者在速度与质量之间做取舍。",
+ "tagline": "GPT Image 2.6 两个变体的选型指南"
+}

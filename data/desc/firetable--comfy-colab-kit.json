@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Google Colab 上按需使用 ComfyUI 进行图像/视频生成，并希望通过网关或 AI 代理自动化调用的开发者与个人用户。",
+ "date": "2026-11-07",
+ "features": [
+  "按需唤醒：休眠时显示唤醒卡片，唤醒后透明代理到完整 ComfyUI Web 应用",
+  "可切换配置：通过 profile.yaml 选择 MOSS-Image、FLUX.2 Klein、Wan 2.2 Video 等模型预设",
+  "自动停止：根据空闲、最大会话时长、静默时段和 CU 预算自动关闭 GPU",
+  "灵活部署：支持本地独立运行（localhost:8080）或 Cloud VPS + Cloudflare Access",
+  "AI 代理接口：提供 REST/MCP 表面，让代理直接调用文生图、图生图、文生视频",
+  "零信任访问：通过 Cloudflare Access 提供认证，替代临时随机 URL"
+ ],
+ "intro": "Comfy Colab Kit 是一个轻量网关 comfy-gate，用于在 Google Colab 的临时 GPU 虚拟机上运行 ComfyUI。它不重新实现 ComfyUI，而是负责生命周期管理：当 GPU 休眠时展示唤醒卡片，唤醒后反向代理到完整的 ComfyUI Web 应用，并注入悬浮层切换 App 模式与节点图。\n\n网关可本地运行在 Mac/PC，也可部署在 Linux VPS 并置于 Cloudflare Access 之后。它支持按需唤醒、可切换的模型配置（如 MOSS-Image、FLUX.2 Klein、Wan 2.2 Video 等），以及基于空闲、会话时长、静默时段和 CU 预算的自动停止规则。\n\n项目还提供 REST/MCP 接口，允许 AI 代理直接驱动 GPU 完成文生图、图生图、文生视频等任务，无需浏览器或手动操作 Colab 单元格。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "本地启动网关：使用 Docker 或 Python 命令运行 comfy-gate，访问 http://localhost:8080",
+  "在网关界面选择模型配置（如 MOSS-Image、FLUX.2 Klein 等）",
+  "点击 Wake 唤醒 Colab GPU 实例，等待启动阶段完成",
+  "进入 ComfyUI Web 应用进行图像或视频生成",
+  "可通过 REST/MCP 接口让 AI 代理调用生成任务"
+ ],
+ "summary": "Comfy Colab Kit 解决的是在 Google Colab 临时 GPU 上运行 ComfyUI 时需手动盯守、会话易断的问题。它提供一个网关，按需唤醒 Colab 实例并反向代理到完整 ComfyUI 界面，支持模型预设切换和自动停止规则，还可通过 REST/MCP 让 AI 代理直接驱动图像与视频生成。适合想按需使用 Colab GPU 跑 ComfyUI 的个人开发者。",
+ "tagline": "按需唤醒的 Colab ComfyUI 网关"
+}

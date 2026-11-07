@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 代理进行代码研究、实验复现或数据分析的开发者与研究者，尤其是需要追踪结论来源和代码变更影响的场景。",
+ "date": "2026-11-07",
+ "features": [
+  "证据链追踪：结论必须引用记录运行写入的文件和字段，运行记录脚本及依赖的哈希，代码变动则结论失效。",
+  "兼容任意 MCP 代理：通过 MCP 握手识别代理身份，cockpit init 自动生成 Claude Code、Cursor、VS Code、Gemini CLI 的配置。",
+  "统一写入校验：MCP、CLI 和白板的写入都经过同一验证器，不合规写入被拒绝并记录原因。",
+  "未上报变更检测：自动检测实际文件变更，未上报的变更会阻止 git commit，Claude Code 需上报后才能结束回合。",
+  "内置代码图与代码审查：提供轻量调用图和基于规则的变更行审查，也可自动使用已安装的 graphify 或 open-code-review。",
+  "人工决策与回放：代理通过 cockpit_decide 请求人工决策，变更破坏结论时自动生成证据简报；事件追加存储支持回放。"
+ ],
+ "intro": "Agent Cockpit 是一个本地白板加 MCP 服务器，面向用 AI 代理做研究的场景。任何支持 MCP 的代理（如 Claude Code、Codex、Cursor、Gemini CLI）都能把计划、任务、实验运行、结论以及所依赖的代码画到同一块板上。\n\n它通过内容哈希追踪证据链：每个结论必须引用某次记录运行实际写入的值，运行会记录脚本及其依赖文件的哈希。一旦相关代码变动，依赖该运行的结论会被标记为需要复查；恢复改动后哈希重新匹配，结论恢复有效。所有写入经过统一校验，未上报的变更会被拦截。\n\n项目完全本地运行，检查基于确定性规则，不调用 LLM，不消耗 token。事件以追加方式存储，支持回放任意时刻的白板状态。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装依赖：git clone https://github.com/chutingyean/Agent-Cockpit.git && cd Agent-Cockpit && npm install",
+  "构建演示研究仓库：npm run demo",
+  "启动白板：node bin/cockpit.mjs serve --repo demo/research，然后访问 http://127.0.0.1:4180",
+  "在另一个终端破坏演示：node bin/cockpit.mjs demo --break，观察白板变化",
+  "恢复演示：node bin/cockpit.mjs demo --restore，验证结论恢复"
+ ],
+ "summary": "Agent Cockpit 是一个本地白板加 MCP 服务器，帮助使用 AI 代理做研究的团队追踪每个结论的来源。它要求结论引用记录运行实际写入的值，并通过哈希检测代码变动，自动标记受影响的结论。适合需要确保研究可复现、代码变更可追溯的场景，支持 Claude Code、Codex、Cursor 等 MCP 代理。",
+ "tagline": "为 AI 研究代理提供证据链白板与 MCP 服务器"
+}

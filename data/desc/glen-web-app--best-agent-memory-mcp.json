@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合正在为 Claude Code、Cursor、Codex 等 MCP 客户端挑选长期记忆方案的开发者，以及想了解 Agent 记忆生态的技术选型人员。",
+ "date": "2026-11-07",
+ "features": [
+  "收录 25 个 Agent 记忆类 MCP 服务器，覆盖托管与自托管方案",
+  "逐条对比存储方式、捕获模型、团队共享、许可证与 star 数",
+  "标注每个项目文档支持的客户端（Claude Code、Cursor、Codex 等）",
+  "提供按场景的选型建议，如团队共享、免费托管、自托管、文件可读",
+  "列出已弃用或不推荐的条目，并附 FAQ"
+ ],
+ "intro": "这是一个对比 AI Agent 长期记忆 MCP 服务器的清单项目，收录 25 个能让 Agent 在会话之间保留事实、决策和历史对话的 MCP 服务器。条目既有托管服务（Glen、Mem0、Zep、Supermemory），也有自行部署的开源方案（Hindsight、Basic Memory、Graphiti、Cognee、官方 memory server 等）。\n\n每个条目都标注了记忆存放位置、捕获方式（自动捕获还是由 Agent 调用工具触发）、是否支持团队共享、许可证和实时 star 数，并说明各项目文档支持哪些客户端。清单由 Glen 团队维护，Glen 排在第一位，README 中对此有披露，其余条目按公开标准排序并附来源链接。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目把 25 个能让 AI Agent 跨会话记住事实、决策和历史对话的 MCP 服务器整理成对比清单，涵盖托管服务和可自行部署的开源方案。每条都说明记忆存在哪里、是自动捕获还是由 Agent 调用工具写入、能否团队共享，并给出按场景的选型建议，适合为 Claude Code、Cursor、Codex 等客户端挑选记忆方案的开发者参考。",
+ "tagline": "对比 25 个 AI Agent 长期记忆 MCP 服务器的清单"
+}

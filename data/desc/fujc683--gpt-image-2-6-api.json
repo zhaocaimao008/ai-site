@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要接入图像生成 API 的开发者，以及想了解 GPT Image 2.6 调用方式和计费的用户。",
+ "date": "2026-11-07",
+ "features": [
+  "提供 GPT Image 2.6 的异步任务 API 调用方式，提交后轮询获取结果",
+  "列出 Flare 和 Sunburst 两个模型变体及其用途",
+  "说明 prompt、n、size、reference_image 等请求参数",
+  "给出成功响应中图片 URL 和最终计费金额的字段位置",
+  "整理常见错误码及含义，如 model_not_found、invalid_request_error"
+ ],
+ "intro": "这个仓库是 GPT Image 2.6 在 APIMart 平台上的 API 使用说明，涵盖 endpoint、请求参数、异步任务流程、错误码和计费方式。它不包含模型代码或本地部署方案，而是面向需要接入图像生成能力的开发者。\n\nAPI 采用异步任务模式：提交生成请求后返回 task_id，再轮询任务接口获取结果。文档列出了两个模型变体（Flare 和 Sunburst）、支持的尺寸、图片数量范围以及可选的参考图输入，并给出 curl 调用示例和响应结构。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 APIMart API key，并设置环境变量 APIMART_API_KEY",
+  "使用 curl 向 https://api.apimart.ai/v1/images/generations 提交生成请求，指定 model、prompt、n 和 size",
+  "从响应中获取 task_id",
+  "轮询 GET https://api.apimart.ai/v1/tasks/<task_id>，成功后从 data.result.images[0].url 获取图片"
+ ],
+ "summary": "这个项目是 GPT Image 2.6 在 APIMart 平台上的 API 文档，说明如何通过异步任务接口提交图像生成请求、轮询结果，并了解参数、错误码和计费。适合需要快速接入图像生成能力的开发者参考，不涉及模型本地部署。",
+ "tagline": "通过 APIMart 调用 GPT Image 2.6 图像生成 API 的文档"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在消费级显卡上本地运行 Qwen MoE 大模型的开发者，以及需要 OpenAI 兼容本地推理服务的应用集成者。",
+ "date": "2026-11-07",
+ "features": [
+  "纯 Rust 实现，CUDA kernel 经 NVRTC 运行时编译，无需 C++ 构建步骤",
+  "CPU+GPU 混合专家推理，显存不足时专家自动放到 CPU 并自适应调整",
+  "支持 CUDA 与 Vulkan 两种 GPU 后端",
+  "内置 OpenAI 兼容服务端，支持流式输出、工具调用和前缀缓存",
+  "提供 calibrate、generate、chat、bench 等命令行子命令",
+  "支持 MTP 草稿加速，并附带浏览器聊天页面"
+ ],
+ "intro": "RustingStrata 是一个用纯 Rust 编写的本地大模型推理引擎，主要面向 Qwen3.5/3.6 混合专家（MoE）系列 GGUF 模型，也支持 Qwen3-Next、Qwen3.8-Flash-Next 和 Qwen3 等模型。它不依赖 ggml 或 C++ 构建步骤，CUDA kernel 通过 NVRTC 在运行时编译并缓存，同一套 kernel 也能跑在 Vulkan 后端上。\n\n引擎的核心特点是专家混合放置：放不进显存的专家会放到 CPU 上，与 GPU 计算同时进行，并根据实际路由情况自适应调整专家位置。项目自带 OpenAI 兼容的 HTTP 服务、聊天页面、校准和基准测试命令，还支持 Anthropic Messages API，可接入 Claude Code 等工具。README 给出了在 RTX 3060 12 GB 上运行 Qwen3.6-35B-A3B 的吞吐数据，并与 llama.cpp 做了对比。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "cargo build --release",
+  "target/release/strata calibrate --model $M",
+  "target/release/strata generate --model $M --gpu --prompt \"Write a haiku about rivers.\" -n 128",
+  "target/release/strata serve --model $M --gpu --addr 127.0.0.1:8080"
+ ],
+ "summary": "RustingStrata 是一个纯 Rust 的本地大模型推理引擎，专注在显存有限的机器上运行 Qwen 系列 MoE 模型。它把放不进显存的专家放到 CPU 上与 GPU 并行计算，并提供 OpenAI 兼容服务端和聊天页面。适合想在消费级显卡上本地部署 Qwen MoE 模型、或需要本地推理 API 的开发者。",
+ "tagline": "纯 Rust 实现的 MoE 大模型推理引擎，支持 CPU+GPU 混合专家"
+}

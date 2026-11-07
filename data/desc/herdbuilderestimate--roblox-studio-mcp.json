@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程助手辅助开发 Roblox 游戏的开发者，以及希望在 Studio 中自动化重复操作的用户。",
+ "date": "2026-11-07",
+ "features": [
+  "兼容 Claude Desktop、Cursor、Cline、ChatGPT 等 MCP 客户端",
+  "读取 Roblox place 的完整对象树与实例属性",
+  "通过 AI 创建、读取和更新 Lua 脚本",
+  "启动、暂停和停止 playtest",
+  "提供只读安全模式，禁用删除等破坏性操作",
+  "自动发现已打开的 Studio 会话"
+ ],
+ "intro": "Roblox Studio MCP 是一个实现 Model Context Protocol 的服务器，用来在 Roblox Studio 和 AI 编程助手之间搭桥。它让 Claude、Cursor、Cline、ChatGPT 等客户端能够读取游戏的层级结构、查看和修改实例属性、生成或更新 Lua 脚本，并控制 playtest 的启动与停止。\n\n项目通过 WebSocket 与 Studio 插件通信，支持自动发现已打开的 Studio 会话，并提供只读安全模式来禁用删除等破坏性操作。README 说明所有操作都限制在官方插件 API 内，不执行不可信代码，也不访问内存。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 claude_desktop_config.json 或 Cursor MCP 设置中添加 mcpServers 配置，command 为 npx，args 为 [\"-y\", \"roblox-studio-mcp\"]",
+  "重启 AI 助手",
+  "向 Claude 提问，例如“Show me the object tree of my Roblox place”",
+  "如需只读模式，设置环境变量 RBX_MCP_SAFE_MODE=true"
+ ],
+ "summary": "这个项目把 Roblox Studio 接入支持 MCP 的 AI 助手，让模型能读取游戏对象树、查看和修改属性、编辑 Lua 脚本并控制 playtest。适合用 Claude、Cursor 等工具辅助开发 Roblox 游戏、希望减少重复操作的开发者，也提供只读模式用于安全探索。",
+ "tagline": "把 AI 助手接入 Roblox Studio 的 MCP 服务器"
+}

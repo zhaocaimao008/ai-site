@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Claude、Cursor 等 MCP 客户端中直接调用图像生成能力的开发者，以及需要让 AI 代理自主生成图片的使用者。",
+ "date": "2026-11-07",
+ "features": [
+  "将 GPT Image 2.6 封装为 MCP 工具，供兼容客户端调用",
+  "提供 generate_image 工具，接收 prompt、model、size 参数并返回图片 URL 与费用",
+  "提供 list_models 工具，列出可用的图像模型",
+  "提供 get_task 工具，按 task_id 查询任务状态和结果",
+  "通过一份配置即可在 Claude、Cursor、VS Code 等多个客户端中使用",
+  "README 包含约 120 行的参考实现说明，可自行构建"
+ ],
+ "intro": "这是一个 MCP（Model Context Protocol）服务器，把 GPT Image 2.6 的图像生成能力封装成 MCP 工具，让 Claude Desktop、Claude Code、Cursor 等支持 MCP 的客户端可以直接调用。\n\n项目暴露了 generate_image、list_models 和 get_task 三个工具，分别用于生成图片、列出可用模型和查询任务状态。每次调用会返回图片 URL 和本次花费，方便代理在预算范围内决策。README 还给出了在 claude_desktop_config.json 中通过 npx 启动服务器的配置示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "获取 APIMart API key",
+  "在 claude_desktop_config.json 中添加 mcpServers 配置，command 设为 npx，args 为 [\"-y\", \"@apimart/mcp-image\"]，env 中设置 APIMART_API_KEY",
+  "重启客户端后，在对话中让代理调用 generate_image 生成图片"
+ ],
+ "summary": "这个项目把 GPT Image 2.6 的图像生成能力做成 MCP 服务器，让 Claude Desktop、Claude Code、Cursor 等支持 MCP 的客户端可以直接调用生成图片，而不必手动复制粘贴提示词。它提供生成图片、列出模型和查询任务三个工具，每次调用还会返回费用，适合希望让 AI 代理自主生成图片并关注成本的开发者。",
+ "tagline": "通过 MCP 在 Claude、Cursor 等客户端中调用 GPT Image 2.6 生成图片"
+}

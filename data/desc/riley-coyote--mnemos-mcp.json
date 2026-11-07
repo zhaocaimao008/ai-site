@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望 AI agent 在长期协作中记住上下文和偏好的开发者，以及使用 Claude Code、Codex 等 MCP 客户端的用户。",
+ "date": "2026-11-07",
+ "features": [
+  "为 agent 提供跨会话的持久记忆，会话开始时自动读回",
+  "记忆以 agent 自己的措辞保存，并按写入模型签名区分来源",
+  "记忆随时间衰减，被使用时保留，消退前提炼为经验教训",
+  "提供 12 个记忆工具，支持保存、回忆、纠正和回应记忆提问",
+  "每四小时及每晚进行记忆衰减与关联整理，可完全在本机运行",
+  "通过 mnemos log 在本地页面查看 agent 的记忆、日志和留言"
+ ],
+ "intro": "Mnemos 是一个基于 Model Context Protocol 的 MCP server，目标是让 AI agent 在多次会话之间保持连续性。它让 agent 用自己的话记录学到的东西、与你共同做出的决定以及自己犯过的错，每次会话开始时先读回这些内容，再开始对话。\n\n记忆保存在本机的一个 SQLite 文件中，不依赖外部服务。记忆会随时间衰减，被使用则保留；接近消失时，系统会询问 agent 从中得到的教训，把经验保留下来。agent 还拥有独立的日志，可以给你留言，并可在夜间进行记忆整理。\n\n它面向 agent 自身的记忆，而不是你的文档索引或代码搜索工具。支持 Claude Code、Codex、Gemini CLI 等 MCP 客户端，需要 Python 3.10 及以上，主要运行在 macOS 和 Linux。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install \"mnemos-continuity[mcp,embeddings]\"",
+  "mnemos embeddings download",
+  "mnemos connect claude-code --write（或其他客户端，如 mnemos connect codex --write）",
+  "启动 agent，它会带着已有记忆开始会话"
+ ],
+ "summary": "Mnemos 是一个 MCP server，用来解决 AI agent 每次会话都从零开始、记不住此前交流的问题。它让 agent 用自己的话保存值得保留的信息，在每次会话开始时读回，并让记忆随时间衰减、在使用中强化。记忆存放在本机 SQLite 文件中，适合希望 agent 在长期协作中保持连续性的开发者，支持 Claude Code、Codex 等 MCP 客户端。",
+ "tagline": "给 AI agent 一份属于它自己的本地长期记忆"
+}

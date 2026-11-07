@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用代码生成参数化 3D 模型的开发者，以及想让 LLM 稳定输出可编辑 3D 程序的团队。",
+ "date": "2026-11-07",
+ "features": [
+  "用 Python 程序化描述 3D 部件与装配，代码短且可读",
+  "统一的 s3d.<verb> API，覆盖轮廓、实体、编辑、关节与装配",
+  "按名称访问部件、边和面，无需手算坐标",
+  "同一程序生成确定性网格",
+  "一次调用导出 GLB、URDF、USDA、OBJ、STL",
+  "提供约 3600 token 的 API 文档，可直接放入 LLM 系统提示"
+ ],
+ "intro": "sand3d 是一个基于 Blender bpy 的 Python 库，把 3D 物体写成简短的参数化程序：轮廓、实体、编辑、坐标系、关节和装配。程序描述的是形状“怎么造出来”，按部件命名组织，因此模型只需几百个 token 就能写出，人也容易读懂。\n\n它提供统一的 s3d.<verb> 接口，覆盖 rect、circle 等轮廓，extrude、revolve 等实体，cut、fillet、hole 等编辑，以及 joint、group、assembly 等装配操作。部件、边和面通过名字访问，不依赖手算坐标；同一程序生成的网格是确定性的。\n\n导出只需一次调用，按扩展名选择 GLB、URDF、USDA、OBJ 或 STL，可分别用于网页与游戏引擎、ROS 与物理仿真、OpenUSD 管线以及普通 3D 工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install sand3d（或 uv add sand3d），需要 Python 3.13 或 3.11",
+  "编写程序：import sand3d as s3d，用 s3d.extrude、s3d.hole、s3d.fillet 等构建部件",
+  "导出：调用 s3d.export(bracket(), \"bracket.glb\")，按扩展名选择格式",
+  "接入 LLM：把 docs/api.md 放入系统提示，llms.txt 可指向该文档"
+ ],
+ "summary": "sand3d 把 3D 建模写成 Python 短程序，用命名部件、关节和装配描述形状的构造过程，而不是堆坐标。它基于 Blender 的 bpy，API 精简到可整体放进提示词，方便 LLM 生成可读、可改的模型，并导出为 GLB、URDF、USD 等格式，适合参数化零件设计与仿真场景。",
+ "tagline": "用 Python 短程序描述 3D 模型，面向 LLM 生成"
+}

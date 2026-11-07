@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想学习多模态检索、模型微调（LoRA/对比学习）以及 RAG 检索组件开发的开发者，也适合需要搭建以图搜图或以文搜图原型的工程师。",
+ "date": "2026-11-07",
+ "features": [
+  "共享 Qwen 意图识别，区分检索与非检索请求，提取主体、条件和返回数量",
+  "路线 A：Qwen LoRA 微调生成类别与描述，结合 Taiyi 编码进行两阶段检索",
+  "路线 B：EmbeddingGemma 2 直接编码原图，使用多正样本 InfoNCE 对比学习训练",
+  "提供零模型依赖的交互回放演示，含 12 张示例图，无需 GPU 或 API Key",
+  "支持自有图片数据接入，通过 JSONL 清单建库并检索",
+  "包含训练、评测与消融实验指南，报告 F1 与 mAP 指标"
+ ],
+ "intro": "这是一个面向学习多模态检索、模型微调与 RAG 检索组件开发的开源实践项目。项目围绕“以图搜图”和“以文搜图”两类需求，构建了共享 Qwen 意图识别、两条独立检索路线的完整管线：路线 A 用 Qwen 生成类别与描述，再编码文字进行检索；路线 B 直接用 EmbeddingGemma 2 编码原图，通过对比学习训练检索向量。\n\n项目包含真实检索演示、自有数据接入指南、训练与评测脚本，并提供了在固定 2000 张图库上的正式测试结果与消融实验。代码基于 PyTorch、Transformers 和 PEFT，支持 LoRA 微调与多正样本 InfoNCE 训练。当前提供命令行检索原型，作者微调权重未随仓库分发，默认配置使用公开基座模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/liangjianshu/multimodal-image-retrieval.git",
+  "进入目录：cd multimodal-image-retrieval",
+  "运行零依赖演示：python3 examples/quickstart.py，打开终端显示的网址查看交互回放",
+  "安装依赖：pip install -e '.[hybrid]'（需先安装适配硬件的 PyTorch）",
+  "准备图片清单并建库检索：python -m mmretrieval prepare --image-root data/images --output data/catalog.jsonl，然后按路线 A 或 B 的配置运行 index 和 search 命令"
+ ],
+ "summary": "这个项目用 Qwen 意图识别加两条检索路线，实现以图搜图和以文搜图。路线 A 让 Qwen 生成类别与描述再编码文字，路线 B 直接用 EmbeddingGemma 2 编码原图并做对比学习训练。项目提供可离线回放的演示、自有数据接入方法和训练评测指南，适合学习多模态检索、LoRA 微调与 RAG 检索组件开发的开发者参考实践。",
+ "tagline": "多模态图片检索实战：Qwen LoRA 与 Embedding 对比学习"
+}

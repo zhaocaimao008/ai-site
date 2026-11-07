@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 RAG 评测方法、关注 LLM 判分可靠性，或想在自己的开源仓库上构建 issue 问答系统的开发者。",
+ "date": "2026-11-07",
+ "features": [
+  "从真实 issue 标题和维护者回复中挖掘问题与参考答案，构建人工复核的评测集",
+  "支持 BM25、dense、RRF hybrid 和 cross-encoder rerank 等多种检索配置",
+  "提供闭卷与检索配置的对比评测，报告加权准确率和编造率",
+  "对 LLM 判分器进行多轴审计，包括换模型、重复运行、rubric 版本和人工盲评",
+  "检索指标采用 leave-one-issue-out 方式报告泛化性能",
+  "提供在线结果页，可浏览全部 95 条评测的问答与判定"
+ ],
+ "intro": "issue-rag 是一个面向真实开源仓库 issue tracker 的检索增强问答（RAG）系统。项目以 vitejs/vite 为默认目标，从 issue 标题和维护者回复中挖掘问题与参考答案，构建了 95 条人工复核的评测集，并对比闭卷与多种检索配置的效果。\n\n项目的重点在于把评测做扎实：不仅报告检索带来的准确率提升，还审计了 LLM 判分器本身，通过更换判分模型、重复运行、调整 rubric 以及人工盲评来量化判分噪声。结果显示检索确实有用，但增益大小取决于判分器，因此项目报告的是区间而非单一数字。\n\n此外，项目还记录了检索会抬高编造率、检索质量最好的配置答案未必最好等反直觉发现，并明确指出当前检索仅支持英文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "python -m venv .venv && source .venv/bin/activate",
+  "pip install -e \".[models,dev]\"",
+  "python -m issue_rag.fetch issues --preset vite --months 12 --allow-wait",
+  "python -m issue_rag.fetch comments --preset vite --mode per-issue --max-comment-issues 120",
+  "python -m issue_rag.corpus --preset vite"
+ ],
+ "summary": "issue-rag 是一个面向 GitHub issue 的检索增强问答系统，但它真正想解决的是“如何可信地衡量 RAG 效果”。项目从 vitejs/vite 的真实 issue 中挖掘问题与维护者答案，构建人工复核的评测集，并对比闭卷与多种检索配置。它还审计了 LLM 判分器本身，报告增益区间而非单一数字。适合想了解 RAG 评测方法或搭建 issue 问答系统的开发者参考。",
+ "tagline": "面向 GitHub issue 的 RAG 系统，附带人工复核评测集与判分器审计"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 Python 项目中接入 GPT Image 2.6 做文生图，并关心异步轮询、批量重试与成本记录的开发者。",
+ "date": "2026-11-07",
+ "features": [
+  "通过 OpenAI 兼容接口调用 GPT Image 2.6 生成图片",
+  "提供异步任务的轮询函数，处理完成、失败与超时状态",
+  "使用 tenacity 实现批量生成的指数退避重试",
+  "说明如何读取任务最终费用 data.cost 做成本记录"
+ ],
+ "intro": "这个仓库提供了一组可直接运行的 Python 代码片段，演示如何通过 OpenAI 兼容接口调用 GPT Image 2.6 图像生成模型。由于接口与 OpenAI 兼容，只需安装 openai 包并指定 APIMart 的 base_url 和 API key，即可发起文生图请求。\n\n内容覆盖三个常见场景：单次同步生成并读取返回的图片 URL；对异步任务按 task_id 轮询状态，直到完成、失败或超时；以及借助 tenacity 实现带指数退避的批量生成重试。README 还说明任务完成后的 data.cost 是最终计费金额，建议按请求记录而非按价目表估算。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install openai",
+  "设置环境变量 APIMART_API_KEY 为你的 API key",
+  "用 OpenAI(base_url=\"https://api.apimart.ai/v1\") 初始化客户端",
+  "调用 client.images.generate(model=\"gpt-image-2.6-flare\", prompt=..., n=1) 并读取 r.data[0].url"
+ ],
+ "summary": "这是一组 Python 示例代码，演示如何通过 OpenAI 兼容接口调用 GPT Image 2.6 生成图片。内容涵盖单次生成、按任务 ID 轮询异步结果，以及用 tenacity 做批量重试，并提示记录任务返回的最终费用。适合需要在 Python 项目中接入文生图能力、处理异步任务和批量请求的开发者参考。",
+ "tagline": "GPT Image 2.6 的 Python 调用示例：生成、轮询与批量重试"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在应用中接入图像生成能力、又不想分别对接多家厂商的开发者；也适合已有 OpenAI 图像接口代码、想低成本切换或增加模型的团队。",
+ "date": "2026-11-07",
+ "features": [
+  "OpenAI 兼容的 `images.generate` 接口，改 `base_url` 和 `model` 即可接入",
+  "一把密钥调用 GPT Image 2.6 及其他图像模型，切换模型无需换密钥",
+  "统一的重试与 fallback 处理，示例按质量/价格分档路由",
+  "集中计费与限流池化，一个余额、一张账单",
+  "异步任务模式，通过 `task_id` 轮询结果"
+ ],
+ "intro": "这个项目介绍的是 APIMart 提供的图像生成 API 网关：把 GPT Image 2.6 等图像模型放在同一个 OpenAI 兼容端点后面，用一把密钥调用。README 用表格对比了直连各厂商和走网关的差别：密钥从每家一把变成一把，切换模型只需改 `model` 字符串，失败重试和降级统一处理，账单和限流也集中管理。\n\n接口请求格式与 OpenAI 的 `images.generate` 一致，已有代码只需改 `base_url` 和 `model`。README 还给出了多模型路由的示例，按默认、高质量、低价、备用四档选择模型，并在遇到限流时切到 fallback。\n\n需要注意：调用默认是异步的，要轮询 `task_id`，不要阻塞等待 HTTP 返回；最终费用看 `data.cost`，而不是提交时的估算。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 APIMart 获取 API key",
+  "安装 OpenAI Python SDK",
+  "将 `base_url` 设为 `https://api.apimart.ai/v1`，`api_key` 填入自己的密钥",
+  "调用 `client.images.generate(model=\"gpt-image-2.6-flare\", prompt=..., n=1)`",
+  "异步场景下轮询 `task_id` 获取结果，费用以 `data.cost` 为准"
+ ],
+ "summary": "这个项目介绍了一个 OpenAI 兼容的图像生成 API 网关，把 GPT Image 2.6 等多个图像模型统一到一个端点，用一把密钥调用。适合已有 OpenAI 图像接口代码、想减少多厂商对接和密钥管理的开发者，也适合需要按质量或价格在多个模型间切换、并统一处理重试与计费的场景。",
+ "tagline": "用一个 OpenAI 兼容密钥调用多个图像生成模型"
+}

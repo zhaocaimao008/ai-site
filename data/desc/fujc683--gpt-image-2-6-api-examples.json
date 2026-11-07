@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想快速接入 GPT Image 2.6 图像生成接口的开发者，以及需要参考请求格式调试 API 的用户。",
+ "date": "2026-11-07",
+ "features": [
+  "文生图请求示例，可指定 prompt、n 和 size",
+  "展示 gpt-image-2.6-sunburst 更高质量变体",
+  "一次请求生成多张图片（n=4）",
+  "通过 reference_image 传入参考图",
+  "轮询任务接口获取生成结果",
+  "用 jq 查看任务实际扣费金额"
+ ],
+ "intro": "这个仓库收集了六个可直接粘贴到终端运行的 curl 请求，演示如何通过 APIMart 提供的接口调用 GPT Image 2.6 图像生成模型。示例覆盖文生图、更高质量变体、一次生成多张图、带参考图生成，以及查询任务结果和查询计费金额。\n\n每个示例都是完整请求，包含接口地址、鉴权头和 JSON 请求体，其中模型名、prompt、n、size、reference_image 等字段可以直接替换。请求使用 Bearer Token 鉴权，API key 通过环境变量 $APIMART_API_KEY 传入。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 APIMart API key，并设置为环境变量 $APIMART_API_KEY",
+  "复制文生图示例，替换 prompt 后在终端执行 curl 请求",
+  "如需多图或参考图，修改请求体中的 n 或 reference_image 字段",
+  "用返回的 TASK_ID 调用 /v1/tasks/$TASK_ID 轮询结果"
+ ],
+ "summary": "这个仓库提供六个可直接复制运行的 curl 请求，演示如何调用 GPT Image 2.6 完成文生图、多图生成、参考图生成，并查询任务状态与扣费。适合需要快速了解该图像模型接口格式、在终端里调试请求的开发者参考。",
+ "tagline": "GPT Image 2.6 的六个可直接复制的 curl 请求示例"
+}

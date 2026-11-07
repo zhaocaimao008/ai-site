@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要调用图像生成 API 的开发者，尤其是已经在使用 OpenAI 接口、希望低成本切换或组合多个图像模型的场景。",
+ "date": "2026-11-07",
+ "features": [
+  "一个 API key 调用 GPT Image 2.6 等多个图像模型",
+  "请求格式与 OpenAI images.generate 兼容，只需改 base_url 和 model",
+  "支持多模型路由，可按质量或成本选择不同模型",
+  "统一的重试与降级处理，可配置 fallback 模型",
+  "提供异步任务模式，通过 task_id 轮询结果"
+ ],
+ "intro": "这个项目介绍了一个名为 APIMart 的 API 网关，它把 GPT Image 2.6 以及其他图像生成模型统一到一个 OpenAI 兼容的接口后面。开发者只需要一个 API key，就能调用多个模型，切换模型时只需修改请求中的 model 字符串，不需要重写代码。\n\nREADME 中给出了 Python 示例，使用 openai 库的 images.generate 方法，把 base_url 指向网关地址即可。项目还说明了多模型路由的思路，比如按默认、高质量、低成本、备用等层级选择模型，并提醒注意异步轮询 task_id 以及最终费用在 data.cost 中返回。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "获取 API key（README 中提供了获取链接）",
+  "安装 openai Python 库",
+  "将 base_url 设为 https://api.apimart.ai/v1，填入你的 API key",
+  "调用 client.images.generate，指定 model 如 gpt-image-2.6-flare 和 prompt"
+ ],
+ "summary": "这个项目介绍了一个 OpenAI 兼容的图像生成 API 网关，让开发者用一个 key 就能调用 GPT Image 2.6 及其他图像模型。它适合已经在用 OpenAI 接口、想灵活切换模型或做多模型路由的开发者，通过修改 base_url 和 model 字符串即可接入，无需重写代码。",
+ "tagline": "通过一个 OpenAI 兼容接口调用 GPT Image 2.6 等多个图像模型"
+}

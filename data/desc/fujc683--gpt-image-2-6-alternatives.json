@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "需要为图像生成任务挑选模型、或正在使用 APIMart 接口的开发者与内容创作者。",
+ "date": "2026-11-07",
+ "features": [
+  "按需求场景给出模型选择建议",
+  "四款模型的价格、文字渲染、写实度、速度对比表",
+  "说明 GPT Image 2.6 不适合的场景",
+  "给出切换模型的代码示例",
+  "链接到提示词库等相关仓库"
+ ],
+ "intro": "这个仓库是一份图像生成模型的选型对比资料，把 GPT Image 2.6 与 FLUX 2、Seedream 5.0、Nano Banana 2 放在一起比较。README 用表格列出了不同需求下的推荐选择，例如指令遵循和文字海报选 GPT Image 2.6，写实产品图选 FLUX 2 Pro，动漫插画选 Nano Banana 2，电影感画面选 Seedream 5.0 Pro。\n\n对比表还给出了每张图的价格、文字渲染、写实度、速度和参考图支持情况，并说明了什么情况下不该选 GPT Image 2.6。文中提到这些模型在 APIMart 上都兼容 OpenAI 接口，切换只需改一行 model 名称。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 README 中的 APIMart 链接试用 GPT Image 2.6",
+  "按需申请 API key",
+  "在代码中把 model 设为 \"gpt-image-2.6-flare\" 或 \"flux-2-pro\"、\"seedream-5-0-pro\" 等"
+ ],
+ "summary": "这份资料把 GPT Image 2.6 与 FLUX 2、Seedream 5.0、Nano Banana 2 放在一起对比，帮助读者根据具体需求挑选图像生成模型。它按指令遵循、文字海报、写实产品图、动漫插画、电影感画面等场景给出推荐，并列出价格、文字渲染、写实度和速度等维度，适合需要选型或准备在兼容 OpenAI 接口的平台上切换模型的开发者参考。",
+ "tagline": "GPT Image 2.6 与三款图像模型的选型对比"
+}

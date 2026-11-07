@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合需要了解 GPT Image 2.6 定价、进行成本估算或对比不同图像生成模型价格的开发者和项目规划者。",
+ "date": "2026-11-07",
+ "features": [
+  "列出 GPT Image 2.6 两个变体（Flare、Sunburst）的每张图片价格",
+  "与 Nano Banana 2、Seedream 5.0 Pro、FLUX 2 Pro 等模型进行价格和优势对比",
+  "提供 100、1000、10000 张图片的成本规划参考",
+  "说明批量生成按图片计费，无单独任务费",
+  "提示通过 data.cost 和 data.credits_cost 字段核对实际费用"
+ ],
+ "intro": "这个仓库整理了 GPT Image 2.6 图像生成模型的定价信息，包括 Flare 和 Sunburst 两个变体每张图片 0.0198 美元的价格，并与其他图像模型（如 Nano Banana 2、Seedream 5.0 Pro、FLUX 2 Pro 等）进行了每张图片价格的对比。\n\n仓库还提供了按 100、1000、10000 张图片规模计算的成本规划表，并说明批量生成按图片计费，没有额外任务费。此外，它指出任务完成后会返回 data.cost 和 data.credits_cost 字段用于对账，完成前显示的是估算值。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个仓库整理了 GPT Image 2.6 图像生成模型的每张图片价格，并与其他图像模型进行费用对比，同时提供不同生成量下的成本规划参考。它还说明了批量计费方式和对账字段，适合需要评估使用成本或对比模型价格的开发者和项目规划者参考。",
+ "tagline": "GPT Image 2.6 每张图片价格与用量规划"
+}
