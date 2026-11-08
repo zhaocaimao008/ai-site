@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 辅助制作短视频的创作者和开发者，尤其是偏好本地运行、自行配置模型服务的用户。",
+ "date": "2026-11-08",
+ "features": [
+  "与 AI 助手对话生成文本或媒体内容，可引用画布素材",
+  "画布管理资产：上传文件、连接节点、@ 引用与生成历史",
+  "媒体编辑：裁剪、调色、图层与片段，AI 工具依赖模型能力",
+  "图像预设：角色三视图、面部三视图、产品三视图、故事板、多机位",
+  "时间线编辑与 MP4 渲染，支持导出 JSON、FCPXML 和素材包",
+  "本地项目自动保存，可配置多个模型服务并切换"
+ ],
+ "intro": "OpenDirector 是一个在本地运行、通过浏览器访问的 AI 视频创作工作台。你可以与助手对话生成素材，在画布上整理和迭代资产，编辑图片、视频和音频，最后在时间线上排列素材并导出 MP4。项目保存在本机，生成过程使用你自行配置的模型服务。\n\n工作流大致为：连接模型 → 生成素材 → 编辑 → 排列时间线 → 导出。画布支持上传文件、连接节点或用 @ 引用素材，并保留生成历史；媒体编辑提供裁剪、调色、图层与片段操作，部分 AI 工具（如图像扩展、擦除、背景移除）取决于所连模型的能力。时间线可调整起止点、速度和音量，预览后渲染 MP4，也可导出 JSON、FCPXML 和素材包。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Python 3.11+、Node.js 24.22.1+（含 npm）、Git 以及带 libx264 的 FFmpeg/ffprobe",
+  "克隆仓库：git clone https://github.com/ThinkFlowLab/OpenDirector.git",
+  "进入目录并创建虚拟环境：cd OpenDirector && python3 -m venv .venv && source .venv/bin/activate",
+  "安装并启动：python -m pip install -e . && opendirector serve",
+  "浏览器打开 http://127.0.0.1:8000，在 Settings → Model connections 配置模型服务"
+ ],
+ "summary": "OpenDirector 是一个本地运行的 AI 视频创作工作台，通过浏览器访问。它把对话生成素材、画布整理、媒体编辑和时间线导出串成一条流程，适合想用 AI 辅助制作短视频、又希望项目保存在本机并自行选择模型服务的用户。",
+ "tagline": "本地运行的 AI 视频创作工作台，从聊天生成到时间线导出"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要审计和约束 AI agent 行为的开发者，尤其是使用 LangChain、LangGraph、Claude Code 等框架并关注 agent 安全的团队。",
+ "date": "2026-11-08",
+ "features": [
+  "在工具调用执行前按策略拦截或放行",
+  "将每次调用与决策签名写入哈希链",
+  "每次运行生成可离线验证的 .tkb 文件",
+  "支持独立见证方对日志共同签名",
+  "提供 Python 与 TypeScript 验证器",
+  "可审计本机 Claude Code 会话中的历史操作"
+ ],
+ "intro": "Tracekit 是一个面向 AI agent 的运行时记录与审计工具。它在 agent 每次调用工具前按策略检查，把调用和决策签入哈希链，每次运行生成一个 .tkb 文件，可离线验证记录是否被改动。\n\n设计思路类似 Certificate Transparency：签名记录写入只追加日志，独立见证方可共同签名。项目提供 Python 和 TypeScript 验证器，可运行在自己的机器上。README 还给出演示与审计命令，可查看本机 Claude Code 会话中 Tracekit 本会拦截哪些操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "uvx --from tracekit-ai tracekit demo --server",
+  "pip install tracekit-ai",
+  "在 agent 首行调用 tracekit.instrument()",
+  "运行 agent 后执行 tracekit last 导出并验证最近一次运行",
+  "tracekit view --dev 查看所有运行记录"
+ ],
+ "summary": "Tracekit 解决的是 AI agent 行为难以可信审计的问题：agent 自己的日志可能被它修改，无法证明记录真实。Tracekit 在工具调用执行前按策略检查，并把调用与决策签名写入哈希链，每次运行生成可离线验证的记录文件。适合需要追踪 agent 做了什么、是否被允许，并希望记录不被篡改的开发者与安全团队。",
+ "tagline": "为 AI agent 提供防篡改的调用记录与策略拦截"
+}

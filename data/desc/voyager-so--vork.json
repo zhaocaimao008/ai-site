@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI agent 自动生成并渲染 3D 画面与 VFX 的开发者，以及熟悉 Rust、Slang 或图形渲染的技术用户。",
+ "date": "2026-11-08",
+ "features": [
+  "无头渲染，无需图形界面，由 agent 编写场景代码并迭代",
+  "基于 Rust 与 Slang，GPU 渲染走 Vulkan 和 Metal",
+  "场景程序可自定义材质、相机、光传播、模拟与合成",
+  "提供 std/draft 与 std/final 等渲染 profile",
+  "支持生成 TypeScript 或 Python 场景源码",
+  "附带鸟群模拟、黑洞、真实素材合成等示例"
+ ],
+ "intro": "vork 是 Voyager 出品的渲染内核，一个为 agent 设计的无头 3D 与 VFX 引擎，用 Rust 和 Slang 编写，通过 Vulkan 和 Metal 做 GPU 渲染。它没有传统编辑器界面，工作方式是 agent 编写场景代码、渲染、查看结果再修改代码。\n\n除了常规场景数据，vork 还向场景程序开放几何、光线查询和 GPU 执行能力，让程序定义材质、相机、光传播、模拟和合成。普通镜头只需场景数据，需要特殊效果时再用编程接口。项目提供百万鸟群、真实素材上的 VFX、黑洞、蛋糕等多个示例。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 vork",
+  "运行 vork init my-shot 创建项目",
+  "进入目录后执行 vork render scene.json --profile std/draft --out render.png",
+  "打开 render.png，修改 scene.json 中的颜色或相机位置后重新渲染",
+  "运行 vork help 查看功能说明"
+ ],
+ "summary": "vork 是一个面向 AI agent 的无头 3D 与 VFX 渲染引擎，让 agent 直接编写场景代码、渲染并查看结果后反复修改，不依赖图形编辑器。它用 Rust 和 Slang 实现，通过 Vulkan 和 Metal 做 GPU 渲染，并允许场景程序介入材质、相机、光传播与模拟。适合需要由 agent 自动产出 3D 画面或合成真实素材特效的开发场景。",
+ "tagline": "面向 AI agent 的无头 3D 与 VFX 渲染引擎"
+}

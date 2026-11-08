@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有可 root 的 Android 手机、希望尝试 AI 语音代理拨打真实电话的开发者或技术爱好者。需要具备基本的命令行操作能力，并愿意按照文档逐步配置。",
+ "date": "2026-11-08",
+ "features": [
+  "从本机 SIM 卡拨出真实电话，使用 Gemini Live 实时语音对话",
+  "通过 Cloudflare Worker 保管 Gemini 密钥并签发一次性令牌",
+  "强制 Isabella 在通话开始时声明自己是人工智能",
+  "内置通话时长、频率等限制，防止过度消耗",
+  "支持无 root 的免通话模式，仅通过麦克风和扬声器聊天",
+  "提供本地模拟 Gemini 和 Worker 的测试方式，无需真实调用"
+ ],
+ "intro": "Agente Isabella 是一个 Android 应用，它从你自己的手机号码拨出电话，并用 Google Gemini 的实时语音与接听者对话。语音通过 Magisk root 以数字方式混入通话通道，而不是通过扬声器外放，因此声音清晰且没有回声。\n\n项目需要 Android 14 及以上、可 root 的手机，以及一台 Mac 来编译和安装。你的 Gemini API 密钥不会存放在手机上，而是放在免费的 Cloudflare Worker 中，由它签发一次性临时令牌。应用还包含通话时长上限、每日次数限制等保护措施，并强制 Isabella 在第一句话中表明自己是人工智能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/viajatech/agente-isabella.git",
+  "cd agente-isabella",
+  "打开你的 AI 代理（如 Claude Code），输入：「Lee AGENTS.md y guíame paso a paso para instalar Isabella Llamadas en mi celular.」",
+  "按照代理指引，在手机上完成 root、配置密钥和安装应用"
+ ],
+ "summary": "Agente Isabella 是一个 Android 应用，让你用自己的手机号码拨打电话，并由 Google Gemini 的实时语音代替你与对方对话。它通过 Magisk root 将 AI 语音直接混入通话音频，避免外放和回声。项目适合想探索 AI 语音代理实际拨号场景的开发者，需要 Android 14 以上可 root 的手机和一台 Mac 进行编译安装，API 密钥由 Cloudflare Worker 保管。",
+ "tagline": "让 Android 手机用 AI 语音替你打真实电话"
+}

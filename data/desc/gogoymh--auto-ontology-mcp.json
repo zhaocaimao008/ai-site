@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude、ChatGPT 等 MCP 客户端的开发者，以及需要可靠数据库查询或个人知识管理的用户。",
+ "date": "2026-11-08",
+ "features": [
+  "基于语义层生成和验证 SQL，减少 Text-to-SQL 的静默错误",
+  "支持数据库问答，自动推断连接路径和值映射",
+  "个人知识库：存储事实、概念和原文片段，保留来源",
+  "与 Obsidian 集成，原始文件保存在本地库中",
+  "无需配置 LLM API 密钥，利用现有 MCP 客户端模型",
+  "提供 check_answerable、validate_sql 等工具确保查询可靠性"
+ ],
+ "intro": "Auto Ontology MCP 将 NVIDIA Auto Ontology 的语义层引入任何 MCP 客户端，让 Claude、ChatGPT 等模型能够基于数据库结构生成更可靠的 SQL 查询。它不需要额外的 LLM API 密钥，所有语言处理步骤由客户端模型完成，服务器负责模式提取、验证和只读执行。\n\n除了数据库问答，它还能作为个人知识库使用：你可以分享收据、论文、笔记或截图，助手会提取事实、概念和原文片段，并保留来源。原始文件保存在 Obsidian 库中，后续查询可返回精确数字、可搜索的引文和原文链接。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install auto-ontology-mcp",
+  "运行演示：auto-ontology-mcp demo",
+  "在 MCP 客户端中配置服务器（stdio 或 HTTP）"
+ ],
+ "summary": "Auto Ontology MCP 是一个 MCP 服务器，为 Claude、ChatGPT 等客户端提供语义层和个人知识库功能。它帮助模型理解数据库结构，生成经过验证的 SQL 查询，减少错误；同时能整理非结构化文档，提取事实和概念并保留来源。适合需要可靠数据问答或知识管理的开发者与普通用户。",
+ "tagline": "为 MCP 客户端提供语义层与个人知识库的服务器"
+}

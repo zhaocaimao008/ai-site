@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望借助 Claude Code 自动生成讲解类视频的开发者、内容创作者和产品团队。",
+ "date": "2026-11-08",
+ "features": [
+  "提供 remotion、ffmpeg、playwright-recording 等视频制作技能",
+  "支持 Qwen3-TTS 配音、ACE-Step 音乐、LTX-2 视频片段等开源模型",
+  "通过 /setup 交互式配置云 GPU、存储和语音",
+  "通过 /video 从模板创建项目并引导完整制作流程",
+  "内置多种视频模板，如产品演示、发布说明和竖屏短片",
+  "提供无需 API key 的 hello-world 示例，可直接渲染 MP4"
+ ],
+ "intro": "这是一个面向 Claude Code 的 AI 视频制作工作区，提供技能、命令、模板和工具，让 AI agent 把视频从概念推进到最终 MP4 渲染。流程覆盖写脚本、生成配音、配乐、画面素材和合成渲染。\n\n项目大量依赖开源模型，例如 Qwen3-TTS 配音、FLUX.2 图像生成、ACE-Step 音乐、LTX-2 视频片段，可部署到自己的云 GPU 账户按成本运行。README 给出的示例包括产品演示、发布说明视频、竖屏短视频和恶搞短片等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/digitalsamba/claude-code-video-toolkit.git",
+  "cd claude-code-video-toolkit && uv sync",
+  "claude",
+  "在 Claude Code 中运行 /setup 配置云 GPU、存储和语音",
+  "运行 /video 创建第一个视频"
+ ],
+ "summary": "这个项目把 Claude Code 变成视频制作助手，提供脚本撰写、AI 配音、配乐、画面生成和渲染所需的技能与模板。它主要调用可自行部署的开源模型，适合制作产品演示、发布说明、讲解短片等视频内容，也适合想用 AI agent 完成从创意到成片的开发者尝试。",
+ "tagline": "用 Claude Code 从脚本到成片完成视频制作"
+}

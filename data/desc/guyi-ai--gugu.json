@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "希望把日常任务交给 Agent 执行的个人用户，以及需要多 Agent 协作、MCP 工具接入和桌面自动化的开发者。",
+ "date": "2026-11-08",
+ "features": [
+  "Agent 工作区：对话、文件、网页、终端并排，支持拆分面板与独立窗口",
+  "个人助理：连接已接入的服务，把任务交给助理执行",
+  "Agent 团队协作：大任务并行分派，分别查看各 Agent 状态与结果",
+  "MCP 与 Skills：在资源库管理 MCP 配置，按会话选择工具",
+  "Gugu Apps 扩展：在应用市场查看、安装并管理版本与启用状态",
+  "设备能力：Browser Use 与 Computer Use 将网页和桌面操作纳入任务"
+ ],
+ "intro": "Gugu 咕咕是一个面向 AGI 的应用，核心思路是把任务交给 Agent：Agent 按需调用工具和设备，协调工作并返回结果。它提供工作区，可把对话、文件、网页和终端并排摆放，也能拆分窗口、导入其他 Agent 的历史会话继续工作。\n\n除日常个人助理外，Gugu 还支持 Agent 团队协作，让一个 Agent 把大任务并行分派给子 Agent，并分别跟踪状态与结果。工具侧接入 MCP 与 Skills，可通过 Gugu Apps 扩展能力；Agent 运行在电脑或服务器上，借助 Browser Use 和 Computer Use 执行网页与桌面操作。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Gugu 咕咕是一个面向 AGI 的 Agent 应用，用户把任务交给 Agent 后，它会调用工具和设备完成并返回结果。它把对话、文件、网页和终端整合在同一工作区，支持个人助理、多 Agent 并行协作、MCP 与 Skills 工具接入，以及 Browser Use 和 Computer Use 等设备操作，适合希望用 Agent 处理日常任务和复杂工作流的用户。",
+ "tagline": "面向 AGI 的 Agent 工作台与个人助理应用"
+}

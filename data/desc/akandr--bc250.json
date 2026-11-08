@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合手上有 AMD BC-250 矿板、想在本地跑 LLM 或图像生成的开发者，以及关注边缘 AI 与非常规硬件推理的爱好者。",
+ "date": "2026-11-08",
+ "features": [
+  "在 BC-250 上通过 Vulkan 运行 Ollama / llama.cpp 本地推理",
+  "记录 40 CU 解锁补丁及 24 CU 与 40 CU 的 A/B 性能对比",
+  "说明 GTT 上限与 TTM pages_limit 等内核内存瓶颈的绕过方法",
+  "使用 stable-diffusion.cpp 进行图像生成",
+  "搭建通过 Signal 聊天、可自主执行任务的监控系统"
+ ],
+ "intro": "这个项目是一份围绕 AMD BC-250 的完整搭建指南。BC-250 是基于 Cyan Skillfish APU（Zen 2 + GFX1013 GPU、16 GB 统一内存）的矿板，作者把它改造成无头 AI 服务器，用 Vulkan 路径运行 Ollama 和 llama.cpp 推理，并记录 stable-diffusion.cpp 图像生成的做法。\n\nREADME 还包含大量实测数据：不同量化模型在 24 CU 与社区补丁解锁 40 CU 后的速度对比、显存瓶颈的绕过方法，以及一个通过 Signal 对话的自主监控系统。作者强调所有性能数字都来自单块板卡、单一软件栈，并非厂商基准。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这份指南讲的是如何把一块 AMD BC-250 矿板改造成本地 AI 服务器：用 Vulkan 跑 Ollama 和 llama.cpp 推理，用 stable-diffusion.cpp 生成图像，并记录解锁 40 CU 前后的实测速度差异。适合有这块板子、想低成本跑本地模型的人参考，也适合了解非常规硬件上的推理调优。",
+ "tagline": "在 AMD BC-250 矿板上跑本地大模型与图像生成"
+}

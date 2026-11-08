@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合正在构建 AI Agent 应用的前端开发者，尤其是使用 React 和 TypeScript 的团队，也适合需要快速搭建 Agent 监控或交互界面的开发者。",
+ "date": "2026-11-08",
+ "features": [
+  "提供 Agent 专用组件：工具调用卡片、决策收件箱、思考加载器等",
+  "提供通用 UI 组件：输入框、菜单、图表、插画和动效",
+  "每个组件为单个 .tsx 文件，样式内联，无额外依赖",
+  "支持通过 shadcn CLI 或 MCP 服务器安装",
+  "安装后代码归开发者所有，可自由修改"
+ ],
+ "intro": "affectUI 是一个面向 AI Agent 场景的 React 组件库，提供用于展示 Agent 运行过程（如工具调用、追踪、交接、审批）以及通用应用界面（输入框、菜单、图表等）的组件。每个组件都是独立的 .tsx 文件，样式内联，无需 Tailwind 或 CSS 配置，也无需动画库。\n\n组件可通过 shadcn CLI 安装，或借助 MCP 服务器让 Claude Code、Cursor、Codex 等工具自动添加，安装后代码完全归你所有。项目采用 MIT 协议开源，部分高级组件需付费使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 shadcn CLI 安装组件，例如：npx shadcn@latest add https://www.affectui.com/r/tool-call-card.json",
+  "或通过 MCP 服务器让 Claude Code、Cursor、Codex 等工具自动添加组件",
+  "在 React 项目中导入并使用安装的组件"
+ ],
+ "summary": "affectUI 是一个 React 组件库，专门用于构建 AI Agent 应用界面。它提供展示 Agent 运行过程（如工具调用、追踪、交接、审批）的组件，也包含输入框、菜单、图表等通用 UI 元素。每个组件都是独立的 .tsx 文件，样式内联，无需额外配置，可通过 shadcn CLI 或 MCP 服务器安装。适合正在开发 AI Agent 应用的前端开发者使用。",
+ "tagline": "为 AI Agent 打造的 React UI 组件库"
+}
