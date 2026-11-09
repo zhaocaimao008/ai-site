@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex 等 AI 编码代理，并希望在本机约束代理行为、防止敏感信息外泄的开发者与安全团队。",
+ "date": "2026-11-09",
+ "features": [
+  "按路径、命令、文件名或 URL 配置允许/拒绝策略，并限定操作类型",
+  "内置 70 多种密钥检测模式，支持 off、detect、redact、block 四种模式",
+  "对含密钥文件的上传进行出站拦截",
+  "按分钟、小时或天设置调用速率上限",
+  "受保护路径与沙箱隔离，使代理无法访问项目之外的内容",
+  "本地审计日志与实时工具调用跟踪"
+ ],
+ "intro": "SolonGate Agent Security 是一个用 Go 编写的开源安全网关，面向 AI 编码代理。它在代理执行工具调用之前，按用户定义的策略检查路径、命令、文件名或 URL，并区分 READ、WRITE、EXECUTE、NETWORK 四类操作，决定放行还是拦截。\n\n所有数据都留在本机：策略是文件，审计记录也是文件，网关自身不发起网络请求，不需要账号，也没有遥测。除策略规则外，它还提供内置 70 多种密钥模式的 DLP 检测、按分钟/小时/天的速率限制、对 Claude Code 出站请求体的遮蔽，以及受保护路径和沙箱等隔离手段。\n\n项目提供 TUI 和命令行工具，可管理策略、查看审计日志、实时跟踪工具调用，也能在沙箱中启动代理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/solongate/agent-security.git",
+  "cd agent-security",
+  "./scripts/install.sh",
+  "solongate",
+  "打开新终端，使 hooks 在会话启动时加载"
+ ],
+ "summary": "SolonGate Agent Security 是一个本地优先的开源安全网关，用来在 AI 编码代理执行工具调用前进行拦截。它按路径、命令、文件名或 URL 检查策略，并提供密钥检测、速率限制、受保护路径和沙箱等能力，所有策略与审计记录都保存在本机。适合希望约束代理操作、避免敏感文件被读取或外传的开发者。",
+ "tagline": "本地优先的 AI 编码代理安全网关"
+}

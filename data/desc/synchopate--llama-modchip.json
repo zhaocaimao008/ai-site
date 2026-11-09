@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在无 GPU 或低显存环境下本地运行大 MoE 模型的开发者和研究者，尤其是使用 64 GB 内存台式机或笔记本的用户。",
+ "date": "2026-11-09",
+ "features": [
+  "将 284B DeepSeek-V4-Flash 量化到 56.56 GiB，可装入 64 GB 内存",
+  "针对 AVX-512/AVX2 与 ARM64 的 CPU 内核补丁，提升预填充与解码速度",
+  "支持 Nemotron-3.5-30B-A3B 等 30B MoE 模型，覆盖 16–32 GB 内存设备",
+  "使用 1.64 MB 的 Stockfish-PVS 草稿模型进行自推测解码",
+  "通过 /dev/shm KV 快照快速恢复 Agent 上下文（13.1–32.6 ms）",
+  "提供混合模式，将注意力/SSM 主干放 GPU，MoE 专家留在 CPU 内存"
+ ],
+ "intro": "llama-modchip 是一组针对 ggml/llama.cpp 的内核补丁、量化转码器和运行时工具，目标是在 x86_64 与 ARM64 处理器的系统内存中运行稀疏 MoE 大模型，无需 GPU。它通过自定义量化把 DeepSeek-V4-Flash 284B 压缩到 56.56 GiB，使其能完整装入 64 GB 内存并保留 256K 上下文。\n\n项目还包含 CPU 缓存与 SIMD 内核优化，提升预填充和解码速度；并利用小型 n-gram 草稿模型做自推测解码，配合 /dev/shm 的 KV 快照实现快速恢复 Claude Code 等 Agent 上下文。README 给出了不同内存档位对应的模型与吞吐参考。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/synchopate/llama-modchip.git",
+  "进入目录：cd llama-modchip",
+  "运行自动安装与聊天：./modchip chat",
+  "或直接使用预编译 Linux x86_64 二进制配合 Hugging Face 的 .gguf 模型运行"
+ ],
+ "summary": "llama-modchip 解决的是大 MoE 模型难以在普通 CPU 内存中运行的问题。它通过自定义量化把 284B DeepSeek-V4-Flash 压到 56.56 GiB，使其能装入 64 GB 内存并保留 256K 上下文，同时提供 CPU 内核优化和推测解码来提升速度。适合没有 GPU、希望在本地跑大模型的开发者和研究者。",
+ "tagline": "在纯 CPU 上运行 284B 与 30B MoE 大模型"
+}

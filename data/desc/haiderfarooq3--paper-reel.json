@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速制作无脸解说短视频的内容创作者，以及熟悉 Claude Code 和 JavaScript 的开发者。",
+ "date": "2026-11-09",
+ "features": [
+  "根据主题自动生成六到七行脚本，并渲染为 9:16 竖屏 MP4",
+  "剪纸风格视觉：纸片形状、换帽吉祥物、标题牌、图章和计数器",
+  "逐词字幕，每个单词以纸片形式弹出",
+  "语音驱动时间轴：whisper.cpp 对齐单词，场景道具按词触发",
+  "本地运行，无需 API 密钥，使用 Kokoro TTS、Playwright 和 ffmpeg",
+  "提供 reel 命令行工具，支持新建、生成语音、截图检查、导出等步骤"
+ ],
+ "intro": "paper-reel 是一个 Claude Code 技能，用于制作 9:16 竖屏的无脸解说短视频。画面采用剪纸风格，包含扁平纹理的纸片形状、每场换帽子的盒子吉祥物、拧上去的标题牌、橡皮图章、计数器和逐词弹出的字幕。你只需给 Claude 一个主题，它会写出六到七行脚本，一条命令即可渲染出 MP4。\n\n整个流程在本地 Mac 上运行：Kokoro 生成语音，whisper.cpp 提供逐词时间戳，HTML canvas 绘制画面，Playwright 和 ffmpeg 完成渲染。无需 API 密钥、账号或视频编辑器。语音是时间基准，每一行台词对应一个场景，道具和动画根据单词时间戳触发，保证音画同步。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：macOS、Node 18+、ffmpeg 和 whisper.cpp",
+  "克隆仓库到 Claude 技能目录：git clone https://github.com/haiderfarooq3/paper-reel ~/.claude/skills/paper-reel",
+  "安装依赖并检查环境：cd ~/.claude/skills/paper-reel && npm install && npx playwright install chromium && brew install ffmpeg whisper-cpp && ~/.claude/skills/paper-reel/bin/reel doctor",
+  "在 Claude Code 中提出需求，例如：Make a paper-reel about uv, the Python package manager. CTA keyword UV.",
+  "或手动运行流水线：$REEL new ~/reels/my-reel，编辑脚本后依次执行 voice、still、check、export"
+ ],
+ "summary": "paper-reel 是一个 Claude Code 技能，用来把一段主题快速变成 9:16 竖屏的剪纸风格无脸解说视频。它自动写脚本、生成语音，并用 whisper.cpp 对齐每个单词的时间，让场景道具和逐词字幕跟着语音走。整个流程在本地 Mac 上完成，不需要 API 密钥或视频编辑器，适合想批量制作短视频的创作者和开发者。",
+ "tagline": "用 Claude Code 生成剪纸风格的无脸解说短视频"
+}

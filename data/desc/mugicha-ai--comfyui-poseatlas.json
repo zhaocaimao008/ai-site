@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 ComfyUI 进行 AI 绘画、需要姿势或服装参考的创作者，以及希望将参考图库直接集成到工作流中的开发者。",
+ "date": "2026-11-09",
+ "features": [
+  "全屏图库面板，支持按分类浏览姿势、服饰、肖像三套图集",
+  "中/英/日三语界面与搜索，可跨图集检索",
+  "姿势集提供线稿与深度两种渲染，深度图适合 ControlNet depth",
+  "输出 IMAGE、MASK 和条目名称，可直接接入 ControlNet 或编辑模型",
+  "提供下载脚本，支持仅缩略图、全尺寸原图、按图集筛选和断点续传",
+  "附带 8 个示例工作流，覆盖基础加载、ControlNet 出图、换装和角色一致性"
+ ],
+ "intro": "ComfyUI-PoseAtlas 是一个 ComfyUI 自定义节点，把 RuiC-PoseAtlas 的三套参考图集（姿势、服饰、肖像）集成到 ComfyUI 界面中。用户可以在全屏图库面板里按分类浏览、搜索并选择图片，直接输出 IMAGE 供 ControlNet、图生图或编辑模型使用。\n\n姿势集包含 288 组姿态、每组 5 个角度，共 1,439 张线稿，另有对应的灰度深度渲染；服饰集有 1,407 套穿搭图，肖像集有 1,499 张脸部与造型图。面板支持中文、英文、日文三语搜索与显示。\n\n项目本身不包含图片，安装后需运行下载脚本从公开源站获取缩略图或全尺寸原图。深度原图因源站限制，只能在面板中逐张按需下载。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将仓库克隆到 ComfyUI/custom_nodes 目录：git clone https://github.com/mugicha-AI/ComfyUI-PoseAtlas.git",
+  "进入节点目录，运行 python scripts/download_images.py 下载缩略图（约 59 MB）",
+  "如需全尺寸原图，运行 python scripts/download_images.py --full（约 5.4 GB）",
+  "重启 ComfyUI，在右键菜单 PoseAtlas 分类下添加节点，或双击画布搜索 PoseAtlas",
+  "打开图库面板选择图片，将 image 输出连接到 ControlNet 或图生图节点"
+ ],
+ "summary": "ComfyUI-PoseAtlas 把 RuiC-PoseAtlas 的姿势、服饰、肖像三套参考图集做成 ComfyUI 节点，让用户不用离开工作流就能浏览和选取图片。姿势集提供多角度线稿和深度图，适合抽骨架或 ControlNet depth；服饰和肖像集可用于换装与角色一致性参考。适合需要姿势、服装或人脸参考的 ComfyUI 用户。",
+ "tagline": "在 ComfyUI 中浏览并调用 RuiC-PoseAtlas 姿势、服饰、肖像参考图集"
+}

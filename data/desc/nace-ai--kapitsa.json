@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在 Apple Silicon Mac 上做本地大模型推理、希望把编码 agent 接到本地模型的开发者，以及需要 OpenAI/Anthropic 兼容本地接口的应用开发者。",
+ "date": "2026-11-09",
+ "features": [
+  "KFlash 树状投机解码，配合 DFlash2、DFlash、MTP、DSpark 或 LiLiCorr drafter 提升解码速度",
+  "兼容 OpenAI 的 /v1/chat/completions、/v1/responses 与 Anthropic 的 /v1/messages，支持流式、工具调用和 JSON-schema 输出",
+  "一条命令在本地模型上启动 opencode、Claude Code、Codex、Pi、Hermes、aider、Goose 等编码 agent",
+  "支持专家权重从 SSD 流式加载，使 180B 模型可在 48 GB Mac 上运行",
+  "GPU 与 Neural Engine 协同 prefill，并提供 --disk-cache 磁盘缓存对话以加快重启后的续聊",
+  "内置 kapitsa bench 与 bench compare，可测量本机速度并与其他已安装引擎对比"
+ ],
+ "intro": "Kapitsa 是一个用 C++ 编写的本地推理引擎，专门针对 Apple Silicon（M1 及更新芯片）优化，可在 Mac 上运行 Qwen、Nemotron 以及 Recursive 的 Flint 等模型。它同时提供 OpenAI 与 Anthropic 兼容的 API 接口，支持流式输出、工具调用和 JSON-schema 输出，默认监听本地 127.0.0.1:8000。\n\n项目的主要目标是让编码类 agent 直接跑在本地模型上。通过一条命令即可启动 opencode、Claude Code、Codex、Pi、Hermes、aider 或 Goose，无需改动这些工具本身的配置。README 还介绍了 KFlash 树状投机解码、专家权重从 SSD 流式加载、GPU 与 Neural Engine 协同 prefill、磁盘缓存对话等机制，并给出了与 MLX、Ollama、llama.cpp 等引擎的对比数据。\n\n需要注意的是，它仅支持 Apple Silicon 上的 macOS 14 Sonoma 或更高版本，不支持 Linux 和 Windows；部分模型（Flint、四个纯文本 Nemotron、35B 的 16gb 构建）只能处理文本，不能读图。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认环境：Apple Silicon Mac（M1 或更新）且系统为 macOS 14 Sonoma 或更高",
+  "安装：brew install nace-ai/tap/kapitsa，或 curl -fsSL https://raw.githubusercontent.com/nace-ai/kapitsa/main/install.sh | bash",
+  "启动编码 agent：kapitsa opencode --model 35b（也可用 claude、codex、pi）",
+  "在 16-24 GB 内存的 Mac 上改用 --model 9b，追求最快回复可用 4b",
+  "测量本机速度：kapitsa bench --submit"
+ ],
+ "summary": "Kapitsa 是一个面向 Apple Silicon Mac 的本地推理引擎，用 C++ 编写，可运行 Qwen、Nemotron、Flint 等模型，并提供 OpenAI 与 Anthropic 兼容的本地 API。它主要服务于编码 agent 场景，一条命令就能让 opencode、Claude Code、Codex 等工具跑在本地模型上，适合希望在 Mac 上离线使用大模型、又不想改动现有工具链的开发者。",
+ "tagline": "面向 Apple Silicon 的本地大模型推理引擎，兼容 OpenAI 与 Anthropic API"
+}

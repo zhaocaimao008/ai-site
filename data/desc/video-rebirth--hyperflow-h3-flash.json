@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或云端生成带同步音频视频的开发者、研究者，以及使用 ComfyUI 的创作者。",
+ "date": "2026-11-09",
+ "features": [
+  "联合生成视频与 32 kHz 立体声音频，默认 1344×768 分辨率、24 fps",
+  "支持 4/6/8 步采样，无需 classifier-free guidance",
+  "提供 GGUF 量化（Q3_K_M 到 Q8_0）和 INT8 两种权重格式",
+  "支持 t2va、fl2va、ref2va 三种任务，ref2va 可混合图像、视频和音频参考",
+  "可通过 ComfyUI、Unsloth Studio、stable-diffusion.cpp 或 Python 包运行",
+  "支持多 GPU 上下文并行，可生成最长 15 秒视频"
+ ],
+ "intro": "HyperFlow H3 Flash 是 Video Rebirth 对 MiniMax-H3 进行压缩和少步数蒸馏后的版本，能够同时生成视频和同步立体声音频。模型参数为 13.7B（fl2va）或 13.9B（ref2va），不到原版 MiniMax-H3 的一半，支持 4、6、8 步采样，无需 CFG。\n\n它提供 GGUF 和 INT8 两种运行时：GGUF 量化版（Q4_K_M 约 9.1 GB）可在 24GB/32GB 显存的消费级显卡上运行，INT8 版本面向数据中心 GPU 或多卡环境。支持文本生成视频+音频、首帧/首尾帧生成、以及最多 12 个参考素材的生成任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Python 包：pip install git+https://github.com/Video-Rebirth/hyperflow-h3-flash",
+  "运行文本生成视频+音频：hyperflow-h3-flash --prompt \"A chef slides a steaming bowl of ramen across a wooden counter; rain taps on the window.\" --output ramen.mp4",
+  "使用首帧生成：hyperflow-h3-flash --prompt \"...\" --image first.png --output clip.mp4",
+  "调整采样步数：hyperflow-h3-flash --prompt \"...\" --steps 4",
+  "ComfyUI 用户：将 ComfyUI-GGUF 和 ComfyUI-HyperFlow-Flash 克隆到 custom_nodes/，下载文本编码器后从模板选择工作流"
+ ],
+ "summary": "HyperFlow H3 Flash 是一个压缩后的少步数视频与音频联合生成模型，基于 MiniMax-H3 蒸馏而来，能在较少采样步数下同时输出视频和同步立体声音频。它提供 GGUF 量化版本，可在 24GB 显存的消费级显卡上运行，也支持数据中心 GPU 的 INT8 版本。适合需要本地或云端生成带声音视频的开发者，以及使用 ComfyUI 的创作者。",
+ "tagline": "13.7B 少步数视频与音频联合生成模型"
+}

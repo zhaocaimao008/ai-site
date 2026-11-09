@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在本地做文本或图片分类、路由和打分的开发者，以及希望为 Agent 增加本地决策与工具调用校验的团队。",
+ "date": "2026-11-09",
+ "features": [
+  "一次请求内支持是非、多选、评分三类问题",
+  "为每个选项输出校准概率，便于按置信度分流",
+  "2B v4 支持图片输入和 32,768 token 长上下文",
+  "本地运行，无需 GPU 和 API key",
+  "提供 MCP server、Agent skills 和 Claude Code 工具调用守卫",
+  "兼容 systemone 请求格式，可接入现有客户端"
+ ],
+ "intro": "Jev-Style 是一组小型决策模型（0.8B 和 2B，基于 Qwen3.5 微调）及配套工具。输入文本或 JSON、可选图片和带类型的问题，模型一次前向计算即可为每个选项返回校准后的概率，无需 GPU、API key 或额外训练。\n\n支持三类问题：是非判断、最多 255 个选项的多选题、2 到 10 级的评分。2B v4 支持图片输入和最长 32,768 token 的上下文。项目提供本地 HTTP 服务、Playground、MCP server、Claude Code 工具调用守卫，以及用于评估自有标注数据的命令行工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "pip install -U \"jev-style[mlx]\"（Apple silicon）或 pip install -U \"jev-style[torch]\"（NVIDIA GPU、CPU 或图片输入）",
+  "运行 jev-style serve 启动本地服务，首次启动会下载 0.8B 权重",
+  "在另一个终端运行 jev-style decide \"I was charged twice\" --url http://127.0.0.1:8765 --choice \"Which team?::billing,shipping,returns\"",
+  "或在 Python 中调用 jev_style.classify(\"Where is my parcel? It was due Monday.\", [\"billing\", \"shipping\", \"tech\"])"
+ ],
+ "summary": "Jev-Style 提供可在本地运行的小型决策模型，把文本或图片连同带类型的问题一次性输入，直接得到每个选项的校准概率。它适合工单路由、工具或模型选择、主题打标、钓鱼识别、票据截图核验等场景，也可作为 Agent 的本地判断与工具调用校验组件，无需 GPU 和 API key。",
+ "tagline": "本地运行的小型决策模型，为每个选项输出校准概率"
+}

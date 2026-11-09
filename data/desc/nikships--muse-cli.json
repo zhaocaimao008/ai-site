@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望从终端或脚本中与 muse.ai 个人 AI 代理交互的开发者，以及想用编码代理自动化操作该服务的用户。",
+ "date": "2026-11-09",
+ "features": [
+  "在 shell 中发送消息并接收代理回复（JSON 格式）",
+  "所有命令输出 JSON，便于脚本化、管道和自动化",
+  "覆盖常用任务的命名命令，以及调用全部 402 个网关方法的 raw 命令",
+  "附带 agent skill，让编码代理可以操作 muse.ai 代理",
+  "支持管理 side chats、feed、goals、ideas 和 sessions"
+ ],
+ "intro": "muse-cli 是一个命令行客户端，让你无需打开浏览器就能与自己的 muse.ai 个人 AI 代理交互。它直接使用应用自身的网关协议：先通过 HTTPS 认证，再建立加密的 Noise-XX WebSocket 连接到你的个人 VM。\n\n所有命令都输出 JSON，方便通过管道传给 jq、cron 任务或其他 AI 代理。除了常用任务的命名命令外，还提供 raw 命令作为逃生舱，可调用全部 402 个网关方法。项目还附带一个 agent skill，让编码代理可以驱动你的 muse.ai 代理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "uv tool install muse-cli（或 pipx install muse-cli / pip install muse-cli）",
+  "在浏览器中登录 https://muse.ai/",
+  "运行 muse-cli auth export 导出登录 cookie",
+  "运行 muse-cli status 验证连接"
+ ],
+ "summary": "muse-cli 是一个命令行工具，用于在终端中与 muse.ai 个人 AI 代理对话并管理相关数据。它直接使用应用的网关协议，所有命令输出 JSON，方便脚本、cron 或其他 AI 代理调用。适合希望脱离浏览器、用命令行或自动化方式操作个人 AI 代理的开发者。",
+ "tagline": "在终端里与你的 muse.ai 个人 AI 代理对话"
+}

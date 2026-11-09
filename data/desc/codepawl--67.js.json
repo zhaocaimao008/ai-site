@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想用 AI agent 自动生成 3D 场景和视频的开发者，以及需要在网页中嵌入轻量 3D 渲染的 JavaScript 前端工程师。",
+ "date": "2026-11-09",
+ "features": [
+  "WebGL2 渲染器，场景由几何体、矩阵和材质组成的纯数据描述",
+  "内置 MCP server，AI agent 可搭建场景、查看 PNG 预览并渲染静帧或 MP4",
+  "按需引入的 addon：地形、植被、角色与 glTF、液体、车辆、物理、建模等",
+  "支持 GLB 资产导入、骨骼动画重定向与 IK 姿态层",
+  "提供 Claude Code 插件和面向 agent 的 llms.txt 指南"
+ ],
+ "intro": "67js 是一个基于 WebGL2 的 3D 渲染引擎，核心思路是把场景当作纯数据：每个部件由几何体、矩阵和材质组成，渲染器负责把它们画出来。它提供地形、植被、角色、液体、车辆和媒体导出等按需引入的 addon，目标是能力接近 Blender、体积接近 three.js。\n\n项目内置 MCP server，AI agent 可以连接一个常驻的浏览器渲染器，用 JSON recipe 搭建和修改场景、设置灯光与雾、导入 GLB 资产、添加运动，并拿回 PNG 预览图，还能提交渲染任务输出静帧或 MP4 视频。server 不接受任意代码和远程资产 URL。\n\n除了 agent 工作流，也可以直接在 JavaScript 里 import 渲染器，手动构造 parts 数组并调用 render 渲染，适合把 3D 画面嵌入网页。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装包：npm install 67js@npm:@codepawlhq/67js",
+  "在代码中从 '67js' 导入 Renderer67、box、sphere 等",
+  "构造 parts 数组，为每个部件指定 geometry、matrix 和 material",
+  "创建 new Renderer67(canvas, parts, { samples: 4, memoryBudgetMiB: 256 }) 并调用 renderer.render({ eye, target })",
+  "如需 agent 工作流，运行 npx 67js-mcp --backend gpu --memory 192 连接 MCP server"
+ ],
+ "summary": "67js 是一个 WebGL2 3D 渲染引擎，把场景抽象成几何体、矩阵和材质组成的纯数据，并提供地形、植被、角色、液体、车辆等可选 addon。它内置 MCP server，让 AI agent 能通过 JSON recipe 搭建场景、查看预览图并输出静帧或视频，适合用 agent 自动生成 3D 画面或在网页中嵌入轻量渲染的场景。",
+ "tagline": "让 AI agent 通过 MCP 驱动的 WebGL2 3D 渲染引擎"
+}
