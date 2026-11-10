@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合注重邮件隐私、希望用 AI 辅助处理邮件，并且愿意自行选择模型或编写扩展的开发者与普通用户。",
+ "date": "2026-11-10",
+ "features": [
+  "支持任意 IMAP/SMTP 账户，自动识别 Gmail、Outlook、iCloud、QQ 邮箱、飞书等常见服务商",
+  "内置 AI 助手 Wit，可回答问题、读取 PDF/Office/CSV 附件并起草回复",
+  "本地隐私脱敏：发往云端模型前识别并遮蔽密钥、证件号、电话、邮箱、姓名等信息",
+  "可接入 OpenAI 兼容或 Anthropic 兼容模型，包括 Ollama、LM Studio 等本地服务",
+  "通过 SKILL.md、TypeScript 插件、原生插件和 MCP 服务器扩展 AI 能力",
+  "提供 godwit mcp 命令，让 Claude、Cursor 等外部 MCP 应用读取邮件并创建草稿"
+ ],
+ "intro": "Godwit 是一款面向 macOS、Windows 和 Linux 的开源桌面邮件客户端，支持任意 IMAP/SMTP 账户，并内置名为 Wit 的 AI 助手，可读取、总结、翻译和起草邮件。所有发往云端模型的文本都会先在本地进行隐私脱敏，姓名、账号、电话、密钥等信息被替换为占位符，模型看不到原始内容。\n\nAI 功能通过统一的扩展点实现：在数据目录放入 SKILL.md 即可生成 Wit 技能或操作按钮；也支持 TypeScript 插件、原生插件和 MCP 服务器。用户可接入任意 OpenAI 兼容或 Anthropic 兼容服务，包括 Ollama、LM Studio 等本地模型，API 密钥保存在系统钥匙串中。\n\n邮件功能涵盖多账户同步、离线修改、会话视图、HTML 撰写、登录验证码识别、标签与本地规则、一键退订和全局搜索。Wit 只写草稿不发送，任何离开本机的操作都需要用户确认。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 godwit.email 下载对应平台安装包，或使用 Homebrew 安装：brew install godwit-email/tap/godwit",
+  "Linux 用户可执行：curl -fsSL https://dl.godwit.email/install.sh | sh",
+  "启动应用后添加 IMAP/SMTP 账户，多数常见邮箱会自动识别配置",
+  "在设置中选择 AI 模型服务并填入 API 密钥，密钥保存在系统钥匙串",
+  "如需让外部 MCP 应用访问邮件，开启 Local API 并复制客户端配置"
+ ],
+ "summary": "Godwit 是一个跨平台的开源桌面邮件客户端，支持任意 IMAP/SMTP 账户，并内置 AI 助手帮助总结、翻译和起草邮件。它针对隐私做了本地脱敏，在文本发往云端模型前遮蔽姓名、账号、电话等敏感信息。适合希望用 AI 处理邮件、又不想把原始内容交给模型服务的用户，也支持接入本地模型和自行编写扩展。",
+ "tagline": "开源 AI 原生桌面邮件客户端，数据本地脱敏"
+}

@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合研究多模态大模型视觉-语言连接机制的研究者，以及希望基于 LLaVA 复现或改进跨层融合方法的开发者。",
+ "date": "2026-11-10",
+ "features": [
+  "全连接跨层路由：每个 LLM 层动态选择所有 ViT 层的视觉特征",
+  "门控加权融合：根据当前隐藏状态生成路由分布并聚合候选特征",
+  "基于 LLaVA-1.5 的两阶段训练脚本（558K 预训练 + 665K 指令微调）",
+  "提供 DGP-7B 与 DGP-13B 预训练权重",
+  "包含 SEED、VizWiz 等基准的评测脚本",
+  "提供路由权重、CLIP 注意力与融合特征图的可视化文档"
+ ],
+ "intro": "DGP（Dynamic Gated Pathways）是 NeurIPS 2026 论文的官方实现，研究多模态大模型中视觉信息应如何接入语言模型的问题。主流做法通常把固定单层视觉特征注入 LLM，忽略不同 LLM 层对视觉粒度的需求差异。DGP 在每一 ViT 层与每一 LLM 层之间建立全连接，由 LLM 当前隐藏状态生成对 ViT 各层的路由分布，再经门控加权融合后以残差方式注入。\n\n项目基于 LLaVA-1.5 7B 与 13B 构建，提供训练、评测脚本和可视化工具，并发布 DGP-7B、DGP-13B 两个模型权重。训练沿用 LLaVA-1.5 两阶段流程，视觉塔冻结，训练 projector、动态门控路径与 LLM。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/YingyingYan1/DGP.git && cd DGP",
+  "conda env create -f environment-llava.yml && conda activate llava",
+  "pip install -e . && pip install -e \".[train]\"",
+  "按 LLaVA 官方流程准备 558K 预训练集与 665K 指令微调数据到 playground/data/",
+  "bash scripts/v1_5/pretrain.sh 与 bash scripts/v1_5/finetune.sh 进行两阶段训练",
+  "MODEL_PATH=Yingying11/DGP-7B bash scripts/v1_5/eval/seedbendi.sh 运行评测"
+ ],
+ "summary": "DGP 关注多模态大模型中视觉特征该接入语言模型哪一层的问题。它不再固定注入单层视觉表示，而是在每个 LLM 层根据当前语义状态，对所有 ViT 层特征做动态门控加权融合后注入。项目基于 LLaVA-1.5 提供训练、评测与可视化代码，并发布 7B、13B 权重，适合研究跨层视觉-语言连接机制的人员参考和复现。",
+ "tagline": "在 ViT 与 LLM 所有层间动态门控路由的多模态大模型方法"
+}

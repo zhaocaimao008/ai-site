@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 Apple Silicon Mac、希望借助 Agent 在本地完成英文视频中文译配的开发者或内容创作者。当前仅建议用于单说话人短样片试用。",
+ "date": "2026-11-10",
+ "features": [
+  "本地英文 ASR 与词时间戳，生成语义句用于翻译",
+  "支持本地 Ollama 或远程兼容接口进行中英翻译与语义审校",
+  "使用 MLX 本地 TTS 合成中文配音，可选预置声线或授权参考音色",
+  "生成中英共轴字幕，可烧录或作为独立字幕轨嵌入",
+  "提供 doctor、run、status、verify、revise、approve 等 CLI 命令管理任务",
+  "支持断点续跑和局部修复，按输入与合同复用已通过阶段"
+ ],
+ "intro": "Pivis Video Dubbing Agent Kit 是一个运行在 Apple Silicon Mac 上的本地视频译配管线，目标是把英文视频转成带中文配音和中英双语字幕的版本。它不内嵌 Agent，而是通过 AGENTS.md 等说明文件，让 Hermes、Codex 这类 Agent 按现成代码和明确指令操作整个流程。\n\n管线覆盖从视频提取音轨、英文 ASR 与词时间戳、语义分句、翻译与审校、TTS 合成、时长门禁、最终音频独立 ASR 校验，到共轴字幕和混音渲染的完整步骤。语音部分使用 MLX 本地模型，文本翻译可接本地 Ollama 或经授权的远程兼容接口。\n\n当前为预览版，仅支持单说话人英文源语音，公开 CLI 只记录了 11 秒单句样片的机器检查通过，尚未经过使用者听审批准，全片和多人场景均未验收。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并进入目录：git clone https://github.com/PivisYYY/pivis-video-dubbing-agent-kit.git && cd pivis-video-dubbing-agent-kit",
+  "运行环境检查：python3 -m dubkit doctor",
+  "阅读安装脚本并授权后执行：bash bootstrap.sh --accept-install",
+  "激活虚拟环境并再次检查：source .venv/bin/activate && python -m dubkit doctor",
+  "同意下载语音模型后拉取：python -m dubkit models fetch --accept-download",
+  "运行短样片：python -m dubkit run --input input.mp4 --job work/sample --llm-url http://localhost:11434/v1 --llm-model your-text-model --sample-seconds 20 --voice Vivian --burn-subtitles"
+ ],
+ "summary": "这是一个在 Apple Silicon Mac 上本地运行的英文视频转中文译配管线，通过 AGENTS.md 等说明让 Hermes、Codex 等 Agent 按现成代码操作。它覆盖语音识别、翻译审校、TTS 合成、字幕生成和混音渲染，适合想借助 Agent 在本地完成单说话人英文视频中文配音的开发者试用。当前为预览版，仅验证了短样片机器检查，全片和多人场景尚未验收。",
+ "tagline": "面向 Agent 的本地英文视频转中文译配工具包"
+}

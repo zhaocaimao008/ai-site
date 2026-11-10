@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要批量对同一上下文提出多个判断问题的开发者，以及部署 Jev 风格决策模型的服务端团队。",
+ "date": "2026-11-10",
+ "features": [
+  "精确状态分叉：同一状态分叉出多个问题，答案与单独推理一致",
+  "提供 `/v1/systemone` 决策推理 API，一次请求可包含多个问题",
+  "支持 Qwen3.5、Gemma 4 及多种 Jev 风格决策模型",
+  "支持图像输入的多模态模型",
+  "`flide verify` 可在自有模型和请求上校验精确分叉",
+  "基于 PyTorch，使用 CUDA、Triton 等加速"
+ ],
+ "intro": "Flide 是一个用 Python 编写的推理引擎，专门服务于 Jev 风格的决策模型。它的核心机制是「精确状态分叉」（exact state forking）：把同一段输入状态分叉成多个问题，每个问题在一次前向计算中给出答案，且答案与模型单独回答该问题时完全一致。README 称其速度最高可达 vLLM 和 SGLang 的 9.5 倍。\n\n项目通过 `/v1/systemone` 接口对外提供服务，支持 Qwen3.5、Gemma 4 等对话模型，以及 OneJev、Open-Jev、pplx-decider 等多个决策模型系列，部分模型还能读取图像。安装后可用 `flide serve` 启动服务，再用 HTTP 请求提交状态和问题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "uv venv -p 3.12 && source .venv/bin/activate",
+  "uv pip install flide torchvision",
+  "flide serve --model OmniJev/OneJev1.6-0.8B",
+  "curl http://localhost:8000/v1/systemone -H \"Content-Type: application/json\" -d '{...}'"
+ ],
+ "summary": "Flide 是一个面向 Jev 风格决策模型的推理引擎，解决的是同一段输入需要回答多个判断问题时反复推理、速度慢的问题。它通过精确状态分叉，让多个问题共享同一状态并在一次前向计算中作答，结果与单独提问一致。适合客服分诊、邮件分类等需要批量决策的场景，也支持 Qwen、Gemma 等对话模型。",
+ "tagline": "面向决策模型的高速推理引擎，支持精确状态分叉"
+}

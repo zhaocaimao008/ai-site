@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "想在对话中快速做出可玩小游戏的开发者与爱好者，以及需要给朋友或玩家分享 HTML5 小游戏的人。",
+ "date": "2026-11-10",
+ "features": [
+  "用一句话描述游戏，agent 基于 2D 或 3D voxel 模板生成可玩版本",
+  "侧边栏沙箱实时预览，改动即时重建",
+  "通过 OpenAI 图像 API 或 Codex CLI 生成 AI 美术候选，先确认费用",
+  "无头 Chrome/Edge 自动试玩，报告分数、帧率和脚本错误",
+  "版本历史可整体回滚代码、规则和美术",
+  "导出单文件离线 HTML，支持局域网分享与发布到 GitHub Pages"
+ ],
+ "intro": "DSH Game Studio 是 DeepSeek Harness 的插件。你用一句自然语言描述想要的游戏，agent 会基于 2D 俯视或 3D voxel（three.js）模板改写角色、规则、关卡和界面，生成后直接在对话右侧的沙箱面板里试玩，每次改动都会实时重建。\n\n角色默认由代码绘制，需要美术素材时可用 OpenAI 图像 API 或本地 Codex CLI 按槽位生成编号候选图，消耗前会先给出服务、张数和预估费用的确认卡片，选定后替换进游戏。项目还提供无头浏览器自动试玩、版本回滚、单文件离线导出，以及局域网或 Cloudflare Quick Tunnel 临时分享和发布到 GitHub Pages。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 DeepSeek Harness 中安装插件包 @zseven-w/dsh-game-studio",
+  "在对话中描述游戏，例如“一个 3D 游戏：小熊猫在竹林里收集竹笋并躲避野猪”",
+  "在右侧边栏试玩生成的游戏，按需继续提出修改",
+  "需要美术时调用 game_studio_generate_asset 生成候选图，按编号选择替换",
+  "用 game_studio_export 导出单文件 HTML，或用 game_studio_publish 发布到 GitHub Pages"
+ ],
+ "summary": "DSH Game Studio 是 DeepSeek Harness 的插件，把一句自然语言描述变成可玩的小游戏：agent 基于 2D 俯视或 3D voxel 模板改写角色、规则和关卡，游戏直接在对话侧边栏运行，改动即时生效。它还支持生成 AI 美术素材、自动试玩检查、版本回滚和导出单文件 HTML，适合想快速做原型或分享小游戏的人。",
+ "tagline": "一句话生成小游戏，在 DeepSeek Harness 侧边栏直接试玩"
+}

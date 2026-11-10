@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究具身 Agent、多机器人任务编排的开发者，以及想用编码 Agent 接入机器人执行服务的工程师。",
+ "date": "2026-11-10",
+ "features": [
+  "EEP over MCP：以 stdio MCP 工具暴露具身能力、引导、反馈与任务连续性",
+  "任务连续性：工作项与机器人绑定，支持暂停、恢复、重试、跳过和交接",
+  "共享准入安全联锁：拒绝已停止、标定失效、依赖未完成或有人闯入的请求",
+  "记忆与反思：执行记录反思进版本化长期记忆，可 diff 和回滚，策略权重不变",
+  "语义多机器人仿真器：建模七类失败机制，复现五类实验",
+  "内置 Claude Agent 与人在回路后端示例，便于试跑闭环"
+ ],
+ "intro": "OpenGenieMaster 是一个开源具身 Agent 框架，通过 EEP（具身执行协议）以 MCP 服务器形式，让 Claude Code、Codex 等编码 Agent 调用机器人能力、下发多模态引导、读取物理反馈并跨中断续接任务。整个过程不改动策略权重，执行经验会被反思进可版本化的长期记忆。\n\n项目核心用纯 Python 标准库实现，无需训练或分发模型权重。内置语义多机器人仿真器，显式建模价签遮挡、人员闯入、动作服务宕机等七类失败机制，并提供命令行工具运行演示和评测。\n\n该项目是社区对智元 GenieMaster 设计的独立复刻，协议线格式和默认值均为自定，不保证与官方实现兼容，且尚未在真机上验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/eust-w/opengeniemaster.git && cd opengeniemaster",
+  "pip install -e .",
+  "ogm demo --scenario restocking --rounds 3 --trials 6",
+  "claude mcp add opengeniemaster -- ogm mcp --scenario restocking --state-dir .ogm"
+ ],
+ "summary": "OpenGenieMaster 是一个开源具身 Agent 框架，让编码 Agent 通过 MCP 协议调用机器人能力、接收物理反馈并跨中断续接任务，执行经验会沉淀为长期记忆而不改动策略权重。它适合研究多机器人任务编排、想用 Claude Code 等 Agent 接入机器人执行服务的开发者，也提供仿真器用于回归测试。",
+ "tagline": "面向持续多机器人作业的开源具身 Agent Harness"
+}

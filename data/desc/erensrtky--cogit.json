@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code 等 AI 编码代理的开发者，尤其是同时管理多个项目、需要追溯代码决策原因的个人或团队。",
+ "date": "2026-11-10",
+ "features": [
+  "将每条消息记录为 thought commit，包含问题、结果、决策理由和被否决的选项",
+  "提供会话地图，以 git 图形式展示对话分支、决策和未完成事项",
+  "通过 `Thought:` trailer 将代码提交关联回思考记录，支持 `cogit show`、`cogit blame`、`cogit why` 追溯",
+  "会话结束时自动捕捉未完成任务，可接受、忽略或关闭",
+  "`cogit pr` 生成包含决策和否决选项的 PR 描述，可安装 GitHub Action 自动发布",
+  "团队可通过 git 共享记录，拉取后可在地图上看到队友的会话"
+ ],
+ "intro": "cogit 是一个面向 AI 编码代理的意图记录工具。它把用户发给 AI 代理的每条消息记录为一次“thought commit”，包含提问、结果、决策理由以及被否决的选项，并将代码提交通过 `Thought:` trailer 关联回对应的思考记录。这样，开发者可以用 `cogit why` 等命令追溯某行代码存在的原因。\n\n它目前以 Claude Code 插件形式运行，通过 hooks 在工作过程中自动记录，无需事后从 diff 重建。cogit 提供会话地图、任务捕捉、PR 描述生成等功能，并支持团队通过 git 共享记录。所有数据默认保存在本地，无需服务器或账号。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：`npm install -g @cogit/cli`",
+  "在 Claude Code 中安装插件：`/plugin install cogit --marketplace erensrtky/cogit`",
+  "进入项目目录并初始化：`cd your-project && cogit init`",
+  "像往常一样使用 Claude Code 工作，记录会自动进行",
+  "打开会话地图：`cogit open .`"
+ ],
+ "summary": "cogit 解决的是 AI 编码代理写代码后“为什么这么写”难以追溯的问题。它把用户与代理的每条消息记录为 thought commit，并将代码提交关联回对应的决策理由，支持用 `cogit why` 等命令回溯。适合同时使用多个 AI 代理、需要理解决策脉络或向团队解释变更原因的开发者。",
+ "tagline": "记录 AI 编码代理的决策意图，并关联到每次提交"
+}

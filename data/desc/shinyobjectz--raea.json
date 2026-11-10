@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用代码和 AI 代理快速制作视频、动态图形或简单游戏的开发者，尤其是熟悉 React 和 TypeScript 的前端开发者。",
+ "date": "2026-11-10",
+ "features": [
+  "用 React 组件描述合成，支持视频、动态图形、3D 和游戏",
+  "在本地 GPU 上渲染，支持硬件编码，速度可快于实时播放",
+  "提供代理技能，让 AI 代理能编写、渲染和检查 raea 作品",
+  "支持 3D 场景（Bevy 0.20）、物理、声音和游戏导出",
+  "内置质量检查命令，可检测文字裁剪、对比度、冻结和响度问题"
+ ],
+ "intro": "raea 是一个渲染引擎，让你用 React 和 TypeScript 编写视频、动态图形、3D 场景和游戏，并在自己的 GPU 上渲染。它基于 Rust 和 Bevy 构建，支持 macOS、Linux 和 Windows。\n\n项目强调与 AI 代理协作：安装时会向 Claude Code 等代理添加技能，让代理能够编写、渲染和检查 raea 作品。渲染结果保持为可查询的数据，代理可以渲染一帧、查看并修正问题。\n\nraea 目前处于 canary 阶段，变化频繁，可能存在破坏性变更和文档缺口。引擎免费且无需账户，许可证为 FSL-1.1-ALv2。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装脚本：curl -fsSL https://raea.io/install | sh（Windows 使用 irm https://raea.io/install.ps1 | iex）",
+  "创建一个 React 组件作为合成，使用 raea 提供的 AbsoluteFill、Composition 等组件",
+  "使用命令渲染视频：raea render hello.tsx -o hello.mp4",
+  "使用 raea play 实时播放，或使用 raea check 检查输出质量"
+ ],
+ "summary": "raea 是一个基于 Rust 和 Bevy 的渲染引擎，让你用 React 和 TypeScript 编写视频、动态图形、3D 场景和游戏，并在本地 GPU 上渲染。它特别适合与 AI 代理配合使用，代理可以编写代码、渲染帧并检查结果，从而自动完成创作和修正。适合熟悉前端技术、希望快速产出视觉内容的开发者。",
+ "tagline": "用 React 和 TypeScript 编写，在本地 GPU 上渲染视频、3D 和游戏"
+}

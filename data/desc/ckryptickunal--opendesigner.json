@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI 编程工具进行界面开发的开发者与设计师，尤其是希望保持产品视觉一致性的团队或个人。",
+ "date": "2026-11-10",
+ "features": [
+  "审计现有界面，标记对比度、点击目标、字体大小、对齐等问题并修复",
+  "根据仓库和竞品分析生成设计系统，输出 AI 可遵循的规则",
+  "生成 DESIGN.md、PRODUCT.md、设计令牌（DTCG）、CSS、Tailwind、Figma、Swift 和 Compose 导出",
+  "提供 82 个基于设计令牌的预制组件（可选）",
+  "记录每次设计决策的原因，并支持用户反馈转化为规则"
+ ],
+ "intro": "OpenDesigner 是一个免费开源的 AI 编程工具插件，支持 Claude、ChatGPT、Codex、Cursor 等。它通过几个简单问题生成设计系统，让 AI 构建的界面风格一致。\n\n它提供两种使用方式：一是审计现有页面，检查按钮、字体、颜色、对齐等问题并修复；二是根据仓库和竞品分析，提出定位和三个方向，生成 AI 可遵循的规则。\n\n项目输出包括 DESIGN.md、PRODUCT.md、设计令牌（DTCG）、CSS、Tailwind、Figma 等格式，以及品牌页面和决策日志。引擎为单个 Python 文件，无网络调用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code：运行 /plugin marketplace add ckryptickunal/OpenDesigner 和 /plugin install opendesigner@opendesigner",
+  "其他工具：克隆仓库后，将 .agents/skills/opendesigner* 复制到项目的 .agents/skills/ 目录",
+  "打开项目并说：“Create a design system for this project.”",
+  "回答几个简短问题，工具会先读取文件以减少提问"
+ ],
+ "summary": "OpenDesigner 是一个面向 AI 编程工具的开源插件，旨在解决 AI 生成界面风格不统一的问题。它通过简单问答生成设计系统，并审计现有页面中的按钮、字体、颜色、对齐等视觉问题，给出修复建议。适合使用 Claude、ChatGPT、Cursor 等工具进行界面开发的开发者，帮助保持产品视觉一致性。",
+ "tagline": "为 AI 编程工具提供设计系统，让产出风格统一"
+}

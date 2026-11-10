@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合做智能家居、室内感知、健康监测的开发者，以及希望用 ESP32 搭建无摄像头感知系统的硬件爱好者。",
+ "date": "2026-11-10",
+ "features": [
+  "基于 WiFi CSI 的存在检测、人数统计与进出追踪",
+  "非接触式呼吸率、心率监测与睡眠阶段分类",
+  "从 CSI 时序模式识别行走、坐姿、手势与跌倒",
+  "无摄像头估计 17 个身体关键点",
+  "内置 CSI 录制、模型训练与 LoRA 配置切换流程",
+  "通过 MQTT 或 Matter 接入 Home Assistant 等智能家居生态"
+ ],
+ "intro": "RuView 是一个基于 WiFi 信号的空间感知平台。它利用低成本 ESP32 传感器采集 Channel State Information（CSI），把人体活动、呼吸和心跳对无线电波造成的扰动转化为可用数据，从而在无摄像头、无穿戴设备的情况下检测人员存在、统计人数、追踪进出、识别活动与跌倒，并监测睡眠质量。项目还提供无摄像头的 17 个身体关键点姿态估计。\n\n除感知能力外，RuView 内置模型工作流，可录制 CSI、训练模型、加载 RVF 文件并切换 LoRA 配置；HOMECORE 提供本地自动化、历史记录、签名 Wasm 插件与语音接入。它可通过 MQTT 接入 Home Assistant，也能以 Matter Bridge 形式对接 Apple Home、Google Home、Alexa 等生态。README 同时说明，统一 RF 世界模型的精度在真实数据验证前仍基于合成数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读 docs/user-guide.md 了解整体使用流程",
+  "参考 firmware/esp32-csi-node/README.md 搭建 ESP32 CSI 传感器节点",
+  "从 Hugging Face 获取预训练模型（wifi-densepose-pretrained）",
+  "在 Home Assistant 中通过 --mqtt 参数接入 RuView"
+ ],
+ "summary": "RuView 把普通 WiFi 路由器发出的无线电波变成感知工具：人体移动、呼吸甚至静坐都会扰动信号，项目用 ESP32 采集 CSI 并分析这些变化，实现穿墙检测人员、监测呼吸心率、识别活动与跌倒，以及无摄像头的姿态估计。它适合智能家居、室内安防和健康监测场景，可接入 Home Assistant 等平台，也提供模型训练与本地自动化能力。",
+ "tagline": "用普通 WiFi 信号实现穿墙感知、生命体征监测与姿态估计"
+}

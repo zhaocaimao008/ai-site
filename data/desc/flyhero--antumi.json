@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在终端中使用 Claude Code、Codex 等 Agent CLI 的开发者，希望让多个 Agent 协作完成从 issue 到验收的完整流程。",
+ "date": "2026-11-10",
+ "features": [
+  "从 GitHub、Jira、Linear、禅道等来源导入 issue 作为任务，自动创建 worktree 和分支",
+  "支持多个 Agent 相互委派任务，可组成团队（队长、开发、评审）协作",
+  "内置浏览器和终端，Agent 可自行验证结果，你随时接管",
+  "额度管理：多账号自动切换，额度恢复后自动继续，支持预约发送",
+  "每个任务独立 worktree，代码互不干扰，验收后合并",
+  "支持 Claude Code、Codex、Cursor、OpenCode 等多种 Agent CLI"
+ ],
+ "intro": "Antumi 是一个本地桌面应用，用于驱动你已经登录的 Claude Code、Codex 等 Agent CLI。它不替换这些工具，也不要求重新登录，而是让多个 Agent 相互协作：一个实现，另一个审查，在内置浏览器中自己验证，最终由你合并结果。\n\n它支持从 GitHub、Jira 等来源导入 issue 作为任务，自动创建 worktree 和分支。Agent 先给出计划，你批准后才修改代码。多个 Agent 可以委派任务、组成团队，并行处理不同工作。额度用完时能自动切换账号或等待恢复，底部状态栏显示用量和恢复时间。\n\n所有数据保存在本地 ~/.antumi/，核心功能不依赖托管服务。适合已经在终端中使用 Agent CLI、希望提升协作和任务管理效率的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "到 Releases 页面下载对应平台的安装包（macOS Apple Silicon、Windows x64、Linux x64）",
+  "macOS 用户拖入应用程序后执行：xattr -dr com.apple.quarantine /Applications/Antumi.app",
+  "打开应用，侧栏「任务」点 +，选项目和 Agent，写一句要改什么，点「开始执行」",
+  "Agent 给出计划后批准，等待完成，在右侧检查器查看 diff 并验收合并"
+ ],
+ "summary": "Antumi 是一个本地桌面应用，让你已经登录的 Claude Code、Codex 等 Agent CLI 协同工作。它支持从 issue 导入任务、多 Agent 委派与团队协作、内置浏览器验证，并在额度用完时自动切换账号或等待恢复。适合希望提升多任务并行和协作效率的开发者。",
+ "tagline": "多 Agent 协作工作台，额度管理，并行开发"
+}

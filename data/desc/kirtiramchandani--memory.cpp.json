@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用编码 Agent 的开发者，以及关心 prompt 缓存复用、上下文安全与可审计性的团队。",
+ "date": "2026-11-10",
+ "features": [
+  "MemoryIR 类型化记忆块，记录来源、可信度、新鲜度、敏感性和缓存角色",
+  "稳定前缀与新鲜后缀分离，稳定前缀经 blake3 哈希，便于跨任务复用 prompt 缓存",
+  "负向记忆：把过期文档、错误修复和被取代的决策记为排除项",
+  "新鲜度证明：记忆绑定源文件、哈希、提交或测试，过期记忆在进入提示前被拒绝",
+  "可再取回句柄（如 mem://file/...#L10-L50），按需加载精确代码",
+  "来源账本与 lockfile，记录包含/排除内容、证明状态和哈希，支持复现与审计"
+ ],
+ "intro": "memory.cpp 是一个本地优先的预推理上下文编译器，用 Rust 编写。它把仓库历史中的决策、修复、测试、规则和此前的 Agent 工作整理成上下文包，在模型收到请求之前就完成筛选：哪些内容进入稳定的可缓存前缀，哪些属于随任务变化的新鲜后缀，哪些必须排除，哪些只保留可再取回的句柄。\n\n项目把上下文管理当作编译问题而非检索问题。每个记忆块带有来源锚点、可信度、新鲜度、敏感性和 token 成本等属性，过期文档、错误修复和被取代的决策会被记为排除项。编译结果包含缓存清单、blake3 前缀哈希和来源账本，可生成可复现的 lockfile。\n\n项目自带 CAMC-Bench 基准，用合成语料对比原始上下文、grep、BM25、embedding 检索与不同消融配置下的 token 数、可缓存前缀、陈旧内容泄漏和任务成功率。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "构建 CLI：cargo build -p memory-cli",
+  "写入持久事实：memory remember \"Billing exports must be deterministic\" --tags invariant",
+  "编译上下文包：memory compile \"fix the billing export bug\" --provider anthropic --budget 1500",
+  "查看缓存清单：memory cache-manifest \"fix the billing export bug\" --provider anthropic",
+  "生成可复现 lockfile：memory lock \"fix the billing export bug\""
+ ],
+ "summary": "memory.cpp 面向长时间运行的编码 Agent，解决重复发送仓库事实、陈旧文档混入上下文以及 prompt 缓存难以复用的问题。它在请求进入模型前编译上下文，把稳定知识与任务状态分开，过滤过期、矛盾和敏感内容，并留下可审计的记录。适合希望减少无效 token、提升缓存命中并控制记忆风险的开发者。",
+ "tagline": "为编码 Agent 编译可缓存、可审计的仓库记忆"
+}

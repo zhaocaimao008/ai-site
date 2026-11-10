@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code 或 Codex 等 AI 编码代理的开发团队，尤其是希望代理遵循团队既有决策和约定的场景。",
+ "date": "2026-11-10",
+ "features": [
+  "将 Confluence、Jira、GitHub 等团队来源同步并提取为带引用的短记忆",
+  "源文档变化时自动重新检查记忆，保留、替换或淘汰过时事实并标记冲突",
+  "代理通过 MCP 按关键词或语义搜索记忆，结果不携带全文以节省上下文",
+  "每条记忆引用原始段落，并可链接到原页面、工单或文件",
+  "提供 Claude Code 和 Codex 插件，安装后即可在会话中检索团队记忆"
+ ],
+ "intro": "MemForge 是一个面向 AI 编码代理的记忆层。它从团队的文档、工单和聊天记录中同步信息，用模型提取成带引用来源的短记忆，让 Claude Code、Codex 等代理在写代码前先检索团队已有的决策和约定，而不是只看到本地代码。\n\n每次源内容变化时，MemForge 会重新检查相关记忆，保留、替换或淘汰过时事实，并标记冲突。代理通过 MCP 按关键词或语义搜索记忆，结果不携带全文，只有需要时才打开原始来源。\n\n开源版为单用户本地运行，使用自己的模型密钥，支持 Confluence、Jira、GitHub 等来源。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并启动：git clone https://github.com/dodo-labs-ai/mem-forge.git && cd mem-forge && cp .env.example .env && docker compose up --build",
+  "打开 http://localhost:5174 的管理界面，在 Settings 中选择生成模型和可选的嵌入模型并保存验证",
+  "在 Sources 中添加来源（如 Confluence 空间或 GitHub 仓库）并运行同步，可开启自动同步",
+  "安装代理插件：Claude Code 中执行 /plugin marketplace add dodo-labs-ai/mem-forge 和 /plugin install memory@memforge；Codex 中执行 codex plugin marketplace add dodo-labs-ai/mem-forge 和 codex plugin add memory@memforge",
+  "在新代理会话中提问，例如：Before you change this, check MemForge for decisions and conventions that apply, and show the source for each one you rely on."
+ ],
+ "summary": "MemForge 解决的是 AI 编码代理只了解本地代码、不了解团队背景知识的问题。它把团队的文档、工单和聊天记录同步并提取成带引用来源的记忆，让代理在动手前先检索团队已有的决策和约定。适合使用 Claude Code 或 Codex 的团队，在需要代理遵循既有规范、避免重复踩坑时使用。",
+ "tagline": "为 AI 编码代理提供团队知识记忆层"
+}

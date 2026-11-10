@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望网页翻译不经过第三方服务器的普通用户，以及想了解本地 LLM 浏览器扩展实现的开发者。",
+ "date": "2026-11-10",
+ "features": [
+  "使用本地 PLaMo 模型在设备上翻译网页，不上传页面文本",
+  "支持整页翻译、选中文本翻译和输入框草稿翻译",
+  "可在替换原文与双语对照之间切换",
+  "提供快捷键操作，并可在浏览器中自定义按键",
+  "PLaMo 支持 53 种语言双向翻译，界面提供 14 种语言",
+  "Chrome 上对 PLaMo 不支持的语言对回退到内置 Translator API"
+ ],
+ "intro": "Sakutto 是一个面向 Chrome 和 Firefox 的非官方浏览器扩展，用本地运行的 PLaMo 3 Translate 模型在设备上翻译网页，不需要把页面文本发送到服务器。它通过固定版本的 wllama 构建加载模型，每一行译文都由 PLaMo 生成；模型尚未就绪时页面保留原文，不会用其他引擎的草稿顶替。\n\n在 Chrome 上，PLaMo 不支持的少数语言对会交给 Chrome 内置的 Translator API 处理，Firefox 则只使用 PLaMo。扩展免费开源，无广告和付费功能，模型权重不包含在仓库或扩展包中，首次使用需要从 Hugging Face 下载。\n\n除了整页翻译，它还支持翻译选中文本、输入框中的草稿，以及在一个独立页面中粘贴文本翻译，并提供替换原文与双语对照两种显示模式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Chrome Web Store 安装扩展，或按 README 自行构建",
+  "自行构建时安装 Node.js 24 和 pnpm 12，克隆仓库后运行 pnpm install",
+  "运行 pnpm build:wllama 和 pnpm verify:wllama 构建并校验翻译运行时",
+  "运行 pnpm build 生成 Chrome 版本，在 chrome://extensions 开启开发者模式并加载 .output/chrome-mv3",
+  "Firefox 153 及以上可在 about:debugging 中临时加载 .output/firefox-mv3/manifest.json"
+ ],
+ "summary": "Sakutto 把网页翻译放到浏览器本地完成：它用 PLaMo 3 Translate 模型在设备上生成译文，页面文本、选中内容和词汇表都不会发往翻译服务器，也不需要账号。适合在意隐私、想离线或低成本翻译网页的用户，也适合研究本地 LLM 如何集成进浏览器扩展的开发者。Chrome 上少数 PLaMo 不支持的语言对会改用浏览器内置翻译。",
+ "tagline": "在浏览器本地用 PLaMo 模型翻译网页的扩展"
+}

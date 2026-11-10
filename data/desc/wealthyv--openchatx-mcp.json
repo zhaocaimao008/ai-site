@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望让 ChatGPT 直接操作本地电脑、调用本地工具或整合多个 MCP 服务器的开发者与进阶用户。",
+ "date": "2026-11-10",
+ "features": [
+  "通过官方 Secure MCP Tunnel 将 ChatGPT 连接到本地运行时，无需公网入站端口",
+  "提供文件与 shell 工具、电脑控制等编码级本地操作能力",
+  "聚合本地或远程 MCP 服务器，支持 OAuth 登录和按工具启用/禁用",
+  "支持 Skills、Rules、Projects、Tasks、Subagents 和跨会话摘要等工作流",
+  "Toolboxes 可添加和管理自定义 TypeScript 工具",
+  "桌面应用管理本地运行时和内置 tunnel-client，API key 存入系统凭据库"
+ ],
+ "intro": "OpenChatX 是一个本地 agent 运行时平台，通过 OpenAI 官方的 Secure MCP Tunnel 将 ChatGPT 连接到你的电脑。它不逆向 ChatGPT 接口，而是运行一个本地 MCP 服务器，由官方 tunnel-client 建立出站连接，ChatGPT 作为自定义 MCP 应用调用本地工具。\n\n项目提供编码级的文件与 shell 工具、电脑控制、MCP 服务器聚合、Skills、Rules、Projects、Tasks、Subagents 和跨会话摘要等功能。所有能力通过一个 MCP 连接暴露给 ChatGPT，并用 Toolboxes 自定义 agent 的工作方式。\n\nOpenChatX 以桌面应用形式分发，支持 macOS 和 Windows，安装后只需在 OpenAI 平台创建隧道和 API key 即可连接。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的桌面应用（macOS 选 DMG，Windows 选 Setup EXE）并安装",
+  "在 OpenAI Platform 的 Tunnels 页面创建隧道，复制 tunnel_... ID",
+  "在 OpenAI Platform 的 API Keys 页面创建 Runtime API key 并保存",
+  "打开 OpenChatX Desktop，进入 More → Connect Tunnel…，填入 Tunnel ID 和 Control-plane API key",
+  "在 ChatGPT 中创建 MCP app，选择刚创建的隧道，认证方式设为 No authentication，接受风险声明后完成创建"
+ ],
+ "summary": "OpenChatX 解决的是让 ChatGPT 安全地操控本地电脑和工具的问题。它通过 OpenAI 官方 MCP 隧道，把本地运行的 MCP 服务器暴露给 ChatGPT，使 ChatGPT 能调用文件、shell、电脑控制以及聚合的 MCP 服务器等能力。适合想让 ChatGPT 直接操作本地环境、整合多个 MCP 工具或搭建自定义 agent 工作流的开发者和进阶用户。",
+ "tagline": "通过官方 MCP 连接，让 ChatGPT 操控本地电脑与工具。"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "使用 DeepSeek Harness 并希望以自然语言进行安全评估与漏洞排查的开发者与安全人员。",
+ "date": "2026-11-10",
+ "features": [
+  "提示词注入开关与自定义提示词配置",
+  "按需下载并启用 REA、AboutSecurity 技能库",
+  "内置九类 CVE/PoC 知识库，支持指纹匹配",
+  "渗透作业链管理任务、资产、阶段与后续建议",
+  "漏洞报告按严重等级持久化保存"
+ ],
+ "intro": "富江破甲是一个面向 DeepSeek Harness 的插件，通过安装 @deepseek-ai/dsh-prompt-custom 并注入自定义提示词，让用户用大白话直接提问。插件在输入框附近提供状态开关和设置面板，可启用或关闭提示词注入。\n\n插件附带技能库、CVE/PoC 知识库和渗透作业链。技能库可按需下载 REA 逆向分析工具与 AboutSecurity 安全评估技能库；知识库按 Java 反序列化、边界设备、Exchange 与域环境等九类组织条目；作业链按信息收集到报告输出的阶段管理任务、资产和验证步骤。\n\n项目声明当前版本已核对文件结构与安装逻辑，但未重新完成全部功能的实际运行验证，使用前需阅读免责声明。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "启动一次官方 DeepSeek Harness Desktop，完成 desktop 配置初始化",
+  "完全退出 Harness，包括托盘图标中的退出",
+  "双击解压目录中的 点我执行脚本.cmd 执行安装",
+  "安装完成后自行重新打开 Harness"
+ ],
+ "summary": "富江破甲是 DeepSeek Harness 的插件，安装后可在对话中注入自定义提示词，让用户用大白话直接提问。它附带可下载的技能库、按类别整理的 CVE/PoC 知识库，以及按阶段管理任务与资产的渗透作业链，适合在 Harness 中进行安全评估和漏洞排查的场景。",
+ "tagline": "DeepSeek Harness 的提示词注入与安全评估插件"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 AMD Strix Halo 硬件、希望在本地运行大模型并关注长上下文推理性能的开发者与高级用户。",
+ "date": "2026-11-10",
+ "features": [
+  "OpenAI 兼容服务器，支持流式聊天补全、工具调用、推理、结构化输出和 logit_bias",
+  "支持在聊天请求中传入 PNG、JPEG、WebP、GIF、BMP 和 TGA 图像",
+  "多 token 预测，使用模型自带的 draft head，每步最多校验 7 个 token",
+  "支持为推理设置预算，并在模型思考陷入循环时进行干预",
+  "内存和磁盘提示缓存，长对话可恢复，编辑旧消息只需重算后续部分",
+  "默认支持两个并发对话，解码步骤共享一次前向计算，槽位内存随对话增长"
+ ],
+ "intro": "strixite 是一个用 HIP 从零编写的 LLM 推理引擎，专门针对 AMD Strix Halo（gfx1151）这一款芯片和 Qwen3.8-Flash-Next 这一个模型进行优化。它不依赖 llama.cpp、ggml 或厂商库，所有 kernel 均为手写，并与基于模型规格的 CPU 参考实现进行比对。\n\n项目目标是在单台迷你主机上运行约 180B 参数的 MoE 模型，支持 512k 上下文，并在真实 agent 编码会话中保持约 52-56 tokens/s 的解码速度，且该速度不随上下文增长而明显下降。模型权重以 4/8-bit 量化形式占用约 66 GiB 统一内存。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "调整内核参数让 GPU 使用更多内存：amdgpu.gttsize=126976 ttm.pages_limit=32505856 amd_iommu=off，然后重启",
+  "安装 TheRock ROCm for gfx1151（测试版本 10.1.0）以及 CMake 3.28+、Ninja 和 GCC C++ 标准库",
+  "克隆仓库并构建：git clone https://github.com/shawnshekari/strixite && cd strixite && cmake --preset strix && cmake --build --preset strix",
+  "若 TheRock 不在默认路径，在 cmake 命令中添加 -DSTRIX_ROCM_ROOT=/path/to/install"
+ ],
+ "summary": "strixite 是一个专为 AMD Strix Halo 迷你主机从零编写的 LLM 推理引擎，目标是在单机统一内存上运行约 180B 参数的 Qwen3.8-Flash-Next 模型，并支持 512k 长上下文。它适合需要在本地进行长对话 agent 编码、又不想依赖 llama.cpp 等通用框架的开发者，提供 OpenAI 兼容接口、图像输入和提示缓存等能力。",
+ "tagline": "为 AMD Strix Halo 从零编写的 LLM 推理引擎"
+}

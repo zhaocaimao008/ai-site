@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望自托管个人财务数据、愿意在自有机器或服务器上运行应用，并希望 AI 代理直接操作账本和投资的开发者或技术用户。不适合需要开箱即用消费级产品、多用户家庭账户或移动应用的用户。",
+ "date": "2026-11-10",
+ "features": [
+  "多币种账本：管理银行、信用卡、贷款、投资等账户，支持转账、拆分、对账和账单导入",
+  "预算管理：零基预算信封或 50/30/20 分配，并提供现金流预测",
+  "投资追踪：持仓、买卖、股息、期权、RSU 等，支持自选列表和价格提醒",
+  "AI 代理 Lucius：通过真实工具记录交易、对账、生成报告，可设置自动执行或需审批",
+  "自动化任务：按计划或事件触发每日简报、周报、银行同步等",
+  "连接器与 MCP：支持 SimpleFIN、Plaid、Alpaca、Interactive Brokers、YNAB、邮箱、Telegram 等"
+ ],
+ "intro": "Open Net Worth 是一个自托管的个人财务 AI 代理工具。它内置多币种账本、预算和投资管理功能，AI 助手 Lucius 可以通过真实工具读取和修改这些数据，而不仅仅是描述数据。所有操作都经过权限控制，默认需要用户确认。\n\n项目强调数据留在用户自己的机器上，除显式配置的 AI 提供商、价格源等外部调用外，没有遥测。支持连接银行、券商、YNAB、邮箱、Telegram 等外部服务，也支持 MCP 协议扩展能力。用户可以使用自己的 Claude Code、Codex 订阅、API key 或本地模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载桌面应用（推荐）：从 opennetworth.ai 或 releases 页面获取 macOS、Windows 或 Linux 版本",
+  "macOS 终端安装：curl -fsSL https://opennetworth.ai/install.sh | sh",
+  "Windows PowerShell 安装：irm https://opennetworth.ai/install.ps1 | iex",
+  "从源码运行服务器：需要 Python 3.12+ 和 Node.js 22+",
+  "首次运行配置 AI 模型：API key、Claude Code/Codex 登录或本地 Ollama 模型"
+ ],
+ "summary": "Open Net Worth 是一个自托管的个人财务 AI 代理，解决普通记账应用里 AI 只能看不能改的问题。它把多币种账本、预算和投资组合作为基础，让 AI 助手通过真实工具直接记录交易、对账、生成报告，甚至按权限执行交易。适合希望数据留在自己机器上、愿意自行部署，并想让 AI 实际处理财务事务的技术用户。",
+ "tagline": "自托管的个人财务 AI 代理，能直接操作账本和投资"
+}

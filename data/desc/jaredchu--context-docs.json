@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Codex 或 Claude Code 进行开发、希望跨会话保留项目上下文的开发者。",
+ "date": "2026-11-10",
+ "features": [
+  "保存决策及其原因、当前工作、阻塞项和下一步",
+  "更新过时内容、合并重复信息，区分事实与提议",
+  "利用项目现有文档，并让上下文可从 README 或文档索引发现",
+  "在 Markdown 中展示目标、进展、阻塞和下一步",
+  "支持 Codex 和 Claude Code 两种编码代理"
+ ],
+ "intro": "Context Docs 提供可复用的 agent skills，用于在 Codex 和 Claude Code 中管理项目上下文。它把决策及其原因、当前工作、阻塞项和下一步保存为可读的 Markdown 文件，让新的 AI 会话能接着之前的工作继续。\n\n项目面向没有现成上下文管理流程的人，尽量利用项目已有文档，减少手动整理。安装后，通过 adoption skill 将维护规则加入项目指令，之后 agent 会在日常工作中自动更新上下文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Codex 中：使用 $skill-installer 从 jaredchu/context-docs 的 v0.2.7 标签安装 skills/context-docs 和 skills/adopt-context-docs 到 ~/.agents/skills/。",
+  "在 Claude Code 中：运行 git clone --branch v0.2.7 https://github.com/jaredchu/context-docs.git && cd context-docs && mkdir -p ~/.claude/skills && cp -r skills/context-docs skills/adopt-context-docs ~/.claude/skills/",
+  "在项目中调用 adoption skill：Codex 用 $adopt-context-docs，Claude Code 用 /adopt-context-docs。",
+  "正常工作后，可要求 agent 更新上下文：Update this project's context from the work we just completed.",
+  "新会话开始时，要求 agent 读取上下文入口及相关文档以继续任务。"
+ ],
+ "summary": "Context Docs 是一组用于 Codex 和 Claude Code 的 agent skills，解决 AI 编码会话之间项目上下文丢失的问题。它把决策、当前工作和下一步保存为 Markdown，让新会话能接着之前的工作继续。适合希望减少重复沟通、保持项目知识连贯的开发者。",
+ "tagline": "为 AI 编码会话保留项目上下文与决策"
+}
