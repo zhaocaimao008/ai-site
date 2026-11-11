@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude、Cursor、VS Code 等 AI 客户端，并需要查询 Yandex Metrika 流量数据的分析师、SEO 人员和开发者。",
+ "date": "2026-11-11",
+ "features": [
+  "通过浏览器登录 Yandex Metrika，无需手动配置 token 或 OAuth 应用",
+  "支持单周期报告、双周期对比和按日/周/月的时间序列分析",
+  "报告附带精确日期、时区、采样状态和过滤条件，数据可核验",
+  "后台导出完整 CSV/JSON，支持校验和、清单和断点续传",
+  "多账户与多客户端连接相互隔离，token 存入系统凭据库",
+  "提供 13 个工具和 3 个提示词，覆盖状态、连接、报告、导出等操作"
+ ],
+ "intro": "这是一个只读的 MCP（Model Context Protocol）服务器，把 Yandex Metrika（Яндекс Метрика）的流量分析数据接入 Claude、Cursor、VS Code、Codex 等支持 MCP 的 AI 客户端。安装后，你可以直接用自然语言询问访问量、来源、着陆页和目标完成情况，助手会调用对应工具返回报告。\n\n项目强调数据可核验：每个回答都附带精确日期、计数器时区、采样状态、过滤条件和数据来源，默认使用完整自然日，严格模式下会拒绝采样数据而不是将其当作精确值。它提供 13 个工具和 3 个提示词，支持多账户隔离、周期对比、时间序列以及带校验和与断点续传的后台 CSV/JSON 导出。\n\n认证通过浏览器完成，无需手动粘贴 token 或自建 OAuth 应用；token 存储在操作系统凭据库中，不会进入聊天内容。项目还提供合成演示连接，无需真实账户即可试用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js 22.13 或更高版本",
+  "运行 npx -y @dev-crabs/yandex-metrika-mcp setup --client claude-desktop（或 claude-code、cursor、vscode、windsurf、codex）写入客户端配置",
+  "重启客户端，对助手说“Connect Yandex Metrika and compare the last two weeks by traffic source.”",
+  "助手会调用 metrika_connect 并给出本地登录链接，在浏览器中完成 Yandex 登录",
+  "没有账户时可使用内置的合成连接 conn_demo 试用"
+ ],
+ "summary": "这个项目把 Yandex Metrika 的流量数据以只读方式接入支持 MCP 的 AI 客户端，让用户用自然语言查询访问量、来源、着陆页和目标转化。它适合需要快速获取网站分析报告、又希望数据可核验的场景，报告会附带日期、时区、采样状态等上下文，并支持周期对比、时间序列和完整导出。",
+ "tagline": "只读的 Yandex Metrika MCP 服务器，让 AI 助手查流量数据"
+}

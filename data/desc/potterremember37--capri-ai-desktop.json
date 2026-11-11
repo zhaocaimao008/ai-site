@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Windows 桌面上拥有一个可语音交互、能执行桌面操作且可自定义外观的 AI 助手的用户，尤其是对赛博朋克风格和本地模型感兴趣的开发者。",
+ "date": "2026-11-11",
+ "features": [
+  "支持文字与语音对话，可开启“Hey Capri”唤醒词，用 80 种语言回答",
+  "接入 Claude 3.7、Claude Code、OpenAI 及本地 Ollama/LLaMA 等多种模型",
+  "可执行桌面操作，如打开应用、播放音乐、关闭标签页，并可用 Esc 停止",
+  "语音通话模式（Beta），能加入 Discord、Zoom 等通话应用并转达消息",
+  "支持安装 Mod 更换外观、调整设置或运行代码扩展功能",
+  "记住过往对话和屏幕内容，数据保存在本地"
+ ],
+ "intro": "Capri 是一款面向 Windows 桌面的 AI 助手，外观与交互带有赛博朋克风格。它支持接入 Claude 3.7、Claude Code、OpenAI 以及本地运行的 Ollama/LLaMA 等模型，用户可以通过文字或语音与它对话，并让它执行打开应用、播放音乐、关闭标签页等桌面操作。\n\n除了基础助手功能，Capri 还提供语音通话模式，可加入 Discord、Zoom 等通话应用并转达消息；支持安装 Mod 来更换外观、调整设置或扩展代码能力；能记住过往对话和屏幕内容，并显示一个迷你音乐播放器。项目目前主要面向 Windows 10 及以上系统，macOS 和 Linux 版本在路线图中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 Windows 版本（Portable 便携版或安装包）",
+  "运行 Capri-Setup.exe 按向导安装，或直接运行便携版",
+  "若出现 SmartScreen 警告，点击“更多信息”→“仍要运行”",
+  "启动 Capri，在设置中配置模型（如 Claude、OpenAI 或本地 Ollama）后开始对话"
+ ],
+ "summary": "Capri 是一个 Windows 桌面 AI 助手，外观走赛博朋克风格。它支持接入 Claude、OpenAI 和本地 Ollama 等模型，用户可以用文字或语音与它交流，并让它打开应用、播放音乐、操作桌面。它还提供语音通话模式，能加入 Discord 等通话应用转达消息，并可通过 Mod 更换外观或扩展功能。适合想要一个可语音交互、能动手操作电脑且可自定义的桌面助手的用户。",
+ "tagline": "赛博朋克风格的桌面 AI 助手，支持语音与多种模型"
+}

@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Cursor 等 AI 编程助手的前端开发者与设计师，用于寻找网页设计参考或复刻现有站点。",
+ "date": "2026-11-11",
+ "features": [
+  "自然语言搜索 Awwwards 获奖网站，结果内联真实截图",
+  "提取单个站点的设计 DNA：配色、技术栈、元素、奖项",
+  "对比多个站点的设计 DNA 与评审分数",
+  "对任意 URL 做区块拆解、动效普查和框架识别",
+  "根据分析结果逐区块复刻页面并生成 Vite/Astro/Next.js 项目",
+  "verify_build 对构建结果做区块与动效评分"
+ ],
+ "intro": "awwwards-mcp 是一个免费开源的 MCP 服务器，把 Awwwards 获奖网站的设计素材接入 AI 编程助手。它让 Claude Code、Codex、Cursor 等 agent 用自然语言搜索站点（如“dark 3D portfolio sites”），直接看到真实截图，并提取配色、技术栈、设计元素和获奖记录等“设计 DNA”。\n\n除了检索，它还能对任意 URL 做页面结构分析：按区块拆解页面、统计滚动与悬停动效、识别框架、截取 canvas 姿态，并据此逐区块复刻页面，生成可运行的 Vite、Astro 或 Next.js 项目。最后可用 verify_build 对构建结果与原站做区块和动效评分。\n\n项目基于 TypeScript 实现，无需 API key，通过 npm 包分发。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "awwwards-mcp 是一个 MCP 服务器，把 Awwwards 获奖网站的设计素材接入 AI 编程助手。它支持自然语言搜索站点并查看截图、提取配色与技术栈等设计信息，还能分析任意网页的结构和动效，据此逐区块复刻并生成可运行的前端项目。适合需要设计参考或复刻网页的开发者与设计师。",
+ "tagline": "为 AI 编程助手提供获奖网站设计参考的 MCP 服务器"
+}

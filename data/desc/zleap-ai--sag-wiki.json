@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本机管理文档并快速检索、需要给 AI agent 提供可溯源知识库的开发者和普通用户。",
+ "date": "2026-11-11",
+ "features": [
+  "添加本地文件夹即可建立索引，无需单独安装数据库",
+  "SAG2 检索定位跨文档证据段落，答案可回溯原文",
+  "桌面端支持搜索、引用问答、Markdown 编辑和文档关系浏览",
+  "提供 CLI 与可安装的 Skill，方便 coding agent 访问同一知识库",
+  "PDF、Office、EPUB 开箱转换，图片识别与音视频转写为可选组件"
+ ],
+ "intro": "SAG-Wiki 是一个面向个人和 AI agent 的轻量知识库工具，用 Rust 编写，提供 macOS 和 Windows 桌面应用。它把本地文件夹中的文档、笔记和代码建立索引，无需调用 LLM 或生成 embedding，即可进行全文搜索和跨文件问答，并支持打开答案对应的原文位置。\n\n项目采用自研的 SAG2 检索方法，通过 Jev 证据评分和查询时扩展来定位支撑段落；只有在你选择生成答案时才调用大模型。除 Markdown、HTML 外，PDF、Office、EPUB 可转换后索引，图片识别和音视频转写为可选组件。\n\nSAG-Wiki 本体免费开源，原始文件保留在本机；深度检索和问答会把所需的问题、文档片段或上下文发送到你配置的外部服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 macOS DMG 或 Windows 安装包并安装",
+  "打开 SAG-Wiki，在侧边栏切换到 Folders，点击 + 添加要搜索的文件夹",
+  "索引完成后在 Search 中查找段落并预览原文",
+  "如需深度语义检索，在 Settings → Models 配置 Jev 服务；本地服务可选 Custom 并填写 base URL",
+  "CLI 用户可运行 sag config --url http://127.0.0.1:8000/v1 --model YOUR_MODEL --auth none"
+ ],
+ "summary": "SAG-Wiki 是一个本地优先的轻量知识库，解决文档分散、检索结果难以溯源的问题。它直接索引本地文件夹，不依赖 LLM 或 embedding 建索引，用自研 SAG2 方法跨文件定位证据段落，并支持带引用的问答。适合需要快速搜索个人文档、笔记和代码，或想给 AI agent 提供可查原文知识库的场景。",
+ "tagline": "轻量本地知识库，快速索引、可溯源检索"
+}

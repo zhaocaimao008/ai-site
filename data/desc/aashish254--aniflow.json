@@ -1,0 +1,26 @@
+{
+ "ai_related": true,
+ "audience": "适合想要自动化制作漫画解说视频的内容创作者，以及熟悉 Python 环境配置、对 AI 图像处理和语音合成感兴趣的开发者。",
+ "date": "2026-11-11",
+ "features": [
+  "从 manhuaus、manhwatop、MangaDex 等网站下载漫画章节",
+  "使用自定义训练的 YOLO 模型检测面板和对话气泡",
+  "自动移除画面中的对话气泡文本，保持画面干净",
+  "支持本地（Ollama）或云端（Gemini/Claude）AI 生成旁白",
+  "集成 Edge TTS、Kokoro 和 ElevenLabs 多种语音合成方案",
+  "视频渲染支持 Ken Burns 动画、模糊背景、背景音乐和水印",
+  "角色配音功能：可从 MyAnimeList 导入或从章节中扫描人脸",
+  "批量模式：可无人值守处理数十个章节"
+ ],
+ "intro": "AniFlow 是一个基于 Python 的自动化视频生成工具，专门用于将韩漫（manhwa）和网络漫画（webtoon）章节转换为带旁白解说的回顾视频。它通过浏览器界面操作，整合了从下载、图像处理到语音合成和视频渲染的完整流程。\n\n项目提供两种处理模式：对话回顾模式保留原始对话气泡，直接提取对话文本转为语音；旁白回顾模式则使用 AI 生成解说词，并自动移除画面中的对话气泡，适合制作 YouTube 风格的剧情解说视频。\n\n整个流程依赖 YOLO 模型进行面板和气泡检测，支持本地 Ollama 或云端 Gemini/Claude 进行文本生成，并提供多种 TTS 引擎选择。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/aashish254/Aniflow.git",
+  "进入目录并运行安装脚本：cd AniFlow && chmod +x setup.sh && ./setup.sh",
+  "或手动创建虚拟环境并安装依赖：python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+  "拉取 Ollama 模型（可选）：ollama pull qwen2.5vl:3b && ollama pull qwen2.5:14b",
+  "启动应用：python app.py，然后在浏览器打开 http://localhost:8080"
+ ],
+ "summary": "AniFlow 是一个自动化工具，能将韩漫和网络漫画章节转换为带旁白解说的视频。它整合了章节下载、YOLO 面板与气泡检测、AI 旁白生成、多引擎语音合成和视频渲染，通过浏览器界面操作。适合需要批量制作漫画解说视频的内容创作者，也适合想了解 AI 图像处理与语音合成流程的开发者。",
+ "tagline": "将韩漫与网络漫画章节自动转为旁白解说视频"
+}

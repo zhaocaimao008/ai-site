@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望一套代码覆盖 Web 与 Apple/Linux 原生应用、并让 AI coding agent 参与开发和测试的开发者。",
+ "date": "2026-11-11",
+ "features": [
+  "用 Contract 声明式语言描述界面，TypeScript 或 Rust 编写数据逻辑",
+  "同一份 plan 在 Web、macOS、iOS、Linux 上原生渲染，UI 无 webview 和 JS 桥",
+  "提供 scripts/agent.mjs，用统一的十个操作驱动各平台，供 AI agent 构建和测试",
+  "测试文件 app.test.contract 可在各平台原样运行",
+  "布局采用 CSS 规则，未指定的控件、颜色、字体等交给平台原生实现"
+ ],
+ "intro": "Exact 是一个跨平台应用运行时。界面用声明式语言 Contract 描述，数据逻辑用 TypeScript 或 Rust 编写。Contract 编译器把界面编译成紧凑的 plan：在 Web 上，plan 变成一个 ES module，运行在约 20 KB 的运行时上，直接操作真实 DOM；在 macOS、iOS 和 Linux 上，Rust runner 执行同一份 plan，由 Rust 布局内核按 CSS 规则计算盒子，再由 AppKit、UIKit 或 GPU painter 绘制。UI 中没有 webview，也没有 JavaScript 桥。\n\n项目强调三点：面向 AI agent 设计，agent 可通过统一的十个操作（tree、screenshot、tap、type、state、layout、logs、clock、prefer、perf）构建、运行、查看和测试应用；追求启动与开发循环速度；界面写法沿用 CSS 词汇和布局模型，未指定的外观交给各平台原生控件。项目目前处于 pre-1.0 阶段，明确不保证 API 稳定。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Xcode、Rust、Bun 和 Chrome（macOS 环境）",
+  "克隆仓库：git clone https://github.com/expo/exact",
+  "运行一次初始化：bun scripts/exact.mjs setup",
+  "用 exact new 创建新应用",
+  "用 bun scripts/agent.mjs 在各平台运行和测试应用"
+ ],
+ "summary": "Exact 让开发者用声明式语言 Contract 写一次界面，再在 Web、macOS、iOS 和 Linux 上以原生方式运行：Web 端走真实 DOM，Apple 与 Linux 端由 Rust 布局内核配合 AppKit、UIKit 或 GPU 绘制，不使用 webview。它同时面向 AI agent，提供统一的操作脚本用于构建、截图、点击和测试应用，适合想跨平台交付并让 agent 参与开发流程的团队。",
+ "tagline": "写一次界面，原生跑在 Web、macOS、iOS 和 Linux 上"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在丹麦生活、使用 Claude 等 MCP 客户端的开发者或普通用户，希望借助 AI 规划每周采购并比较三家超市价格。需要拥有对应超市的账户。",
+ "date": "2026-11-11",
+ "features": [
+  "搜索商品并查看价格、单价和促销信息",
+  "按预算和本周促销规划餐食，并获取食谱所需商品",
+  "在 nemlig.com、BilkaToGo 和 REMA 1000 之间比价整份购物篮（含运费）",
+  "将商品或食谱加入购物车（仅限购物车，不涉及下单支付）",
+  "查看配送时段和费用，按价格排序",
+  "匿名使用统计，可关闭"
+ ],
+ "intro": "handle-mcp 是一个 MCP 服务器，让 AI 代理（如 Claude、Grok、Codex）接入 nemlig.com、BilkaToGo 和 REMA 1000 三家丹麦超市。代理可以读取本周促销、按预算规划一周餐食、在每家店计算整份清单的价格（含运费和起送门槛），然后把最便宜那家店的购物车填好。\n\n项目明确设计为“人类永远付款”：代码中不存在下单或支付逻辑，并有测试确保这一点。用户需要自己打开商店、核对购物车、选择配送或自提时间并完成支付。口味、预算和餐食规则由用户自己的 prompt 或 skill 定义，服务器只负责查找和计数。\n\n它使用商店的私有网站 API，属于非官方项目，可能随时失效。默认发送匿名使用计数，可通过环境变量关闭。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv（若尚未安装）",
+  "运行 `uvx handle-mcp@latest login nemlig` 登录 nemlig.com",
+  "运行 `claude mcp add handle -- uvx handle-mcp@latest` 将 MCP 服务器添加到 Claude",
+  "向 AI 提问，例如：“Plan 5 dinners for 4 within 900 kr, built on this week's offers. Fill the cheapest cart.”"
+ ],
+ "summary": "handle-mcp 是一个 MCP 服务器，让 AI 代理接入丹麦三家超市（nemlig.com、BilkaToGo、REMA 1000），读取促销、按预算规划餐食、跨店比价并填充最便宜的购物车。它刻意不包含下单和支付功能，最终由用户自己核对并付款。适合在丹麦有超市账户、想用 AI 辅助每周采购比价的用户。",
+ "tagline": "让 AI 代理在丹麦三家超市比价并填购物车，但绝不代付"
+}

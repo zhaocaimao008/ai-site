@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速将 GitHub 项目或视频内容转化为竖屏讲解视频的开发者、内容创作者和运营人员。",
+ "date": "2026-11-11",
+ "features": [
+  "支持 GitHub 仓库、任意视频链接和抖音分享链接三种输入",
+  "自动抽取仓库信息并生成七张卡片组成的竖屏视频",
+  "集成 edge-tts 中文配音、字幕和三层混音",
+  "使用 Playwright 逐帧截图，ffmpeg 合成视频",
+  "渲染确定性：同一工程两次渲染结果一致，支持局部预览",
+  "抖音链路自动抓取列表、逐条尝试并反查仓库"
+ ],
+ "intro": "video-kit 是一个自动化视频生成工具，输入 GitHub 仓库地址或抖音分享链接，就能输出一条 1080×1920 的竖屏讲解视频，时长约 34.8 秒，带中文解说和配乐。整个流程包括内容抽取、卡片渲染、截图、字幕、配音和混音，全部自动完成。\n\n项目支持三种输入：GitHub 仓库、任意视频链接（通过 yt-dlp 下载）和抖音分享链接。对于视频输入，会先转写或提取字幕，再反查视频中提到的 GitHub 仓库，最后走同一套出片流程。画面由七张固定结构的卡片组成，内容来自仓库信息。\n\n渲染引擎将每一帧视为时间 t 的纯函数，支持确定性渲染和局部预览，方便调试。文案是唯一需要人工撰写的部分，其余步骤均可自动化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js ≥18、Python ≥3.10 和 ffmpeg",
+  "克隆仓库：git clone https://github.com/achun1107/video-kit && cd video-kit",
+  "下载字体：python engine/get_fonts.py",
+  "安装 Python 依赖：pip install -r requirements.txt",
+  "安装 Playwright 浏览器：python -m playwright install chrome",
+  "运行：node tools/make-video.mjs --repo <仓库地址> --out ./out"
+ ],
+ "summary": "video-kit 是一个自动化视频生成工具，能将 GitHub 仓库或抖音视频快速转化为竖屏讲解视频。它自动完成内容抽取、卡片渲染、截图、配音和混音，输出带中文解说和配乐的成片。适合需要将技术项目或视频内容制作成短视频的开发者与内容创作者，尤其适合需要批量产出讲解视频的场景。",
+ "tagline": "一条命令把 GitHub 仓库或抖音视频变成竖屏讲解视频"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有闲置安卓手机、希望低成本搭建家庭服务器的用户，以及需要轻量级自托管方案的开发者。",
+ "date": "2026-11-11",
+ "features": [
+  "Jellyfin 媒体服务器，利用手机硬件编码器转码",
+  "Immich 照片备份和 qBittorrent 下载",
+  "Home Assistant 智能家居和 AdGuard Home 广告拦截",
+  "SSH/SFTP 访问和 Web 托管（Caddy）",
+  "本地运行 AI 模型（llama.cpp），提供 OpenAI 兼容 API",
+  "多手机集群管理，统一仪表盘"
+ ],
+ "intro": "Homedroid 是一个 Android 应用，能将闲置的旧手机改造成自托管家庭服务器。它利用手机自带的 CPU、硬件视频编码器、存储和电池（作为 UPS），通过一个 APK 提供多种服务，无需 root 或 Linux 知识。\n\n项目以模块化方式组织功能，包括 Jellyfin 媒体服务器（支持硬件转码）、Immich 照片备份、qBittorrent 下载、Home Assistant 智能家居、AdGuard Home 广告拦截、SSH/SFTP、Web 托管、AI 模型本地运行（llama.cpp）以及网络工具等。所有模块可通过 Web 仪表盘管理，并支持多台手机组成集群。\n\nHomedroid 适合想低成本搭建家庭服务器、利用旧设备的用户，也适合需要轻量级自托管方案的技术爱好者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应架构的 APK（如 arm64-v8a）",
+  "在手机上允许安装未知来源应用，安装 APK",
+  "打开应用，根据引导启动服务器",
+  "在浏览器访问手机 IP 的 8800 端口进入仪表盘",
+  "在仪表盘中按需启用或安装模块（如 Jellyfin、Immich）"
+ ],
+ "summary": "Homedroid 能把旧安卓手机变成家庭服务器，无需 root。它提供 Jellyfin 媒体转码、Immich 照片备份、qBittorrent 下载、Home Assistant 智能家居、AdGuard Home 广告拦截、SSH/SFTP、Web 托管以及本地 AI 模型运行等功能，全部通过 Web 仪表盘管理。适合想利用闲置手机低成本搭建自托管服务的用户。",
+ "tagline": "把旧安卓手机变成家庭服务器，无需 root。"
+}

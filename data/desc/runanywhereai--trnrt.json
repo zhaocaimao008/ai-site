@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 AWS Trainium2 上部署大模型推理服务的开发者与运维团队，尤其是希望用 OpenAI 兼容接口接入现有应用、并关注长上下文与缓存复用的场景。",
+ "date": "2026-11-11",
+ "features": [
+  "NKI megakernel：decode 阶段每半个层使用一个融合 kernel，覆盖 KDA attention、融合 DSA 层、mHC 与 MoE FFN",
+  "支持 1M token 上下文，结合稀疏注意力（top 2,048）与线性注意力",
+  "基于 FP8 KV 页的 radix tree prefix cache，并带主机内存分层",
+  "单机双引擎，每个引擎在 32 个逻辑 NeuronCore 上做张量并行，前置会话亲和路由",
+  "提供 OpenAI 兼容的 chat/completions、流式输出、工具调用与 reasoning 输出",
+  "离线编译：在任意 x86_64 主机构建计算图缓存，服务机默认不编译"
+ ],
+ "intro": "TrnRT 是 RunAnywhere 开源的 LLM 推理引擎，专门运行在 AWS Trainium 上。它可以在单台 trn2.48xlarge 上提供 OpenAI 兼容 API，decode 阶段以 NKI megakernel 执行，并通过跨设备与主机内存的 prefix cache 复用上下文。\n\n目前首个支持的模型是 GLM-5.3-Flash（320B MoE、18B 激活、FP8、1M token 上下文），更多开源模型在计划中。项目还提供离线编译流程：所有计算图先在 x86_64 主机上编译成缓存，服务机默认只加载、不编译。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "构建镜像：git clone https://github.com/RunanywhereAI/trnrt.git && cd trnrt，然后执行 README 中的 docker build 命令",
+  "在任意 x86_64 主机上构建编译缓存：依次运行 trnrt compile shapes、decisions、capture、compile、strip",
+  "在 trn2.48xlarge 上启动服务：docker run ... trnrt serve --model /model --port 8000",
+  "用任意 OpenAI 客户端调用 http://localhost:8000/v1，可通过 extra_body 传入 session_id 复用 prefix cache"
+ ],
+ "summary": "TrnRT 是一个面向 AWS Trainium 的开源大模型推理引擎，目标是在单台 trn2.48xlarge 上以 OpenAI 兼容接口提供推理服务。它用 NKI megakernel 执行 decode，支持 1M token 长上下文和跨设备与主机内存的 prefix cache，并采用离线编译方式减少服务机上的编译开销。目前支持 GLM-5.3-Flash，适合需要在 Trainium2 上部署长上下文推理服务的团队参考使用。",
+ "tagline": "面向 AWS Trainium 的开源 LLM 推理引擎"
+}

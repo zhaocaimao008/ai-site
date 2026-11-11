@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在终端中直接使用 AI 代理、注重启动速度和本地数据控制的开发者与命令行用户。",
+ "date": "2026-11-11",
+ "features": [
+  "Rust 原生单二进制，启动快，核心使用无需 Node 或 Docker",
+  "本地优先：会话、记忆、凭据和模型配置保存在本机 .ax 目录",
+  "支持多种模型提供商，包括 Codex OAuth、DeepSeek、OpenAI 及兼容接口",
+  "内置 Agent Skills 技能包、只读网页搜索/抓取和 MCP 服务器集成",
+  "提供 /system 命令查看 CPU、内存及 NVIDIA GPU 使用情况",
+  "支持会话与记忆的导出备份和导入合并"
+ ],
+ "intro": "AX 是一个用 Rust 编写的终端 AI 代理，主打快速启动和轻量运行。它编译为单个二进制文件，无需 Node 或 Docker 即可使用核心功能，支持 Windows、Linux 和 macOS。AX 将会话、记忆、凭据和模型配置保存在本地，启动时不发起网络请求，也不收集远程遥测。\n\n它从本机已有的凭据和环境变量中发现模型提供商，支持 OpenAI Codex OAuth、DeepSeek、OpenAI 以及兼容 OpenAI 接口的厂商。用户可以在终端中直接输入问题、切换模型，会话会自动保存。AX 还提供本地系统资源查看、Agent Skills 技能包、只读网页搜索与抓取、MCP 服务器集成以及原生图像输入等能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS/Linux 安装：curl -fsSL https://raw.githubusercontent.com/Axium-Labs/AX/main/scripts/install.sh | sh",
+  "Windows 安装：powershell -ExecutionPolicy Bypass -c \"iex ((iwr 'https://raw.githubusercontent.com/Axium-Labs/AX/main/scripts/install.ps1' -UseBasicParsing).Content)\"",
+  "运行 ax 启动终端代理",
+  "使用 /login 登录提供商，使用 /model 选择模型",
+  "直接输入内容开始对话，会话会自动保存"
+ ],
+ "summary": "AX 是一个用 Rust 编写的终端 AI 代理，解决在命令行中快速调用大模型、同时保持数据本地化的问题。它启动时不做网络请求，会话、记忆和凭据都存放在本机，适合注重启动速度与隐私、习惯在终端工作的开发者。支持多种模型提供商，并可通过技能包和 MCP 扩展能力。",
+ "tagline": "用 Rust 编写的轻量级终端 AI 代理"
+}
