@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 DeepSeek Harness Desktop、希望在 Windows 上让智能体辅助操作桌面应用的开发者与进阶用户。",
+ "date": "2026-11-12",
+ "features": [
+  "通过内置 MCP 桥挂载 Windows-MCP，向智能体暴露截屏、快照、鼠标键盘、剪贴板、进程、注册表等工具",
+  "提供默认关闭的 Computer Use 开关，可实时启用或禁用全部桌面工具，无需重启",
+  "内置依赖安装器，从 Settings → Desktop 安装 Windows-MCP 并自动写入桥接配置",
+  "提供 windows_mcp_doctor 工具，用于诊断桌面工具缺失的原因",
+  "支持检查并更新 Windows-MCP 版本，安装前自动备份配置"
+ ],
+ "intro": "这是一个 DeepSeek Harness（DSH）插件，把 CursorTouch/Windows-MCP 接入 DSH 内置的 MCP 客户端桥，让 DSH 智能体能够截屏、读取无障碍树、模拟鼠标键盘、操作剪贴板与进程等。插件本身不重新实现协议客户端，而是作为载体复用官方桥。\n\nComputer Use 开关默认关闭，新安装不会自动把桌面控制权交给智能体；关闭时相关工具会从模型可见的工具列表中过滤掉，调用也会被拒绝。依赖 Windows-MCP 需要单独安装，插件提供应用内安装器，并会在安装后改写桥接配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 DSH Desktop 中打开 Settings → Plugins，添加插件包（包名、github:helloHub1212/dsh-windows-mcp 或本地仓库）",
+  "重启 DSH，使新的补丁层在启动时生效",
+  "打开 Settings → Desktop，在 Dependency 卡片中点击 Download and install 安装 Windows-MCP",
+  "再次重启 DSH，然后在输入框旁打开 Computer Use 开关"
+ ],
+ "summary": "这个项目为 DeepSeek Harness 提供一个 Windows 桌面自动化插件，通过内置 MCP 桥接入 Windows-MCP，让智能体能够截屏、读取界面结构并模拟鼠标键盘操作。它适合需要在 Windows 上让 AI 辅助操作桌面应用、又希望默认关闭桌面控制权的用户，依赖可在应用内安装。",
+ "tagline": "让 DeepSeek Harness 智能体看见并操作 Windows 桌面"
+}

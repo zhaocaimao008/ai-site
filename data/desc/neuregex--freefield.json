@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望使用开源模型进行 AI 图像、视频和音频创作的开发者与创作者，尤其是熟悉 ComfyUI 的用户。",
+ "date": "2026-11-12",
+ "features": [
+  "120 个应用，涵盖图像、视频、VFX 和音频创作",
+  "每个应用对应一个 ComfyUI 工作流，模型全部开放权重",
+  "Web UI 和表单从 app.json 清单自动生成",
+  "支持在 Modal 云 GPU 或本地 ComfyUI 上运行",
+  "提供每个应用的模型、许可证和 VRAM 占用信息",
+  "包含 LoRA 实验室和真实 GPU 运行示例"
+ ],
+ "intro": "Freefield 是一个基于 ComfyUI 和 Comfy SDK 的开源项目，旨在复刻 Higgsfield 风格的图像、视频、VFX 和音频创作应用。每个应用都是一个独立文件夹，包含 app.json 清单和 ComfyUI 工作流，Web UI、运行器、模型下载和 VRAM 映射都从这些清单自动生成。\n\n项目包含 120 个应用，其中 119 个已就绪，覆盖图像生成、视频生成、特效、音频处理等场景。所有模型均为开放权重，无需 API 或合作节点，模型文件及其 Hugging Face 仓库、大小和许可证都列在 app.json 中。\n\n用户可以在 Modal 云 GPU 或自己的本地 ComfyUI 上运行这些应用，每个示例都附带真实 GPU 运行的时间和峰值显存数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Modal 上运行：按照 README 的 Run it 部分配置 Modal 环境并启动",
+  "在本地 GPU 上运行：按照 README 的 On your own GPU 部分安装 ComfyUI 并加载应用",
+  "从浏览器访问 Web UI，选择应用并填写表单",
+  "点击运行，等待 GPU 处理并查看结果"
+ ],
+ "summary": "Freefield 把 Higgsfield 风格的图像、视频、特效和音频创作应用搬到了 ComfyUI 上，每个应用都是一个独立文件夹，内含清单和工作流，所有模型均为开放权重。它适合想用开源模型进行 AI 创作、又希望有统一 Web 界面的开发者和创作者，可以在 Modal 云 GPU 或本地 ComfyUI 上运行。",
+ "tagline": "在 ComfyUI 上复刻 Higgsfield 的 120 个开源 AI 创作应用"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想订阅 ChatGPT Plus / Pro 但缺少可用境外支付方式的国内用户，以及需要为 Cursor、Claude 等 AI 工具付款的开发者。",
+ "date": "2026-11-12",
+ "features": [
+  "说明国内银行卡订阅 ChatGPT 被拒的原因",
+  "分步演示 CoreGold 虚拟卡注册、USDT 充值与开卡流程",
+  "推荐 5321132 卡段并说明其免 3DS 特性",
+  "提供美区免税州账单地址以规避州消费税",
+  "整理 Card Declined、3DS 验证、续费失败等排障方案"
+ ],
+ "intro": "这是一个面向国内用户的教程仓库，介绍如何通过 CoreGold 虚拟卡解决订阅 ChatGPT Plus / Pro 时遇到的支付被拒问题。README 指出，OpenAI 使用的 Stripe 支付风控对发卡行归属地审核较严，国内发行的 Visa/Mastercard 卡基本会被拒绝。\n\n教程给出的方案是注册 CoreGold 平台，用 USDT 充值后开立美区虚拟卡，推荐使用 5321132 卡段，再在 ChatGPT 订阅页面填写卡号、有效期、CVV 和平台配发的美区免税州账单地址完成支付。文中还列出了 Card Declined、3DS 验证、续费失败等常见问题的排查方法。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "注册并登录 CoreGold 控制台",
+  "在「Recharge / 充值」中选择 USDT-TRC20 网络，从交易所或钱包转入约 $22~$25 USDT",
+  "在「Card / 申请卡片」中选择 5321132 卡段，存入初始金额并确认开卡",
+  "登录 ChatGPT 官网，点击「Upgrade Plan / 升级订阅」选择 Plus 或 Pro",
+  "在 Stripe 结算页填入卡号、有效期、CVV 及 Oregon 免税州账单地址，点击「Subscribe」完成订阅"
+ ],
+ "summary": "这个仓库是一份操作教程，针对国内用户订阅 ChatGPT Plus / Pro 时银行卡被 Stripe 风控拒绝的问题，介绍用 CoreGold 虚拟卡配合 USDT 充值开卡，再填写美区免税州账单地址完成支付的完整流程，并附常见报错排查。适合缺少境外支付方式、想自行完成订阅的用户参考。",
+ "tagline": "用 CoreGold 虚拟卡订阅 ChatGPT Plus / Pro 的教程"
+}

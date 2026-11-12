@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要把长文章或视频快速转成小红书、公众号、短视频等平台内容的内容创作者和运营人员，也适合希望用 Claude Code / Codex 自动化内容再分发的开发者。",
+ "date": "2026-11-12",
+ "features": [
+  "10 个独立 skill 可自由组合，覆盖抓取、视频转文字、改写、翻译、长图、卡片、公众号、口播、白板和漫画",
+  "支持文章和视频两种输入，视频先转成逐字稿，人工字幕优先，其次平台字幕，最后本地 Whisper 识别",
+  "原文、总结、翻译三条路径，原文路径一字不改并逐块比对，翻译路径检查结构逐块对应",
+  "一份内容可同时产出长图、多种比例卡片和公众号排版，封面有 6 种版式可多版本生成",
+  "每种产出自动验收，检查溢出、截断、重叠、字幕丢帧和响度等问题，不合格以非零码退出",
+  "零 npm 依赖，本地优先，只需 Node.js 22 和 Chrome，可选能力自动探测并降级"
+ ],
+ "intro": "article2media 是一组开源的 Claude Code / Codex Skill，同时也是一个 Claude Code 插件。它把一篇文章或一条视频做成可以直接发布的中文视觉内容，包括小红书图文卡片、长图、公众号排版和竖屏口播短视频。\n\n项目由 10 个独立能力组成：文章抓取、视频转文字、改写、全文翻译、长图、卡片、公众号排版、口播视频、白板论证和漫画。每个能力都是一个 skill，可以单独使用，也可以自由组合。总入口 /article2media 提供常用的一键组合，以及批量处理和发布数据记录。\n\n输入支持 X 长文、网页、微信公众号文章、本地 Markdown，以及抖音、YouTube、B 站链接和本地视频/音频。视频会先转成逐字稿文章，再走后续流程。每种产出都有自动验收，不合格会报错。项目零 npm 依赖，只需要 Node.js 22 和 Chrome。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Claude Code 插件：claude plugin marketplace add threerocks/article2media && claude plugin install article2media@article2media",
+  "检查环境：bash scripts/install.sh",
+  "可选下载主题字体到本地：node skills/article2media/scripts/fonts.mjs",
+  "在 Claude Code 中调用总入口，例如：/article2media https://example.com/post 小红书",
+  "产出写在当前目录的 article2media-out/<slug>/ 下"
+ ],
+ "summary": "article2media 解决的是好文章在信息流里难被读完、手动做成图文或视频耗时的问题。它把文章抓取、视频转文字、改写、翻译、长图、卡片、公众号排版和口播视频拆成独立 skill，用户给一个链接或文件，就能按需组合出适合小红书、公众号、抖音等平台的成品，并自动验收。适合需要跨平台分发内容、又不想重复排版的创作者。",
+ "tagline": "把文章或视频一键做成小红书图文、长图、公众号和口播视频"
+}

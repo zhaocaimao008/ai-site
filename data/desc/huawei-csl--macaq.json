@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或服务端部署多模态生成模型、希望降低显存占用并保持生成质量的开发者和研究者。",
+ "date": "2026-11-12",
+ "features": [
+  "模型无关的校准量化，支持文本、图像、视频和音频模型",
+  "提供 llama.cpp、vLLM、Diffusers 和 PyTorch 四种后端",
+  "llama.cpp 后端支持 2/3/4 位 GGUF 格式并附带运行时",
+  "vLLM 后端支持 W4A4 或仅权重量化，可加载生成或通过 HTTP API 服务",
+  "Diffusers 后端可量化扩散 Transformer 并生成图像、视频或音频",
+  "MACaQ-R 可精炼已量化 GGUF 的权重码，同时保留原生格式与块缩放"
+ ],
+ "intro": "MACaQ 是华为 CSL 团队提出的模型无关校准量化方法，支持对文本、图像、视频和音频模型进行低比特量化，并可在 llama.cpp、vLLM、Diffusers 和 PyTorch 等后端上推理。项目提供从安装、量化到生成或服务的完整流程，每个后端有独立的环境和文档。\n\n量化后的模型可保存为 GGUF 或 safetensors 等格式，其中 llama.cpp 后端支持 2/3/4 位 GGUF，并附带运行时；vLLM 支持 W4A4 或仅权重量化；Diffusers 覆盖扩散 Transformer 的 W4A4 量化；PyTorch 后端面向语音生成。此外，MACaQ-R 可在保持 GGUF 原生格式和块缩放的前提下精炼权重码，生成的 GGUF 可直接用标准 llama.cpp 运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 Python 3.12，并为每个后端创建独立环境",
+  "参考对应后端文档安装依赖，例如 llama.cpp 后端见 llamacpp/README.md",
+  "使用 MACaQ-R 精炼量化 GGUF：.venv-llamacpp/bin/python llamacpp/macaq.py refine --model models/model-q4.gguf --hf models/original --teacher models/original-f16.gguf --calibration data/calibration.txt --output models/model-macaq-r.gguf --work-dir work/refinement",
+  "用标准 llama.cpp 运行生成的 GGUF：llama cli -m models/model-macaq-r.gguf",
+  "如需 HTTP 服务，使用：llama serve -m models/model-macaq-r.gguf"
+ ],
+ "summary": "MACaQ 是一个模型无关的校准量化工具，能把文本、图像、视频和音频模型压缩到低比特，并借助 llama.cpp、vLLM、Diffusers 和 PyTorch 在本地或服务端推理。它适合希望减少显存占用、同时保持生成质量的开发者，也提供 MACaQ-R 来精炼已有 GGUF 权重。",
+ "tagline": "面向多模态模型的模型无关量化工具"
+}

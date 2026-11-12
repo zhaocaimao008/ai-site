@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合在终端中工作、希望用 AI agent 辅助编码并保留对改动控制权的开发者。",
+ "date": "2026-11-12",
+ "features": [
+  "并行编码 agent 与子 agent 编排",
+  "实时任务与 Git diff 查看",
+  "持久记忆，支持跨会话恢复工作",
+  "权限控制，未授权前保持只读",
+  "ODD 工作流：按理解度与风险决定任务大小",
+  "feature 文档逐字引用规格，保证交接信息不丢失"
+ ],
+ "intro": "gentle-shell 是一个构建在 Pi 之上的终端工作区，把并行编码 agent、实时任务、Git diff、持久记忆和权限控制整合到同一个界面里。它由 Gentle AI 与 Organic Driven Development（ODD）驱动，目标不是让终端简单跑一个 agent，而是让工作区帮助开发者主导 agent 的工作。\n\n项目用 TypeScript 编写，以 npm 包 gentle-pi 的形式发布，采用 MIT 协议。README 强调「先思考再动手」：agent 在改动前先探索，只澄清真正需要决策的问题，小任务保持轻量，较大的授权工作则生成一份可恢复的 feature 文档，并默认采用测试先行的方式。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "gentle-shell 是一个基于 Pi 的终端工作区，把并行编码 agent、任务列表、Git diff、持久记忆和权限控制集中在一处。它适合希望在终端里用 AI 辅助开发、同时保留对改动主导权的开发者：agent 先探索再动手，小任务轻量处理，较大工作生成可恢复的 feature 文档，便于中断后继续。",
+ "tagline": "面向 Pi 的终端 AI 编码工作台"
+}

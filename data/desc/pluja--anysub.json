@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将音视频转为字幕、并希望数据保留在本地的开发者、内容创作者和普通用户。",
+ "date": "2026-11-12",
+ "features": [
+  "使用 Whisper 模型进行语音转写，支持 tiny 到 large-v3-turbo",
+  "生成词级时间戳，便于精细调整字幕",
+  "内置字幕编辑器，带波形时间轴、撤销和自动保存",
+  "对语速过快、过长或重叠的字幕给出警告",
+  "支持导出为 SRT、WebVTT、纯文本或 JSON",
+  "支持大文件断点续传和可搜索的媒体库"
+ ],
+ "intro": "Anysub 是一个在本地机器上运行的音视频转字幕工具，提供易用的 Web 界面。它使用 Whisper 模型进行语音识别，支持从 tiny 到 large-v3-turbo 的多种模型，并生成词级时间戳。\n\n项目内置字幕编辑器，包含波形时间轴、撤销和自动保存功能，还会对语速过快、过长或重叠的字幕给出警告。转写结果可导出为 SRT、WebVTT、纯文本或 JSON，并支持大文件断点续传和可搜索的媒体库。\n\nAnysub 是 Whishper 的重写继任者，所有处理都在用户自己的机器上完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Linux x86-64 主机上安装 Docker 和 Docker Compose",
+  "执行 mkdir anysub && cd anysub",
+  "执行 curl -fsSLO https://github.com/pluja/anysub/releases/latest/download/compose.yaml",
+  "执行 docker compose up -d",
+  "打开 http://localhost:5173 并创建账户，设置码可通过 docker compose logs web 查看"
+ ],
+ "summary": "Anysub 是一个在本地运行的音视频转字幕工具，通过 Web 界面使用 Whisper 模型完成语音识别，并生成词级时间戳。它提供带波形时间轴的字幕编辑器，能提示语速过快、过长或重叠的字幕，支持导出 SRT、WebVTT 等格式。适合希望数据不出本机、需要为长音视频制作和校对字幕的用户。",
+ "tagline": "本地运行的音视频转字幕 Web 工具"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望本地处理会议记录的开发者和普通用户，尤其是需要跨平台桌面工具的人。",
+ "date": "2026-11-12",
+ "features": [
+  "无需会议机器人，直接录制通话",
+  "本地 AI 转写与摘要，保护隐私",
+  "自动生成会议摘要和按人划分的后续步骤",
+  "支持 macOS、Windows 和 Linux 桌面端",
+  "免费开源，基于 MIT 协议"
+ ],
+ "intro": "Yogurt 是一款免费开源的 AI 会议笔记应用，主打隐私保护。它直接录制你的通话，不需要向会议中加机器人，录音和转写都在本地完成。\n\n项目使用 TypeScript 和 Electron 构建，支持 macOS、Windows 和 Linux。转写基于 Whisper，本地 AI 推理使用 llama.cpp，因此会议内容不会上传到云端。生成的笔记包含会议摘要、按人划分的后续步骤以及个人提醒。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应系统的安装包：macOS（Apple Silicon）、Windows（x64）或 Linux（x64 AppImage）",
+  "安装并启动 Yogurt",
+  "开始录制会议，应用会在本地完成转写和笔记生成"
+ ],
+ "summary": "Yogurt 是一个免费开源的桌面应用，用于录制会议并生成 AI 笔记。它不需要向会议中添加机器人，录音和转写都在本地完成，适合注重隐私、希望会议内容不外传的用户。项目基于 Electron 和 TypeScript，支持 macOS、Windows 和 Linux，利用 Whisper 和 llama.cpp 在本地完成语音转写与摘要。",
+ "tagline": "本地运行的私密 AI 会议笔记工具"
+}

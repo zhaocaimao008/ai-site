@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要高分辨率图像生成与编辑能力的开发者、设计相关从业者，以及希望在 agent 工作流中接入图像生成能力的用户。",
+ "date": "2026-11-12",
+ "features": [
+  "开源权重的 1600 万像素图像生成与编辑模型",
+  "提供 h3-image-prompt-writing Agent Skill，将简短想法或参考图扩展为完整提示词",
+  "Skill 可通过 MiniMax API 直接渲染生成图像",
+  "兼容 Claude Code、Codex、Cursor 等读取 SKILL.md 的 agent",
+  "提供多参考图合成与指令遵循等场景的示例展示"
+ ],
+ "intro": "MiniMax-H3-Image 是 MiniMax 开源发布的图像生成与编辑模型，权重开放，支持 1600 万像素（16-megapixel）级别的图像生成和编辑。项目仓库提供模型权重入口，并链接到 Hugging Face、ModelScope 以及 MiniMax 官方 API 平台，方便用户按需选择在线调用或本地部署。\n\n仓库还附带一个名为 h3-image-prompt-writing 的 Agent Skill，可以把简短想法、需求简报或一组参考图扩展成完整的 MiniMax-H3-Image 提示词，并可通过 MiniMax API 直接渲染出图。该 Skill 适用于任何能读取 SKILL.md 的 agent，例如 Claude Code、Codex 和 Cursor。README 中展示了多参考图合成、指令遵循等场景的示例，包括信息图、爆炸视图、CAD 图纸风格等。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 skills CLI 安装 Skill：npx skills add https://github.com/MiniMax-AI/MiniMax-H3-Image --skill h3-image-prompt-writing",
+  "配置环境变量 MINIMAX_API_KEY；若使用中国平台，同时设置 MINIMAX_API_BASE=https://api.minimax.cn",
+  "在 agent 中调用该 Skill，例如：Use h3-image-prompt-writing to make a 3:4 poster of a night market in the rain, titled \"雨夜集市\", and render it.",
+  "更多细节参见 skills/README.md"
+ ],
+ "summary": "MiniMax-H3-Image 是 MiniMax 开源的图像生成与编辑模型，权重开放，主打 1600 万像素级别的高分辨率出图与编辑。仓库还提供一个 Agent Skill，能把简短想法或参考图扩写成完整提示词，并通过 MiniMax API 直接渲染。适合需要在 Claude Code、Cursor 等 agent 中接入图像生成能力，或希望本地部署模型的开发者。",
+ "tagline": "MiniMax 开源的 1600 万像素图像生成与编辑模型"
+}

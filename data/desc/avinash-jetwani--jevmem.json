@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Cursor 或 Codex 进行协作开发、希望把项目约定和失败经验沉淀下来供团队共用的开发者。",
+ "date": "2026-11-12",
+ "features": [
+  "将项目决策、规则和失败尝试保存到仓库中的 JEVMEM.md，并通过 git 与团队共享",
+  "Claude Code、Cursor、Codex 读取同一份项目记忆，避免重复讨论和重复踩坑",
+  "guard 在 Claude Code 执行命令、编辑或写入文件前对照规则检查，命中时先询问",
+  "jevmem trust 可让指定规则直接阻止调用，而不只是提示",
+  "提供 CLI 和插件安装方式，支持 Claude Code、Cursor、Codex 与 Claude Desktop",
+  "可通过 MCP 接入，并提供 jevmem doctor 检查安装配置"
+ ],
+ "intro": "jevmem 面向使用 AI 编码代理的团队，把对话中产生的项目决策、规则和失败尝试保存到仓库里的单个 JEVMEM.md 文件，Claude Code、Cursor 和 Codex 都能读取。文件随 git 提交，队友拉取代码后即可获得同样的上下文。\n\n在 Claude Code 中，jevmem 还提供 guard：命令、文件编辑和写入执行前会对照 JEVMEM.md 中的规则检查，命中时先停下来询问。它可与 Claude Code 自带的 auto memory 并存，补充共享文件、guard 和其他工具的支持。\n\n项目使用 TypeScript 编写，以 MIT 协议开源，构建在 TypeSafe AI 的 Jev 之上，已上架 Anthropic 的 Claude 插件目录和 MCP Registry，也可通过 MCP 在 Claude Desktop 中使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude 应用中打开 Plugins → Discover → jevmem → Add",
+  "安装插件依赖的 CLI：npm install -g jevmem",
+  "在项目目录中运行 jevmem setup，按提示输入 TypeSafe API key 并完成配置",
+  "在该项目中启动 Claude Code；可用 jevmem doctor 随时检查配置"
+ ],
+ "summary": "jevmem 解决的是 AI 编码代理在不同会话和不同成员之间“记不住项目约定”的问题。它把对话中形成的决策、规则和失败尝试写入仓库里的 JEVMEM.md，随 git 共享给 Claude Code、Cursor 和 Codex；在 Claude Code 中还会在命令或文件改动执行前对照规则检查。适合需要多人协作、希望统一项目约束的 AI 辅助开发场景。",
+ "tagline": "把项目规则与决策写进一个文件，供多个 AI 编码代理共用"
+}

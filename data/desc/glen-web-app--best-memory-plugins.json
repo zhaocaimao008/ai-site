@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合正在为 Claude Code、Cursor 等编程助手寻找持久记忆方案的开发者，以及需要评估团队共享记忆与隐私取舍的技术选型者。",
+ "date": "2026-11-12",
+ "features": [
+  "收录 24 个 AI 编程助手记忆插件，覆盖 Claude Code、Codex、Cursor、OpenCode、Cline 等",
+  "按自动捕获与工具调用、本地与托管、团队共享、隐私等维度横向对比",
+  "单独比较各 agent 内置记忆功能（Claude Code auto memory、Codex memories 等）",
+  "提供安装步骤与事实来源链接",
+  "标注已弃用或不推荐的条目"
+ ],
+ "intro": "这是一个整理 AI 编程助手记忆插件的榜单项目，收录了 24 个能为 Claude Code、Codex、Cursor、OpenCode、Cline 等工具提供跨会话持久记忆的插件与扩展。所谓持久记忆，是指让编程助手记住之前做出的决定、失败的尝试以及代码库的结构，避免每次会话都从零开始。\n\n榜单对每个条目按记忆捕获方式（每轮自动 hook 还是需要 agent 主动调用工具）、存储位置（本地还是托管）、是否支持团队共享、隐私情况以及安装步骤进行并列比较。此外还单独对比了各 agent 自带的记忆功能，如 Claude Code auto memory、Codex memories、Copilot Memory 等。\n\n项目由 Glen 团队维护，Glen 自身排在第一位，README 中已对此作出披露，其余条目按公开标准排序并附有事实来源链接。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这个项目汇总并对比了 24 个给 AI 编程助手增加跨会话记忆的插件，解决助手每次会话都忘记此前决定、失败尝试和代码库结构的问题。它按记忆捕获方式、本地或托管存储、团队共享和隐私等维度并列展示，并单独比较各 agent 自带记忆，适合正在为 Claude Code、Cursor 等挑选记忆方案的开发者参考。",
+ "tagline": "为 AI 编程助手提供持久记忆的插件榜单"
+}

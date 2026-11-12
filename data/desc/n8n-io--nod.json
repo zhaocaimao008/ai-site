@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 代理处理重复性网页事务、又在意数据留在本地的个人用户和小团队；需要 macOS 14+ 或 Windows 11 预览版。",
+ "date": "2026-11-12",
+ "features": [
+  "拥有独立浏览器，可在真实网站上完成登录、填表、退订等操作",
+  "接入 Gmail、Calendar、Slack、Notion，生成通话简报并起草回复",
+  "按计划检查网页，内容变化时主动通知",
+  "执行敏感操作前请求用户批准，并记录每次操作与登录",
+  "可编辑、可遗忘的记忆系统，从已发送邮件学习写作风格",
+  "支持 20 多家模型服务商或自建模型，数据保存在本地"
+ ],
+ "intro": "Nod 是 n8n 推出的开源个人 AI 代理，运行在你自己的电脑或服务器上，并拥有独立的浏览器环境。它能登录真实网站、填写表单、处理需要多个标签页和账号的琐碎事务，例如催收发票、退订试用服务、把客户需求转成 Linear 任务、整理月末材料。\n\n它接入 Gmail、Calendar、Slack、Notion 等日常工具，可以按日程检查网页并在内容变化时通知你，也能根据邮件、日历和客户新闻生成通话简报。执行涉及对外发言或改动网站状态的操作前，它会先征求你的同意。\n\n模型可自选，支持 OpenAI、Anthropic、Gemini、OpenRouter、Bedrock 等 20 多家服务商，也可用 ChatGPT Plus/Pro 登录。文件、记忆和登录信息保存在本地，密码、验证码和银行卡由 Vault 私密填入，不交给模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 macOS（Apple silicon 或 Intel）或 Windows 安装包并安装",
+  "启动 Nod，选择模型服务商并填入 API key，或用 ChatGPT Plus/Pro 登录",
+  "连接 Gmail、Calendar、Slack、Notion 等需要使用的应用",
+  "在设置中查看并调整审批规则，然后向 Nod 描述要它完成的任务"
+ ],
+ "summary": "Nod 是一个运行在本机的开源个人 AI 代理，自带浏览器，能登录真实网站处理催发票、退订试用、填表等耗时的网页事务，并接入 Gmail、Slack、Notion 等工具生成通话简报和回复草稿。它会在对外发言或改动网站前征求同意，模型可自选，数据留在本地，适合想用代理分担重复事务又重视隐私的用户。",
+ "tagline": "自带电脑的开源个人 AI 代理"
+}
