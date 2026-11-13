@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望将自建智能体接入 QQ 生态的个人开发者，以及需要 OneBot v11 或 MCP 协议对接 QQ 的机器人开发者。",
+ "date": "2026-11-13",
+ "features": [
+  "在官方 QQ 9.9.37 主进程内运行，QQ 本体零改动",
+  "OneBot v11 全动作支持，含正向/反向 WS、HTTP、HTTP SSE",
+  "MCP Streamable HTTP 接入，全部动作自动暴露为 MCP 工具",
+  "移植 56 项独门动作：QZone、群相册、精华、打卡、装扮、闪照、收藏等",
+  "Packet 发包能力，offset 表驱动并逐版本维护",
+  "雪猫 WebUI 控制台与便携环境制作器"
+ ],
+ "intro": "SnowCat 雪猫是一个由社区开发者维护的第三方 QQ 客户端，融合了 NapCat 与 SnowLuma 两个上游项目的能力。它通过 V8 编译器通道注入的方式，在官方 QQ 9.9.37 主进程内运行，QQ 本体文件不做改动。\n\n项目提供 OneBot v11 全动作支持（正向/反向 WS、HTTP、HTTP SSE），并支持 MCP Streamable HTTP 接入，可将全部动作暴露为 MCP 工具。此外还移植了 56 项独门动作，涵盖 QZone、群相册、精华、打卡、装扮、闪照、收藏等场景，并提供 Packet 发包能力。\n\n配套的雪猫 WebUI 基于 React、Tailwind 和 HeroUI 重制，另有便携环境制作器可一键解包官方安装包并便携化。项目全量开源，包含 26 个底层包的 TypeScript 源码。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "解包官方 QQ 安装包为便携结构：./release-tools/snowcat-qq-unpack.ps1 -Installer QQ_9.9.37_261103_x64_01.exe",
+  "一键启动（部署 V8 通道 + 启动 + 45s 健康检查）：./release-tools/build/snowcat-run.ps1",
+  "打开 WebUI：http://127.0.0.1:6099/webui/"
+ ],
+ "summary": "SnowCat 雪猫是一个社区维护的第三方 QQ 客户端，在官方 QQ 9.9.37 主进程内运行且不改动 QQ 本体。它提供 OneBot v11 全动作与 MCP 接入，并移植了 QZone、群相册、闪照等 56 项独门动作，适合个人开发者将自建智能体接入 QQ 生态，或需要 OneBot/MCP 协议对接 QQ 的机器人场景。",
+ "tagline": "社区维护的第三方 QQ 客户端，让智能体接入 QQ"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": false,
+ "audience": "适合在 Windows 上使用 MetaTrader 5 的外汇交易者、EA 开发者，以及需要批量或无人值守部署 MT5 环境的运维人员。",
+ "date": "2026-11-13",
+ "features": [
+  "一条 PowerShell 命令完成 MT5 环境安装与配置",
+  "自动检测 MT5 安装路径、数据目录和现有配置",
+  "改动前自动备份 MQL5 文件夹、配置文件和模板",
+  "支持 /auto 静默安装，适用于无人值守和服务器部署",
+  "提供 -WhatIf 试运行与校验和验证，脚本可重复执行",
+  "可扩展，自行加入脚本、EA 和指标到自动化流程"
+ ],
+ "intro": "MT5 PowerShell Activator 是一个面向 Windows 的自动化工具，用 PowerShell 脚本简化 MetaTrader 5 交易环境的搭建与维护。它把原本需要手动下载、安装和配置 MT5、EA 与脚本的流程，收敛为一条命令执行。\n\n脚本会自动检测本机的 MT5 安装位置和数据目录，在改动前备份 MQL5 文件夹、配置文件和模板，并支持 /auto 静默模式，便于无人值守或服务器部署。所有缓存、备份和日志都保存在本地 %LOCALAPPDATA%\\MT5Activator\\ 下，不上传云端。\n\n项目要求 Windows 10/11 64 位与 PowerShell 5.1 及以上，建议以管理员权限运行。README 提醒先在模拟账户上测试，自动化工具在真实市场中可能出现意外行为。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认系统为 Windows 10/11 64 位，PowerShell 版本 5.1 以上",
+  "从 Releases 页面获取安装脚本",
+  "在 PowerShell 中运行脚本，如遇执行策略限制可加 -ExecutionPolicy Bypass",
+  "MT5 安装在非标准路径时，用 .\\install.ps1 -MT5Path \"D:\\MT5\" 显式指定",
+  "需要静默安装时在命令行加入 /auto 参数"
+ ],
+ "summary": "这个项目用 PowerShell 脚本把 MetaTrader 5 的环境搭建自动化：自动识别本机 MT5 安装与数据目录，在修改前备份 MQL5 文件夹、配置和模板，并支持静默安装。适合不想手动配置 MT5、或需要在多台 Windows 机器上批量部署 EA 与脚本的交易者和开发者，建议先在模拟账户验证。",
+ "tagline": "用 PowerShell 一键配置 MetaTrader 5 交易环境"
+}

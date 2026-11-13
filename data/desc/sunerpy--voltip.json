@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在任意应用中快速语音输入的文字工作者、开发者，以及希望语音数据本地处理或跨设备输入的用户。",
+ "date": "2026-11-13",
+ "features": [
+  "全局热键按住说话，识别结果自动粘贴到光标处",
+  "云端识别或本地识别（Qwen3-ASR、SenseVoice、Paraformer）",
+  "LLM 润色、个人词典、替换规则与简繁转换",
+  "语音编辑：选中文字后口述改写指令",
+  "场景设置按前台应用切换润色风格与输出方式",
+  "Android 手机配对后作为电脑麦克风与键盘，端到端加密"
+ ],
+ "intro": "Voltip 是一款跨平台听写工具，支持 Windows、Linux、macOS 和 Android。在电脑上按住全局热键录音，松开后语音被识别成文字，并自动粘贴到当前获得焦点的应用中；识别可以在云端完成，也可以在本地运行。\n\n识别结果可选地用 LLM 做润色，配合个人词典、字面与正则替换规则、简繁转换，以及按前台应用自动切换风格的场景设置。还提供语音编辑：选中文字后说一句改写指令，即可替换选区。\n\nAndroid 端可以独立使用，也能通过二维码或六位码配对，作为电脑的麦克风和键盘，音频经端到端加密传输。长录音支持麦克风与系统声音混录，并可导出 SRT 字幕。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 在 PowerShell 执行：irm https://raw.githubusercontent.com/sunerpy/voltip/main/scripts/install.ps1 | iex",
+  "Linux 或 macOS 在终端执行：curl -fsSL https://raw.githubusercontent.com/sunerpy/voltip/main/scripts/install.sh | sh",
+  "也可以从 releases 页面下载对应平台的安装包手动安装",
+  "启动后按住默认热键 Ctrl+Alt+Space 说话，松开即可把文字输入到光标处"
+ ],
+ "summary": "Voltip 把语音输入做成一个全局热键：按住说话、松开后文字直接出现在当前光标位置，适用于写文档、聊天、写代码注释等需要频繁输入的场合。它既支持云端语音识别，也能在本机运行 Qwen3-ASR、SenseVoice 等模型，并可选用 LLM 润色、个人词典和替换规则来修正结果。Android 端可独立使用，也能配对后充当电脑的麦克风和键盘。",
+ "tagline": "按住热键说话，文字落在光标处"
+}

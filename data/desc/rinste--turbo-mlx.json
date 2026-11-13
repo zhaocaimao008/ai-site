@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 Apple Silicon Mac、希望在本地生成图片或视频而不依赖云服务的开发者和普通用户。",
+ "date": "2026-11-13",
+ "features": [
+  "文生图：根据文字描述生成照片、海报、平面设计和带文字的图片",
+  "图片编辑：用自然语言描述修改内容，保留其余部分不变",
+  "视频生成：从文字或起始图片生成带声音的短视频",
+  "图片放大：使用 SeedVR2 将图片放大 2、3 或 4 倍",
+  "本地运行：模型下载后离线使用，数据不离开 Mac",
+  "LoRA 支持：可为多个模型加载 .safetensors 格式的 LoRA 文件"
+ ],
+ "intro": "Turbo MLX 是一款面向 Apple Silicon Mac 的原生 macOS 应用，用 MLX Swift 引擎在本地运行图像和视频生成模型。它不需要安装 Python、终端或注册账号，模型下载一次后即可离线使用，提示词和生成的图片不会离开本机。\n\n应用支持文生图、按描述编辑图片、生成带声音的短视频，以及用 SeedVR2 对图片进行 2 到 4 倍放大。内置 FLUX.2 Klein、Z-Image Turbo、Qwen-Image、Ming-Image 和 LTX-2.3 等模型，界面左侧设置提示词、尺寸、参考图和 LoRA，右侧查看结果与历史记录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载磁盘映像，打开后将 Turbo MLX 拖入 Applications",
+  "打开应用，在左下角选择模型并点击 Download and Generate",
+  "输入描述内容，按 ⌘↩ 或点击 Generate 开始生成"
+ ],
+ "summary": "Turbo MLX 让 Apple Silicon Mac 用户无需安装 Python 或使用终端，就能在本地运行图像和视频生成模型。它提供文生图、按描述编辑图片、生成带声音的短视频和图片放大功能，模型下载一次后可离线使用，适合注重隐私、希望在本机完成创作的用户。",
+ "tagline": "在 Apple Silicon Mac 上本地生成图片和视频的原生应用"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 Apple Silicon Mac（至少 10GB 内存）并希望在本地运行大型 MoE 模型的开发者和技术爱好者。",
+ "date": "2026-11-13",
+ "features": [
+  "针对 Apple Silicon 优化的 MoE 推理，显著降低内存占用",
+  "支持 Qwen 3.8 Flash Next（125B）和 Qwen3.6-35B-A3B 等模型",
+  "提供 OpenAI 兼容的本地 API 服务器，便于集成",
+  "可通过配置文件调整上下文长度、专家缓存等参数以平衡速度与内存",
+  "包含基准测试工具和详细的架构文档"
+ ],
+ "intro": "MoEShift 是一个针对 Apple Silicon 优化的混合专家（MoE）模型推理运行时，旨在让大型 AI 模型在内存有限的 Mac 上运行。它通过 SSD 专家运行时和内存管理技术，显著降低峰值内存占用，并提升推理速度。\n\n项目目前处于 Alpha 阶段，核心运行时已可用，并提供了针对 Qwen 3.8 Flash Next（125B）和 Qwen3.6-35B-A3B 等模型的测试与基准数据。在 Mac mini M4 Pro（24GB 统一内存）上，运行 125B 模型时峰值内存可控制在 10GB 以下，同时保持可用的生成速度。\n\nMoEShift 提供 OpenAI 兼容的 API 服务器，可轻松集成到支持该协议的聊天或编码应用中，所有推理均在本地完成，无需云订阅。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保你的 Mac 搭载 Apple Silicon 芯片且至少有 10GB 内存，并安装 Homebrew。",
+  "在终端运行：brew install davide-troiani/moeshift/moeshift",
+  "运行 moeshift 启动设置向导，选择模型以下载并自动配置。",
+  "使用 curl 测试 API：curl http://127.0.0.1:8080/v1/chat/completions -H 'Content-Type: application/json' -d '{\"model\":\"qwen-3.8-flash-next-rco-gsq-iq3-xxs\",\"messages\":[{\"role\":\"user\",\"content\":\"Say hello in one sentence.\"}],\"chat_template_kwargs\":{\"enable_thinking\":false},\"max_tokens\":128,\"stream\":false}'",
+  "在支持 OpenAI 兼容 API 的客户端中，将 Base URL 设置为 http://127.0.0.1:8080/v1，模型设置为 qwen-3.8-flash-next-rco-gsq-iq3-xxs。"
+ ],
+ "summary": "MoEShift 是一个专为 Apple Silicon Mac 设计的混合专家模型推理工具，旨在让大型 AI 模型在内存有限的设备上运行。它通过优化内存使用和 SSD 专家调度，显著降低峰值内存占用，并提升推理速度。适合希望在本地运行大模型、同时保持系统响应性的开发者和用户，所有推理均在本地完成，无需云服务。",
+ "tagline": "在 Apple Silicon Mac 上高效运行大型 MoE 模型"
+}

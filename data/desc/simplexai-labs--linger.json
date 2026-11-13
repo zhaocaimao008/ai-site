@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望在自己的电脑上运行个人 AI 助手的开发者和普通用户。",
+ "date": "2026-11-13",
+ "features": [
+  "本地运行：模型和记忆存储在本地设备，保护隐私",
+  "高效 MoE 推理：PolyStrata 技术让大模型在有限 GPU 内存下运行",
+  "跨应用上下文：理解授权文件和应用程序中的工作内容",
+  "Wiki 与记忆：记住重要信息、偏好和决策，供所有 Agent 搜索",
+  "主动助手：监控收件箱、日历和 Slack，主动推进工作",
+  "Agent 团队：通过 team.md 协调多个 Agent 共同完成任务"
+ ],
+ "intro": "Linger 是一个开源的个人 AI 助手，完全运行在你自己的电脑上。它通过高效的模型与执行框架协同设计，让消费级 Mac 和 PC 也能运行强大的本地 AI，从而摆脱对云端服务的依赖。\n\n在本地模式下，你的数据和记忆都保存在设备上，隐私性更强。Linger 能跨授权的文件和应用程序理解上下文，记住重要信息，并主动跟进任务。它还支持 Agent 团队协作，通过一个 team.md 文件让多个智能体共同完成复杂工作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的桌面应用安装包（macOS Apple silicon、Windows x64 或 Linux x64）",
+  "安装并打开应用，在设置界面点击 Quick Install 在本机设置 Linger 服务器",
+  "或者使用 Docker Compose：克隆仓库后运行 `cp .env.example .env` 和 `docker compose up --build --detach --wait`",
+  "创建所有者账户：`printf '%s\\n' 'test1234' | docker compose exec -T teamhub teamhub-account create-owner --email owner@linger.local --password-stdin`",
+  "打开 http://localhost:3000 并登录"
+ ],
+ "summary": "Linger 是一个完全运行在个人电脑上的开源 AI 助手，旨在让普通用户在自己的设备上使用强大的本地 AI。它通过模型与执行框架的协同设计，在消费级 Mac 和 PC 上实现高效推理，并支持跨应用理解上下文、记忆重要信息以及主动推进任务。适合注重数据隐私、希望摆脱云端依赖的用户。",
+ "tagline": "完全运行在个人电脑上的开源本地 AI 助手"
+}

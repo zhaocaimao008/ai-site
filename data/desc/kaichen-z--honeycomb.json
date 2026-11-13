@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频世界模型、场景记忆表示与视频生成的研究者和工程师，需要具备多 GPU 训练环境与深度学习工程经验。",
+ "date": "2026-11-13",
+ "features": [
+  "HexMemory 固定大小六平面场景记忆表示",
+  "基于 Wan2.2-TI2V-5B 的记忆条件视频生成",
+  "循环 writer 与可选替换 writer 两种记忆更新方式",
+  "完整数据处理流程：片段准备、几何、字幕、VAE 编码与 LMDB 打包",
+  "两阶段训练：VACE 条件分支与骨干 LoRA 适配器",
+  "提供语料构建、训练和推理脚本入口"
+ ],
+ "intro": "Honeycomb 是一个视频世界模型研究项目，核心是作者提出的 HexMemory：一种低秩表示，用总共六个空间与时空平面把场景特征存进固定大小的记忆中。项目基于 Wan2.2-TI2V-5B 视频模型构建，通过记忆条件生成和循环的 HexMemory 更新来生成视频。\n\n代码覆盖从数据准备到推理的完整流程：先处理 RealEstate10K 和 SpatialVID 的片段并做 VAE 编码，再训练 writer（默认是循环 writer，另有可选的替换 writer），然后用训练好的 writer 构建 HexMemory 语料并打包成 LMDB，最后分两阶段训练视频模型——阶段一训练连接 HexMemory 与视频模型的条件分支，阶段二冻结该分支并训练 LoRA 适配器。\n\n推理时需要准备好的片段、Wan 预训练权重以及 writer、阶段一 VACE、阶段二 LoRA 三个检查点，文本描述从 clip.txt 读取，相机与深度信息从 geometry.npz 读取。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "conda env create -f environment.yml && conda activate honeycomb",
+  "export PYTHONPATH=\"$PWD/src:$PWD${PYTHONPATH:+:$PYTHONPATH}\"",
+  "将 Wan2.2-TI2V-5B 预训练文件放到 data/Wan-AI/Wan2.2-TI2V-5B/",
+  "按 data_process/README.md 准备片段并运行 data_process.run_video_vae_encode 编码",
+  "训练 writer：python recurrent_writer/train_rec.py --packs ... --val-packs ... --out runs/recurrent_writer --tag recurrent",
+  "用 scripts/build-hexmemory-corpus.sh 构建语料，再依次运行 scripts/train-stage1.sh 和 scripts/train-stage2.sh"
+ ],
+ "summary": "Honeycomb 研究视频世界模型中的场景记忆问题，提出 HexMemory：用六个空间与时空平面把场景特征压缩进固定大小的记忆，避免记忆随视频长度增长。项目基于 Wan2.2-TI2V-5B，提供从片段处理、writer 训练、语料构建到两阶段视频模型训练和推理的完整代码流程，适合研究长时视频生成与场景一致性的开发者参考复现。",
+ "tagline": "用固定大小六平面记忆表示场景的视频世界模型"
+}

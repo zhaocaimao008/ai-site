@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要让 AI 代理执行真实网页操作（如比价、信息收集）的开发者，以及希望在不被反爬拦截的情况下进行浏览器自动化的用户。",
+ "date": "2026-11-13",
+ "features": [
+  "通过 MCP 协议接入 Claude Code、Codex、Gemini CLI 等 AI 助手",
+  "独立 Web UI 模式，聊天与实时浏览器并排显示",
+  "运行在 stealth Firefox 上，降低被反爬和验证码拦截的概率",
+  "支持代理、固定种子、持久化配置文件等启动选项",
+  "提供 Python 库 invisible_playwright 用于编写代码而非提示词"
+ ],
+ "intro": "invisible_playwright_mcp 是一个基于 Playwright 的 MCP 服务器，它运行在 stealth Firefox 上，旨在让 AI 代理在浏览网页时不被反爬系统和验证码识别。项目提供两种使用方式：通过 MCP 协议接入 Claude Code、Codex 或 Gemini CLI 等助手，或者以独立 Web UI 形式运行，用户提供 OpenRouter key 即可在左侧聊天、右侧实时观看浏览器操作。\n\n它支持代理、固定浏览器指纹种子、持久化配置文件等选项，并附带一个 wiki 提供 AI 浏览器代理的指南和对比。项目还包含底层引擎 invisible_playwright 和指纹核心 invisible_core，适合需要真实网页自动化而非 API 调用的场景。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv：Windows 使用 `powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"`，Linux 使用 `curl -LsSf https://astral.sh/uv/install.sh | sh`",
+  "在 Claude Code 中安装插件：`claude plugin marketplace add oss-invisible/playwright_mcp` 然后 `claude plugin install invisible-playwright-mcp@oss-invisible`",
+  "或启动独立 Web UI：`uvx invisible-playwright-mcp ui --openrouter-key sk-or-...`",
+  "打开 http://127.0.0.1:8765 开始使用"
+ ],
+ "summary": "这个项目让 AI 代理通过 MCP 协议或独立 Web UI 控制一个 stealth Firefox 浏览器，从而在反爬和验证码环境下完成真实网页操作。它适合需要让 AI 助手自动浏览网站、读取页面信息或执行点击等交互的场景，比如比价、信息收集等。项目提供代理、固定指纹种子和持久化配置等选项，并附带相关指南。",
+ "tagline": "让 AI 代理在反爬环境下自动浏览网页的 MCP 服务器"
+}

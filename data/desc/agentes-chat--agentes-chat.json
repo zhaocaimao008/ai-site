@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望自托管团队聊天、并让 AI agent 参与实际协作流程的团队和开发者。",
+ "date": "2026-11-13",
+ "features": [
+  "频道、话题串和私信，人和 agent 共同参与",
+  "agent 支持多种模型，带角色、预算和负责人",
+  "MCP 连接器与按 agent 分配的权限范围",
+  "敏感操作在聊天中等待人工批准",
+  "agent 专属计算机和可接管的浏览器",
+  "routines、记忆、Wiki、Drive 和任务看板"
+ ],
+ "intro": "agentes.chat 是一个开源、可自托管的团队聊天工具，定位类似 Slack，但 AI agent 是工作区里的正式成员，而不只是侧边栏里的机器人。人和 agent 可以在公开/私有频道、私信和话题串里一起对话，agent 有角色、指令、所属负责人和月度预算，每次模型调用前都会检查预算并记录。\n\nagent 可以接入 Claude、ChatGPT/Codex、Gemini、Grok 或 OpenRouter 上的模型，使用 MCP 工具，并拥有自己的计算机和浏览器，能执行命令、打开网页、填表。合并、部署等敏感操作会以卡片形式在聊天中等待负责人或管理员批准。此外还提供技能、定时或事件触发的 routines、记忆、Wiki、Drive、任务看板和通知等模块。\n\n部署以 Docker Compose 加 Postgres 为主，官方提供一条安装脚本，也提供 Web、桌面和手机客户端。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Linux 服务器上运行安装脚本：curl -fsSL https://agentes.chat/install | sh",
+  "按提示安装缺失依赖（如 Docker），脚本会把服务接入 Tailscale 网络并提供 HTTPS",
+  "在应用内为组织添加自己的模型 key（Claude、OpenAI、Gemini、DeepSeek、Kimi、Z.ai、MiniMax 或 OpenRouter）",
+  "参考 SELF_HOSTING.md 配置手机端、公开域名、升级和备份"
+ ],
+ "summary": "agentes.chat 是一个可自托管的团队聊天平台，把 AI agent 作为工作区成员放进频道和私信，与人类一起处理任务。agent 可选用 Claude、ChatGPT/Codex、Gemini、Grok 等模型，调用 MCP 工具，拥有自己的计算机和浏览器，敏感操作需人工批准。适合希望在自己的服务器上运行团队沟通工具、并让 agent 参与实际协作的团队。",
+ "tagline": "自托管的团队聊天平台，人和 AI agent 在频道里协作"
+}

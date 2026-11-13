@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex 等编码 agent，并希望用可量化指标（测试通过数、耗时、体积等）约束 agent 改动的开发者。",
+ "date": "2026-11-13",
+ "features": [
+  "用 climb.py try 逐步评估改动，只有分数提升且守卫通过才提交",
+  "锁定测试、基准和 fixture 文件，拒绝 agent 修改检查来「作弊」",
+  "支持多个仓库、多个检查并行运行，并统一成一个分数",
+  "自动回滚失败步骤，包括新增文件，不留半成品",
+  "磁盘日志记录每一步与完整输出，支持 status 查看进度",
+  "支持 --runs、--paired、holdout 检查等方式降低噪声与过拟合"
+ ],
+ "intro": "Hill Climb 是一个面向编码 agent 的技能，配套一个单文件 Python 脚本 climb.py。它要求 agent 先给出一个能打印出分数的检查命令（测试、基准、体积统计等），之后 agent 每做一小步改动，都由脚本运行检查并读取分数：分数变好且守卫（旧测试、类型检查、lint）仍通过，就提交这一步；变差、持平或守卫失败，就回滚整棵工作树。\n\n脚本还会锁定测试与基准文件，agent 试图修改检查本身会被拒绝。每一步都写入磁盘日志，因此即使上下文被压缩或会话崩溃，也能通过 status 查看当前分数、历史步骤和备注，继续往上爬。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code 插件方式：/plugin marketplace add Bil0000/Hill-Climb",
+  "再执行 /plugin install hill-climb@hill-climb",
+  "或手动克隆仓库，将 skills/hill-climb 复制到 ~/.claude/skills/ 或 ~/.codex/skills/",
+  "在 agent 中提出目标，例如 /hill-climb make the test suite 2x faster",
+  "agent 会先构建检查命令并初始化，然后逐步执行 climb.py try 进行爬坡"
+ ],
+ "summary": "Hill Climb 针对编码 agent 声称「已完成」却无法验证的问题：它让 agent 先定义一个能输出分数的检查命令，之后每一步改动都由脚本实测，只有分数变好且旧测试等守卫仍通过才提交，否则整棵树回滚；修改测试文件本身会被拒绝。适合需要让 agent 在测试修复、性能优化、体积缩减等可量化目标上可靠推进的场景。",
+ "tagline": "让编码 agent 用可量化的分数证明「做完了」"
+}

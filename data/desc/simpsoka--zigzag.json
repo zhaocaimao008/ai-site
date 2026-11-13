@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要把矢量图转成刺绣文件的刺绣爱好者、数字化师，以及希望用 AI 代理辅助设计流程的开发者。",
+ "date": "2026-11-13",
+ "features": [
+  "将 SVG 图形转换为刺绣针迹，支持填充、描边、文字等元素",
+  "提供多种针迹类型：Fill（tatami）、Satin、Run、Contour、Appliqué、Cross-stitch 等",
+  "导出 PES、DST、EXP、JEF、VP3 格式，支持 Brother Skitch（PP1）蓝牙直传",
+  "内置 MCP 支持，AI 代理可创建和编辑设计",
+  "走线规划：去除重叠、优化顺序、隐藏移动针迹、减少剪线",
+  "提供面料预设和数字化检查（窄填充、宽 satin、小字、绣框适配等）"
+ ],
+ "intro": "ZigZag 是一款用 Rust 编写的可视化刺绣编辑器，支持 Mac 和 Windows。它可以把 SVG 矢量图转换成机器刺绣针迹，在编辑器里直观地调整，再导出为 PES、DST、EXP、JEF 或 VP3 等格式，兼容多种刺绣机；也支持通过蓝牙把设计直接发送到 Brother Skitch（PP1）。\n\n项目内置 MCP（Model Context Protocol）支持，AI 代理可以参与创建和编辑设计。Rust 引擎和 zigzag 命令行工具在编辑器之外提供同一套工作流。软件提供多种针迹类型（如 tatami 填充、satin、running、appliqué 等），并带有重叠去除、走线规划、面料预设和数字化检查等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Mac：下载 ZigZag.dmg，打开后拖入 Applications 即可，无需安装 Rust",
+  "Windows：下载最新 release 中的 ZigZag-<version>-x86_64-windows.zip，解压后双击 ZigZag.exe",
+  "从源码构建 CLI 和 MCP bridge：cargo build --release",
+  "构建含编辑器和 Skitch 上传的版本：cargo build --release --features gui,ble"
+ ],
+ "summary": "ZigZag 是一个开源的刺绣编辑工具，主要解决把 SVG 矢量图转成可上机的刺绣针迹、并在可视化界面里调整设计的问题。它支持导出多种常见刺绣格式，也能通过蓝牙直接发送到 Brother Skitch。项目还内置 MCP 支持，让 AI 代理参与设计流程，适合需要数字化刺绣文件或探索 AI 辅助设计的用户。",
+ "tagline": "用 Rust 编写的开源刺绣编辑器，支持 AI 代理协作"
+}

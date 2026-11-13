@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要从多个网站下载媒体文件的普通用户，以及希望通过 AI 代理自动化下载流程的开发者。",
+ "date": "2026-11-13",
+ "features": [
+  "从 YouTube、Instagram、TikTok、X、Reddit、Twitch 及 yt-dlp 支持的网站下载视频、音频和图片",
+  "支持种子文件下载",
+  "内置 MCP 服务器，允许 Claude Code、Cursor、VS Code、Codex 等 AI 客户端排队和管理下载",
+  "可在应用窗口内运行 Claude Code、Codex、Gemini CLI 和本地模型作为代理",
+  "提供下载队列、重试、暂停、恢复和取消等管理功能",
+  "本地运行，无账号、无广告、无下载内容遥测"
+ ],
+ "intro": "OmniGet 是一款免费开源的桌面下载工具，支持 Windows、macOS 和 Linux。它可以从 YouTube、Instagram、TikTok、X、Reddit、Twitch 以及 yt-dlp 支持的各种网站下载视频、音频、图片和种子文件。\n\n除了手动粘贴链接下载，OmniGet 还内置了 MCP 服务器，让 Claude Code、Cursor、VS Code 和 Codex 等 AI 客户端能够直接排队、等待并管理下载任务。同时，它也能在窗口内运行 Claude Code、Codex、Gemini CLI 和本地模型作为代理。\n\n所有下载都在本地进行，无需账号，没有广告，也不对下载内容进行遥测。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 getomniget.com 或 GitHub Releases 下载并安装 OmniGet",
+  "在 OmniGet 中打开 LLM → MCP → Your endpoint，开启 MCP 服务器",
+  "为你的 AI 客户端创建连接并勾选权限，复制页面生成的配置片段",
+  "对于 Claude Code，在终端执行：read -rs OMNIGET_MCP_TOKEN && export OMNIGET_MCP_TOKEN",
+  "然后执行：claude mcp add --transport http --scope project omniget <address from the page> --header 'Authorization: Bearer ${OMNIGET_MCP_TOKEN}'"
+ ],
+ "summary": "OmniGet 是一个跨平台的开源下载工具，能从 YouTube、Instagram、TikTok 等众多网站下载视频、音频和图片，也支持种子文件。它内置 MCP 服务器，让 Claude Code、Cursor 等 AI 客户端可以排队和管理下载任务，还能在窗口内运行 AI 代理。适合需要批量下载媒体或想用 AI 自动化下载流程的用户。",
+ "tagline": "支持AI代理调用的开源视频下载器"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 AI Agent 行为、做 prompt 工程或需要审计产品指令的开发者与研究者。",
+ "date": "2026-11-13",
+ "features": [
+  "按厂商和产品归档 system prompt、工具 schema 与 harness 配置",
+  "区分抓取所得与转述所得，并标注日期、版本和大小",
+  "提供 OrcaReplay 抓取流程，可复现并 diff 验证",
+  "记录同一模型在不同 harness 或不同模式下的 prompt 差异",
+  "提供 CAPTURES.md 与 UPSTREAM.md 索引每个文件的来源"
+ ],
+ "intro": "OrcaPromptVault 是一个公开档案库，收录当前各类 AI 产品背后的 system prompt、developer instructions、tool schemas 和 agent harness。项目把每个文件区分为「Captured」（由本地代理在真实 harness 运行时抓取，附版本、模式和复现命令）与「Reported」（服务端组装、无法从本地抓取，只能由模型复述得到），并明确提示两者的可信度差异。\n\n档案覆盖 OpenAI、Anthropic、Google、xAI、Cursor、Moonshot、Alibaba、DeepSeek 等厂商的产品，也包含 OpenCode、Devin、Windsurf、Cline、Manus 等独立工具。README 还给出若干可直接对照文件核验的观察，例如同一模型在不同 harness 下收到的指令和工具数量不同，交互模式与 -p 模式发送的 prompt 也不一样。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 OrcaReplay：npm i -g orcareplay",
+  "克隆抓取工具仓库：git clone https://github.com/Continuum-AI-Corp/OrcaReplay",
+  "运行抓取命令，例如：node capture/capture.mjs claude --model claude-opus-5",
+  "将生成的抓取文件按 CONTRIBUTING.md 提交 pull request"
+ ],
+ "summary": "这个项目把各类 AI 产品在用户开口之前发给模型的系统提示词、开发者指令和工具定义整理成可追溯的档案。它区分本地代理实际抓取的文本与只能由模型复述的服务端文本，并附上复现命令，方便开发者对照版本差异、理解 Agent 行为变化，适合做 prompt 研究或产品指令审计。",
+ "tagline": "可版本化、可验证的 AI Agent 系统提示词与工具定义档案库"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用编程智能体进行开发的程序员，尤其是需要在多设备间切换或远程控制智能体的用户。",
+ "date": "2026-11-13",
+ "features": [
+  "支持 Claude Code、Codex、Cursor 等多种编程智能体",
+  "桌面、Web 和手机客户端同步线程",
+  "每个线程独立 worktree，内置 Git 操作",
+  "远程访问，可通过局域网、Tailscale 或 T3 Connect 连接",
+  "开源 MIT 许可，可自由分支"
+ ],
+ "intro": "T3 Code 是一个开源的编程智能体控制平面，它在你自己的机器上运行 Claude Code、Codex、Cursor 等智能体，并提供一个统一的快速界面。你可以在桌面开始一个线程，然后在手机上批准下一步操作。\n\n它支持多种智能体，包括 Claude Code、Codex、Cursor、OpenCode 等，以及任何 ACP 智能体。T3 Code 不转售 token，而是驱动你已登录的智能体。所有客户端共享同一组线程，支持桌面、Web 和手机。每个线程可以在独立的 worktree 中工作，内置 Git 功能，可查看差异并一键提交、推送和创建 PR。\n\n项目采用 MIT 许可证，注重性能，并支持远程访问。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装桌面应用：macOS 使用 `brew install --cask t3-code`，Windows 使用 `winget install T3Tools.T3Code` 或 `scoop install extras/t3code`",
+  "或通过命令行安装：`curl -fsSL https://t3.codes/install.sh | sh`，然后运行 `t3` 启动服务器并打开 Web 应用",
+  "在手机上安装 App Store 或 Google Play 应用，并按照远程访问文档连接电脑",
+  "确保至少安装并登录一个智能体，例如运行 `claude auth login` 或 `codex login`"
+ ],
+ "summary": "T3 Code 是一个开源的控制平面，让你在任意电脑或手机上统一操作 Claude Code、Codex 等编程智能体。它在你本机运行智能体，提供桌面、Web 和手机客户端，线程状态实时同步，并内置 Git 工作流。适合需要远程协作、多设备切换或同时使用多个智能体的开发者。",
+ "tagline": "统一控制多种编程智能体的开源控制平面"
+}

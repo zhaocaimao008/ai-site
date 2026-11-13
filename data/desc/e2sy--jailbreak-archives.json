@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合 AI 安全研究员、红队成员以及希望加固模型防御的开发者使用，也适合对对抗性提示工程感兴趣的学习者参考。",
+ "date": "2026-11-13",
+ "features": [
+  "结构化条目：每个条目包含原始载荷、模型版本、接口、机制说明和缓解措施",
+  "YAML 前置元数据：支持程序化解析，包含 entry_id、model_family、technique、status 等字段",
+  "版本化快照：条目固定到具体模型版本，便于复现回归测试",
+  "厂商协调披露：内置披露工作流，支持 Restricted 状态以暂不公开敏感条目",
+  "状态分类：Active、Unverified、Patched、Restricted 四种机器可读标签",
+  "CI 验证：每次推送和 PR 自动运行 Markdown lint、结构检查和秘密扫描"
+ ],
+ "intro": "Jailbreak Archives 是一个面向 AI 安全研究的结构化归档项目，收集并整理了针对主流大语言模型（如 ChatGPT、Claude、DeepSeek、Grok、Qwen、GLM 等）的越狱提示词和对抗性提示工程技术。每个条目都固定到具体的模型版本，并附带结构化的 YAML 元数据，包括模型家族、技术类型、状态、机制和缓解措施，便于下游的检测规则、系统提示加固和评估工具进行基准测试。\n\n该归档遵循负责任的披露流程，仅收录经过厂商协调或可安全公开的技术。当厂商发布缓解措施后，条目状态会更新为 Patched，但条目本身保留作为回归测试的参考，从而维护可审计的历史记录。项目还提供了状态分类（Active、Unverified、Patched、Restricted）、贡献者致谢、可引用元数据以及 CI 验证（Markdown lint、结构检查、秘密扫描）。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/e2sy/jailbreak-archives.git",
+  "进入项目目录：cd jailbreak-archives",
+  "浏览 Archive Index 表格，按模型家族或技术类型查找条目",
+  "打开对应条目文件，查看原始载荷、YAML 元数据和机制说明"
+ ],
+ "summary": "Jailbreak Archives 是一个系统化整理大语言模型越狱提示词和对抗性提示技术的归档项目。它针对 ChatGPT、Claude、DeepSeek 等主流模型，将每个技术条目固定到具体版本，并附带结构化元数据，方便安全研究人员进行红队测试、检测规则开发和系统提示加固。项目遵循负责任的披露流程，适合 AI 安全领域的开发者和研究者参考使用。",
+ "tagline": "结构化、版本化的 LLM 越狱提示词归档库"
+}

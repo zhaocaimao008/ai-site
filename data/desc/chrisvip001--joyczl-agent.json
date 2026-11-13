@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望完全掌控个人助理数据与记忆的开发者，以及需要本地运行、可审计 AI 代理的普通用户。",
+ "date": "2026-11-13",
+ "features": [
+  "本地 SQLite + FTS5 存储，单进程管理 state.db，数据不出本地",
+  "追加式记忆账本，每轮一行，可查看检索决策、工具调用和成本，索引可重建",
+  "29 个内置工具（21 个常开，8 个开关控制）并支持 MCP 服务器",
+  "12 种预适配模型提供商，支持 Ollama 离线运行，可通过 /model add 动态添加",
+  "终端 REPL、仪表盘和聊天网关（Telegram、Discord、微信、飞书）多端交互",
+  "确定性回放评估和裁判评分，每次发布前自动门禁"
+ ],
+ "intro": "Joy 是一个完全运行在本地机器上的个人助理，核心用 Rust 实现，负责代理循环、记忆和 29 个内置工具；TypeScript 仅用于仪表盘和聊天网关，Python 是轻量 SDK。对话、state.db 和 API 密钥都留在本地，不上传云端。\n\n它的记忆系统采用追加式账本，每轮对话写入一行，打开任意行可查看该轮的检索决策、工具调用、模型回答和成本。记忆库通过 ledger 链接回源轮次，FTS5 索引可从账本重建，避免黑盒。\n\n支持终端、仪表盘和聊天网关（Telegram、Discord、微信、飞书）交互，内置 29 个工具和 MCP 服务器，可接入 12 种预适配的模型提供商，也支持 Ollama 离线运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载预编译二进制：curl -fL -o joy.tar.gz https://github.com/ChrisVip001/joyczl-agent/releases/download/v0.17.0/joy-v0.17.0-aarch64-apple-darwin.tar.gz",
+  "解压并赋予执行权限：tar -xzf joy.tar.gz && chmod +x joy",
+  "设置 API 密钥并启动仪表盘：DEEPSEEK_API_KEY=… ./joy dashboard",
+  "访问 http://localhost:7777 使用；无 API 密钥时可设置 JOY_PROVIDER=ollama 离线运行"
+ ],
+ "summary": "Joy 是一个完全本地运行的个人助理，核心用 Rust 实现，对话、数据库和密钥都留在本机。它把每轮对话写入追加式账本，可查看检索决策、工具调用和成本，记忆索引也能从账本重建，解决了多数代理记忆不透明的问题。适合注重隐私、需要可审计 AI 助手的开发者和普通用户，支持终端、仪表盘和聊天网关多种交互方式。",
+ "tagline": "本地优先的个人助理，记忆可查可重建"
+}

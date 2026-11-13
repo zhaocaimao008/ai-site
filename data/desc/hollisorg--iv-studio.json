@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想在自己电脑上制作 AI 短片、又希望角色保持一致的创作者和开发者，也适合已经使用 ComfyUI 或 Claude Code 等工具的用户。",
+ "date": "2026-11-13",
+ "features": [
+  "角色一致性：为演员设定脸和声音，在多个镜头中复用",
+  "基于 MiniMax H3 与 Seedance 生成镜头，支持图生视频和文生视频",
+  "内置视频编辑器，可剪辑、加字幕、配乐并导出",
+  "生成音乐与克隆声音，用于配音和配乐",
+  "通过 MCP 接入 Claude Code、Codex、Hermes，用对话驱动制作流程",
+  "支持本地 ComfyUI 或自有 RunPod、Modal、Comfy Cloud 云端渲染"
+ ],
+ "intro": "IV Studio 是一个免费开源的桌面应用，用来在自己的 PC 上制作 AI 短片。它由 Infinite Variance 开发，基于 MiniMax H3 模型，通过驱动本地的 ComfyUI 完成渲染，数据默认不离开本机。\n\n核心思路是让角色可以反复出现：先为演员设定脸和声音，再写镜头、生成预览、挑选最佳版本并放大成片。除了视频，还能生成图片、音乐和配音，并在内置编辑器里剪辑导出。没有强显卡时，可以把渲染放到自己账号下的 RunPod、Modal 或 Comfy Cloud 上按秒计费。\n\n应用支持 Windows、Mac 和 Linux，提供 214 个 MCP 工具，可让 Claude Code、Codex 或 Hermes 在应用内对话中调用，完成写镜头、渲染、剪辑等操作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应系统的安装包：Windows 用 IV-Studio-Setup.exe，Mac 用 dmg，Linux 用 AppImage",
+  "安装并启动 IV Studio，按欢迎页提示选择自己的熟悉程度",
+  "准备本地 ComfyUI 环境，或在设置中配置自己的 RunPod、Modal 或 Comfy Cloud 账号",
+  "为角色设定脸和声音，然后创建镜头并生成预览",
+  "在编辑器中剪辑、配乐、加字幕并导出成片"
+ ],
+ "summary": "IV Studio 是一个开源的桌面应用，让你在自己的电脑上制作 AI 短片。它通过本地 ComfyUI 驱动 MiniMax H3 等模型，重点解决角色在多个镜头中保持一致的问题：先给演员设定脸和声音，再写镜头、生成预览并放大成片，还能生成音乐和配音，最后在编辑器里剪辑导出。没有强显卡时，可把渲染放到自己的云 GPU 账号上。适合想本地制作 AI 短片、并希望用 Claude Code 等智能体辅助操作的创作者。",
+ "tagline": "在自己电脑上制作 AI 短片的开源桌面工作室"
+}
