@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合 Blender 用户、3D 艺术家和开发者，希望通过自然语言提高场景搭建效率，并保持对每一步操作的控制。",
+ "date": "2026-11-14",
+ "features": [
+  "通过自然语言指令构建和编辑 3D 场景，操作步骤可见且可撤销",
+  "支持多智能体团队协作，经理、执行者和审核者各司其职",
+  "集成多种 AI 提供商，包括 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等",
+  "在聊天中搜索并导入 Poly Haven、Sketchfab 和 Poly Pizza 的资产",
+  "使用视口截图让视觉模型验证结果",
+  "内置 MCP 服务器，允许外部客户端通过认证的本地端点驱动同一工具集"
+ ],
+ "intro": "Blender AI MCP Studio 是一个 Blender 扩展，将 AI 助手和内置的 Model Context Protocol（MCP）服务器集成到 Blender 中。它允许用户通过自然语言描述来创建、编辑和导出 3D 场景，所有操作都会在视口中可见，并且可以逐步批准和撤销。\n\n该扩展包含一个视觉聊天工作区，支持多智能体团队协作（经理、执行者和审核者），并允许用户选择多种 AI 模型提供商，如 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等。它还内置了资产搜索功能，可以从 Poly Haven、Sketchfab 和 Poly Pizza 导入资源。\n\nBlender AI MCP Studio 需要 Blender 4.2 或更高版本，目前仅支持 Windows x64 平台。它通过验证的工具集执行操作，确保每一步都可审查和回退，适合需要快速迭代 3D 场景的艺术家和开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk",
+  "选择 ZIP 文件，启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro",
+  "选择 AI 提供商，添加连接信息并选择模型",
+  "在 Blender 中发送消息或点击 Open Studio Window"
+ ],
+ "summary": "Blender AI MCP Studio 是一个 Blender 扩展，将 AI 助手和 MCP 服务器内置到 Blender 中，让用户通过自然语言描述来创建和编辑 3D 场景。它解决了手动进行重复性场景操作（如摆放物体、调整材质、导出变体）耗时的问题，并避免了使用无法感知场景的聊天工具或盲目修改场景的脚本。适合 3D 艺术家和开发者快速迭代场景，同时保持对每一步操作的控制和可撤销性。",
+ "tagline": "Blender 内置 AI 助手与 MCP 服务器，用自然语言操作 3D 场景"
+}

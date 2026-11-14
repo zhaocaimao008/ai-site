@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想了解 AI 应用工程实践（RAG、提示词评测、NL2SQL 安全）的开发者，以及准备 AI 应用工程师面试的求职者。",
+ "date": "2026-11-14",
+ "features": [
+  "InsightRAG：混合检索（BM25 + 字符 n-gram 向量）与 RRF 融合，证据可回放到原文，逐句引用校验，金标评测输出 Recall@k、MRR 等指标。",
+  "PromptLens：不可变提示词版本注册表，可复现实验，失败隔离与重试，成本估算，重复运行稳定性汇总，生成离线 HTML 报告。",
+  "DataChat BI：自然语言到只读 SQL 的多层安全边界，包括词法预检、表白名单、受控 JOIN、只读执行层和审计日志。",
+  "三个项目均提供离线演示和自动化测试，默认无需 API Key，可通过 OpenAI 兼容接口接入真实模型。",
+  "一键启动脚本 start_all.py 启动两个 Web 服务，verify_all.py 运行全部测试和离线演示。"
+ ],
+ "intro": "这是一个面向 AI 应用工程师求职的作品集，包含三个可独立运行的项目：InsightRAG 是可追溯的中文知识库问答系统，PromptLens 是提示词版本管理与可复现评测工具，DataChat BI 是受守护的自然语言到 SQL 分析工具。每个项目都提供完整源码、确定性演示数据、自动化测试和可查看产物，默认离线运行，无需 API Key。\n\n项目强调工程边界与可复现性：InsightRAG 保留证据偏移并校验引用编号，PromptLens 用哈希固定提示词版本和输入，DataChat BI 通过多层防线限制 SQL 只能只读且访问白名单表。所有指标都能用仓库命令复现，限制也在文档中明确写出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：python -m pip install -r requirements.txt",
+  "一键启动 Web 服务并打开展示页：python start_all.py",
+  "运行全部测试和离线演示：python verify_all.py",
+  "单独运行项目演示：cd insightrag && python demo.py --eval-output artifacts/evaluation.json",
+  "单独运行 PromptLens 演示：cd promptlens && python demo.py",
+  "单独运行 DataChat BI 演示：cd datachat_bi && python demo.py"
+ ],
+ "summary": "这个仓库包含三个可独立运行的 AI 工程项目：InsightRAG 解决知识库问答中答案缺乏依据的问题，通过混合检索和引用校验让回答可追溯；PromptLens 解决提示词改动难以复盘的问题，用版本哈希和可复现实验输出对比报告；DataChat BI 解决自然语言生成 SQL 的安全隐患，通过多层防线确保只读和表白名单。适合想学习 AI 应用工程实践或准备相关面试的开发者。",
+ "tagline": "三个可运行的 AI 工程项目：RAG、提示词评测与安全 NL2SQL"
+}

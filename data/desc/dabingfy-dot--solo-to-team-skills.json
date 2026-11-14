@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在用或准备同时使用多个 AI 助手、需要自己统筹派活与验收的开发者与运营人员；零基础读者也可先从模板和示例练起。",
+ "date": "2026-11-14",
+ "features": [
+  "派收登记：派活前记「待收」，收到成果、验收完成分别登记，未完成的活一眼可见",
+  "交活前证据核对：说完成前须有对得上当前版本的有效证据，改过的部分补核",
+  "新手操作说明写作：一次一步、点名唯一、写清做完会看到什么",
+  "脱敏运营案例：记录真实问题、改法、结果与仍未解决之处",
+  "多宿主安装指引：按 Codex、Cursor、WorkBuddy 等分别给出取得、加载、调用方式"
+ ],
+ "intro": "这是一套面向「一个人总控、多个长期 AI 助手」场景的协作技能包，包含四支技能、一个登记行模板、说明文档和脱敏案例。它针对的是派活后没人收、说「做好了」却没有证据、操作说明新手看不懂、踩过的坑无法复用这几类常见问题。\n\n核心流程是一条线：提目标 → 分工 → 交接 → 核对 → 判断。四支技能分别覆盖派收登记（dispatch-accept-verify）、交活前证据（evidence-before-done）、新手操作说明写作（beginner-ops-writing）和真实运营案例（ops-case-notes）。技能正文各家共用，不另做 App；定时提醒、跨助手消息等能力依赖宿主工具本身，本包不自带（hooks 为空）。\n\nREADME 列出了 Codex、WorkBuddy、DeepSeek Harness、Cursor、CodeBuddy、Kimi Work、千问办公等宿主的安装与调用方式，并说明各家的验证范围与局限。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载或克隆本仓库，拿到 skills/ 目录（四个子目录，每个含一个 SKILL.md）",
+  "手动拷贝时整目录拷入宿主技能目录，如 Cursor 为 ~/.cursor/skills/<技能名>/",
+  "Codex 用户可执行：codex plugin marketplace add \"$(pwd)\" 与 codex plugin add solo-to-team-skills@solo-to-team-skills",
+  "先启用 dispatch-accept-verify 和 evidence-before-done 两支技能，按技能名调用",
+  "照 examples/ 主示例跑一遍「待收 → 已接单 → 到点查 → 已收到成果 → 已验收」"
+ ],
+ "summary": "这个项目面向一个人同时管理多个 AI 助手的场景，把派活、交接、核对、判断这条线拆成可复用的技能。它用登记行记录每件活的待收、已收到成果和已验收状态，要求交活前拿出对得上当前版本的证据，并附有新手操作说明写法和脱敏运营案例。技能正文各家共用，可按 README 指引装进 Codex、Cursor 等宿主，定时提醒等能力则依赖宿主本身。",
+ "tagline": "一个人统筹多个 AI 助手的协作技能包"
+}

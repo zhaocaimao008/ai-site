@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Blender 进行 3D 场景搭建、产品可视化或概念设计的开发者与创作者，尤其是希望减少在多个资产网站间切换、并关注资产许可的用户。",
+ "date": "2026-11-14",
+ "features": [
+  "在对话中搜索 Poly Haven、Sketchfab 和 Poly Pizza 三个资产库",
+  "导入前需用户确认，并展示资产许可条款",
+  "提供 27 个场景工具，用于摆放、打光、材质和场景检查",
+  "内置 MCP 服务器，通过本地端点向外部客户端开放工具",
+  "支持多种模型提供商，服务密钥集中存储",
+  "界面支持中文、英文、德文、法文和西班牙文"
+ ],
+ "intro": "blender-ai-copilot-assets 是一个运行在 Blender 内的 AI 扩展，把资产搜索、场景搭建和灯光材质调整整合到同一个对话流程里。你可以在聊天中描述场景需求，它会搜索 Poly Haven、Sketchfab 和 Poly Pizza 三个免费资产库，返回候选结果并显示许可条款，只有在你确认后才会导入场景。\n\n除了资产导入，它还提供 27 个场景工具，用于摆放、打光、赋材质和检查现有对象。扩展内置 MCP 服务器，通过本地认证端点向 OpenCode 等兼容客户端开放同一套工具。支持 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等多种模型提供商，服务密钥统一保存在用户设置中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk",
+  "选择 ZIP 文件，启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro",
+  "选择模型提供商，填写连接信息并选择模型",
+  "在 Blender 中发送消息，或点击 Open Studio Window"
+ ],
+ "summary": "这个项目是一个 Blender 扩展，让你在对话中直接搜索 Poly Haven、Sketchfab 和 Poly Pizza 的免费 3D 资产，确认许可后再导入场景，省去在多个网站间切换的麻烦。它还提供 27 个场景工具用于摆放、打光和材质调整，并内置 MCP 服务器供外部客户端调用。适合需要快速搭建场景、同时关注资产许可的 Blender 用户。",
+ "tagline": "在 Blender 对话中搜索并导入免费 3D 资产的 AI 助手"
+}

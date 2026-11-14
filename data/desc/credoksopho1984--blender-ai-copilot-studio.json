@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合 Blender 用户、3D 艺术家和开发者，希望通过自然语言快速完成重复性场景搭建任务，或需要将 Blender 操作集成到自动化工作流中。",
+ "date": "2026-11-14",
+ "features": [
+  "27 个内置场景工具，支持创建物体、灯光、相机、材质、父子关系和变换等操作",
+  "多智能体团队模式：管理者拆分任务，执行者操作，审查者检查，任务板跟踪进度",
+  "支持多种 AI 提供商：OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 及自定义端点",
+  "本地认证 MCP 端点，允许外部客户端调用全部场景工具",
+  "逐操作审批、取消当前步骤后的操作、命名撤销步骤，保障操作可控",
+  "对话中搜索并导入 Poly Haven、Sketchfab 和 Poly Pizza 的资产（需确认）"
+ ],
+ "intro": "blender-ai-copilot-studio 是一个运行在 Blender 内部的 AI 副驾驶扩展，同时也是一个 MCP 服务器。它通过 27 个内置场景工具，将自然语言指令转化为有序的 Blender 操作，例如创建物体、灯光、相机、材质和父子关系等。每次操作前会先检查场景，并支持逐操作审批、取消和命名撤销，让用户保持控制。\n\n项目提供可视化聊天工作室，包含聊天、场景对象、视口快照和任务板。用户可以选择 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等多种 AI 模型，并保存连接配置。对于复杂任务，可以启用多智能体团队模式，由管理者、执行者和审查者协作完成。\n\n此外，扩展通过本地认证的 Streamable HTTP 端点（http://127.0.0.1:9876/mcp）将全部工具暴露给外部 MCP 客户端，如 OpenCode 等，方便在自动化工作流中调用。界面支持英语、德语、法语、西班牙语和中文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk，选择该 ZIP 文件",
+  "启用 mcp-for-blender-pro 扩展，然后打开 3D Viewport → N → MCP Pro 面板",
+  "选择 AI 提供商，填写连接信息并选择模型",
+  "在 Blender 中发送消息，或点击 Open Studio Window 打开工作室窗口"
+ ],
+ "summary": "blender-ai-copilot-studio 是一个 Blender 扩展，让用户用自然语言描述场景需求，由 AI 副驾驶通过 27 个内置工具执行多步操作，如搭建布局、设置材质和灯光。它提供可视化聊天界面和多智能体协作模式，支持多种 AI 模型，并可作为 MCP 服务器供外部客户端调用。适合希望减少重复手动操作、提升 Blender 场景搭建效率的用户。",
+ "tagline": "Blender 内的 AI 副驾驶与 MCP 服务器，用自然语言驱动场景操作"
+}

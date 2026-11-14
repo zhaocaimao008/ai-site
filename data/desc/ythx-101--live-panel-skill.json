@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要制作 agent 架构图、多 agent 面板或系统数据流示意图的开发者，以及想在 X、小红书发布动态架构图的创作者。",
+ "date": "2026-11-14",
+ "features": [
+  "一份 JSON 配置驱动，无需修改 HTML 模板",
+  "输出 H.264 mp4 或可循环的自包含网页",
+  "terminal-dark 与 light-pastel 两种视觉主题",
+  "画幅预设适配 X 和小红书",
+  "提供 SKILL.md，可作为 AI agent 技能使用",
+  "check_frames.py 检测文字溢出、重叠并验证帧一致性"
+ ],
+ "intro": "live-panel 是一个开源 agent skill 兼渲染器，把一份 JSON 配置渲染成动态架构图：终端监控面板风格的「live panel」，或浅色粉彩信息图。画面布局固定，但数据包沿连线流动、日志滚动、计数器跳动、状态条切换，看起来像系统正在运行。\n\n输入只需一个 JSON 文件，描述方框、连线、数据包路径、日志文字和计数器；HTML 模板无需改动。输出为 H.264 mp4（30fps，带静音 AAC 音轨）或可循环播放的自包含网页。提供 terminal-dark 与 light-pastel 两种主题，画幅预设适配 X（4:5）和小红书（3:4）。\n\n项目自带 SKILL.md，可作为 Claude Code、Codex 等能读取 SKILL.md 的 agent 的技能，由 agent 自行编写 JSON、渲染并检查画面。依赖 Python 3.8+ 标准库、Chrome/Chromium 和 ffmpeg，无需 API key 或 pip 包。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/ythx-101/live-panel-skill && cd live-panel-skill",
+  "渲染示例视频：python3 scripts/render.py --config examples/minimal/config.json --out minimal.mp4 --html-out minimal.html",
+  "检查画面：python3 scripts/check_frames.py --config examples/minimal/config.json --out-dir frames --repeat"
+ ],
+ "summary": "live-panel 解决的是架构图只能静态展示的问题：它读取一份 JSON 配置，把方框、连线、数据包流动、滚动日志和计数器渲染成会动的架构图，输出 mp4 视频或可循环网页。适合制作 agent 架构图、多 agent 面板、系统数据流示意图，以及发布到 X 和小红书的动态信息图。",
+ "tagline": "用一个 JSON 配置生成会动的架构图视频或网页"
+}

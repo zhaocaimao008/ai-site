@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在多台 DGX Spark 上部署 DeepSeek 模型的研究者和开发者，尤其是关注多用户推理性能与长上下文场景的团队。",
+ "date": "2026-11-14",
+ "features": [
+  "支持 1M 上下文长度",
+  "支持图像输入（通过 image_url 或 base64）",
+  "多用户共享，16 个槽位动态分配",
+  "提供 OpenAI 兼容 API",
+  "包含多项推理优化（如草稿共享、专家重路由、宽步进等）",
+  "附带性能测试工具 tools/bench/bench.py"
+ ],
+ "intro": "pico-dgx-ds4 是一个基于 blaesus/dsgx10 的 fork，目标是在 4 台 DGX Spark（GB10）上通过 200G RoCE 交换机组网，运行 DeepSeek V4.1 Flash 模型，并支持多用户共享。它使用 CUDA 编写，提供 OpenAI 兼容 API，支持 1M 上下文和图像输入。\n\n项目针对单用户和多用户场景做了多项优化，例如 17-bit 块索引、16 槽位调度、草稿共享、专家重路由、宽步进等，并提供了详细的性能对比数据。README 中列出了与上游和 sglang 的吞吐量对比，以及各项改动的说明和复现方法。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "pico-dgx-ds4 是一个针对 DeepSeek V4.1 Flash 的推理引擎，专为 4 台 DGX Spark 通过 RoCE 交换机组网的环境设计。它解决了多用户共享同一模型时的吞吐问题，支持 1M 上下文和图像输入，并提供 OpenAI 兼容 API。适合需要在本地多节点部署大模型、并关注长上下文与多用户并发的开发者。",
+ "tagline": "在 4 台 DGX Spark 上运行 DeepSeek V4.1 Flash 的推理引擎"
+}

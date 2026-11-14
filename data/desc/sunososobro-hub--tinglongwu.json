@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要跨语言开会或通话、又在意隐私、不希望音频上传云端的个人和团队。",
+ "date": "2026-11-14",
+ "features": [
+  "本地离线完成语音识别、翻译与语音合成，音频和文本不出本机",
+  "三种使用方式：实时字幕、通过虚拟麦克风朗读翻译、双向会议模式",
+  "支持中文、英文、日文、韩文和俄文",
+  "不保留录音，无需账号，无追踪",
+  "提供 Windows 安装包，以及 macOS 和 Linux 的安装脚本",
+  "普通 CPU 可运行，NVIDIA GPU 可加速"
+ ],
+ "intro": "tinglongWu（聽龍）是一款在本地运行的实时语音翻译工具，面向会议和通话场景。它把语音识别、翻译和语音合成都放在自己的电脑上完成，音频和文本不会上传到云端，也不保留录音，不需要账号。\n\n它提供三种用法：为视频、通话和会议中对方说的话显示字幕；用虚拟麦克风把自己的话翻译后送进通话；以及双向会议模式，同时处理双方语音，字幕区分“我”和“对方”。目前支持中文、英文、日文、韩文和俄文。\n\n项目用 Python 编写，采用 MIT 协议，提供 Windows、macOS 和 Linux 安装方式。首次安装需要联网下载语音和翻译模型，之后可完全离线使用。普通 CPU 即可运行，有 NVIDIA GPU 会明显更快。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 10/11：下载 tinglongwu-setup.exe 并运行，持续点击 Next 完成安装",
+  "macOS：执行 curl -fsSL https://github.com/sunososobro-hub/tinglongwu/releases/latest/download/mac_install.sh | bash",
+  "Linux (x86_64)：执行 curl -fsSL https://github.com/sunososobro-hub/tinglongwu/releases/latest/download/install.sh | bash",
+  "首次安装需联网下载语音和翻译模型，完成后即可离线使用"
+ ],
+ "summary": "tinglongWu 是一个在本地运行的实时语音翻译工具，用于会议和通话场景。它把语音识别、翻译和语音合成放在本机完成，音频与文本不上传云端，也不保留录音。它支持实时字幕、通过虚拟麦克风朗读翻译，以及双向会议模式，目前覆盖中、英、日、韩、俄五种语言，适合在意隐私的跨语言沟通场景。",
+ "tagline": "本地离线运行的实时语音翻译工具"
+}

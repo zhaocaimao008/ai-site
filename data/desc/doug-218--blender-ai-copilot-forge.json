@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用自然语言快速搭建 Blender 场景布局的 3D 设计师和开发者，也适合需要通过 MCP 将 Blender 工具集成到外部 AI 工作流的用户。",
+ "date": "2026-11-14",
+ "features": [
+  "根据一句描述分步生成完整场景布局，包括几何体、相机、灯光和重复排列的对象",
+  "在构建过程中按步骤分配命名材质，并显式设置父子层级",
+  "每个操作执行前需要审批，所有修改都留下具名撤销步骤",
+  "内置 27 个受监督的场景工具，可先检查场景再执行构建",
+  "提供本地 MCP 服务器，外部客户端可通过认证端点访问同一套工具",
+  "支持多种模型提供商和自定义 API 端点，界面可选中文"
+ ],
+ "intro": "blender-ai-copilot-forge 是一个 Blender 扩展，在侧边栏加入一个 AI 副驾驶。你用一句话描述想要的场景布局，它会先读取当前场景中已有的对象、结构和材质，再把任务拆成有序的构建步骤，逐步生成几何体、相机、灯光、材质和父子关系。\n\n每个操作在执行前都会征求你的同意，你可以随时停止；每次修改都会留下具名的撤销步骤，方便回退。它内置 27 个受监督的场景工具，并提供一个本地 MCP 服务器，外部客户端可以通过带认证的端点访问同一套工具。\n\n项目支持 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等多种模型提供商，界面语言包含中文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk，选择该 ZIP 并启用 mcp-for-blender-pro",
+  "打开 3D Viewport → N → MCP Pro 面板",
+  "选择模型提供商，填写连接信息并选择模型",
+  "在 Blender 中发送消息，或点击 Open Studio Window 开始使用"
+ ],
+ "summary": "这个项目为 Blender 加入一个 AI 副驾驶，让你用一句话描述场景布局，它便读取现有场景后分步生成几何体、相机、灯光、材质和父子关系。每一步操作都需你审批，修改会留下具名撤销记录，适合需要快速搭建场景原型或产品展示布局的 3D 工作者。它还内置 MCP 服务器，方便外部 AI 客户端调用同一套场景工具。",
+ "tagline": "Blender 场景搭建 AI 副驾驶，分步生成并审批"
+}

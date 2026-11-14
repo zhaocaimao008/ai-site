@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 Blender 中安全使用 AI 辅助建模、材质或场景编辑的 3D 艺术家和开发者，尤其是对操作可追溯性有要求的制作场景。",
+ "date": "2026-11-14",
+ "features": [
+  "每次工具调用执行前需用户批准，避免未经确认的修改。",
+  "支持在当前步骤完成后取消整个工作流，防止失控的多步计划。",
+  "每次修改生成命名撤销步骤，可从 Blender 撤销历史中跳回指定点。",
+  "按顺序执行编辑步骤，避免并行操作冲突。",
+  "执行前验证工具调用，拦截不允许的操作。",
+  "内置 MCP 服务器，外部客户端通过本地端点使用同一受控流程。"
+ ],
+ "intro": "blender-ai-copilot-flow 是一个 Blender 扩展，把 AI copilot 的每次编辑变成受监督的工具调用：先提议、经你批准、按顺序执行，当前步骤后可取消，并按名称撤销。它内置 MCP 服务器，通过本地认证端点向外部 MCP 客户端暴露同一套受控流程。\n\n项目通过 27 个受监督工具检查场景，支持 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等提供商。Python 工具验证会在执行前拦截不允许的操作，但并非安全沙箱。界面支持英文、德文、法文、西班牙文和中文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 mcp-for-blender-pro.zip。",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk。",
+  "选择 ZIP 文件，启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro。",
+  "选择提供商，填写连接信息并选择模型。",
+  "在 Blender 中发送消息，或点击 Open Studio Window。"
+ ],
+ "summary": "blender-ai-copilot-flow 解决的是在 Blender 中使用 AI 编辑时担心场景被意外改动的问题。它把每次 AI 操作变成需审批的步骤，按顺序执行，支持当前步骤后取消，并按名称撤销。适合需要可控、可追溯 AI 辅助的 3D 建模与场景制作，也通过内置 MCP 服务器向外部客户端提供同一套受监督流程。",
+ "tagline": "为 Blender 提供受控的 AI 编辑工作流，每一步操作都需审批、可撤销。"
+}

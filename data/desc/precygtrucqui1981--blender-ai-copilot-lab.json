@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合需要将复杂 Blender 场景构建流程结构化、可监督化的 3D 艺术家和开发者，也适合想用多 agent 协作完成建模任务的用户。",
+ "date": "2026-11-14",
+ "features": [
+  "manager agent 将 brief 拆分为带验收标准的 assignment",
+  "worker agent 通过 27 个受监督场景工具执行任务",
+  "reviewer agent 审核结果并返回具体发现",
+  "任务板实时展示 assignment、尝试和审核发现",
+  "每个阻塞任务仅一次修正机会，失败后停止",
+  "所有修改可命名撤销，支持逐操作审批",
+  "内置 MCP server，支持外部客户端连接"
+ ],
+ "intro": "blender-ai-copilot-lab 是一个 Blender 扩展，把复杂的场景需求拆解成由 manager、worker、reviewer 三类 agent 协作完成的多步骤任务。manager 负责将 brief 拆成带验收标准的 assignment，worker 通过 27 个受监督的场景工具执行，reviewer 则审核结果并给出具体发现。整个过程在任务板上实时可见，每个被阻塞的任务只有一次修正机会，第二次审核失败会如实停止。所有修改都留下命名撤销步骤，并内置 MCP server 供外部客户端调用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk",
+  "选择 ZIP 文件，启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro",
+  "选择 provider，填写连接信息并选择模型",
+  "在 Blender 中发送消息或点击 Open Studio Window"
+ ],
+ "summary": "blender-ai-copilot-lab 是一个 Blender 扩展，用 manager、worker、reviewer 三类 agent 把复杂场景需求拆成多步骤任务并监督执行。manager 拆分任务并定义验收标准，worker 通过受监督工具执行，reviewer 审核并给出发现。任务板实时展示进度，每个阻塞任务仅一次修正机会，所有修改可命名撤销。适合需要结构化、可追溯的 AI 辅助 3D 场景构建流程。",
+ "tagline": "Blender 多智能体协作实验场，任务板监督场景生成"
+}

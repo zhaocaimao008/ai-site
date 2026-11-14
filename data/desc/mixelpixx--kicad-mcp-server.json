@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 辅助完成 PCB 设计的硬件开发者，以及想为 KiCAD 构建 MCP 工具链的开发者。",
+ "date": "2026-11-14",
+ "features": [
+  "通过自然语言完成原理图编辑、元件放置与布线",
+  "生成自定义符号和封装，并管理个人元件库",
+  "运行 DRC/ERC 检查并导出生产文件",
+  "集成 JLCPCB 元件目录、价格与库存数据",
+  "通过 Java/Docker 调用 Freerouting 自动布线",
+  "提供快照和会话日志作为可视化反馈"
+ ],
+ "intro": "KiCAD MCP Server 是一个基于 Model Context Protocol（MCP）的服务端实现，让 Claude 等大语言模型能够直接与 KiCAD 交互，完成 PCB 设计自动化。它遵循 MCP 2025-06-18 规范，提供完整的工具 schema 和实时项目状态访问，使 AI 可以在对话中执行 EDA 操作。\n\n项目覆盖从工程创建、原理图编辑、元件放置、布线到 DRC/ERC 检查和生产文件导出的流程，并支持为不在标准库中的模块生成自定义符号与封装、管理个人元件库、接入 JLCPCB 元件目录与价格库存数据，以及通过 Java/Docker 调用 Freerouting 自动布线。\n\n服务端以 Python 和 TypeScript 实现，通过 KiCAD 的 Python API（SWIG）工作，另有实验性的 IPC 后端，可在 Windows、Linux、macOS 上运行。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 KiCAD 9.0+",
+  "安装 Node.js 18+ 和 Python 3.11+",
+  "克隆并构建：git clone --branch stable https://github.com/mixelpixx/KiCAD-MCP-Server.git && cd KiCAD-MCP-Server && npm install && npm run build",
+  "配置 AI 客户端，参考 docs/PLATFORM_GUIDE.md；VS Code 用户可将 config/vscode-mcp.example.json 复制为 .vscode/mcp.json",
+  "Claude Desktop 用户编辑 claude_desktop_config.json，参考 config 目录下的示例配置"
+ ],
+ "summary": "这个项目把 KiCAD 的 PCB 设计能力封装成 MCP 服务端，让 Claude 等 AI 助手能通过对话完成原理图编辑、元件放置、布线、DRC/ERC 检查和生产文件导出。它还支持自定义符号与封装、JLCPCB 元件数据查询和 Freerouting 自动布线，适合想用自然语言辅助硬件设计的开发者。",
+ "tagline": "让 Claude 等 AI 助手直接操作 KiCAD 设计 PCB"
+}

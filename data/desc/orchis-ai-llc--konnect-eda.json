@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 KiCad 10 并希望借助 AI 加速原理图与 PCB 设计的电子工程师、学生和爱好者。",
+ "date": "2026-11-14",
+ "features": [
+  "通过 MCP 让 AI 直接放置和连线原理图元件",
+  "利用 KiCad IPC API 实时布局、移动、旋转和布线 PCB 封装",
+  "运行 ERC、DRC、连接性验证、去耦审计、电源轨审查和 BOM 健康检查",
+  "导出 Gerber、钻孔、BOM、贴片坐标、3D 模型和 PDF 等生产文件",
+  "搜索本地 JLCPCB 元件库并推荐替代料",
+  "提供 USB-C、LDO、Buck、STM32、I2C 和 LED 等参考电路模板"
+ ],
+ "intro": "Konnect-EDA 是一个面向 KiCad 10 的原生插件，以单个 Rust 二进制形式运行。它通过 Model Context Protocol（MCP）让 Claude、Codex 等 AI 助手直接操作 KiCad 项目，完成原理图绘制、PCB 布局布线、设计检查与生产文件导出，最终生成可正常打开和编辑的 KiCad 工程。\n\n项目提供 228 个工具，覆盖原理图元件放置与连线、PCB 实时布局布线、ERC/DRC 检查、JLCPCB 元件搜索、参考电路模板以及制造文件导出，并内置技能与代理帮助 AI 理解 KiCad 约定。所有处理都在本地进行，不上传数据。\n\n目前处于 beta 阶段，闭源但测试期间免费，个人、学生和爱好者使用在 1.0 后仍免费，商业用途需授权。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载对应系统的 konnect-pcm-v<version>-windows.zip、-macos.zip 或 -linux.zip",
+  "打开 KiCad 10，进入 Plugin and Content Manager，点击 Install from File 选择下载的 zip",
+  "重启 KiCad，在 PCB Editor 的 Tools → External Plugins 中确认出现 Konnect",
+  "运行 konnect init 安装 AI 客户端指导文件（Codex 用户使用 konnect init --client codex）"
+ ],
+ "summary": "Konnect-EDA 是一个 KiCad 10 插件，让 Claude、Codex 等 AI 助手通过 MCP 协议直接编辑原理图和 PCB，而不是只给建议。它覆盖元件放置、布线、ERC/DRC 检查、JLCPCB 元件搜索和制造文件导出，适合希望用 AI 加速硬件设计流程的开发者。项目闭源，beta 期间免费，个人使用在 1.0 后仍免费。",
+ "tagline": "让 AI 通过 MCP 直接设计 KiCad 原理图与 PCB"
+}

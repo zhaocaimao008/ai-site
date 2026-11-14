@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 Blender 中借助多种 AI 模型辅助建模、场景搭建和自动化编辑的 3D 创作者与开发者。",
+ "date": "2026-11-14",
+ "features": [
+  "统一接入 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、OpenCode Zen、Ollama 和自定义端点",
+  "保存多个连接配置，支持同一提供商的多组密钥切换",
+  "加载实时模型目录，选择支持工具调用的模型或手动输入模型 ID",
+  "通过 27 个受监督场景工具先检查场景再执行编辑",
+  "支持单助手或团队链工作流，并提供逐步审批、取消和命名撤销",
+  "内置本地认证 MCP 端点，供外部兼容客户端连接"
+ ],
+ "intro": "blender-ai-copilot-hub 是一个 Blender 扩展，把 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、OpenCode Zen、Ollama 以及自定义端点集中到一个面板里。你可以为不同账号保存多个连接配置，随时切换，不必反复输入 API key。\n\n插件内置 27 个受监督的场景工具，copilot 会先读取场景中的对象、结构和材质，再按步骤执行编辑操作。它支持单助手模式，也支持由 manager、worker 和 reviewer 组成的团队链来处理较大的任务。此外，插件还提供一个本地认证的 MCP 端点，让 OpenCode 等兼容客户端也能调用同一套工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk",
+  "选择 ZIP 文件，启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro",
+  "选择提供商，填写连接信息并选择模型",
+  "在 Blender 中发送消息，或点击 Open Studio Window"
+ ],
+ "summary": "这个 Blender 扩展把多家 AI 提供商的连接集中到一个面板，省去在不同工具间重复配置密钥的麻烦。它内置受监督的场景工具，让 copilot 先读取场景再执行编辑，适合需要在 Blender 内用不同模型辅助建模、搭建场景或自动化操作的创作者。",
+ "tagline": "在 Blender 内统一管理多家 AI 模型并直接编辑场景的插件"
+}

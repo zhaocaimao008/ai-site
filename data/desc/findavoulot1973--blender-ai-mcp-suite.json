@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用自然语言加速 Blender 场景搭建、材质调整和批量操作的 3D 艺术家与开发者，也适合需要将 Blender 接入外部 MCP 客户端的工作流。",
+ "date": "2026-11-14",
+ "features": [
+  "在操作前检查场景中的对象、变换、材质和修改器，为 AI 提供真实上下文",
+  "通过对话构建和编辑场景，包括基本体、灯光、相机、父子关系、复制和材质",
+  "使用视口截图进行视觉验证，让支持视觉的模型检查自己的工作",
+  "支持单个助手或由经理、执行者和审查者组成的多智能体团队",
+  "连接多种 AI 提供商，包括 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、本地 Ollama 或自定义端点",
+  "在聊天中搜索并导入 Poly Haven、Sketchfab 和 Poly Pizza 的资产",
+  "通过命名的撤销检查点使所有变更可逆，并支持经过验证的 Python 执行和场景导出"
+ ],
+ "intro": "Blender AI MCP Suite 是一个 Blender 扩展，内置 AI 助手和 Model Context Protocol (MCP) 服务器，让用户通过自然语言指令来检查、修改和导出 3D 场景。它把对话式交互与场景操作结合起来，每一步操作都需要在聊天中确认，并且可以通过命名的撤销检查点回退。\n\n该扩展包含一个可视化的 Studio 工作区、多智能体团队（经理、执行者和审查者）以及 21 种以上的场景工具。用户可以选择 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、本地 Ollama 或自定义端点等多种 AI 模型。助手会先检查场景中的对象、变换和材质，再规划有序步骤并执行，支持通过视口截图进行视觉验证。\n\n此外，它还能在聊天中搜索并导入 Poly Haven、Sketchfab 和 Poly Pizza 的资产，支持 bpy API 查询、节点描述、经过验证的 Python 执行以及场景导出。内置的 MCP 服务器允许外部客户端通过认证的本地 Streamable HTTP 端点驱动同一套工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk",
+  "选择 ZIP 文件，启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro",
+  "选择 AI 提供商，添加连接信息并选择模型",
+  "在 Blender 中发送消息或点击 Open Studio Window"
+ ],
+ "summary": "Blender AI MCP Suite 是一个 Blender 扩展，内置 AI 助手和 MCP 服务器，让用户用自然语言描述需求来检查、构建和导出 3D 场景。它适合需要快速搭建产品展示、批量排列对象或调整材质的 3D 工作者，也支持通过外部 MCP 客户端驱动同一套工具。所有操作都需在聊天中确认，并可通过撤销检查点回退。",
+ "tagline": "在 Blender 内用自然语言控制 3D 场景的 AI 助手与 MCP 服务器"
+}

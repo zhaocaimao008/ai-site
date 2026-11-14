@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 编码代理辅助 Blender 场景搭建、建模与导出的开发者和 3D 创作者。",
+ "date": "2026-11-14",
+ "features": [
+  "向兼容 MCP 的客户端暴露 27 个受监督的场景工具",
+  "使用 Bearer token 对每个请求进行认证",
+  "内置 OpenCode Portable 启动器，自动配置连接",
+  "提供场景检查工具，返回结构化对象列表与细节",
+  "支持视口截图，供具备图像能力的代理查看",
+  "所有外部调用在 Blender 中可见且可撤销"
+ ],
+ "intro": "blender-ai-copilot-bridge 是一个 Blender 扩展，它在本地启动一个带认证的 Streamable HTTP MCP 端点，把 27 个受监督的场景工具暴露给 OpenCode 及其他兼容 MCP 的客户端。AI 代理可以通过这些工具检查场景、创建物体、编辑材质、截图、执行脚本和导出结果，而所有操作在 Blender 中可见且可撤销。\n\n项目内置可视化聊天工作室和可选的 manager–worker–reviewer 代理链，并附带 OpenCode Portable 启动器，自动配置连接。端点默认运行在 127.0.0.1:9876/mcp，每个请求需携带 Bearer token，适合希望用编码代理辅助 3D 建模与场景搭建的开发者。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk，选择该 ZIP 并启用 mcp-for-blender-pro",
+  "打开 3D Viewport → N → MCP Pro 面板",
+  "选择提供商，填写连接信息并选择模型",
+  "在 Blender 中发送消息，或点击 Open Studio Window"
+ ],
+ "summary": "这个项目为 Blender 增加一个本地 MCP 桥接端点，让 OpenCode 等兼容客户端通过认证后的工具调用来检查、创建、编辑和导出场景。它适合想让 AI 编码代理直接参与 3D 建模与场景搭建的开发者，所有操作在 Blender 内可见且可撤销，并附带自动配置连接的 OpenCode 启动器。",
+ "tagline": "为 Blender 提供 MCP 桥接，让 AI 客户端安全操控场景"
+}

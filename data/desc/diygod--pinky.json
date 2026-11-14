@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望让 AI Agent 安全地操作真实手机、又需要保留人工审批与接管能力的开发者，以及想在手机上直接使用 AI 完成任务的普通用户。",
+ "date": "2026-11-14",
+ "features": [
+  "通过 MCP 让任意 Agent 操作真实 iPhone 或 Android 手机",
+  "风险步骤需人工批准，规则在网关层强制执行",
+  "银行、钱包、密码管理器应用默认对 Agent 不可见",
+  "支持在电脑上查看手机画面、随时接管并录制操作过程",
+  "Pinky 手机应用可独立使用自选模型执行任务",
+  "支持定时任务与记忆，可从电脑解锁手机且不暴露 PIN"
+ ],
+ "intro": "Pinky 是一个跨平台桌面应用，让 Claude Code、Claude Desktop、Codex、Cursor 或任意支持 MCP 的 Agent 通过 MCP 协议操作真实的 iPhone 或 Android 手机。你在电脑上可以看到手机画面、批准风险步骤、随时接管，并回看每一步操作记录。\n\n除了作为 Agent 与手机之间的网关，Pinky 自身也能在手机上独立执行任务：在 Android 和 iPhone 应用里选择模型，输入或说出任务即可。审批规则由 Pinky 的网关强制执行，Agent 无法自行批准；银行、钱包、密码管理器类应用默认对 Agent 不可见。\n\n项目使用 Go 编写，界面由 MyGo 在 GPU 上绘制，不使用 Electron 或 webview，安装包约 16–22 MB。目前处于 pre-alpha 阶段，部分功能已实现但仍待人工验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从最新 release 页面下载并安装 Pinky",
+  "用 USB 连接 Android 或 iPhone，在 Pinky 中完成手机配对",
+  "在 Settings › Agents 中一键连接 Claude Code、Claude Desktop、Codex 或 Cursor 等 Agent",
+  "让 Agent 在手机上执行任务，在 Pinky 窗口中观察并批准风险步骤"
+ ],
+ "summary": "Pinky 是一个跨平台桌面应用，把 AI Agent 和真实手机连接起来：支持 MCP 的 Agent 可以操作 iPhone 或 Android 手机，而你在电脑上观看画面、批准支付等风险操作并随时接管。它也能在手机应用内用自选模型独立完成任务。适合想让 AI 代操作手机、又需要保留人工控制与操作记录的开发者与用户。",
+ "tagline": "让 AI Agent 通过 MCP 操作你的 iPhone 或 Android 手机"
+}

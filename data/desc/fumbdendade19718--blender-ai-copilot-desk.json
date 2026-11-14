@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Blender 中借助 AI 辅助建模、场景搭建或自动化操作，并需要可视化确认每一步结果的 3D 创作者和开发者。",
+ "date": "2026-11-14",
+ "features": [
+  "在 Blender 内提供伴随窗口，集成聊天、场景对象、快照和审批",
+  "每个操作执行前需用户批准，执行后自动生成视口快照",
+  "支持单助手或团队模式，团队模式带任务板跟踪分配与尝试",
+  "可连接 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等提供商",
+  "内置本地 MCP 服务器，供外部兼容客户端调用同一工具集",
+  "界面支持英语、德语、法语、西班牙语和中文"
+ ],
+ "intro": "blender-ai-copilot-desk 是一个 Blender 扩展，把 AI 对话、场景对象列表、视口快照、操作审批和任务板整合在一个伴随窗口中。它通过 27 个受监督的工具检查场景，并将每个指令转化为有序操作，每一步执行前需要用户批准，执行后自动捕获视口快照，方便对比变化。\n\n项目支持 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等多种模型提供商，可保存多个连接配置。界面语言包括英语、德语、法语、西班牙语和中文。此外，它内置本地 MCP 服务器（http://127.0.0.1:9876/mcp），可让 OpenCode 等兼容客户端使用同一套工具集。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk",
+  "选择 ZIP 文件，启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro",
+  "选择提供商，填写连接信息并选择模型",
+  "在 Blender 中发送消息或点击 Open Studio Window"
+ ],
+ "summary": "blender-ai-copilot-desk 是一个 Blender 扩展，把 AI 对话、场景对象、视口快照和操作审批集中在一个伴随窗口里。它解决的是在 3D 工作中使用 AI 时需要在浏览器和视口间来回切换、手动截图、难以验证修改的问题。适合希望在 Blender 内借助 AI 完成建模或场景操作，并需要逐步确认结果的用户。",
+ "tagline": "Blender 内的可视化 AI 助手窗口，聊天、审批与快照一体"
+}
