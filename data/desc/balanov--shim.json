@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合习惯终端操作、希望轻量级管理多个 AI 模型和工具的开发者，以及对本地优先和隐私有要求的用户。",
+ "date": "2026-11-15",
+ "features": [
+  "支持任意兼容 OpenAI 或 Anthropic API 的模型，包括本地和托管服务。",
+  "通过自然语言或完整 CLI 管理模型、MCP 服务器和 Skills。",
+  "集成 MCP 服务器（stdio 和 Streamable HTTP）和 Agent Skills。",
+  "提供权限模式（read-only、ask、auto），默认对写操作和命令执行要求确认。",
+  "零依赖静态二进制，配置和会话状态以纯 JSON 和 JSONL 存储。"
+ ],
+ "intro": "Shim 是一个用 Go 编写的轻量级 AI 工具，运行在终端中，旨在简化模型、MCP 服务器和 Agent Skills 的配置与使用。它只有一个静态二进制文件，零依赖，不需要 Node、Python 或 Docker，也不包含 TUI 或遥测。\n\nShim 支持通过自然语言或命令行操作。你可以用本地小模型作为命令路由器，将管理请求翻译成允许列表中的命令；也可以直接使用完整的 CLI 来配置模型、运行一次性任务或进入交互模式。它兼容 OpenAI 和 Anthropic 的 API，并预设了 Ollama、LM Studio、OpenRouter 等常见提供商。\n\n此外，Shim 能发现并加载 MCP 服务器和 Agent Skills，所有工具调用都经过统一的权限门控，默认要求确认敏感操作。配置文件为纯 JSON，API 密钥从环境变量读取，不会写入配置文件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载对应平台的静态二进制，放入 PATH。",
+  "运行 `shim setup` 进行初始化配置。",
+  "运行 `shim` 进入交互模式，或使用 `shim run` 执行一次性任务。",
+  "使用 `shim model add` 添加模型，例如 `shim model add openai gpt-5 --name gpt --use`。",
+  "使用 `shim mcp add` 添加 MCP 服务器，例如 `shim mcp add filesystem npx -y @modelcontextprotocol/server-filesystem .`。"
+ ],
+ "summary": "Shim 是一个面向终端用户的轻量级 AI 工具，解决多模型、MCP 和 Agent Skills 配置繁琐的问题。它提供单一二进制文件，零依赖，支持自然语言和命令行两种操作方式，可连接本地或云端模型，并统一管理工具权限。适合希望快速在终端中集成 AI 能力、注重本地运行和配置简洁的开发者。",
+ "tagline": "轻量本地优先的终端 AI 工具，支持任意模型与 MCP。"
+}

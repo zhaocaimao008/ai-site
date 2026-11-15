@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 NVIDIA 显卡、希望在本地运行大语言模型的开发者，以及需要私有化 AI 助手的普通用户。",
+ "date": "2026-11-15",
+ "features": [
+  "在消费级 NVIDIA GPU 上高效运行 GGUF 格式的模型",
+  "支持大于显存的 MoE 模型，通过专家缓存和 CPU 协同计算",
+  "提供 OpenAI 兼容的 /v1/chat/completions API，支持流式输出和工具调用",
+  "桌面应用内置文件代理，可读取、编辑文件并执行命令",
+  "支持语音通话功能，语音识别与合成在同一 GPU 上运行",
+  "精确推测解码，加速文本生成且不改变输出结果"
+ ],
+ "intro": "ghost-infer 是一个用 Rust 编写的本地大语言模型推理程序，专注于单人、单张消费级 GPU 的使用场景。它通过优化显存与内存的调度，让混合专家（MoE）模型即使大于显存也能流畅运行，并支持长上下文的高速处理。\n\n项目提供 OpenAI 兼容的 API 服务器和桌面应用，桌面应用内置文件代理和语音通话功能。安装包小巧，无需 Python 或 Docker，适合希望在自己电脑上快速部署和体验本地模型的开发者与普通用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 GhostSetup 并运行（Windows）",
+  "或从源码构建：git clone https://github.com/affifuddin-hazam/ghost-infer && cd ghost-infer && cargo build --release",
+  "启动服务：target\\release\\ghost-infer serve models\\Qwen3-8B-Q4_K_M.gguf --gpu",
+  "打开 http://127.0.0.1:8080 进行聊天，或将 OpenAI 客户端指向 http://127.0.0.1:8080/v1"
+ ],
+ "summary": "ghost-infer 是一个面向个人电脑的本地大模型推理工具，用 Rust 编写，专为单张消费级 GPU 优化。它能让大于显存的混合专家模型在有限硬件上运行，并提供 OpenAI 兼容接口和带文件代理、语音功能的桌面应用，适合想低成本本地部署 AI 的开发者与普通用户。",
+ "tagline": "为消费级 GPU 打造的高效本地 LLM 推理工具"
+}

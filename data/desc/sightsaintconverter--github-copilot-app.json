@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 GitHub 进行开发、希望借助 AI 代理并行处理任务的开发者与团队。",
+ "date": "2026-11-15",
+ "features": [
+  "统一控制中心管理从想法到 pull request 的软件工作",
+  "并行代理驱动开发，本地会话使用独立 git worktree，云端会话在隔离环境运行",
+  "Canvases 提供代理工作的可检查共享界面，展示计划、终端、预览、差异等",
+  "My Work 汇总会话、issue、pull request 和仓库上下文",
+  "Automations 将重复提示和工作流转为定时或后台任务",
+  "Agent Merge 辅助 pull request 通过审查、检查和合并条件"
+ ],
+ "intro": "GitHub Copilot app 是一款桌面应用，用于在 GitHub 仓库中查找、运行、引导和完成软件工作。它提供统一控制中心，让用户从想法到 pull request 管理开发任务，无需频繁切换终端、编辑器、浏览器标签和 GitHub 页面。\n\n应用支持并行代理驱动开发：每个本地会话运行在独立的 git worktree 中，云端会话则在 GitHub 托管的隔离环境中持续工作。Canvases 将代理的计划、终端、浏览器预览、差异和工作流状态呈现为可检查的共享界面。My Work 汇总会话、issue、pull request 和仓库上下文；Automations 可将重复提示和工作流转为定时或后台任务；Agent Merge 帮助 pull request 通过审查、检查和合并条件。\n\n使用需要 Git 和 GitHub Copilot 计划（包括免费版），也可通过自带密钥（BYOK）使用自己的模型提供商。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Git",
+  "准备 GitHub Copilot 计划（任意计划，包括免费版），或使用自带密钥（BYOK）配置自己的模型提供商",
+  "从 Releases 页面或下载链接获取对应平台的安装包并安装",
+  "参考官方文档完成设置并开始第一个会话"
+ ],
+ "summary": "GitHub Copilot app 是一个桌面应用，把 AI 代理驱动的开发工作集中到一个控制中心。它支持并行会话，每个本地会话在独立 git worktree 中运行，云端会话在隔离环境持续工作，避免分支和文件冲突。Canvases 让代理的计划、终端、预览和差异变得可检查，My Work 汇总会话、issue 和 pull request，Automations 和 Agent Merge 帮助处理重复任务和合并流程。适合希望用 AI 代理并行推进仓库任务的开发者。",
+ "tagline": "GitHub Copilot 桌面应用，管理 AI 代理的软件开发工作流"
+}

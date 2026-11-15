@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex、OpenCode 等 AI 代理，并希望让代理直接读写 Obsidian 笔记库的开发者与 Obsidian 用户。",
+ "date": "2026-11-15",
+ "features": [
+  "提供 obsidian-markdown 技能，创建和编辑带 wikilinks、嵌入、callout、属性的 Obsidian Markdown",
+  "提供 obsidian-bases 技能，处理 .base 文件的视图、过滤、公式和汇总",
+  "提供 json-canvas 技能，编辑 .canvas 文件的节点、连线与分组",
+  "提供 obsidian-cli 与 obsidian-headless 技能，从命令行操作、同步和发布 vault",
+  "提供 defuddle 技能，从网页提取干净 Markdown 以节省 token",
+  "提供 knap 技能，用 JSON 或 CSV 数据批量渲染 Markdown 模板"
+ ],
+ "intro": "这是 Obsidian 官方提供的一组 Agent Skills，遵循 Agent Skills 规范，可被 Claude Code、Codex、OpenCode 等兼容该规范的 AI 代理加载使用。它的作用是教会这些代理操作 Obsidian 的笔记库和几种开放文件格式。\n\n技能覆盖 Obsidian Flavored Markdown（wikilinks、嵌入、callout、属性等语法）、Bases（视图、过滤、公式、汇总）、JSON Canvas（节点、连线、分组），以及通过 Obsidian CLI 和 Headless 在命令行中操作、同步和发布 vault。此外还包含用 Defuddle 从网页提取干净 Markdown、用 Knap 从 JSON/CSV 渲染模板的技能。\n\n安装方式按代理区分：Claude Code 和 Codex 可通过各自的插件市场安装，Cursor 在 Marketplace 安装，也可用 npx skills 添加，或手动把 skills 目录复制到对应路径。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Claude Code：运行 claude plugin marketplace add obsidianmd/obsidian-skills",
+  "Claude Code：运行 claude plugin install obsidian@obsidian-skills",
+  "Codex：运行 codex plugin marketplace add obsidianmd/obsidian-skills，然后在插件目录中安装 Obsidian",
+  "通用方式：运行 npx skills add https://github.com/obsidianmd/obsidian-skills",
+  "手动方式：将 plugins/obsidian/skills/ 复制到 .claude/skills/ 或 Codex 的 ~/.agents/skills"
+ ],
+ "summary": "这个项目提供一组遵循 Agent Skills 规范的技能包，让 Claude Code、Codex、OpenCode 等 AI 代理能够理解并操作 Obsidian 的笔记库。它覆盖 Obsidian Markdown、Bases、JSON Canvas 等格式，也支持通过 CLI 和 Headless 在命令行中处理 vault，适合希望让代理直接整理、生成或同步 Obsidian 笔记的用户。",
+ "tagline": "让 AI 代理学会读写 Obsidian 笔记与开放格式"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合寻找开源 AI 视频生成、角色替换、特效制作工具的开发者与创作者，以及对 ComfyUI 生态感兴趣的用户。",
+ "date": "2026-11-15",
+ "features": [
+  "收录 120 个开源项目，其中 113 个来自 ComfyUI 挑战赛",
+  "按角色替换、特效、镜头重拍、电影等类别分类",
+  "标注每个项目的 star 数和许可证",
+  "提供机器可读的 data/projects.json 数据文件",
+  "包含 16 个获奖项目的详细介绍"
+ ],
+ "intro": "这是一个社区维护的开源项目列表，收录了 120 个可作为 Higgsfield AI 替代品的 GitHub 项目。其中 113 个来自 ComfyUI 在 2026 年 10 月发起的 #OpenSourceHiggsfield 挑战赛，包括 16 个获奖项目，另有 7 个更早的项目。这些项目覆盖角色替换、特效、镜头重拍、电影制作和一体化工作室等方向。\n\n列表按类别组织，提供每个项目的 star 数和许可证信息，并附有机器可读的 data/projects.json 数据文件。该列表本身采用 CC0 1.0 协议，与 Higgsfield 和 Comfy 无关联。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问项目主页 https://jutsustudio.com/open-source-higgsfield/ 按类别浏览列表",
+  "在 GitHub 仓库中查看 README 的类别表格，点击项目链接进入对应仓库",
+  "如需程序化处理，可下载 data/projects.json 文件",
+  "如需重新构建列表，运行 `node scripts/build.mjs`"
+ ],
+ "summary": "这个项目是一个社区维护的开源列表，汇集了 120 个可作为 Higgsfield AI 替代品的 GitHub 项目，其中大部分来自 ComfyUI 发起的 #OpenSourceHiggsfield 挑战赛。列表按角色替换、特效、镜头重拍、电影制作等类别组织，并标注了 star 数和许可证，适合寻找开源 AI 视频生成与编辑工具的开发者参考。",
+ "tagline": "120 个开源 Higgsfield AI 替代项目合集"
+}

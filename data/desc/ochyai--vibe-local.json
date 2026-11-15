@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合在离线环境中开展 AI 编程教学的工作坊组织者、没有付费订阅计划的学生，以及希望通过自然语言学习终端操作的初学者。",
+ "date": "2026-11-15",
+ "features": [
+  "完全离线运行，无需网络连接，不产生费用",
+  "基于 Ollama 的本地大语言模型推理，支持多种模型",
+  "OpenCode 终端界面，支持 Plan/Build 模式切换和主题更换",
+  "自动根据内存推荐模型，并管理上下文长度",
+  "提供一键问答、网络自动判定、快速模式等命令行选项",
+  "实验性的教室模式，教师启动服务，学生连接使用"
+ ],
+ "intro": "vibe-local 是一个在 Mac 上运行的免费 AI 编程环境，它结合 Ollama 本地大语言模型和 OpenCode 终端界面，让用户无需网络连接即可让 AI 协助编写代码。项目面向离线工作坊、没有付费订阅的学生以及通过自然语言学习终端操作的初学者，定位为非营利性的研究与教育实用工具。\n\n安装只需在终端执行一条命令，之后即可通过 vibe-local 命令启动交互式编程会话。它支持多种本地模型，并根据内存大小自动推荐合适的模型；还提供 Plan/Build 模式切换、主题更换、一键问答等操作。v2 版本将界面引擎替换为 OpenCode，并利用 Ollama 对 Anthropic Messages API 的原生支持简化了架构。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开终端（Spotlight Cmd+Space → 搜索“终端”）",
+  "执行安装命令：curl -fsSL https://raw.githubusercontent.com/ochyai/vibe-local/main/install.sh | bash",
+  "打开新的终端窗口，运行：vibe-local",
+  "在 TUI 中通过 Tab 切换 Plan/Build 模式，或使用 /theme 更换主题"
+ ],
+ "summary": "vibe-local 是一个面向离线场景的免费 AI 编程环境，它把 Ollama 本地模型和 OpenCode 终端界面组合起来，让用户在没有网络的情况下也能让 AI 帮忙写代码。适合在离线工作坊中辅助教学、学生练习代理编程，或者初学者通过自然语言学习终端操作。安装只需一条命令，支持多种本地模型和交互式操作。",
+ "tagline": "离线免费本地 AI 编程环境，基于 Ollama 与 OpenCode"
+}

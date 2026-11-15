@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合独立游戏开发者、游戏设计爱好者，以及希望用 AI 快速验证游戏创意并系统化迭代的团队。需要已安装 Claude Code 并熟悉基本命令行操作。",
+ "date": "2026-11-15",
+ "features": [
+  "通过 `/prototype` 命令从自然语言描述生成可玩的浏览器游戏原型",
+  "自动生成一页式设计简报（`design/game-brief.md`），并支持修改确认",
+  "在无头浏览器中自动检查游戏可运行性、UI 问题和简报覆盖情况",
+  "支持将原型扩展为 Vite + TypeScript 的正式 Web 项目，并逐功能迭代",
+  "提供 `/cut` 命令建议精简内容和打磨清单，辅助完成游戏",
+  "可配置 Godot、Unity、Unreal 等引擎，但引擎路线尚未经过同等测试"
+ ],
+ "intro": "Claude Code Game Studios 是一个基于 Claude Code 的模板项目，旨在将 AI 辅助开发流程组织成类似真实游戏工作室的协作体系。它包含 49 个 AI 代理和 72 个工作流技能，覆盖从概念设计、原型构建到迭代扩展的完整环节。\n\n项目核心是 `/prototype` 命令：你描述一个游戏想法，Claude Code 会通过提问生成一页式设计简报，并构建一个可玩的浏览器游戏。之后你可以通过自然语言修改、分享、扩展为正式 Web 项目，甚至使用 `/cut` 规划精简和打磨。项目还支持 Godot、Unity、Unreal 等引擎的配置，但 README 指出引擎路线尚未经过与浏览器原型同等的测试。\n\n该项目适合独立开发者、游戏设计爱好者或想快速验证游戏创意的团队，尤其适合已经使用 Claude Code 并希望系统化 AI 辅助游戏开发流程的用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：`git clone https://github.com/Donchitos/Claude-Code-Game-Studios.git my-game`",
+  "进入项目根目录并启动 Claude Code：`cd my-game && claude`",
+  "输入 `/prototype` 加上你的游戏想法，例如：`/prototype a fishing game where the rare fish only bite at dusk`",
+  "根据 Claude Code 的提问回答，生成设计简报后确认构建",
+  "在 `prototypes/<name>/` 中找到生成的浏览器游戏，双击打开试玩"
+ ],
+ "summary": "Claude Code Game Studios 是一个 Claude Code 模板，把 AI 辅助游戏开发组织成工作室式流程。你描述游戏想法，它通过提问生成设计简报并构建可玩的浏览器原型，之后还能逐步修改、扩展为正式 Web 项目或规划精简。适合想快速验证游戏创意并系统化迭代的独立开发者和设计爱好者。",
+ "tagline": "把 Claude Code 变成游戏开发工作室，从想法到可玩原型。"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "希望自托管 AI Agent、使用本地模型并接入自有文档的开发者，以及需要持久化对话和工具调用的技术用户。",
+ "date": "2026-11-15",
+ "features": [
+  "通过 OpenAI 兼容端点连接 Ollama 等本地模型或托管模型，并可在对话中切换",
+  "持久化对话：流式响应、查看工具活动，关闭浏览器后任务继续运行",
+  "文档知识库：上传 PDF、Markdown、纯文本并带来源引用问答",
+  "内置文件与 shell 工具，支持通过 MCP 连接本地和远程工具",
+  "可安装并复用 skills，按对话选择启用哪些技能",
+  "数据存于本地 SQLite 和文件，无需独立数据库或向量服务"
+ ],
+ "intro": "ChatOllama 是一个开源的 agentic 应用，用于在本地模型和托管模型上运行 AI Agent。它基于 Pi Durable 构建，提供 SvelteKit 网页界面，支持持久化的 Agent 对话、文档知识库和工具调用。数据以 SQLite 和文件形式保存在本地，不需要单独的数据库或向量服务。\n\n模型接入通过 OpenAI 兼容端点完成，可以连接 Ollama 等本地服务，也可以在对话中切换模型。应用内置文件与 shell 工具，并可通过 Model Context Protocol（MCP）接入本地或远程工具；上传 PDF、Markdown 和纯文本后，可以基于知识库提问并获得来源引用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 24 和 pnpm 10.8.1，克隆仓库并进入 rewrite 目录",
+  "运行 pnpm install 和 pnpm build",
+  "导出 HOST、ORIGIN、CHAT_BASE_URL、CHAT_MODEL_ID 等环境变量，按需设置 CHAT_API_KEY",
+  "运行 pnpm start，打开 http://localhost:3000",
+  "在 Settings 中添加 provider、切换模型，并配置 embedding 端点后再索引知识文档"
+ ],
+ "summary": "ChatOllama 是一个可自托管的 AI Agent 应用，让你在本地或托管模型上运行带工具和知识库的对话。它通过 OpenAI 兼容接口接入 Ollama 等模型，支持持久化会话、上传文档后带引用问答，以及通过 MCP 扩展工具。数据保存在本地 SQLite 和文件中，适合想用自有模型和资料搭建 Agent 的开发者。",
+ "tagline": "本地运行、支持多模型与知识库的 AI Agent 应用"
+}

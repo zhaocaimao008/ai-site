@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 shell 管道、CI 任务、容器或 agent 实验中调用编码模型的开发者，以及希望阅读或改造小型 agent 实现的工程师。",
+ "date": "2026-11-15",
+ "features": [
+  "无损上下文：完整对话每次发送，文件和命令输出不被截断，provider 截断时显式报错退出",
+  "无界面设计：最终文本走 stdout，--json 输出 user、assistant、tool、done/error 等 NDJSON 事件",
+  "单静态二进制：Go 编写，无运行时和第三方依赖，跨 Linux/macOS/Windows 与 amd64/arm64",
+  "provider 中立：支持 OpenAI 兼容接口，可接本地 Ollama 等模型服务",
+  "可恢复会话：--session 指定追加式 JSONL 文件，保留每条消息和工具结果",
+  "可改造：实现代码约 837 行 Go，四个工具、一个协议、一个 agent 循环，MIT 协议"
+ ],
+ "intro": "UNCUT 是一个用 Go 编写的编码 agent 运行框架（harness），编译后是单个约 7 MB 的静态二进制文件，不依赖运行时或第三方 Go 库，可在 Linux、macOS、Windows 的 amd64 与 arm64 上运行。它刻意不做 TUI、遥测、插件系统、后台 agent、自动重试和上下文压缩，只保留一个 agent 循环、四个工具和一种 provider 协议。\n\n它的核心主张是“无损”：每次调用模型都会发送完整对话，文件内容和命令输出不会被 UNCUT 截断；如果 provider 因输出上限截断响应，UNCUT 会以错误退出，而不是把不完整的结果当作成功返回。最终文本输出到 stdout，加 --json 可得到结构化的 NDJSON 事件流，适合接入 shell 管道和 CI。\n\n它兼容 OpenAI 风格的 Chat Completions 接口，也能连接本地模型服务；支持可选的 JSONL 会话文件，用于恢复完整历史。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "设置环境变量：export UNCUT_API_KEY=\"your-api-key\" 和 export UNCUT_MODEL=\"your-model-id\"",
+  "如需兼容 OpenAI 的服务，设置 export UNCUT_BASE_URL=\"https://openrouter.ai/api/v1\"",
+  "运行任务：uncut \"Inspect this repository and fix the failing tests\"",
+  "使用本地 Ollama 时：ollama pull qwen3:8b，并设置 UNCUT_BASE_URL=\"http://localhost:11434/v1\"、UNCUT_MODEL=\"qwen3:8b\"",
+  "需要结构化输出时加 --json，需要续接会话时用 --session .uncut/work.jsonl"
+ ],
+ "summary": "UNCUT 是一个面向 shell 管道、CI 和容器场景的轻量编码 agent 运行框架。它把完整对话原样发给模型，不压缩上下文、不截断文件与命令输出，provider 截断响应时直接报错退出，避免把不完整结果当成成功。项目以单个静态二进制分发，兼容 OpenAI 风格接口和本地模型，适合需要可脚本化、可复现地调用编码模型的开发者。",
+ "tagline": "无损、无界面的轻量编码 agent 运行框架"
+}

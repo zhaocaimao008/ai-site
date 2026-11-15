@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在本地或设备端部署高质量语音克隆 TTS 的开发者，以及希望快速体验语音克隆的普通用户。",
+ "date": "2026-11-15",
+ "features": [
+  "零样本语音克隆：通过参考音频或说话人嵌入生成目标音色",
+  "多后端支持：CUDA、MLX、ggml 和浏览器 WebGPU",
+  "统一的 HTTP API，兼容 OpenAI 语音合成端点",
+  "离线 Python API，支持流式生成",
+  "内置 Zonos Voice Studio 网页界面和轻量克隆页面"
+ ],
+ "intro": "ZONOS3-Mini 是 Zyphra 推出的多语言文本转语音模型，主打零样本语音克隆和实时设备端推理。项目提供多种推理后端，包括基于 Mini-SGLang 的 CUDA 服务器、面向 Apple Silicon 的 MLX 服务器、不依赖 Python 运行时的 C++/ggml 服务器，以及可直接在浏览器 WebGPU 中运行的版本。所有后端实现相同的 HTTP API，并附带 Zonos Voice Studio 网页界面。\n\n项目还提供离线 Python API，方便在脚本中直接调用模型进行语音生成和克隆。模型权重托管在 Hugging Face，无需令牌即可下载。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并初始化子模块：git clone --recurse-submodules git@github.com:Zyphra/ZONOS3.git",
+  "安装依赖：Linux NVIDIA GPU 使用 uv sync --locked --all-packages；Apple Silicon 使用 uv sync --locked --package zonos3-mlx",
+  "启动服务器：NVIDIA GPU 运行 servers/sgl/scripts/serve.sh；Apple Silicon 先下载 GGUF 文件再运行 servers/mlx/scripts/serve.sh",
+  "打开 http://127.0.0.1:1919/ 使用 Zonos Voice Studio 或 /lite 页面进行语音克隆和合成"
+ ],
+ "summary": "ZONOS3-Mini 是一个多语言文本转语音模型，支持零样本语音克隆，并提供多种推理后端以适应不同硬件环境。它既可以通过 HTTP 服务器和网页界面使用，也提供离线 Python API，适合需要在本地设备或浏览器中部署语音合成功能的开发者。",
+ "tagline": "紧凑的零样本语音克隆 TTS，支持实时设备端运行"
+}

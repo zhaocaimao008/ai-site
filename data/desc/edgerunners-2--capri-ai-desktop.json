@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合喜欢赛博朋克风格、希望用语音或自动化方式操作电脑的 Windows 用户，以及对 AI 桌面伴侣感兴趣的开发者。",
+ "date": "2026-11-15",
+ "features": [
+  "支持文字与语音对话，可唤醒词“Hey Capri”呼叫，支持 80 种语言",
+  "可操作桌面应用、播放音乐、点击执行任务，并支持中途打断",
+  "记忆聊天历史与屏幕内容，数据保存在本地",
+  "可加入 Discord、Zoom 等语音通话并代为发言",
+  "支持 Mod 扩展，可自定义外观、功能与行为"
+ ],
+ "intro": "Capri 是一款面向 Windows 的赛博朋克风格 AI 桌面代理与语音伴侣。它支持接入 Claude Code、Codex、Antigravity 等多种 AI 助手，用户可通过文字或语音与它交互，让它打开应用、播放音乐、操作浏览器等。\n\n它具备屏幕感知与自动化能力，能记住聊天记录和屏幕内容，并支持加入 Discord 等语音通话、在通话中代为发言。此外，Capri 还提供模块化扩展系统，用户可安装或开发 Mod 来改变外观、功能与行为。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 Windows 便携版压缩包",
+  "解压到任意文件夹并运行，无需安装",
+  "首次启动时选择 AI 助手，登录账号或粘贴 API Key（如 Claude Code、Codex、Antigravity 等）",
+  "通过文字或语音与 Capri 交互，可开启“Hey Capri”唤醒词"
+ ],
+ "summary": "Capri 是一个 Windows 平台的赛博朋克风格 AI 桌面代理，支持接入 Claude Code、Codex 等助手，可通过语音或文字控制电脑、操作应用、加入语音通话，并记住聊天与屏幕内容。适合希望用自然交互方式自动化桌面任务、或想要一个可定制 AI 伴侣的用户。",
+ "tagline": "赛博朋克风格的 Windows AI 桌面助手与语音伴侣"
+}

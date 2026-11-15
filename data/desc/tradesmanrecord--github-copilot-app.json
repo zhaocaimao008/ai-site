@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在多个 GitHub 仓库中并行推进开发任务、希望统一管理智能体会话与 PR 流程的开发者。",
+ "date": "2026-11-15",
+ "features": [
+  "在独立 git worktree 或 GitHub 托管环境中并行运行多个智能体会话",
+  "Canvases 集中展示计划、终端、浏览器预览、diff 和工作流状态",
+  "My Work 汇总会话、issue、PR 与仓库上下文",
+  "Automations 将提示和工作流转为定时或后台任务",
+  "Agent Merge 协助 PR 通过评审、检查和合并条件",
+  "支持使用 Copilot 订阅，也支持自带模型密钥（BYOK）"
+ ],
+ "intro": "GitHub Copilot app 是一个桌面应用，把在 GitHub 仓库中查找工作、启动和引导智能体、查看进度、提交改动整合到一个控制中心，减少在终端、编辑器、浏览器标签和 GitHub 页面之间来回切换。\n\n它面向并行智能体开发：每个本地会话运行在独立的 git worktree 中，云端会话则在 GitHub 托管的隔离环境中继续执行，因此可以同时让 Copilot 排查 bug、实现 issue、处理评审反馈或探索改动，而不会发生分支或文件冲突。Canvases 把计划、终端、浏览器预览、diff 和工作流状态变成可查看、可编辑的共享界面。My Work 汇总会话、issue、PR 和仓库上下文；Automations 把可重复的提示和工作流变成定时或后台任务；Agent Merge 帮助 PR 走完评审、检查和合并条件。\n\n该仓库是应用的公开主页，用于下载发布版本、提交 bug 和功能请求、参与讨论以及查看更新日志。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Git",
+  "准备 GitHub Copilot 订阅（任意计划，含 Copilot Free），或使用自带模型密钥（BYOK）",
+  "从 Releases 页面或下载链接获取对应平台的安装包并安装",
+  "参考官方文档完成设置并开始第一个会话"
+ ],
+ "summary": "这个桌面应用把在 GitHub 仓库里找任务、启动和引导智能体、查看进度、提交改动集中到一个界面。它支持本地独立 worktree 和云端隔离环境并行运行多个会话，并用 Canvases 展示计划、终端、diff 等过程，适合需要同时推进多个 issue 或 PR 的开发者。",
+ "tagline": "面向 GitHub 仓库的智能体原生桌面工作台"
+}

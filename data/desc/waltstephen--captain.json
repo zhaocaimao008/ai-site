@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究机器人智能体、code-as-policy 与视觉语言模型后训练的研究者和开发者，也适合想在多个仿真基准上评测或接入自有机器人的工程人员。",
+ "date": "2026-11-15",
+ "features": [
+  "CaPtain-Harness：持久化沙箱 Python 会话，提供 22 个底层感知与运动原语及 finish()",
+  "SFT 训练：在 harness 中采集合成智能体轨迹进行监督微调",
+  "RL 训练：使用读取模拟器物理状态的 critic，将成功预测变化转化为每次请求的信用",
+  "多基准适配：同一 API 支持 LIBERO、LIBERO-PRO/Plus/MAX、RoboTwin 2.0、RoboDojo、SimplerEnv、CaP-Bench 和真实机器人",
+  "开放发布：SFT 数据、模型权重、训练代码与 RL 基础设施（流式 rollout 服务器、critic 协同训练、运行监督）"
+ ],
+ "intro": "CaPtain 是一套完整的开源流水线，用于把小型开源视觉语言模型后训练成 code-as-policy 机器人智能体。智能体通过编写 Python 调用底层感知与运动原语来控制机器人，读取每次调用的文本回执，并自行判断任务是否完成。\n\n项目包含三部分：CaPtain-Harness 是一个持久化沙箱 Python 会话，提供 22 个底层能力（感知、几何测量、IK 级运动）和 finish()，同一套 API 可运行在 LIBERO、RoboTwin 2.0、SimplerEnv 等多个仿真基准及真实机器人上；训练流水线先在 harness 中采集合成轨迹做 SFT，再用模拟器 critic 做 RL；最终得到 CaPtain-4B 模型。\n\n项目开放了 SFT 数据、模型权重、harness、SFT 与 RL 训练代码以及 RL 基础设施，README 中给出了 LIBERO 系列及零样本迁移到多个基准的评测结果。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "递归克隆仓库：git clone --recursive https://github.com/waltstephen/CaPtain.git && cd CaPtain/harness",
+  "运行 scripts/setup_third_party.sh 安装 LIBERO 到 third_party/，并创建 .venv-libero 虚拟环境安装依赖",
+  "创建智能体沙箱 Python 环境：python3.11 -m venv ~/envs/student-py311 并安装 requirements-student.txt",
+  "下载模型权重：harness/scripts/download_models.sh",
+  "启动感知服务 services/start_perception.sh 和策略服务 services/serve_policy.sh YijiaFan/CaPtain-4B 8600，然后运行 eval/run_episode.sh libero_spatial 0 11 runs/demo 评测单个 LIBERO episode"
+ ],
+ "summary": "CaPtain 把小型开源视觉语言模型后训练成会写 Python 代码控制机器人的智能体：模型调用底层感知与运动原语，读取调用回执并自行判断任务是否结束。项目提供沙箱 harness、SFT 与 RL 训练代码及多仿真基准适配，适合研究 code-as-policy 机器人智能体、并希望在 LIBERO 等环境复现或评测的开发者。",
+ "tagline": "把小型视觉语言模型后训练成写代码控制机器人的智能体"
+}

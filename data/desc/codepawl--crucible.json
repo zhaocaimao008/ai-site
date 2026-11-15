@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望用 AI 智能体辅助创建 3D 场景的开发者，以及需要在网页中嵌入轻量级 3D 渲染的 JavaScript 开发者。",
+ "date": "2026-11-15",
+ "features": [
+  "通过 MCP 服务器让 AI 智能体构建和修改 3D 场景",
+  "内置实时光栅化器和路径追踪渲染器",
+  "支持 PNG 预览、静帧渲染和 MP4 视频导出",
+  "提供地形、植被、角色、液体、车辆等可选插件",
+  "场景以纯数据描述，便于程序化生成和更新",
+  "支持 GLB 资产导入和 glTF 角色动画"
+ ],
+ "intro": "Crucible 是一个面向 JavaScript 的 3D 引擎，核心特点是可以通过 MCP 服务器由 AI 智能体驱动。它包含实时光栅化器和路径追踪器，场景以纯数据形式描述，每个部件由几何体、矩阵和材质组成。\n\n智能体可以通过 MCP 工具构建场景、设置灯光、导入 GLB 资产、添加运动，并获取 PNG 预览或渲染静帧和 MP4 视频。引擎还提供地形、植被、角色、液体、车辆等可选插件，按需加载。\n\n项目目标是在能力上接近 Blender，在轻量性上接近 three.js。它需要 Node.js 20.19 或更高版本，浏览器端需要 WebGL2 或 WebGPU 支持。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装包：npm install crucible@npm:@codepawlhq/crucible",
+  "在代码中导入：import { CrucibleRenderer, box, sphere } from 'crucible';",
+  "创建部件数组并实例化渲染器：const renderer = new CrucibleRenderer(canvas, parts, { samples: 4, memoryBudgetMiB: 256 });",
+  "调用渲染：renderer.render({ eye: [4, 3, 6], target: [0, 1, 0] });",
+  "如需智能体驱动，运行 MCP 服务器：npx crucible-mcp --backend gpu --memory 192"
+ ],
+ "summary": "Crucible 是一个 JavaScript 3D 引擎，它通过 MCP 服务器让 AI 智能体直接构建和调整 3D 场景。引擎包含实时渲染和路径追踪，场景以纯数据描述，智能体可以设置灯光、导入模型、获取预览并导出图片或视频。适合想借助 AI 快速搭建 3D 内容，或在网页中集成轻量 3D 渲染的开发者。",
+ "tagline": "AI 智能体驱动的 JavaScript 3D 引擎"
+}

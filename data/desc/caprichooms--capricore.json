@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Windows 桌面上使用可定制 AI 伴侣的开发者与普通用户，尤其是关注本地模型、语音交互和桌面自动化的群体。",
+ "date": "2026-11-15",
+ "features": [
+  "支持内置本地模型、Hugging Face GGUF 导入和 OpenAI 兼容 API 三种推理方式",
+  "共享对话与记忆，可搜索记忆事实并维护本地文档知识库",
+  "可选本地语音识别与语音回复，支持独立语言设置",
+  "桌面动画伴侣，包含表情、浮动对话、托盘模式和主题",
+  "基于权限的桌面工具，包括应用/文件操作、Spotify、Discord 和网页搜索",
+  "提供图形化安装向导，自动配置运行时、模型和语音组件"
+ ],
+ "intro": "CapriCore 是一个面向 Windows 的 AI 桌面伴侣项目，核心程序名为 Capri。它把对话、记忆和桌面互动整合在一起，用户可以选择使用内置的本地大模型、导入 Hugging Face 的 GGUF 模型，或连接 OpenAI 兼容的 API 服务，并在不丢失对话的情况下切换推理来源。\n\n除了文字聊天，Capri 还提供可选的本地语音识别与语音回复、可搜索的记忆事实和本地文档知识库。桌面表现包括动画表情、窗口边缘姿势、浮动对话和托盘模式等。工具调用需要用户显式授权，涵盖应用与文件操作、Spotify、Discord 控制、网页搜索和深度思考模式，计算机控制功能目前为 BETA。\n\n项目提供图形化安装向导，也支持从源码构建。安装向导会配置私有运行时、所选模型和可选的语音组件，无需全局安装 Python 或 Node。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Windows 10 22H2/11 x64 上运行对应版本的 CapriSetup 安装程序，或解压源码包后双击 Install Capri.cmd",
+  "首次安装时先完成安装向导，再打开 Capri.exe",
+  "从源码构建需安装 Node.js 24.22.1 或兼容的 24.x 版本、npm 和 llama.cpp Windows x64 Vulkan 运行时",
+  "设置环境变量 CAPRI_LLAMA_PATH 指向 llama-server.exe 的完整路径",
+  "在包含 package.json 的目录中依次运行：npm ci、npm run doctor、npm run setup、npm run models:pull、npm run desktop"
+ ],
+ "summary": "CapriCore 是一个 Windows 桌面 AI 伴侣，把对话、记忆和桌面互动整合在一起。用户可以选择内置本地模型、导入 Hugging Face 的 GGUF 模型，或连接 OpenAI 兼容 API，并在切换时不丢失对话。它还提供可选的语音识别与回复、可搜索记忆和文档知识库，以及需要显式授权的桌面工具。适合想在 Windows 上使用可定制 AI 助手、关注本地推理和语音交互的用户。",
+ "tagline": "Windows 上的 AI 桌面伴侣，支持本地与 API 模型"
+}

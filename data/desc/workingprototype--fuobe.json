@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地或自有云端运行生成式 AI 的创作者、设计师和影视后期人员，也适合愿意自行部署 ComfyUI 的开发者。",
+ "date": "2026-11-15",
+ "features": [
+  "图像、视频、3D、音频生成统一在一个工作室界面",
+  "通过 ComfyUI 使用开放权重模型，支持本地 GPU 或 fal.ai、Replicate 云端",
+  "108 种镜头运动与 255 种特效，可混合两种运动",
+  "132 个一键应用：换装、换脸、修复、上色、放大等",
+  "62 个 Fuobe FX 后期工具，保留原始镜头与运动",
+  "Image to 3D 五种模式，以及 Live edit 实时编辑和 AI agent"
+ ],
+ "intro": "Fuobe 是一个运行在 ComfyUI 之上的开源创意工作室，把图像、视频、3D 和音频生成整合到同一个界面里。它使用开放权重的模型，可以跑在自己的 GPU 上，也可以通过 fal.ai 或 Replicate 的 API key 调用云端模型。项目用 TypeScript 和 Next.js 16 构建，采用 MIT 协议。\n\n除了基础的文生图、图生视频，Fuobe 还提供了大量预设内容：108 种镜头运动、255 种特效、132 个一键应用（换装、换脸、修复、上色、放大等），以及面向影视后期的 62 个 FX 工具。3D 部分支持从单张照片、多张照片或一句话生成模型，还有 Live edit 实时编辑和 AI agent。README 中的展示素材均在一张 RTX 5090 上通过 ComfyUI 本地渲染。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Fuobe 是一个基于 ComfyUI 的开源创意工作室，把图像、视频、3D 和音频生成集中到一个界面。它使用开放权重模型，可运行在自己的 GPU 上，也可通过 fal.ai 或 Replicate 调用云端模型。项目内置大量镜头运动、特效、一键应用和后期工具，适合需要自主部署生成式 AI 工具的创作者与开发者。",
+ "tagline": "基于 ComfyUI 的开源创意工作室，本地生成图像、视频、3D 与音频"
+}
