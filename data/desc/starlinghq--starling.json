@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 .NET 应用中集成本地 AI 能力、不想依赖 Python 或外部 API 的开发者，也适合需要离线运行或多语言语义搜索的场景。",
+ "date": "2026-11-16",
+ "features": [
+  "文本嵌入：支持多语言 e5 和 EmbeddingGemma 2，可用于语义搜索和向量检索",
+  "本地聊天：通过 IChatClient 接口使用 Qwen3.5 进行流式对话",
+  "实体抽取：使用 GLiNER2 从文本中提取命名实体",
+  "多模态搜索：用文本查询对图片和视频进行排序",
+  "与 Microsoft.Extensions.AI 集成，可替换托管服务商实现",
+  "提供多个完整示例程序，包括本地 RAG、工单分类和浏览器内搜索"
+ ],
+ "intro": "Starling 将开源模型打包成普通的 NuGet 库，让 .NET 开发者可以直接在应用里使用嵌入、实体抽取、图像与视频搜索以及聊天功能。所有模型通过 ONNX Runtime 在 CPU 或 CUDA 上运行，并接入 Microsoft.Extensions.AI 的 IEmbeddingGenerator 和 IChatClient 接口，因此原本针对托管服务商编写的代码只需改动调用处一行即可切换到本地模型。\n\n项目提供多个示例程序，涵盖本地 RAG、多语言工单分类、文本搜图等场景。每个模型都固定到上游提交并用 SHA-256 校验，发布前会与原始 PyTorch/Python 实现进行比对。首次运行会下载模型，之后可离线使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 .NET 10 SDK",
+  "创建控制台项目并添加 NuGet 包：dotnet new console -o search && cd search && dotnet add package Starlings.Models.E5.Extensions.AI && dotnet add package Microsoft.ML.OnnxRuntime --version 1.30.0",
+  "将 Program.cs 替换为 README 中的示例代码（使用 E5EmbeddingGenerator 计算文档与查询的余弦相似度）",
+  "运行 dotnet run，首次运行会自动下载约 487 MB 的模型，之后可离线使用"
+ ],
+ "summary": "Starling 让 .NET 开发者无需 Python 环境或 API Key，就能在本地运行嵌入、实体抽取、图像视频搜索和聊天模型。它把模型封装成 NuGet 包，通过 ONNX Runtime 在 CPU 或 CUDA 上推理，并接入 Microsoft.Extensions.AI 接口，方便将现有托管服务代码迁移到本地。适合需要离线 AI 能力或多语言语义搜索的 .NET 应用。",
+ "tagline": "在 .NET 中本地运行 AI 模型，无需 Python 和 API Key"
+}

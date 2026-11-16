@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 12GB 以上显存 NVIDIA 显卡、希望在 Windows 笔记本上本地运行 27B 模型并执行 Agent 任务的开发者。",
+ "date": "2026-11-16",
+ "features": [
+  "NInfer 推理引擎，支持 Qwen3.8-27B 的 GSQ-RCO IQ3_XXS 量化模型",
+  "KVMem 分层 KV 缓存，长历史存于 Host RAM，按需调入 GPU",
+  "MTP3 推测解码，提升生成效率",
+  "dsh Agent 工作台，支持本地代码、文件、网页任务",
+  "可选 Pmod 桌面端（Tauri 2 + Vue 3.5），提供对话、模型配置和显存监控",
+  "Windows 一键部署脚本 setup.ps1 与启动脚本 start.cmd"
+ ],
+ "intro": "该项目提供一套在 Windows 笔记本上本地运行 Qwen3.8-27B 模型的推理与 Agent 运行环境，维护者验证的硬件为 RTX 5070 Ti Laptop 12GB。核心由 NInfer 推理引擎、KVMem 分层 KV 缓存、MTP3 推测解码和 dsh Agent 工作台组成，并附带可选的 Pmod 桌面图形界面。\n\nKVMem 将长历史存放在主机内存中，按检索结果调入 GPU，从而支持 256K 逻辑上下文，减少重复预填充。项目包含源码、Windows 部署脚本和实测数据，也说明了已知限制与验证边界。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 24+、VC++ x64 运行库和兼容 CUDA 13 的 NVIDIA 驱动",
+  "准备一个含 MTP 的 v3 .ninfer 模型文件",
+  "克隆仓库：git clone https://github.com/CSUNX233/Sparkle-Qwen27b-Kvmem-ninfer.git",
+  "运行安装脚本：powershell -NoProfile -ExecutionPolicy Bypass -File .\\setup.ps1 -ModelPath \"D:\\Models\\qwen3.8-27b-gsq-rco-iq3-xxs.ninfer\"",
+  "启动服务：.\\start.cmd，首次启动会下载引擎并加载权重"
+ ],
+ "summary": "这个项目面向希望在 12GB 笔记本显卡上本地运行 27B 模型的开发者，提供一套包含 NInfer 推理引擎、KVMem 分层 KV 缓存、MTP3 推测解码和 dsh Agent 工作台的运行栈。它通过将长历史存放在主机内存并按需调入 GPU，支持 256K 逻辑上下文，适合在 Windows 上执行本地代码、文件和网页任务。",
+ "tagline": "在 12GB 笔记本显卡上运行 27B 本地 Agent 的推理栈"
+}

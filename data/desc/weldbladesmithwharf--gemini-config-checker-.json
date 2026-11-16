@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要筛选可用代理配置以访问 Gemini 和 AI Studio 的用户，以及熟悉 Xray、Cloudflare Worker 配置的开发者。",
+ "date": "2026-11-16",
+ "features": [
+  "在已登录浏览器中检测 AI Studio 与 Gemini 的区域可用性",
+  "Simple 模式批量测试已有代理配置",
+  "Advanced 模式将基础配置与免费配置串联，寻找可用出口",
+  "支持导出链接、base64 和完整 Xray 配置",
+  "提供桌面应用、Web 服务器和 Android APK 多种形态",
+  "内置 anti-DPI 配置模板"
+ ],
+ "intro": "这个工具用来判断一份代理配置能否真正打开 Google AI Studio 和 Gemini。它不发送普通 HTTP 请求，而是在已登录的浏览器里按真实使用路径访问，读取 Google 对登录用户显示的区域限制页面，从而区分“能连通”和“能用”。\n\n工具提供 Simple 和 Advanced 两种模式：前者逐个测试你已有的配置，后者以一份可用的基础配置为入口，再串联免费配置，寻找 Google 接受的出口。结果可导出为链接、base64 或完整的 Xray 配置。\n\n项目目前是 0.1.0 早期预发布版本，仅在 Windows 上完整跑通，macOS、Linux 和 Android 构建来自 CI，尚未在真机验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载对应系统的构建包",
+  "Windows 解压后运行 GeminiConfigChecker.exe",
+  "macOS 首次启动右键应用选择 Open",
+  "Linux 先安装 libgtk-3-0 和 libwebkit2gtk-4.1-0，再运行 ./GeminiConfigChecker",
+  "无桌面环境时运行 ./gemini-config-checker 并打开 http://localhost:8787"
+ ],
+ "summary": "这个工具解决的是“代理能连通但打不开 Gemini”的问题：普通 HTTP 探测会把所有可用配置都判为正常，而 Google 实际是按登录账号和页面加载后的区域来决定是否可用。它改为在已登录浏览器中按真实路径访问，读取区域限制提示来判断配置是否真正可用，并支持把基础配置与免费配置串联后寻找可用出口。适合需要筛选代理配置访问 Gemini 和 AI Studio 的用户。",
+ "tagline": "检测代理配置能否真正访问 Gemini 与 AI Studio"
+}

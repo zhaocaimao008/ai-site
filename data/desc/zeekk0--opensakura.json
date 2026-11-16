@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合对 AI 虚拟伴侣、3D 虚拟形象和语音交互感兴趣的开发者与爱好者，需要一定的 Python 环境和 GPU 配置经验。",
+ "date": "2026-11-16",
+ "features": [
+  "3D VRoid 虚拟形象，支持 26 种动作和情绪表达",
+  "实时语音对话：本地语音识别 + GPT-SoVITS 语音合成",
+  "情绪状态、好感度与按用户区分的记忆系统",
+  "支持 OpenRouter 云端或 Ollama 本地大模型作为大脑",
+  "提供网页交互界面和 Discord 机器人模式（待完成）",
+  "三种运行模式：完全本地、半本地、纯在线文本"
+ ],
+ "intro": "OpenSakura 是 MekaHime 开源的首个 AI 伴侣原型，包含情绪、记忆、语音和 3D 身体。你可以在网页中通过麦克风或文字与她对话，three.js 渲染的 VRoid 虚拟形象会在乡村街道场景中做出相应动作。\n\n项目由 Python 后端（FastAPI）、Web 前端、本地语音识别（SenseVoiceSmall）和语音合成（GPT-SoVITS）服务组成。大脑可选用 OpenRouter 云端模型或 Ollama 本地模型，并维护 26 种情绪状态、好感度和按用户区分的记忆。\n\n她面向成年用户，高好感度时会调情，低好感度时会变得粗鲁，可通过配置关闭亲密模式。项目提供完全本地、半本地和纯在线三种运行方式，语音功能需要本地 NVIDIA GPU。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/zeekk0/OpenSakura.git && cd OpenSakura",
+  "安装大脑和耳朵（语音识别）：powershell -ExecutionPolicy Bypass -File scripts\\setup_windows.ps1",
+  "安装语音合成：python scripts\\setup_tts.py（需输入 yes 接受许可）",
+  "配置大脑：在 .env 中填入 OPENROUTER_API_KEY，或安装 Ollama 并 ollama pull qwen3:8b",
+  "启动：.venv\\Scripts\\python launch.py --check 检查环境，然后运行 Start_OpenSakura.bat 打开 http://localhost:8010"
+ ],
+ "summary": "OpenSakura 是一个开源的 AI 虚拟伴侣原型，把 3D 虚拟形象、实时语音对话、情绪状态和记忆系统整合在一起。你可以在网页里用麦克风或文字和她聊天，她会用动作和表情回应。项目支持 OpenRouter 云端模型或 Ollama 本地模型驱动对话，语音识别与合成也在本地运行。适合想体验或二次开发 AI 伴侣、虚拟形象交互的开发者，语音功能需要本地 NVIDIA GPU。",
+ "tagline": "开源 3D 虚拟伴侣，支持语音对话与情感状态"
+}

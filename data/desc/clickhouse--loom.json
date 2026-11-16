@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望为编码代理或自建代理应用提供持久共享记忆、文档检索和代码理解的开发者与团队，尤其是需要自托管和多用户命名空间管理的场景。",
+ "date": "2026-11-16",
+ "features": [
+  "跨代理共享的长期记忆，记忆关联到具体文件与符号，并在相关编辑时浮现",
+  "带引用的文档检索（RAG），支持 PDF、.docx、.pptx 等文件抽取",
+  "仓库代码索引，可查询定义、调用方与变更影响",
+  "通过 MCP、HTTP、Python SDK 和 TypeScript SDK 接入代理",
+  "提供 Claude Code、Codex 插件，会话开始时加载上下文并记录会话",
+  "自托管部署，支持 Docker 与 Kubernetes Helm chart，数据存于 ClickHouse"
+ ],
+ "intro": "Loom 是 ClickHouse 开源的 MCP 服务器，为 AI 代理提供长期且可共享的记忆：一个代理在会话中学到的内容，后续的代理或工具可以检索到。记忆会关联到具体的文件和符号，当代理编辑这些位置时自动浮现。\n\n除记忆外，它还提供带引用的文档检索（支持 PDF、.docx、.pptx 等格式的抽取）以及仓库代码索引，编码代理可查询定义、调用方和变更影响。代理可通过 MCP、HTTP、Python 或 TypeScript SDK 接入，并附带 Claude Code、Codex 插件。\n\n项目可自托管：用 Docker 或 Helm chart 部署，上下文与索引数据存放在 ClickHouse，首次启动时也可选用 Postgres 保存实时记忆与知识状态。它面向多代理协作场景，提供命名空间、角色与令牌等多人模式能力，并记录代理运行过程。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker（Windows 用户需在可运行 docker 的 WSL 2 终端中操作）",
+  "按 README 的默认个人模式启动 Docker 部署，使用 localhost 访问与 dev/local 命名空间",
+  "打开 Dashboard 查看记忆、仓库、任务与运行记录",
+  "通过 MCP 或 Claude Code、Codex 插件连接编码代理，开始加载与记录会话上下文"
+ ],
+ "summary": "Loom 解决的是 AI 编码代理之间记忆不互通、上下文反复重建的问题。它把代理在会话中获得的知识保存为长期记忆，并关联到具体代码文件和符号，在代理再次编辑相关位置时自动提示；同时提供带引用的文档检索和仓库代码索引。项目可自托管，通过 MCP 或 SDK 接入 Claude Code、Codex 等代理，适合需要跨代理共享上下文、查询代码结构与文档的团队。",
+ "tagline": "为 AI 编码代理提供共享长期记忆、文档检索与代码索引的自托管 MCP 服务"
+}

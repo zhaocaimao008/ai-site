@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合撰写论文、学位论文、书籍或幻灯片的 LaTeX 用户，尤其是希望借助 AI 改稿但不想直接编辑 .tex 源码的作者。",
+ "date": "2026-11-16",
+ "features": [
+  "在 PDF 页面上框选内容并添加批注，由 agent 定位并修改 LaTeX 源码",
+  "AI 修改以排版后的 PDF 前后对比展示，支持接受、拒绝和评论",
+  "支持接入 Codex、Claude、Cursor、Copilot 等多种 AI agent",
+  "文件保存在本地，所有改动进入 Git 历史，可通过 Git 与合著者同步",
+  "提供 macOS、Windows、Linux 桌面安装包及 npm 命令行版本"
+ ],
+ "intro": "Papilot 是一款面向 LaTeX 写作的 AI 编辑器，核心理念是让作者只面对排版后的 PDF，而不必阅读或修改 .tex 源码。你在页面上框选句子、公式或图片并写下批注，AI agent 会自行定位对应的源文件并完成修改。\n\n修改结果以排版后的 PDF 前后对比形式呈现，可以直接接受、拒绝或继续评论，省去在脑中把源码 diff 想象成成品的步骤。项目支持接入你已有的 AI agent，文件保存在本地并纳入 Git 版本管理，便于与合著者通过 Git 同步协作。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载对应系统的安装包，或运行 `npm install -g papilot`（需 Node.js 22.22+）",
+  "安装 Git 以及 TeX Live 或 MacTeX",
+  "打开包含 .tex 文件的项目文件夹，由 Papilot 完成构建",
+  "在 PDF 页面上框选内容并添加批注，交给 AI agent 处理"
+ ],
+ "summary": "Papilot 把 LaTeX 写作的交互对象从 .tex 源码换成排版后的 PDF。作者只需在页面上框选句子、公式或图片并写批注，AI agent 负责找到对应源码并修改，结果以 PDF 前后对比呈现，可直接接受或拒绝。文件保存在本地并纳入 Git，方便与合著者同步，适合写论文、学位论文和书籍的 LaTeX 用户。",
+ "tagline": "不写 .tex，直接在 PDF 上改稿的 AI LaTeX 编辑器"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要 AI 图像/视频提示词参考的创作者、设计师，以及希望基于现有提示词库进行二次开发或让 AI Agent 生成新提示词的开发者。",
+ "date": "2026-11-16",
+ "features": [
+  "106 条提示词按六大类整理，覆盖人物、场景、构图、特效、周边、艺术",
+  "提供分类 Markdown 文件、合并总表 PROMPT_MASTER.md 和 Excel 总表三种查阅方式",
+  "支持将仓库交给 AI Agent，基于库内风格生成新的提示词",
+  "包含 build_xlsx.py 脚本，可从总表锚点重建 Excel",
+  "包含 archive_batch.py 脚本，支持批量入库新词条并查重",
+  "内容原样保留，不翻译、不总结、不改写"
+ ],
+ "intro": "这是一个开源的 AI 图像与视频生成提示词集合，共收录 106 条提示词，按人物、场景、构图、特效、周边、艺术六大类组织。所有提示词正文均原样保留，不翻译、不总结、不改写，方便直接复制使用。\n\n项目提供了多种使用方式：可以打开分类 Markdown 文件或合并总表查找条目，也可以通过 Excel 总表筛选浏览。此外，还支持将整个仓库交给 AI Agent，让 Agent 基于库内风格语法和结构生成全新的提示词。\n\n项目包含 Python 脚本用于从总表重建 Excel 以及批量入库新词条，并附有查重机制。内容采用 CC BY 4.0 协议，代码采用 MIT 协议。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/Nihilist-ZIO/prompt-library.git",
+  "进入目录：cd prompt-library",
+  "安装依赖：pip install openpyxl",
+  "重建 Excel：python -X utf8 build_xlsx.py",
+  "打开 cat_*.md 或 PROMPT_MASTER.md 复制提示词使用"
+ ],
+ "summary": "这个项目收集了 106 条 AI 图像和视频生成提示词，按人物、场景、构图、特效、周边、艺术六大类整理，正文保持原样，方便直接复制到 Midjourney、Stable Diffusion 等工具中使用。除了现成词条，还可以把整个仓库交给 AI Agent，让它参考库内风格生成新的提示词。适合需要提示词灵感的创作者，以及想基于现有库做二次开发的开发者。",
+ "tagline": "106 条 AI 图像/视频提示词，六大类整理，含 Excel 与脚本"
+}

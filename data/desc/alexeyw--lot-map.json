@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code 的开发者，希望直观了解代理工作过程、调试工具调用或监控会话状态。",
+ "date": "2026-11-16",
+ "features": [
+  "实时地图显示工具调用、模型步骤、hook 和 skill 的脉冲动画",
+  "站点分类：You、Model、Memory、Files、Shell、Network、Browser、Agents、Skills、Hooks",
+  "显示调用耗时（时钟指针）、后台任务、并发调用数量、错误和拒绝状态",
+  "上下文窗口使用率环形指示，模型切换提示",
+  "地图下方显示当前运行内容和最近 16 行记录",
+  "本地运行，不上传数据，支持 7 种语言"
+ ],
+ "intro": "lot-map 是一个 Claude Code 插件，在聊天窗口旁显示一张实时地图，把 Claude Code 的工作过程可视化。每次工具调用、模型步骤、hook 和 skill 都会从中心向对应站点发送脉冲，让你看到内存、文件、Shell、网络和代理正在工作，而不是阅读命令列表。\n\n地图上包含 You、Model、Memory、Files、Shell、Network、Browser、Agents、Skills、Hooks 等站点，调用开始和结束时会有脉冲飞出和返回，错误或拒绝会变红。地图下方显示当前运行内容和最近 16 行记录。\n\n所有数据都在本地运行，不会发送到任何地方。支持 7 种语言，在终端中需要至少 144 列宽度，否则需输入 /lot-map 打开。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在终端会话提示符下输入：/plugin install lot-map --marketplace alexeyw/lot-map",
+  "回答 y 添加市场，然后选择范围",
+  "或在 shell 中运行：claude plugin install lot-map --marketplace alexeyw/lot-map",
+  "如果提示找不到插件，先运行：claude plugin marketplace add alexeyw/lot-map，再运行：claude plugin install lot-map@lot-map",
+  "桌面应用：点击提示框旁的 +，选择 Plugins，Add marketplace 输入 alexeyw/lot-map，然后 Add plugin"
+ ],
+ "summary": "lot-map 是一个 Claude Code 插件，在聊天窗口旁显示实时地图，把工具调用、模型步骤、hook 和 skill 以脉冲动画呈现，帮助开发者直观看到代理正在操作内存、文件、Shell、网络还是子代理。适合想了解 Claude Code 工作细节、调试调用流程或监控会话状态的开发者。所有数据仅在本地处理，不上传。",
+ "tagline": "Claude Code 的实时工作地图，可视化工具调用与模型步骤。"
+}

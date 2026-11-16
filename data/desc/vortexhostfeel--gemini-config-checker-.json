@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要筛选可用代理配置以访问 Gemini 和 Google AI Studio 的用户，以及需要排查区域限制问题的开发者。",
+ "date": "2026-11-16",
+ "features": [
+  "以已登录浏览器方式检测区域可用性，而非简单连通性探测",
+  "Simple 模式批量测试已有代理配置",
+  "Advanced 模式在基础配置上串联免费配置寻找可用出口",
+  "内置 anti-DPI 配置，支持导出链接、base64 与 Xray 配置",
+  "提供 Windows、macOS、Linux 桌面版及 Web 服务器版，Android 为仅连通性模式"
+ ],
+ "intro": "Gemini Config Checker 是一个代理配置检测工具，用来找出哪些代理配置能真正进入 Google AI Studio 和 Gemini。它不依赖简单的 HTTP 连通性探测，而是通过已登录的浏览器打开页面，读取 Google 对登录用户显示的区域限制结果，例如 AI Studio 跳转到可用区域页面、Gemini 提示所在国家不支持。\n\n工具提供 Simple 和 Advanced 两种模式：前者逐个测试你已有的配置，后者以一条可用的基础配置为入口，再串联免费配置寻找 Google 接受的出口。内置 anti-DPI 配置，并支持导出链接、base64 或完整的 Xray 配置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载对应系统的安装包并解压",
+  "Windows 运行 GeminiConfigChecker.exe；Linux 先安装 libgtk-3-0 与 libwebkit2gtk-4.1-0 后运行 ./GeminiConfigChecker",
+  "在 Scan 标签页选择 Simple 或 Advanced 模式并填入配置",
+  "在 Results 标签页查看检测结果，在 Export 标签页导出可用配置"
+ ],
+ "summary": "这个工具用来判断哪些代理配置能真正打开 Google AI Studio 和 Gemini。它不靠普通 HTTP 请求判断连通性，而是通过已登录的浏览器读取 Google 对账号显示的区域限制结果，避免把实际被封锁的配置误判为可用。支持批量测试已有配置，也支持在一条基础配置上串联免费配置寻找可用出口，适合需要筛选代理线路或排查区域限制的用户。",
+ "tagline": "检测代理配置能否真正访问 Gemini 与 AI Studio"
+}

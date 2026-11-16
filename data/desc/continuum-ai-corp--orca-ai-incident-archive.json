@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合关注 AI Agent 安全、AI 治理与威胁情报的安全研究者、开发者及政策相关人员查阅和引用。",
+ "date": "2026-11-16",
+ "features": [
+  "按月份归档的 AI Agent 安全事件记录，每条含 YAML 元数据与攻击链图",
+  "用 real_harm、ai_involvement、kind 三个字段区分事件性质",
+  "提供 JSON、CSV、统计数据和全部来源 URL 的 dist/ 数据目录",
+  "单文件 index.html 支持离线浏览，界面提供七种语言",
+  "记录标题与摘要提供七种语言，中文全文单独存放",
+  "按攻击面、地区等维度组织专题与切片"
+ ],
+ "intro": "Orca AI Incident Archive 是一个按月份整理的 AI Agent 安全事件数据库，每条记录是一个带 YAML 头的 Markdown 文件，包含攻击链示意图和至少一个可点击的一手来源链接。\n\n项目强调区分「真实造成损害的事件」与「研究者证明可能发生」：每条记录都标注是否有确认受害者（real_harm）、AI 参与是否有一手来源证实（ai_involvement），以及记录类型是事件、漏洞披露、研究演示、威胁报告还是政策动向。数据同时提供 JSON、CSV 等格式，并附带一个可离线使用的单文件 HTML 浏览页面。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "按时间顺序浏览：打开 incidents/README.md 查看全部月度记录",
+  "只看真实造成损害的事件：筛选 real_harm: true 或查看 critical 列表",
+  "按攻击面或地区浏览：进入 topics/README.md 或 regions/README.md",
+  "做数据分析：使用 dist/ 目录下的 JSON、CSV 和统计数据",
+  "离线交互浏览：直接打开 index.html"
+ ],
+ "summary": "这个项目收集真实发生的 AI Agent 安全事件，按月份整理成可检索的数据库。它特别区分「确实造成损害的事件」和「研究者演示的可能性」，每条记录都标注是否有确认受害者、AI 参与是否有一手来源，并附攻击链图和可点击的来源链接。适合安全研究者、开发者和关注 AI 治理的人查阅真实案例、按攻击面或地区筛选，或用于数据分析。",
+ "tagline": "真实 AI Agent 安全事件的开源数据库"
+}

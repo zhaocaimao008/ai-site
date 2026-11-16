@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 AI 聊天中直接操作 VS Code 工作区的开发者，以及不想配置 API key 或复杂环境的普通用户。",
+ "date": "2026-11-16",
+ "features": [
+  "将 AI 聊天与 VS Code 工作区连接，自动使用当前打开的项目",
+  "支持多种 AI 提供商，如 ChatGPT、Claude、Gemini、Kimi、Grok 等",
+  "通过本地桥接和 MCP 协议转发命令并返回结果",
+  "提供浏览器扩展和独立 Windows 桌面应用两种使用方式",
+  "免费开源，无需 API key、订阅或登录"
+ ],
+ "intro": "snapgentV3 是一个浏览器扩展加本地桥接工具，用于将普通 AI 聊天（如 ChatGPT、Claude、Gemini 等）与 VS Code 连接起来。它自动使用当前打开的 VS Code 工作区，用户只需在聊天中用自然语言描述任务，扩展就会检测 AI 回复中的命令，通过本地桥接转发到 VS Code 的 MCP 服务器，并将结果返回聊天，让 AI 继续处理。\n\n项目免费开源，无需 API key、订阅或登录。支持多种 AI 提供商，包括 ChatGPT、Claude、Google Gemini、Kimi、Grok、GLM、Qwen 等。除了浏览器扩展，还提供独立的 Windows 桌面应用 Snapgent App，内置 AI 浏览器和桥接，无需手动加载扩展或运行桥接。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并解压最新 SnapgentV3 发布包",
+  "在 Edge 或 Chrome 中打开扩展页面，启用开发者模式，点击“加载解压缩的扩展”并选择 snapgent-extension 文件夹",
+  "在 VS Code 中打开要操作的项目文件夹",
+  "Windows 双击 start.bat 启动桥接；macOS 双击 MacOS_Start.command",
+  "在支持的 AI 聊天页面中开始对话，扩展会自动检测并执行命令"
+ ],
+ "summary": "snapgentV3 是一个浏览器扩展加本地桥接工具，用于将普通 AI 聊天与 VS Code 连接起来。它自动使用当前打开的 VS Code 工作区，用户只需在聊天中用自然语言描述任务，扩展就会检测 AI 回复中的命令，通过本地桥接转发到 VS Code 的 MCP 服务器，并将结果返回聊天。适合希望在 AI 聊天中直接操作 VS Code 的开发者，无需 API key 或复杂配置。",
+ "tagline": "浏览器扩展+本地桥接，让AI聊天直接操作VS Code"
+}

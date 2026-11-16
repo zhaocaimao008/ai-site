@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在 CPU 或浏览器中本地运行轻量英语 TTS 的开发者，以及对小型语音合成模型训练感兴趣的读者。",
+ "date": "2026-11-16",
+ "features": [
+  "4.5M 参数、18 MB 的轻量英语 TTS 模型",
+  "提供 F2 女声和 M2 男声两个美式英语音色，24 kHz 输出",
+  "支持 PyTorch、ONNX Runtime 和浏览器端 ONNX Runtime Web",
+  "命令行可调语速、音高偏移和音高范围",
+  "长文本按句合成并拼接，输出峰值不超过 0.99 避免削波",
+  "开源代码、权重、训练配方和数据集"
+ ],
+ "intro": "tiny-voca 是一个从零训练的小型英语文本转语音模型，参数量约 4.5M，权重文件 18 MB，包含波形生成器。它提供 F2（女声）和 M2（男声）两个美式英语音色，输出 24 kHz 音频，可在 CPU 上运行，也支持 PyTorch、ONNX Runtime 和 ONNX Runtime Web。\n\n项目开源了代码、权重、训练配方和数据集。README 称在四个 CPU 线程上约达到 70 倍实时速度，长文本会按句合成后拼接。使用命令行即可指定音色、语速和音高参数生成 WAV 文件，也提供了 Python 接口和浏览器演示。\n\n模型仅支持英语，音色固定，不支持声音克隆，也没有流式输出。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并安装：git clone https://github.com/n4ze3m/tiny-voca.git && cd tiny-voca && pip install -e \".[own]\"",
+  "下载权重：hf download n4ze3m/tiny-voca --local-dir weights",
+  "设置环境变量：export DIZIONE_DATA=weights/phonemizer",
+  "运行推理：python -m tiny_voca.infer --checkpoint weights/tiny-voca.pt --voice F2 --text \"Hello! This is tiny voca.\" --output hello.wav"
+ ],
+ "summary": "tiny-voca 是一个从零训练的小型英语文本转语音模型，参数量仅 4.5M，权重 18 MB，提供男女两个固定音色。它能在 CPU 上运行，也支持 ONNX Runtime 和浏览器端推理，适合需要本地、轻量英语语音合成的场景，例如网页朗读或离线音频生成。项目同时公开了代码、权重、训练配方和数据集，便于了解小型 TTS 模型的训练流程。",
+ "tagline": "4.5M 参数双音色英语 TTS 模型，CPU 与浏览器可运行"
+}
