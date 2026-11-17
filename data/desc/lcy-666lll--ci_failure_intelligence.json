@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 GitHub Actions 并希望快速定位测试失败原因的研发团队，以及需要追溯历史失败模式、辅助诊断的开发者。",
+ "date": "2026-11-17",
+ "features": [
+  "接收 GitHub Actions 的 JUnit 报告，集中展示测试名称、错误信息、堆栈与 CI 运行身份",
+  "检索同仓库历史失败，点击来源事件可核对原始记录",
+  "生成结构化 AI 诊断，包含结论摘要、可能原因、建议操作与待补充信息",
+  "诊断结果保留证据引用，可跳转回当前或历史失败事件",
+  "支持诊断缓存复用，读取已有结果不触发模型调用",
+  "提供 HTTP 接口，支持 HMAC 认证投递与 Bearer 令牌读取"
+ ],
+ "intro": "CI Failure Intelligence 是一个面向研发团队的 CI 失败调查工具。它接收 GitHub Actions 产生的 JUnit 测试报告，将失败证据、同仓库相似历史与 AI 诊断集中展示在同一个工作台，方便开发者快速定位问题。\n\n项目采用 FastAPI + LangGraph + Qdrant + Vue 构建，PostgreSQL 保存业务事实，Qdrant 提供历史检索，LangGraph 编排证据读取、历史检索、缓存与模型调用。诊断结果保留引用，可跳转回原始失败事件核对上下文。\n\n工作台支持按需生成诊断并复用缓存，读取已有结果不会触发模型调用。线上服务采用共享工作区模式，通过申请获取访问凭据即可使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 GitHub Issues 申请访问凭据（读取令牌、CI 接入 HMAC 密钥、诊断触发令牌）",
+  "打开 https://cifailure.xyz，粘贴读取令牌进入工作台",
+  "在目标 GitHub 仓库的 Settings → Secrets and variables → Actions 中，新建 Variable CFI_INGEST_URL 为 https://cifailure.xyz/api/v1/ci-runs/ingest，新建 Secret CFI_INGEST_HMAC_SECRET 为发放的 HMAC 密钥",
+  "将 scripts/ci/send_ci_failure.py 放入仓库，按接入说明在测试 Job 后接上发送步骤",
+  "运行 workflow，测试失败时投递报告，在工作台刷新列表查看失败明细与相似历史",
+  "在事件详情中填写诊断触发令牌，按需生成 AI 诊断"
+ ],
+ "summary": "CI Failure Intelligence 帮助研发团队调查 GitHub Actions 中的测试失败。它接收 JUnit 报告，把失败证据、同仓库相似历史和 AI 诊断放在一个工作台里，诊断引用可跳回原始失败核对。适合需要快速定位 CI 失败原因、追溯历史失败模式的团队使用。",
+ "tagline": "CI 失败检索与证据化诊断工作台"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有低显存 NVIDIA 显卡（尤其是 4GB 显存）并希望在本地运行文生图模型的开发者或爱好者。也适合想要了解如何在有限硬件上优化 AI 推理性能的技术人员。",
+ "date": "2026-11-17",
+ "features": [
+  "在 4GB 显存的 GTX 1050 Ti 笔记本上运行 Z-Image-Turbo 文生图",
+  "使用 stable-diffusion.cpp 和 cuDNN 加速 VAE 解码",
+  "提供一键安装脚本，自动下载并校验模型文件",
+  "支持自定义提示词、分辨率、随机种子等参数",
+  "包含详细的性能测量数据和故障排除文档",
+  "提供引擎补丁和构建指南，支持适配其他硬件"
+ ],
+ "intro": "该项目提供了一套在低显存硬件上运行 Z-Image-Turbo 文生图模型的方案。目标设备是搭载 4GB 显存的 NVIDIA GTX 1050 Ti 笔记本显卡（Pascal 架构）和 16GB 内存的 Windows 电脑。通过 stable-diffusion.cpp 和 cuDNN 加速的 VAE 解码，实现了在 768x1344 分辨率下生成图像。\n\n项目包含了完整的安装脚本、模型下载校验、生成脚本以及详细的性能测量数据。所有下载文件都通过 sha256 校验，确保一致性。同时提供了补丁和构建文档，方便用户针对其他硬件进行调整。\n\n需要注意的是，该项目为非官方项目，与 Tongyi-MAI、leejet 或 NVIDIA 无关。目前仅在 GTX 1050 Ti 4GB 笔记本卡上进行了测量，其他显卡未测试。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/alexturkey/z-image-turbo-pascal-4gb.git",
+  "cd z-image-turbo-pascal-4gb",
+  "python scripts/setup.py",
+  "python scripts/generate.py --prompt-file prompts/eiffel.txt"
+ ],
+ "summary": "这个项目解决了在低显存硬件上运行 Z-Image-Turbo 文生图模型的问题。它针对 4GB 显存的 GTX 1050 Ti 笔记本显卡和 16GB 内存的 Windows 电脑，通过 stable-diffusion.cpp 和 cuDNN 加速，实现了 768x1344 分辨率下的图像生成。项目提供了自动化的安装和生成脚本，并公开了性能测量数据和引擎补丁，适合需要在有限硬件上进行本地 AI 图像生成的开发者参考。",
+ "tagline": "在4GB显存笔记本上运行Z-Image-Turbo文生图"
+}

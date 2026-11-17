@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建可审计、有时效要求的企业知识库问答系统的开发团队，以及关注 RAG 溯源与权限控制的研究者。",
+ "date": "2026-11-17",
+ "features": [
+  "三种执行模式：Fast 一次检索作答，Deep 按计划模板分步检索，Verified 作答后做语义检查与定向补检索，Router 按问题选择并逐级升级。",
+  "验证层：代码检查引用来源、权限、定位、数值日期与时效，模型判断证据是否支持结论，核心结论不过则整题拒答。",
+  "三类时间查询：当前生效、某天实际生效（按有效期）、截至某天系统所知（回溯，按审核通过时间）。",
+  "文档生命周期：上传、审核、可搜索、归档/取消归档，新版本生效日推出旧版本作废日，有效期与版本关系只追加。",
+  "权限由代码执行：每次检索带授权范围，返回前在数据库核对状态、权限与有效期，无权访问与不存在统一返回 404。",
+  "多格式解析：Word、HTML 原生解析，PDF、扫描件、PPTX、XLSX、图片经 Docling（含 OCR），表格按多层表头拆成单元格证据。"
+ ],
+ "intro": "document.ai（EAER）是一个面向企业知识库的 RAG 问答系统，核心目标是让每条回答都能追溯到具体文档、版本和位置，并判断该依据在问题关心的日期是否有效。它把版本、有效期、权限和验证作为问答流程的一部分，而不是只做相似段落检索。\n\n系统提供 Fast、Deep、Verified 三种执行模式，由 Router 按问题选择入口，证据不足时逐级升级，预算用尽则拒答。验证层用代码做确定性检查（引用是否来自本次检索、权限、定位、数值日期、时效），模型只判断证据是否支持结论。支持当前生效、某天实际生效、截至某天所知三类时间查询，以及文档上传、审核、归档的完整生命周期。\n\n项目基于 Python 和 FastAPI，使用 PostgreSQL 与 OpenSearch，编排采用 LangGraph，并提供 Next.js 简易 Web UI 和本地 Qwen3 Embedding/Reranker 模型服务参考实现。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "启动依赖：docker compose -f docker-compose.dev.yml up -d",
+  "创建虚拟环境并安装依赖：python3.14 -m venv .venv && .venv/bin/pip install -r requirements.txt",
+  "在仓库根目录 .env 中配置生成、Embedding、重排模型服务（模板见 deploy/eaer.env.example）",
+  "建库建索引并启动接口与后台任务：.venv/bin/alembic upgrade head；.venv/bin/python -m eaer.ingestion rebuild --build-id b1；.venv/bin/uvicorn eaer.api.main:app --port 8000 &；.venv/bin/python -m eaer.ingestion &",
+  "启动 Web UI：cd web && npm ci && npm run dev（http://localhost:3200）"
+ ],
+ "summary": "document.ai（EAER）解决企业知识库问答中“查到相似段落不等于答对”的问题：制度会修订、作废、被补充通知覆盖，普通 RAG 无法说明依据出自哪份文档的哪个版本、在问题关心的日期是否有效。它把版本、有效期、权限和验证纳入问答流程，适合需要可审计、有时效判断的企业内部知识问答场景。",
+ "tagline": "可溯源、带时效判断的企业知识库问答"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望体验桌面语音 Agent、需要可控文件处理流程的开发者与个人用户，尤其是 Windows 平台且对任务可追溯性有要求的场景。",
+ "date": "2026-11-17",
+ "features": [
+  "中/日/英语音识别与合成，支持持续监听、自然插话和停止旧播报",
+  "原创 Live2D 桌面角色，具备眨眼、基础动作和音频驱动的嘴型",
+  "后台任务执行：文件与 Office 处理、独立浏览器会话，支持进度查询、暂停、修改要求、取消和检查后恢复",
+  "文件修改前预览具体动作，校验权限和原文件 SHA256，备份后执行并记录回执",
+  "任务完成时通过 work_finish 检查声明产物、产物哈希和固定验收条件",
+  "支持本地导入 Skills 并绑定任务版本，模型可在 DeepSeek 云端 API 与本机 Ollama 之间切换"
+ ],
+ "intro": "聆泊是一个 Windows 桌面语音 Agent 原型，将持续语音对话、原创 Live2D 角色和后台任务执行结合在一起。用户可以通过自然语言发起桌面工作，例如整理文件、处理 Office 文档或操作浏览器，并在任务运行过程中继续交流、暂停修改要求或取消任务。\n\n项目强调可控性与可追溯性：任务执行时保留要求版本、执行回执和产物哈希，涉及已有文件的修改需要先预览具体动作并确认，完成后可下载实际产物进行复核。语音方面支持中、日、英识别与合成，以及持续监听和自然插话。\n\n技术栈包括 Electron、Vue、TypeScript 和 Node.js，模型可切换 DeepSeek 云端 API 或本机 Ollama，语音服务单独配置。仓库提供源码，安装包暂不公开，桌面角色构建需要自行导入 Cubism Core。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装环境：Windows x64、Node.js 24、pnpm 11、Python 3.12",
+  "安装依赖：pnpm --dir desktop install --frozen-lockfile && pnpm --dir engine install --frozen-lockfile && pnpm --dir speech install --frozen-lockfile",
+  "创建 Python 虚拟环境并安装依赖：python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt",
+  "复制 .env.example 为 .env 并填写服务凭据，或启动后在本机配置页面加密保存",
+  "运行 pnpm start 启动后端，默认地址 http://127.0.0.1:3850；桌面角色需另行构建并导入 Cubism Core"
+ ],
+ "summary": "聆泊是一个 Windows 桌面语音 Agent 原型，把实时语音对话、Live2D 角色和后台文件处理结合起来。用户可以用自然语言发起任务，在任务运行中继续交流、暂停修改要求，并在文件修改前预览具体动作。适合需要可控、可追溯的桌面文档处理与资料整理场景，尤其关注任务执行证据和人工复核环节的用户。",
+ "tagline": "Windows 桌面语音 Agent，支持实时对话与后台文件处理"
+}

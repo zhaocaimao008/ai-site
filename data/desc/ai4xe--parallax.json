@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、DeepSeek Harness 或 GitHub Copilot 进行 AI 辅助编程的开发者，尤其是希望将需求讨论、计划审查、执行和审计流程自动化，减少手动干预的用户。",
+ "date": "2026-11-17",
+ "features": [
+  "通过 qstart 技能进行需求讨论与逐条对齐，生成完整概览",
+  "qgo 技能负责计划编写、bcheck 独立审查、新会话执行、rcheck 审计和范围提交",
+  "solo 与 team 两种协作模式，分别适合日常任务和大型长任务",
+  "自动上下文管理：任务开始时切换新会话，长任务中约 60% 时自动交接",
+  "支持 Claude Code、DeepSeek Harness 和 GitHub Copilot（VS Code）平台",
+  "提供 wish 一行许愿入口，转发到 qstart 流程"
+ ],
+ "intro": "Parallax 是一个构建在编码智能体框架之上的轻量级工作流插件。用户只需用自然语言描述目标，插件会引导智能体先做调研、逐条确认需求，然后自动进入计划、独立审查、新会话执行、独立审计和提交的完整流程。\n\n它支持 solo 和 team 两种协作模式，前者适合日常使用，后者适合大型或超长任务。插件还提供自动上下文管理，在任务开始时切换到新会话，长任务中约 60% 上下文时自动交接，保持模型清晰。\n\n目前支持 Claude Code、DeepSeek Harness 和 GitHub Copilot（VS Code）三个平台，其中 Copilot 仅支持 solo 模式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/AI4XE/Parallax.git",
+  "Claude Code 安装：bash Parallax/install.sh /path/to/your-project",
+  "DeepSeek Harness 安装：dsh plugin --profile <profile> add parallax-dsh",
+  "Copilot 安装：在 VS Code Marketplace 搜索 Parallax for Copilot 安装，或运行 bash Parallax/install.sh --platform copilot /path/to/your-project",
+  "在项目会话中说 qstart（或 wish / Parallax）启动流程"
+ ],
+ "summary": "Parallax 是一个 AI 编码工作流插件，解决的是从模糊需求到可靠代码提交之间缺乏结构化流程的问题。用户只需用自然语言说出目标，插件会引导智能体调研、逐条确认需求，再自动完成计划、独立审查、新会话执行、审计和提交。适合使用 Claude Code、DeepSeek Harness 或 GitHub Copilot 的开发者，在需要减少手动干预、让智能体团队自主推进任务时使用。",
+ "tagline": "轻量级 AI 编码工作流插件，让智能体团队自主完成开发任务"
+}

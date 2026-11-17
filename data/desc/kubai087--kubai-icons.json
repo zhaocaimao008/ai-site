@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex 等编码代理的开发者，以及需要统一风格动态图标库的前端和设计人员。",
+ "date": "2026-11-17",
+ "features": [
+  "提供 agent skill，让编码代理按统一规则绘制动态图标",
+  "附带 2,800+ 开源图标，覆盖 React、Vue、原生 JS、Web Components 和静态 SVG",
+  "图标悬停动画贴合物件本身动作，单一强调色派生全部配色",
+  "每个图标为独立的无副作用 ES 模块，支持服务端渲染和按需加载",
+  "内置无头自检脚本，检查静止、悬停、中间帧及多种尺寸和调色板",
+  "官网支持搜索、改色、复制代码或提示词、下载 SVG/PNG 和打包收藏"
+ ],
+ "intro": "Kubai Icons 是一个面向 AI 编程助手的 agent skill，用来让 Claude Code、Codex 等编码代理按同一套规则绘制动态图标。它包含规则文档、绘制引擎和自检脚本，代理会先为每个功能写出一句「日常物件 + 悬停动作」的描述，再参照最接近的已有图标绘制，并通过截图对比尺寸、轮廓、图层和颜色反复修正。\n\n项目同时附带 2,800 多个用这套方法绘制的开源图标，覆盖近 900 个物件以及带徽标和斜杠的「关闭」版本，可用于 React、Vue、普通 JavaScript、Web Components 和静态 SVG。图标悬停时会做出符合物件本身的动作，例如文件夹打开、信封拆封、日历翻页，所有渐变、描边和阴影都由一个强调色派生，因此跟随 currentColor 即可整体换色。\n\n官网提供按名称、形状或含义搜索图标、改色、复制代码或代理提示词、下载 SVG/PNG 以及打包收藏为 ZIP 的功能，并支持 16 种语言。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "把 README 中的安装提示词复制给代理，让它将仓库克隆到 skills 目录（Claude Code 为 ~/.claude/skills，Codex 为 ~/.agents/skills）",
+  "重启代理后 skill 即可使用；也可手动执行 git clone https://github.com/kubai087/kubai-icons.git ~/.claude/skills/kubai-icons",
+  "用自然语言描述需要的图标，例如「为这个仓库的主要功能绘制动态图标」",
+  "在代码中使用图标：npm i kubai-icons-react，然后 import { Folder, CalendarCheck } from \"kubai-icons-react\"",
+  "无构建步骤时，通过 script 标签加载 CDN 上的 element.js，并使用 <kubai-icon name=\"folder-plus\" size=\"32\" color=\"#6366F1\"></kubai-icon>"
+ ],
+ "summary": "Kubai Icons 提供一个给 AI 编程助手使用的技能，让代理按照统一规则绘制风格一致的动态图标，并自带自检流程来核对尺寸、轮廓和配色。项目还附带大量可直接使用的开源图标，覆盖 React、Vue、Web Components 和静态 SVG，适合需要为产品快速补齐成套图标、又希望保持视觉统一的开发与设计场景。",
+ "tagline": "让 AI 编程助手按统一风格绘制动态图标的技能"
+}

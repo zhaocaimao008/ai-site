@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合电影制作者、内容创作者和 AI 爱好者，尤其是希望在本地硬件上完成 AI 辅助电影制作的用户。",
+ "date": "2026-11-17",
+ "features": [
+  "剧本导入与分镜规划，维护电影圣经",
+  "使用 Qwen-Image-2.1 / FLUX3-K 生成图片",
+  "使用 MiniMax H3 / FastH3 生成带声音的视频",
+  "Fish Audio Drama 3 配音与 MiniMax-Music3/YuE2 音乐生成",
+  "剪辑、调色、混音与动态图形制作",
+  "通过 MCP 工具和 API 支持代理自动化"
+ ],
+ "intro": "Imagination Studio 是一个本地运行的 AI 电影制作工具，由 keys+Wasserman 开发，基于 TensorFold 引擎。它允许用户像剧组一样规划电影，生成图片、视频、配音和音乐，并进行编辑和导出。支持 Windows、Apple Silicon Mac 和 NVIDIA Linux 平台。\n\n项目集成了多种生成模型，如 Qwen-Image-2.1、FLUX3-K 用于图片，MiniMax H3、FastH3 用于视频，以及 Fish Audio Drama 3 用于配音。用户可以通过 Slate 工作流管理剧本、分镜和制作流程。所有渲染任务通过统一的队列管理内存，确保稳定运行。\n\n适合电影制作者、内容创作者和 AI 爱好者使用，尤其适合希望在本地硬件上完成 AI 辅助电影制作的用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows：以管理员身份运行 PowerShell 安装脚本",
+  "Mac：安装依赖并运行 oneshot-setup.sh --app",
+  "NVIDIA Linux：克隆仓库并运行 oneshot-setup.sh",
+  "启动后访问 http://127.0.0.1:7870"
+ ],
+ "summary": "Imagination Studio 是一个本地 AI 电影制作工具，帮助用户从剧本规划到最终导出完成整个电影制作流程。它集成了图片、视频、配音和音乐生成模型，支持 Windows、Mac 和 NVIDIA Linux 平台。适合电影制作者和内容创作者在本地硬件上利用 AI 辅助完成电影项目。",
+ "tagline": "本地 AI 电影工作室：规划、生成、编辑与导出"
+}

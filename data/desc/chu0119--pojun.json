@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合做授权渗透测试、红队评估的安全工程师与安全团队，也适合想了解 LLM 多 Agent 在攻防场景落地的开发者。",
+ "date": "2026-11-17",
+ "features": [
+  "多 Agent 自主推进：planner 派发意图、worker 执行、mainagent 接管对话与报告，支持人在环路纠偏",
+  "目标与证据双闸门：目标需带可核验验收标准，高危漏洞必须附可复现证据才进入报告",
+  "攻击链续跳：确认漏洞后按类别自动派发继任意图，推进到数据/资金影响层",
+  "全程留痕：所有 HTTP/S 流量经 MITM 代理逐请求留存，每步 activity 可回放",
+  "漏洞情报运营：同步 NVD、CISA KEV、GitHub Advisory 与 PoC，并按资产指纹反向匹配",
+  "内置 22 个方法论技能、MCP 预设与 66 件工具的一键安装与体检"
+ ],
+ "intro": "Pojun 是一套用 LLM 多 Agent 自主推进渗透测试全流程的平台：输入一句话目标，系统自动完成目标拆解、侦察、漏洞挖掘、利用、后渗透到报告生成，过程中人可以随时介入纠偏。它强调「像守纪律的渗透测试工程师一样干活」，通过目标闸门（每条目标带可核验验收标准）、证据闸门（critical/high 漏洞必须附可机械复现的证据）和全程流量留痕来保证结论可回溯。\n\n平台采用 Go 单体后端、Next.js 内嵌前端与 PostgreSQL，支持 Linux、macOS 和 Docker 部署，LLM 通道支持 Anthropic、OpenAI 及兼容网关的多通道轮询。除自主渗透外，还提供漏洞情报运营、资产台账、C2 监听器、技能库与 MCP 接入等模块。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Linux（root）：curl -fsSL https://github.com/chu0119/Pojun/releases/latest/download/install.sh | sudo bash",
+  "macOS 13+：curl -fsSL https://github.com/chu0119/Pojun/releases/latest/download/install.sh | bash",
+  "Docker：git clone --depth 1 https://github.com/chu0119/Pojun.git pojun && cd pojun && cp .env.example .env，然后按平台执行 docker compose up -d",
+  "浏览器打开 http://<host>:8787，初始化管理员密码（≥8 位）",
+  "在「LLM 配置」页配置模型通道，新建任务并输入一句话目标"
+ ],
+ "summary": "Pojun 是一个用 LLM 多 Agent 自主推进渗透测试全流程的平台，从一句话目标出发自动完成侦察、漏洞挖掘、利用、后渗透与报告，并允许人工随时介入。它通过目标验收标准、可复现证据和全程流量留痕来约束 AI 的输出，适合授权渗透测试与红队评估场景。",
+ "tagline": "LLM 多 Agent 驱动的自主渗透测试与红队作战平台"
+}

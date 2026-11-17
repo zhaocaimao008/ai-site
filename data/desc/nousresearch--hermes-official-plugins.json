@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已经使用或计划使用 Hermes Agent 的开发者与普通用户，希望通过官方插件快速扩展智能家居、音乐、模型接入、3D 创作等能力。",
+ "date": "2026-11-17",
+ "features": [
+  "提供 Home Assistant 插件，可监听事件总线、控制设备并通过通知回复",
+  "提供 Spotify 插件，支持播放控制、设备管理、搜索、播放列表等七类工具",
+  "提供 Claude Subscription DirectSDK 实验性插件，通过 Claude Code CLI 使用 Claude Pro/Max 订阅",
+  "提供 Memory Wiki 插件，将本地会话历史转为可浏览的主题页面和每日日志",
+  "提供 Blender、Snyk、TouchDesigner 等 MCP 服务器插件，扩展 3D 创作、安全扫描和视觉编程能力",
+  "所有插件通过 hermes plugins 命令从目录搜索、安装和更新，并固定到审查过的提交"
+ ],
+ "intro": "这是 Nous Research 为 Hermes Agent 维护的官方插件仓库。Hermes Agent 是一个能自我改进的 AI 代理，而插件机制让核心保持精简，将特定产品、供应商或兴趣相关的功能放到边缘。\n\n仓库中的每个插件都对应一个目录，可通过 Hermes 插件目录用一行命令安装。目前包含 Home Assistant、Spotify、Claude Subscription DirectSDK、Memory Wiki、Blender、Snyk、TouchDesigner 等插件，涵盖智能家居、音乐播放、模型接入、记忆浏览、3D 创作和安全扫描等场景。\n\n插件目录中的条目固定到经过审查的提交，确保安装的内容与审查时一致。官方插件由 Nous Research 维护，社区插件则由供应商或独立作者维护。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Hermes Agent：curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash",
+  "浏览插件目录：hermes plugins search",
+  "查看插件详情：hermes plugins info spotify",
+  "安装插件：hermes plugins install spotify",
+  "更新插件：hermes plugins update spotify"
+ ],
+ "summary": "Hermes Agent 是一个能自我改进的 AI 代理，这个仓库收集了 Nous Research 官方维护的插件，让用户按需安装 Home Assistant、Spotify、Claude 订阅接入、Blender、Snyk 等扩展。适合希望用 Hermes Agent 连接智能家居、音乐服务、3D 工具或安全扫描的开发者与普通用户，通过插件目录即可搜索、安装和更新。",
+ "tagline": "Hermes Agent 官方插件集合，一键安装扩展能力"
+}

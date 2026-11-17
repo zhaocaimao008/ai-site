@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Codex、Cursor 等 AI 编程助手的开发者，以及需要把 AI 生成的文档、README、邮件改得更易读的技术写作者。",
+ "date": "2026-11-17",
+ "features": [
+  "两步改写：先清除 26 种 AI 写作特征，再按 STE80 规则重构句子",
+  "提供 Humanize、Light、Strict STE 等多种模式，按需选择改写力度",
+  "改写结果按编号（如 §1、S2）报告修改项，便于逐条核对",
+  "支持通过 skills CLI 安装到 Claude Code、Codex、Cursor 等多种 agent",
+  "附带完整的 AI 特征与 STE80 规则参考文档"
+ ],
+ "intro": "STE80 Humanizer 是一个面向 AI 编程助手的 agent skill，用来把 AI 生成的文字改写成读起来像人写的文本，同时不改变原意。它把两种方法结合起来：第一步按 Wikipedia《Signs of AI writing》整理出的 26 种 AI 写作特征做清理，去掉聊天机器人式的开场、堆叠的修饰和模糊措辞；第二步按 Andrej Karpathy 提到的思路，把句子重写到「80% 接近 ASD-STE100」的程度。\n\nASD-STE100 是源自航空维修文档的受控英语规范，强调短句、每句一个意思、主动语态和简单时态。项目默认采用 80% 版本，保留完整结构，只收紧到读起来自然的程度；也提供 Strict 模式，用于流程说明和安全提示等场景。作者明确表示目标是让人更容易读懂，而不是绕过 AI 检测器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npx skills add Dodaios/ste80-humanizer",
+  "在对话中输入 /ste80-humanizer 并粘贴待改写文本",
+  "或直接提出请求，例如「Rewrite this README 80% of the way to ASD-STE100.」",
+  "需要严格规范时说明 strict，例如「Convert docs/runbook.md to strict STE.」"
+ ],
+ "summary": "这个项目是一个 agent skill，用来处理 AI 生成文本读起来生硬、套路化的问题。它先清除常见的 AI 写作特征，再按简化技术英语的思路把长句拆短、改用主动语态，让文档、README 和邮件更容易读懂。适合使用 AI 编程助手写作、又希望输出更自然清晰的开发者。",
+ "tagline": "两步改写 AI 文本，去除 AI 腔并贴近简化技术英语"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要为 AI agent 或 RAG 流程提供自托管搜索与网页正文的开发者，以及希望自行控制搜索来源和隐私的用户。",
+ "date": "2026-11-17",
+ "features": [
+  "聚合多个外部搜索服务商的结果，返回标题、URL、摘要和来源信息",
+  "内置 MCP 服务器，提供 search 和 read_page 两个只读工具供 AI agent 调用",
+  "支持 include_raw_content 抓取页面正文，并报告抓取状态与错误",
+  "提供 standard、clean、full 三种搜索配置，可按需切换来源",
+  "支持本地站点索引和 Wikipedia 转储导入",
+  "提供 --check-config 等配置校验与更新检查命令"
+ ],
+ "intro": "RustXNG 是一个用 Rust 编写的自托管元搜索引擎，基于 SearXNG 实现。它本身不维护网页级搜索索引，而是聚合外部搜索服务商的结果，并通过 JSON API 或内置 MCP 服务器把结果和页面正文提供给 AI agent。\n\n项目提供三种搜索配置：standard 默认使用已记录使用条件的无密钥接口，clean 只查询本地索引和 Wikipedia 转储，full 额外启用 HTML 来源和需要付费的 Exa Search。页面正文抓取会检查目标地址和重定向是否为非公开地址，并遵循 robots.txt。\n\n除 HTTP 接口外，RustXNG 还支持 CSV、RSS、HTML 输出和网页界面，可用 Docker 或 Cargo 安装，配置文件以分层方式覆盖默认设置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "用 Cargo 安装：cargo install --git https://github.com/sahenjp/RustXNG.git --tag v0.32.0 --locked",
+  "启动本地服务：rustxng --bind 127.0.0.1 --port 29483",
+  "用 curl 发起搜索请求：curl --fail --get 'http://127.0.0.1:29483/search' --data-urlencode 'q=tokio runtime documentation' --data 'format=json' --data 'max_results=5'",
+  "启动 MCP 服务器供 AI agent 使用：rustxng mcp"
+ ],
+ "summary": "RustXNG 是一个自托管的元搜索引擎，用 Rust 编写并基于 SearXNG。它不自己维护全网索引，而是汇总外部搜索服务商的结果，并通过 JSON API 或 MCP 把搜索结果和网页正文交给 AI agent 使用。适合需要为 agent 或 RAG 流程提供可控搜索来源、并希望自行部署的开发者。",
+ "tagline": "用 Rust 编写的自托管元搜索引擎，为 AI agent 提供搜索与网页正文"
+}

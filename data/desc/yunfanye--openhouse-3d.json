@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合有一定 Blender 和 Python 基础的开发者、3D 艺术家或 AI 编码代理，用于从房产照片重建房屋并制作漫游视频。普通用户需具备一定技术背景。",
+ "date": "2026-11-17",
+ "features": [
+  "从照片求解相机：支持透视校正和无人机航拍照片，联合求解平面尺寸",
+  "程序化建筑建模：使用 bpy 生成墙体、门窗、楼梯、屋顶、厨房、浴室等",
+  "虚拟布景与景观：家具、软装、植物、铺装等，基于照片校正纹理",
+  "生产级渲染：无头 Cycles 渲染，支持 CPU/GPU，可恢复分块渲染，时间降噪",
+  "交付工具：标题卡、音乐编辑、离线照片/渲染画廊、帧精确对比视频"
+ ],
+ "intro": "OpenHouse 3D 是一个基于 Blender 的建模工具包，用于将房产挂牌照片重建为 3D 房屋模型，并渲染出电影感的漫游视频。它通过照片相机求解、程序化建筑建模、虚拟布景和无头 Cycles 渲染，输出与原始照片匹配的静帧以及连续飞越/步行视频。\n\n该项目并非一键式照片转3D服务，也不是摄影测量。它需要用户或 AI 编码代理阅读照片、规划平面图并编写小型房屋包，库负责几何、渲染和视频生成。隐藏几何体是推断的，重建结果不是测量测绘。\n\n项目包含多个示例房屋（如 Stanford、Webster 等），每个示例提供了照片数量、包含内容以及渲染结果。仓库还提供了从照片到视频的详细工作流程文档、真实感检查清单和生产指南。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Blender 5.2.x、Python 3.9+ 和 Git",
+  "克隆仓库：git clone https://github.com/yunfanye/openhouse-3d.git",
+  "创建虚拟环境并安装依赖：python3 -m venv .venv && . .venv/bin/activate && python -m pip install -e '.[dev]'",
+  "设置环境变量：export ARCHVIZ_PYTHON=\"$PWD/.venv/bin/python\"",
+  "生成示例房屋并渲染：python tools/new_house.py my_house --title \"My house\" && blender -b --python-exit-code 1 --python run.py -- --house my_house --cam hero --samples 16 --scale 25 --no-polish --device CPU"
+ ],
+ "summary": "OpenHouse 3D 是一个基于 Blender 的工具包，用于将房产挂牌照片重建为 3D 房屋模型，并渲染出电影感的漫游视频。它适合需要从照片生成房屋3D展示的开发者或3D艺术家，通过程序化建模、相机求解和虚拟布景，输出与原始照片匹配的静帧和连续视频。项目不是一键式服务，需要用户规划平面图并编写房屋包。",
+ "tagline": "从房产照片重建3D房屋并生成漫游视频"
+}
