@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望快速为网站添加动效的前端开发者，以及想借助 AI 助手将动效集成到现有项目中的开发者。",
+ "date": "2026-11-18",
+ "features": [
+  "提供 50 个纯 JavaScript 网页动效，涵盖轮播、光标、悬停、滚动、文字动画和 WebGL 等类别",
+  "每个动效文件夹自包含，包含 index.html、effect.js 和 effect.css，可直接本地运行",
+  "effect.js 顶部包含面向 AI 的集成说明，便于将动效交给 AI 适配到现有页面",
+  "提供 catalog.json 记录动效名称、描述、分类、入口文件、挂载函数和依赖",
+  "附带 AI 集成指南文档，说明如何安全挂载动效并适配到框架中",
+  "部分动效（如 Curved Gallery、Disc Carousel、Hold to Burst）包含 three.min.js 及其许可证"
+ ],
+ "intro": "Effect Atlas 是一个收录了 50 个网页动效的代码库，每个动效都用纯 JavaScript 实现，并配有独立的 HTML、CSS 和 JS 文件。项目的主要特点是每个动效文件夹都包含面向 AI 的说明注释，方便开发者将整个文件夹交给 AI 助手，让 AI 根据现有页面进行适配和集成。\n\n动效涵盖轮播、光标效果、悬停效果、页面过渡、滚动动画、文字动画以及基于 Three.js 的 WebGL 效果等。每个动效都可以直接在本地打开 index.html 预览，无需安装依赖或构建步骤。项目还提供了 catalog.json 和 AI 集成指南，帮助工具和 AI 理解动效的元数据与挂载方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在官网或 effects/README.md 分类目录中挑选一个动效",
+  "复制 effects/ 下对应的整个动效文件夹，打开其中的 index.html 在本地预览",
+  "将整个文件夹连同你的页面和修改需求一起交给 AI 助手，例如：Add the effect in effects/fluid-mask-hero/ to the hero section of my site. Read the comment at the top of effect.js and inspect index.html first. Adapt it to my existing content and layout, and keep the copyright notice."
+ ],
+ "summary": "Effect Atlas 收集了 50 个用纯 JavaScript 编写的网页动效，每个动效都放在独立文件夹中，包含可直接运行的示例和面向 AI 的集成说明。它解决的是开发者想给网站添加动效、但手动适配耗时的问题。适合前端开发者或借助 AI 编程的用户，将动效文件夹交给 AI 助手，就能根据现有页面内容进行改造和集成，无需安装依赖或构建步骤。",
+ "tagline": "50 个纯 JavaScript 网页动效，专为 AI 集成设计"
+}

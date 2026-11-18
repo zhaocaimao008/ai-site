@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想通过 API 调用 Seedance 2.5 Flash 做图生视频或参考视频生成的开发者。",
+ "date": "2026-11-18",
+ "features": [
+  "用 reference_image 指定首帧，从静图生成视频",
+  "用 reference_video 借用已有片段的运动",
+  "提供 image-to-video 的 curl API 调用示例",
+  "给出提示词正反例与常见失败的处理建议",
+  "说明参考视频请求的计费差异"
+ ],
+ "intro": "这个仓库围绕 Seedance 2.5 Flash 视频生成模型，说明如何通过首帧图片或参考视频来控制生成画面的运动，并整理了调用 API 的示例与提示词写法。\n\nREADME 给出了 image-to-video 的 curl 请求示例，包含 model、prompt、reference_image、duration、ratio、resolution 等字段，并提示参考视频请求按更高费率单独计费。文中还列出提示词的正反例，以及画面漂移或变形时的处理建议。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 APIMart 的 API key，并设置环境变量 APIMART_API_KEY",
+  "准备一张与目标画幅比例一致的首帧图片链接",
+  "向 https://api.apimart.ai/v1/videos/generations 发送 POST 请求，model 填 seedance-2-5-flash，并在 reference_image 中填入图片链接",
+  "在 prompt 中描述画面要发生的变化，而不是画面里已有什么",
+  "若结果出现漂移或变形，缩短时长到 4 秒并降低动作幅度后重新生成"
+ ],
+ "summary": "这个仓库介绍如何用 Seedance 2.5 Flash 生成视频：既可以给一张首帧图片让画面从静图开始运动，也可以提供一段参考视频来借用其中的运动方式。README 给出了 API 调用示例、提示词写法的正反例，以及画面漂移时的调整建议，适合想通过接口做图生视频的开发者参考。",
+ "tagline": "用首帧或参考视频控制 Seedance 2.5 Flash 生成视频"
+}

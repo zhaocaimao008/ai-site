@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速构建和部署 AI Agent 的开发者，尤其是希望用 Go 获得高性能后端，同时使用熟悉语言进行集成的团队。",
+ "date": "2026-11-18",
+ "features": [
+  "通过文件夹结构和 YAML 定义 Agent，支持知识库、技能、路由和护栏配置",
+  "提供多语言后端 SDK 和客户端 SDK，方便集成聊天、语音和视频功能",
+  "内置工具调用和 MCP 支持，可连接 Slack、WhatsApp 等外部服务",
+  "支持电话接听和拨打电话，以及视频 Agent 示例",
+  "提供成本控制功能，包括消费限额和令牌使用统计",
+  "内置模拟和监控工具，便于测试和优化 Agent"
+ ],
+ "intro": "Stream Agents 是一个用 Go 编写的后端框架，用于快速构建文本、语音和视频 AI Agent。它通过文件夹结构和 YAML 定义 Agent，并集成了搜索、知识库、技能、电话、沙箱、记忆和持久化等组件，提供合理的默认配置。项目强调高性能和低延迟，利用 Go 的高并发能力和边缘加速优化音频转发。\n\n该框架支持多语言 SDK，包括 Python、Go、Node、Ruby、PHP、.NET 和 Rust，客户端 SDK 覆盖 Swift、Kotlin、React、Flutter 和 React Native。Agent 通过用例（如 \"support\"）引用，便于切换底层模型，实现主权 AI。内置路由、持久化和记忆功能，可轻松更换模型以控制成本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 CLI：curl -fsSL https://getstream.io/cli.sh | bash",
+  "初始化 Agent：getstream agents init my-agent --template text",
+  "测试 Agent：getstream agents test my-agent",
+  "参考官方文档选择后端语言和客户端 SDK 进行集成"
+ ],
+ "summary": "Stream Agents 是一个 Go 后端框架，帮助开发者快速构建文本、语音和视频 AI Agent。它通过文件夹和 YAML 定义 Agent，集成知识库、工具调用、电话和记忆等组件，并提供多语言 SDK 方便集成到应用中。适合需要高性能、低延迟且希望灵活切换模型的 AI 应用开发场景。",
+ "tagline": "用 Go 构建文本、语音和视频 AI Agent 的后端框架"
+}

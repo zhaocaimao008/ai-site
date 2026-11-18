@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在国内网络环境下调用视频生成模型、又不方便使用外币支付的开发者和小团队。",
+ "date": "2026-11-18",
+ "features": [
+  "通过一个国内可访问的端点调用 Seedance 2.5 Flash 等视频模型",
+  "支持支付宝、微信、银行卡付款，并可开具国内发票",
+  "接口形式兼容 OpenAI，切换模型只需改 base_url 和 model",
+  "视频任务异步执行，通过 task_id 轮询结果",
+  "失败任务自动退款，上游 5xx 内部重试"
+ ],
+ "intro": "这个仓库介绍的是 APIMart 提供的视频生成中转 API，重点是把 Seedance 2.5 Flash 等模型的调用统一到一个国内可访问的端点。README 说明，直接调用国内外视频模型通常需要外币信用卡、海外手机号，并且连接不稳定、每个厂商各有一把 key；中转则把这些环节收拢到一处，支持支付宝、微信和银行卡付款，并提供国内发票。\n\n接口在形式上兼容 OpenAI，已有客户端只需修改 base_url 和 model 即可切换。除 Seedance 2.5 Flash 外，仓库还列出了 Kling 4.0、Wan 3.0、PixVerse 6、Veo 3 等视频模型，以及若干图像和 LLM 模型。视频任务为异步执行，需要轮询 task_id；README 称 4 秒 720p 的 Seedance 片段通常 40 到 90 秒完成，失败任务会自动退款，上游 5xx 会在内部重试。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "获取 APIMart API key，并设置环境变量 APIMART_API_KEY",
+  "向 https://api.apimart.ai/v1/videos/generations 发送 POST 请求，model 填 seedance-2-5-flash",
+  "在请求体中传入 prompt、duration、ratio、resolution 等参数",
+  "拿到返回的 task_id 后轮询任务状态，任务完成后及时保存 MP4，因为链接 72 小时后过期"
+ ],
+ "summary": "这个仓库介绍 APIMart 的视频生成中转 API，主要解决国内开发者调用 Seedance 2.5 Flash 等模型时的支付、网络和密钥管理问题。它把多个视频、图像和 LLM 模型统一到一个国内可访问的端点，接口形式兼容 OpenAI，已有客户端改 base_url 和 model 即可接入。适合需要在国内网络环境下做视频生成、又不想处理外币支付和多厂商密钥的开发者参考。",
+ "tagline": "Seedance 2.5 Flash 等视频模型的中转 API 接入说明"
+}

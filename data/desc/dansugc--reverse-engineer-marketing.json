@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合增长营销人员、独立开发者、竞品分析从业者，以及希望了解某家公司营销打法并寻找可复制策略的团队。",
+ "date": "2026-11-18",
+ "features": [
+  "从 Meta、Google、LinkedIn 等广告库收集付费广告，识别长期投放的获胜广告",
+  "分析网站像素、归因 SDK、SEO 站点地图和程序化页面结构",
+  "追踪 TikTok、Instagram、YouTube、X 等社交账号的发布频率与热门内容",
+  "挖掘创始人信息、Reddit 营销帖和品牌相关讨论",
+  "通过 Wayback Machine 查看首页定位的历史变化",
+  "支持 rem diff 对比同一公司两次运行之间的变化"
+ ],
+ "intro": "REM 是一个营销逆向工程工具，输入公司网址后，它会从公开渠道收集付费广告、社交内容、SEO 结构、创始人动态、Reddit 讨论等营销证据，并生成一份带引用来源的分析报告。报告会梳理该公司的增长引擎、渠道之间的关联，以及可复制的操作步骤。\n\n工具支持 CLI、本地 Web 应用和 MCP 服务器三种使用方式。Web 应用可以调用你已订阅的 Claude Code 或 Codex 来撰写报告，也支持 Anthropic API 或仅输出证据。所有无法获取的信息会明确标注为未知，并附上自行核实的链接。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx reverse-engineer-marketing demo 查看内置的 Cal AI 示例报告",
+  "运行 npx reverse-engineer-marketing linear.app 对任意公司进行分析（无需 API key）",
+  "如需广告库和社交数据，设置 export SCRAPECREATORS_API_KEY=...",
+  "如需 AI 撰写策略报告，设置 export ANTHROPIC_API_KEY=...",
+  "运行 npx reverse-engineer-marketing web 打开本地 Web 应用，使用 Claude Code 或 Codex 订阅生成报告"
+ ],
+ "summary": "REM 是一个营销逆向工程工具，输入公司网址后，它会从广告库、社交平台、SEO 站点地图、Wayback Machine、Reddit 等公开渠道收集营销证据，生成带引用来源的分析报告，帮助了解一家公司的增长引擎和渠道组合。适合做竞品分析、寻找可复制营销策略的开发者与营销人员。",
+ "tagline": "输入网址，逆向分析公司营销策略并生成报告"
+}

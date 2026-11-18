@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望让网页版 AI 助手直接参与本地开发与桌面操作，同时需要沙箱和审计保障的开发者与进阶用户。",
+ "date": "2026-11-18",
+ "features": [
+  "332 个规范化 MCP 工具，覆盖文件、Git、命令、LSP、浏览器与 Windows 桌面操作",
+  "Action Ledger WAL 记录关键执行，支持崩溃恢复和幂等重放",
+  "多级路径沙箱与符号链接逃逸防护，敏感文件自动屏蔽",
+  "基于 WinRT OCR 和 UI Automation 的 Windows 原生 Computer Use",
+  "SQLite 本地记忆、规则、知识与提示词存储，支持上下文压缩",
+  "命令风险引擎按 AST 分类并默认拦截破坏性系统调用"
+ ],
+ "intro": "Nexus 是一个面向 ChatGPT、DeepSeek 等网页版 AI 助手的本地控制平面。它通过带 Bearer token 认证的 Secure MCP Tunnel，把远程 LLM 连接到本地工作站，让 AI 在受限沙箱内检查、编辑、构建和调试本地工程，而不必暴露整个文件系统。\n\n项目由 Tauri 2 桌面控制中心、Fastify MCP 服务、本地 Runner 守护进程和独立 Bridge 组成，提供 332 个规范化 MCP 工具，覆盖文件系统、Git、命令执行、LSP 代码智能、浏览器自动化、Windows Computer Use 等能力。执行记录写入 Action Ledger WAL，支持崩溃恢复与幂等重放。\n\n安全方面采用多级路径沙箱、符号链接逃逸防护、双 token 隔离和敏感文件屏蔽，并对命令做风险分级。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开 v1.3.1 release 页面，在 Assets 中确认是否有适用于自己平台的安装包",
+  "下载对应平台的资源，并在运行前校验发布的 checksum 或签名",
+  "安装后启动 Nexus 桌面控制中心，配置 MCP 客户端 token（lb_ 开头）",
+  "在 ChatGPT 或 DeepSeek 等网页 AI 中接入 Secure MCP Tunnel 地址"
+ ],
+ "summary": "Nexus 解决的是网页版 AI 助手无法直接操作本地文件和电脑的问题。它通过安全的 MCP 隧道把 ChatGPT、DeepSeek 等远程模型连接到本地工作站，让 AI 在受限沙箱内读写文件、执行命令、操作 Git 和浏览器，并记录执行日志以便恢复。适合希望用网页 AI 辅助本地开发、又需要路径隔离和敏感文件保护的用户。",
+ "tagline": "让网页版 AI 安全操作本地文件与电脑的本地控制平面"
+}

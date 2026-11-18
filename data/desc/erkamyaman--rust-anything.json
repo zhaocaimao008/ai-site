@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望将现有应用逐步迁移到 Rust 以提升性能的开发者，尤其是使用 TypeScript、Python、Go 等语言并借助 AI 编码代理的团队。",
+ "date": "2026-11-18",
+ "features": [
+  "记录原应用行为，并在每次 Rust 重写后回放比对，确保行为一致",
+  "支持 TypeScript/JavaScript、Python、C、Go、Ruby、Java 等多种语言",
+  "生成桥接代码（如 napi-rs、PyO3、cgo、JNI），保持原 API 不变",
+  "提供性能分析、基准测试和门禁检查，辅助定位热点和验证移植",
+  "可与 Claude Code、Codex、Cursor、Gemini CLI 等 AI 编码代理集成"
+ ],
+ "intro": "rust-anything 是一个帮助开发者将现有应用逐步迁移到 Rust 的工具。它支持 Node.js/TypeScript、Python、C、Go、Ruby、Java 等语言编写的 CLI、HTTP 服务器和库。核心思路是先记录原应用的行为，然后在每次将一部分代码重写为 Rust 后，用记录下的用例进行比对，确保行为一致，直到整个应用变为纯 Rust。\n\n工具本身不翻译代码，而是由开发者或 AI 编码代理（如 Claude Code、Codex、Cursor）编写 Rust 代码。rust-anything 提供性能分析、桥接生成、行为记录与回放、差异对比、基准测试和门禁检查等功能，帮助定位热点、生成调用桥接、验证行为一致性，并判断移植是否完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 `cargo install rust-anything` 安装 CLI",
+  "运行 `rust-anything setup` 注册到 Claude Code、Codex、Cursor 和 Gemini CLI",
+  "使用 `rust-anything profile . -- node bench.mjs` 分析热点",
+  "使用 `rust-anything bridge . src/fuzzy.ts --batch fuzzyScore:text` 生成桥接",
+  "编写 Rust 代码后，依次运行 `rust-anything record`、`build`、`diff`、`bench` 和 `gate` 验证"
+ ],
+ "summary": "rust-anything 帮助开发者将现有应用逐步迁移到 Rust，而不是一次性重写。它记录原应用的行为，在每次将部分代码重写为 Rust 后回放比对，确保行为一致。支持 TypeScript、Python、C、Go、Ruby、Java 等语言的 CLI、服务器和库。工具本身不翻译代码，而是由开发者或 AI 编码代理编写 Rust，并提供性能分析、桥接生成、行为验证和门禁检查，适合希望提升性能并保持行为一致的迁移场景。",
+ "tagline": "逐步将应用重写为 Rust，每一步都对照原行为验证"
+}

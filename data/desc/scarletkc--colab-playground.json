@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要经常使用 Google Colab GPU/TPU 资源、希望用图形界面管理多账号和会话、并控制成本的开发者与研究者。",
+ "date": "2026-11-18",
+ "features": [
+  "引导式安装 Colab CLI 并登录账号",
+  "保存多个 Google 账号，切换前提示影响范围，可同时查看各账号余额",
+  "按 CPU、GPU、TPU、高内存和最低显存要求启动运行时，自动重试不满足条件的 GPU",
+  "成本保护：运行时端自动停止和空闲停止，应用端支出上限与余额下限检查",
+  "将运行时端口转发到本机 127.0.0.1",
+  "插件系统，内置 llama.cpp 部署 GGUF 模型插件，提供 OpenAI 兼容 API 和网页聊天"
+ ],
+ "intro": "Colab Playground 是 Google Colab 命令行工具（colab，包名 google-colab-cli）的桌面前端，用 Rust 和 GPUI 编写。它把多账号管理、运行时启动与停止、端口转发和插件运行整合到一个图形界面里，所有操作仍通过 colab CLI 完成。\n\n项目提供引导式安装、多 Google 账号切换与余额查看、按硬件需求（CPU/GPU/TPU、高内存、最低显存）申请会话，并支持自动停止和空闲停止等成本保护。内置的“Deploy a GGUF model”插件可以在 Colab 运行时上用 llama.cpp 部署 Hugging Face 上的 GGUF 模型，提供 OpenAI 兼容 API 和网页聊天。\n\n它适合需要频繁使用 Colab 免费或付费 GPU 资源、又希望减少命令行操作和意外扣费的开发者。注意 Colab 按运行时存在时间计费，停止会清空运行时文件，插件脚本在付费运行时上执行，需谨慎使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台（Windows x64、macOS Apple silicon、Linux x64）的安装包",
+  "或使用 Rust 工具链从源码运行：cargo run -p colab-playground（演示数据，不连接 Google 账号）",
+  "真实模式运行：cargo run -p colab-playground --release",
+  "Windows 用户需在 WSL 中运行 Colab CLI"
+ ],
+ "summary": "Colab Playground 是 Google Colab 命令行工具的桌面图形界面，帮助用户管理多个 Google 账号、按需启动带 GPU 或 TPU 的运行时，并通过自动停止、空闲停止和支出上限来避免意外扣费。它还支持端口转发和插件，内置插件可用 llama.cpp 在 Colab 上部署 GGUF 模型。适合经常使用 Colab 资源、希望减少命令行操作并控制成本的开发者。",
+ "tagline": "Google Colab CLI 的桌面图形界面，管理账号、GPU 会话与成本"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望系统化优化本地 LLM 推理速度的开发者、运维人员，以及使用 Claude Code 等 Agent 工具进行性能调优的团队。",
+ "date": "2026-11-18",
+ "features": [
+  "计算解码、预填充、TTFT、启动和 KV 缓存的理论上限",
+  "提供交错对照的基准测试脚本，支持 OpenAI 兼容服务器",
+  "覆盖投机解码、KV 缓存、启动时间等优化杠杆",
+  "包含长上下文检索门控和并发全 KV 浸泡测试",
+  "记录所有结果到 ledger.jsonl，包括失败案例",
+  "提供发布前的六项验收门控和固定构建流程"
+ ],
+ "intro": "这是一个面向本地 LLM 服务速度优化的 Agent 技能，适用于任意硬件和量化配置。它覆盖单用户与并发解码、投机解码、预填充、KV 缓存大小、启动时间和首 token 延迟等关键指标，并在内存上限下工作，每个结果都需通过全上下文稳定性检查。\n\n该技能将优化过程编码为可执行的工作流：先计算理论性能上限，再逐项调整配置，与交错对照进行测量，记录所有结果（包括失败），通过长上下文检索门控，最后在发布前验证干净且固定的构建。它可与 Claude Code 及任何加载 SKILL.md 风格技能的 Agent 配合使用，也可通过 PROMPT.md 由任意模型遵循。\n\n项目包含 SKILL.md 主流程、按需加载的参考文档（上限计算、测量陷阱、优化杠杆、已知陷阱、发布流程）以及一套引擎无关的 Python 和 Bash 脚本，用于基准测试、上限计算、串行运行队列和内存报告。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并复制技能目录：git clone https://github.com/sybil-solutions/inference-optimisation-skill && mkdir -p ~/.claude/skills && cp -r inference-optimisation-skill/skills/inference-optimisation ~/.claude/skills/",
+  "在 Claude Code 中提问，例如：\"hill-climb decode and prefill for the model on :8000 under a 40 GiB cap\"",
+  "不使用 Agent 时，运行上限计算：python3 $S/scripts/ceiling.py $S/examples/ceiling-ornith-b390.json",
+  "准备基准配置并运行单次测试：mkdir -p configs && cp $S/examples/config-existing-server.json configs/base.json && python3 $S/scripts/bench.py run configs/base.json --long 131072",
+  "执行交错 A/B 测试并查看结果：bash $S/scripts/queue.sh base cand base && python3 $S/scripts/bench.py show"
+ ],
+ "summary": "这个项目是一个用于提升本地 LLM 服务速度的 Agent 技能，适用于任意硬件和量化配置。它帮助开发者系统化地优化解码、预填充、KV 缓存和启动时间等指标，通过计算理论上限、逐项调整、交错对照测量和长上下文稳定性检查来避免盲目调参。适合需要可靠提升推理性能的开发者，或使用 Claude Code 等 Agent 工具进行性能调优的场景。",
+ "tagline": "用于本地 LLM 推理速度优化的 Agent 技能"
+}

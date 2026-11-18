@@ -1,0 +1,20 @@
+{
+ "ai_related": true,
+ "audience": "需要为文本生成视频或图生视频任务挑选模型的开发者，以及想了解各视频模型差异的普通用户。",
+ "date": "2026-11-18",
+ "features": [
+  "对比 Seedance 2.5 Flash、Seedance 2.0、Kling 4.0 Flash 和 Veo 3 的价格、时长与分辨率",
+  "按需求给出选型建议，如快速低成本迭代、长片段、音频视频同出",
+  "列出 Seedance 2.5 Flash 不适合的场景",
+  "说明在 APIMart 上切换模型只需修改 model 字段"
+ ],
+ "intro": "这个项目是一份视频生成模型的选型对比资料，把 Seedance 2.5 Flash 与 Seedance 2.0、Kling 4.0 Flash、Veo 3 放在一起比较。README 用表格列出了各模型的价格、最长时长、最高分辨率、镜头控制能力和是否支持原生音频，并给出按需求选型的建议。\n\n作者还说明了 Seedance 2.5 Flash 不适合的场景，例如需要 1080p 或原生音频时应选 Veo 3。项目同时提到，在 APIMart 上所有视频模型共用同一个 endpoint，切换模型只需改一个 model 字段。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 README 中的 APIMart 链接试用 Seedance 2.5 Flash",
+  "按需申请 API key",
+  "调用时把 model 设为 \"seedance-2-5-flash\"，或换成 \"kling-4-0-flash\"、\"veo-3\" 等"
+ ],
+ "summary": "这份资料把 Seedance 2.5 Flash 与 Seedance 2.0、Kling 4.0 Flash、Veo 3 放在一起对比，列出价格、最长时长、分辨率、镜头控制和原生音频等差异，并给出按需求选型的建议。适合正在挑选视频生成模型、想快速判断该用哪个模型的开发者参考。",
+ "tagline": "Seedance 2.5 Flash 与其他视频生成模型的选型对比"
+}

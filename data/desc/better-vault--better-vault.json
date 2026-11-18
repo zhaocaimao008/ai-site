@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要整理研究资料、制作学习材料，又希望数据留在本地、自由选择 AI 模型的开发者、学生和研究人员。",
+ "date": "2026-11-18",
+ "features": [
+  "与来源资料对话，回答附带引用出处",
+  "Studio 生成报告、闪卡、测验、数据表格、思维导图、幻灯片、信息图和解剖图",
+  "支持 OpenAI、Anthropic、Google 以及本地 Ollama / LM Studio 模型",
+  "本地优先存储：网页版用 IndexedDB，桌面版用 SQLite，无需账号",
+  "提供 Excalidraw 风格白板，可对思维导图、解剖图或信息图进行标注",
+  "生成内容可导出为 Word、Markdown、CSV、Excel、PowerPoint、PDF 等格式"
+ ],
+ "intro": "better-vault 是一个开源的 NotebookLM 替代品，采用“自带模型”的方式。你可以把 PDF、网页、笔记和文本文件作为来源加入笔记本，然后用自己选择的 AI 模型与这些资料对话，回答会标注引用出处。\n\n除了聊天，它提供 Studio 工具，能把来源内容生成报告、闪卡、测验、数据表格、思维导图、幻灯片、信息图和解剖图等学习材料，并支持导出为 Word、Markdown、CSV、Excel、PowerPoint、PDF 等格式。模型方面支持 OpenAI、Anthropic、Google 的 API key，也可以通过 Ollama 或 LM Studio 运行本地模型。\n\n数据默认保存在本地：网页版使用浏览器 IndexedDB，桌面版使用 SQLite 文件，无需账号，API key 只会在请求你选择的模型时离开设备。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 better-vault.dev/download 或 GitHub Releases 下载并安装桌面版，或从源码运行",
+  "从源码运行需 Node.js 22.12 或更新版本，执行：git clone https://github.com/better-vault/better-vault.git && cd better-vault && npm install && npm run dev",
+  "打开 http://localhost:3000，进入 Settings → AI providers 粘贴 API key，或配置本地模型地址",
+  "使用本地模型时，先安装 Ollama 或 LM Studio 并下载模型，例如 ollama pull llama3.2，然后在设置中启用并检查地址（Ollama 默认 http://localhost:11434，LM Studio 默认 http://localhost:1234）"
+ ],
+ "summary": "better-vault 是一个开源的 NotebookLM 替代品，让你把 PDF、网页、笔记等资料加入笔记本，用自己选择的 AI 模型与资料对话并获取带引用的回答。它还能把资料生成报告、闪卡、测验、思维导图、幻灯片等学习材料，支持 OpenAI、Anthropic、Google 或本地 Ollama / LM Studio 模型，数据保存在本地，无需账号。适合需要整理研究资料、制作学习材料并重视数据隐私的用户。",
+ "tagline": "开源版 NotebookLM，自带模型与本地数据"
+}

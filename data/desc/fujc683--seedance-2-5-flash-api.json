@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要接入文生视频能力的开发者，以及想了解 Seedance 2.5 Flash 接口参数和成本的用户。",
+ "date": "2026-11-18",
+ "features": [
+  "异步文生视频接口：提交任务后轮询 task_id 获取结果",
+  "参数说明：duration 4-30 秒，ratio 支持 16:9、9:16、1:1 等多种比例",
+  "支持 reference_image 首帧和 reference_video 动作参考",
+  "列出实际遇到的报错信息及对应原因",
+  "按输出秒数计费，附 480p/720p 实测价格"
+ ],
+ "intro": "这个仓库整理了 Seedance 2.5 Flash 文生视频接口的调用方式，包括请求地址、参数规则、常见报错和实际计费情况。接口通过 APIMart 提供，采用异步任务模式：先提交生成请求拿到 task_id，再轮询任务状态获取结果。\n\nREADME 列出了 model、prompt、duration、ratio、resolution 等字段的取值范围，并说明 1080p 会返回 400 错误，同时给出几种实际遇到的错误信息及原因。计费按输出视频秒数计算，仓库还记录了 480p 与 720p 的实测单价和一个 4 秒 720p 片段的端到端花费。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 APIMart API key，并设置为环境变量 APIMART_API_KEY",
+  "用 curl 向 https://api.apimart.ai/v1/videos/generations 提交生成请求，指定 model 为 seedance-2-5-flash",
+  "从响应中取得 task_id，轮询 https://api.apimart.ai/v1/tasks/<task_id> 查询任务状态",
+  "任务成功后从 data.result.videos[0].url 获取 MP4 链接（有效期 72 小时）"
+ ],
+ "summary": "这是一个介绍 Seedance 2.5 Flash 文生视频接口的文档型仓库，说明如何通过 APIMart 提交异步生成任务、轮询结果，以及 duration、ratio、resolution 等参数的取值限制。它还整理了实际遇到的报错和按秒计费的价格，适合准备接入该视频生成接口、想先弄清调用方式和成本的开发者参考。",
+ "tagline": "Seedance 2.5 Flash 文生视频 API 调用说明"
+}

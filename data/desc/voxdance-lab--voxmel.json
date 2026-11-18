@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究零样本语音合成与声音克隆的开发者、研究人员，以及希望本地部署 TTS 推理的技术用户。",
+ "date": "2026-11-18",
+ "features": [
+  "直接建模梅尔频谱，无需学习声学分词器",
+  "固定且精确可逆的两轴 Haar 变换分解频谱",
+  "仅对 Coarse-Mel 自回归，残差细节非自回归生成",
+  "支持英文和中文零样本声音克隆，24 kHz 输出",
+  "提供 Python API、CLI 和 Gradio Web 演示",
+  "开源 VoxMel-0.6B 和 VoxMel-0.3B 模型权重"
+ ],
+ "intro": "VoxMel 是一个无需声学分词器的连续自回归文本转语音框架，直接对梅尔频谱建模。它通过固定的两轴 Haar 变换将梅尔频谱分解为 Coarse-Mel 和残差分量，语言模型主干自回归生成 Coarse-Mel，再由两个非自回归残差层恢复时间与频率细节，最后经 Vocos 声码器合成语音。\n\n项目在 10 万小时 Emilia 数据上训练，支持英文和中文的零样本声音克隆，提供 0.6B 和 0.3B 两个模型权重。代码库包含 Python API、命令行工具和 Gradio Web 演示，方便本地推理和试用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -e .",
+  "准备模型文件：将 config.yaml、model_L_final.pt 和 Vocos 权重放到指定目录",
+  "使用 Python API 或 CLI 进行推理，例如：voxmel --model /path/to/experiment --tokenizer-path examples/voxmel/qwen_tokenizer --vocos-path /path/to/vocos-mel-24khz --prompt-audio reference.wav --prompt-text \"参考音频转录文本\" --text \"这是声音克隆的演示。\" --output out.wav",
+  "可选：安装 Web 依赖并启动演示：pip install -e \".[web]\" 然后 python app.py --model /path/to/experiment --tokenizer-path examples/voxmel/qwen_tokenizer --vocos-path /path/to/vocos-mel-24khz --port 8808"
+ ],
+ "summary": "VoxMel 是一个直接对梅尔频谱建模的零样本语音合成框架，省去了学习声学分词器的步骤。它利用可逆小波分解将频谱拆成粗粒度和残差部分，仅对粗粒度部分自回归生成，再恢复细节，支持中英文声音克隆。适合想研究或本地部署 TTS 与声音克隆的开发者。",
+ "tagline": "基于小波分解的零样本语音合成与克隆框架"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合注重隐私、希望完全掌控数据和记忆的开发者与高级用户，尤其是需要本地运行、可审计 AI 助手的场景。",
+ "date": "2026-11-18",
+ "features": [
+  "本地 SQLite + FTS5 存储，单进程管理 state.db，数据不出本机",
+  "只追加记忆账本，每轮记录可完整追溯与重建",
+  "支持 12 个预适配模型提供商，可通过 Ollama 完全离线运行",
+  "提供 65 个 JSON-RPC 方法，支持终端 REPL、Web 仪表盘和聊天网关",
+  "内置任务进度面板，自动为任务分配工作区文件夹并保留上下文",
+  "支持技能（Skills）与 MCP，可扩展助手能力"
+ ],
+ "intro": "Jeeves 是一个完全运行在本地机器上的个人助手，核心关注复杂、持久且可验证的任务规划与执行。它用 Rust 实现 agent 循环、记忆和 33 个工具，TypeScript 负责共享客户端、聊天网关和隔离的浏览器适配器。对话、state.db 和 API 密钥都不会离开你的电脑。\n\n与多数将记忆藏在黑盒中的 agent 不同，Jeeves 每轮对话写入一行只追加的账本记录，打开任意一行即可查看该轮的完整事件流：检索决策、运行了哪些工具、哪个模型回答以及消耗成本。记忆库通过 ledger:… 标签链接回源轮次，FTS5 索引也可从账本重建。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载对应平台的预编译二进制，解压并赋予执行权限",
+  "设置模型 API 密钥（如 DEEPSEEK_API_KEY）并运行 ./joy dashboard 启动 Web 界面",
+  "或使用 Docker：JOY_OPS_TOKEN=$(openssl rand -hex 24) docker compose up -d",
+  "无 API 密钥时可设置 JOY_PROVIDER=ollama 使用本地模型离线运行",
+  "从源码构建：cd joy-rs && cargo build，然后运行 ./target/debug/joy 进入终端 REPL"
+ ],
+ "summary": "Jeeves 是一个本地优先的个人 AI 助手，专注于规划、执行和验证复杂的个人任务。它把对话、记忆和 API 密钥都保存在本机，并用只追加的账本记录每一轮交互，让记忆完全可查、可重建。适合需要隐私保护、希望审计 AI 行为或离线使用的开发者和高级用户。",
+ "tagline": "本地优先、记忆可查的个人 AI 助手"
+}

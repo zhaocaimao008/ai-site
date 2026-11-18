@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要调用多种视频生成模型、希望减少多平台对接成本的开发者和团队。",
+ "date": "2026-11-18",
+ "features": [
+  "一个 OpenAI 兼容端点聚合 Seedance、Kling、Wan、PixVerse、Veo 等多个视频模型",
+  "通过模型字符串切换不同模型，无需分别集成各家 API",
+  "统一鉴权与按模型配额管理",
+  "统一计费，按秒计量，单一余额和账单",
+  "上游临时错误自动重试，对调用方透明",
+  "duration、ratio、resolution 等参数在不同模型间语义一致"
+ ],
+ "intro": "这个项目提供一个统一的 OpenAI 兼容端点，把 Seedance、Kling、Wan、PixVerse 和 Veo 等视频生成模型聚合到同一个接口下。开发者不需要分别对接各家 API，只需切换模型字符串即可选择不同模型。\n\n网关负责统一鉴权、统一计费、统一重试和统一参数语义，duration、ratio、resolution 在不同模型间含义一致。README 还给出了按草稿、成片、音频、低成本等场景选择模型的示例代码，以及失败时切换到备用模型的写法。\n\n已有 OpenAI 风格客户端的项目，只需把 base_url 指向该网关地址即可完成迁移。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "获取视频 API key",
+  "将 OpenAI 客户端的 base_url 设为 https://api.apimart.ai/v1，并填入 API key",
+  "调用时通过 model 参数选择模型，如 seedance-2-5-flash、veo-3、wan-3-0 等",
+  "按需传入 duration、resolution 等统一参数"
+ ],
+ "summary": "这个项目把 Seedance、Kling、Wan、PixVerse 和 Veo 等视频生成模型收拢到一个 OpenAI 兼容端点，开发者不用逐个对接各家 API，改模型字符串就能切换。网关统一处理鉴权、计费、重试和参数语义，适合需要同时使用多个视频模型、想降低集成和维护成本的场景。",
+ "tagline": "一个 OpenAI 兼容接口调用多种视频生成模型"
+}

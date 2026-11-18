@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI agent 自动操作手机完成测试或日常任务的开发者，以及使用 Claude Code、Codex、Cursor 等 MCP 客户端的用户。",
+ "date": "2026-11-18",
+ "features": [
+  "通过 MCP 接入 Claude Code、Codex、Cursor 等 AI 客户端",
+  "将手机屏幕内容读取为文本，减少 token 消耗",
+  "支持 Android 真机、Android 模拟器和 iOS Simulator",
+  "执行点击等操作并报告屏幕变化",
+  "在付款等敏感操作前请求用户确认",
+  "提供 CLI 命令检查设备与运行环境"
+ ],
+ "intro": "phonedriver 是一个用 Rust 编写的 MCP server 和命令行工具，让 AI agent 能够控制 Android 手机或 iPhone（真机或模拟器）。它把手机屏幕内容读成文本，执行点击等操作，并回报操作后发生的变化；在涉及付款等敏感操作前，它会先向用户请求确认。\n\n它可以接入 Claude Code、Codex、Cursor、VS Code、Gemini CLI 等支持 MCP 的客户端，也可以直接在命令行使用。典型用途包括测试注册表单、修改藏在多层菜单里的设置、定位应用出错的步骤，以及完成只有手机才能做的任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx -y phonedriver init，将 phonedriver 添加到本机检测到的 agent 并检查环境",
+  "启动 Android 模拟器或 iOS Simulator，或连接开启 USB 调试的 Android 手机",
+  "如需启动模拟器，可运行 phonedriver boot \"iPhone 17\"",
+  "用 phonedriver doctor 随时复查环境配置",
+  "向 agent 下达只有手机能完成的任务，例如测试注册流程"
+ ],
+ "summary": "phonedriver 让 AI agent 能够读取并操作 Android 手机或 iPhone，把屏幕内容转成文本，执行点击并回报变化，在付款前还会请求用户确认。它通过 MCP 接入 Claude Code、Codex、Cursor 等客户端，适合用 AI 自动测试手机应用、修改设置或完成手机端任务。",
+ "tagline": "让 AI agent 读取并操作 Android 与 iPhone 的 MCP 服务器和 CLI"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 iPhone 或 iPad 上直接使用 DeepSeek Harness 智能体的开发者和普通用户，尤其是需要移动端原生体验、本机能力集成或远程管理编码会话的人群。",
+ "date": "2026-11-18",
+ "features": [
+  "本机运行 DSH 引擎，界面完全原生，不依赖电脑或服务器",
+  "调用 iPhone 自带能力：日历、提醒事项、健康、照片、地图等",
+  "通过 iCTRL 操控其他 App，操作过程录屏并附在对话中",
+  "在对话中生成小工具或小游戏，可放到主屏幕使用",
+  "Bot 模式：创建常驻 Bot 团队，支持私聊、群聊和定时任务",
+  "远程控制电脑或服务器上的 Codex、Claude Code 和 DSH 会话"
+ ],
+ "intro": "Fish Pocket 是一个 iOS/iPadOS 应用，把 DeepSeek Harness（DSH）智能体引擎直接跑在设备本机，不需要连接电脑或服务器。界面用 SwiftUI 完全原生重写，功能对齐 DSH 官方 Web UI，支持对话、工具调用、文件编辑、搜索、计划模式、审批、子智能体和定时任务等。\n\n除了常规智能体能力，它还能调用 iPhone 自带的本机能力（日历、提醒事项、健康、照片、地图等），并可通过第三方开源 App iCTRL 操控其他 App。用户还能在对话中让智能体生成小工具并放到主屏幕，使用 Bot 模式管理常驻 Bot 团队，以及远程控制电脑或服务器上的 Codex、Claude Code 和 DSH 会话。\n\nApp 内置终端环境，包含 bash、node、pnpm、python3、pip、git、ffmpeg 等常用命令，其中 Node、Git、Python 和 FFmpeg 为原生实现。模型调用需要联网，可使用 DeepSeek 账号或 API Key，也支持通过 App 内购买额度对话。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 App Store 下载安装（需要 iOS 17 或更高版本），或通过 TestFlight 公测链接安装新版本",
+  "打开 App，使用 DeepSeek 账号或 API Key 登录，也可用 Apple 或手机号登录 Fish Pocket 账号并使用 App 内购买额度",
+  "在「探索 → 本机能力」中按需开启日历、提醒事项、健康等权限",
+  "如需操控其他 App，安装开源 App iCTRL 并在「探索 → 操控手机」中确认运行状态",
+  "在对话中直接向智能体下达任务，或创建 Bot、小工具等"
+ ],
+ "summary": "Fish Pocket 把 DeepSeek Harness 智能体引擎直接装进 iPhone 和 iPad，界面用 SwiftUI 原生重写，不依赖电脑或服务器。它适合想在移动端随时使用 AI 智能体、调用系统日历提醒等本机能力，或远程管理电脑上编码会话的用户。",
+ "tagline": "在 iPhone 和 iPad 上原生运行 DeepSeek Harness 的 AI 智能体 App"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对话历史较多、需要定期清理或归档 ChatGPT 会话的 Chrome 用户。",
+ "date": "2026-11-18",
+ "features": [
+  "勾选单条对话或整个分组，批量删除或归档",
+  "删除前弹出确认，避免误操作",
+  "可停止正在执行的操作并继续剩余队列",
+  "从工具栏弹窗快速打开 ChatGPT",
+  "本地保存队列与偏好，无服务器和遥测"
+ ],
+ "intro": "ChatGPT Bulker 是一个基于 Manifest V3 的 Chrome 扩展，用于批量管理 ChatGPT 的对话历史。它会在 ChatGPT 对话列表上方加入选择控件，可以勾选单条对话或整个分组，然后一次性删除或归档选中的内容，删除前会弹出确认。\n\n扩展还支持中途停止正在进行的操作，并继续处理剩余队列，也可以从工具栏弹窗直接打开 ChatGPT。所有操作都通过你当前的登录会话直接发送给 ChatGPT，队列和偏好设置只保存在 Chrome 本地，没有开发者服务器，也不收集遥测数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 chatgpt-bulker-1.0.0.zip 并解压到固定文件夹",
+  "在 Chrome 打开 chrome://extensions/，启用开发者模式",
+  "点击“加载已解压的扩展程序”，选择包含 manifest.json 的文件夹",
+  "打开 ChatGPT 并刷新页面，点击对话列表上方的 Select 勾选对话",
+  "点击 Delete 或 Archive 并确认"
+ ],
+ "summary": "ChatGPT Bulker 是一个 Chrome 扩展，用来解决 ChatGPT 对话历史只能逐条处理、清理起来费时的问题。它允许在对话列表中勾选单条或整组会话，然后批量删除或归档，并支持中途停止和继续队列。操作通过当前登录会话直接发送给 ChatGPT，数据保存在本地，适合需要定期整理大量对话的用户。",
+ "tagline": "批量删除或归档 ChatGPT 对话的 Chrome 扩展"
+}

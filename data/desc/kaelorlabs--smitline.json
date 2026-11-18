@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望让 AI agent 代为处理电话沟通或线上会议的开发者，以及愿意自行部署、使用自己 API 密钥的用户。",
+ "date": "2026-11-18",
+ "features": [
+  "代 agent 拨打真实电话，通过 SignalWire 或 Twilio 使用自己的号码",
+  "以参会者身份加入 Zoom、Microsoft Teams 和 Google Meet 会议",
+  "实时语音对话，遵循 agent 给出的目标与授权范围",
+  "通话结束后返回结果、细节、行动项、完整转写和费用",
+  "本机仪表盘展示实时转写，可随时用手机接管通话",
+  "通过 MCP、CLI 或 REST API 与各类 AI agent 集成"
+ ],
+ "intro": "Smitline 是一个开源的 MCP 服务，为 AI agent 提供一条电话线和 Zoom、Microsoft Teams、Google Meet 的参会席位。agent 只需给出目标、需要了解的信息和可接受的底线，Smitline 就会用自然语音与对方实时对话，或作为参会者加入会议，并在结束后把结果发回发起请求的聊天。\n\n通话过程中，本机仪表盘会显示实时转写，你也可以随时用自己的手机接管通话。Smitline 支持 Claude Code、Codex、Cursor、Claude Desktop 等能使用 MCP、CLI 或 REST API 的 agent，通过一个 Docker 容器在本机运行，使用自己的 OpenAI 和电话服务密钥。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 Docker、可访问 GPT-Live 的 OpenAI API key，以及 SignalWire 或 Twilio 账户（仅打电话时需要）",
+  "在 Docker Desktop 中开启 host networking，否则 127.0.0.1:8095 的仪表盘无法加载",
+  "把 README 中的安装提示粘贴给 agent，让它按 SETUP.md 完成配置",
+  "或手动运行：docker run -d --name smitline --restart unless-stopped --network host -v smitline:/data -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/kaelorlabs/smitline",
+  "运行 docker exec smitline smitline setup secrets 打开设置页填写密钥，然后让 agent 发起通话或加入会议"
+ ],
+ "summary": "Smitline 让 AI agent 具备打电话和参加线上会议的能力：agent 给出通话目标与底线，它便用自然语音与对方实时沟通，或作为参会者进入 Zoom、Teams、Google Meet，结束后把结果、转写和费用发回聊天。项目以 MCP 服务形式提供，可通过 Docker 在本机自托管，适合需要让 agent 代为处理电话预约、咨询或会议记录的场景。",
+ "tagline": "让 AI agent 打电话、参加线上会议并回报结果"
+}
