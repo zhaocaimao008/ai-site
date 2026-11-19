@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用 SillyTavern 角色卡、希望用自己的模型 API 进行角色扮演的玩家，以及想低成本运行长对话故事的用户。",
+ "date": "2026-11-19",
+ "features": [
+  "导入 SillyTavern 角色卡、世界书、预设、正则脚本和 MVU 变量",
+  "围绕提供商缓存构建提示词，提高长对话的缓存命中率",
+  "长期记忆（Beta）：将压缩掉的内容存为条目，在相关时召回",
+  "内置配图与一键朗读，对话和旁白可分配不同声音",
+  "视觉小说模式：场景背景、角色立绘、名牌和选项",
+  "引导式角色卡创建器，逐步提问生成完整角色卡"
+ ],
+ "intro": "CicaTavern 是一个 Agent 式的 SillyTavern 角色卡播放器，可以导入你已有的角色卡、世界书和预设，并用自己的模型 API（如 DeepSeek、OpenRouter、Anthropic、OpenAI、Gemini、Kimi、智谱、Qwen、火山方舟、本地 Ollama 等）来运行。\n\n它围绕模型提供商的缓存机制构建提示词，让长对话中每一轮的大部分内容按缓存价格计费，回复也更快；同时提供长期记忆功能，把上下文压缩掉的人物、事件和伏笔存成条目，在故事再次提及时召回。项目兼容 SillyTavern 的角色卡、世界书、预设、正则脚本、MVU 变量和卡内状态栏 UI，并内置配图与朗读，支持视觉小说模式。\n\n角色形象可以固定，脸、服装、参考图和声音都会保留；还提供引导式角色卡创建器，逐步提问并最终写出完整角色卡。Windows 上解压即用，也有 Android 应用，数据保存在本地设备。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载最新版本",
+  "Windows 上解压后运行；Android 安装对应应用",
+  "在设置中配置自己的模型 API（如 DeepSeek、OpenRouter、Anthropic 等）",
+  "导入已有的 SillyTavern 角色卡、世界书和预设，开始对话"
+ ],
+ "summary": "CicaTavern 是一个兼容 SillyTavern 角色卡和世界书的角色扮演客户端，让你用自己的模型 API 运行已有的角色卡。它针对长对话优化缓存命中，降低每轮成本并加快回复，还提供长期记忆、配图、朗读和视觉小说模式。适合想延续 SillyTavern 使用习惯、又希望控制 API 开销的玩家。",
+ "tagline": "兼容 SillyTavern 角色卡与世界书的 Agent 式角色扮演客户端"
+}

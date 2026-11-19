@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要在部署前评估显存占用的开发者，以及想了解某个 Hugging Face 模型能否在自己硬件上运行的普通用户。",
+ "date": "2026-11-19",
+ "features": [
+  "无需下载权重，通过 HTTP Range 请求读取模型元数据",
+  "支持 Safetensors、GGUF、ONNX 三种权重格式",
+  "估算模型权重、KV cache 与推理引擎运行时开销",
+  "可通过 --max-model-len 和 --batch-size 调整 KV cache 估算参数",
+  "支持 --kv-cache-dtype 指定 KV cache 精度",
+  "支持 Hugging Face Hub 模型 ID、URL 或本地路径"
+ ],
+ "intro": "hf-mem 是一个用 Python 编写的命令行工具，用于估算运行 Hugging Face Hub 上模型所需的显存或内存。它通过 HTTP Range 请求读取 Safetensors、GGUF 和 ONNX 文件的元数据，因此无需下载完整权重即可完成估算，运行时仅依赖 httpx2。\n\n估算范围包括模型权重、生成式模型的 KV cache，以及推理引擎的运行时开销（activations、encoder、graphs、runtime），覆盖 Transformers、Diffusers、Sentence Transformers、GGUF 和 ONNX 模型。输出以表格形式展示总内存需求及各部分占比，便于判断硬件是否够用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 uv 运行：uvx hf-mem <model>",
+  "估算 Transformers 模型：uvx hf-mem zai-org/GLM-5.3-Flash",
+  "指定上下文长度和 batch size：uvx hf-mem Qwen/Qwen3.8-27B --max-model-len 32768 --batch-size 4",
+  "估算 Diffusers 模型：uvx hf-mem Qwen/Qwen-Image-2.1"
+ ],
+ "summary": "hf-mem 解决的是在下载模型权重之前，如何判断运行该模型需要多少显存的问题。它通过 HTTP Range 请求读取 Hugging Face Hub 或本地模型文件的元数据，估算权重、KV cache 和推理引擎开销，支持 Transformers、Diffusers、GGUF 和 ONNX 等模型。适合在部署前评估硬件是否够用，或对比不同上下文长度和 batch size 下的内存需求。",
+ "tagline": "不下载权重即可估算 Hugging Face 模型推理显存"
+}

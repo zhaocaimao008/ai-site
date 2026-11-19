@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合需要波斯语语音识别能力的研究人员和开发者，以及对流式 ASR 模型微调和复现感兴趣的工程师。",
+ "date": "2026-11-19",
+ "features": [
+  "支持流式语音识别，可处理实时麦克风输入和完整音视频文件",
+  "提供从数据准备、分词器构建到训练和评估的完整复现流程",
+  "包含基于 Gradio 的本地 Web 应用，支持实时转录和文件上传",
+  "提供 Transformers 和 NeMo 两种推理后端",
+  "包含波斯语文本归一化和 WER/CER 评估工具"
+ ],
+ "intro": "这个项目提供了训练、评估和运行波斯语流式语音识别模型 mehdi-hf/nemotron-asr-streaming-farsi 的完整代码。该模型基于 NVIDIA 的 nemotron-3.5-asr-streaming-0.6b 微调，使用了 1,181 小时的开源波斯语语音数据，支持实时音频和完整文件两种输入方式。\n\n项目包含数据准备、分词器构建、训练（在 8× H100 上完成）、评估和推理的脚本，并提供了详细的复现文档。推理部分支持 Transformers 和 NeMo 两种后端，可在 Apple Silicon、CUDA 或 CPU 上运行。\n\nREADME 中给出了在 FLEURS、Common Voice 等测试集上的词错误率结果，以及使用 uv 快速启动本地 Web 应用、转写文件和实时麦克风转录的命令。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv 和 ffmpeg",
+  "运行 `uv run scripts/gradio_app.py` 启动本地 Web 应用（实时麦克风+文件上传）",
+  "运行 `uv run scripts/hf_transcribe_file.py audio.m4a` 转写音视频文件",
+  "运行 `uv run scripts/hf_stream_mic.py` 从麦克风实时转录"
+ ],
+ "summary": "这个项目提供了波斯语流式语音识别模型的训练与推理代码，模型基于 NVIDIA Nemotron 微调，支持实时音频和文件转写。适合需要波斯语语音识别能力的开发者，以及想复现流式 ASR 微调流程的研究人员。",
+ "tagline": "波斯语流式语音识别模型的训练与推理代码"
+}

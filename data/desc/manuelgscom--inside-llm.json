@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想要理解 LLM 生成细节、比较量化影响或研究采样器行为的研究者和开发者。",
+ "date": "2026-11-19",
+ "features": [
+  "逐 token 展示生成文本的概率，并用标记显示两个模型选择不同的位置",
+  "查看每个决策的候选分布、熵、有效选项数、Jensen-Shannon 散度和 KL 散度",
+  "展示采样器链（惩罚、top-k、top-p、min-p、温度、GBNF 语法）及各阶段保留的候选数量",
+  "提供置信度、惊讶度、困惑度、边际、速度等指标的时间线视图",
+  "支持 3D 概率曲面和 logit lens 查看各层预测",
+  "支持分支：点击候选可继续生成，所有分支保留在树中并可恢复"
+ ],
+ "intro": "inside-llm 是一个基于 llama.cpp 的本地工具，用于在浏览器中观察 GGUF 模型生成 token 时的内部决策。它加载一个或两个 GGUF 模型，实时展示每个 token 的概率、被丢弃的候选、采样器各阶段过滤掉的内容，以及两个模型（例如不同量化版本或基座与微调）在每个位置的分歧和文本开始不同的确切 token。\n\n所有计算都在本机运行，无需账号、API key 或遥测。会话可以录制并在静态页面中回放，无需引擎和 GPU。项目提供 Linux 和 Windows 的预编译包，支持 CUDA 或 Vulkan。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从最新 release 下载对应系统的包（Linux/Windows，CUDA 或 Vulkan）",
+  "Linux 下解压并运行：tar -xzf inside-llm-v1.0.0-linux-vulkan.tar.gz && ./inside-llm-v1.0.0-linux-vulkan/inside-llm",
+  "Windows 下解压后双击 inside-llm.exe",
+  "浏览器自动打开 http://localhost:8642，通过模型选择器加载模型，或使用 -a A.gguf -b B.gguf 直接加载两个模型"
+ ],
+ "summary": "inside-llm 是一个本地运行的 GGUF 模型可视化工具，基于 llama.cpp，在浏览器中展示模型生成每个 token 时的概率、候选和采样器过滤过程。它还能同时加载两个共享 tokenizer 的模型，对比不同量化或微调版本在每个位置的分歧，并标出文本开始不同的 token。适合想深入理解 LLM 生成机制或比较模型差异的开发者。",
+ "tagline": "在浏览器中可视化 GGUF 模型生成过程与量化差异"
+}

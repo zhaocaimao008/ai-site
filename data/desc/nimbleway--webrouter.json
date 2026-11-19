@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要为 AI agent 接入网页搜索、抓取或浏览器能力的 Python 开发者，以及希望避免绑定单一服务商的团队。",
+ "date": "2026-11-19",
+ "features": [
+  "统一 search、extract、answer、research、live_data、browser 等方法的请求与返回结构",
+  "auto 路由按基准排名选择服务商，失败或空结果自动回退",
+  "无法满足的参数抛出 UnsupportedParameterError，避免静默降级",
+  "按美元和秒数限制单次调用或整个会话的成本，并记录花费",
+  "提供 MCP server 及 LangChain、Claude、OpenAI agent 工具",
+  "benchmark() 与 evaluate() 可在自有查询上比较服务商准确率"
+ ],
+ "intro": "WebRouter 是一个面向 AI agent 的网页访问层。不同搜索、抓取、问答服务各有自己的 SDK、参数名和返回结构，WebRouter 把它们统一到一个带类型的接口后面，切换服务商只需改一个参数，agent 代码不用动。\n\n它提供 search、extract、answer、research、live_data、open_browser 等方法，覆盖二十多家服务商。不指定服务商时由 auto 按公开基准结果的排名依次尝试，失败或返回空就自动回退；服务商无法满足的参数会抛出 UnsupportedParameterError，而不是被悄悄丢弃。\n\n项目还提供 MCP server 以及 LangChain、Claude、OpenAI agent 的现成工具，并支持用 benchmark() 和 evaluate() 在自己的查询上比较服务商。search、extract 和本地浏览器无需 API key 即可使用。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：pip install \"webrouter[all]\"（或 uv add \"webrouter[all]\"）",
+  "复制 .env.example，按需填入所持有服务商的 API key",
+  "在代码中创建 WebRouter 上下文，调用 search 或 extract 等方法",
+  "不指定 provider 时使用 auto 路由，也可通过 provider 参数指定服务商"
+ ],
+ "summary": "WebRouter 把搜索、抓取、问答、调研和浏览器等网页能力统一成一套带类型的 Python 接口，让 AI agent 不必为每家服务商写不同的调用代码。它支持按基准排名自动选择并回退，也能限制调用成本。适合需要给 agent 接入网页访问、又不想绑定单一服务商的开发者。",
+ "tagline": "为 AI agent 统一接入网页能力的开源标准"
+}

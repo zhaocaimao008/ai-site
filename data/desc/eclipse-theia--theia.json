@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要构建自定义 IDE 或开发工具的开发团队，以及希望集成 AI 能力的工具平台开发者。",
+ "date": "2026-11-19",
+ "features": [
+  "构建浏览器和桌面 IDE 的完整框架",
+  "支持 VS Code 扩展协议，可复用现有扩展",
+  "提供 Theia AI 供应商中立的 AI 集成平台",
+  "高度灵活的架构，便于定制和扩展",
+  "支持多语言开发，集成语言服务器协议",
+  "提供 Electron 打包桌面应用的方案"
+ ],
+ "intro": "Eclipse Theia 是一个用 TypeScript 编写的开源框架，用于构建完整的、支持多语言的云端和桌面 IDE 及工具。它提供高度灵活的架构，支持 VS Code 扩展协议，并采用供应商中立的开源治理模式。\n\nTheia 包含 Theia AI，一个供应商中立的 AI 集成平台，为 AI 原生 IDE 提供支持。项目支持浏览器和桌面（通过 Electron）两种运行环境，开发者可以基于它定制自己的 IDE 或开发工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问 Theia 官网的入门指南了解整体流程",
+  "参考文档开发一个 Theia 应用（自己的 IDE/工具）",
+  "学习 Theia 的扩展机制，开发 VS Code 风格扩展或 Theia 扩展",
+  "使用 Electron 打包桌面版 Theia 应用"
+ ],
+ "summary": "Eclipse Theia 是一个用于构建云端和桌面 IDE 的开源框架，开发者可以基于它定制多语言开发工具。它支持 VS Code 扩展协议，并包含 Theia AI 这一供应商中立的 AI 集成平台，适合需要自建 IDE 或为工具加入 AI 能力的团队。",
+ "tagline": "构建云端与桌面 IDE 的开源框架，集成 AI 能力"
+}

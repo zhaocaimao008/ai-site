@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI agent 进行结构化学习或备考的开发者与普通用户，尤其是需要制定计划、每日课程和错题复盘的学习者。",
+ "date": "2026-11-19",
+ "features": [
+  "根据考纲、教材、真题和可用时间制作知识清单与备考计划",
+  "按零基础或复习模式生成每日课程，含例题、变式、混合练习与逐步答案",
+  "根据用户实际作答制作错题本，演示错误标为模拟，不计入真实掌握状态",
+  "为当日复盘绘制 SVG 思维导图，可选生成 PNG 预览",
+  "通过 XeLaTeX 或 LuaLaTeX 编译课程、清单、计划和错题本 PDF",
+  "提供 Markdown 转 LaTeX、LaTeX 编译 PDF、JSON 转 SVG 等脚本"
+ ],
+ "intro": "Good Learning 是一个面向 AI agent 的学习与备考 skill。它根据考纲、教材、真题和可用时间，帮助建立知识清单、备考计划与每日课程，并依据真实作答整理错题、调整后续安排。\n\n该 skill 支持分别制作知识清单和备考计划，保留知识点编号、验收标准及来源；按零基础或复习模式生成自成体系的每日课程，包括例题、变式、混合练习与逐步答案；根据用户实际作答制作错题本，演示错误会标为模拟，不计入真实掌握状态；为当日复盘绘制 SVG 思维导图，可选生成 PNG 预览；通过 XeLaTeX 或 LuaLaTeX 编译课程、清单、计划和错题本 PDF。\n\n仓库只包含 skill 指令和生成脚本，不包含教材、历年试卷、用户作答或生成的个人学习文件。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将仓库克隆或复制为 Codex skills 目录下的 good-learning 文件夹（如 ~/.codex/skills/good-learning/SKILL.md），重启 Codex 或重新加载 skills",
+  "确保 Python 3.10 或更新版本，并安装 XeLaTeX 或 LuaLaTeX 及 ctex、amsmath、tikz 等常用 LaTeX 宏包",
+  "如需生成总结图 PNG，运行 pip install -r requirements.txt 安装 Pillow；SVG 只需 Python 标准库",
+  "向 agent 发出请求，例如：我准备参加一项数学竞赛，每天能学三小时，请帮我制定知识清单和备考计划",
+  "使用脚本生成 PDF 或思维导图，例如：python scripts/render_summary_map.py examples/summary-map.json summary.svg --png summary.png"
+ ],
+ "summary": "Good Learning 是一个给 AI agent 用的学习与备考 skill，能根据考纲、教材、真题和可用时间，帮用户建立知识清单、备考计划和每日课程，再依据真实作答整理错题并调整后续安排。它适合需要系统规划学习进度、按日推送课程和复盘错题的学习者，输出可编译为 PDF 和思维导图。",
+ "tagline": "AI agent 学习备考 skill：计划、课程、错题与 PDF"
+}

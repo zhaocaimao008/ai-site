@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已在本地运行 ComfyUI、希望用 MiniMax H3 生成并剪辑 AI 视频的创作者和开发者。",
+ "date": "2026-11-19",
+ "features": [
+  "用文字描述镜头，编辑器自动构建 ComfyUI 图并渲染带声音的片段",
+  "通过角色图片与 @Name 引用保持人物、场景一致，并可指定声音或旁白",
+  "支持延伸、桥接、合并镜头，以及裁剪、分割、变速、转场等时间线剪辑",
+  "可叠加音乐与旁白、调整片段音量，并导出为单个视频",
+  "按项目或按片段选择 H3 模型、LoRA 与第三方加速节点",
+  "支持语言模型或 agent 通过 HTTP 接口自动编写镜头并生成视频"
+ ],
+ "intro": "H3 Editor 是运行在 ComfyUI 内的 MiniMax H3 时间线视频编辑器。用户只需用文字描述镜头内容与台词，编辑器会自动构建并排队 ComfyUI 计算图，在本地 GPU 上渲染出带声音的片段，再像普通剪辑软件一样把画面和声音剪接在一起。\n\n它支持用角色图片保持人物与场景一致、通过 @Name 引用角色、为角色指定声音或旁白，还能用延伸、桥接、合并等方式让相邻镜头衔接自然。剪辑功能包括裁剪、分割、变速、转场、多 take 切换、素材箱管理以及导入自有素材，并可叠加音乐与旁白后导出成片。\n\n项目内置多种 H3 模型与 LoRA 选择，支持草稿快速预览、成片最高 1920 像素精修，也允许接入第三方加速节点和自训练 LoRA。所有操作都通过 HTTP 调用完成，因此也可以交给语言模型或 agent 按技能说明自动生成视频。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "通过 ComfyUI-Manager 搜索 H3 Editor，或运行 comfy node install h3-editor 安装",
+  "也可在 custom_nodes 目录执行 git clone https://github.com/igorls/comfyui-h3-editor，再运行 pip install -r comfyui-h3-editor/requirements.txt",
+  "重启 ComfyUI，从侧边栏打开 H3 Editor",
+  "在 Get the models 中下载所需模型文件，首个视频约需 54 GB",
+  "新建项目，编写镜头并渲染，然后在时间线上剪辑并导出"
+ ],
+ "summary": "H3 Editor 把 MiniMax H3 的视频生成能力放进 ComfyUI 的时间线编辑器里：你写镜头描述和台词，它在本地 GPU 渲染出带声音的片段，再像普通剪辑软件一样拼接画面与音轨。适合已有 ComfyUI 环境、想用文字生成并直接剪辑 AI 视频的创作者，也支持通过 HTTP 接口交给语言模型或 agent 自动完成。",
+ "tagline": "在 ComfyUI 里用时间线剪辑 MiniMax H3 生成视频"
+}
