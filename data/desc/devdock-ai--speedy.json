@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "适合拥有 RTX 3080 等消费级显卡、希望本地运行大模型并关注长上下文推理的开发者与爱好者。",
+ "date": "2026-11-20",
+ "features": [
+  "在单张或两张 RTX 3080 10GB 上运行 125B MoE 模型",
+  "支持 229K 原生上下文和 1M token 层级",
+  "提供多种量化版本（Q2_0、IQ3_S、UD-IQ4_XS、UD-Q4_K_XL）的性能数据",
+  "基于 CUDA 的 C++ 推理引擎，支持计算能力 7.5+ 的 NVIDIA 显卡",
+  "可通过 Strata 的 HIP 后端在 AMD RDNA3/RDNA4 上构建（未测试）"
+ ],
+ "intro": "Speedy 是 Strata 的一个调优分支，目标是在消费级 RTX 3080 10GB 显卡上运行 Qwen3.8-Flash-Next（125B MoE）模型，支持 229K 原生上下文和 1M token 层级。项目基于 C++ 和 CUDA 实现，需要计算能力 7.5 以上的 NVIDIA 显卡，并针对 10GB 显存做了预设调优。\n\n所有改动都经过同窗口 A/B 测试和质量门控，README 中提供了在单卡、双卡以及不同量化版本下的详细性能数据，包括预填充和解码速度。项目还支持通过 Strata 的 HIP 后端在 AMD 显卡上构建，但尚未测试。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "Speedy 是一个针对消费级显卡优化的推理引擎分支，旨在让 125B 混合专家模型在 RTX 3080 10GB 上运行，并支持长达 1M token 的上下文。它适合需要在本地硬件上处理长文档、代码库或复杂对话的开发者，提供了不同量化版本的性能参考和调优预设。",
+ "tagline": "在消费级 RTX 3080 上运行 125B MoE 大模型"
+}

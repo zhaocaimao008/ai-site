@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合 AI 视频创作者、电影制作者和开发者，尤其是希望精确控制 AI 生成视频相机运动的人。",
+ "date": "2026-11-20",
+ "features": [
+  "137 个电影级相机运动模板，涵盖 dolly、crane、orbit、FPV 等",
+  "使用 three.js 编写相机路径，无需 Blender",
+  "通过条纹胶囊（pill）参考视频精确控制相机运动",
+  "支持通过 Tein MCP 或 API 调用 Seedance 2.5 生成视频",
+  "提供草稿模式（480p）以降低成本",
+  "包含完整的提示词和生成结果示例"
+ ],
+ "intro": "这个项目提供了一套用代码精确控制 AI 生成视频中相机运动的方法。它使用 three.js 编写相机路径，并将场景中的人物替换为条纹胶囊（pill），生成一段参考视频。Seedance 2.5 模型会复制参考视频中的相机运动，同时根据提示词生成真实的人物和场景。\n\n项目包含 137 个电影级相机运动模板，每个模板都有对应的代码、胶囊片段、提示词和生成结果。你可以通过 Tein 平台调用 Seedance 2.5 来生成视频，支持 MCP 或 API 两种方式。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node 22.12 或更新版本，以及 ffmpeg",
+  "进入 engine/cinematic 目录并运行 npm install",
+  "运行 tools/render-pill.sh CAM06-Orbit 生成胶囊片段",
+  "在 Tein 注册并获取 API key",
+  "通过 Tein 的 Seedance 2.5 发送胶囊片段和照片生成视频"
+ ],
+ "summary": "这个项目解决 AI 视频生成中相机运动难以精确控制的问题。它用 three.js 编写相机路径，生成包含条纹胶囊的参考视频，让 Seedance 2.5 模型复制相机运动，同时根据提示词生成真实人物和场景。适合需要精确控制镜头运动的 AI 视频创作和电影预演。",
+ "tagline": "用代码控制 AI 视频的相机运动"
+}

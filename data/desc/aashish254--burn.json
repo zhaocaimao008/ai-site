@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex 等 AI 编码代理，想了解花费去向并控制预算的开发者与团队。",
+ "date": "2026-11-20",
+ "features": [
+  "读取 Claude Code、OpenCode、Codex CLI、Gemini CLI 的本地会话记录，跨代理汇总用量",
+  "按仓库、模型、日期、会话、git 分支多维度展示 token 与费用",
+  "区分 billed、estimated、unpriced 三种金额来源，未知价格不虚构数字",
+  "支持按分支或提交区间归因费用，并提供预算检查、费用预测和诊断建议",
+  "可导出、合并账本，生成团队汇总与 Markdown 报告，支持 ULP 1.0 协议导入导出"
+ ],
+ "intro": "burn 是一个本地运行的命令行工具，用来统计 AI 编码代理实际花了多少钱。它不发起网络请求，也不需要账号，而是直接读取 Claude Code、OpenCode、Codex CLI、Gemini CLI 等工具已经写在磁盘上的会话记录，按仓库、模型、日期和 git 分支汇总 token 用量与费用。\n\n它对金额来源做了区分：代理自己记录的账单金额标为 billed，按用户可编辑的价格表算出的标为 estimated，模型没有已知价格时只显示 token 数、费用留空，不会编造数字。除总览外，还提供按分支或提交区间归因、预算检查、费用预测、导出合并等子命令，适合想弄清 AI 编码开销去向的个人和团队。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "macOS 或 Linux 上安装 Node ≥ 22.5，然后执行：curl -fsSL https://raw.githubusercontent.com/aashish254/burn/main/install.sh | bash",
+  "运行 burn 查看按仓库、模型、日期汇总的账本",
+  "运行 burn work 查看每个分支或功能单元的花费",
+  "运行 burn doctor 检查是否存在浪费",
+  "如需自定义价格，在 ~/.burn/pricing.json 中按每百万 token 填写模型价格"
+ ],
+ "summary": "burn 解决的是 AI 编码代理花费不透明的问题：它直接读取 Claude Code、OpenCode、Codex CLI 等工具留在本地的会话记录，按仓库、模型、日期和 git 分支汇总 token 与费用，全程离线、无需账号。它明确区分实际账单、按价格表估算和无法定价三种金额，不会凭空生成数字，适合想弄清 AI 编码开销去向、做预算和成本归因的开发者与团队。",
+ "tagline": "本地读取编码代理日志，统计 AI 花费的零依赖账本"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地电脑上运行 AI 模型、关注推理速度且需要 OpenAI 兼容接口的开发者与进阶用户。",
+ "date": "2026-11-20",
+ "features": [
+  "读取 GGUF 格式模型，支持 llama.cpp 生态的模型文件",
+  "在 CPU 和 NVIDIA、AMD、Intel GPU 上运行，单一二进制文件",
+  "提供 OpenAI 兼容的 API，便于集成到应用",
+  "内置命令行聊天界面，可直接在终端对话",
+  "支持从 Hugging Face 拉取模型，并可列出 Ollama、LM Studio 等已有模型",
+  "提供基准测试命令 kinetic bench，用于验证输出一致性"
+ ],
+ "intro": "Kinetic 是一个用 Rust 编写的开源推理引擎，目标是在个人电脑上直接运行 AI 模型。它读取 llama.cpp 使用的 GGUF 格式，支持在 CPU 以及 NVIDIA、AMD、Intel 的 GPU 上运行模型，并且只用一个二进制文件即可完成。项目强调速度与结果一致性：加速不会改变模型的输出答案。\n\n当前版本为 0.1.0 Beta 1，支持 Windows 和 Linux（x86-64），NVIDIA GPU 需 Turing 架构（RTX 20 系列）及以上，每个模型使用一块 GPU。它提供 OpenAI 兼容的 API，方便从自己的应用中调用。README 中给出了与 llama.cpp 的对比数据，并说明部分功能（如 macOS 支持、多 GPU、Unsloth UD 量化在 GPU 上运行等）计划在 Beta 2 中实现。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 在 PowerShell 运行：irm https://raw.githubusercontent.com/Veloresearch/kinetic/main/scripts/install.ps1 | iex",
+  "Linux 运行：curl -fsSL https://raw.githubusercontent.com/Veloresearch/kinetic/main/scripts/install.sh | sh",
+  "下载模型：kinetic pull LiquidAI/LFM3-1.7B-GGUF:Q4_K_M",
+  "开始聊天：kinetic chat LiquidAI/LFM3-1.7B-GGUF",
+  "也可直接运行 kinetic，让工具检测电脑并推荐模型"
+ ],
+ "summary": "Kinetic 是一个用 Rust 编写的本地 AI 推理引擎，解决在个人电脑上运行 GGUF 模型的需求。它支持 CPU 以及 NVIDIA、AMD、Intel GPU，提供 OpenAI 兼容 API 和终端聊天界面，并强调加速不改变输出结果。适合想在本地部署模型、需要快速推理和兼容接口的开发者。",
+ "tagline": "用 Rust 编写的本地 AI 推理引擎，支持 GGUF 模型与多品牌 GPU。"
+}

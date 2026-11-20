@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要自托管、可审计的自动化渗透测试与红队工作的安全团队，以及希望用 LLM 智能体编排真实安全工具的开发者和研究者。",
+ "date": "2026-11-20",
+ "features": [
+  "planner 拆解目标、worker 执行真实工具并写回结果，形成闭环探索",
+  "资产图与探索图双图结构，通过 anchor 关联并支持资产测试覆盖度查看",
+  "录制型 MITM 代理与浏览器扩展捕获真实流量，发现可绑定请求/响应证据",
+  "人工审批、argv 前缀规则、范围/拒绝门禁、token 与轮次预算等自主性约束",
+  "支持多 LLM 配置链与 worker 轮换，可在不同 provider 间并发执行 intent",
+  "自托管部署，单个 Go 二进制内嵌 Next.js UI，使用 PostgreSQL"
+ ],
+ "intro": "ARTEX 是一个自托管、由 LLM 驱动的渗透测试平台。它并非简单包装扫描器的聊天界面：planner 把目标拆解成 intent，worker 调用真实工具执行，结果写回两张相互关联的图——记录目标资产信息的资产图，以及记录测试进展的探索图，两者通过 anchor 关联。\n\n每条发现都能绑定支撑它的真实请求与响应，所有自主操作都要经过范围规则、审批关卡和预算限制。项目以单个 Go 二进制交付并内嵌 Next.js 界面，使用 PostgreSQL，可接入 Anthropic/OpenAI 兼容端点或本地 Ollama。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/BaaRai/ARTEX.git && cd ARTEX",
+  "cp .env.example .env，设置 POSTGRES_PASSWORD（可选配置 LLM key）",
+  "docker compose up -d --build 构建并启动 PostgreSQL",
+  "打开 http://localhost:8787，用 docker compose logs artex | grep \"Setup token\" 获取的一次性 setup token 完成初始化"
+ ],
+ "summary": "ARTEX 是一个自托管的 LLM 驱动渗透测试平台，用 planner 拆解目标、worker 调用真实工具执行，并把结果写入资产图与探索图两张关联图。每条发现都能绑定支撑它的真实 HTTP 请求与响应，自主操作受范围规则、审批和预算约束。适合需要可审计自动化渗透测试的安全团队自建使用。",
+ "tagline": "自托管的多智能体自动化渗透测试平台"
+}

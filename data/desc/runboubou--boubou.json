@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地设备上运行语音 AI、注重隐私和离线使用的开发者与普通用户。",
+ "date": "2026-11-20",
+ "features": [
+  "一条命令启动本地语音对话，自动检测硬件并推荐可运行的模型",
+  "支持声音克隆，录制或上传音频即可创建自定义语音",
+  "通过 serve 命令将语音服务共享给手机、机器人或应用",
+  "提供 OpenAI 兼容的语音识别、合成和 Realtime 接口",
+  "支持离线运行和模型缓存管理，可构建自源码"
+ ],
+ "intro": "Boubou 是一个用 Rust 编写的本地语音 AI 运行时，让你在自己的机器上通过语音与 AI 对话。它使用开源模型，无需账号，一条命令即可启动。项目支持 Apple Silicon Mac 和 x86-64 Linux，会自动检测硬件并列出可运行的语音模型。\n\n你可以选择语言和声音，直接与模型对话，也可以将语音服务共享给同一 Wi-Fi 下的手机或机器人。Boubou 还提供声音克隆、模型管理、离线运行等命令，并暴露 OpenAI 兼容的语音接口，方便其他应用接入。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx boubou@beta 启动 Boubou 终端界面",
+  "允许麦克风权限，然后开始说话",
+  "从 runboubou.com/models 选择模型、语言和声音，复制命令运行，例如 npx boubou@beta run qwen3-tts:0.6b-customvoice --voice ono_anna",
+  "运行 npx boubou@beta serve qwen3-tts:0.6b-customvoice 将语音服务共享给手机或机器人"
+ ],
+ "summary": "Boubou 是一个本地语音 AI 运行时，让你用一条命令在自己的电脑上运行开源语音模型，实现语音对话。它自动检测硬件并列出可运行的模型，支持声音克隆和将服务共享给手机或机器人。适合注重隐私、希望离线使用语音 AI 的开发者与普通用户。",
+ "tagline": "一条命令在本地运行开源语音 AI 模型"
+}

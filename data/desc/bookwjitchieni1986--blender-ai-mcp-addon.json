@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望加速迭代的艺术家、自动化重复工作的技术美术，以及将 AI 工具连接到 Blender 的开发者。",
+ "date": "2026-11-20",
+ "features": [
+  "场景感知的 AI 助手：可检查场景和物体信息，为操作提供上下文",
+  "可视化 Studio 工作区：聊天、场景对象、视口快照、审批和任务板",
+  "多提供商支持：OpenAI、Claude、Gemini、OpenRouter、Ollama 及自定义端点",
+  "多智能体工作流：管理者、执行者、审核者分工协作，顺序执行任务",
+  "内置 MCP 服务器：提供 21 个场景工具，支持外部客户端连接",
+  "资产集成：支持 Poly Haven、Sketchfab 和 Poly Pizza 的资产搜索与导入"
+ ],
+ "intro": "mcp-for-blender-pro 是一个 Blender 插件，将 AI 助手和 MCP 服务器集成到 Blender 工作区中。它允许用户通过对话让 AI 检查场景、创建物体、编辑材质、搜索资产并执行多步骤工作流，同时提供可视化的 Studio 窗口用于聊天、场景预览和任务管理。\n\n该插件支持连接多种 AI 提供商，包括 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 以及自定义 API，用户可以在 Blender 内直接选择模型。对于复杂任务，可以配置多智能体团队，由管理者、执行者和审核者分工协作，按顺序执行场景操作。\n\n此外，插件内置了 MCP 服务器，提供 21 个场景工具，涵盖场景检查、物体创建、编辑、截图、代码执行、资产搜索和导出等功能，并支持与 OpenCode 等外部 MCP 客户端连接。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载 mcp-for-blender-pro.zip",
+  "在 Blender 中打开 Edit → Preferences → Get Extensions → 菜单 → Install from Disk",
+  "选择 ZIP 文件，启用 mcp-for-blender-pro，然后打开 3D Viewport → N → MCP Pro",
+  "选择提供商，添加连接信息并选择模型",
+  "在 Blender 中发送消息或点击 Open Studio Window"
+ ],
+ "summary": "mcp-for-blender-pro 是一个 Blender 插件，把 AI 助手和 MCP 服务器直接嵌入 3D 工作区。它让用户通过对话让 AI 检查场景、创建物体、编辑材质、搜索资产并执行多步骤任务，同时提供可视化聊天窗口和任务板。支持连接多种云端或本地 AI 模型，并可配置多智能体团队分工协作。适合希望用自然语言加速 Blender 场景搭建与自动化操作的艺术家、技术美术和开发者。",
+ "tagline": "Blender 的 AI 助手与 MCP 服务器插件"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用 Claude Code 和 Codex 的开发者，以及希望将笔记、搜索和移动办公整合到 AI 工作流中的用户。",
+ "date": "2026-11-20",
+ "features": [
+  "共享记忆：Claude Code 和 Codex 读取相同的 hot.md 和记忆文件，并实时看到对方的最新消息。",
+  "三种搜索：按语义（ChromaDB）、按关系图（LightRAG）、按图像（CLIP）搜索笔记库。",
+  "健康检查：每次会话开始自动检查工具状态，并提供 doctor 命令全面诊断。",
+  "手机访问：通过私有 GitHub 仓库同步，在手机上继续工作，无需服务器。",
+  "技能与钩子：19 个技能（如 /boot、/daily、/catchup）和 21 个钩子（如测试守卫、危险命令拦截）。"
+ ],
+ "intro": "ECX 是一个让 Claude Code 和 Codex 两个 AI 代理共享同一份记忆并互相看到对方最新消息的工具集。它包含 19 个技能、21 个钩子、3 种搜索方式（语义、关系图、图像），以及手机访问和健康检查功能。安装后，你可以在一个代理中开始任务，在另一个中继续，无需重复解释。\n\n项目还提供可搜索的笔记库、自检工具和通过私有 GitHub 仓库实现的手机访问，让你的工作流在笔记本合上后仍能继续。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/saksham10arora-dotcom/everything-claude-codex ~/ecx",
+  "cd ~/ecx && ./install.sh",
+  "在笔记库中打开 Claude Code，输入 /boot"
+ ],
+ "summary": "ECX 解决的是 Claude Code 和 Codex 两个 AI 代理各自为政、记忆不互通的问题。它让两者共享同一份记忆并互相看到最新消息，还提供笔记语义搜索、图像搜索、健康检查和手机访问。适合需要跨代理协作、希望 AI 记住上下文并随时从手机继续工作的开发者。",
+ "tagline": "让 Claude Code 与 Codex 共享记忆、协同工作的工具集"
+}

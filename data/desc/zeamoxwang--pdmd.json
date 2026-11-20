@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频扩散模型蒸馏、少步生成的研究人员和开发者，以及希望在有限显存下运行 MiniMax-H3 视频-音频生成模型的用户。",
+ "date": "2026-11-20",
+ "features": [
+  "提供 4 NFE 和 2 NFE 的 PDMD LoRA 检查点，基于 MiniMax-H3 基座模型",
+  "支持单张 24GB GPU 的低显存推理脚本 run_low_vram.py，通过 int8 量化和权重卸载运行",
+  "支持单张 80GB GPU 的 bf16 推理脚本 run_bf16.py",
+  "提供多节点训练学生和评论家 LoRA 的代码，自动下载模型与训练数据",
+  "包含视频评测（VBench 质量与 Qwen 语义评分）和音频评测（PQ、CE、CU、IS、IB、DeSync）",
+  "提供 LoRA 融合工具，将 LoRA 权重合并到基座 transformer"
+ ],
+ "intro": "PDMD 是论文《Projected Distribution Matching Distillation for Video Diffusion Models》的官方训练与评测代码。它针对分布匹配蒸馏（DMD）在视频扩散模型上训练时样本质量退化、出现过饱和和伪影的问题，提出投影分布匹配蒸馏（PDMD），通过投影去除 DMD 更新中与学生-评论家端点残差平行的分量，从而稳定训练。PDMD 对 DMD 仅需一行改动，不增加损失、网络、数据或训练阶段。\n\n仓库基于 MiniMax-H3-33B 联合视频-音频生成模型，提供 4 步和 2 步 LoRA 检查点，以及单卡 24GB 或 80GB GPU 上的推理脚本。训练部分支持多节点训练学生和评论家 LoRA，并自动下载模型与训练数据。评测涵盖视频的 VBench 质量与 Qwen 语义评分，以及音频的 PQ、CE、CU、IS、IB 和 DeSync 指标。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/ZeamoxWang/pdmd.git && cd pdmd",
+  "安装推理依赖：pip install torch==2.14.0 torchvision==0.29.0 torchaudio==2.11.0 && pip install -r inference/requirements.txt",
+  "克隆 MiniMax-H3-Turbo 并切换到指定提交：git clone https://github.com/ModelTC/Minimax-H3-Turbo.git && git -C Minimax-H3-Turbo checkout 02e26d591f7a04d5d1a074c9566d5dd4f22f6225",
+  "下载基座模型和 LoRA 检查点：hf download MiniMaxAI/MiniMax-H3 --exclude \"transformer_ref/*\" --exclude \"FL2VA/*\" --exclude \"Ref2VA/*\" 以及 hf download pdmd2026/pdmd_4NFE_lora --local-dir ckpt/pdmd_4NFE_lora",
+  "融合 LoRA：python tools/checkpoints/fuse_lora.py --lora ckpt/pdmd_4NFE_lora/lora_model_0.safetensors --output ckpt/pdmd_4NFE_fused",
+  "运行推理：python inference/run_low_vram.py --transformer-path ckpt/pdmd_4NFE_fused --inference-steps 4 --jobs-json inference/examples/giant_cat_harbor_768p_4nfe.json --turbo-repo Minimax-H3-Turbo --output-dir outputs"
+ ],
+ "summary": "PDMD 是视频扩散模型蒸馏的官方实现，旨在解决分布匹配蒸馏训练中样本质量退化的问题。它通过投影去除 DMD 更新中的误差分量，稳定少步生成训练。项目基于 MiniMax-H3 提供 4 步和 2 步 LoRA 检查点，并附带低显存推理脚本和视频、音频评测代码，适合研究视频生成加速的开发者使用。",
+ "tagline": "将视频扩散模型蒸馏到少步推理的官方实现"
+}

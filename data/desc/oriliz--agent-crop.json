@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 DeepSeek Harness 或 Claude Code 进行 AI 辅助编程，希望量化并优化 AI 协作效率的开发者。",
+ "date": "2026-11-20",
+ "features": [
+  "本地记录 AI 编程会话中的工具调用、活跃时间、等待时间等事件",
+  "超时或卡点时注入鞭策提醒，要求 AI 反思并上报原因",
+  "提供会话页和全局侧边栏面板，可视化时间去向与摩擦指标",
+  "支持四种鞭策风格切换，可自定义提醒台词",
+  "通过 crop health 命令检查数据采集健康度，支持 JSON 输出",
+  "数据仅存本地 ~/.agentcrop 目录，不保存对话正文"
+ ],
+ "intro": "Agent Crop 是一个面向 AI 编程助手的本地观测与自改进工具。它通过插件形式接入 DeepSeek Harness 或 Claude Code，在会话过程中自动记录工具调用、活跃时间、等待时间等事件，并支持 AI 主动上报卡点原因与改进建议。所有数据以 JSONL 格式保存在本地，不上传云端。\n\n项目核心是“测量→归因→优化→验证”的闭环：先记录时间花在哪，再让 AI 反思问题类别，然后修改指令、技能或工具，最后用数据验证效果。它提供会话页和全局侧边栏两个面板，展示时间轴、摩擦指标和采集健康度，帮助开发者看清 AI 的工作模式并持续优化。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "dsh plugin --profile <你的 profile> add agent-crop-dsh",
+  "重启 dsh，新会话生效",
+  "npm i -g agent-crop-dsh  # 可选：让 crop 进 PATH",
+  "crop status  # 查看数据目录",
+  "tail -1 ~/.agentcrop/data/events.jsonl  # 确认事件写入"
+ ],
+ "summary": "Agent Crop 解决的是 AI 编程助手“时间花在哪说不清”的问题。它作为插件接入 DeepSeek Harness 或 Claude Code，在本地记录每次工具调用、活跃与等待时间，并在超时或卡点时提醒 AI 反思原因。记录的数据用于复盘，帮助开发者判断是 AI 慢还是人在等，进而调整指令或技能，形成可验证的改进闭环。适合希望量化 AI 协作效率的开发者。",
+ "tagline": "给 AI 编程助手加一根马鞭：记录时间去向，用数据驱动自我改进。"
+}

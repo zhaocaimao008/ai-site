@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已在 Windows 上使用 DeepSeek Harness、希望本地免费生成图片且不想配置 API Key 的开发者或普通用户。",
+ "date": "2026-11-20",
+ "features": [
+  "在 DSH 对话中通过 draw_image 工具调用本机 ComfyUI 生成图片",
+  "支持 prompt、画幅比例、总像素、采样步数、种子等参数",
+  "空闲 5 分钟自动关停 ComfyUI，避免长期占用显存",
+  "在 composer 下方显示 ComfyUI 在线/出图/离线状态",
+  "一键部署脚本自动检测并下载模型，带 SHA256 校验",
+  "纯 Node ESM 实现，零外部依赖，不改 DSH 安装目录"
+ ],
+ "intro": "这是一个 DeepSeek Harness（DSH）插件，注册 draw_image 工具，让助手在对话中按提示词调用本机 ComfyUI，使用千问 Qwen-Image 2.1 模型生成图片。全程走 127.0.0.1，不需要联网、API Key 或 Python 环境，插件本体是纯 Node ESM，零外部依赖。\n\n插件分为 host 和 client 两部分：host 负责注册工具、空闲 5 分钟自动关停 ComfyUI、提供只读状态端点；client 为工具调用绘制卡片，并在输入框下方显示 ComfyUI 在线状态。生成图片会落盘到桌面「千问1生图」目录，并在聊天正文中内联显示。\n\n项目提供一键部署脚本，可检测并补齐 ComfyUI 与三个千问模型文件，逐个做 SHA256 校验；也支持只安装插件本体。N 卡开箱即用，A 卡可走 ROCm 路线。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保本机 ComfyUI 可运行，或运行 node scripts/setup.mjs 自动检测并补齐 ComfyUI 与模型",
+  "运行 node scripts/install.mjs 将插件安装到 DSH profile",
+  "彻底退出 DSH 并重新打开，使宿主侧工具清单重新装配",
+  "在聊天框输入「画一只在雪地里的柴犬」等提示词，助手会调用 draw_image 出图"
+ ],
+ "summary": "这个项目是一个 DSH 插件，让 DeepSeek Harness 在对话中直接调用本机 ComfyUI，用千问 Qwen-Image 2.1 模型生成图片。全程本地运行，不需要联网、API Key 或 Python 环境，适合希望在聊天界面里免费出图、又不想把图片上传到云端的用户。插件还提供空闲自动关停和在线状态提示，方便管理本机显存。",
+ "tagline": "在 DSH 对话里调用本机 ComfyUI，用千问模型本地出图"
+}

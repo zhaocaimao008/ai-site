@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合在 16–32 GB 显存的个人电脑上运行大型 MoE 模型、且内存足够的开发者或爱好者。",
+ "date": "2026-11-20",
+ "features": [
+  "将高频专家保留在 VRAM，低频专家由 CPU 和内存处理，突破显存限制",
+  "支持 llama.cpp 已支持的任意 MoE 模型，针对 Qwen3.8 做了调优",
+  "长提示词采用层流式传输和更大批次，提升首 token 速度",
+  "支持热启动，保存并预加载会话中使用过的专家列表",
+  "提供环境变量控制流式传输、批次大小等行为"
+ ],
+ "intro": "tandem.cpp 是 llama.cpp 的一个补丁集，目标是提升显存不足以容纳的 MoE 模型在单用户解码时的推理速度。它把最常用的专家保留在 GPU 显存中，其余专家交给 CPU 和内存处理，从而在 16–32 GB 显存的显卡上运行大型 MoE 模型。\n\n项目基于 llama.cpp 的特定提交，当前版本为 v0.4.0。根据 README 的测试数据，在 Qwen3.8、gpt-oss-120b、DeepSeek-V4.1 等模型上，解码速度相比原版 llama.cpp 有 1.4–3.3 倍的提升，长提示词的处理速度也有明显加快。\n\n它主要面向单用户场景，适合显存有限但内存较大的个人电脑。对于需要多并发服务的大显卡场景，README 建议使用同作者的 Tandem-vLLM。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "获取 llama.cpp 的指定基础提交 f5222f25c",
+  "应用 tandem.cpp 补丁集并编译",
+  "使用编译后的 llama.cpp 加载 MoE 模型进行推理",
+  "可选：设置 LLAMA_MOE_HOT_SAVE 和 LLAMA_MOE_HOT_LIST 实现热启动"
+ ],
+ "summary": "tandem.cpp 是 llama.cpp 的补丁，用于加速显存放不下的 MoE 模型。它把常用专家留在 GPU，其余交给 CPU 和内存，适合在 16–32 GB 显存的个人电脑上单用户运行大型 MoE 模型。根据 README，解码速度相比原版有 1.4–3.3 倍提升，长提示词处理也更快。",
+ "tagline": "让显存放不下的 MoE 模型在 llama.cpp 中跑得更快"
+}

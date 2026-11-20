@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在使用命令行 AI 编程 agent、希望更直观地掌握 agent 运行状态的开发者，以及想尝试多 agent 并行处理任务的用户。",
+ "date": "2026-11-20",
+ "features": [
+  "在终端中运行 Claude Code、Codex、Gemini CLI、Cursor CLI 或 OpenCode，并实时观察其工具调用",
+  "Game View 提供 Westworld、Loom、Factory、Chips、Rhythm 五种可视化模式",
+  "主 agent 可拆分任务并派出多个 worker agent，各自使用独立 git worktree 和分支",
+  "每个终端支持 TUI 与 GUI 两种界面，可用 ⇧⌘J 切换",
+  "内置文件查找与只读查看器、Git 历史与 diff、会话轨迹和 token 统计"
+ ],
+ "intro": "CrommaCode 是一款原生、GPU 绘制的桌面应用，用来运行和观察 AI 编程 agent。你在它内置的终端里照常使用 Claude Code、Codex、Gemini CLI、Cursor CLI 或 OpenCode，它通过工具钩子读取 agent 及其子 agent 的每一次工具调用，并在终端旁边把这些调用实时演绎成游戏画面，不向 agent 上下文注入内容。\n\n当任务规模较大时，主 agent 可以把任务拆分，派出多个 worker agent 并行执行，每个 worker 运行在独立的 git worktree 和分支上，并使用你选择的模型服务商。应用还提供文件浏览、Git 历史、会话轨迹和 token 用量统计等辅助视图。\n\n需要说明的是，这个仓库只是项目的公开主页，用于介绍产品、架构和下载方式，不包含源代码，应用本身在私有仓库中开发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "前往 cromma.ai/code 或发布地址下载对应平台的安装包",
+  "macOS 用户根据芯片选择 arm64 或 x64 的 dmg；Windows 运行 setup.exe；Linux 使用 AppImage 或 deb",
+  "安装后打开应用，在终端中启动你常用的编程 CLI（如 Claude Code、Codex 等）",
+  "在终端旁查看 Game View 对工具调用的实时演绎，需要时用 ⇧⌘J 切换 TUI/GUI 界面"
+ ],
+ "summary": "CrommaCode 针对的是命令行 AI 编程 agent 输出滚动文本、难以一眼看清进度的问题。它让你在自带终端里继续使用 Claude Code、Codex 等 CLI，同时把 agent 的每次工具调用实时演绎成游戏画面，并在任务较大时派出多个并行 worker agent。适合希望直观掌握 agent 状态、或需要多 agent 并行协作的开发者。",
+ "tagline": "把 AI 编程 agent 的工作过程变成可观看的游戏化桌面 IDE"
+}
