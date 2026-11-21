@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "需要集成多种 AI 生成模型（视频、图像、聊天）的 JavaScript/TypeScript 开发者，以及希望通过命令行快速生成内容的用户。",
+ "date": "2026-11-21",
+ "features": [
+  "一个 API key 调用 200+ AI 视频、图像、音乐和聊天模型",
+  "自动选择最便宜可用提供商，失败时回退，失败生成不收费",
+  "generate() 提交并轮询任务，支持 max_cost_usd 成本上限",
+  "quote() 免费估价，支持本地文件上传和图像转视频",
+  "兼容 OpenAI 的聊天接口，支持流式输出",
+  "提供 CLI 命令：models、generate、quote、list、balance"
+ ],
+ "intro": "Revana 的官方 JavaScript/TypeScript SDK 和 CLI，让开发者通过一个 API key 访问 Seedance、Veo、Kling、Nano Banana 等 200 多个 AI 视频、图像、音乐和聊天模型。请求会优先发送到最便宜且可用的提供商，失败时自动回退，并且只对成功结果收费一次，失败的生成不产生费用。\n\nSDK 提供 generate() 方法提交任务并轮询直到完成，也支持手动管理轮询。可以先用 quote() 免费估价，再设置 max_cost_usd 控制成本。支持本地文件上传、图像转视频、模型列表查询、生成记录分页，以及兼容 OpenAI 的聊天接口。CLI 提供模型查询、生成、估价、列表和余额等命令。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "npm install revana",
+  "在 revana.si/dashboard 创建 API key，并设置环境变量：export REVANA_API_KEY=sr_live_...",
+  "使用 SDK 生成视频：import Revana from \"revana\"; const revana = new Revana(); const video = await revana.generate({ model: \"seedance-2.5\", input: { prompt: \"a corgi surfing a wave at sunset, cinematic\", duration: 5, resolution: \"720p\", aspect_ratio: \"16:9\" }, max_cost_usd: 2 });",
+  "或使用 CLI：npx revana generate seedance-2.5 \"a corgi surfing at sunset\" --duration 5 --resolution 720p --max-cost 2 -o corgi.mp4"
+ ],
+ "summary": "Revana 的 JavaScript/TypeScript SDK 和 CLI 让开发者用一个 API key 调用 Seedance、Veo、Kling 等 200 多个 AI 视频、图像和聊天模型。它自动选择最便宜的可用提供商并在失败时回退，只对成功结果收费，适合需要在 Node.js 或 TypeScript 项目中集成多种生成能力、并希望控制成本的场景。",
+ "tagline": "用一个 API key 调用 200+ AI 视频、图像和聊天模型"
+}

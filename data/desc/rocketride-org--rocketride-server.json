@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要把 AI 流水线从原型推进到生产环境的开发者与团队，以及希望在 IDE 中可视化编排、调试和观测 AI 工作流的人。",
+ "date": "2026-11-21",
+ "features": [
+  "可视化画布 Rocket Builder，拖拽连接节点编排 AI 流水线",
+  "基于 C++ 的高性能多线程运行时，面向 AI 与数据负载吞吐",
+  "实时可观测性：token 用量、LLM 调用、延迟与执行追踪",
+  "流水线以可移植 JSON 保存，可版本控制、分享和跨环境运行",
+  "提供 Python 与 TypeScript SDK，便于嵌入现有应用",
+  "支持 MCP Server 与 VS Code 扩展，可在 IDE 和编码 agent 中使用"
+ ],
+ "intro": "RocketRide 是一个开源的 AI meta-harness，核心是自研的 C++ 高性能运行时，用来构建、测试和发布可长期运行、可上生产的 agent 与 AI 流水线。它把整个 AI 应用栈纳入统一管理，而不只是 agent 本身。\n\n使用上，它提供可视化画布 Rocket Builder，通过拖拽连接节点来编排流程，并实时观测 token 用量、LLM 调用、延迟和执行过程。流水线以可移植的 JSON 保存，可版本控制、分享，也能在任意环境运行。节点库覆盖 agent、模型、向量/图/SQL 数据库、OCR、工具、数据存储、NER 等。\n\n项目提供 Python 与 TypeScript SDK，可将流水线嵌入现有应用；同时支持 MCP Server 和 VS Code 扩展，可在 IDE、终端或编码 agent 中使用，并支持自托管或部署到 RocketRide Cloud。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 VS Code 扩展（VS Code Marketplace 或 Open VSX Registry）",
+  "在扩展中选择 Local 模式，在本机运行流水线，无需注册",
+  "在可视化画布中拖拽连接节点，搭建并运行第一条流水线",
+  "需要集成到应用时，使用 Python 或 TypeScript SDK 调用流水线"
+ ],
+ "summary": "RocketRide 是一个开源 AI meta-harness，底层是 C++ 编写的高性能运行时，用于构建、测试和发布可长期运行、可上生产的 agent 与 AI 流水线。它提供可视化画布来拖拽编排节点，并实时观测 token 用量、LLM 调用和延迟，流水线以可移植 JSON 保存。适合希望把 AI 工作流从原型推进到生产、并在 IDE 中调试和观测的开发者与团队。",
+ "tagline": "开源 AI meta-harness，用 C++ 运行时编排可落地的 AI 流水线"
+}

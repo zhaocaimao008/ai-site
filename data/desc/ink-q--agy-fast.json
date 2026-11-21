@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Google Antigravity 进行 AI 编程的开发者，尤其是关注响应延迟、token 配额消耗和网络流量的用户。",
+ "date": "2026-11-21",
+ "features": [
+  "合并同一轮次内的重复工具调用，减少 LLM 往返次数",
+  "压缩上下文并提高 prompt 缓存命中率，降低 token 消耗",
+  "减少工具返回的上传流量，节省带宽",
+  "非侵入式设计，不影响 Antigravity 原生 UI、diff 查看器和安全检查",
+  "支持 Antigravity CLI、Desktop 2.0 和 IDE",
+  "内置后台自动更新，每 12 小时检查一次"
+ ],
+ "intro": "agy-fast 是一个针对 Google Antigravity（CLI/Desktop/IDE）的非侵入式 MCP 插件，旨在减少 LLM 交互轮次、token 配额消耗和上传流量，同时不影响原生 UI 和 diff 功能。它通过本地 Stdio MCP 服务器合并重复工具调用、压缩上下文，并在会话开始时注入一次快照来优化性能。\n\n根据项目提供的遥测数据，使用 agy-fast 后，每 10 个逻辑操作的平均 LLM 轮次减少 33.7%，计费配额降低 31.5%，工具返回上传流量减少 39.7%。插件零运行时依赖，提供单文件 ESM 打包，并支持自动更新。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 Node.js >= 20（可选安装 ripgrep 以加速搜索）",
+  "macOS/Linux 运行：curl -fsSL https://raw.githubusercontent.com/INK-Q/agy-fast/main/install.sh | sh",
+  "Windows PowerShell 运行：irm https://raw.githubusercontent.com/INK-Q/agy-fast/main/install.ps1 | iex",
+  "或手动克隆到插件目录：git clone https://github.com/INK-Q/agy-fast.git ~/.gemini/config/plugins/agy-fast",
+  "使用 agy plugin enable agy-fast 启用插件（如果使用 CLI）"
+ ],
+ "summary": "agy-fast 是一个针对 Google Antigravity 的 MCP 加速插件，通过合并工具调用、压缩上下文和减少上传流量来降低 LLM 交互轮次与 token 消耗。它适合使用 Antigravity 进行 AI 编程、希望减少等待时间和配额消耗的开发者，且不影响原生 UI 和 diff 功能。",
+ "tagline": "Google Antigravity 的 MCP 加速插件，减少 LLM 轮次与 token 消耗。"
+}

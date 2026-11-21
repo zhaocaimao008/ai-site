@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "想在本地 CPU 或消费级 GPU 上运行扩散语言模型（LLaDA、Dream 系列）的开发者，以及对 Mojo 实现推理引擎感兴趣的人。",
+ "date": "2026-11-21",
+ "features": [
+  "支持 LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-Instruct-7B、Dream-Coder-v0-Instruct-7B、DiffuCoder-7B-cpGRPO 等扩散语言模型",
+  "从量化 GGUF 文件加载模型，GGUF 读取与 tokenizer 均由 Mojo 实现",
+  "核心推理链路（量化矩阵乘、GPU kernel、transformer、去噪循环）全部用 Mojo 编写",
+  "构建后的二进制运行时无需 Python，GPU 为可选项",
+  "提供 --visual 可视化模式，展示 mask token 逐步填充的过程",
+  "README 附有 CPU 与 GPU 上相对 llama.cpp、diffuse-cpp 的基准测试数据"
+ ],
+ "intro": "mojo-dllm 是一个用 Mojo 编写的扩散语言模型本地推理运行时，支持从量化 GGUF 文件加载 LLaDA-8B-Instruct、LLaDA-1.5、Dream-v0-Instruct-7B、Dream-Coder-v0-Instruct-7B 和 DiffuCoder-7B-cpGRPO 等模型。GGUF 读取、tokenizer、量化矩阵乘、GPU kernel、transformer 和去噪循环全部由 Mojo 实现，构建出的 build/mojo-dllm 二进制在运行时不需要 Python，GPU 也是可选的。\n\n扩散模型不按从左到右的顺序生成，而是从一块被 mask 的 token 画布出发，在固定步数内逐步确定最有把握的 token。默认每一步都会对整个画布重跑一遍模型，因此运行时的主要开销是一连串 GEMM，项目正是围绕这一点做优化。README 给出了在 CPU 和 NVIDIA GPU 上与 llama.cpp、diffuse-cpp 的对比数据。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "./mojo-dllm 启动器由 uv 运行，负责构建并启动 build/mojo-dllm 二进制",
+  "使用 --device gpu 参数在 NVIDIA GPU 上运行",
+  "使用 --visual 参数查看 mask token 逐步去噪的可视化过程"
+ ],
+ "summary": "mojo-dllm 用 Mojo 实现扩散语言模型的本地推理，支持 LLaDA、Dream 等模型，从量化 GGUF 文件加载，构建出的二进制运行时不需要 Python，GPU 可选。扩散模型从被 mask 的 token 画布出发逐步确定 token，每步都要重跑整个模型，项目围绕这一计算模式做优化，适合想在本地 CPU 或消费级 GPU 上跑这类模型的开发者。",
+ "tagline": "用 Mojo 编写的扩散语言模型本地推理运行时"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要管理多个 AI 供应商支出的团队负责人、FinOps 和工程管理者，以及想了解自己 Claude Code 用量的开发者。",
+ "date": "2026-11-21",
+ "features": [
+  "用自然语言查询按团队、个人、模型、API key 拆分的 AI 花费",
+  "给出按实施难度排序的省钱建议，附每月节省区间和具体改动",
+  "让 Claude 在仓库中执行修复并提交说明节省金额的 pull request",
+  "对比不同模型在特定任务上的成功率和每次成功成本",
+  "在 Claude Code 状态栏显示当前会话花费和限额使用情况",
+  "提供 AI registry，查看各 key、编码工具和席位的归属与使用状态"
+ ],
+ "intro": "TraxAgent 是一个只读的 MCP server 和 Claude Code 插件，用来回答“上个月谁花了多少 AI 预算、花在什么上”。团队的 AI 支出往往分散在 Anthropic、OpenAI、Gemini 的 API、Claude Code 或 Codex、Cursor 以及 Claude/ChatGPT 席位等多个地方，各家控制台只看得到自己那一部分。TraxAgent 每晚把这些数据汇总到一处，按团队和个人归类。\n\n在此基础上，它会做一次用量审查，给出按实施难度排序的省钱建议，每条都附带每月可省金额和具体改动方式。你可以在 Claude、ChatGPT、Cursor、VS Code 等 MCP 客户端里用自然语言提问，也可以让 Claude 直接在仓库里执行修复并开 PR。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Claude Code 中运行 /plugin marketplace add ccarter01011/traxagent-claude-plugin",
+  "运行 /plugin install traxagent@traxagent 安装插件",
+  "运行 /mcp，选择 plugin:traxagent:ai-spend 并点击 Authenticate，在浏览器中登录 TraxAgent",
+  "无需账号可先运行 /traxagent:spend-audit 查看本地 Claude Code 用量，或询问示例公司数据"
+ ],
+ "summary": "TraxAgent 解决的是团队 AI 支出分散在多个供应商、难以统一核算的问题。它把 Anthropic、OpenAI、Gemini 的 API、编码工具和席位费用汇总到一处，按团队和个人拆分，并通过只读 MCP server 让 Claude、ChatGPT、Cursor 等助手用自然语言回答花费去向，给出按难度排序的省钱建议。适合需要做 AI 成本管理或预算复盘的团队。",
+ "tagline": "用 AI 助手查询并优化团队 AI 花费"
+}

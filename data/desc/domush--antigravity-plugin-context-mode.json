@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Google Antigravity App 进行 AI 编程的开发者，尤其是经常处理大型日志、构建输出或大文件的用户。",
+ "date": "2026-11-21",
+ "features": [
+  "自动拦截超过 8 KB 的文件读取和命令输出，防止上下文膨胀",
+  "在本地沙箱中执行 Node.js、Python 或 PowerShell 脚本过滤数据",
+  "使用本地 SQLite FTS5 BM25 索引和搜索日志与文档",
+  "内置 Sidecar 仪表盘实时显示节省的 token 统计",
+  "提供 8 个 MCP 工具（如 ctx_execute、ctx_search、ctx_index）供 agent 调用",
+  "零运行时依赖，纯 Node.js 原生实现，数据完全本地存储"
+ ],
+ "intro": "Antigravity Context Mode 是专为 Google Antigravity App 设计的本地优先插件，用于阻止终端命令、构建日志和超大源文件直接涌入对话历史，从而节省每轮对话的 token 并避免“agent 失忆”。\n\n它通过 Pre-Tool 生命周期钩子拦截超过 8 KB 的无界输出，让 agent 在本地沙箱中用 Node/Python 脚本过滤数据，或把文本索引到本地 SQLite FTS5 数据库，只将精确答案或错误返回聊天。所有索引数据保存在本机 ~/.context-mode/context.db，无网络请求。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "全局安装：npx antigravity-plugin-context-mode install",
+  "或按项目安装：npx antigravity-plugin-context-mode install --workspace",
+  "重启或打开 Google Antigravity App，插件即生效",
+  "在 Customizations → Plugins 中可随时启用或禁用",
+  "卸载：npx antigravity-plugin-context-mode uninstall（或加 --workspace）"
+ ],
+ "summary": "Antigravity Context Mode 是一个针对 Google Antigravity App 的本地插件，用来解决 AI 编程时终端输出、构建日志和大文件把对话上下文撑爆的问题。它拦截超大输出，让 agent 在本地沙箱中过滤或索引数据，只把关键结果返回聊天，从而节省 token、保持 agent 专注。适合经常处理大型日志或大文件的 Antigravity 用户。",
+ "tagline": "为 Google Antigravity 减少上下文膨胀的本地插件"
+}
