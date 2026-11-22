@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想借助 AI 独立制作游戏的开发者，以及希望把设计、素材和代码集中在一个应用里完成的小团队。",
+ "date": "2026-11-22",
+ "features": [
+  "agent 根据描述设计游戏、编写代码、运行预览并试玩修复",
+  "在同一画布上生成和管理图片、视频、3D、动画、语音、音效和音乐等素材",
+  "一键发布为浏览器可玩的链接，并支持多人游戏的房间、登录、存档和排行榜",
+  "通过插件为 agent 增加技能、工具和面板，预装 Godot、Unity、Unreal、Blender 等插件",
+  "支持自带模型 key 或接入 Claude Code、Codex、OpenCode 等外部 agent，也可通过 MCP 在外部 agent 中使用画布和素材生成"
+ ],
+ "intro": "OhMyGame 是一个开源的游戏制作工作室应用，目标是把用 AI 做游戏所需的东西放进同一个应用里。你描述一个游戏，agent 会起草设计文档、编写代码、在实时预览中运行游戏，并在出错时尝试修复。设计文档、图片、视频、3D 和音频都放在代码旁边的同一块画布上，不必分散在多个工具里。\n\n应用本身不附带模型，首次启动时需要连接你已有的模型提供商或 coding agent，支持 Claude Code、Codex、OpenCode 以及 40 多个模型提供商，使用自己的 key。项目还支持通过插件扩展 agent 的能力，预装插件覆盖 Godot、Unity、Unreal Engine、Blender、Aseprite、Tiled 以及微信、抖音小游戏等平台。\n\n目前项目处于 beta 阶段，提供 macOS（Apple silicon）和 Windows（x64）下载，也可以从源码构建。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Bun 1.4.2+ 和 Node.js 22.19+",
+  "git clone https://github.com/WhiteTowerAI/ohmygame.git",
+  "cd ohmygame",
+  "bun install --frozen-lockfile",
+  "bun run dev（web renderer + local daemon）或 bun run dev:desktop（Electron 应用）"
+ ],
+ "summary": "OhMyGame 是一个开源的游戏制作工作室应用，把 AI agent、代码编辑、实时预览和素材画布整合在一起。你描述游戏想法后，agent 会写设计文档、生成代码并试玩检查；图片、视频、3D、音频等素材也集中在同一画布上管理。它不内置模型，需要连接自己的模型提供商或 coding agent。适合想用 AI 独立做游戏、又不想在多个工具间来回切换的开发者。",
+ "tagline": "用 AI 做游戏的开源工作室应用"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想在低显存消费级显卡上本地、离线尝试 AI 视频生成的 Windows 用户和开发者。",
+ "date": "2026-11-22",
+ "features": [
+  "为 stable-diffusion.cpp 提供内存补丁，降低显存占用以适配 4 GB 显卡",
+  "支持 MiniMax H3 文生视频，单次最多 209 帧（8.7 秒）",
+  "支持 -InitImg 图生视频，最多 192 帧（8.0 秒）",
+  "Windows 一键安装脚本，自动检查硬件并下载引擎与模型",
+  "提供提示词撰写指南和示例提示词文件"
+ ],
+ "intro": "VideoTurko 是一组针对 stable-diffusion.cpp 的内存补丁和脚本，目标是在显存只有 4 GB 的 NVIDIA GTX 1050 Ti 上运行 MiniMax H3 文生视频模型。项目提供 Windows 下的安装与运行脚本，安装器会检查 GPU、驱动、内存和磁盘，下载引擎与模型，并做一次短测试。\n\n按作者实测，单次可生成最多 209 帧（8.7 秒）的视频，使用 -InitImg 做图生视频时最多 192 帧（8.0 秒）；209 帧约需 57 分钟。模型不随仓库分发，由安装脚本下载，约 29.3 GiB。\n\n需要注意：仓库代码为 MIT，但 MiniMax H3 模型使用其社区许可，地域限制排除了欧盟、英国、韩国和美国，生成的视频也受此限制；安装前需阅读并接受许可。作者也说明干净目录下的完整安装测试尚未完成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载仓库 ZIP 并解压到较短的路径，例如 C:\\vt",
+  "双击 kur.cmd 安装，或在 PowerShell 中运行 powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\kur.ps1",
+  "安装过程中阅读并接受 MiniMax H3 模型许可",
+  "安装器显示 READY 后，运行 powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\uret.ps1 -Istem docs\\ornek_istem_R0.txt -Kare 56 生成第一段视频",
+  "把提示词写入文本文件后，用 -Kare 209 生成最长片段，结果保存在 runs\\ 目录"
+ ],
+ "summary": "VideoTurko 通过给 stable-diffusion.cpp 打内存补丁并配套安装脚本，让显存仅 4 GB 的 GTX 1050 Ti 也能在 Windows 上本地运行 MiniMax H3 文生视频，单次可生成最长 8.7 秒的片段，也支持图生视频。适合想在低配显卡上离线尝试 AI 视频生成的用户，但需注意模型许可的地域限制。",
+ "tagline": "在 4 GB 显存的 GTX 1050 Ti 上本地运行 MiniMax H3 文生视频"
+}

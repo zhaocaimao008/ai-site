@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要在网页产品中集成文档、表格、演示或 PDF 编辑能力的开发者，以及希望自托管开源编辑器或为 AI 应用接入文档编辑能力的团队。",
+ "date": "2026-11-22",
+ "features": [
+  "文档编辑器：分页排版，支持样式、表格、页眉页脚、分栏、批注、修订和手写笔迹",
+  "表格、演示、PDF、手写、代码等多个编辑器，以 React 组件形式发布在 npm",
+  "托管嵌入方案：服务端签发短期 session token，页面中打开编辑器并编辑 docx、xlsx、pptx、pdf",
+  "MCP server：让 AI 应用在真实编辑器中打开、读取、编辑和导出文档",
+  "OAuth 2.1 登录，支持用 MR Office 账号为第三方应用授权",
+  "支持自托管开源编辑器，遵循 AGPL-3.0 协议"
+ ],
+ "intro": "MR Office 是一个在浏览器中运行的办公编辑器项目，本仓库开源了其中的六个编辑器：文档、表格、演示、PDF、手写和代码。它们用 TypeScript 编写，可作为 React 组件通过 npm 安装，也可以自行构建部署。\n\n需要注意，仓库提供的是编辑器本身，而不是完整的开源办公套件。开源编辑器打开的是自有格式以及 CSV、HTML、Markdown 和 PDF；Word、Excel、PowerPoint 文件的读写由 MR Office 托管服务提供。开发者可以通过嵌入 SDK 在自己的网页中调用托管编辑器，也可以借助 MCP server 让 AI 应用打开、读取、编辑和导出文档。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在项目目录运行 `npx mroffice-embed init`，完成授权并把应用密钥写入 `.env.local` / `.env`",
+  "在服务端用 `createSessionToken`（来自 `mroffice-embed/server`）签发 session token，密钥只保留在服务端",
+  "在页面中用 `open()`（来自 `mroffice-embed`）打开编辑器，或引入脚本 `https://mroffice.ai/embed/v1/embed.js`",
+  "如需自托管编辑器，安装 React 组件包：`npm i mroffice-docs mroffice-core`，按各包 README 嵌入"
+ ],
+ "summary": "MR Office 开源了其浏览器端办公编辑器，涵盖文档、表格、演示、PDF、手写和代码六类。开发者可以把它们作为 React 组件集成进自己的网页产品，或通过托管嵌入 SDK 直接编辑 Word、Excel、PowerPoint 和 PDF 文件；也能借助 MCP server 让 AI 应用操作文档。适合需要在线文档编辑能力的产品团队。",
+ "tagline": "开源浏览器办公编辑器，含文档、表格、演示、PDF、手写与代码"
+}

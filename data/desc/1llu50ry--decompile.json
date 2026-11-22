@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合安全研究人员、逆向工程师、游戏修改爱好者以及需要二进制分析能力的 AI 代理开发者。",
+ "date": "2026-11-22",
+ "features": [
+  "聚合 60+ 逆向/调试 MCP 后端，智能选择可用工具",
+  "提供 230+ 原生 MCP 工具，支持多种二进制格式解析",
+  "内置 6000+ 技能、170+ 代理、3000+ 提示词的知识库",
+  "支持多代理协作网格，实现任务交接与投票",
+  "提供一键安装脚本和 CLI 工具，快速配置到 Claude、Cursor 等客户端"
+ ],
+ "intro": "decompile 是一个基于 Model Context Protocol (MCP) 的服务器，旨在为逆向工程和游戏修改提供统一接口。它聚合了 60 多个逆向/调试后端（如 IDA、Ghidra、Binary Ninja、radare2），并自带 230 多个原生 MCP 工具，可直接解析 PE、ELF、Mach-O 等格式，减少对外部工具的依赖。\n\n项目还包含一个结构化的知识库，涵盖 6000 多个技能、170 多个代理、3000 多个提示词，支持全文搜索。通过多代理网格，AI 代理可以协作完成任务，例如任务交接和对抗投票。\n\n它适合安全研究、二进制分析、防御工程和 SDK 开发等场景，可将原本需要在多个工具间切换的工作流整合到一个 MCP 连接中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 24+",
+  "运行一键安装脚本（Linux/macOS: curl -fsSL https://raw.githubusercontent.com/1llu50ry/Decompile/main/install.sh | sh；Windows PowerShell: irm https://raw.githubusercontent.com/1llu50ry/Decompile/main/install.ps1 | iex）",
+  "或使用 npx 快速设置：npx -y decompile@latest setup -i --npx",
+  "运行 decompile doctor 检查安装状态",
+  "在 MCP 客户端（如 Claude Code）中配置并开始使用"
+ ],
+ "summary": "decompile 是一个 MCP 服务器，解决逆向工程中需要在多个工具间切换的问题。它聚合了 60 多个逆向和调试后端，并提供 230 多个原生工具，可直接分析二进制文件。项目还包含丰富的技能库和代理协作功能，适合安全研究、二进制分析和游戏修改等场景，帮助开发者和 AI 代理更高效地完成逆向任务。",
+ "tagline": "面向逆向工程的 MCP 服务器，聚合工具与知识库"
+}
