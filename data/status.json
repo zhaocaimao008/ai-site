@@ -1,12 +1,10 @@
 {
- "date": "2026-11-22",
+ "date": "2026-11-23",
  "errors": [],
- "generated": 11,
+ "generated": 21,
  "key_present": true,
  "model": "deepseek-chat",
- "repos": 1442,
- "skipped": [
-  "yuga-hashimoto/and-code"
- ],
- "todo": 12
+ "repos": 1443,
+ "skipped": [],
+ "todo": 21
 }

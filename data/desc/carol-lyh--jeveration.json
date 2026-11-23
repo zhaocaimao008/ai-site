@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究单步图像生成、多任务视觉语言模型的开发者，以及希望快速体验文本/图像到图像生成和密集预测的研究人员。",
+ "date": "2026-11-23",
+ "features": [
+  "单次前向传播生成 512x512 图像，文本到图像延迟约 78 毫秒（H200）",
+  "一个检查点支持文本到图像、图像到图像和密集预测三类任务",
+  "图像到图像涵盖结构到图像（边缘/深度）、上色和风格迁移（anime、ghibli、watercolor）",
+  "密集预测输出分割类别、深度（米）和表面法线",
+  "提供 Python 管道接口和 Gradio 网页演示"
+ ],
+ "intro": "Jeveration 是一个基于冻结视觉语言模型的图像生成与预测框架，它能在单次前向传播中直接输出完整的 512x512 图像。在 NVIDIA H200 上，一次文本到图像请求耗时约 78 毫秒。同一个检查点支持文本到图像、图像到图像（结构到图像、上色、风格迁移）以及密集预测（分割、深度、表面法线）三类任务。\n\n该仓库提供了推理代码，依赖 Python 3.12 和 CUDA GPU。模型权重约 6.5 GB，可从 Hugging Face Hub 下载。骨干网络 Qwen3.5-4B、TA-TiTok 分词器和 CLIP 文本塔会在首次使用时自动下载。项目还包含一个 Gradio 网页演示，方便在浏览器中体验三种任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖：pip install -r requirements.txt",
+  "下载权重：hf download linlinlinlinsdada/Jeveration --local-dir weights",
+  "文本到图像：python generate.py --weights weights/jeveration.pt --decoder weights/decoder512.pt --prompt \"A stone cottage with a thatched roof and a flower garden in the countryside.\" --seed 0 --out samples/",
+  "图像到图像（以水彩风格为例）：python image_to_image.py --weights weights/jeveration.pt --source-decoder weights/source_decoder512.pt --task watercolor --image examples/photo_snowcabin.jpg --out watercolor.png",
+  "密集预测：python dense_predict.py --weights weights/jeveration.pt --image examples/room_1.png --out room_dense/"
+ ],
+ "summary": "Jeveration 是一个基于冻结视觉语言模型的图像生成框架，能在单次前向传播中直接输出 512x512 图像，并统一支持文本到图像、图像到图像（结构到图像、上色、风格迁移）和密集预测（分割、深度、法线）三类任务。适合需要快速单步生成或多任务视觉预测的研究与开发场景。",
+ "tagline": "单次前向生成图像的多任务视觉语言模型"
+}

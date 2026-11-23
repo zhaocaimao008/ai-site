@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 AI Agent 进行创意工作（命名、文案、海报、UI 设计等）的开发者与设计师，尤其是希望减少模型输出同质化、获得更多样化方案的人。",
+ "date": "2026-11-23",
+ "features": [
+  "让模型先识别并说出最平均的第一选择，再基于项目理由偏离它",
+  "seed.py 在需求单薄时生成随机起点，并记录历史避免重复",
+  "moves.py 记录每次偏离默认的“动作”，防止重复使用同一手法",
+  "rough.py 为手绘风格 SVG 增加线条抖动和间距不规则感",
+  "check.py 渲染 SVG 并检查文字溢出、遮挡、低对比度和字号问题",
+  "视觉规则独立存放，仅在视觉任务时加载，不影响命名或文案任务"
+ ],
+ "intro": "antialgorithm 是一个面向 AI Agent 的创意技能（skill），用于命名、故事、游戏创意、海报和 UI 等创作场景。它的核心思路是让模型先说出自己第一个、最普通的答案，然后基于项目本身给出理由，主动偏离这个默认选项。\n\n项目提供多个 Python 脚本辅助这一过程：seed.py 在需求模糊时生成随机起点，moves.py 记录每次偏离默认的“动作”避免重复，rough.py 为手绘风格 SVG 增加不规则感，check.py 检查 SVG 中的文字溢出、遮挡、对比度和字号问题。视觉规则单独放在 visuals.md 中，仅在视觉任务时加载。\n\n安装方式支持通过 skills CLI、克隆到 Agent 的 skills 目录，或在 Claude Code 中作为插件安装。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "使用 skills CLI 安装：npx skills add mankidev/antialgorithm",
+  "或克隆到 Agent 的 skills 目录：git clone https://github.com/mankidev/antialgorithm <skills folder>/antialgorithm",
+  "在 Claude Code 中也可作为插件安装：/plugin install antialgorithm --marketplace mankidev/antialgorithm",
+  "确保已安装 Python 3；check.py 还需要 numpy、Pillow 和 rsvg-convert（或 cairosvg 包）"
+ ],
+ "summary": "antialgorithm 是一个 AI Agent 技能，针对创意任务中模型容易给出最普通、最平均答案的问题。它让模型先明确自己的默认选择，再依据项目本身给出理由并主动偏离，适用于命名、故事、游戏创意、海报和 UI 等场景。项目附带多个 Python 脚本，用于生成随机起点、记录偏离动作、为手绘风格 SVG 增加不规则感，以及检查 SVG 中的文字问题。",
+ "tagline": "让 AI 在创意工作中避开最平庸的第一选择"
+}

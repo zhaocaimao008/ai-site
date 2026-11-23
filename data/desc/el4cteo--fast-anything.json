@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望提升现有应用性能但不想全面重写的开发者，尤其是使用 Python、Node.js、Ruby 等动态语言且已有编码代理（如 Claude Code）的团队。",
+ "date": "2026-11-23",
+ "features": [
+  "自动分析应用性能，按耗时和可移植性排序函数",
+  "记录最多 500 次真实调用，生成单函数 Rust crate 和任务说明",
+  "验证移植结果：回放记录调用并生成边界用例，确保行为一致",
+  "支持一键启用/禁用 Rust 移植，完全可逆",
+  "提供基准测试和报告生成，对比优化前后性能",
+  "支持多种语言和运行时，包括 Python、Node、Ruby、Java、Go、PHP、C/C++、C#、R 等"
+ ],
+ "intro": "fast-anything 是一个性能优化工具，它不重写整个应用，而是找出运行时最耗时的少数函数，用编码代理将它们移植到 Rust，再通过真实调用记录验证移植前后行为一致后替换。\n\n工具支持 Python、Node/TypeScript、Ruby、Java、Kotlin、Go、PHP、C/C++、C# 和 R 等多种语言，通过 PyO3、napi-rs 或 C ABI 桥接。它提供 scan、port、verify、enable/disable、bench 等命令，可逐步或一键完成优化流程，并支持 Claude Code 插件和 MCP 服务器集成。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：npm i -g @el4cteo/fast-anything 或 cargo install fast-anything",
+  "一键优化：fast-anything go --agent claude -- python app.py",
+  "分步执行：fast-anything scan -- python app.py",
+  "移植热点函数：fast-anything port",
+  "验证并启用：fast-anything verify && fast-anything enable"
+ ],
+ "summary": "fast-anything 解决的是应用性能优化中“重写整个项目成本太高”的问题。它通过性能分析找出最耗时的少数函数，借助编码代理将这些函数移植为 Rust 代码，并用真实调用记录验证行为一致后替换。适合使用 Python、Node.js、Ruby 等语言、希望以低风险方式提升关键路径性能的开发者。",
+ "tagline": "用编码代理把慢函数移植到 Rust，并验证行为一致"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要在本地给视频配另一种语言、又不想把素材上传到云端的开发者或普通用户；对 Windows 用户最友好。",
+ "date": "2026-11-23",
+ "features": [
+  "语音转文字并生成词级时间戳，支持说话人分离与性别分类",
+  "多后端翻译：本地 Opus-MT、Codex CLI、Claude Code CLI 或 API",
+  "按说话人选择合成音色，语音最多加速 1.25 倍并对视频重新计时",
+  "输出带 AI-dubbed 标记的视频，以及 SRT、VTT、ASS 字幕",
+  "各阶段可单独通过 dubla 命令或 Python API 调用",
+  "安装脚本自动检测硬件并校验下载文件"
+ ],
+ "intro": "DubWorld 是一条在本地电脑上运行的视频配音流水线，把一段视频转成另一种语言的配音版本。流程包括：用 faster-whisper 做语音识别并给出词级时间戳，翻译文本，按说话人选择合成音色，再把语音对齐到原视频时间轴，最后用 FFmpeg 输出新视频和字幕。\n\n默认目标语言是土耳其语，其他语言取决于所选语音引擎。翻译可调用本地的 Opus-MT（英译土），也可接入 Codex CLI、Claude Code CLI 或 API。项目提供桌面应用和命令行两种用法，各阶段也能单独调用。\n\n安装脚本会自动检测显卡和 CPU 并选择配置，所有依赖下载都经过 sha256 校验。目前主要面向 Windows，Linux 和 macOS 尚未测试。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 10/11 x64 上双击 kur.cmd（或运行 powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\kur.ps1），脚本会自动选择 GPU 或 CPU 配置",
+  "双击 arayuz.cmd 打开桌面应用，或运行 web.cmd 使用本地网页界面",
+  "命令行配音：.venv\\Scripts\\dubla.exe talk.mp4",
+  "指定其他目标语言：.venv\\Scripts\\dubla.exe talk.mp4 --ayar genel.hedef_dil=de",
+  "结果输出到 cikti/<video>_<time>/ 目录，包含 dubbed_tr.mp4 和字幕文件"
+ ],
+ "summary": "DubWorld 把视频配音的整套流程放在本地电脑上完成：先识别语音并记录每个词的时间，再翻译文本，用合成音色朗读，并把语音对齐回原视频的时间轴，最后输出新视频和字幕。适合想把视频换成另一种语言、又不愿上传素材到云端的场景。默认目标语言为土耳其语，其他语言取决于所选语音引擎。",
+ "tagline": "本地运行的 AI 视频配音流水线"
+}

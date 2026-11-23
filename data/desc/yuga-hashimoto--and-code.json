@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在 Android 手机或平板上直接使用 AI 编程代理的开发者，以及不想依赖电脑或终端进行移动编码的用户。",
+ "date": "2026-11-23",
+ "features": [
+  "原生 Android 触摸界面，无需终端即可与 AI 编程代理对话",
+  "通过 PRoot 在设备本地自动安装 Alpine Linux 及 OpenCode、Claude Code 等代理",
+  "支持打开 Git 仓库、浏览文件树、查看语法高亮和代码差异",
+  "内嵌真实 PTY 终端，可运行开发服务器并在应用内浏览器预览",
+  "支持定时任务、语音输入、唤醒词、文本朗读和主屏幕小部件",
+  "连接凭据使用 Android Keystore 加密存储"
+ ],
+ "intro": "AndCode 是一个原生 Android 应用，让用户直接在手机上通过图形界面运行 AI 编程代理，无需终端或电脑。它支持 OpenCode、Claude Code、Google Antigravity 和 OpenAI Codex，可通过 PRoot 在设备本地运行，或远程连接电脑上的 OpenCode 服务器。\n\n应用提供触摸优先的聊天界面，并集成了文件浏览、Git 状态与差异查看、内嵌终端、实时预览和代理控制浏览器等功能。用户还可以管理会话、设置定时任务、使用语音输入和唤醒词，并将应用注册为 Android 默认助手。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载并安装最新版 APK",
+  "打开应用，选择要使用的代理（如 OpenCode、Claude Code）",
+  "首次使用时，应用会通过 PRoot 在设备上自动安装 Linux 环境和代理运行时",
+  "授予必要的文件访问权限，即可打开本地仓库或创建新会话开始对话"
+ ],
+ "summary": "AndCode 是一个 Android 原生应用，让用户在手机上通过图形界面运行 OpenCode、Claude Code 等 AI 编程代理，无需终端或电脑。它通过 PRoot 在设备本地搭建 Linux 环境并自动安装代理，也支持远程连接电脑上的 OpenCode 服务器。适合想在移动设备上直接进行 AI 辅助编程、浏览代码和查看差异的开发者。",
+ "tagline": "在 Android 手机上通过原生 GUI 运行 AI 编程代理"
+}

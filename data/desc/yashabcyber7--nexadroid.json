@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合对 Android 自动化、多智能体协作和本地 AI 部署感兴趣的开发者与技术爱好者。",
+ "date": "2026-11-23",
+ "features": [
+  "Master Agent 将自然语言目标分解为 DAG 任务树并调度子任务",
+  "内置研究、内容创作、社交媒体、手机控制等多个专用 Agent",
+  "通过 Accessibility Service 实现无需 root 的 Android UI 自动化",
+  "支持 OpenAI、Gemini、Claude 和本地 Ollama 等多种 AI 模型路由",
+  "提供人在回路审批队列和紧急停止开关",
+  "支持用户自定义 Agent 的提示词、模型和工具集"
+ ],
+ "intro": "NexaDroid 是一个运行在 Android 上的多智能体 AI 平台。它通过一个 Master Agent 将用户的自然语言目标拆解为有向无环图（DAG）任务树，再分派给研究、内容创作、社交媒体、手机控制等专用 Agent 协作执行。\n\n项目包含原生 Android 自动化层，利用 Accessibility Service 和 Intent 实现无需 root 的 UI 操作，如点击、输入、滚动和打开应用。同时提供多模型路由（OpenAI、Gemini、Claude、本地 Ollama）以及人在回路的安全审批机制。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "NexaDroid 是一个面向 Android 的多智能体 AI 操作系统，旨在让用户用自然语言下达复杂任务，由 Master Agent 拆解为 DAG 任务树并调度多个专用 Agent 协作完成。它结合 Accessibility Service 实现无需 root 的 UI 自动化，并支持多种云端与本地模型。适合想探索移动端多智能体协作与 Android 自动化的开发者。",
+ "tagline": "面向 Android 的多智能体 AI 操作系统"
+}

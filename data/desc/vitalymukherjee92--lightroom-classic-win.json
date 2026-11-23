@@ -1,0 +1,23 @@
+{
+ "ai_related": false,
+ "audience": "适合在 Windows 上准备使用或了解 Lightroom Classic 的摄影爱好者与从业者，也可供需要查阅系统要求和基本工作流的人参考。",
+ "date": "2026-11-23",
+ "features": [
+  "介绍 Lightroom Classic 的目录式照片管理与 RAW 非破坏性编辑流程",
+  "列出 Windows 10/11 的系统要求、硬件建议与运行时依赖",
+  "概述安装、目录创建、导入整理、Develop 调整、导出交付的步骤",
+  "说明与 Photoshop 等外部编辑器及插件的配合方式",
+  "提供官方下载与安装来源的指引"
+ ],
+ "intro": "这个仓库是一份关于 Adobe Lightroom Classic 在 Windows 10/11 上使用的参考与设置指南，内容围绕这款桌面照片管理与 RAW 编辑软件展开。README 介绍了它的目录式工作流：从导入、评级、关键词管理，到非破坏性调整，再到导出 JPEG、TIFF、PSD 或打印输出。\n\n文档还列出了系统要求与兼容性说明，包括 64 位 Windows、内存与 SSD 建议、Visual C++ Redistributable 等依赖，并概述了安装、创建目录、导入整理、Develop 调整和导出交付的基本流程。仓库本身不包含软件源码，主要是文字说明与页面素材。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从官方来源下载 Lightroom Classic 安装包",
+  "运行安装程序并按屏幕提示完成安装，确保具备管理员权限",
+  "首次启动时创建目录文件，选择快速磁盘上的位置",
+  "通过 Import 对话框从存储卡或文件夹导入照片并添加关键词",
+  "在 Develop 模块调整后，用 Export 模块输出 JPEG、TIFF 或 PSD"
+ ],
+ "summary": "这是一份关于 Adobe Lightroom Classic 在 Windows 上使用的参考文档，帮助读者了解这款照片管理与 RAW 编辑软件的目录式工作流。内容涵盖系统要求、安装步骤、导入整理、非破坏性调整与导出交付，适合准备上手或需要查阅配置与流程说明的摄影用户。",
+ "tagline": "面向 Windows 的 Lightroom Classic 参考与安装指南"
+}
