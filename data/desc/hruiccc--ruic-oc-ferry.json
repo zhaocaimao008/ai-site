@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望将 OpenCode 免费模型用于 WorkBuddy 或 DSH 的开发者与普通用户，尤其关注本地转发与配置隔离的场景。",
+ "date": "2026-11-24",
+ "features": [
+  "按价格字段筛选 OpenCode 免费模型，排除已弃用模型",
+  "并发检测模型能否按工具协议产生动作，支持仅对话模式",
+  "判定结果缓存，成功保留 6 小时，重启快速恢复",
+  "一键写入 WorkBuddy models.json 或 DSH cordis.patch.yml，写入前备份",
+  "本机 OpenAI 兼容转发口，支持流式响应与 Bearer 鉴权",
+  "退出时自动清理自己导入的条目，保留用户手写配置"
+ ],
+ "intro": "OC Ferry 是一个跨平台托盘应用，用于将 OpenCode 的免费模型池接入 WorkBuddy 和 DSH（DeepSeek Harness）。它解决的核心问题是：OpenCode 的免费模型并非可直接填写的 OpenAI 端点，且免费状态与工具调用能力需要验证。OC Ferry 在本地放置隔离的 OpenCode 运行时，按价格筛选免费模型，并逐个检测其能否按客户端工具协议产生动作，再将通过的模型写入 WorkBuddy 的 models.json 或 DSH 的 cordis.patch.yml，同时启动仅监听本机的 OpenAI 兼容转发口供客户端调用。\n\n应用提供浅色与深色主题，检测过程并发进行，判定结果按模型缓存，重启后基本秒开。写入配置前会备份并原子替换，退出时自动摘除自己导入的条目，保留用户手写内容。转发口要求 Bearer 鉴权，拒绝带 Origin 的请求，模型只能通过 JSON 信封表达动作，执行权始终在客户端。\n\n项目使用 JavaScript 编写，基于 Electron 构建，支持 macOS（Apple 芯片）和 Windows，无需额外安装 Node.js。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 WorkBuddy 或 DeepSeek Harness（DSH），无需另外安装 Node.js",
+  "macOS（Apple 芯片）下载 dmg 并拖入应用程序；Windows 运行 Setup 安装包",
+  "首次启动自动准备 OpenCode、扫描免费模型并检测，完成后自动写入一次",
+  "在控制面板点击「导入 WorkBuddy」或「写入 DSH」手动同步",
+  "需要重新验证时点击「检测全部」或对单个模型点「只重测这一个」"
+ ],
+ "summary": "OC Ferry 解决的是将 OpenCode 免费模型接入 WorkBuddy 或 DSH 时遇到的端点不兼容、免费状态不确定、工具调用能力未知等问题。它通过隔离运行时、按价格筛选、并发检测模型能否按协议产生动作，并将可用模型写入客户端配置，同时提供本机 OpenAI 兼容转发口。适合想利用免费模型额度又不想手动折腾配置的开发者。",
+ "tagline": "把 OpenCode 免费模型接入 WorkBuddy 与 DSH 的托盘工具"
+}

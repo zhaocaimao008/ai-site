@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "适合想学习 AI 智能体开发与微服务架构的 Java 开发者，以及需要实战项目经验的学生或求职者。",
+ "date": "2026-11-24",
+ "features": [
+  "自然语言流式生成前后端项目代码，支持 AI 智能路由与 Tool Calling",
+  "可视化点选编辑：在预览页面上精准选中元素并继续与 AI 对话修改",
+  "一键部署到云端并通过 Nginx 动态路由提供公开访问链接",
+  "Selenium 自动截取应用封面图并上传至 COS 对象存储",
+  "企业级管理后台：用户管理、应用审核与精选推荐设置",
+  "集成 Prometheus 与 Grafana 监控大盘，追踪 AI 调用次数、耗时与 Token 消耗"
+ ],
+ "intro": "yu-ai-code-mother 是一个开源的企业级 AI 零代码应用生成平台，由程序员鱼皮与编程导航团队出品。用户输入自然语言需求后，平台通过 AI 智能体流式生成完整的前后端项目代码，并支持可视化点选编辑、实时预览、自动封面截图、一键云端部署分享与源码下载。\n\n项目采用 Spring Boot 3、LangChain4j、LangGraph4j 与 Vue 3 构建，后端涵盖 Spring Cloud Alibaba 与 Dubbo 微服务架构、AI 智能路由、Tool Calling、SSE 响应式推送、MySQL、Redis 与 Caffeine 多级缓存、COS 对象存储、Nginx 反向代理以及 Prometheus 和 Grafana 可观测性监控。仓库同时包含单体版本与微服务改造版本代码，便于循序渐进学习。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "这是一个用自然语言生成完整网站应用的开源平台，用户输入需求后 AI 智能体流式生成代码，并支持可视化编辑、实时预览、自动截图和一键部署。项目基于 Spring Boot 3、LangChain4j、LangGraph4j 和 Vue 3，同时提供单体与微服务版本，适合想学习 AI 应用生成与后端架构的开发者参考实践。",
+ "tagline": "基于 Spring Boot 3 与 Vue 3 的 AI 零代码应用生成平台"
+}

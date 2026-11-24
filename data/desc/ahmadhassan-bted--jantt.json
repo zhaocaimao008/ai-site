@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要快速制作项目时间线的学生、个人用户和团队，也适合希望将甘特图功能集成到自身应用中的开发者。",
+ "date": "2026-11-24",
+ "features": [
+  "内置 AI Copilot：用自然语言生成或修改甘特图，支持 diff 预览和撤销/重做。",
+  "BYOK 多模型支持：兼容 OpenAI、Anthropic、Gemini、Ollama 等 10 家服务商。",
+  "交互式编辑：拖拽任务条、调整日期、连接依赖箭头，实时更新所有视图。",
+  "六种同步视图：甘特图、看板、清单、日历、时间线、表格等。",
+  "关键路径分析：基于工作日历计算 CPM，支持任务级联更新。",
+  "开发者集成：提供 React/Vue/Svelte 组件、Python 包和 MCP 服务器。"
+ ],
+ "intro": "Jantt 是一个基于 TypeScript 的开源甘特图工具，核心特点是内置 AI Copilot，允许用户用自然语言描述计划，自动生成或修改甘特图。它支持拖拽调整任务、依赖关系连线，并提供关键路径分析、多种视图（甘特图、看板、清单等）以及 JSON 编辑器。所有数据默认保存在浏览器本地，也支持通过 GitHub 登录使用免费的云端协作房间。\n\nAI 功能采用 BYOK 模式，支持 OpenAI、Anthropic、Google Gemini 等 10 家服务商，也可通过 Ollama 完全离线运行。项目提供 React、Vue、Svelte 组件以及 Python 和 MCP 服务器集成，方便开发者嵌入到自己的应用中。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "访问在线应用 https://ahmadhassan-bted.github.io/Jantt/ 直接使用，无需注册。",
+  "在 AI Copilot 中输入自然语言描述（如“制定一个 12 周的论文时间表”），预览并应用生成的计划。",
+  "手动拖拽任务条调整时间，或连接任务建立依赖关系。",
+  "通过设置面板配置自己的 AI 服务商 API Key（或使用 Ollama 本地模型）。",
+  "导出为 JSON、CSV 或 PDF，或登录 GitHub 创建云端协作房间分享链接。"
+ ],
+ "summary": "Jantt 是一个开源的交互式甘特图工具，内置 AI Copilot，让用户用自然语言描述计划即可生成或修改时间线，无需编写代码。它适合学生规划学期或论文、个人安排搬家等事务，也适合团队快速制作项目路线图。所有数据默认保存在浏览器本地，并支持通过自带 API Key 接入多种 AI 服务商或使用 Ollama 离线运行。",
+ "tagline": "用 AI 对话生成和编辑交互式甘特图，无需代码。"
+}

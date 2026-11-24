@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 ComfyUI 做视频分析与文生视频创作的用户，以及希望从现有视频中提取镜头结构和提示词参考的开发者。",
+ "date": "2026-11-24",
+ "features": [
+  "基于 HSV 直方图与像素差分的镜头切换检测，支持 cut、fade、dissolve、flash 等边界",
+  "用 Lucas–Kanade 光流加 RANSAC 相似变换拟合，实测平移速度与缩放比例，区分静止、平滑运镜和手持",
+  "调用 ComfyUI 原生 VLM 文本编码器，以视频批次方式传入帧，让模型感知运动",
+  "为每个镜头生成可直接接入文生视频节点的提示词",
+  "输出 VIDEO.md 风格报告、结构化 JSON、总结和关键帧图像",
+  "支持英文和中文两种报告与提示词语言"
+ ],
+ "intro": "这是一个 ComfyUI 自定义节点，用于对视频做逐镜头的逆向分析。输入一段视频后，节点会先用 OpenCV 检测镜头切换，把素材切分成多个镜头，再对每个镜头采样若干帧交给视觉语言模型分析。\n\n分析结果包括镜头是怎么制作的（实拍、AI 视频、3D 渲染、代码动效、屏幕录制等）、画面内容（主体、场景、光线、色彩、风格），以及用光流实际测量出的运镜数据（平移速度、缩放比例、手持或平滑）。每个镜头还会生成一条可直接用于文生视频模型的提示词。\n\n节点复用 ComfyUI 原生的 VLM 文本编码器路径，通过 CLIPLoader 加载视觉语言模型，不额外引入 clip_vision。输出包括 VIDEO.md 风格报告、结构化 JSON、逐镜头提示词、一句话总结和关键帧预览图。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "进入 ComfyUI 的 custom_nodes 目录，执行 git clone https://github.com/benjiyaya/ComfyUI-ReaVideoBreakdown.git",
+  "进入项目目录，执行 pip install -r requirements.txt",
+  "重启 ComfyUI",
+  "在工作流中接入 LoadVideo → GetVideoComponents 提供 images 和 fps，用 CLIPLoader 加载 VLM 类型的编码器（如 qwen_image）提供 clip",
+  "添加 Video Breakdown (Rea · native VLM) 节点，将 prompts 或 breakdown_json 接到文生视频节点"
+ ],
+ "summary": "这个 ComfyUI 节点把一段视频拆成多个镜头，逐镜头判断制作方式、画面内容和实测运镜，并生成对应的文生视频提示词。它复用 ComfyUI 自带的视觉语言模型编码器，不依赖额外的视觉模型。适合需要分析参考视频、提取镜头结构或为文生视频准备提示词的创作者。",
+ "tagline": "在 ComfyUI 中逐镜头拆解视频并生成可复用的文生视频提示词"
+}

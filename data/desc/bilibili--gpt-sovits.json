@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要语音克隆或文本转语音的开发者、内容创作者和 AI 爱好者，尤其是希望快速上手并构建自定义语音模型的用户。",
+ "date": "2026-11-24",
+ "features": [
+  "零样本 TTS：输入 5 秒语音样本即可进行文本转语音",
+  "少样本 TTS：使用 1 分钟训练数据微调模型，提升音色相似度和真实感",
+  "跨语言支持：支持英语、日语、韩语、粤语和中文的推理",
+  "WebUI 工具：集成语音伴奏分离、自动训练集分割、中文 ASR 和文本标注",
+  "提供 Windows 整合包、Linux/macOS 安装脚本和 Docker 镜像"
+ ],
+ "intro": "GPT-SoVITS-WebUI 是一个支持少样本语音转换和文本转语音的 WebUI 工具。它提供零样本 TTS 和少样本 TTS 两种模式，并支持跨语言推理。\n\n项目集成了语音伴奏分离、自动训练集分割、中文 ASR 和文本标注等工具，帮助用户构建训练数据集和模型。安装方式包括 Windows 整合包、Linux/macOS 脚本以及 Docker。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "Windows 用户可下载整合包并双击 go-webui.bat 启动",
+  "或使用 conda 创建环境：conda create -n GPTSoVits python=3.10",
+  "激活环境：conda activate GPTSoVits",
+  "Linux/macOS 运行安装脚本：bash install.sh --device <CU126|CU128|ROCM|CPU> --source <HF|HF-Mirror|ModelScope>",
+  "Windows 也可运行：pwsh -F install.ps1 --Device <CU126|CU128|CPU> --Source <HF|HF-Mirror|ModelScope>"
+ ],
+ "summary": "GPT-SoVITS-WebUI 是一个少样本语音克隆与文本转语音工具，只需 5 秒语音即可零样本合成，或用 1 分钟数据微调提升相似度。它支持中英日韩粤跨语言推理，并内置伴奏分离、自动分割、ASR 和标注工具，方便构建训练集。适合想快速体验语音克隆或制作自定义 TTS 模型的开发者与创作者。",
+ "tagline": "少样本语音克隆与文本转语音的 WebUI 工具"
+}

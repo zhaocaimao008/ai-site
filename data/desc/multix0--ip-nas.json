@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合想用树莓派自建 NAS、对自托管应用和本地 AI 感兴趣的开发者与动手爱好者。",
+ "date": "2026-11-24",
+ "features": [
+  "树莓派 5 + CasaOS/Docker 的家用 NAS 搭建流程",
+  "Nur Hub 服务与 Nur 应用配对，管理 NAS 状态和 Docker 应用",
+  "通过 llama.cpp 下载并运行本地 AI 模型，支持聊天",
+  "ESP32-S3 触摸屏固件，显示 CPU、内存、温度和存储",
+  "3D 打印外壳的模型、尺寸与完整物料清单"
+ ],
+ "intro": "这是一个基于 Raspberry Pi 5 搭建家用 NAS 的完整开源项目，作者把视频里的硬件清单、3D 模型尺寸和全部软件都放进了仓库。硬件部分用两块旧笔记本硬盘，通过 USB 3.0 转 SATA 线接入，并用一个 12V 电源经 DC 分线器同时供电；外壳为 3D 打印件，正面装一块 3.5 英寸 ESP32-S3 触摸屏，运行作者自己写的固件，显示 CPU、内存、温度和存储状态。\n软件上，系统使用 Raspberry Pi OS Lite，通过一条命令安装 CasaOS 和 Docker，再部署 Nextcloud、Jellyfin、Immich、SearXNG 等自托管应用。作者还写了 Nur Hub 服务，配合 Nur 应用（Android、iOS、Windows）查看 NAS 状态、启停 Docker 应用、联网搜索、下载并运行 llama.cpp 本地模型，并接入 Fish Audio 语音。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "用 Raspberry Pi Imager 刷写 Raspberry Pi OS Lite (64-bit)，首次启动后开启 SSH",
+  "SSH 登录后执行 curl -fsSL https://get.casaos.io | sudo bash 安装 CasaOS",
+  "浏览器打开 http://raspberrypi.local 创建账号",
+  "在 CasaOS 中选择安装自定义应用，导入 hub/docker-compose.yml 部署 Nur Hub",
+  "按 pi/README.md 格式化并挂载硬盘到 /DATA/HDD1 和 /DATA/HDD2"
+ ],
+ "summary": "这个项目记录了一台树莓派 5 家用 NAS 的完整搭建过程，包括硬件选型、3D 打印外壳、触摸屏固件以及 CasaOS 上的自托管应用。它还提供 Nur Hub 服务和配套应用，用来查看 NAS 状态、管理 Docker 应用并运行本地 AI 模型。适合想照着复刻一台小型家庭服务器、同时体验本地 AI 的开发者参考。",
+ "tagline": "树莓派 5 家用 NAS：CasaOS、本地 AI 助手与 3D 打印外壳"
+}

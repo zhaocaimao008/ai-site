@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要跨平台阅读 PDF/EPUB 的开发者与普通用户，尤其适合有语言学习、笔记整理或多书对比需求的人。",
+ "date": "2026-11-24",
+ "features": [
+  "支持 PDF 和 EPUB 阅读，可搜索、跟随链接，并在单页、跨页或连续滚动模式间切换",
+  "四窗格工作区，最多同时打开四本书并排对比",
+  "笔记与高亮功能，可在 Notes 面板中找回标记内容",
+  "离线朗读，支持 Kokoro、Piper、Kitten 和 Phonon 等本地语音模型",
+  "AI 阅读工具，可解释词汇、总结、翻译、简化内容并整理书库",
+  "CEFR 词汇分级高亮，提供上下文词典或 AI 查询"
+ ],
+ "intro": "Mareader 是一款用 Rust 编写的跨平台桌面阅读器，支持 PDF 和 EPUB 格式，可在 macOS、Windows 和 Linux 上运行。它提供安静的单页阅读和最多四本书并排的四窗格工作区，方便对比文本和参考资料。\n\n除了基础阅读，Mareader 还集成了笔记与高亮、离线朗读、CEFR 词汇分级高亮和 AI 阅读工具。你可以标记单词或段落并添加笔记，使用本地语音模型朗读，或让 AI 解释词汇、总结、翻译和简化内容。AI 模型可按任务配置，支持托管服务和 OpenAI 兼容的本地服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从最新发布页面下载 macOS、Windows 或 Linux 版本",
+  "macOS 用户若被系统阻止，在系统设置“隐私与安全性”中选择“仍要打开”，或执行 xattr -d com.apple.quarantine /Applications/Mareader.app",
+  "从源码构建需使用 rust-toolchain.toml 中固定的 Rust 工具链",
+  "运行 cargo run -p mareader 启动桌面应用",
+  "运行 cargo test --workspace 执行全部工作区测试"
+ ],
+ "summary": "Mareader 是一个用 Rust 构建的跨平台 PDF 和 EPUB 阅读器，解决多书对照、笔记整理和语言学习中的阅读辅助需求。它支持四窗格并排阅读、高亮笔记、离线朗读和 CEFR 词汇分级，并可按任务配置 AI 模型来提供词汇解释、总结和翻译。适合需要同时查阅多份资料、做读书笔记或借助 AI 辅助阅读的开发者与普通用户。",
+ "tagline": "跨平台 PDF/EPUB 阅读器，支持 AI 辅助与离线朗读"
+}

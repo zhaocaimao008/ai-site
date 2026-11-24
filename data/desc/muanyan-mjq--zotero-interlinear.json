@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "需要阅读外文文献的 Zotero 用户，尤其是希望在不离开阅读器的情况下获得逐段翻译的研究人员和学生。",
+ "date": "2026-11-24",
+ "features": [
+  "五种内置翻译服务，包括免费 Google Translate 和可配置的 LLM 端点",
+  "四种阅读布局：译文在下方、并排、仅译文、仅原文",
+  "工具栏一键启动全文翻译，支持暂停、继续和失败重试",
+  "单段翻译：悬停段落按快捷键、Alt 点击或选中文本触发",
+  "术语表导入导出，并注入 LLM 提示词或后处理替换",
+  "双语 PDF 导出，将当前视图重新排版为可搜索 PDF 并附加到条目"
+ ],
+ "intro": "Interlinear 是一款 Zotero 插件，在桌面版 PDF 阅读器的阅读模式中为每个结构化段落获取翻译，并直接显示在原文下方或旁边，让用户无需复制文本到翻译工具即可继续阅读。\n\n它内置多种翻译服务，包括免费 Google Translate（无需 API key）、Microsoft Edge、MyMemory、LibreTranslate，以及 OpenAI 兼容接口、Anthropic Claude、Google Gemini 和 Ollama。支持四种布局（译文在下方、并排、仅译文、仅原文），并提供工具栏一键切换、单段翻译、全文翻译进度控制、术语表、阅读助手、双语 PDF 导出和外观自定义等功能。\n\n插件要求 Zotero 10 或 11 桌面版，界面支持英文和简体中文。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 页面下载最新的 interlinear.xpi 文件",
+  "在 Zotero 中打开 工具 → 插件 → 齿轮图标 → 从文件安装插件，选择 .xpi 文件",
+  "安装后重启 Zotero",
+  "打开 编辑 → 设置 → Interlinear，在“翻译服务”标签页选择后端并填写端点、模型和 API key",
+  "在 PDF 阅读器中使用工具栏按钮开始翻译"
+ ],
+ "summary": "Interlinear 是一个 Zotero 插件，用于在桌面版 PDF 阅读器中实现逐段双语对照阅读。它自动为每个段落获取翻译并显示在原文附近，支持多种翻译服务（包括免费 Google Translate 和可配置的 LLM），提供多种布局和单段翻译等交互方式，适合需要阅读外文文献并希望减少切换工具的研究人员。",
+ "tagline": "Zotero 中逐段双语对照阅读外文文献"
+}

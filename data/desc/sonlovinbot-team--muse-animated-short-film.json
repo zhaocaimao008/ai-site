@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "想用 Muse AI 制作动画短片、又缺少完整流程经验的创作者和开发者。",
+ "date": "2026-11-24",
+ "features": [
+  "8 阶段流水线：角色表、故事圣经、关键帧、mega prompt、视频、旁白、剪辑",
+  "每个阶段配有独立参考文档，Muse 按需自动读取",
+  "内置 realism 规则与宽高比锁定等制作约束",
+  "提供完整示例项目《The Last Lantern》的全部过程文件",
+  "支持 16:9 与 9:16 两种画幅及多语言旁白"
+ ],
+ "intro": "这是一个面向 Muse AI 的 Claude Skill，把动画短片制作拆成一条可执行的流水线：从一句粗略想法出发，依次完成角色设定表、故事圣经、关键帧、mega prompt、逐段视频生成、旁白配音，最后用 ffmpeg 合成 MP4。\n\n技能内置了 8 个阶段的参考文档和若干制作规则，例如物理动作要符合现实的 realism 规则、输入参考图与输出比例必须一致的 STRICT ASPECT RATIO LOCK，以及作者总结的经验教训。仓库还附带完整示例项目《The Last Lantern》，包含 STORY、MEGA_PROMPTS、VO_SCRIPT、FLOW 等真实文件，可对照查看每个阶段产出长什么样。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "把整个文件夹复制到 Muse AI 的 skills 目录，例如 ~/workspace/skills/animated-short-film/",
+  "或者把仓库链接粘贴到 Muse 聊天中，让 Muse 自动安装",
+  "在聊天中说：\"Tôi muốn làm phim hoạt hình ngắn.\"（我想做一部动画短片）",
+  "回答前三个问题：片长、语言、16:9 还是 9:16",
+  "在角色描述、故事圣经、关键帧、每段视频、旁白、成片等节点确认或提出修改"
+ ],
+ "summary": "这个项目是一套给 Muse AI 用的动画短片制作技能，把从创意到成片的流程拆成角色设定、剧本、关键帧、提示词、视频生成、旁白和剪辑等阶段，并配有规则与示例文件。适合想用 AI 做短片但缺少完整流程经验的创作者，按步骤确认即可推进。",
+ "tagline": "在 Muse AI 上从创意到 MP4 的动画短片制作技能"
+}

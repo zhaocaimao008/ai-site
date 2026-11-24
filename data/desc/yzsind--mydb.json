@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "需要同时处理事务与分析负载、并希望复用 MySQL 生态的开发者；以及为 AI agent 构建数据访问层的团队。",
+ "date": "2026-11-24",
+ "features": [
+  "MySQL 兼容：复用 MySQL 客户端、JDBC 驱动、常见 SQL 和 ROW/FULL binlog 集成",
+  "HTAP 混合负载：在同一数据集上并行执行事务读写与分析查询，支持并行执行、向量化和自动 Zone Maps",
+  "原生 AI 检索：内置向量、混合检索和 SQL 模型调用，提供 REST/MCP 接口连接 agent 与业务数据",
+  "在线 schema 变更与可直接查询的备份",
+  "提供原生 Rust 客户端 mydb-cli，支持交互式编辑"
+ ],
+ "intro": "MyDB 是一个用 Rust 编写的高性能数据库，兼容 MySQL 协议，面向 HTAP（混合事务/分析处理）和 AI agent 场景。它允许在同一份业务数据上同时执行事务读写和分析查询，并内置全文与向量检索，通过 SQL 即可调用外部模型。\n\n应用可以复用 MySQL 客户端和驱动，同时提供原生 REST 和 MCP 接口，方便服务与 agent 直接访问同一引擎。自动 Zone Maps、在线 schema 变更和可直接查询的备份减少了调优、结构演进和查看历史数据的工作量。\n\n当前 1.0.2 为公开预览版，用于功能验证和受控环境评估。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 1.0.2 release 页面下载对应平台（macOS ARM64、Linux x86_64、Windows x64）的预编译包并解压",
+  "在 macOS/Linux 上执行 chmod +x ./mydb && ./mydb --data-dir ./data；Windows 上执行 .\\mydb.exe --data-dir ./data",
+  "使用 MySQL 8.0 客户端连接：mysql -h127.0.0.1 -P8738 -uroot -proot test",
+  "运行 SELECT 1; 检查连接，输入 quit 退出客户端，在服务端终端按 Ctrl+C 停止服务"
+ ],
+ "summary": "MyDB 是一个用 Rust 编写、兼容 MySQL 的数据库，目标是在同一份业务数据上同时支撑事务读写和分析查询，并内置向量与全文检索，方便 AI agent 通过 SQL、REST 或 MCP 访问数据。适合希望复用 MySQL 客户端和驱动、又需要混合负载与原生检索能力的开发者，在受控环境中评估使用。",
+ "tagline": "用 Rust 构建的 MySQL 兼容 HTAP 数据库，原生支持 AI 检索"
+}

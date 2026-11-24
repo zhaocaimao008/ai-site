@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Claude Code、Cursor 等 MCP 客户端构建浏览器自动化 Agent 的开发者，以及希望降低 Agent 调用轮次与 token 消耗的用户。",
+ "date": "2026-11-24",
+ "features": [
+  "smart_fill_form 一次调用填写完整表单，支持 React 输入框、下拉框、富文本编辑器和文件上传",
+  "inspect_compact 支持 onlyChanged 模式，只返回自上次快照后变化的元素",
+  "batch_actions 将多个点击、按键、表单步骤和页面读取合并为单次调用",
+  "默认拦截 Submit、Send、Publish 等最终提交按钮，可逐次或全局放行",
+  "wait_for_human 将步骤交给人工完成，并在同一会话中继续",
+  "支持连接已登录的 Chrome（127.0.0.1:9222）或启动自带 headless Chromium"
+ ],
+ "intro": "turbo-browser-mcp 是一个基于 Playwright 的 MCP 服务器，面向 AI Agent 的浏览器自动化场景。它提供 11 个工具，核心思路是让每次调用完成更多工作，从而减少模型轮次和页面文本在对话中的重复回放。\n\n例如 smart_fill_form 可以一次填完整个表单，包括 React 输入框、下拉框、富文本编辑器和从磁盘读取的文件上传；inspect_compact 支持只返回自上次快照以来发生变化的元素；batch_actions 可以把点击、按键、表单步骤和页面读取合并为一次调用。\n\n默认情况下，看起来像最终提交的按钮（Submit、Send、Publish、Pay、Confirm 及多语言对应词）会被拦截，Agent 可以预填表单而把最后一步留给人工。项目不隐藏浏览器自动化特征，不做指纹修改或验证码破解，遇到机器人检测时可通过 wait_for_human 把标签页交给人工处理。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node 20 或更高版本，并准备 Chrome、Edge、Brave 或 Playwright 的 Chromium",
+  "Claude Code 用户执行：claude mcp add turbo-browser -- npx -y turbo-browser-mcp",
+  "其他客户端在 mcpServers JSON 配置中加入 command 为 npx、args 为 [\"-y\", \"turbo-browser-mcp\"] 的条目",
+  "运行 npx -y turbo-browser-mcp --doctor 检查环境，必要时执行 npx playwright-core install chromium"
+ ],
+ "summary": "turbo-browser-mcp 是一个基于 Playwright 的 MCP 服务器，目标是减少 AI Agent 操作浏览器时的调用轮次和 token 消耗。它把填表、快照、批量操作等合并成更少的调用，并默认拦截提交类按钮，让 Agent 预填表单后由人完成最后一步。适合在 Claude Code、Cursor 等 MCP 客户端中构建浏览器自动化流程的开发者。",
+ "tagline": "为 AI Agent 设计的省 token 浏览器自动化 MCP 服务器"
+}

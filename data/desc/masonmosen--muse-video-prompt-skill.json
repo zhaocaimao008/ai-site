@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Muse 内置视频生成做短视频实验、需要把多段素材拼成长片的创作者与开发者，也适合想系统打磨视频提示词写法的人。",
+ "date": "2026-11-24",
+ "features": [
+  "六段式提示词模板，附 POV、口播、多段长片三个变体",
+  "按节拍拆段并用 snapshot 接续，ffmpeg 无损拼接长片",
+  "extract_frames.py 抽帧自查，记录提示词命中与偏差",
+  "按需加载的参考文档：模板、模型限制、一致性、对白、拼接流程",
+  "持续积累的案例库，每个实验沉淀为案例卡"
+ ],
+ "intro": "这是一个面向 Muse 内置视频生成（Muse Video）的 Agent Skill，把写提示词、生成、拼接长片、抽帧验证串成一套可复用的流程。核心是一份六段式提示词模板，覆盖时长画幅、人物、场景、节拍时间轴、镜头语言、声音与限制清单，并附带 POV 生活流、口播、多段长片三个变体。\n\n针对单条视频约 10 秒的上限，项目给出按节拍拆段、用 snapshot 接续保持连贯、再用 ffmpeg 无损拼接成 30 秒以上长片的做法；每段生成后通过脚本抽帧自查，记录哪些要求被采纳、哪些出现偏差。项目也明确说明内置视频锁脸能力较弱，需要强锁脸时应改用其他视频模型。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/masonmosen/muse-video-prompt-skill.git",
+  "将仓库放入所用 agent 的 skills 目录，例如 Claude Code 的 ~/.claude/skills/muse-video-prompt-skill/",
+  "阅读 SKILL.md 了解工作流与操作规则，按 references/prompt-template.md 撰写六段式提示词",
+  "生成后运行 bin/extract_frames.py 抽帧自查，再按 references/stitch-workflow.md 拼接并验证"
+ ],
+ "summary": "这个项目把 Muse 内置视频生成的完整流程整理成一套 Agent Skill：用六段式模板写提示词，逐段生成后按节拍拆段、用 snapshot 接续并用 ffmpeg 拼成长片，最后抽帧核对提示词是否被采纳。它适合做短视频实验、需要多段拼接和提示词打磨的场景，也坦率说明了内置视频锁脸较弱、需要强锁脸时应换用其他模型。",
+ "tagline": "Muse 内置视频生成的提示词实战工作流"
+}

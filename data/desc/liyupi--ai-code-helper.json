@@ -1,0 +1,25 @@
+{
+ "ai_related": true,
+ "audience": "适合熟悉 Spring Boot 的 Java 开发者，以及希望快速上手 LangChain4j 和 AI 全栈应用开发、积累项目经验的程序员。",
+ "date": "2026-11-24",
+ "features": [
+  "基于 LangChain4j AI Service 接入通义千问 Qwen，支持多轮对话记忆与结构化输出",
+  "通过 SSE 推送增量内容，前端 Vue 3 实现流式打字机效果与 Markdown 渲染",
+  "内置自定义 Guardrail 输入安全护轨，在请求大模型前检测敏感词与越权风险",
+  "结合本地文档构建向量知识库，实现 RAG 检索增强问答",
+  "通过 Tool Calling 封装面试题搜索与网页爬虫工具，供大模型按需调用",
+  "接入 MCP 模型上下文协议扩展外部工具，并通过监听器记录模型调用过程"
+ ],
+ "intro": "ai-code-helper 是一个前后端分离的 AI 编程学习与求职辅导助手，后端采用 Spring Boot 3.5、Java 21 与 LangChain4j，前端使用 Vue 3。项目将大模型接入、多轮对话记忆、结构化输出、RAG 向量检索、Tool Calling、MCP 协议、输入安全护轨和 SSE 流式响应等能力整合在一个精炼的工程中。\n\n它同时扮演编程学习导师、求职面试助手和代码答疑专家三重角色，适合作为 Java 开发者入门 AI 应用开发的实战项目。项目配套视频与文字教程，帮助理解 LangChain4j 在企业级场景中的典型用法。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "准备 JDK 21+、Node.js 16+、Maven 3.6+，并申请阿里云百炼通义千问 API Key 与 Big Model API 密钥",
+  "克隆仓库：git clone https://github.com/liyupi/ai-code-helper.git && cd ai-code-helper",
+  "编辑 src/main/resources/application.yml，填入通义千问 API Key 与 Big Model API 密钥",
+  "启动后端：mvn spring-boot:run",
+  "新终端进入前端目录：cd ai-code-helper-frontend && npm install && npm run dev",
+  "浏览器访问 http://localhost:5173 进入对话界面"
+ ],
+ "summary": "这个项目是一个用 Spring Boot 3.5、Java 21、LangChain4j 和 Vue 3 搭建的 AI 编程学习与求职辅导助手。它把大模型接入、多轮对话、RAG 知识库、工具调用、MCP 协议、输入安全护轨和 SSE 流式响应整合进一个前后端分离的工程，适合想通过完整项目学习 Java AI 全栈开发的程序员。",
+ "tagline": "基于 LangChain4j 的 Java AI 全栈实战项目"
+}

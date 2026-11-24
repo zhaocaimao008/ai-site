@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Google Antigravity（或 Claude Code、Codex）进行 AI 编码、关注 token 消耗与上下文配额的开发者。",
+ "date": "2026-11-24",
+ "features": [
+  "合并批量搜索与多文件编辑，减少重复发送上下文",
+  "过滤测试日志等噪声，只把关键行交给模型",
+  "监控 prompt 缓存命中与过期时间，可选自动 keepalive",
+  "侧边栏显示上下文用量，崩溃或卡死时一键复制进度摘要",
+  "/compact 后恢复已改文件、测试状态等上下文线索",
+  "长文档分段本地检索、大日志本地脚本过滤、密钥脱敏"
+ ],
+ "intro": "agy-dart 是面向 Google Antigravity 的性能与上下文管理插件，也可通过 --target 支持 Claude Code 和 Codex。它针对 AI 编码中反复读取文件、工具输出过长、上下文配额被快速消耗等问题，在后台自动合并批量操作、过滤日志噪声，并保持 prompt 头部稳定以提高 KV-cache 命中率。\n\n插件提供右侧栏面板，显示剩余上下文空间、缓存过期倒计时和被拦截的噪声量；会话崩溃或卡死时，可一键复制进度摘要到新对话继续。还支持 /compact 后恢复上下文线索、长文档分段本地检索、大日志本地脚本过滤、密钥脱敏与敏感文件拦截等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认 Node.js 版本为 22.16.0 以上的 22.x，或 24 以上",
+  "macOS/Linux 执行 curl -fsSL https://raw.githubusercontent.com/zou172866/antigravity-agy-dart/v1.7.0/install.sh | sh；Windows 在 PowerShell 执行 irm https://raw.githubusercontent.com/zou172866/antigravity-agy-dart/v1.7.0/install.ps1 | iex",
+  "或克隆仓库后运行 node scripts/install.mjs install（单项目安装加 --project /repo/path）",
+  "运行 node scripts/install.mjs doctor 检查安装健康",
+  "重启或重新加载 Antigravity，打开新对话即可"
+ ],
+ "summary": "agy-dart 是 Google Antigravity 的插件，用来减少 AI 编码过程中的重复读取和冗长工具输出，提升 KV-cache 命中率并保护上下文配额。它自动合并批量操作、过滤日志噪声，在侧边栏显示剩余上下文与缓存过期时间，还能在会话崩溃或卡死时导出进度摘要，方便在新对话中继续。适合关注 token 消耗的 Antigravity 用户。",
+ "tagline": "为 Google Antigravity 优化 KV 缓存与上下文用量的插件"
+}

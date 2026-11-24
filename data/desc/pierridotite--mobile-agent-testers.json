@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合移动应用开发者、QA 工程师和测试自动化团队，尤其是希望在不编写测试脚本的情况下，利用 AI 智能体发现布局、翻译、可访问性和流程缺陷的团队。",
+ "date": "2026-11-24",
+ "features": [
+  "默认模式：每个画像以新用户身份探索应用，报告阻碍目标的问题并附编号截图",
+  "端到端运行指定功能：通过自定义 brief 让智能体完成多步操作，如预订、编辑、同步",
+  "复现缺陷报告：在每台手机上按步骤验证问题，回答是、否或不确定",
+  "生成改进报告：每个画像使用后指出犹豫点、预期和优先修改项",
+  "对比两个版本：相同画像在分支或构建上运行，汇总目标达成、操作数、评分和差异问题",
+  "支持更便宜的模型：Claude Haiku 或 OpenRouter、DeepSeek、Kimi、GLM、MiniMax、Qwen 等兼容 API"
+ ],
+ "intro": "这个项目让多个 Claude Code 智能体分别在独立的 iOS 模拟器或 Android 模拟器上运行，每个智能体扮演一个特定用户画像（例如使用瑞典语、最大字号的 iPhone SE 用户，或使用德语、200% 显示比例的 Pixel 7 用户），像新用户一样操作你的应用，并生成带截图的缺陷报告。\n\n它不需要编写测试脚本，支持 Flutter、React Native、Expo、原生 Kotlin/Swift、Kotlin Multiplatform、Capacitor 和 .NET MAUI 等框架。GitHub 公共仓库的运行器免费，你只需支付模型费用，可使用 Claude 订阅或 API key，也支持更便宜的模型或兼容 Anthropic 的 API。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "gh repo create my-testers --public --template pierridotite/mobile-agent-testers --clone",
+  "cd my-testers && ./setup.sh",
+  "gh workflow run agent-testers.yml",
+  "bash scripts/collect.sh <run id>"
+ ],
+ "summary": "这个项目用多个 Claude Code 智能体在 GitHub Actions 的 iOS 模拟器和 Android 模拟器上并行运行，每个智能体扮演不同语言、字号和设备的用户画像，像新用户一样操作应用，自动发现流程、翻译、布局和无障碍问题，并输出带截图的报告。它适合不想写测试脚本、希望用 AI 补充探索性测试的移动开发团队，支持多种跨平台框架，公共仓库的 GitHub 运行器免费，只需承担模型费用。",
+ "tagline": "在 GitHub 免费运行器上并行运行 20 个 AI 手机测试员"
+}

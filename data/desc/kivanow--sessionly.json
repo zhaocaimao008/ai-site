@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合同时使用多种 AI 编程代理、希望了解其成本与实际产出效果的开发者，以及需要团队级代理使用视图的工程团队。",
+ "date": "2026-11-24",
+ "features": [
+  "统一记录 Claude Code、Codex、Cursor、Grok 四类代理的会话",
+  "统计每次会话的 token、模型与成本",
+  "追踪代理写入的代码行在文件和 PR 评审后的留存情况",
+  "本地 SQLite 账本，捕获、解析与脱敏均在本地完成",
+  "可选连接自建或托管服务器，上传团队仪表盘",
+  "通过 GitHub Action 将 pull request 与代理会话按行哈希匹配"
+ ],
+ "intro": "Sessionly 是一个本地优先的账本工具，用来记录 Claude Code、Codex、Cursor 和 Grok 这四类 AI 编程代理的会话。它通过 hook 捕获代理事件，从各代理自己的会话文件中读取 token、模型和成本，统一归一化为 SQLite 账本中的一条会话记录，包含提示词、工具调用、改动文件和子代理等信息。\n\n除了记录成本，它还衡量「留存」：每次同步时重新统计某次会话新增的代码行有多少仍留在当前文件中，以及经过评审后仍留在 pull request 里。项目强调不偏向任何代理厂商，读取各家会话的方式一致；数据默认留在本机，上传需要手动连接服务器，且默认不含提示词、命令或文件文本，源代码始终不会外发。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "cargo install sessionly",
+  "sessionly install",
+  "sessionly status",
+  "sessionly import",
+  "sessionly list"
+ ],
+ "summary": "Sessionly 面向同时使用 Claude Code、Codex、Cursor、Grok 等 AI 编程代理的开发者，把各代理的会话统一记录到本地 SQLite 账本中，统计工具调用、改动文件与成本，并持续追踪代理写入的代码有多少仍留在文件和评审后的 PR 里。数据默认只在本机处理，上传与团队仪表盘均为可选。",
+ "tagline": "本地优先的 AI 编程会话账本，记录成本与代码留存"
+}

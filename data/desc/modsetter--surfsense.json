@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要处理合同、法律文件等机密材料、又希望数据不出本机的个人和团队，也适合想自托管 NotebookLM 类工具的开发者和企业。",
+ "date": "2026-11-24",
+ "features": [
+  "本地索引与离线运行，文档默认不离开本机，除非主动选择远程模型",
+  "支持 PDF、Word、Excel、PowerPoint、CSV、图片、Markdown、HTML、EPUB/MOBI/AZW3、音频等多种格式的检索与引用问答",
+  "可创建和编辑文档：Word 以修订和批注方式编辑，Excel 支持公式与图表，PDF 支持表单填充和水印等",
+  "支持本地或远程的 OpenAI 兼容模型，以及本地语音转录和播客生成",
+  "通过 MCP 插件连接外部服务，插件默认关闭，需在设置中允许",
+  "提供 Windows、macOS、Linux 安装包和 Docker 自托管部署方式"
+ ],
+ "intro": "SurfSense 是一个免费开源的桌面应用，定位为 NotebookLM 的替代品，面向机密文档的本地 AI 处理。索引保存在本机磁盘，模型可自选本地或远程，无需注册账号，支持离线或气隙环境运行。\n\n它内置 AI agent，可以检索、引用、创建和编辑多种格式的文档，包括 PDF、Word、Excel、PowerPoint、CSV、图片、Markdown、HTML、电子书和录音。编辑、转换和 PDF 工具始终生成新文件，不会改动原始文件。\n\n除桌面安装包外，也提供 Docker 自托管方式，可在局域网内从任意设备访问。插件通过 MCP 服务器接入，默认关闭，需手动允许。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并安装 SurfSense（Windows、macOS、Linux 安装包，或使用 Docker 命令部署）",
+  "完成初始 onboarding 设置",
+  "将文件或文件夹拖入 sources",
+  "让 agent 搜索、提取或编辑文件"
+ ],
+ "summary": "SurfSense 是一个开源的桌面应用，用来在本地对机密文档做 AI 检索、问答和编辑，索引留在本机，模型可本地或远程自选，不需要账号，也能在离线或气隙环境运行。它支持 PDF、Office、图片、音频等多种格式，编辑时生成副本不改原文件，适合处理合同、法律材料等不便上传云端的场景。",
+ "tagline": "本地运行、可离线使用的私密文档 AI 助手"
+}

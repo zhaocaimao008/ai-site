@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合用 AI 编程工具搭建网站的前端开发者、设计师和独立开发者，也适合想对比不同模型网页生成能力的人。",
+ "date": "2026-11-24",
+ "features": [
+  "提供 303 个网站模板和 623 个在线演示",
+  "每个模板附带原始 prompt 和 DESIGN.md",
+  "按落地页、SaaS、游戏、电商等类型分类浏览",
+  "同一 prompt 下对比多个 AI 模型的前端生成效果",
+  "模板使用 React、Tailwind CSS、Three.js 等真实前端栈"
+ ],
+ "intro": "这是一个收集 AI 编码代理生成网站模板的开源库。每个模板都附带生成该演示站点的原始 prompt 和一份 DESIGN.md，你可以把提示词粘贴进 Claude Code、Cursor、Codex 等 AI 编程工具，替换其中的变量后生成同类网站。\n\n模板覆盖落地页、SaaS 站点、作品集、电商页面、仪表盘、3D 场景和浏览器游戏等类型，使用 React、Tailwind CSS、Motion、Three.js、GSAP 等真实前端技术栈。README 还按相同 prompt 对比不同模型的前端产出效果，方便了解各模型在网页设计上的差异。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在模板分类中找到想要的网站类型，打开对应模板目录",
+  "阅读该模板的 prompt.md 和 DESIGN.md",
+  "把 prompt 中的 [VARIABLES] 替换为自己的内容",
+  "将提示词粘贴到 Claude Code、Cursor 或 Codex 中生成网站"
+ ],
+ "summary": "这个项目把 AI 编码代理生成的网站整理成可复用的模板库，每个模板都给出原始提示词和设计文档。你可以在 Claude Code、Cursor 等工具里粘贴提示词，替换变量后生成落地页、SaaS 站点、作品集、电商页或 3D 游戏等页面，适合想借助 AI 快速搭建前端网站的人。",
+ "tagline": "AI 编码代理生成的网站模板库，附提示词与设计文档"
+}
