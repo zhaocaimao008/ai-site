@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望在终端中使用编码 agent、又不想被特定模型或云端服务绑定的开发者，以及需要离线或本地推理环境的用户。",
+ "date": "2026-11-25",
+ "features": [
+  "单文件 Rust 可执行程序，无运行时依赖，资源占用较低",
+  "内置受管理的 llama.cpp，支持指向 GGUF 文件完全离线推理",
+  "通过设置档位声明式定义 agent，包括替换系统提示词",
+  "/term 在 tmux 终端中启动、驱动和接管其他 agent 会话",
+  "公开的 Terminal-Bench 评测结果，附带可审计的原始运行记录"
+ ],
+ "intro": "Ante 是一个用 Rust 编写的自包含编码 agent，运行在终端里，行为类似 Claude Code 或 Codex，但不依赖它们的运行时，也不绑定特定模型。官方提供约 15MB 的压缩包，解压后是单个可执行文件，无运行时依赖。\n\n它把 harness 和模型分开看待：同一套 agent 可以通过设置档位切换不同模型，系统提示词也归用户所有。内置的推理引擎是受管理的 llama.cpp，指向一个 GGUF 文件即可完全离线运行，不需要 API key、账号或网络。\n\nAnte 还提供 /term 命令，在 tmux 终端中启动并驱动其他交互式 agent 会话，用于分配任务、读取进度和对比回答。项目在 Terminal-Bench 上公开评测，并给出可下载的构建版本与原始运行记录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行安装脚本：curl -fsSL https://ante.run/install.sh | bash",
+  "启动交互界面：ante",
+  "如需离线使用，先安装引擎：ante offline install",
+  "设置默认离线模型：ante offline use Qwen3.5-9B",
+  "以离线模型启动：ante --offline-model，或 headless 执行：ante --offline-model -p \"your task\""
+ ],
+ "summary": "Ante 是一个终端里的编码 agent，用 Rust 写成单个可执行文件，不依赖额外运行时。它把 agent 框架和模型解耦，可以接入不同模型，也能指向本地 GGUF 文件完全离线运行，适合不想被云端服务或特定模型绑定的开发者。它还支持在 tmux 中启动并驱动其他 agent 会话，便于并行处理任务。",
+ "tagline": "单文件 Rust 编码 agent，可离线运行任意模型"
+}

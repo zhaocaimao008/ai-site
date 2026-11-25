@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "想在本地低显存设备上运行文生图模型的开发者和爱好者，尤其是拥有 6GB 显存 NVIDIA 笔记本或 Apple Silicon Mac 的用户。",
+ "date": "2026-11-25",
+ "features": [
+  "一键安装脚本自动检测 GPU 并编译 stable-diffusion.cpp",
+  "使用 int8_convrot 权重替代 GGUF，在消费级 RTX 卡上更快",
+  "支持 CUDA SageAttention 加速（仅 NVIDIA）",
+  "提供命令行生成、Web UI 服务、基准测试和诊断命令",
+  "权重自动 offload 到 CPU，6GB 显存即可运行"
+ ],
+ "intro": "freeimage local 把 freeimage.dev 背后的文生图引擎打包成可在本地运行的脚本。它基于 stable-diffusion.cpp，使用 int8_convrot 权重和 SageAttention 注意力，让 6B 参数的 Z-Image Turbo 模型能在 6GB 显存的消费级显卡上运行。\n\n项目提供一键安装脚本，自动检测 GPU、编译引擎并下载约 10.8GB 的模型文件。安装后可用命令行生成图片，或启动本地 Web UI 持续加载模型。README 给出了在 RTX 3060 Laptop 上的速度对比和调参建议。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/mgolcu00/freeimage-local && cd freeimage-local",
+  "./install.sh",
+  "./fi \"a red fox in fresh snow, golden hour\"",
+  "./fi serve"
+ ],
+ "summary": "freeimage local 解决的是在显存有限的消费级设备上运行较大文生图模型的速度问题。它把 Z-Image Turbo 模型与 stable-diffusion.cpp 引擎、int8 权重和 SageAttention 组合起来，让 6GB 显存的笔记本 GPU 也能较快出图。适合想在本地生成图片、又不想依赖云端服务的开发者和普通用户。",
+ "tagline": "在 6GB 笔记本 GPU 上全速运行 Z-Image Turbo 文生图"
+}

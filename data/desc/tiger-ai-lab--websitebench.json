@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合研究 AI agent、浏览器自动化、Web 开发能力评测的研究者和开发者。",
+ "date": "2026-11-25",
+ "features": [
+  "70 个网站重建任务，共 46,916 个隐藏测试用例",
+  "通过浏览器探索反向工程全栈网站",
+  "功能检查与 SSIM 视觉检查点结合的评分方式",
+  "基于 Harbor 框架和 Docker 运行 agent 评测",
+  "提供 PyPI 包下载任务，支持云端运行",
+  "提供 oracle 参考解用于校验任务"
+ ],
+ "intro": "WebsiteBench 是一个用于评测 AI agent 的基准测试。给定一个生产级网站，agent 只能通过浏览器探索它，然后反向工程出一个外观和行为都尽量接近的全栈版本。\n\n基准包含 70 个网站任务和 46,916 个隐藏测试用例，发布在 Harbor Hub 和 Hugging Face 上。每个任务有 302 到 2,016 个测试用例，用例通过的条件是功能检查通过，且每个视觉检查点的归一化 SSIM 达到 0.99；任务得分即通过用例的比例。\n\n项目提供 PyPI 包用于下载任务，并基于 Harbor 框架和 Docker 运行评测，支持在全部任务或单个任务上运行 agent，也提供 oracle 参考解用于校验任务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Docker 和 Harbor：uv tool install harbor==0.25.0",
+  "安装并下载任务：pip install websitebench && websitebench download --task medium",
+  "设置 OPENAI_API_KEY 后运行全部任务：harbor run --dataset websitebench/WebsiteBench@v1 --agent codex --model '<model>' --n-concurrent 1",
+  "运行单个任务：harbor run --task websitebench/medium@v1 --agent oracle"
+ ],
+ "summary": "WebsiteBench 用来评测 AI agent 能否仅靠浏览器探索一个生产级网站，再反向工程出外观和行为接近的全栈版本。它提供 70 个网站任务和大量隐藏测试用例，从功能与视觉两方面打分，适合研究 web agent、浏览器自动化和代码生成能力。",
+ "tagline": "让 AI agent 通过浏览器探索重建全栈网站"
+}

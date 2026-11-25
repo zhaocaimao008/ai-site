@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要批量注册账号的开发者、自动化测试人员，以及希望用 AI 辅助编写网站适配器的技术用户。",
+ "date": "2026-11-25",
+ "features": [
+  "零依赖 Web 可视化工作台，支持暗色/浅色主题切换",
+  "内置流式 AI Agent，支持协议探测、适配器生成与试跑闭环",
+  "内置加密邮箱池，支持 Outlook OAuth2、iCloud 和 IMAP 验证码提取",
+  "内置代理池，支持静态、动态住宅网关和 API 提取源，带 IP 纯净度打分",
+  "基于 Playwright 和可选 patchright 的浏览器自动化与隐匿",
+  "提供 AGENTS.md 等文档，支持外部 AI 助手自动配置环境"
+ ],
+ "intro": "RegisterHub 是一个用 Python 编写的账号自动化注册框架，提供零外部依赖的 Web 可视化工作台和内置自主 AI Agent。它旨在简化多站点账号注册流程，通过协议探测、适配器生成和试跑闭环，让用户能快速适配新网站。\n\n项目内置加密邮箱池和代理池，支持 Outlook、iCloud 和通用 IMAP 邮箱，以及静态和动态代理管理。结合 Playwright 和可选的 patchright 隐匿引擎，以及 OpenCV 滑块求解，它覆盖了注册过程中的常见环节。\n\n工作台支持暗色/浅色主题，提供仪表盘、任务舰队和工具箱等界面。AI Agent 支持流式输出和多种工具，可辅助编写适配器代码。项目还提供了面向 Cursor、Claude Code 等外部 AI 助手的配置文档，方便自动化环境搭建。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/waw666waw666/RegisterHub.git && cd RegisterHub",
+  "pip install -r requirements.txt",
+  "playwright install chromium",
+  "python main.py --web  # 浏览器打开 http://127.0.0.1:18886"
+ ],
+ "summary": "RegisterHub 是一个 Python 账号自动化注册框架，提供零依赖 Web 工作台和内置 AI Agent，帮助用户快速适配新网站并完成注册流程。它集成了加密邮箱池、代理池和浏览器自动化引擎，适合需要批量注册或测试账号的开发者，也可借助外部 AI 助手自动配置环境。",
+ "tagline": "零依赖可视化工作台与自主 AI Agent 的账号注册自动化框架"
+}

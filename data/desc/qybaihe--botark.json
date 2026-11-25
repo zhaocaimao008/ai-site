@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要同时使用多个 AI 代理、希望统一管理账号和会话的开发者或高级用户。",
+ "date": "2026-11-25",
+ "features": [
+  "集中连接并管理 Grok Bot、ChatGPT Dot、Meta Muse、Hark、Hermes 等六种代理平台",
+  "每个账号使用独立的 Chromium 沙箱分区和系统钥匙串，可选绑定 1 对 1 代理",
+  "多代理协作房间支持自动 @ 提及交接和手动派发，可生成共识交付物",
+  "本地 MCP 工作室支持导入标准 mcpServers JSON，工具调用需人工批准",
+  "可选通过 Slack Socket Mode 将频道或线程映射到协作房间",
+  "本地存储加密，无遥测数据收集"
+ ],
+ "intro": "BotArk 是一个基于 Electron 和 TypeScript 的桌面应用，目标是把分散在不同平台上的个人 AI 代理集中到一个原生工作区里。它支持 Grok Bot、Google Antigravity、ChatGPT Dot、Meta Muse、Hark 和开源 Hermes 六种代理，用户可以在 macOS 或 Windows 上并排运行它们，而不必在多个应用和浏览器配置文件之间切换。\n\n每个账号运行在独立的 Chromium 沙箱分区和系统钥匙串中，并可选绑定 SOCKS5 或 HTTP 代理，避免会话和出口 IP 混用。应用还提供多代理协作房间，支持通过 @ 提及进行自动轮次交接，以及本地 MCP 工具调用，所有工具调用都需要人工批准。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 页面下载对应 macOS（Apple Silicon 或 Intel）或 Windows 安装包",
+  "安装后打开 BotArk，在引导界面选择要连接的代理平台",
+  "通过窗口登录、浏览器授权或直接粘贴凭证（Access Token、Session Cookie、JSON 导出或 API Key）完成账号连接",
+  "如需使用协作房间，在房间内打开 Workspace → MCP 配置本地工具或 DS Bot 连接"
+ ],
+ "summary": "BotArk 是一个桌面应用，用来把 Grok Bot、ChatGPT Dot、Meta Muse 等多个个人 AI 代理集中到一个工作区里运行。它适合需要同时使用多个代理、又不想在多个应用和浏览器配置文件之间来回切换的用户。应用为每个账号提供独立的沙箱和钥匙串，并支持多代理协作房间与本地 MCP 工具调用，所有工具调用需人工批准。",
+ "tagline": "把多个个人 AI 代理整合到一个桌面工作区"
+}

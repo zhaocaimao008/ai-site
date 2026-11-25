@@ -1,0 +1,18 @@
+{
+ "ai_related": true,
+ "audience": "需要统一管理邮件、日历和待办的桌面用户，以及希望用脚本或 AI agent 自动化邮件操作、关注 Rust 原生应用的开发者。",
+ "date": "2026-11-25",
+ "features": [
+  "邮件管理：嵌套文件夹、会话、标记、分类、规则、离线收发与撤销重做",
+  "搜索查询语言：支持 from:、has:attachment、after: 等条件组合",
+  "富文本撰写：签名、附件、草稿、收件人自动补全与多窗口编辑",
+  "日历：日/周/月视图、重复会议、提醒、多日历与空闲时间查询",
+  "联系人与待办：多地址电话、收藏、分类，待办可关联标记邮件",
+  "多协议支持：IMAP/SMTP、Microsoft Graph、浏览器端 JMAP，以及 MCP server"
+ ],
+ "intro": "MailCraft 是一个用纯 Rust 从零实现的邮件、日历、联系人和待办程序，支持 Microsoft 365、Outlook.com 以及 IMAP/SMTP 账户。它采用原生 GPU 渲染界面，不使用 Electron 或 WebView，同时也能通过 WebAssembly 在浏览器中运行。\n\n项目按 WordCraft 等 Craft 系列应用的架构组织，核心设计是“一切皆命令”：界面中的每个操作都可以由脚本和 AI agent 调用，并提供 MCP server 与命令行工具。邮件部分包含文件夹、会话、规则、搜索查询语言和富文本撰写；日历支持重复会议、提醒与空闲时间查询。\n\n项目目前处于公开测试阶段，提供 Windows、macOS、Linux、FreeBSD 和 Web 版本。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "MailCraft 是一个用 Rust 从零编写的邮件、日历、联系人与待办客户端，面向使用 Microsoft 365、Outlook.com 或 IMAP 邮箱的用户。它提供原生桌面界面和浏览器版本，把邮件规则、会话、日历会议和待办整合在一起，并将所有操作设计为可被脚本和 AI agent 调用的命令，适合希望统一管理日常办公信息、或想自动化邮件流程的人。",
+ "tagline": "用 Rust 从零编写的开源邮件、日历与联系人客户端"
+}

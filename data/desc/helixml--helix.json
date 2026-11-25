@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在自己的服务器上统一管理和调度多个编码智能体的开发团队，以及需要私有化、可离线部署 AI 编码环境的组织。",
+ "date": "2026-11-25",
+ "features": [
+  "每个智能体拥有独立的 GPU 加速桌面沙箱，可实时观看和接管",
+  "基于 spec 任务的看板工作流：规划、审核、实现、提交 PR",
+  "支持 Claude Code、Codex、Gemini CLI、Qwen Code 等智能体框架，任务中途可切换",
+  "连接 GitHub、GitLab、Azure DevOps 仓库并自动创建 Pull Request",
+  "支持托管模型与自托管 OpenAI 兼容端点（如 vLLM），可完全离线部署",
+  "内置 RAG 知识库、MCP 工具集成、追踪观测、多租户与 OIDC 单点登录"
+ ],
+ "intro": "Helix 是一个可私有化部署的 AI 智能体平台，核心思路是把编码智能体放到服务器上运行，而不是每个开发者本地各跑一个。每个智能体拥有独立的 GPU 加速桌面沙箱，包含浏览器、终端、文件系统和 GUI 应用，团队成员可以共享查看和接管。\n\n工作流围绕项目看板展开：你创建 spec 任务描述期望结果，规划智能体读取仓库并写出规格，你审核批准后由实现智能体编码并提交 Pull Request。任务可并行执行，支持在任务中途切换不同的智能体。\n\n平台兼容 Claude Code、Codex、Gemini CLI、Qwen Code 等智能体框架，可连接 GitHub、GitLab、Azure DevOps，并支持托管或自托管的 OpenAI 兼容模型端点，包括 vLLM。此外还内置 RAG 知识库、MCP 工具集成、追踪观测、多租户与 OIDC 单点登录等能力。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "下载并运行安装脚本：curl -sL -O https://get.helixml.tech/install.sh && chmod +x install.sh && sudo ./install.sh",
+  "安装完成后访问 http://localhost:8080 打开控制台",
+  "按文档接入自己的 GPU runner",
+  "配置外部 OpenAI 兼容 LLM 端点（包括自托管 vLLM）",
+  "生产环境可使用 Helm charts 部署到 Kubernetes"
+ ],
+ "summary": "Helix 把编码智能体从开发者本地搬到自有服务器上，让每个智能体拥有独立的 GPU 加速桌面沙箱，团队通过看板协作管理任务。你只需描述期望结果，智能体负责规划、编码并提交 Pull Request。它兼容多种智能体框架和模型端点，支持私有化与离线部署，适合需要统一调度多个编码智能体并保障代码与数据不出内网的开发团队。",
+ "tagline": "在自有基础设施上运行编码智能体集群"
+}
