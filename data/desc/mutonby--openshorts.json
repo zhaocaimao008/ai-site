@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合内容创作者、播客主、营销人员以及希望自托管视频切片工具的开发者。",
+ "date": "2026-11-26",
+ "features": [
+  "AI 检测长视频中的精彩片段，生成 15-60 秒的竖屏短视频",
+  "智能 9:16 重新构图，支持人脸跟踪、分屏和屏幕录制布局",
+  "自动生成字幕（词级时间戳）和 AI 配音（30+ 语言）",
+  "内置剪辑编辑器，支持词级剪切、片段调整和快速渲染",
+  "AI Shorts 功能：使用 AI 演员生成 UGC 营销视频",
+  "提供 MCP 服务器和 REST API，便于 AI 代理集成"
+ ],
+ "intro": "OpenShorts 是一个开源的 AI 视频切片平台，可将长视频（如播客、访谈、直播）自动转换为适合 TikTok、Reels 和 Shorts 的 9:16 竖屏短视频。它利用 AI 检测精彩片段，并自动完成重新构图、字幕生成和配音。\n\n项目提供三种主要工具：Clip Generator 负责切片，AI Shorts 用于生成 AI 演员的营销视频，YouTube Studio 辅助标题和缩略图制作。用户可以选择自托管（Docker，免费且无水印）或使用云端 GPU 服务。\n\nOpenShorts 还提供 MCP 服务器和 API，方便 AI 代理调用。自托管需要自己的 API 密钥（如 Gemini、ElevenLabs），而云端版本已集成这些服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/mutonby/openshorts.git",
+  "进入目录并配置环境变量（如 API 密钥）",
+  "使用 Docker 启动：docker compose up",
+  "访问本地仪表板，粘贴 YouTube 链接或上传视频开始切片"
+ ],
+ "summary": "OpenShorts 是一个开源 AI 视频切片工具，能将长视频自动剪辑成适合社交媒体的竖屏短视频。它通过 AI 识别精彩片段，并完成重新构图、字幕和配音，适合播客、访谈等内容创作者。用户可自托管免费使用，或选择云端服务。",
+ "tagline": "开源 AI 视频切片工具，自动生成竖屏短视频"
+}

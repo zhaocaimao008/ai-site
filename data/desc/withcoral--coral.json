@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合需要让 AI Agent 安全访问企业系统（如 GitHub、Slack、Linear 等）的开发者和团队，尤其是关注权限控制、token 效率和自托管部署的场景。",
+ "date": "2026-11-26",
+ "features": [
+  "基于策略的精确控制：为每个提供方工具和自定义工具设置 Allow、Ask 或 Block",
+  "自定义工具：Agent 将成功的 TypeScript 代码保存为可复用工具，减少重复工作",
+  "代码模式执行：Agent 编写程序调用多个工具，过滤结果，减少 token 消耗",
+  "自托管部署：支持桌面应用或 Docker Compose/Kubernetes 共享服务器",
+  "兼容任何 MCP 客户端：可连接 Claude Code、Codex、Cursor 等",
+  "共享工具与身份管理：提供方可使用调用者自己的账户，无需共享 API token"
+ ],
+ "intro": "Coral 是一个开源、可自托管的网关，位于 AI Agent 与其操作的企业系统之间。Agent 通过编写简短的 TypeScript 程序来调用工具，并将成功的代码保存为自定义工具以便复用。Coral 在每次调用前根据策略进行检查，然后添加凭证并转发请求。\n\n它解决了 MCP 网关只能控制工具可见性的问题，允许对每个工具设置 Allow、Ask 或 Block，并能对自定义工具中的每次提供方调用进行策略检查。自定义工具可以包含更细粒度的规则，例如仅关闭 30 天无活动的工单。\n\nCoral 使用 Rust 编写，可作为桌面应用或共享服务器运行，支持任何兼容 MCP 的 AI 应用或 Agent，并可连接 MCP 服务器或 OpenAPI 文档。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Coral：从下载页面获取桌面应用，或使用 Docker Compose/Kubernetes 运行共享服务器",
+  "添加提供方：从目录中选择服务（如 GitHub、Linear），或自带 OpenAPI 文档或 MCP 服务器",
+  "连接 Agent：从 Coral UI 复制工作区的 MCP URL，并添加到 MCP 客户端，例如：claude mcp add --scope user --transport http coral <your-mcp-url>",
+  "向 Agent 提问：例如“What are my open pull requests?”"
+ ],
+ "summary": "Coral 是一个自托管的网关，用于控制 AI Agent 对企业系统的访问。它让 Agent 通过编写 TypeScript 程序调用工具，并将成功代码保存为可复用的自定义工具，从而减少重复工作和 token 消耗。Coral 对每次调用进行策略检查，支持 Allow、Ask、Block 三种权限，适合需要精细权限管理和自托管部署的团队。",
+ "tagline": "为 AI Agent 提供安全可控的企业系统执行网关"
+}

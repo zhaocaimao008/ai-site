@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合研究视频生成、世界模型和手物交互的研究者与开发者，需要具备 Linux、Python 和 GPU 环境。",
+ "date": "2026-11-26",
+ "features": [
+  "根据初始图像、文本提示、手部运动和相机位姿生成手物交互视频",
+  "提供 Base 全序列双向生成与 Fast 三步因果流式生成两种模式",
+  "Ultra-Fast-VAE 解码器在保持 H3 latent 接口的同时恢复重建保真度",
+  "Fast 模式支持低延迟流式输出，固定首帧锚点与有界滑动上下文",
+  "公开 HandiVid 预编码训练数据集及参考数据读取器",
+  "附带七个示例输入与 Base/Fast 参考结果，便于验证和对比"
+ ],
+ "intro": "LynnReal-Hand 是一个手控视频世界模型。给定初始图像、文本提示、手部运动视频和相机位姿，它能生成日常或想象场景中手与物体交互的视频，支持伸手、抓取、释放和双手协同等动作。\n\n项目提供两个模型：LynnReal-Hand-Base 使用 33B 骨干做双向全序列生成，默认输出 1344×768；LynnReal-Hand-Fast 使用因果骨干，三步采样即可流式生成，默认输出 960×540，并配套 Ultra-Fast-VAE 解码器。仓库包含推理代码、权重下载脚本和七个示例输入。\n\n训练数据 HandiVid 也已公开，包含对齐的视频与手部运动 latent、首帧锚点、图像/文本条件特征等，以 TAR 分片和 Parquet 索引形式发布，并提供参考 PyTorch 读取器。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并创建虚拟环境：git clone https://github.com/LynnReal-AI/LynnReal.git && cd LynnReal && python -m venv .venv && source .venv/bin/activate",
+  "安装依赖：pip install --upgrade pip && pip install torch==2.9.1 torchvision==0.24.1 --index-url https://download.pytorch.org/whl/cu128 && pip install -e . && bash scripts/install_fa3.sh",
+  "运行环境检查：lynnreal-hand doctor",
+  "下载模型权重：python scripts/download_weights.py --component base 或 --component fast",
+  "验证示例输入：lynnreal-hand validate --config configs/base.json --example examples/05/example.json"
+ ],
+ "summary": "LynnReal-Hand 是一个手控视频世界模型，用初始图像、文本提示、手部动作和相机位姿作为输入，生成手与物体交互的视频。它提供全序列生成和低延迟流式生成两种模式，适合研究手物交互视频生成、世界模型和流式推理的开发者，仓库包含推理代码、模型权重下载和示例输入。",
+ "tagline": "用手部动作控制视频世界模型生成交互视频"
+}

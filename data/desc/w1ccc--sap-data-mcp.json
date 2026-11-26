@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合需要让 AI 助手安全查询 SAP S/4HANA 数据的企业开发者、SAP 顾问和业务分析师，尤其是关注数据只读和审计合规的场景。",
+ "date": "2026-11-26",
+ "features": [
+  "提供 412 个只读 Tool，覆盖 8 大标准模块，支持 RFC/BAPI、OData 和 Released API 三种接入方式",
+  "只读安全设计：RFC 函数白名单、HTTP 仅 GET 请求，无写入能力",
+  "凭证本地存储，日志中敏感信息自动脱敏，每次调用记录审计日志",
+  "结果带状态标识（ok、not_found、partial、error），保留 SAP 原始字段和单位",
+  "支持 Claude Desktop、Claude Code、Cursor 等 MCP 客户端，配置简单",
+  "包含离线回归测试，不依赖 SAP 系统即可运行"
+ ],
+ "intro": "SAP Data MCP 是一组只读的 MCP 服务器，让 Claude 等 AI 助手能够查询 SAP S/4HANA 中的数据。它支持三种接入方式：本地部署和私有云通过 RFC/BAPI 或 OData，公有云通过 Released API。项目包含三个独立服务，分别对应私有云 RFC、私有云 OData 和公有云 API，合计提供 412 个只读 Tool，覆盖 MM、SD、FI、CO 等标准模块。\n\n所有查询都通过 SAP 标准业务接口进行，RFC 调用受白名单限制，HTTP 只发送 GET 请求，没有任何写入能力。凭证仅保存在本机 .env 文件中，不会经过 AI，每次调用都会记录审计日志。结果会明确标注状态（ok、not_found、partial、error），避免误判。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库并创建 Python 3.12 虚拟环境：git clone https://github.com/w1ccc/sap-data-mcp.git && cd sap-data-mcp && py -3.12 -m venv .venv",
+  "安装依赖：.\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt",
+  "复制环境变量模板：Copy-Item .env.example public_cloud\\api\\.env",
+  "编辑 public_cloud\\api\\.env，填写 SAP_API_BASE_URL 和认证信息（Basic 或 OAuth）",
+  "在 AI 工具中注册 MCP 服务，例如 Claude Code：claude mcp add sap_public_api -- C:\\sap-data-mcp\\.venv\\Scripts\\python.exe C:\\sap-data-mcp\\public_cloud\\api\\server.py"
+ ],
+ "summary": "SAP Data MCP 是一组只读的 MCP 服务器，让 Claude 等 AI 助手能直接查询 SAP S/4HANA 中的订单、发票、库存等业务数据。它支持本地部署、私有云和公有云三种环境，通过标准接口访问，所有调用都有审计日志，凭证保留在本地。适合需要让 AI 安全查询 SAP 数据、又不想开放写入权限的团队使用。",
+ "tagline": "让 AI 助手只读查询 SAP S/4HANA 的 MCP 服务"
+}

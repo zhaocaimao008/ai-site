@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合喜欢桌面宠物、希望打字时有视觉反馈的开发者与普通用户，尤其适合使用 AI 编程工具并想要一个轻量级互动伴侣的人。",
+ "date": "2026-11-26",
+ "features": [
+  "3D 立体手办与 2D 经典双引擎渲染，支持无级缩放和游戏省电模式",
+  "AI 编程伴侣联动：支持 Claude Code、Codex、DeepSeek 等，实时响应编码状态",
+  "内置 Stdio 与 Streamable HTTP 双模式 MCP Server，无需额外运行时",
+  "7 款内置皮肤（含鲸鱼娘），支持摸头呼噜互动和自定义尾巴拍键",
+  "系统级输密码防偷窥：自动闭眼或捂眼并遮蔽键帽",
+  "OBS 透明源直播、多屏固定、自动更新等桌面集成功能"
+ ],
+ "intro": "KuroCat 是一款免费开源的桌面宠物应用，以 3D 或 2D 透明置顶窗口显示一只会响应键盘和鼠标操作的小黑猫（以及另外几款猫咪和鲸鱼娘）。它基于 Rust 和 Tauri v2 构建，体积轻量，支持 Windows、macOS、Linux 和 Android。\n\n除了作为打字可视化工具，它还内置了 MCP Server，能与 Claude Code、Codex、DeepSeek 等 AI 编程工具联动，在写代码、跑命令、报错或完工时做出相应动作。此外，它提供输密码自动闭眼、OBS 透明源直播、多皮肤切换等功能。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 或官网下载对应平台安装包（Windows exe、macOS dmg、Linux deb/AppImage、Android apk）",
+  "macOS 用户也可通过 Homebrew 安装：brew install --cask qianyiai/tap/kurocat",
+  "macOS 首次打开若提示无法验证开发者，在终端执行：xattr -cr /Applications/KuroCat.app && open /Applications/KuroCat.app",
+  "在系统设置中为 KuroCat 开启辅助功能与输入监控权限（macOS）",
+  "启动后即可看到桌面猫咪，敲击键盘或移动鼠标触发动画；如需 AI 联动，在设置中配置 MCP 或对应编程工具"
+ ],
+ "summary": "KuroCat 是一个开源的桌面宠物应用，在屏幕上显示一只透明置顶的 3D 或 2D 小猫，实时响应你的键盘和鼠标操作。它还能与 Claude Code、Codex 等 AI 编程工具联动，在编码过程中做出反馈。适合想要打字可视化、桌面陪伴或为直播增加趣味元素的开发者和普通用户。",
+ "tagline": "开源3D桌面打字猫，兼AI编程伴侣"
+}

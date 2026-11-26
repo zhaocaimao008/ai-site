@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合没有 GPU、希望在本地或边缘设备上运行较大语言模型的开发者，以及需要自托管 OpenAI 兼容服务的用户。",
+ "date": "2026-11-26",
+ "features": [
+  "在无 GPU、8 GB 内存的普通 CPU 上运行 27B 模型",
+  "提供 OpenAI 兼容 API，现有客户端可直接使用",
+  "支持 speculative decoding，可切换为普通解码",
+  "支持多请求并发（--multi）和纯 API 模式",
+  "附带实验性的本地聊天页面",
+  "提供安装前检查 CPU 与内存的脚本"
+ ],
+ "intro": "openset-llm 是一个面向普通 CPU 的 LLM 推理引擎，目标是在没有 GPU、只有 8 GB 内存的机器上运行大模型。目前它支持 Qwen3.8-27B（PrismML 的三元量化版本 Bonsai-2-27B，文件约 5.95 GB），运行在支持 AVX-512 的 x86 CPU 上。\n\n项目基于 PrismML 的 llama.cpp fork，加入新的计算内核和运行时补丁，并提供 OpenAI 兼容 API，现有客户端和 agent 可以直接接入。README 给出的测试中，单用户在 8 vCPU / 8 GB 的 Ice Lake 机器上解码速度约 17–20 tok/s，并称约为对比引擎的数倍。\n\n它适合想在本地或边缘设备上跑较大模型、又没有 GPU 的场景，但需要 Linux（或 WSL2）和支持 AVX-512 的较新 CPU。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装依赖（Ubuntu/Debian）：sudo apt install -y build-essential cmake git",
+  "克隆仓库并进入目录：git clone https://github.com/opensetlabs/openset-llm && cd openset-llm",
+  "可选：运行 ./install.sh --check 检查 CPU 的 AVX-512 支持和可用内存",
+  "运行 ./start 或 ./install.sh 完成构建并下载模型（约 7.3 GB）",
+  "运行 ./serve 启动服务，聊天页面在 http://127.0.0.1:8080，API 在 /v1"
+ ],
+ "summary": "openset-llm 是一个针对普通 CPU 优化的 LLM 推理引擎，目标是在没有 GPU、内存只有 8 GB 的机器上运行 27B 规模的大模型。它目前支持 Qwen3.8-27B 的三元量化版本，提供 OpenAI 兼容 API，现有客户端和 agent 可以直接接入。适合想在本地或边缘设备上自托管较大模型、但缺少 GPU 的开发者，前提是使用支持 AVX-512 的较新 x86 CPU。",
+ "tagline": "在普通 CPU 上本地运行 27B 大模型的推理引擎"
+}

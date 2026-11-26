@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "使用 GPT 系列模型进行编码代理开发的工程师，尤其是希望统一多宿主行为、减少多余自我辩解式输出的 Codex 用户。",
+ "date": "2026-11-26",
+ "features": [
+  "单一配方编译到多种编码 harness 的原生指令",
+  "Codex 安装脚本支持 hooks 与纯提示两种模式",
+  "通过 hooks/扩展在事件点刷新优先级提醒",
+  "安装不修改模型、provider、权限与 MCP 配置",
+  "提供案例归档与在线对比页面"
+ ],
+ "intro": "GPT with Taste 是一套面向 GPT 推理模型（README 特别提到 GPT-6.1 Sol 与 GPT-6 Astra）的行为配方，目标是让编码代理在完成任务时做出合理的默认选择、消化复杂信息，并以工程与视觉上的细致度交付结果。它从单一英文配方源编译成各宿主平台的原生指令与事件引导。\n\n项目支持 OpenAI Codex、Claude Code、Kiki、Pi、Oh My Pi、DeepSeek Harness 等多个 harness，安装后不会改动你的模型、provider、权限、MCP 服务器或 AGENTS.md。回复语言跟随用户书写的语言。README 还提供了案例对比与研究文档，说明配方背后的设计思路。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 Node.js 22 或更新版本",
+  "git clone https://github.com/NB-Corp/gpt-with-taste.git",
+  "cd gpt-with-taste",
+  "node scripts/install.mjs --hooks（或 node scripts/install.mjs 仅安装提示）",
+  "在 Codex Desktop 的 Settings → Hooks 中审阅并信任已安装定义，然后打开新的 Codex 会话"
+ ],
+ "summary": "GPT with Taste 是一套给 GPT 编码代理用的行为配方，目的是让模型在写代码和交付结果时做出更合理的默认判断，减少多余的解释性文字。它从单一配方编译到 Codex、Claude Code 等多个宿主，安装后不改动模型与权限配置，适合希望统一多平台代理行为、提升输出实用性的开发者。",
+ "tagline": "为 GPT 编码代理提供判断力与品味的系统提示配方"
+}

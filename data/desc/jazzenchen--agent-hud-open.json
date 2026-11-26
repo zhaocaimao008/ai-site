@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "同时使用多个编码 Agent 的开发者，以及希望在离开电脑后仍能跟进 Agent 进度并做决策的用户。",
+ "date": "2026-11-26",
+ "features": [
+  "在屏幕边缘显示各 Agent 的配额、token 用量和会话状态",
+  "直接在 HUD 上批准、拒绝或回答 Agent 的请求",
+  "一键跳回对应会话的线程、标签页或终端面板",
+  "内置 MCP 服务器，支持 Agent 之间互相发消息",
+  "通过 iPhone 和 Apple Watch 远程查看进度并继续对话",
+  "支持 Notch 与 Simple 两种显示模式，可分别配置每块屏幕"
+ ],
+ "intro": "Agent HUD 是一个面向编码 Agent 的 HUD（抬头显示）工具，支持 Claude Code、Codex 等 25 种以上编码 Agent。它把各 Agent 的配额、token 用量、会话状态和待处理请求集中显示在屏幕边缘，让你在写代码或做别的事时也能一眼看到谁在忙、谁已完成、谁在等你确认。\n\n项目用 Rust 和 Tauri 2 构建，提供 Notch 和 Simple 两种显示模式，可在 macOS、Windows 和 Linux（预览）上运行，并有 iPhone 和 Apple Watch 配套应用。内置 MCP 服务器让 Agent 之间可以互相传递消息，也能让 Agent 调用工具构建界面。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Mac 上用 Homebrew 安装：brew install --cask jazzenchen/tap/agent-hud",
+  "或在 Mac、Windows、Linux 上用 Node.js 安装：npx @agenthud/install",
+  "也可以从官网下载 release 安装包",
+  "安装后按需在 Settings → Display 中配置每块屏幕的 HUD 显示内容"
+ ],
+ "summary": "Agent HUD 把多个编码 Agent 的运行状态搬到屏幕边缘：配额、token 用量、会话进度和待确认请求都能一眼看到，并可直接在 HUD 上批准或回答。它适合同时跑 Claude Code、Codex 等 Agent 的开发者，也支持通过 iPhone 和 Apple Watch 远程跟进任务，离开电脑后仍能继续做决策。",
+ "tagline": "在屏幕边缘、手机和手表上查看并管理多个编码 Agent"
+}

@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合研究少步扩散模型强化学习微调的研究人员和开发者，需要熟悉扩散模型和强化学习基础。",
+ "date": "2026-11-26",
+ "features": [
+  "将多种强化学习算法（FlowGRPO、AWM、DiffusionNFT、DiffusionOPSD、ReFL）统一到少步扩散模型微调框架",
+  "提供三阶段方法：变换到 x 空间、梯度分解、锚点适配",
+  "支持 mix 和 ocr 两种奖励设置，包含多个训练器实现",
+  "提供训练启动脚本、配置文件和已发布 checkpoint",
+  "包含与论文一致的对比实验和复现命令"
+ ],
+ "intro": "FewStepRL 是论文《Fine-tuning Few-step Diffusion Models with Reinforcement Learning》的官方开源实现，面向 SD3.5-Medium 的少步（4 步）flow-map 生成器。项目将强化学习目标适配到少步生成器上，通过变换到 x 空间、梯度分解和锚点适配三个阶段，把 FlowGRPO、AWM、DiffusionNFT、DiffusionOPSD 和 ReFL 等算法统一到一个模块化代码库中。\n\n仓库提供完整的训练脚本、配置文件和已发布的 checkpoint，支持 mix（CLIPScore + HPSv2 + PickScore）和 ocr（PaddleOCR 文本准确率）两种奖励设置，并包含与论文对应的对比实验。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "克隆仓库：git clone https://github.com/EDAPINENUT/fewsteprl-sd35",
+  "安装依赖（参考 README 或 requirements）",
+  "选择实验配置，例如运行 scripts/train/meanflownft_mix.sh 启动训练",
+  "从 Hugging Face 下载 checkpoint：Delcher/fewsteprl-sd35"
+ ],
+ "summary": "FewStepRL 是一个面向少步扩散模型强化学习微调的开源项目，基于 SD3.5-Medium 的 4 步 flow-map 生成器，将多种 RL 算法统一到模块化代码库中。它适合研究如何用强化学习提升少步生成模型在奖励指标上的表现，并提供训练脚本、配置和 checkpoint 以便复现论文实验。",
+ "tagline": "用强化学习微调少步扩散模型"
+}

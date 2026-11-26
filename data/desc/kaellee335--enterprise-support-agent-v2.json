@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合想学习如何用 LangGraph、RAG 和 FastAPI 构建带权限与审批的企业级 Agent 的开发者，也适合需要参考电商售后 Agent 工程结构的团队。",
+ "date": "2026-11-26",
+ "features": [
+  "基于 LangGraph 的对话路由，支持订单查询、政策 RAG、物流查询和退款审批流程",
+  "Chroma 向量检索政策知识库，回答中展示来源编号与检索证据",
+  "多租户与角色权限控制，Customer、Service、Approver、Admin 按范围访问数据",
+  "人工审批中断与恢复，审批任务分配给指定审批人，请求人自批会被拒绝",
+  "Vue 3 工作台包含 Dashboard、智能客服、订单、审批、知识库、评估和可观测性页面",
+  "集成 Langfuse 记录请求、Graph 节点和模型调用，并提供 pytest 与评估脚本"
+ ],
+ "intro": "这是一个面向电商售后场景的 Python 全栈 Agent 演示项目，将订单查询、政策问答、物流查询和人工审批组织成可观察、可评估的工作流。项目从 Dify 原型迁移为代码实现，后端使用 FastAPI、SQLite、LangChain、LangGraph 和 Chroma RAG，前端为 Vue 3 工作台，并集成 Langfuse 做可观测性。\n\n系统包含身份与租户校验、角色权限隔离、审批任务分配、MockShop 与模拟物流服务，以及 pytest 测试和 Docker Compose 部署。所有订单、身份和物流均为虚构演示数据，审批流程只记录演示状态，不调用真实退款接口。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装 uv：python -m pip install uv==0.11.11",
+  "同步依赖：uv sync --locked --extra dev",
+  "启动后端：uv run --locked uvicorn support_agent.main:app --reload --app-dir src",
+  "另开终端启动模拟物流（8091）和 MockShop API（8092），或使用 Docker Compose 自动启动",
+  "启动前端：cd frontend && npm install --legacy-peer-deps && npm run dev，打开 http://127.0.0.1:5173"
+ ],
+ "summary": "这个项目演示如何用 Python 全栈技术搭建一个电商售后智能客服 Agent，把订单查询、政策问答、物流查询和人工审批串成可运行的工作流。它适合想了解 LangGraph 路由、Chroma RAG、多租户权限和审批中断如何落地到实际工程的开发者参考，所有数据均为虚构演示。",
+ "tagline": "电商售后场景的全栈 Agent 工程演示"
+}
