@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合 Windows 用户，尤其是希望拥有可视化桌面 AI 伴侣、需要语音交互或桌面自动化的开发者与普通用户。",
+ "date": "2026-11-27",
+ "features": [
+  "语音与文字聊天，支持“Hey Capri”唤醒词和 80 种语言",
+  "桌面自动化：启动程序、控制媒体、关闭标签页、导航 UI 流程",
+  "Discord 等语音通话集成，可自动加入频道并转达消息",
+  "游戏叠加层，实时响应屏幕事件并实验性支持基础游戏输入",
+  "本地记忆存储，对话日志和屏幕上下文保存在本地",
+  "模组系统，支持预览、一键安装和自定义颜色、语音等"
+ ],
+ "intro": "Capri AI Desktop 是一个运行在 Windows 10/11 上的桌面 AI 助手，以赛博朋克风格的桌面宠物形象出现。它不只是聊天窗口，而是可以停留在窗口边缘、参与 Discord 语音通话、并直接操作电脑完成任务的 AI 操作员。\n\n项目支持接入 Claude Code、Codex、Ollama、DeepSeek 以及 MCP 服务器等多种 AI 后端，用户可以通过文字或语音与它交互，并让它执行启动程序、控制媒体、关闭浏览器标签等桌面自动化操作。所有对话记录和屏幕上下文都保存在本地。\n\nCapri 还提供游戏叠加层、自定义语音合成、迷你媒体播放器以及模组系统，适合希望拥有一个可视化、可定制的桌面 AI 伴侣的 Windows 用户。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载 Capri-Portable.zip 便携版",
+  "将压缩包解压到任意文件夹并运行，无需安装",
+  "首次启动时选择 AI 助手，登录账号或粘贴 Claude Code、Codex、Antigravity 等支持的 API 密钥",
+  "通过文字或语音与 Capri 交互，按 Esc 可随时中断自动化操作"
+ ],
+ "summary": "Capri AI Desktop 是一个 Windows 桌面 AI 助手，以赛博朋克风格的桌面宠物形式呈现。它支持接入 Claude Code、Ollama、DeepSeek 等多种 AI 后端，可通过语音或文字对话，并直接操作电脑完成启动程序、控制媒体等任务。还支持 Discord 语音通话集成、游戏叠加层和本地记忆存储，适合想要可视化桌面 AI 伴侣的 Windows 用户。",
+ "tagline": "赛博朋克风格 Windows 桌面 AI 助手与伴侣"
+}

@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "使用 Claude Code、Codex、Cursor 等编码 Agent 的开发者，以及需要与 Agent 就界面方案、设计文档或数据报告做可视化确认的团队。",
+ "date": "2026-11-27",
+ "features": [
+  "Artboard：Agent 并排绘制多个方案并标注推荐项，你点选后提交回会话",
+  "Document：设计文档内嵌 Agent 的提问，可对任意句子评论或就地编辑",
+  "Whiteboard：你与 Agent 在同一画布上画框和箭头，可选中提问",
+  "HTML：单页调参台，滑块数值在 Agent 重写页面后仍保留",
+  "Slides / Report / Storyboard / Verify：演示文稿、真实数据报告、视频分镜与验收对比",
+  "本地优先：产物存于项目内，由本地服务器打开，可选发布到 Artideck Cloud 获取链接"
+ ],
+ "intro": "Artideck 是一套面向编码 Agent 的交互式产物工具。它解决的是这样一个问题：让 Agent 描述三种布局，你只能读到三段 Markdown 文字；而 Artideck 让 Agent 把每种方案直接画在页面上，你点选、批注、提交，结果再回到 Agent 会话里。\n\n它提供多种产物类型：Artboard 并排展示多个方案供你挑选，Document 是可在句子上评论的设计文档，Whiteboard 供双方共同画框和箭头，HTML 是带真实滑块的调参台，此外还有 Slides 演示文稿、Report 数据报告、Storyboard 视频分镜和 Verify 验收报告。所有产物存放在你的项目目录中，通过本地服务器打开，无需账号。\n\n安装通过 npx artideck install 完成，支持 Claude Code、Codex、Cursor、Gemini CLI 等多种 Agent 工具。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "运行 npx artideck install 启动安装向导",
+  "在向导中选择一个或多个 Agent 工具（harness）",
+  "选择安装内容：仅 Artifacts，或包含 brainstorm、spec、TDD 构建与验证的完整工作流",
+  "向 Agent 发送如 Show me three directions for a settings page 的请求，等待 artboard 打开",
+  "在页面上点选、批注并 Submit，把结果发回 Agent 会话"
+ ],
+ "summary": "Artideck 让编码 Agent 不再只用 Markdown 描述方案，而是把选项画成可交互的页面：并排的界面草图、可评论的设计文档、共同绘制的白板、带滑块的调参台，以及演示文稿、数据报告和视频分镜。你在页面上点选、批注、提交，结果直接回到 Agent 会话。产物保存在项目内，由本地服务器打开，适合需要与 Agent 反复确认设计方向的开发场景。",
+ "tagline": "让编码 Agent 用可视化页面与你共同做决定"
+}

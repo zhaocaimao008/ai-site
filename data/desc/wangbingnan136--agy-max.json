@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 Google Antigravity 进行 AI 编程的重度开发者，尤其是需要多账号管理、代理配置或深度工作流增强的用户。",
+ "date": "2026-11-27",
+ "features": [
+  "默认内置 agy-fast 加速引擎，可一键关闭",
+  "类 Codex 工作流：历史搜索、Git 状态栏、/goal 目标栏",
+  "Prism 光学主题与场景预设、水波试管上下文指示器",
+  "上下文占用与生成速度实时看板、53 周用量热力图",
+  "多账号切换与免 TUN 代理（默认关闭）",
+  "SSH 一键粘贴、远端同步与 WSL2 支持"
+ ],
+ "intro": "Antigravity Max 是面向 Google Antigravity 2.0 客户端的增强插件，旨在提供开箱即用的完整开发体验。它默认内置 agy-fast 加速引擎，可减少 Agent 工具往返轮次与 Token 消耗，并集成类 Codex 的工作流套件，包括历史会话全文搜索、Git 状态栏、/goal 目标栏等。\n\n插件还提供 Prism 光学主题与工作台美化、上下文与用量看板、多账号切换、免 TUN 代理、SSH 与 WSL2 支持等功能。安装方式灵活，可通过 Agent 自动安装或命令行脚本完成，覆盖安装会保留已有设置。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装并启动过一次 Antigravity 客户端（2.35.1+）",
+  "从 Releases 下载最新 ZIP 解压，或克隆仓库",
+  "在项目目录运行安装脚本：macOS/Linux/WSL2 执行 sh ./install.sh；Windows 执行 powershell -NoProfile -ExecutionPolicy Bypass -File .\\install.ps1",
+  "重启 Antigravity，左侧栏出现 Antigravity Max 即可使用"
+ ],
+ "summary": "Antigravity Max 是 Google Antigravity 2.0 客户端的增强插件，解决开发者在使用 AI 编程时工具调用繁琐、上下文与用量不透明、多账号切换不便等问题。它内置加速引擎减少 Token 消耗，提供类 Codex 的搜索与 Git 工作流、光学主题美化、实时用量看板，并支持多账号与免 TUN 代理。适合追求开箱即用完整体验的重度开发者。",
+ "tagline": "Antigravity 2.0 全能增强工作台插件"
+}

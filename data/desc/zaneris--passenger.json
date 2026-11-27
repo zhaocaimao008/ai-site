@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 C# 和 .NET 进行开发的程序员，尤其是需要跨平台 IDE、内置调试与性能分析工具，或希望让编码代理参与开发流程的开发者。",
+ "date": "2026-11-27",
+ "features": [
+  "内置调试器，支持热重载、条件断点、异步步进和反编译库代码查看",
+  "CPU 和内存性能分析器，提供调用树、火焰图、分配跟踪和堆快照对比",
+  "Avalonia 和 WPF 的 XAML 工具，包括实时预览、代码补全、实时可视化树和 XAML 热重载",
+  "支持容器和 Aspire 环境调试，可调试 compose 文件或 AppHost 中的每个 .NET 服务",
+  "集成 MCP 服务器，允许 Claude Code、Codex 等编码代理驱动 IDE 进行构建、测试、调试和性能分析",
+  "本地历史记录和三方合并，可查看文件历史版本并解决 Git 冲突"
+ ],
+ "intro": "Passenger 是一个用 Avalonia 构建的开源 C#/.NET 集成开发环境，支持 Windows、macOS 和 Linux。它基于 .NET 11 和 Roslyn，提供代码编辑、调试、性能分析和 XAML 工具等核心功能。\n\n项目内置了自研调试器，支持断点、条件断点、异步步进和热重载，可在调试时修改代码并立即生效。性能分析器基于 EventPipe，提供调用树、火焰图和内存快照对比。对于 Avalonia 和 WPF，提供 XAML 预览、实时可视化树和热重载。此外，还包含 MCP 服务器，允许编码代理通过 IDE 进行构建、测试、调试和性能分析。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从官网 https://passenger-ide.net/#download 下载对应平台的安装包",
+  "安装后启动 Passenger，打开或创建 C#/.NET 项目",
+  "使用内置调试器设置断点并启动调试，体验热重载和性能分析功能"
+ ],
+ "summary": "Passenger 是一个免费开源的 C#/.NET 跨平台 IDE，内置调试器、性能分析器和热重载，支持 Avalonia 和 WPF 的 XAML 开发。它适合需要轻量级但功能完整的 .NET 开发环境的程序员，尤其是希望在不付费的情况下获得调试、性能分析和容器调试能力的开发者。此外，它提供 MCP 服务器，可让编码代理直接操作 IDE 完成构建、测试和调试任务。",
+ "tagline": "免费开源的 C#/.NET 跨平台 IDE，内置调试器、性能分析器和热重载。"
+}

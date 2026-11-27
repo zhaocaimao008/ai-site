@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合独立游戏开发者、AI 爱好者以及希望利用本地编码代理快速构建和发布游戏的创作者。",
+ "date": "2026-11-27",
+ "features": [
+  "支持 22 种本地编码代理（如 Claude Code、Codex、DeepSeek 等），将代理变为游戏开发工作室",
+  "内置 25 个可玩游戏模板，涵盖 3D、体素、动漫、像素和 9:16 竖屏风格，全部开源可编辑",
+  "一键重混和重新设计游戏，快速替换角色、世界和美术风格",
+  "提供自动化逻辑检查、平衡模拟、无头试玩、封面和预告片生成等工具",
+  "支持发布到微信小游戏、抖音、TikTok、itch.io 等平台，并可导出 9:16 可玩广告",
+  "全栈开源（BYOA + BYOK），代码、美术、视频、音乐、语音、音效和 Three.js 3D 均开放"
+ ],
+ "intro": "OpenGame 是一个开源的超级游戏智能体，旨在将 DeepSeek、Claude Code、Codex 等本地编码代理转变为类似 Unreal Engine 或 Unity 的 AI 游戏开发环境。它提供从创意到可玩游戏的端到端流程，支持构建 AAA 级 3D 游戏或适合变现的迷你游戏。\n\n项目内置 25 个可玩模板，涵盖 3D、体素、动漫、像素和 9:16 竖屏等多种风格，每个模板都包含可编辑的源代码、美术资源和本地化内容。用户可以一键重混或重新设计任何游戏，快速替换角色、世界和美术风格。\n\nOpenGame 强调全栈开源和 BYOA（自带代理）+ BYOK（自带密钥）模式，代码、美术、视频、音乐、语音、音效和 Three.js 3D 全部开源。它支持 22 种本地代理，并提供自动化逻辑检查、平衡模拟、无头试玩、封面和预告片生成等功能，帮助开发者将游戏发布到微信小游戏、抖音、TikTok 等平台。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将 README 中的提示词粘贴到本地代理（如 DeepSeek TUI、Claude Code、Codex 等）中以连接 OpenGame",
+  "使用 Skills CLI 安装主 OpenGame Skill：npx skills add https://github.com/nexu-io/opengame/tree/skills --skill opengame",
+  "确保已安装 Git、Git LFS、npm 和 Node.js 22.18+",
+  "克隆仓库：git -c filter.lfs.process= -c filter.lfs.smudge= -c filter.lfs.required=false clone --depth 1 --single-branch --branch main https://github.com/nexu-io/opengame.git",
+  "进入目录并安装依赖：cd opengame && git lfs install --local --skip-smudge && npm ci && npm run build:studio && npm start"
+ ],
+ "summary": "OpenGame 是一个开源项目，它把 DeepSeek、Claude Code、Codex 等本地编码代理变成 AI 游戏开发工作室，让开发者通过自然语言指令构建 3D 游戏或迷你游戏。项目提供 25 个可玩模板，支持一键重混和重新设计，并包含自动化测试与发布工具。适合想快速尝试游戏开发、利用现有 AI 代理提高效率的独立开发者和爱好者。",
+ "tagline": "开源超级游戏智能体，将本地编码代理变为全栈 AI 游戏工作室"
+}

@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合对汇编、系统编程、LLM 推理底层实现感兴趣的开发者，以及想研究无依赖推理与裸机运行的技术读者。",
+ "date": "2026-11-27",
+ "features": [
+  "纯 NASM 汇编实现 Qwen3-0.6B 推理，二进制约 14 KB，零依赖",
+  "可启动的裸机 LLM 操作系统，支持 SMP、VGA/PS-2/COM1 多轮对话",
+  "从零实现的 Mini-GPT 训练器，含解析式反向传播与 AdamW",
+  "手写 AVX2+FMA+F16C 数学内核与 INT8 量化推理路径",
+  "实时 80x24 Unicode Braille 训练曲线 TUI"
+ ],
+ "intro": "llm.asm 用 100% 纯 x86-64 NASM 汇编实现了三个完整的 LLM 项目，不含 C、C++、Rust、libc 或任何运行时依赖，直接用 nasm 汇编、ld 链接。所有数学内核（expf、RMSNorm、RoPE、SiLU、Softmax）、AVX2+FMA+F16C 的 GEMM/GEMV 引擎、BPE tokenizer、线程池、裸机 SMP 内核、反向传播、AdamW 优化器和 Braille TUI 均为手写汇编。\n\n三个子项目分别是：14 KB 的 Qwen3-0.6B 推理程序（静态 Linux ELF，支持单次生成和多轮 KV-cache 对话）、24 KB 的可启动裸机 Qwen3-0.6B 操作系统（不依赖 Linux/Windows，支持 VGA/PS2/串口交互），以及 32 KB 的从零 Mini-GPT 训练器（含完整解析式反向传播和实时 Braille 损失曲线界面）。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "git clone https://github.com/alesha-pro/llm.asm.git && cd llm.asm && make all",
+  "python3 scripts/export_weights.py --model-dir models/qwen3-0.6b-bf16 --out models/qwen3-0.6b-q8_0.asmbin --scale-dtype fp16",
+  "make inference FAST_Q8=1 && ./build/asm-llm -m models/qwen3-0.6b-q8_0.asmbin -p \"...\" -n 128 -t 16",
+  "make os FAST_Q8=1 && make os-run MODEL=models/qwen3-0.6b-q8_0.asmbin SMP=16",
+  "make train && ./build/asm-gpt-train --data data/tinyshakespeare.txt --steps 400 --seq 128 -t 16 --save checkpoints"
+ ],
+ "summary": "这个项目用纯 x86-64 汇编从零实现了三个 LLM 相关程序：一个约 14 KB 的 Qwen3-0.6B 推理工具、一个可直接启动的裸机 LLM 操作系统，以及一个带实时 Braille 界面的 Mini-GPT 训练器。它适合想了解 LLM 推理与训练底层细节、研究无依赖汇编实现和裸机运行方式的开发者阅读与动手实验。",
+ "tagline": "纯 x86-64 汇编实现的三个 LLM 项目"
+}

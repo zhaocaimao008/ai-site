@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合希望数据留在本机、需要多用户共享 AI 助手的家庭或小团队，也适合想通过 IM 渠道和定时任务自动化日常工作的开发者。",
+ "date": "2026-11-27",
+ "features": [
+  "多用户与专家团队：一个管理员账号供全家或小团队共享，内置专家库和专家市场，按场景切换专家",
+  "多 IM 渠道接入：支持飞书、钉钉、QQ、微信、Telegram、Discord、Slack、WhatsApp、企业微信等",
+  "AgentTeams 协作（Beta）：由协调者调度多个专家处理多步骤任务",
+  "知识库与可移植记忆：基于文档的 RAG 检索，记忆随工作区迁移",
+  "安全与隔离：JWT 多用户隔离、工具审批、shell 命令防护、PII 脱敏",
+  "扩展能力：Connectors（OAuth + MCP）、插件、ACP 双向集成、浏览器自动化与远程桌面"
+ ],
+ "intro": "Octop 是腾讯云开源的自托管 AI 助手，采用多用户、多智能体架构，面向家庭和小团队。它以单个 Python 进程同时提供 Web 控制台、CLI、IM 渠道和定时任务，所有数据默认保存在本机 ~/.octop/ 目录下。\n\n项目内置专家库和专家市场，可为不同场景切换专用智能体，并支持 MBTI 人格模板、AgentTeams 协作、知识库 RAG、插件扩展以及 ACP 双向集成。用户可以通过飞书、钉钉、QQ、微信、Telegram、Discord 等渠道与助手交互，也能用自然语言配置定时任务。\n\n安全方面提供 JWT 多用户隔离、工具审批、shell 命令防护和 PII 脱敏，工作区后端可选本地磁盘、Docker 沙箱、PostgreSQL 或 COS/S3。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确认 Python 3.12+ 环境",
+  "执行 octop run 启动服务（README 提到单进程启动 Web 控制台、CLI、IM 渠道和 cron）",
+  "通过 Web Dashboard 或 CLI 进行配置和使用"
+ ],
+ "summary": "Octop 是一个可自托管的 AI 助手平台，用单个进程同时提供 Web 控制台、CLI、多种 IM 渠道和定时任务，数据默认保存在本机。它支持多用户共享，每个成员可切换不同的专家智能体，并内置知识库、记忆、插件和连接器扩展。适合希望隐私可控、又需要团队或家庭协作使用 AI 助手的场景。",
+ "tagline": "可自托管的多用户多智能体 AI 助手"
+}

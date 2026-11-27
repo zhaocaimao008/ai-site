@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合在消费级 GPU 上部署和调优 MoE 大模型推理的开发者，以及希望借助编码助手排查推理性能问题的用户。",
+ "date": "2026-11-27",
+ "features": [
+  "138 个经过测试的推理优化假设，附带结论、测量数据和条件标签",
+  "7 个模型案例，涵盖 DeepSeek、Hy4、Qwen、MiniMax、GLM、Inkling、Ling 等",
+  "15 章按机制组织的 playbook，包括成本模型、专家放置、投机解码、量化等",
+  "提供 situation card、实验规则、新模型检查清单等实验协议",
+  "包含 route_sim.py 和 fit_cost.py 两个标准库 Python 脚本",
+  "可作为 agent skill 使用，支持编码助手按场景检索假设"
+ ],
+ "intro": "这是一个记录在消费级 GPU（1-4 张 RTX 3090）上优化 MoE 大模型推理的实测项目。作者测试了 138 个假设，覆盖 7 个模型案例，包括专家卸载到 RAM、量化、投机解码、多卡并行等场景，并记录了每个假设的结论、测量数据和测试条件。\n\n内容按机制分为 15 章，从成本模型、专家放置、KV 缓存到基准测试方法，每章末尾给出在其他模型上验证该机制的步骤。项目还提供了 situation card、实验规则和新模型检查清单等协议，以及用于模拟路由和拟合时间模型的 Python 脚本。\n\n除了供人阅读，仓库本身也是一个 agent skill，编码助手可以读取 SKILL.md 并根据用户场景筛选 ledger 中的假设，辅助排查推理性能问题。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "将仓库克隆到 agent 的 skills 目录：git clone https://github.com/alesha-pro/inference-optimization-playbook ~/.claude/skills/inference-optimization-playbook",
+  "让 agent 读取 SKILL.md，或直接指向仓库并指示先读 SKILL.md",
+  "填写 situation card 获取场景标签，例如 #offload #weak-skew #cpu-lane",
+  "用标签过滤 ledger：grep \"#weak-skew\" ledger/hypotheses.md",
+  "运行路由模拟脚本：python3 tools/route_sim.py --demo uniform --fraction 0.3"
+ ],
+ "summary": "这个项目记录了在 1-4 张 RTX 3090 上优化 MoE 大模型推理的实测经验，覆盖专家卸载、量化、投机解码和多卡并行等场景。每个假设都附有结论、测量数据和测试条件，适合正在本地部署大模型、需要排查推理性能瓶颈的开发者参考，也可作为编码助手的检索技能使用。",
+ "tagline": "消费级 GPU 上优化 MoE 大模型推理的实测笔记"
+}

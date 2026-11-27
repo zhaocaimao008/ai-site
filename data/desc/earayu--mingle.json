@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "希望把 AI agent 接入日常聊天工具、又在意数据留在本机的开发者与团队；需要已有 Claude Code 等 coding agent 订阅。",
+ "date": "2026-11-27",
+ "features": [
+  "一个 agent 同时接入微信、企业微信、飞书、钉钉、QQ、Slack、Discord、Telegram 等多个聊天应用，并共享同一份记忆",
+  "复用已有的 coding agent harness（Claude Code、Codex、OpenCode、Kimi Code 等），不额外引入模型费用",
+  "支持异步处理耗时任务，完成后在消息下回复，并在支持线程的聊天应用中为每个任务建立线程",
+  "数据保存在本机，控制台和 API 仅监听 127.0.0.1，机器人凭据存入系统钥匙串",
+  "提供桌面应用（菜单栏/托盘常驻、开机启动、自动更新）和命令行两种使用方式"
+ ],
+ "intro": "Mingle 让你在自己的电脑上创建一个 AI agent：它有名字、角色、记忆和独立的主目录，由你已经在用的 coding agent（如 Claude Code、Codex、OpenCode、Kimi Code）驱动。这个 agent 以机器人身份加入你现有的聊天软件，人们可以在群里 @ 它、给它派任务并收到回复。\n\n同一个 agent 可以同时出现在飞书、微信、Discord 等多个聊天应用中，并共享同一份记忆，因此可以在微信里问它飞书群里早上讨论的结论。它不引入新的模型或订阅费用，复用你已有的 harness 和订阅；数据保存在本机，没有 Mingle 服务器、账号和遥测。\n\n项目处于早期开发阶段，核心流程已与 Claude Code、Codex、OpenCode 和 Kimi Code 端到端跑通，飞书已在真实租户上验证，其他聊天应用则通过 API 和测试验证。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 Releases 下载对应系统的桌面应用，或用终端命令安装：curl -fsSL https://github.com/earayu/Mingle/releases/latest/download/install.sh | sh（macOS/Linux）",
+  "在应用中点击 New agent，填写名称和角色，选择 harness，然后连接聊天应用并按提示操作",
+  "扫码或向机器人发送应用显示的 6 位认领码，成为该 agent 的 owner",
+  "也可以从源码运行：git clone https://github.com/earayu/Mingle.git && cd Mingle && pnpm install && pnpm build",
+  "启动并创建 agent：node dist/cli/main.js start，然后 node dist/cli/main.js agent create --name Alex --harness claude --role \"You help me plan trips.\""
+ ],
+ "summary": "Mingle 是一个本地运行的 AI agent 宿主，把由 Claude Code、Codex 等 coding agent 驱动的助手接入你已有的聊天软件。它让同一个 agent 同时出现在飞书、微信、Slack、Discord 等群组和私聊中，并共享记忆，适合希望在日常聊天工具里使用 AI 助手、同时要求数据留在本机的用户。",
+ "tagline": "把 AI agent 接入你常用的聊天软件，本地运行"
+}

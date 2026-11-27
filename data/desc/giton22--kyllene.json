@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合已经在服务器或家庭网络中运行 Hermes Agent、希望用 Android 手机随时管理和对话的开发者或自托管用户。",
+ "date": "2026-11-27",
+ "features": [
+  "流式聊天回复，支持 Markdown、代码高亮、TeX 数学公式、推理与工具活动展示",
+  "审批、提问、sudo 和密码管理器提示，可直接在通知中操作",
+  "会话侧边栏支持搜索、置顶、项目、归档和筛选",
+  "子代理、后台进程与检查点：查看、停止和恢复",
+  "定时任务创建与管理，每次运行可打开为聊天",
+  "可选端到端加密推送，无需 Google 服务；支持 Wear OS 和 Pebble 手表"
+ ],
+ "intro": "Kyllene 是一个面向 Hermes Agent 的原生 Android 客户端，让你在手机上与自己部署的 AI agent 对话、审批操作并跟踪任务进展。它直接连接你已在服务器、家庭实验室、VPS 或 Tailnet 上运行的 `hermes dashboard`，不需要额外的 Kyllene 服务器或账号。\n\n应用支持流式回复、Markdown 渲染、代码高亮、推理过程与工具调用展示，并可在 agent 工作时发送消息进行引导、排队或停止。你还能处理审批请求、查看子代理与后台进程、管理会话与项目、设置定时任务，并通过通知或手表接收提醒。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "在 Android 8.0 或更高版本的手机上，从最新 release 下载 APK（多数手机选 arm64-v8a 构建）",
+  "打开 APK，按 Android 提示允许从浏览器安装",
+  "确保服务器上已运行 `hermes dashboard` 且手机可访问（同一 Wi-Fi、Tailscale 或 https 地址）",
+  "使用 dashboard 的用户名和密码登录，或通过 SSO/OIDC 浏览器登录"
+ ],
+ "summary": "Kyllene 是一个非官方的 Android 客户端，用于连接你自己运行的 Hermes Agent 仪表盘。它让你在手机上直接与 AI agent 对话，查看推理和工具调用过程，审批敏感操作，管理会话、定时任务和子代理，并接收完成或需要你介入的通知。适合已将 Hermes Agent 部署在服务器或家庭网络、希望移动端随时掌控 agent 工作流的用户。",
+ "tagline": "Hermes Agent 的非官方 Android 客户端"
+}
