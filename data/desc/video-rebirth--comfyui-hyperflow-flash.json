@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合已在 ComfyUI 中运行 MiniMax-H3 相关模型、希望用 HyperFlow H3 Flash 检查点做视频生成的开发者和创作者。",
+ "date": "2026-11-28",
+ "features": [
+  "HyperFlow Loader 节点加载 GGUF 或 INT8 safetensors 检查点，支持 auto/disk/ram 权重加载策略",
+  "HyperFlow GGUF Loader 兼容旧版工作流",
+  "HyperFlow Sigmas 节点输出 4、6、8 步 sigma 调度，CFG 固定为 1.0",
+  "内置 t2v、i2v、flf2v、ref2v 四类工作流模板，GGUF 与 INT8 各一套",
+  "INT8 线性层使用 ComfyUI 原生 INT8 内核，长片段按行分块运行"
+ ],
+ "intro": "ComfyUI-HyperFlow-Flash 是面向 ComfyUI 的自定义节点包，用于加载和运行 HyperFlow H3 Flash 的 GGUF 量化权重与 INT8 safetensors 检查点，实现文本、图像、首尾帧和参考图到视频的生成。\n\n项目提供 HyperFlow Loader 和 HyperFlow GGUF Loader 两个加载节点，以及输出 4、6、8 步 sigma 调度的节点。仓库内置 t2v、i2v、flf2v、ref2v 四类工作流模板，GGUF 与 INT8 版本各一套，安装后可在 ComfyUI 的模板浏览器中直接选用。\n\n使用前需要 ComfyUI 0.43.0 或更新版本以支持 MiniMax-H3，GGUF 文件还需安装 ComfyUI-GGUF。模型权重需从 Hugging Face 下载并放入对应目录。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保 ComfyUI 版本为 0.43.0 或更新，并进入 custom_nodes 目录",
+  "如需 GGUF 文件，执行 git clone https://github.com/city96/ComfyUI-GGUF",
+  "执行 git clone https://github.com/Video-Rebirth/ComfyUI-HyperFlow-Flash",
+  "在 ComfyUI 的 Python 环境中执行 pip install -r ComfyUI-HyperFlow-Flash/requirements.txt",
+  "将模型文件放入 ComfyUI/models/ 下对应的 diffusion_models、text_encoders、vae 目录",
+  "在 Workflow > Browse Templates > ComfyUI-HyperFlow-Flash 中选择模板开始使用"
+ ],
+ "summary": "这个项目为 ComfyUI 提供加载 HyperFlow H3 Flash 检查点的自定义节点和工作流模板，支持 GGUF 量化与 INT8 safetensors 两种格式，覆盖文本、图像、首尾帧和参考图到视频的生成场景。适合已在 ComfyUI 中运行 MiniMax-H3 相关模型、想直接套用现成模板做视频生成的用户。",
+ "tagline": "为 ComfyUI 提供 HyperFlow H3 Flash 视频生成节点与工作流"
+}

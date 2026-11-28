@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合希望在本地消费级 NVIDIA GPU 上运行 GGUF 模型、又不想配置 Python/CUDA 环境的开发者和普通用户，也适合需要把本地模型接入编码代理或自有脚本的场景。",
+ "date": "2026-11-28",
+ "features": [
+  "零依赖单文件分发：Windows 约 57 MB 的 .exe，Linux 为压缩包，仅需 NVIDIA 驱动",
+  "内置投机解码（MTP、DFlash2、DSpark、prompt lookup），官方数据最高约 6 倍加速",
+  "按 GPU 自动调优：预置 16 款 NVIDIA GPU 的调优表，自动决定上下文长度、K/V 精度和显存/内存分配",
+  "原生长上下文：官方称可在 16 GB 显存 + 32 GB 内存的消费级 PC 上运行 1M 上下文",
+  "内置 Web 面板：模型管理、聊天（含图片输入）、实时吞吐与内存监控、本地化 API 文档",
+  "兼容 OpenAI 与 Anthropic API，支持工具调用，可一键接入 Claude Code、Codex CLI 等编码代理"
+ ],
+ "intro": "FLYX 是一个用 C++ 编写的本地大语言模型推理引擎，主打零依赖和单文件分发。Windows 上是一个约 57 MB 的 .exe，Linux 上是压缩包，CUDA 和 C++ 运行时已静态链接，只需 NVIDIA 驱动（≥ 580），不需要 CUDA Toolkit、Python 或 Docker。\n\n它直接运行 GGUF 模型，内置投机解码（MTP、DFlash2、DSpark 和 prompt lookup），并针对 16 款 NVIDIA GPU 预置了调优表，能根据可用显存自动决定上下文长度、K/V 精度和 GPU/RAM 放置。项目还提供内置 Web 面板，支持模型搜索下载、聊天、查看实时吞吐和内存占用，并通过 OpenAI 与 Anthropic 兼容 API 对外提供服务。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "从 GitHub Releases 下载对应平台的最新版本（需要 NVIDIA 驱动 ≥ 580）",
+  "Windows：双击 flyx-0.2.1-windows-x86_64-cuda13.exe，或在 PowerShell 运行 .\\flyx-0.2.1-windows-x86_64-cuda13.exe serve",
+  "Linux / WSL2：解压 tarball 后运行 ./bin/flyx serve",
+  "也可直接加载 Hugging Face 上的 GGUF 模型：./bin/flyx serve unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_XL",
+  "服务启动后会自动打开 Web 面板，可在其中搜索下载模型、聊天并查看 API 文档"
+ ],
+ "summary": "FLYX 是一个本地 LLM 推理引擎，解决在消费级 NVIDIA GPU 上部署大模型时依赖多、配置繁琐的问题。它把 CUDA 和 C++ 运行时打包进约 57 MB 的单文件，直接运行 GGUF 模型，内置投机解码和按 GPU 自动调优，并提供 Web 面板和 OpenAI/Anthropic 兼容 API。适合想零配置本地跑模型、或把本地模型接入编码代理的开发者。",
+ "tagline": "零依赖本地 LLM 推理引擎，单文件约 57 MB"
+}

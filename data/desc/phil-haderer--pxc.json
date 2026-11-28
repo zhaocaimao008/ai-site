@@ -1,0 +1,24 @@
+{
+ "ai_related": true,
+ "audience": "适合使用 PhotoCraft 进行图像编辑、希望在本地运行生成式 AI 功能的设计师和开发者。",
+ "date": "2026-11-28",
+ "features": [
+  "七种生成模式：文生图、扩展图像、填充、移除、编辑（含五种编辑子模式）、精炼和放大",
+  "集成多个本地 AI 模型，包括 Flux 3 Klein、Qwen Image 2.1、MiniMax H3 Image 等",
+  "内置 LLM 辅助：优化提示词、描述画布和参考图、将草图转为提示词",
+  "模型文件管理：一键下载缺失文件到正确 ComfyUI 目录，支持自定义模型链接",
+  "团队使用：多个 PxC 客户端可连接同一台 ComfyUI 服务器，队列显示各自任务",
+  "内置多种风格提示词，可快速套用"
+ ],
+ "intro": "PxC 是一个配套应用，为 PhotoCraft 带来类似 Photoshop 的生成式 AI 功能，所有模型都运行在本地 PC 的 ComfyUI 上。用户选择功能、输入提示词并点击生成，结果会作为新图层出现在文档中。\n\n项目支持文生图、扩展、填充、移除、编辑和放大等七种生成模式，并集成了 Flux、Qwen Image、MiniMax 等多个模型。内置 LLM 可优化提示词、描述画布和参考图，还能将草图转为提示词。模型文件可通过一键下载获取，也支持自定义模型链接。\n\nPxC 已在 Windows 11 和 Linux Mint 上测试，目前兼容 PhotoCraft 0.23.1，暂不支持 0.24 版本。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "确保已安装 PhotoCraft 0.23.1 和 ComfyUI 0.45.0",
+  "在 Windows 或 Linux 上安装 PxC（具体步骤见 README 安装章节）",
+  "启动 PxC，在设置中配置 ComfyUI 地址（如为远程服务器）",
+  "使用“Download missing files”下载所需模型文件",
+  "在 PhotoCraft 中选择功能、输入提示词并点击 Generate"
+ ],
+ "summary": "PxC 是一个为 PhotoCraft 提供本地生成式 AI 能力的配套应用，通过 ComfyUI 在用户自己的电脑上运行图像模型。它支持文生图、扩展、填充、移除、编辑和放大等操作，生成结果直接作为新图层加入文档。适合需要在 PhotoCraft 工作流中利用本地 AI 完成图像创作与编辑的设计师和开发者。",
+ "tagline": "为 PhotoCraft 带来本地生成式 AI 的配套应用"
+}

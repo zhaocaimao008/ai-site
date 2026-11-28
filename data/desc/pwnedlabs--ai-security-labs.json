@@ -1,0 +1,22 @@
+{
+ "ai_related": true,
+ "audience": "适合想入门或系统学习 LLM、RAG 与 Agent 安全的安全从业者、开发者，以及需要为 AI 应用做红队测试的团队。",
+ "date": "2026-11-28",
+ "features": [
+  "汇总多个免费的 LLM 与 Agent 安全动手靶场和 CTF",
+  "收录 garak、PyRIT、promptfoo 等 AI 红队工具",
+  "整理 OWASP LLM/Agentic Top 10、MITRE ATLAS、NIST AI 600-1 等参考框架",
+  "列出 AI 安全课程与认证，并标注提供方与形式",
+  "提供从提示注入到自动化测试、再到风险映射的学习路径"
+ ],
+ "intro": "这个仓库由 Pwned Labs 维护，收集了学习攻击与防御 LLM 应用、RAG 流水线和 Agent 的动手实验、工具与课程。README 指出，AI 系统的风险很多不在模型本身，而在系统提示词、RAG 检索到的文档、Agent 可调用的工具及其权限上。\n\n内容以清单形式组织：实验与挑战部分列出 Lakera、Microsoft、Reversec、PortSwigger、Wiz 等提供的免费靶场，涵盖直接与间接提示注入、工具投毒、MCP 服务器攻击等场景；工具部分收录 garak、PyRIT、promptfoo 等红队工具；此外还有 OWASP LLM/Agentic Top 10、MITRE ATLAS、NIST AI 600-1 等参考框架，以及若干课程与认证。\n\n仓库本身不包含代码，而是一份持续维护的导航，只收录仍然在线且可动手操作的内容，并给出了一条从理解应用结构到自动化测试、再到映射风险框架的学习路径。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "阅读 README 中「A path through the list」一节，了解推荐的学习顺序",
+  "从 Hands-on labs 表格中选择一个免费靶场，例如 Lakera 的 Agent Breaker 或 Microsoft 的 AI Red Teaming Playground Labs",
+  "在工具部分选用 garak、PyRIT 或 promptfoo，对练习环境进行自动化测试",
+  "用 OWASP Top 10 for LLM Applications 等框架归类发现的问题"
+ ],
+ "summary": "这是一份由 Pwned Labs 维护的 AI 安全资源清单，聚焦 LLM 应用、RAG 流水线和 Agent 的攻击与防御。它把免费靶场、红队工具、风险框架和课程整理在一起，适合想通过实际动手理解提示注入、工具滥用等风险的安全人员和开发者，也给出了从入门练习到自动化测试的学习顺序。",
+ "tagline": "面向 LLM、RAG 与 Agent 安全的动手实验与资源清单"
+}

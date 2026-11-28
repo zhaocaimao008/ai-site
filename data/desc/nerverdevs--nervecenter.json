@@ -1,0 +1,17 @@
+{
+ "ai_related": true,
+ "audience": "需要在本地或自有环境中统一调用多家大模型 CLI 账号的开发者，以及希望用兼容 SDK 复用现有 CLI 订阅的用户。",
+ "date": "2026-11-28",
+ "features": [
+  "将多家厂商的 CLI 账号统一转换为 OpenAI/Gemini/Claude 兼容 API",
+  "支持 OAuth 登录与兼容 API 接口两种接入方式",
+  "可同时使用多个 CLI 账号并按账号路由模型",
+  "覆盖 Kimi、OpenAI、Anthropic、Gemini、Grok、Meta、Devin 等提供方",
+  "配套 EasyCLIProxyAPI 桌面客户端，提供图形界面与一键启停"
+ ],
+ "intro": "CLIProxyAPI 是一个用 Go 编写的代理服务器，把 OpenAI、Gemini、Claude、Codex、Grok 等厂商的 CLI 账号能力，转换成 OpenAI（含 Responses）、Gemini（含 Interactions）、Claude 兼容的 API 接口。这样任何兼容这些协议的客户端或 SDK 都能直接调用，无需为每家厂商单独适配。\n\n项目支持通过 OAuth 或兼容 API 接口接入多个 CLI 账号，覆盖 Kimi、OpenAI、Anthropic、Google Gemini、xAI Grok、Meta Muse、Devin 等提供方，并可按账号路由可用模型。README 还提到 EasyCLIProxyAPI 桌面客户端，提供图形化配置、自动更新、系统托盘和一键启停。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "CLIProxyAPI 把 OpenAI、Gemini、Claude、Grok 等厂商的 CLI 账号统一封装成兼容 API，让现有客户端或 SDK 无需逐家适配即可调用。它支持 OAuth 与兼容接口接入，可管理多个 CLI 账号并按账号路由模型，适合需要在本机或自有环境统一调度多家模型服务的开发者。",
+ "tagline": "为 CLI 提供多厂商兼容 API 的代理服务器"
+}

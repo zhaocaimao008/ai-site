@@ -1,0 +1,23 @@
+{
+ "ai_related": true,
+ "audience": "适合从事授权渗透测试、红队评估和 CTF 的安全人员，以及希望用 Claude Code 驱动测试流程的开发者。",
+ "date": "2026-11-28",
+ "features": [
+  "65 个 MCP 工具，覆盖资产管理、探索跟踪、发现记录、覆盖登记与报告生成",
+  "内置录制代理，捕获 HTTP 流量并支持搜索、查看与重放",
+  "探索图帮助 Claude 在长周期测试中保持方向，可跨会话恢复",
+  "Web UI 仪表盘实时展示探索图、发现、流量、覆盖和报告",
+  "支持 Claude Code 及其他 MCP 客户端，可用 Docker 或预编译二进制部署"
+ ],
+ "intro": "ARTEX-CC 是一个面向 Claude Code 的自主渗透测试平台。它把上游 ARTEX 的渗透测试能力封装成 65 个 MCP 工具，由 Claude Code 通过现有的 Claude 订阅来调用，不需要另外准备 LLM API key，项目自身也不运行独立的 agent 循环。\n\nClaude Code 负责决定测试什么、按什么顺序调用工具，ARTEX 负责执行：写入资产、维护探索图、记录发现与凭据、登记覆盖情况，并通过内置的录制代理捕获 HTTP 流量。探索图帮助 Claude 在长时间测试中保持上下文，中断后可以用 graph_overview 恢复。\n\n项目用 Go 编写，提供 Web UI 仪表盘，可查看探索图、发现及其关联流量、覆盖矩阵和可打印报告。仅限在自有或获得明确授权的系统上用于渗透测试、红队、CTF 和实验环境。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "安装：brew install --cask sresarehumantoo/tap/artex-cc",
+  "创建数据库：createdb ccartex",
+  "初始化测试目标：artex-cc init --pg \"postgres://localhost/ccartex\" --goal \"Pentest example.com\"",
+  "在 ~/.claude.json 或项目 .mcp.json 中添加 artex MCP 服务器配置",
+  "启动 Claude Code，让它从侦察开始对目标进行渗透测试"
+ ],
+ "summary": "ARTEX-CC 把渗透测试的执行能力做成 MCP 工具，交给 Claude Code 调用，让 Claude 负责决策、平台负责记录资产、探索路径、发现、流量和覆盖情况。适合在获得授权的渗透测试、红队和 CTF 场景中，用现有 Claude 订阅驱动一次可追溯、可中断续做的测试流程。",
+ "tagline": "让 Claude Code 通过 MCP 执行自主渗透测试"
+}

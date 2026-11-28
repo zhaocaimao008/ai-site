@@ -1,0 +1,16 @@
+{
+ "ai_related": false,
+ "audience": "不建议直接使用；如需 DeepSeek R1 本地 GUI，应先核实仓库真实内容与文件来源。",
+ "date": "2026-11-28",
+ "features": [
+  "README 声称提供 Windows 10/11 x64 的安装包与便携 zip",
+  "声称包含预配置 profile、关闭遥测并解锁扩展模块",
+  "声称支持配置备份与 CLI 批处理参数",
+  "下载链接指向第三方站点 simpol.info"
+ ],
+ "intro": "这个仓库的标题和 topics 都指向 DeepSeek R1 与 Ollama 本地 GUI，但 README 实际描述的是一个名为 BetterDiscord Auto-Installer Suite 的 Windows 安装包，版本 v2.6.0，面向 Windows 10/11 x64。\n\nREADME 中给出的下载入口指向第三方站点 simpol.info，而非 GitHub Releases 本身；文中还包含 vcruntime140.dll 等运行时文件、config.ini 配置和安装路径 %LOCALAPPDATA%\\Programs\\BetterdiscordAutoIns。这些内容与 DeepSeek R1 或 Ollama 没有任何可确认的关联。\n\n仓库语言标注为 Go，但 README 未提供任何源码结构或构建说明，无法据此判断项目实际功能。建议在下载或运行任何文件前谨慎核实来源。",
+ "model": "deepseek-flash",
+ "quickstart": [],
+ "summary": "该仓库标题和标签写的是 DeepSeek R1 的 Ollama 本地 GUI，但 README 实际介绍的是一个面向 Windows 的 BetterDiscord 安装器套件，两者对不上。文中没有可确认的 DeepSeek R1 或 Ollama 相关功能说明，下载入口也指向第三方站点。想找本地大模型图形界面的用户应先核实内容，谨慎对待其中的可执行文件。",
+ "tagline": "名不副实的仓库：标题写 DeepSeek R1，内容却是 BetterDiscord 安装器"
+}

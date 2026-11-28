@@ -1,0 +1,21 @@
+{
+ "ai_related": true,
+ "audience": "希望在 Windows 上快速试用 llama.cpp、不想自行编译配置的开发者与普通用户。",
+ "date": "2026-11-28",
+ "features": [
+  "提供 Windows 10/11 x64 的 llama.cpp 预配置便携包",
+  "README 称内置 CUDA 12.6、Triton 与 SageAttention-2 组件",
+  "支持 FP8、GGUF、EXL2 量化权重加载与 VRAM offloading",
+  "附带嵌入式 Python 3.12 运行时和模型下载器",
+  "提供本地 OpenAI 兼容 REST API 与 WebUI 面板"
+ ],
+ "intro": "这个仓库提供的是 llama.cpp 在 Windows 10/11 x64 上的预配置发行包，版本标注为 v2.6.0。按 README 描述，它把 LlamaCppProPatcher-Installer.exe、运行时库和离线配置打包成一个便携包，并声称内置 CUDA 12.6、Triton、SageAttention-2 等组件。\n\nREADME 还列出了 FP8、GGUF、EXL2 量化权重加载、VRAM offloading、嵌入式 Python 3.12 运行时、模型下载器，以及本地 OpenAI 兼容 REST API 和 WebUI 等特性。安装方式是通过外部下载门户获取安装程序或便携 zip，默认安装路径为 %LOCALAPPDATA%\\Programs\\LlamaCpp。\n\n需要注意的是，下载链接指向第三方站点而非 GitHub Releases，README 中的功能描述也无法从仓库代码中核实，使用前应自行确认来源与安全性。",
+ "model": "deepseek-flash",
+ "quickstart": [
+  "打开 README 中的 Setup & Download Portal 或 Releases 页面",
+  "运行 Win + R 快速安装程序，或解压便携 .zip 包",
+  "从 %LOCALAPPDATA%\\Programs\\LlamaCpp 启动 LlamaCppProPatcher-Installer.exe"
+ ],
+ "summary": "这个项目面向想在 Windows 上直接使用 llama.cpp 的用户，提供预配置的 x64 便携包，免去自行编译和配置运行环境的步骤。README 称其集成了 CUDA、量化模型加载、本地 API 与 WebUI 等组件，适合需要在本机运行量化模型的场景。不过下载入口指向第三方站点，功能描述也未经仓库代码验证，使用前需谨慎确认来源。",
+ "tagline": "面向 Windows 的 llama.cpp 预配置便携包"
+}
